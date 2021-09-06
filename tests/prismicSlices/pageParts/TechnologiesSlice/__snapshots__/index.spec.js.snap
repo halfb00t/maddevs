@@ -12,7 +12,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
     >
       <h2
         class="technologies-slice__title"
-        data-testid="technologies-slice__title"
+        data-testid="technologies-slice-title"
       >
         
       TechnologiesAndTools title
@@ -24,7 +24,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
       >
         <div
           class="technologies-slice__category technologies-slice__category--devops"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         DevOps
@@ -32,7 +32,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--qa"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         QA
@@ -40,7 +40,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--backend"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Backend
@@ -48,7 +48,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--frontend"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Frontend
@@ -61,7 +61,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
       >
         <div
           class="technologies-slice__technology devops-ansible devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Ansible"
@@ -76,7 +76,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
         </div>
         <div
           class="technologies-slice__technology devops-terraform devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Terraform"
@@ -91,7 +91,7 @@ exports[`TechnologiesAndTools slice should render correctly technologies with da
         </div>
         <div
           class="technologies-slice__technology devops-cloud-formation devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudFormation"
@@ -121,7 +121,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
     >
       <h2
         class="technologies-slice__title"
-        data-testid="technologies-slice__title"
+        data-testid="technologies-slice-title"
       >
         
       Technologies & Tools
@@ -133,7 +133,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
       >
         <div
           class="technologies-slice__category technologies-slice__category--devops"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         DevOps
@@ -141,7 +141,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--qa"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         QA
@@ -149,7 +149,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--backend"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Backend
@@ -157,7 +157,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--frontend"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Frontend
@@ -165,7 +165,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--mobile"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Mobile
@@ -173,7 +173,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--pm"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         PM
@@ -181,7 +181,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--infrastructure"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Infrastructure
@@ -189,7 +189,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--uiux"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         UI/UX
@@ -202,7 +202,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
       >
         <div
           class="technologies-slice__technology devops-ansible devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Ansible"
@@ -217,7 +217,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-terraform devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Terraform"
@@ -232,7 +232,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-cloud-formation devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudFormation"
@@ -247,7 +247,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-jenkins devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jenkins"
@@ -262,7 +262,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-bamboo devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Bamboo"
@@ -277,7 +277,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-gitlab devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="GitlabCI"
@@ -292,7 +292,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-travis-ci devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="TravisCI"
@@ -307,7 +307,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-elastic devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="ELK"
@@ -322,7 +322,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-circle-ci devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CircleCI"
@@ -337,7 +337,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-sentry devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Sentry"
@@ -352,7 +352,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-cloud-watch devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudWatch"
@@ -367,7 +367,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology devops-prometheus devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Prometheus"
@@ -382,7 +382,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-aws infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="AWS"
@@ -397,7 +397,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-gcp infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="GCP"
@@ -412,7 +412,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-digital-ocean infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Digital Ocean"
@@ -427,7 +427,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-azure infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Azure"
@@ -442,7 +442,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-cloud-native infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudNative"
@@ -457,7 +457,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-heroku infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Heroku"
@@ -472,7 +472,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-netlify infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Netlify"
@@ -487,7 +487,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology infrastructure-cloudflare infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudFlare"
@@ -502,7 +502,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology mobile-kotlin mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Kotlin"
@@ -517,7 +517,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology mobile-java mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Java"
@@ -532,7 +532,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology mobile-obj-c mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Objective-C"
@@ -547,7 +547,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology mobile-swift mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Swift"
@@ -562,7 +562,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology mobile-apple mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="IOS"
@@ -577,7 +577,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology mobile-android mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Android"
@@ -592,7 +592,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-jira pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jira"
@@ -607,7 +607,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-slack pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Slack"
@@ -622,7 +622,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-meet pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Meet"
@@ -637,7 +637,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-zoom pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Zoom"
@@ -652,7 +652,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-miro pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Miro"
@@ -667,7 +667,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-trello pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Trello"
@@ -682,7 +682,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-loom pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Loom"
@@ -697,7 +697,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-jira-assistant pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jira Assistant"
@@ -712,7 +712,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-service-desk pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Service Desk"
@@ -727,7 +727,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-basecamp pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Basecamp"
@@ -742,7 +742,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-notion pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Notion"
@@ -757,7 +757,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology pm-zapier pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Zapier"
@@ -772,7 +772,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-python backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Python"
@@ -787,7 +787,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-go backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Go"
@@ -802,7 +802,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-node backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Node.js"
@@ -817,7 +817,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-js backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="JavaScript"
@@ -832,7 +832,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-typescript backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="TypeScript"
@@ -847,7 +847,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-php backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="PHP"
@@ -862,7 +862,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-ruby backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Ruby"
@@ -877,7 +877,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-c backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="C"
@@ -892,7 +892,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology backend-c-plus backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="C++"
@@ -907,7 +907,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology uiux-figma uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Figma"
@@ -922,7 +922,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology uiux-adobe uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Adobe Suite"
@@ -937,7 +937,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology uiux-sketch uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Sketch"
@@ -952,7 +952,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology uiux-invision uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="InVision"
@@ -967,7 +967,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology uiux-zeplin uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Zeplin"
@@ -982,7 +982,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology uiux-balsamic uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Balsamic"
@@ -997,7 +997,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology uiux-principle-app uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Principle"
@@ -1012,7 +1012,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-post-css frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="PostCSS"
@@ -1027,7 +1027,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-typescript frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="TypeScript"
@@ -1042,7 +1042,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-angular frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Angular"
@@ -1057,7 +1057,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-webpack frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Webpack"
@@ -1072,7 +1072,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-next frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Next.js"
@@ -1087,7 +1087,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-nuxt frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Nuxt.js"
@@ -1102,7 +1102,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-js frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="JavaScript"
@@ -1117,7 +1117,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-react frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="React"
@@ -1132,7 +1132,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-babel frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Babel"
@@ -1147,7 +1147,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-vue frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Vue"
@@ -1162,7 +1162,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology frontend-sass frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="SASS"
@@ -1177,7 +1177,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology qa-jasmine qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jasmine"
@@ -1192,7 +1192,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology qa-selenoid qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Selenoid"
@@ -1207,7 +1207,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology qa-appium qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Appium"
@@ -1222,7 +1222,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology qa-cucumber qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Cucumber"
@@ -1237,7 +1237,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology qa-pytest qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="PyTest"
@@ -1252,7 +1252,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology qa-selenium qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Selenium"
@@ -1267,7 +1267,7 @@ exports[`TechnologiesAndTools slice should render correctly the title without da
         </div>
         <div
           class="technologies-slice__technology qa-selenium-grid qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Selenium Grid"
@@ -1298,7 +1298,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
     >
       <h2
         class="technologies-slice__title"
-        data-testid="technologies-slice__title"
+        data-testid="technologies-slice-title"
       >
         
       TechnologiesAndTools title
@@ -1310,7 +1310,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
       >
         <div
           class="technologies-slice__category technologies-slice__category--devops"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         DevOps
@@ -1318,7 +1318,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--qa"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         QA
@@ -1326,7 +1326,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--backend"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Backend
@@ -1334,7 +1334,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--frontend"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Frontend
@@ -1342,7 +1342,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--mobile"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Mobile
@@ -1350,7 +1350,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--pm"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         PM
@@ -1358,7 +1358,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--infrastructure"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         Infrastructure
@@ -1366,7 +1366,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__category technologies-slice__category--uiux"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
         >
           
         UI/UX
@@ -1379,7 +1379,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
       >
         <div
           class="technologies-slice__technology devops-ansible devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Ansible"
@@ -1394,7 +1394,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-terraform devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Terraform"
@@ -1409,7 +1409,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-cloud-formation devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudFormation"
@@ -1424,7 +1424,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-jenkins devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jenkins"
@@ -1439,7 +1439,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-bamboo devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Bamboo"
@@ -1454,7 +1454,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-gitlab devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="GitlabCI"
@@ -1469,7 +1469,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-travis-ci devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="TravisCI"
@@ -1484,7 +1484,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-elastic devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="ELK"
@@ -1499,7 +1499,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-circle-ci devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CircleCI"
@@ -1514,7 +1514,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-sentry devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Sentry"
@@ -1529,7 +1529,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-cloud-watch devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudWatch"
@@ -1544,7 +1544,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology devops-prometheus devops"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Prometheus"
@@ -1559,7 +1559,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-aws infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="AWS"
@@ -1574,7 +1574,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-gcp infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="GCP"
@@ -1589,7 +1589,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-digital-ocean infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Digital Ocean"
@@ -1604,7 +1604,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-azure infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Azure"
@@ -1619,7 +1619,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-cloud-native infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudNative"
@@ -1634,7 +1634,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-heroku infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Heroku"
@@ -1649,7 +1649,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-netlify infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Netlify"
@@ -1664,7 +1664,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology infrastructure-cloudflare infrastructure"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="CloudFlare"
@@ -1679,7 +1679,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology mobile-kotlin mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Kotlin"
@@ -1694,7 +1694,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology mobile-java mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Java"
@@ -1709,7 +1709,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology mobile-obj-c mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Objective-C"
@@ -1724,7 +1724,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology mobile-swift mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Swift"
@@ -1739,7 +1739,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology mobile-apple mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="IOS"
@@ -1754,7 +1754,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology mobile-android mobile"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Android"
@@ -1769,7 +1769,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-jira pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jira"
@@ -1784,7 +1784,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-slack pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Slack"
@@ -1799,7 +1799,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-meet pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Meet"
@@ -1814,7 +1814,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-zoom pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Zoom"
@@ -1829,7 +1829,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-miro pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Miro"
@@ -1844,7 +1844,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-trello pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Trello"
@@ -1859,7 +1859,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-loom pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Loom"
@@ -1874,7 +1874,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-jira-assistant pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jira Assistant"
@@ -1889,7 +1889,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-service-desk pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Service Desk"
@@ -1904,7 +1904,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-basecamp pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Basecamp"
@@ -1919,7 +1919,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-notion pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Notion"
@@ -1934,7 +1934,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology pm-zapier pm"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Zapier"
@@ -1949,7 +1949,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-python backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Python"
@@ -1964,7 +1964,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-go backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Go"
@@ -1979,7 +1979,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-node backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Node.js"
@@ -1994,7 +1994,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-js backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="JavaScript"
@@ -2009,7 +2009,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-typescript backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="TypeScript"
@@ -2024,7 +2024,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-php backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="PHP"
@@ -2039,7 +2039,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-ruby backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Ruby"
@@ -2054,7 +2054,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-c backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="C"
@@ -2069,7 +2069,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology backend-c-plus backend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="C++"
@@ -2084,7 +2084,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology uiux-figma uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Figma"
@@ -2099,7 +2099,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology uiux-adobe uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Adobe Suite"
@@ -2114,7 +2114,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology uiux-sketch uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Sketch"
@@ -2129,7 +2129,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology uiux-invision uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="InVision"
@@ -2144,7 +2144,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology uiux-zeplin uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Zeplin"
@@ -2159,7 +2159,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology uiux-balsamic uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Balsamic"
@@ -2174,7 +2174,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology uiux-principle-app uiux"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Principle"
@@ -2189,7 +2189,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-post-css frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="PostCSS"
@@ -2204,7 +2204,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-typescript frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="TypeScript"
@@ -2219,7 +2219,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-angular frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Angular"
@@ -2234,7 +2234,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-webpack frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Webpack"
@@ -2249,7 +2249,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-next frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Next.js"
@@ -2264,7 +2264,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-nuxt frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Nuxt.js"
@@ -2279,7 +2279,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-js frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="JavaScript"
@@ -2294,7 +2294,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-react frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="React"
@@ -2309,7 +2309,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-babel frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Babel"
@@ -2324,7 +2324,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-vue frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Vue"
@@ -2339,7 +2339,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology frontend-sass frontend"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="SASS"
@@ -2354,7 +2354,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology qa-jasmine qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Jasmine"
@@ -2369,7 +2369,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology qa-selenoid qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Selenoid"
@@ -2384,7 +2384,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology qa-appium qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Appium"
@@ -2399,7 +2399,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology qa-cucumber qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Cucumber"
@@ -2414,7 +2414,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology qa-pytest qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="PyTest"
@@ -2429,7 +2429,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology qa-selenium qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Selenium"
@@ -2444,7 +2444,7 @@ exports[`TechnologiesAndTools slice should render the title correctly with data 
         </div>
         <div
           class="technologies-slice__technology qa-selenium-grid qa"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             alt="Selenium Grid"

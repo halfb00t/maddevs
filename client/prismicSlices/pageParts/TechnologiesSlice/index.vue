@@ -7,7 +7,7 @@
     >
       <h2
         class="technologies-slice__title"
-        data-testid="technologies-slice__title"
+        data-testid="technologies-slice-title"
       >
         {{ title || 'Technologies & Tools' }}
       </h2>
@@ -20,7 +20,7 @@
         <div
           v-for="category in categories"
           :key="category"
-          data-testid="technologies-slice__category"
+          data-testid="technologies-slice-category"
           :class="[
             'technologies-slice__category',
             `technologies-slice__category--${categoryToClass(category)}`
@@ -43,7 +43,7 @@
             'technologies-slice__technology',
             `${technology.category}-${technology.value} ${technology.category}`
           ]"
-          data-testid="technologies-slice__technology"
+          data-testid="technologies-slice-technology"
         >
           <img
             v-lazy-load

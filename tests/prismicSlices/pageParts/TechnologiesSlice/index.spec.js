@@ -61,12 +61,12 @@ describe('TechnologiesAndTools slice', () => {
       directives,
     })
 
-    expect(screen.queryByTestId('technologies-slice__title').textContent).toContain('Technologies & Tools')
+    expect(screen.queryByTestId('technologies-slice-title').textContent).toContain('Technologies & Tools')
     expect(container).toMatchSnapshot()
   })
 
   describe('data-aos animation attribute', () => {
-    it(`should be '${apiData.animation}'`, () => {
+    it('should be fade-up animation', () => {
       render(TechnologiesAndTools, {
         data,
         props: getProps(apiData),
@@ -94,8 +94,8 @@ describe('TechnologiesAndTools slice', () => {
       directives,
     })
 
-    expect(screen.getAllByTestId('technologies-slice__category')).toHaveLength(data().categories.length)
-    expect(screen.getAllByTestId('technologies-slice__technology')).toHaveLength(data().technologies.length)
+    expect(screen.getAllByTestId('technologies-slice-category')).toHaveLength(data().categories.length)
+    expect(screen.getAllByTestId('technologies-slice-technology')).toHaveLength(data().technologies.length)
     expect(container).toMatchSnapshot()
   })
 })
