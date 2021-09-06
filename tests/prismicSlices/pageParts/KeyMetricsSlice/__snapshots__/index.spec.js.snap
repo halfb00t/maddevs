@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`KeyMetricsSlice slice should render correctly with FirstVariation component 1`] = `
+exports[`KeyMetrics slice should render correctly with FirstVariation component 1`] = `
 <div>
   <section
     class="key-metrics-slice"
@@ -22,7 +22,7 @@ exports[`KeyMetricsSlice slice should render correctly with FirstVariation compo
 </div>
 `;
 
-exports[`KeyMetricsSlice slice should render correctly with SecondVariation component 1`] = `
+exports[`KeyMetrics slice should render correctly with SecondVariation component 1`] = `
 <div>
   <section
     class="key-metrics-slice"
@@ -45,7 +45,7 @@ exports[`KeyMetricsSlice slice should render correctly with SecondVariation comp
 </div>
 `;
 
-exports[`KeyMetricsSlice slice should render correctly with ThirdVariation component 1`] = `
+exports[`KeyMetrics slice should render correctly with ThirdVariation component 1`] = `
 <div>
   <section
     class="key-metrics-slice"
@@ -61,28 +61,6 @@ exports[`KeyMetricsSlice slice should render correctly with ThirdVariation compo
         background="black"
         colortheme="white"
         data-testid="key-metrics-slice__third"
-        metrics=""
-      />
-    </div>
-  </section>
-</div>
-`;
-
-exports[`KeyMetricsSlice slice should render correctly with data 1`] = `
-<div>
-  <section
-    class="key-metrics-slice"
-    style="background-color: rgb(17, 18, 19);"
-  >
-    <div
-      class="container aos-init aos-animate"
-      data-aos="fade-up"
-      data-testid="key-metrics-slice__container"
-    >
-      <firstvariation-stub
-        animation="fade-up"
-        background="black"
-        data-testid="key-metrics-slice__first"
         metrics=""
       />
     </div>

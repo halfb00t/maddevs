@@ -23,7 +23,7 @@ const getProps = params => ({
   },
 })
 
-describe('KeyMetricsSlice slice', () => {
+describe('KeyMetrics slice', () => {
   it('should render correctly with FirstVariation component', () => {
     const props = getProps(apiData)
     props.slice.variation = 'default-slice'
