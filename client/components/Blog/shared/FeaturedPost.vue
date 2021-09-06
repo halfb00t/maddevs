@@ -132,9 +132,11 @@ export default {
       color: $text-color--black;
     }
   }
+
   a {
     text-decoration: none;
   }
+
   &__wrapper {
     display: grid;
     align-items: center;
@@ -145,9 +147,13 @@ export default {
       grid-gap: 10px;
     }
   }
+
   &__info-wrapper{
     margin-top: 0;
+    max-width: 100%;
+    overflow: hidden;
   }
+
   &__title {
     @include font('Poppins', 42px, 600);
     line-height: 46px;
@@ -174,13 +180,6 @@ export default {
 
       /deep/ .post-author {
         margin-right: 24px;
-
-        &__image,
-        &__none-image {
-          width: 40px;
-          min-width: 40px;
-          height: 40px;
-        }
       }
     }
   }
@@ -244,13 +243,6 @@ export default {
         /deep/ .post-author {
           margin-right: 0;
           margin-bottom: 0;
-
-          &__image,
-          &__none-image {
-            width: 30px;
-            min-width: 30px;
-            height: 30px;
-          }
         }
       }
     }
