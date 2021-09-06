@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer slice renders correctly 1`] = `
+<section
+  class="text-slice text-slice--black-theme"
+>
+  <div
+    class="container"
+  >
+    <transition-stub
+      name="fade"
+    >
+      <!---->
+    </transition-stub>
+  </div>
+</section>
+`;
