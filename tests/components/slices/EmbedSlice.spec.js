@@ -1,5 +1,4 @@
 // eslint-disalbe quotes
-import { shallowMount } from '@vue/test-utils'
 import { render } from '@testing-library/vue'
 import EmbedSlice from '@/components/slices/EmbedSlice'
 
@@ -12,6 +11,7 @@ describe('EmbedSlice component', () => {
             title: 'Title',
             url: 'https://test',
             type: 'video',
+            thumbnail_url: '',
             html:
               '<div><img src="" height="300" width="300"/></div><h1>hello</h1><a href="http://maddevs.io">Hi</a> </div>',
           },
@@ -64,12 +64,5 @@ describe('EmbedSlice component', () => {
     })
 
     expect(container).toMatchSnapshot()
-  })
-
-  it('by default prop slice return empty object', () => {
-    const wrapper = shallowMount(EmbedSlice, {
-      stubs: ['PrismicEmbed'],
-    })
-    expect(wrapper.vm.slice).toStrictEqual({})
   })
 })

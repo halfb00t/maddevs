@@ -1,26 +1,26 @@
 <template>
-  <div
-    v-if="slice.items && slice.items.length"
-    :class="slice.items[0].embed.type"
-    class="embed"
+  <Component
+    :is="isTag.is"
+    v-if="item"
+    v-bind="isTag"
   >
     <PrismicEmbed
       :field="embedFieldData"
-      :class="`embed__${slice.items[0].embed.type}`"
-      target="_blank"
+      :class="`embed__${item.embed.type}-content`"
     />
-    <template v-if="slice.items[0].embed.type === 'link'">
+    <template v-if="item.embed.type === 'link'">
       <div class="embed__image-wrapper">
         <img
           v-lazy-load
-          width="200"
-          height="124"
+          :data-src="embedImage.url"
+          :width="embedImage.width"
+          :height="embedImage.height"
+          alt="Image."
           class="embed__image"
-          :data-src="slice.items[0].embed.thumbnail_url"
         >
       </div>
     </template>
-  </div>
+  </Component>
 </template>
 
 <script>
@@ -35,40 +35,67 @@ export default {
 
   data() {
     return {
+      item: this.slice?.items[0],
+      embedImage: {
+        url: `${this.slice?.items[0]?.embed?.thumbnail_url}?w=400&h=218`,
+        width: '200',
+        height: '109',
+      },
+
       embedFieldData: {},
     }
   },
 
+  computed: {
+    isTag() {
+      if (this.item?.embed?.type === 'link') {
+        return {
+          is: 'a',
+          target: '_blank',
+          href: this.item?.embed?.url,
+          class: `embed__${this.item?.embed?.type}`,
+        }
+      }
+      return {
+        is: 'div',
+        class: `embed__${this.item?.embed?.type}`,
+      }
+    },
+  },
+
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
+
   created() {
-    const { items } = this.slice
-    if (!(items && items.length)) return
+    if (!this.item) return
 
     const {
       embed: {
-        url,
         title: rawTitle,
         html: rawHtml,
         type: embedType,
       },
       embed_title: embedTitle,
       embed_description: embedDescription,
-    } = items[0]
+    } = this.item
 
     if (rawHtml) {
       const matchDescription = rawHtml.match('<p>(.*?)</p>')
       const description = matchDescription ? matchDescription[1] || '' : ''
 
       const html = `
-        <div data-type="website">
-          <a href="${url}" target="_blank">
-            <div class="embed__title">${embedTitle || rawTitle.split(' | ')[0]}</div>
-            <p>${embedDescription || description}</p>
-          </a>
-        </div>
+        <div class="embed__title">${embedTitle || rawTitle.split(' | ')[0]}</div>
+        <p class="embed__description">${embedDescription || description}</p>
       `
 
       this.embedFieldData = {
-        ...this.slice.embed,
+        ...this.slice?.embed,
         html,
       }
     }
@@ -79,10 +106,26 @@ export default {
         .replace(/width="[0-9]*"/, 'width="100%"')
 
       this.embedFieldData = {
-        ...this.slice.embed,
+        ...this.slice?.embed,
         html,
       }
     }
+  },
+
+  methods: {
+    onResize() {
+      if (!this.item) return null
+      if (window.innerWidth < 1024) {
+        this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=1164&h=632`
+        this.embedImage.width = '582'
+        this.embedImage.height = '316'
+      } else {
+        this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=400&h=218`
+        this.embedImage.width = '200'
+        this.embedImage.height = '109'
+      }
+      return null
+    },
   },
 }
 </script>
@@ -90,78 +133,74 @@ export default {
 <style lang="scss" scoped>
 .embed {
   /deep/ iframe {
+    display: block;
     max-width: 100%;
   }
 
-  &.link {
-    display: flex;
-    justify-content: space-between;
+  &__link,
+  &__video {
     margin: 25px 0;
-    border: 1px solid $border-color--silver;
-  }
-
-  /deep/ div {
-    a {
-      text-decoration: none;
-    }
-    h1,
-    p {
-      letter-spacing: -0.02em;
-      line-height: 129%;
-    }
-    p {
-      @include font('Inter', 13px, 400);
-      color: $text-color--grey-pale;
-    }
   }
 
   &__link {
-    width: 100%;
     display: flex;
     align-items: center;
-    padding: 24px 0 24px 24px;
+    justify-content: space-between;
+    border: 1px solid $border-color--silver;
+    text-decoration: none;
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
+
+    &-content {
+      width: 100%;
+      padding: 24px;
+      padding-right: 0;
+      @media screen and (max-width: 1024px) {
+        order: 2;
+        width: 100%;
+        padding-right: 24px;
+      }
+    }
+  }
+
+  /deep/ &__title,
+  /deep/ &__description {
+    letter-spacing: -0.02em;
+    line-height: 129%;
   }
 
   /deep/ &__title {
     @include font('Poppins', 21px, 700);
-    margin-top: 0;
-    margin-bottom: 6px;
-    color: $text-color--black-oil;
     line-height: 27.34px;
+    color: $text-color--black-oil;
+    margin: 0;
+    margin-bottom: 6px;
   }
 
-  &__image {
+  /deep/ &__description {
+    @include font('Inter', 13px, 400);
+    color: $text-color--grey-pale;
+    margin: 0;
+  }
+
+  /deep/ &__image {
+    display: block;
     width: 200px;
     min-width: 200px;
     height: auto;
     object-fit: cover;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      min-width: auto;
+    }
 
     &-wrapper {
       width: 33%;
       display: flex;
       align-items: center;
-      padding: 24px !important;
-    }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .embed {
-    &.link {
-      flex-wrap: wrap;
-    }
-
-    &__link {
-      order: 2;
-      width: 100%;
-      padding-right: 24px;
-    }
-
-    &__image {
-      width: 100%;
-      min-width: auto;
-
-      &-wrapper {
+      padding: 24px;
+      @media screen and (max-width: 1024px) {
         order: 1;
         width: 100%;
       }

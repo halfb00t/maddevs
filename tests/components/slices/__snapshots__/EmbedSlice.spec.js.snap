@@ -9,12 +9,11 @@ exports[`EmbedSlice component must replace tags 1`] = `
 exports[`EmbedSlice component should render correctly 1`] = `
 <div>
   <div
-    class="embed video"
+    class="embed__video"
   >
     <prismicembed-stub
-      class="embed__video"
+      class="embed__video-content"
       field="[object Object]"
-      target="_blank"
     />
      
     <!---->
