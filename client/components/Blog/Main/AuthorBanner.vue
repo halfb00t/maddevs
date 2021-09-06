@@ -44,46 +44,48 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     color: $text-color--white-primary;
+    @media screen and (max-width: 991px) {
+      padding-top: 92px;
+      padding-bottom: 49px;
+    }
+
     &__image {
-      width: 165px;
-      height: 165px;
-      border-radius: 50%;
-      overflow: hidden;
       background: $bgcolor--black-light;
+      &,
       img {
+        position: relative;
         display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 165px;
+        height: 165px;
+        border-radius: 50%;
+        @media screen and (max-width: 991px) {
+          width: 128px;
+          height: 128px;
+        }
       }
     }
+
     &__name {
       margin-top: 29px;
       font-size: 41.5px;
       line-height: 130%;
       letter-spacing: -0.04em;
+      @media screen and (max-width: 991px) {
+        margin-top: 31px;
+        font-size: 35px;
+        letter-spacing: -1px;
+      }
     }
+
     &__position {
       margin-top: 8px;
       font-size: 17px;
       line-height: 166%;
       letter-spacing: -0.035em;
       color: $text-color--grey-pale;
-    }
-    @media only screen and (max-width: 991px) {
-      padding-top: 92px;
-      padding-bottom: 49px;
-      &__image {
-        width: 128px;
-        height: 128px;
-      }
-      &__name {
-        margin-top: 31px;
-        font-size: 35px;
-        letter-spacing: -1px;
-      }
-      &__posts-count {
+      @media screen and (max-width: 991px) {
         margin-top: 7px;
         font-size: 16px;
         line-height: 150%;

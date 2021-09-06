@@ -1,0 +1,53 @@
+{
+  "id": "we_create_projects_for",
+  "type": "SharedSlice",
+  "name": "WeCreateProjectsFor",
+  "description": "WeCreateProjectsFor",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "WeCreateProjectsFor",
+      "primary": {
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
+    }
+  ]
+}
