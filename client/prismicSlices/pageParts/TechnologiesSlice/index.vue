@@ -2,9 +2,13 @@
   <section class="technologies-slice">
     <div
       class="container"
+      data-testid="container"
       :data-aos="animation"
     >
-      <h2 class="technologies-slice__title">
+      <h2
+        class="technologies-slice__title"
+        data-testid="technologies-slice__title"
+      >
         {{ title || 'Technologies & Tools' }}
       </h2>
       <div
@@ -16,6 +20,7 @@
         <div
           v-for="category in categories"
           :key="category"
+          data-testid="technologies-slice__category"
           :class="[
             'technologies-slice__category',
             `technologies-slice__category--${categoryToClass(category)}`
@@ -38,6 +43,7 @@
             'technologies-slice__technology',
             `${technology.category}-${technology.value} ${technology.category}`
           ]"
+          data-testid="technologies-slice__technology"
         >
           <img
             v-lazy-load
