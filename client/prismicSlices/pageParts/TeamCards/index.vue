@@ -49,11 +49,10 @@
 </template>
 
 <script>
-import { experts } from '@/data/ourExperts'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
-  name: 'MeetOurExperts',
+  name: 'TeamCards',
 
   mixins: [animateOnScrollMixin({
     offset: 200,
@@ -75,7 +74,6 @@ export default {
 
   data() {
     return {
-      experts,
       animation: this.slice.primary.animation,
     }
   },
