@@ -38,8 +38,8 @@
           width="395"
           height="490"
           class="cta-banner-slice__image"
-          :src="image.url"
-          :alt="image.alt"
+          :src="image && image.url"
+          :alt="image && image.alt"
         >
         <div class="cta-banner-slice__man">
           <h6 class="cta-banner-slice__man-name">
