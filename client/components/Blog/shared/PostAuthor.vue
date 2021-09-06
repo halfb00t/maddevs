@@ -154,16 +154,14 @@ export default {
 
   &__image,
   &__none-image {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    border-radius: 9.4px;
-    overflow: hidden;
+    &,
     img {
       display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      position: relative;
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 9.4px;
     }
   }
 
