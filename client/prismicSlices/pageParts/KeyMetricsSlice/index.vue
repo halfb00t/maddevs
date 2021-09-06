@@ -12,19 +12,19 @@
         v-if="slice.variation === 'default-slice'"
         v-bind="slice.primary"
         :metrics="slice.items"
-        data-testid="key-metrics-slice__first"
+        data-testid="first-variation"
       />
       <SecondVariation
         v-else-if="slice.variation === 'secondVariation'"
         v-bind="slice.primary"
         :metrics="slice.items"
-        data-testid="key-metrics-slice__second"
+        data-testid="second-variation"
       />
       <ThirdVariation
         v-else-if="slice.variation === 'thirdVariation'"
         v-bind="slice.primary"
         :metrics="slice.items"
-        data-testid="key-metrics-slice__third"
+        data-testid="third-variation"
       />
     </div>
   </section>

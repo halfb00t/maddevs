@@ -18,11 +18,6 @@ const props = {
   ],
 }
 
-const colorThemes = {
-  black: 'black',
-  white: 'white',
-}
-
 describe('KeyMetrics slice - SecondVariation component', () => {
   it('should render correctly with data', () => {
     const { container } = render(SecondVariation, {
@@ -47,7 +42,7 @@ describe('KeyMetrics slice - SecondVariation component', () => {
   })
 
   describe('colorThemeOption computed method', () => {
-    it(`should return ${colorThemes.black}`, () => {
+    it('should return \'black\'', () => {
       const wrapper = shallowMount(SecondVariation, {
         propsData: {
           metrics: [],
@@ -55,10 +50,10 @@ describe('KeyMetrics slice - SecondVariation component', () => {
         },
       })
 
-      expect(wrapper.vm.colorThemeOption).toBe(colorThemes.black)
+      expect(wrapper.vm.colorThemeOption).toBe('black')
     })
 
-    it(`should return ${colorThemes.white}`, () => {
+    it('should return \'white\'', () => {
       const wrapper = shallowMount(SecondVariation, {
         propsData: {
           metrics: [],
@@ -66,7 +61,7 @@ describe('KeyMetrics slice - SecondVariation component', () => {
         },
       })
 
-      expect(wrapper.vm.colorThemeOption).toBe(colorThemes.white)
+      expect(wrapper.vm.colorThemeOption).toBe('white')
     })
   })
 })

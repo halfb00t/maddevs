@@ -14,7 +14,7 @@ exports[`KeyMetrics slice should render correctly with FirstVariation component 
       <firstvariation-stub
         animation="fade-up"
         background="black"
-        data-testid="key-metrics-slice__first"
+        data-testid="first-variation"
         metrics=""
       />
     </div>
@@ -37,7 +37,7 @@ exports[`KeyMetrics slice should render correctly with SecondVariation component
         animation="fade-up"
         background="black"
         colortheme="white"
-        data-testid="key-metrics-slice__second"
+        data-testid="second-variation"
         metrics=""
       />
     </div>
@@ -60,7 +60,7 @@ exports[`KeyMetrics slice should render correctly with ThirdVariation component 
         animation="fade-up"
         background="black"
         colortheme="white"
-        data-testid="key-metrics-slice__third"
+        data-testid="third-variation"
         metrics=""
       />
     </div>

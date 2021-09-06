@@ -32,9 +32,9 @@ describe('KeyMetrics slice', () => {
       props,
     })
 
-    expect(screen.queryByTestId('key-metrics-slice__first')).not.toBeNull()
-    expect(screen.queryByTestId('key-metrics-slice__second')).toBeNull()
-    expect(screen.queryByTestId('key-metrics-slice__third')).toBeNull()
+    expect(screen.queryByTestId('first-variation')).not.toBeNull()
+    expect(screen.queryByTestId('second-variation')).toBeNull()
+    expect(screen.queryByTestId('third-variation')).toBeNull()
     expect(container).toMatchSnapshot()
   })
 
@@ -46,9 +46,9 @@ describe('KeyMetrics slice', () => {
       props,
     })
 
-    expect(screen.queryByTestId('key-metrics-slice__first')).toBeNull()
-    expect(screen.queryByTestId('key-metrics-slice__second')).not.toBeNull()
-    expect(screen.queryByTestId('key-metrics-slice__third')).toBeNull()
+    expect(screen.queryByTestId('first-variation')).toBeNull()
+    expect(screen.queryByTestId('second-variation')).not.toBeNull()
+    expect(screen.queryByTestId('third-variation')).toBeNull()
     expect(container).toMatchSnapshot()
   })
 
@@ -60,9 +60,9 @@ describe('KeyMetrics slice', () => {
       props,
     })
 
-    expect(screen.queryByTestId('key-metrics-slice__first')).toBeNull()
-    expect(screen.queryByTestId('key-metrics-slice__second')).toBeNull()
-    expect(screen.queryByTestId('key-metrics-slice__third')).not.toBeNull()
+    expect(screen.queryByTestId('first-variation')).toBeNull()
+    expect(screen.queryByTestId('second-variation')).toBeNull()
+    expect(screen.queryByTestId('third-variation')).not.toBeNull()
     expect(container).toMatchSnapshot()
   })
 
@@ -87,7 +87,7 @@ describe('KeyMetrics slice', () => {
   })
 
   describe('sliceBackground computed method', () => {
-    it(`should return ${backgrounds.white} (white)`, () => {
+    it(`should return ${backgrounds.white}`, () => {
       const wrapper = shallowMount(KeyMetricsSlice, {
         stubs,
         propsData: getProps({
@@ -99,7 +99,7 @@ describe('KeyMetrics slice', () => {
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.white)
     })
 
-    it(`should return ${backgrounds.grey} (grey)`, () => {
+    it(`should return ${backgrounds.grey}`, () => {
       const wrapper = shallowMount(KeyMetricsSlice, {
         stubs,
         propsData: getProps({
@@ -111,7 +111,7 @@ describe('KeyMetrics slice', () => {
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.grey)
     })
 
-    it(`should return ${backgrounds.black} (black)`, () => {
+    it(`should return ${backgrounds.black}`, () => {
       const wrapper = shallowMount(KeyMetricsSlice, {
         stubs,
         propsData: getProps({
