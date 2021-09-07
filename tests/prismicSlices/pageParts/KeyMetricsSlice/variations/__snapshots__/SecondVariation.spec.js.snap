@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyMetrics slice - SecondVariation component should render correctly with data 1`] = `
+<div>
+  <div
+    class="key-metrics-slice__content key-metrics-slice__content--black-theme"
+  >
+    <h2
+      class="key-metrics-slice__title"
+    >
+      
+    Mad Devs’ key metrics
+  
+    </h2>
+     
+    <div
+      class="key-metrics-slice__grid"
+    >
+      <div
+        class="key-metric"
+        data-testid="key-metric"
+      >
+        <h3
+          class="key-metric__title"
+        >
+          
+        First metric title
+      
+        </h3>
+         
+        <p
+          class="key-metric__subtitle"
+        >
+          
+        First metric subtitle
+      
+        </p>
+      </div>
+      <div
+        class="key-metric"
+        data-testid="key-metric"
+      >
+        <h3
+          class="key-metric__title"
+        >
+          
+        Second metric title
+      
+        </h3>
+         
+        <p
+          class="key-metric__subtitle"
+        >
+          
+        Second metric subtitle
+      
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`KeyMetrics slice - SecondVariation component should render correctly without data 1`] = `
+<div>
+  <div
+    class="key-metrics-slice__content key-metrics-slice__content--white-theme"
+  >
+    <h2
+      class="key-metrics-slice__title"
+    >
+      
+    Mad Devs’ key metrics
+  
+    </h2>
+     
+    <div
+      class="key-metrics-slice__grid"
+    />
+  </div>
+</div>
+`;
