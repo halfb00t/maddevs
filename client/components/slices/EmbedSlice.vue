@@ -116,15 +116,13 @@ export default {
   methods: {
     onResize() {
       if (this.item && this.item?.embed?.type === 'link') {
-        if (window.innerWidth < 1024) {
-          this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=1164&h=632`
-          this.embedImage.width = '582'
-          this.embedImage.height = '316'
-        } else {
-          this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=400&h=218`
-          this.embedImage.width = '200'
-          this.embedImage.height = '109'
+        const changeEmbedImage = (url, width, height) => {
+          this.embedImage.url = url
+          this.embedImage.width = width
+          this.embedImage.height = height
         }
+        if (window.innerWidth < 1024) changeEmbedImage(`${this.item?.embed?.thumbnail_url}?w=1164&h=632`, '582', '316')
+        else changeEmbedImage(`${this.item?.embed?.thumbnail_url}?w=400&h=218`, '200', '109')
       }
     },
   },
