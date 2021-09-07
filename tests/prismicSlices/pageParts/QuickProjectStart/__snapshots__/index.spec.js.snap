@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickProjectStart slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="project-start-slice project-start-slice--white-theme"
+    data-testid="project-start-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="project-start-slice__container"
+    >
+      <h2
+        class="project-start-slice__title"
+      >
+        
+      Title
+    
+      </h2>
+       
+      <div
+        class="project-start-slice__list"
+      >
+        <div
+          class="project-start"
+          data-testid="project-start"
+        >
+          <div
+            class="project-start__icons"
+          >
+            <img
+              alt="contact"
+              class="project-start__main-icon"
+              data-src="[object Object]"
+              height="73"
+              width="52"
+            />
+             
+            <img
+              alt="Arrow"
+              class="project-start__arrow-icon"
+              data-src="[object Object]"
+              height="65"
+              width="165"
+            />
+          </div>
+           
+          <div
+            class="project-start__text"
+          >
+            <h3
+              class="project-start__title"
+            >
+              
+            contact
+          
+            </h3>
+             
+            <p
+              class="project-start__description"
+            >
+              
+            Submit your project request or project idea to us.
+          
+            </p>
+          </div>
+        </div>
+        <div
+          class="project-start"
+          data-testid="project-start"
+        >
+          <div
+            class="project-start__icons"
+          >
+            <img
+              alt="analysis"
+              class="project-start__main-icon"
+              data-src="[object Object]"
+              height="73"
+              width="52"
+            />
+             
+            <!---->
+          </div>
+           
+          <div
+            class="project-start__text"
+          >
+            <h3
+              class="project-start__title"
+            >
+              
+            analysis
+          
+            </h3>
+             
+            <p
+              class="project-start__description"
+            >
+              
+            We will contact you to clarify your project requirements.
+          
+            </p>
+          </div>
+        </div>
+      </div>
+       
+      <button
+        class="ui-outlined-button project-start-slice__button ui-outlined-button--red ui-outlined-button--full-width"
+        data-testid="project-start-slice__button"
+      >
+        
+      Submit your project
+    
+      </button>
+    </div>
+     
+    <!---->
+  </section>
+</div>
+`;
+
+exports[`QuickProjectStart slice should render correctly without data 1`] = `
+<div>
+  <section
+    class="project-start-slice project-start-slice--white-theme"
+    data-testid="project-start-slice"
+  >
+    <div
+      class="container"
+      data-testid="project-start-slice__container"
+    >
+      <h2
+        class="project-start-slice__title"
+      >
+        
+      Quick Project Start
+    
+      </h2>
+       
+      <div
+        class="project-start-slice__list"
+      />
+       
+      <button
+        class="ui-outlined-button project-start-slice__button ui-outlined-button--red ui-outlined-button--full-width"
+        data-testid="project-start-slice__button"
+      >
+        
+      Submit your project
+    
+      </button>
+    </div>
+     
+    <transition-stub
+      mode="out-in"
+      name="main-fade"
+    >
+      <!---->
+    </transition-stub>
+  </section>
+</div>
+`;
