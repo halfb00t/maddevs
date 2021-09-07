@@ -62,6 +62,9 @@
           :slices-type="type"
           class="blog-post__text-container"
         />
+        <div class="blog-post__comments">
+          <Disqus />
+        </div>
       </div>
     </div>
     <div
@@ -499,6 +502,10 @@ export default {
     }
   }
 
+  &__comments {
+    margin-top: 70px;
+  }
+
   &__back-to-list {
     padding: 12px 14px 4px;
     position: fixed;
@@ -583,7 +590,8 @@ export default {
     }
 
     &__introduction-paragraph,
-    &__text-container {
+    &__text-container,
+    &__comments {
       padding: 0 24px;
     }
 
