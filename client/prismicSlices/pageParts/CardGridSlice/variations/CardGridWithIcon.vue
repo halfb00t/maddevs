@@ -9,6 +9,7 @@
           v-for="item in items"
           :key="item.name"
           class="card-item"
+          data-testid="card-grid-with-icon-item"
         >
           <Component
             :is="item.link.url ? 'a' : 'div'"
