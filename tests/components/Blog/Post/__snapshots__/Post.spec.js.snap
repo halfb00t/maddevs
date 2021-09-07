@@ -33,6 +33,12 @@ exports[`Post component should render correctly with default props 1`] = `
           slices="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
           slicestype="blog_post"
         />
+         
+        <div
+          class="blog-post__comments"
+        >
+          <disqus />
+        </div>
       </div>
     </div>
      
