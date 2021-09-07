@@ -17,6 +17,7 @@
           :height="embedImage.height"
           alt="Image."
           class="embed__image"
+          data-testid="embed__image"
         >
       </div>
     </template>
@@ -114,17 +115,17 @@ export default {
 
   methods: {
     onResize() {
-      if (!this.item) return null
-      if (window.innerWidth < 1024) {
-        this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=1164&h=632`
-        this.embedImage.width = '582'
-        this.embedImage.height = '316'
-      } else {
-        this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=400&h=218`
-        this.embedImage.width = '200'
-        this.embedImage.height = '109'
+      if (this.item && this.item?.embed?.type === 'link') {
+        if (window.innerWidth < 1024) {
+          this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=1164&h=632`
+          this.embedImage.width = '582'
+          this.embedImage.height = '316'
+        } else {
+          this.embedImage.url = `${this.item?.embed?.thumbnail_url}?w=400&h=218`
+          this.embedImage.width = '200'
+          this.embedImage.height = '109'
+        }
       }
-      return null
     },
   },
 }

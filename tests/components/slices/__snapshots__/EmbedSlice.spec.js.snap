@@ -1,12 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EmbedSlice component must replace tags 1`] = `
+exports[`EmbedSlice component should render correctly with embed link 1`] = `
 <div>
-  <!---->
+  <a
+    class="embed__link"
+    href="url"
+    target="_blank"
+  >
+    <prismicembed-stub
+      class="embed__link-content"
+      field="[object Object]"
+    />
+     
+    <div
+      class="embed__image-wrapper"
+    >
+      <img
+        alt="Image."
+        class="embed__image"
+        data-src="url?w=400&h=218"
+        data-testid="embed__image"
+        height="109"
+        width="200"
+      />
+    </div>
+  </a>
 </div>
 `;
 
-exports[`EmbedSlice component should render correctly 1`] = `
+exports[`EmbedSlice component should render correctly with embed video 1`] = `
 <div>
   <div
     class="embed__video"
