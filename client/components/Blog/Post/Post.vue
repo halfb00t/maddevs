@@ -63,7 +63,10 @@
           class="blog-post__text-container"
         />
         <div class="blog-post__comments">
-          <Disqus />
+          <Disqus
+            :url="`https://maddevs.io/blog/${getRoute}/`"
+            :identifier="`/blog/${getRoute}`"
+          />
         </div>
       </div>
     </div>
@@ -228,6 +231,10 @@ export default {
 
   computed: {
     ...mapGetters(['allAuthors', 'blogTag']),
+
+    getRoute() {
+      return this.$route.params.uid
+    },
 
     tableOfContentsSlice() {
       return this.slices && this.slices.find(slice => slice.slice_type === 'table_of_contents')
