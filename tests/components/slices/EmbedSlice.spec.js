@@ -137,6 +137,7 @@ describe('EmbedSlice component', () => {
     it('should return html for embed link', () => {
       const props = getProps(apiData)
       props.slice.items[0].embed.type = 'link'
+      props.slice.items[0].embed.html = 'iframe'
 
       const wrapper = shallowMount(EmbedSlice, {
         directives,
