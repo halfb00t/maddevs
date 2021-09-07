@@ -110,7 +110,7 @@ describe('QuickProjectStart slice', () => {
   })
 
   describe('sliceBackground computed method', () => {
-    it(`should return ${backgrounds.white} (white)`, () => {
+    it(`should return ${backgrounds.white}`, () => {
       const wrapper = shallowMount(QuickProjectStart, {
         directives,
         propsData: getProps({
@@ -122,7 +122,7 @@ describe('QuickProjectStart slice', () => {
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.white)
     })
 
-    it(`should return ${backgrounds.grey} (grey)`, () => {
+    it(`should return ${backgrounds.grey}`, () => {
       const wrapper = shallowMount(QuickProjectStart, {
         directives,
         propsData: getProps({
@@ -134,7 +134,7 @@ describe('QuickProjectStart slice', () => {
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.grey)
     })
 
-    it(`should return ${backgrounds.black} (black)`, () => {
+    it(`should return ${backgrounds.black}`, () => {
       const wrapper = shallowMount(QuickProjectStart, {
         directives,
         propsData: getProps({
