@@ -75,7 +75,7 @@ import UIOutlinedButton from '@/components/shared/UIOutlinedButton'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
-  name: 'ProjectStartSlice',
+  name: 'QuickProjectStart',
   components: {
     UIOutlinedButton,
     ModalOrderProjectFromUs: () => import('@/components/core/modals/ModalOrderProjectFromUs'),
