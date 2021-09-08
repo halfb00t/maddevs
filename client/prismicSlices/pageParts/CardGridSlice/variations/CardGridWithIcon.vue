@@ -20,6 +20,8 @@
               <img
                 :src="item.icon.url"
                 :alt="item.icon.alt"
+                :width="item.icon.dimensions.width"
+                :height="item.icon.dimensions.height"
                 class="card-item__logo"
               >
               <h3
