@@ -11,12 +11,27 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "ProjectStartSlice",
       "primary": {
-        "title": {
+        "animation": {
           "config": {
-            "label": "Title",
-            "placeholder": "Quick Project Start"
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
           },
-          "type": "Text"
+          "type": "Select"
         },
         "background": {
           "config": {
@@ -43,27 +58,12 @@
           },
           "type": "Select"
         },
-        "animation": {
+        "title": {
           "config": {
-            "label": "Animation list",
-            "placeholder": "Select aos animation",
-            "options": [
-              "fade-up",
-              "fade-down",
-              "fade-right",
-              "fade-left",
-              "fade-up-right",
-              "fade-up-left",
-              "fade-down-righ",
-              "fade-down-left",
-              "zoom-in",
-              "zoom-in-up",
-              "zoom-in-left",
-              "zoom-in-right",
-              "none"
-            ]
+            "label": "Title",
+            "placeholder": "Quick Project Start"
           },
-          "type": "Select"
+          "type": "Text"
         }
       },
       "items": {}

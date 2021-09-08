@@ -69,6 +69,7 @@ import CaseFooter from '@/components/Cases/shared/CaseFooter'
 import SJMCVideo from '@/components/Cases/sjmc/SJMCVideo'
 import { getMetadata, buildHead } from '@/data/seo'
 import { getPageScripts } from '@/data/pageScripts'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'SirJohnMonashCentre',
@@ -78,6 +79,8 @@ export default {
     CaseFooter,
     SJMCVideo,
   },
+
+  mixins: [headerMixin('.case_header')],
 
   nuxtI18n: false,
 

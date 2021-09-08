@@ -11,6 +11,28 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "KeyMetricsSlice",
       "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
         "background": {
           "config": {
             "label": "Slice background",
@@ -21,6 +43,56 @@
               "grey"
             ],
             "default_value": "black"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "title": {
+          "config": {
+            "label": "Metric number",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "subtitle": {
+          "config": {
+            "label": "Metric description",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    },
+    {
+      "id": "secondVariation",
+      "name": "Second variation",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "KeyMetricsSlice",
+      "primary": {
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "Color theme",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black"
+            ],
+            "default_value": "white"
           },
           "type": "Select"
         },
@@ -65,62 +137,25 @@
       }
     },
     {
-      "id": "secondVariation",
-      "name": "Second variation",
-      "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "KeyMetricsSlice",
-      "primary": {
-        "colorTheme": {
-          "config": {
-            "label": "Color theme",
-            "placeholder": "",
-            "options": [
-              "white",
-              "black"
-            ],
-            "default_value": "white"
-          },
-          "type": "Select"
-        },
-        "background": {
-          "config": {
-            "label": "Slice background",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white",
-              "grey"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
-        }
-      },
-      "items": {
-        "title": {
-          "config": {
-            "label": "Metric number",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "subtitle": {
-          "config": {
-            "label": "Metric description",
-            "placeholder": ""
-          },
-          "type": "Text"
-        }
-      }
-    },
-    {
       "id": "thirdVariation",
       "name": "Third variation",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "KeyMetricsSlice",
       "primary": {
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
         "colorTheme": {
           "config": {
             "label": "Color theme",
@@ -133,16 +168,25 @@
           },
           "type": "Select"
         },
-        "background": {
+        "animation": {
           "config": {
-            "label": "Slice background",
-            "placeholder": "",
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
             "options": [
-              "black",
-              "white",
-              "grey"
-            ],
-            "default_value": "black"
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
           },
           "type": "Select"
         }

@@ -43,6 +43,7 @@ import CaseHeader from '@/components/Cases/shared/CaseHeader'
 import Footer from '@/components/Cases/shared/CaseFooter'
 import Main from '@/components/Cases/veeqo/Main'
 import { getMetadata, buildHead } from '@/data/seo'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'CaseVeeqo',
@@ -51,6 +52,8 @@ export default {
     Footer,
     Main,
   },
+
+  mixins: [headerMixin('.case_header')],
 
   nuxtI18n: false,
 

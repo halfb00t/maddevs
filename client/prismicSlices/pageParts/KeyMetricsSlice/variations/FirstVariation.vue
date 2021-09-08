@@ -8,6 +8,7 @@
         v-for="metric in metrics"
         :key="metric.title"
         class="key-metric"
+        data-testid="key-metric"
       >
         <h3 class="key-metric__title">
           {{ metric.title }}

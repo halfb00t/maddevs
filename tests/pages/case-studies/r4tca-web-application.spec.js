@@ -1,6 +1,10 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import InternationalTradeCenter from '@/pages/case-studies/R4TCA-web-application'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 const DESCRIPTION = 'Digital Transformation Case Study: How to implement digital transformation? Read an ITC\'s story of improving the reports and the coaches\' coordination with a convenient web app.'
 
@@ -35,12 +39,23 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const actions = {
+  setHeaderTransparentArea: () => {},
+  setHeaderTransparent: () => {},
+}
+
+const store = new Vuex.Store({
+  actions,
+})
+
 describe('InternationalTradeCenter root component', () => {
   it('should render correctly', () => {
     const { container } = render(InternationalTradeCenter, {
+      localVue,
       mocks,
       stubs,
       directives,
+      store,
     })
 
     expect(container).toMatchSnapshot()
@@ -48,9 +63,11 @@ describe('InternationalTradeCenter root component', () => {
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(InternationalTradeCenter, {
+      localVue,
       mocks,
       stubs,
       directives,
+      store,
     })
 
     const actual = wrapper.vm.$options.head.call(wrapper.vm)

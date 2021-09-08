@@ -49,6 +49,7 @@ import CaseHeader from '@/components/Cases/shared/CaseHeader'
 import Footer from '@/components/Cases/shared/CaseFooter'
 import Main from '@/components/Cases/yourcast/Main'
 import { getMetadata, buildHead } from '@/data/seo'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'CaseYourcast',
@@ -57,6 +58,8 @@ export default {
     Footer,
     Main,
   },
+
+  mixins: [headerMixin('.case_header')],
 
   nuxtI18n: false,
 

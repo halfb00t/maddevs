@@ -7,12 +7,15 @@
 <script>
 import Main from '@/components/Careers/Main'
 import { getMetadata, buildHead } from '@/data/seo'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'MainCareers',
   components: {
     Main,
   },
+
+  mixins: [headerMixin('.careers-banner')],
 
   head() {
     return {

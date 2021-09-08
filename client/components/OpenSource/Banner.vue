@@ -1,7 +1,7 @@
 <template>
   <div
     id="transparent-header-area"
-    class="banner"
+    class="open-source-banner"
   >
     <picture>
       <source
@@ -10,14 +10,14 @@
           $getMediaFromS3('/images/OpenSource/webp/programmer@2x.webp') + ' 2x'
         ]"
         type="image/webp"
-        class="banner__image"
+        class="open-source-banner__image"
       >
       <img
         :src="$getMediaFromS3('/images/OpenSource/png/programmer.png')"
         :srcset="$getMediaFromS3('/images/OpenSource/png/programmer@2x.png') + ' 2x'"
         width="1680"
         height="969"
-        class="banner__image"
+        class="open-source-banner__image"
         alt="Programmer"
       >
     </picture>
@@ -25,13 +25,13 @@
       <!-- sectionTextOpacity - value from changeOpacityOnScrollMixin mixin -->
       <div
         ref="sectionText"
-        class="banner__content"
+        class="open-source-banner__content"
         :style="{opacity: sectionTextOpacity}"
       >
-        <h1 class="banner__title">
+        <h1 class="open-source-banner__title">
           The power <br> of open source
         </h1>
-        <p class="banner__subtitle">
+        <p class="open-source-banner__subtitle">
           While we love writing code, nothing excites us more than collaborating with other members of the tech community.
           We love building with new and emerging technologies here at Mad Devs. Making the world a better place, one line of code at a time.
         </p>
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.banner {
+.open-source-banner {
   position: relative;
   display: flex;
   flex-direction: column;

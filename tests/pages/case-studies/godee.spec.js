@@ -1,7 +1,11 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import GoDeeCase from '@/pages/case-studies/godee'
 import formBaseProps from '../../__mocks__/formBaseProps'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 const DESCRIPTION = 'Case Study Shuttle Bus Service. Read GoDee’s story on building a public transportation app for passengers and drivers and a monitoring system for admins in Vietnam.'
 
@@ -27,12 +31,6 @@ const META_DATA = {
   image: 'https://maddevs.io/blog.png',
 }
 
-const store = {
-  getters: {
-    homePageContent: () => ({ description: DESCRIPTION }),
-  },
-}
-
 const mocks = {
   ...formBaseProps,
   $nuxt: {
@@ -53,6 +51,20 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const actions = {
+  setHeaderTransparentArea: () => {},
+  setHeaderTransparent: () => {},
+}
+
+const getters = {
+  homePageContent: () => ({ description: DESCRIPTION }),
+}
+
+const store = new Vuex.Store({
+  actions,
+  getters,
+})
+
 describe('GoDeeCase _uid component', () => {
   global.$nuxt = {
     $route: {
@@ -62,6 +74,7 @@ describe('GoDeeCase _uid component', () => {
 
   it('should render correctly', () => {
     const { container } = render(GoDeeCase, {
+      localVue,
       store,
       mocks,
       stubs,
@@ -73,6 +86,7 @@ describe('GoDeeCase _uid component', () => {
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(GoDeeCase, {
+      localVue,
       store,
       mocks,
       stubs,

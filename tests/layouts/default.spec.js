@@ -1,6 +1,10 @@
 import 'regenerator-runtime'
-import { shallowMount } from '@vue/test-utils'
+import Vuex from 'vuex'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Default from '@/layouts/default.vue'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 jest.mock('@/helpers/intercom', () => jest.fn())
 
@@ -17,6 +21,13 @@ const mocks = {
 }
 const SCROLL_FN = jest.fn()
 
+const store = {
+  getters: {
+    headerTransparentArea: () => '',
+    headerTransparent: () => true,
+  },
+}
+
 describe('Default layout', () => {
   let wrapper
   const nextTick = jest.fn()
@@ -24,8 +35,10 @@ describe('Default layout', () => {
 
   beforeEach(() => {
     wrapper = shallowMount(Default, {
+      localVue,
       stubs,
       mocks,
+      store,
     })
   })
 

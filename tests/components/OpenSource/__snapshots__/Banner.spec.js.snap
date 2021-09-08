@@ -3,19 +3,19 @@
 exports[`Banner component should render correctly 1`] = `
 <div>
   <div
-    class="banner"
+    class="open-source-banner"
     id="transparent-header-area"
   >
     <picture>
       <source
-        class="banner__image"
+        class="open-source-banner__image"
         srcset="img.jpg ,img.jpg 2x"
         type="image/webp"
       />
        
       <img
         alt="Programmer"
-        class="banner__image"
+        class="open-source-banner__image"
         height="969"
         src="img.jpg"
         srcset="img.jpg 2x"
@@ -27,11 +27,11 @@ exports[`Banner component should render correctly 1`] = `
       class="container"
     >
       <div
-        class="banner__content"
+        class="open-source-banner__content"
         style="opacity: 1;"
       >
         <h1
-          class="banner__title"
+          class="open-source-banner__title"
         >
           
         The power 
@@ -41,7 +41,7 @@ exports[`Banner component should render correctly 1`] = `
         </h1>
          
         <p
-          class="banner__subtitle"
+          class="open-source-banner__subtitle"
         >
           
         While we love writing code, nothing excites us more than collaborating with other members of the tech community.

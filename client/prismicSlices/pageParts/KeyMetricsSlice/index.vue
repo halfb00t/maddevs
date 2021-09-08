@@ -1,28 +1,30 @@
 <template>
   <section
     class="key-metrics-slice"
-    :style="{
-      backgroundColor: sliceBackground,
-    }"
+    :style="{ backgroundColor: sliceBackground }"
   >
-    <div class="container">
+    <div
+      class="container"
+      :data-aos="slice.primary.animation"
+      data-testid="key-metrics-slice__container"
+    >
       <FirstVariation
         v-if="slice.variation === 'default-slice'"
         v-bind="slice.primary"
         :metrics="slice.items"
-        :data-aos="slice.primary.animation"
+        data-testid="first-variation"
       />
       <SecondVariation
         v-else-if="slice.variation === 'secondVariation'"
         v-bind="slice.primary"
         :metrics="slice.items"
-        :data-aos="slice.primary.animation"
+        data-testid="second-variation"
       />
       <ThirdVariation
         v-else-if="slice.variation === 'thirdVariation'"
         v-bind="slice.primary"
         :metrics="slice.items"
-        :data-aos="slice.primary.animation"
+        data-testid="third-variation"
       />
     </div>
   </section>
@@ -62,9 +64,10 @@ export default {
 
   computed: {
     sliceBackground() {
-      if (this.slice.primary.background === 'white') return '#fff'
-      if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      return '#111213' // black
+      if (this.slice?.primary?.background === 'white') return '#ffffff'
+      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
+      if (this.slice?.primary?.background === 'black') return '#111213'
+      return null
     },
   },
 }

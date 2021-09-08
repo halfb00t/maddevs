@@ -6,7 +6,7 @@
     <div class="container">
       <div
         class="meet-our-experts__experts-list"
-        :data-aos="slice.primary.animation"
+        :data-aos="animation"
       >
         <div
           v-for="expert in slice.items"
@@ -49,11 +49,10 @@
 </template>
 
 <script>
-import { experts } from '@/data/ourExperts'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
-  name: 'MeetOurExperts',
+  name: 'TeamCards',
 
   mixins: [animateOnScrollMixin({
     offset: 200,
@@ -75,7 +74,7 @@ export default {
 
   data() {
     return {
-      experts,
+      animation: this.slice.primary.animation,
     }
   },
 }

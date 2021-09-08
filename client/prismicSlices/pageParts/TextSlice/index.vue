@@ -8,24 +8,29 @@
         <SimpleText
           v-if="slice.variation === 'default-slice'"
           v-bind="slice.primary"
+          :data-aos="slice.primary.animation"
         />
         <Title
           v-else-if="size && slice.variation === 'title'"
-          :size="size"
           v-bind="slice.primary"
+          :size="size"
+          :data-aos="slice.primary.animation"
         />
         <TitleText
           v-else-if="slice.variation === 'titleText'"
           v-bind="slice.primary"
+          :data-aos="slice.primary.animation"
         />
         <TitleTextButton
           v-else-if="slice.variation === 'titleTextButton'"
           v-bind="slice.primary"
+          :data-aos="slice.primary.animation"
         />
         <Paragraph
           v-else-if="size && slice.variation === 'paragraph'"
-          :size="size"
           v-bind="slice.primary"
+          :size="size"
+          :data-aos="slice.primary.animation"
         />
       </transition>
     </div>
@@ -39,6 +44,8 @@ import TitleText from './variations/TitleText'
 import TitleTextButton from './variations/TitleTextButton'
 import Paragraph from './variations/Paragraph'
 
+import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+
 export default {
   name: 'TextSlice',
   components: {
@@ -48,6 +55,14 @@ export default {
     TitleTextButton,
     Paragraph,
   },
+
+  mixins: [animateOnScrollMixin({
+    offset: 200,
+    delay: 50,
+    anchorPlacement: 'top-center',
+    duration: 1000,
+    once: true,
+  })],
 
   props: {
     slice: {
@@ -100,7 +115,7 @@ export default {
         || this.slice.primary['size-xl']
       } if (window.innerWidth > 1200 && window.innerWidth <= 1440) {
         this.size = this.slice.primary['size-lg']
-        this.size = this.slice.primary['size-xl']
+        || this.slice.primary['size-xl']
       } if (window.innerWidth > 1440) {
         this.size = this.slice.primary['size-xl']
       }

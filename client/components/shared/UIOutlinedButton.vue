@@ -1,7 +1,7 @@
 <template>
   <Component
     :is="isTag"
-    :type="link ? 'button' : null"
+    :type="isLink ? 'button' : null"
     :href="linkTo"
     class="ui-outlined-button"
     :class="{

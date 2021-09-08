@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import SJMCVideo from '@/components/Cases/sjmc/SJMCVideo'
 
-global.document.exitFullscreen = () => {}
+global.document.closeFullscreen = () => {}
 
 const VueVideoStub = {
   render: () => {},
@@ -52,7 +52,7 @@ describe('SJMCVideo component', () => {
       directives,
     })
     wrapper.vm.$refs = MOCK_REFS
-    jest.spyOn(global.document, 'exitFullscreen').mockImplementation()
+    jest.spyOn(global.document, 'closeFullscreen').mockImplementation()
   })
 
   // ------ IMPORTANT ----- //
@@ -90,9 +90,9 @@ describe('SJMCVideo component', () => {
     spyPause.mockReset()
   })
 
-  it('exitFullscreen should change fullscreenModIsActive value', () => {
+  it('closeFullscreen should change fullscreenModIsActive value', () => {
     wrapper.vm.$data.fullscreenModIsActive = true
-    wrapper.vm.exitFullscreen()
+    wrapper.vm.closeFullscreen()
     expect(wrapper.vm.$data.fullscreenModIsActive).toEqual(false)
   })
 

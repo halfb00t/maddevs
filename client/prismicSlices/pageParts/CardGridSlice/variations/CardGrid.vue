@@ -1,12 +1,6 @@
 <template>
-  <section
-    class="container"
-    :class="colorThemeClass"
-  >
-    <ul
-      class="card-grid-slice"
-      :data-aos="animation"
-    >
+  <div class="container">
+    <ul class="card-grid-slice">
       <li
         v-for="(item, i) of items"
         :key="`card-grid-slice__item-${i}`"
@@ -19,12 +13,8 @@
           class="card-grid-slice__item-link"
         >
           <div class="card-grid-slice__item-info">
-            <h3
-              v-html="item.title"
-            />
-            <p
-              v-html="item.description"
-            />
+            <h3 v-html="item.title" />
+            <p v-html="item.description" />
             <UIArrowButton
               color="black"
               class="card-grid-slice__item-button"
@@ -40,12 +30,11 @@
         </a>
       </li>
     </ul>
-  </section>
+  </div>
 </template>
 
 <script>
 import UIArrowButton from '@/components/shared/UIArrowButton'
-import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'CardGridSlice',
@@ -54,37 +43,10 @@ export default {
     UIArrowButton,
   },
 
-  mixins: [
-    animateOnScrollMixin({
-      offset: 200,
-      delay: 50,
-      anchorPlacement: 'top-center',
-      duration: 1000,
-      once: true,
-    }),
-  ],
-
   props: {
-    colorTheme: {
-      type: String,
-      default: 'white',
-    },
-
-    animation: {
-      type: String,
-      default: 'none',
-    },
-
     items: {
       type: Array,
       default: () => [],
-    },
-  },
-
-  computed: {
-    colorThemeClass() {
-      if (this.colorTheme === 'white') return 'card-grid-slice--white-theme'
-      return 'card-grid-slice--black-theme'
     },
   },
 }

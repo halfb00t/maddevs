@@ -11,12 +11,27 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TextSlice",
       "primary": {
-        "text": {
+        "animation": {
           "config": {
-            "label": "Text",
-            "placeholder": ""
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
           },
-          "type": "Text"
+          "type": "Select"
         },
         "colorTheme": {
           "config": {
@@ -36,6 +51,13 @@
             "placeholder": "1028px"
           },
           "type": "Text"
+        },
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       },
       "items": {}
@@ -47,58 +69,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TextSlice",
       "primary": {
-        "colorTheme": {
-          "config": {
-            "label": "Theme color",
-            "placeholder": "",
-            "options": [
-              "white",
-              "black"
-            ]
-          },
-          "type": "Select"
-        },
-        "title": {
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "tag": {
-          "config": {
-            "label": "Header tag",
-            "placeholder": "",
-            "options": [
-              "h1",
-              "h2",
-              "h3",
-              "h4",
-              "h5",
-              "h6"
-            ]
-          },
-          "type": "Select"
-        },
-        "maxWidth": {
-          "config": {
-            "label": "Max width",
-            "placeholder": "Example: 100px or 10% or 100vh"
-          },
-          "type": "Text"
-        },
-        "position": {
-          "config": {
-            "label": "Title position",
-            "placeholder": "",
-            "options": [
-              "left",
-              "center",
-              "right"
-            ]
-          },
-          "type": "Select"
-        },
         "animation": {
           "config": {
             "label": "Animation list",
@@ -117,6 +87,58 @@
               "zoom-in-left",
               "zoom-in-right",
               "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "Theme color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black"
+            ]
+          },
+          "type": "Select"
+        },
+        "position": {
+          "config": {
+            "label": "Title position",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "type": "Select"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "maxWidth": {
+          "config": {
+            "label": "Max width",
+            "placeholder": "Example: 100px or 10% or 100vh"
+          },
+          "type": "Text"
+        },
+        "tag": {
+          "config": {
+            "label": "Header tag",
+            "placeholder": "",
+            "options": [
+              "h1",
+              "h2",
+              "h3",
+              "h4",
+              "h5",
+              "h6"
             ]
           },
           "type": "Select"
@@ -206,6 +228,40 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TextSlice",
       "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "Color theme",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
         "title": {
           "config": {
             "label": "Title",
@@ -219,18 +275,6 @@
             "placeholder": ""
           },
           "type": "Text"
-        },
-        "colorTheme": {
-          "config": {
-            "label": "Color theme",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
         },
         "maxWidth": {
           "config": {
@@ -249,6 +293,40 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TextSlice",
       "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "Color theme",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
         "title": {
           "config": {
             "label": "Title",
@@ -279,18 +357,6 @@
           },
           "type": "Link"
         },
-        "colorTheme": {
-          "config": {
-            "label": "Color theme",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
-        },
         "maxWidth": {
           "config": {
             "label": "Max width (px,% or vw)",
@@ -308,54 +374,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TextSlice",
       "primary": {
-        "colorTheme": {
-          "config": {
-            "label": "Theme color",
-            "placeholder": "",
-            "options": [
-              "white",
-              "black"
-            ]
-          },
-          "type": "Select"
-        },
-        "text": {
-          "config": {
-            "label": "Paragraph text",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "maxWidth": {
-          "config": {
-            "label": "Max width",
-            "placeholder": "Example: 100px or 10% or 100vh"
-          },
-          "type": "Text"
-        },
-        "position": {
-          "config": {
-            "label": "Text position",
-            "placeholder": "left, center, right",
-            "options": [
-              "left",
-              "center",
-              "right"
-            ]
-          },
-          "type": "Select"
-        },
-        "type": {
-          "config": {
-            "label": "Paragraph type",
-            "placeholder": "",
-            "options": [
-              "default",
-              "list"
-            ]
-          },
-          "type": "Select"
-        },
         "animation": {
           "config": {
             "label": "Animation list",
@@ -377,6 +395,54 @@
             ]
           },
           "type": "Select"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "Theme color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black"
+            ]
+          },
+          "type": "Select"
+        },
+        "type": {
+          "config": {
+            "label": "Paragraph type",
+            "placeholder": "",
+            "options": [
+              "default",
+              "list"
+            ]
+          },
+          "type": "Select"
+        },
+        "position": {
+          "config": {
+            "label": "Text position",
+            "placeholder": "left, center, right",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "type": "Select"
+        },
+        "text": {
+          "config": {
+            "label": "Paragraph text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "maxWidth": {
+          "config": {
+            "label": "Max width",
+            "placeholder": "Example: 100px or 10% or 100vh"
+          },
+          "type": "Text"
         },
         "size-xl": {
           "config": {

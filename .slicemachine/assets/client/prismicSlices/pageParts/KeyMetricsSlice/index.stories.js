@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"key_metrics_slice","items":[{"title":"implement 24/365 channels","subtitle":"disintermediate 24/7 infrastructures"},{"title":"productize sexy portals","subtitle":"productize robust channels"},{"title":"generate impactful partnerships","subtitle":"implement real-time bandwidth"},{"title":"architect back-end relationships","subtitle":"incentivize cross-platform technologies"},{"title":"exploit granular channels","subtitle":"productize collaborative metrics"}],"primary":{"background":"black","animation":"none"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"key_metrics_slice","items":[{"title":"incubate ubiquitous users","subtitle":"grow customized markets"},{"title":"redefine customized deliverables","subtitle":"engineer 24/365 relationships"},{"title":"leverage frictionless platforms","subtitle":"synthesize global partnerships"}],"primary":{"animation":"none","background":"white"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -37,7 +37,7 @@ export const _SecondVariation = () => ({
   },
   data() {
     return {
-      mock: {"variation":"secondVariation","name":"Second variation","slice_type":"key_metrics_slice","items":[{"title":"facilitate sexy networks","subtitle":"streamline impactful ROI"},{"title":"strategize clicks-and-mortar bandwidth","subtitle":"unleash cutting-edge channels"},{"title":"generate turn-key e-markets","subtitle":"envisioneer 24/365 architectures"},{"title":"target viral supply-chains","subtitle":"iterate compelling mindshare"}],"primary":{"colorTheme":"white","background":"black"},"id":"_SecondVariation"}
+      mock: {"variation":"secondVariation","name":"Second variation","slice_type":"key_metrics_slice","items":[{"title":"transition magnetic partnerships","subtitle":"envisioneer distributed eyeballs"},{"title":"enhance clicks-and-mortar vortals","subtitle":"empower viral architectures"},{"title":"iterate collaborative e-markets","subtitle":"mesh world-class relationships"},{"title":"e-enable collaborative e-markets","subtitle":"integrate front-end relationships"},{"title":"engage value-added metrics","subtitle":"recontextualize out-of-the-box initiatives"}],"primary":{"background":"black","colorTheme":"white"},"id":"_SecondVariation"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -56,7 +56,7 @@ export const _ThirdVariation = () => ({
   },
   data() {
     return {
-      mock: {"variation":"thirdVariation","name":"Third variation","slice_type":"key_metrics_slice","items":[{"title":"redefine out-of-the-box e-tailers","subtitle":"disintermediate 24/365 portals"},{"title":"disintermediate efficient models","subtitle":"e-enable viral vortals"},{"title":"harness real-time supply-chains","subtitle":"maximize customized metrics"}],"primary":{"colorTheme":"white","background":"black"},"id":"_ThirdVariation"}
+      mock: {"variation":"thirdVariation","name":"Third variation","slice_type":"key_metrics_slice","items":[{"title":"expedite mission-critical convergence","subtitle":"exploit revolutionary metrics"},{"title":"grow customized niches","subtitle":"exploit bricks-and-clicks solutions"}],"primary":{"background":"white","colorTheme":"white"},"id":"_ThirdVariation"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

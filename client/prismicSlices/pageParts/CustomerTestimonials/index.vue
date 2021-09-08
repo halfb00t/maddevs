@@ -1,7 +1,7 @@
 <template>
   <CustomerTestimonials
-    :title="slice.primary.title"
-    :aos="slice.primary.animation"
+    :title="title"
+    :aos="animation"
   />
 </template>
 
@@ -31,6 +31,13 @@ export default {
         return {}
       },
     },
+  },
+
+  data() {
+    return {
+      animation: this.slice.primary.animation,
+      title: this.slice.primary.title,
+    }
   },
 }
 </script>

@@ -5,20 +5,13 @@
   >
     <div class="author-slice__info">
       <div class="author-slice__image">
-        <picture>
-          <source
-            v-lazy-load
-            :data-src="`${authorImage.url}&w=128&h=128`"
-            media="(max-width: 1024px)"
-          >
-          <img
-            v-lazy-load
-            :data-src="`${authorImage.url}&w=136&h=136`"
-            :alt="authorImage.alt"
-            width="68"
-            height="68"
-          >
-        </picture>
+        <img
+          v-lazy-load
+          :data-src="authorImage.url"
+          :alt="authorImage.alt"
+          width="68"
+          height="68"
+        >
       </div>
       <div>
         <p class="author-slice__name">
@@ -115,14 +108,8 @@ export default {
     ...mapGetters(['blogAuthor']),
 
     authorImage() {
-      let urlWithoutSizeParams = ''
-      const { image } = this.blogAuthor
-      if (image && image.author_slice) {
-        // eslint-disable-next-line
-        if (image.author_slice.url) urlWithoutSizeParams = image.author_slice.url.split('&w=')[0]
-        return { ...image.author_slice, url: urlWithoutSizeParams }
-      }
-      return {}
+      const { author_slice: authorSlice = {} } = this.blogAuthor?.image
+      return authorSlice
     },
   },
 
@@ -139,21 +126,39 @@ export default {
   padding-top: 20px;
   margin: 70px 0;
   border-top: 1px solid $border-color--red;
+  @media only screen and (max-width: 1024px) {
+    margin: 49px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   &__info {
     display: flex;
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
   &__image {
     margin-right: 17px;
-    width: 68px;
-    min-width: 68px;
-    height: 68px;
-    border-radius: 50%;
     background-color: $bgcolor--silver;
-    overflow: hidden;
+    @media screen and (max-width: 1024px) {
+      margin-right: 0;
+    }
+    &,
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      display: block;
+      position: relative;
+      width: 68px;
+      min-width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      @media screen and (max-width: 1024px) {
+        width: 64px;
+        min-width: 64px;
+        height: 64px;
+      }
     }
   }
   &__name {
@@ -162,12 +167,18 @@ export default {
     letter-spacing: -0.02px;
     color: $text-color--black-oil;
     margin: 6px 0;
+    @media screen and (max-width: 1024px) {
+      margin-top: 13px;
+    }
   }
   &__position {
     font-size: 15px;
     line-height: 166%;
     letter-spacing: -0.1px;
     color: $text-color--grey-pale;
+    @media screen and (max-width: 1024px) {
+      margin-top: 4px;
+    }
   }
   &__social {
     &-list {
@@ -176,6 +187,10 @@ export default {
       margin-top: 16px;
       display: flex;
       flex-flow: row wrap;
+      @media screen and (max-width: 1024px) {
+        margin-top: 14px;
+        justify-content: center;
+      }
     }
     &-item {
       width: 29px;
@@ -197,6 +212,10 @@ export default {
   }
   &__contributors {
     margin-left: 20px;
+    @media screen and (max-width: 1024px) {
+      margin-left: 0;
+      margin-top: 22px;
+    }
     &-title {
       font-size: 13px;
       line-height: 166%;
@@ -209,66 +228,30 @@ export default {
       margin-top: 2px;
       display: flex;
       flex-flow: row nowrap;
+      @media screen and (max-width: 1024px) {
+        justify-content: center;
+      }
     }
     &-item {
       margin-left: -6px;
-      width: 28px;
-      height: 28px;
       background: $bgcolor--silver;
       border: 2px solid $border-color--white;
-      border-radius: 50%;
-      overflow: hidden;
+      @media screen and (max-width: 1024px) {
+        border: 0;
+        margin-left: 6px;
+      }
       &:first-of-type {
         margin-left: -2px;
       }
+      &,
       a,
       img {
+        position: relative;
         display: block;
-        width: 100%;
-        height: 100%;
-      }
-      img {
-        object-fit: cover;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .author-slice {
-    margin: 49px 0;
-    &,
-    &__info {
-      flex-direction: column;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
-    &__image {
-      width: 64px;
-      min-width: 64px;
-      height: 64px;
-      margin-right: 0;
-    }
-    &__name {
-      margin-top: 13px;
-    }
-    &__position {
-      margin-top: 4px;
-    }
-    &__social-list {
-      margin-top: 14px;
-      justify-content: center;
-    }
-    &__contributors {
-      margin-left: 0;
-      margin-top: 22px;
-      &-list {
-        justify-content: center;
-      }
-      &-item {
-        border: 0;
-        margin-left: 6px;
+        width: 28px;
+        min-width: 28px;
+        height: 28px;
+        border-radius: 50%;
       }
     }
   }

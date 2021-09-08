@@ -1,18 +1,17 @@
 <template>
   <section class="technologies-slice">
-    <div class="container">
-      <h2
-        class="technologies-slice__title"
-        :data-aos="slice.primary.animation"
-      >
-        {{ slice.primary.title || 'Technologies & Tools' }}
+    <div
+      class="container"
+      :data-aos="animation"
+    >
+      <h2 class="technologies-slice__title">
+        {{ title || 'Technologies & Tools' }}
       </h2>
       <div
         :class="[
           'technologies-slice__categories',
           `technologies-slice__categories--${categoryToClass(activeCategory)}`
         ]"
-        :data-aos="slice.primary.animation"
       >
         <div
           v-for="category in categories"
@@ -31,7 +30,6 @@
           'technologies-slice__grid',
           `technologies-slice__grid--${categoryToClass(activeCategory)}`
         ]"
-        :data-aos="slice.primary.animation"
       >
         <div
           v-for="technology in technologies"
@@ -86,6 +84,8 @@ export default {
       activeCategory: '',
       categories,
       technologies,
+      title: this.slice.primary.title,
+      animation: this.slice.primary.animation,
     }
   },
 

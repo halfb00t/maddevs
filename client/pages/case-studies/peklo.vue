@@ -44,6 +44,7 @@ import Footer from '@/components/Cases/shared/CaseFooter'
 import Main from '@/components/Cases/peklo/Main'
 import { getMetadata, buildHead } from '@/data/seo'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'CaseITC',
@@ -55,13 +56,16 @@ export default {
 
   nuxtI18n: false,
 
-  mixins: [animateOnScrollMixin({
-    offset: 200,
-    delay: 50,
-    anchorPlacement: 'top-center',
-    duration: 1000,
-    once: true,
-  })],
+  mixins: [
+    animateOnScrollMixin({
+      offset: 200,
+      delay: 50,
+      anchorPlacement: 'top-center',
+      duration: 1000,
+      once: true,
+    }),
+    headerMixin('.case_header'),
+  ],
 
   data() {
     return {

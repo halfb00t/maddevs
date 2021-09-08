@@ -1,7 +1,11 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import CaseYourcast from '@/pages/case-studies/yourcast'
 import formBaseProps from '../../__mocks__/formBaseProps'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 const DESCRIPTION = 'OTT-like streaming platform case study. Read how Mad Devs developed an online video streaming service for isolated groups of people feeling homesick.'
 
@@ -27,12 +31,6 @@ const META_DATA = {
   image: 'https://maddevs.io/blog.png',
 }
 
-const store = {
-  getters: {
-    homePageContent: () => ({ description: DESCRIPTION }),
-  },
-}
-
 const mocks = {
   ...formBaseProps,
   $nuxt: {
@@ -53,6 +51,20 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const actions = {
+  setHeaderTransparentArea: () => {},
+  setHeaderTransparent: () => {},
+}
+
+const getters = {
+  homePageContent: () => ({ description: DESCRIPTION }),
+}
+
+const store = new Vuex.Store({
+  actions,
+  getters,
+})
+
 describe('CaseYourcast _uid component', () => {
   global.$nuxt = {
     $route: {
@@ -62,6 +74,7 @@ describe('CaseYourcast _uid component', () => {
 
   it('should render correctly', () => {
     const { container } = render(CaseYourcast, {
+      localVue,
       store,
       mocks,
       stubs,
@@ -73,6 +86,7 @@ describe('CaseYourcast _uid component', () => {
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(CaseYourcast, {
+      localVue,
       store,
       mocks,
       stubs,

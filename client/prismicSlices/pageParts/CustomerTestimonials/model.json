@@ -11,13 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "CustomerTestimonials",
       "primary": {
-        "title": {
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
         "animation": {
           "config": {
             "label": "Animation list",
@@ -39,6 +32,13 @@
             ]
           },
           "type": "Select"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       },
       "items": {}

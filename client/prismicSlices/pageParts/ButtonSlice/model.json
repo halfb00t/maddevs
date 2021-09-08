@@ -20,6 +20,41 @@
           },
           "type": "Boolean"
         },
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
         "alignment": {
           "config": {
             "label": "Alignment",
@@ -49,47 +84,12 @@
           },
           "type": "Link"
         },
-        "background": {
-          "config": {
-            "label": "Slice background",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white",
-              "grey"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
-        },
         "maxWidth": {
           "config": {
             "label": "Max width (px,% or vw)",
             "placeholder": "300px"
           },
           "type": "Text"
-        },
-        "animation": {
-          "config": {
-            "label": "Animation list",
-            "placeholder": "Select aos animation",
-            "options": [
-              "fade-up",
-              "fade-down",
-              "fade-right",
-              "fade-left",
-              "fade-up-right",
-              "fade-up-left",
-              "fade-down-righ",
-              "fade-down-left",
-              "zoom-in",
-              "zoom-in-up",
-              "zoom-in-left",
-              "zoom-in-right",
-              "none"
-            ]
-          },
-          "type": "Select"
         }
       },
       "items": {}
@@ -110,68 +110,6 @@
           },
           "type": "Boolean"
         },
-        "alignment": {
-          "config": {
-            "label": "Alignment",
-            "placeholder": "",
-            "options": [
-              "left",
-              "center",
-              "right"
-            ],
-            "default_value": "left"
-          },
-          "type": "Select"
-        },
-        "color": {
-          "config": {
-            "label": "Button color",
-            "placeholder": "",
-            "options": [
-              "grey",
-              "black",
-              "red",
-              "blue"
-            ]
-          },
-          "type": "Select"
-        },
-        "text": {
-          "config": {
-            "label": "Button text",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "link": {
-          "config": {
-            "label": "Button link",
-            "placeholder": "",
-            "select": "web",
-            "allowTargetBlank": false
-          },
-          "type": "Link"
-        },
-        "background": {
-          "config": {
-            "label": "Slice background",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white",
-              "grey"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
-        },
-        "maxWidth": {
-          "config": {
-            "label": "Max width (px,% or vw)",
-            "placeholder": "300px"
-          },
-          "type": "Text"
-        },
         "animation": {
           "config": {
             "label": "Animation list",
@@ -193,6 +131,68 @@
             ]
           },
           "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "color": {
+          "config": {
+            "label": "Button color",
+            "placeholder": "",
+            "options": [
+              "grey",
+              "black",
+              "red",
+              "blue"
+            ]
+          },
+          "type": "Select"
+        },
+        "alignment": {
+          "config": {
+            "label": "Alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ],
+            "default_value": "left"
+          },
+          "type": "Select"
+        },
+        "text": {
+          "config": {
+            "label": "Button text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "link": {
+          "config": {
+            "label": "Button link",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "maxWidth": {
+          "config": {
+            "label": "Max width (px,% or vw)",
+            "placeholder": "300px"
+          },
+          "type": "Text"
         }
       },
       "items": {}
@@ -213,68 +213,6 @@
           },
           "type": "Boolean"
         },
-        "alignment": {
-          "config": {
-            "label": "Alignment",
-            "placeholder": "",
-            "options": [
-              "left",
-              "center",
-              "right"
-            ],
-            "default_value": "left"
-          },
-          "type": "Select"
-        },
-        "color": {
-          "config": {
-            "label": "Button color",
-            "placeholder": "",
-            "options": [
-              "grey",
-              "black",
-              "red",
-              "blue"
-            ]
-          },
-          "type": "Select"
-        },
-        "text": {
-          "config": {
-            "label": "Button text",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "link": {
-          "config": {
-            "label": "Button link",
-            "placeholder": "",
-            "select": "web",
-            "allowTargetBlank": false
-          },
-          "type": "Link"
-        },
-        "background": {
-          "config": {
-            "label": "Slice background",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white",
-              "grey"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
-        },
-        "maxWidth": {
-          "config": {
-            "label": "Max width (px,% or vw)",
-            "placeholder": "300px"
-          },
-          "type": "Text"
-        },
         "animation": {
           "config": {
             "label": "Animation list",
@@ -296,6 +234,68 @@
             ]
           },
           "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "color": {
+          "config": {
+            "label": "Button color",
+            "placeholder": "",
+            "options": [
+              "grey",
+              "black",
+              "red",
+              "blue"
+            ]
+          },
+          "type": "Select"
+        },
+        "alignment": {
+          "config": {
+            "label": "Alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ],
+            "default_value": "left"
+          },
+          "type": "Select"
+        },
+        "text": {
+          "config": {
+            "label": "Button text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "link": {
+          "config": {
+            "label": "Button link",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "maxWidth": {
+          "config": {
+            "label": "Max width (px,% or vw)",
+            "placeholder": "300px"
+          },
+          "type": "Text"
         }
       },
       "items": {}

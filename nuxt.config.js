@@ -87,6 +87,9 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
+          options: {
+            fix: true,
+          },
         })
       }
     },
@@ -98,9 +101,11 @@ module.exports = {
     '~/plugins/vuelidate.js',
     '~/plugins/vue-social-sharing.js',
     '~/plugins/get-media-from-s3.js',
+    '~/plugins/header-handler.js',
     '~/plugins/feature-flags.js',
     '~/plugins/vue-prlx.js',
     { src: '~/plugins/sentry.js', mode: 'client' },
+    { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
     { src: '~/plugins/vue-parallax', mode: 'client' },
   ],
   /*

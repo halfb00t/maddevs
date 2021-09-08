@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Header from '@/components/core/Header/Header'
 import Footer from '@/components/core/Footer/Footer'
 import initIntercom from '@/helpers/intercom'
@@ -37,16 +38,8 @@ export default {
     }
   },
 
-  data() {
-    return {
-      showFooter: true,
-    }
-  },
-
-  created() {
-    this.$nuxt.$on('showFooter', value => {
-      this.showFooter = value
-    })
+  computed: {
+    ...mapGetters(['showFooter']),
   },
 
   mounted() {

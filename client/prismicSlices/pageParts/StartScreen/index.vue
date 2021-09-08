@@ -1,18 +1,18 @@
 <template>
   <section
     id="transparent-header-area"
+    data-testid="start-screen-slice"
     class="start-screen-slice"
-    :style="{
-      background: sliceGradient,
-    }"
+    :style="{ background: sliceGradient }"
   >
     <img
-      :src="image.url"
-      :alt="image.alt"
+      :src="image && image.url"
+      :alt="image && image.alt"
       :style="{
         opacity: imageOpacity,
         backgroundColor: sliceBackground,
       }"
+      data-testid="start-screen-slice__image"
       class="start-screen-slice__image"
     >
     <!-- sectionTextOpacity - value from changeOpacityOnScrollMixin mixin -->
@@ -23,10 +23,13 @@
         class="start-screen-slice__content"
       >
         <h1
+          data-testid="start-screen-slice__title"
           class="start-screen-slice__title"
           v-html="title"
         />
         <p
+          v-if="subtitle"
+          data-testid="start-screen-slice__subtitle"
           class="start-screen-slice__subtitle"
           v-html="subtitle"
         />
@@ -53,24 +56,26 @@ export default {
 
   data() {
     return {
-      imageOpacity: this.slice.primary.imageOpacity,
-      image: this.slice.primary.image,
-      title: this.slice.primary.title,
-      subtitle: this.slice.primary.subtitle,
+      imageOpacity: this.slice?.primary?.imageOpacity,
+      image: this.slice?.primary?.image,
+      title: this.slice?.primary?.title,
+      subtitle: this.slice?.primary?.subtitle,
     }
   },
 
   computed: {
     sliceBackground() {
-      if (this.slice.primary.background === 'white') return '#fff'
-      if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      return '#111213' // black
+      if (this.slice?.primary?.background === 'white') return '#ffffff'
+      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
+      if (this.slice?.primary?.background === 'black') return '#111213'
+      return null
     },
 
     sliceGradient() {
-      if (this.slice.primary.gradientColor === 'white') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #fff)'
-      if (this.slice.primary.gradientColor === 'grey') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #111213)'
-      return '#linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #111213)' // black
+      if (this.slice?.primary?.gradientColor === 'white') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #ffffff)'
+      if (this.slice?.primary?.gradientColor === 'grey') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #f5f7f9)'
+      if (this.slice?.primary?.gradientColor === 'black') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #111213)'
+      return null
     },
   },
 }

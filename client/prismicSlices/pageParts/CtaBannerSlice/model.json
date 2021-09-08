@@ -11,6 +11,28 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Cta Banner Slice",
       "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
         "image": {
           "config": {
             "label": "Image",
@@ -63,28 +85,6 @@
             "placeholder": ""
           },
           "type": "Text"
-        },
-        "animation": {
-          "config": {
-            "label": "Animation list",
-            "placeholder": "Select aos animation",
-            "options": [
-              "fade-up",
-              "fade-down",
-              "fade-right",
-              "fade-left",
-              "fade-up-right",
-              "fade-up-left",
-              "fade-down-righ",
-              "fade-down-left",
-              "zoom-in",
-              "zoom-in-up",
-              "zoom-in-left",
-              "zoom-in-right",
-              "none"
-            ]
-          },
-          "type": "Select"
         }
       },
       "items": {}

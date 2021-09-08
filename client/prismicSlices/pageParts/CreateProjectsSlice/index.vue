@@ -1,14 +1,12 @@
 <template>
   <section
     class="create-projects-slice"
-    :style="{
-      backgroundColor: sliceBackground,
-    }"
+    :style="{ backgroundColor: sliceBackground }"
   >
     <div class="container">
       <div
         class="create-projects-slice__content"
-        :data-aos="slice.primary.animation"
+        :data-aos="animation"
       >
         <h2 class="create-projects-slice__title">
           We create <br> IT projects for:
@@ -74,6 +72,7 @@ export default {
     return {
       countries,
       industriesEntries,
+      animation: this.slice.primary.animation,
     }
   },
 
@@ -81,14 +80,14 @@ export default {
     sliceBackground() {
       if (this.slice.primary.background === 'white') return '#fff'
       if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      return '#111213' // black
+      if (this.slice.primary.background === 'black') return '#111213'
+      return null
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-
 .create-projects-slice {
   @media screen and (max-width: 576px) {
     background-color: $bgcolor--white !important;

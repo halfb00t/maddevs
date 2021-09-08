@@ -21,30 +21,23 @@ exports[`BeforeAfter component should render correctly 1`] = `
           class="comparsion-container"
           data-testid="track-img"
         >
-          <div
-            class="comparsion-track-line"
-            data-testid="test-comparsion-track-line"
-          />
-           
-          <div
-            class="comparsion-view"
+          <img-comparison-slider
+            hover="true"
           >
-            <div
-              class="comparsion-image_before"
-              data-testid="test-comparsion-image_before"
-              style="background-image: url(img.jpg);"
-            />
-             
             <img
-              alt="GoDee Public Transportation App at 2018 and now."
-              class="comparsion-image_after"
-              data-testid="test-comparsion-image_after"
               height="578.47"
-              loading="lazy"
+              slot="first"
               src="img.jpg"
               width="1000"
             />
-          </div>
+             
+            <img
+              height="578.47"
+              slot="second"
+              src="img.jpg"
+              width="1000"
+            />
+          </img-comparison-slider>
         </div>
       </div>
     </section>

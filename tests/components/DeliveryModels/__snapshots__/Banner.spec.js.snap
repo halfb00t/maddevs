@@ -3,19 +3,19 @@
 exports[`Banner component should render correctly 1`] = `
 <div>
   <div
-    class="banner"
+    class="delivery-model-banner"
     id="transparent-header-area"
   >
     <picture>
       <source
-        class="banner__image"
+        class="delivery-model-banner__image"
         srcset="img.jpg ,img.jpg"
         type="image/webp"
       />
        
       <img
         alt="Team"
-        class="banner__image"
+        class="delivery-model-banner__image"
         height="827"
         src="img.jpg"
         srcset="img.jpg"
@@ -27,11 +27,11 @@ exports[`Banner component should render correctly 1`] = `
       class="container"
     >
       <div
-        class="banner__content"
+        class="delivery-model-banner__content"
         style="opacity: 1;"
       >
         <h1
-          class="banner__title"
+          class="delivery-model-banner__title"
         >
           
         Delivery 
@@ -41,7 +41,7 @@ exports[`Banner component should render correctly 1`] = `
         </h1>
          
         <p
-          class="banner__subtitle"
+          class="delivery-model-banner__subtitle"
         >
           
         At Mad Devs, we provide a full range of services aimed at delivering long-term value for both our customers and end users.

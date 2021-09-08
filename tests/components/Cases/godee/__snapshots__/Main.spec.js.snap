@@ -466,30 +466,23 @@ exports[`Main component should render correctly 1`] = `
             class="comparsion-container"
             data-testid="track-img"
           >
-            <div
-              class="comparsion-track-line"
-              data-testid="test-comparsion-track-line"
-            />
-             
-            <div
-              class="comparsion-view"
+            <img-comparison-slider
+              hover="true"
             >
-              <div
-                class="comparsion-image_before"
-                data-testid="test-comparsion-image_before"
-                style="background-image: url(/images/Cases/godee/png/application-before.png);"
+              <img
+                height="578.47"
+                slot="first"
+                src="/images/Cases/godee/png/application-before.png"
+                width="1000"
               />
                
               <img
-                alt="GoDee Public Transportation App at 2018 and now."
-                class="comparsion-image_after"
-                data-testid="test-comparsion-image_after"
                 height="578.47"
-                loading="lazy"
+                slot="second"
                 src="/images/Cases/godee/png/application-after.png"
                 width="1000"
               />
-            </div>
+            </img-comparison-slider>
           </div>
         </div>
       </section>

@@ -1,20 +1,20 @@
 <template>
   <div
     id="transparent-header-area"
-    class="banner"
+    class="delivery-model-banner"
   >
     <picture>
       <source
         :srcset="[$getMediaFromS3('/images/DeliveryModels/webp/banner.webp') + ' ', $getMediaFromS3('/images/DeliveryModels/webp/banner@2x.webp 2x')]"
         type="image/webp"
-        class="banner__image"
+        class="delivery-model-banner__image"
       >
       <img
         :srcset="$getMediaFromS3('/images/DeliveryModels/jpg/banner@2x.jpg')"
         :src="$getMediaFromS3('/images/DeliveryModels/jpg/banner.jpg')"
         width="1680"
         height="827"
-        class="banner__image"
+        class="delivery-model-banner__image"
         alt="Team"
       >
     </picture>
@@ -22,13 +22,13 @@
       <!-- sectionTextOpacity - value from changeOpacityOnScrollMixin mixin -->
       <div
         ref="sectionText"
-        class="banner__content"
+        class="delivery-model-banner__content"
         :style="{opacity: sectionTextOpacity}"
       >
-        <h1 class="banner__title">
+        <h1 class="delivery-model-banner__title">
           Delivery <br> models
         </h1>
-        <p class="banner__subtitle">
+        <p class="delivery-model-banner__subtitle">
           At Mad Devs, we provide a full range of services aimed at delivering long-term value for both our customers and end users.
         </p>
       </div>
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.banner {
+.delivery-model-banner {
   position: relative;
   display: flex;
   align-items: center;

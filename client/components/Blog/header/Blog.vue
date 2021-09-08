@@ -93,6 +93,10 @@ export default {
       height: 30px;
     }
   }
+
+  &__tag {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 1024px) {

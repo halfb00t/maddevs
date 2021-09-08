@@ -5,9 +5,10 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.",
+      "animation": "fade-down",
       "colorTheme": "white",
-      "maxWidth": "1028px"
+      "maxWidth": "1028px",
+      "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies."
     }
   },
   {
@@ -16,12 +17,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
+      "animation": "zoom-in",
       "colorTheme": "white",
-      "title": "Featured projects",
-      "tag": "h3",
-      "maxWidth": "1028px",
       "position": "center",
-      "animation": "none",
+      "title": "Featured projects",
+      "maxWidth": "1028px",
+      "tag": "h4",
       "size-xl": "80-px",
       "size-lg": "40-px",
       "size-md": "33-px",
@@ -35,9 +36,10 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
+      "animation": "fade-right",
+      "colorTheme": "white",
       "title": "Featured projects",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.",
-      "colorTheme": "white",
       "maxWidth": "1028px"
     }
   },
@@ -47,6 +49,8 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
+      "animation": "zoom-in-right",
+      "colorTheme": "white",
       "title": "Featured projects",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.",
       "buttonText": "Get presentation",
@@ -54,7 +58,6 @@
         "link_type": "Web",
         "url": "https://maddevs.co/delivery-models.pdf"
       },
-      "colorTheme": "white",
       "maxWidth": "1028px"
     }
   },
@@ -64,12 +67,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "colorTheme": "white",
-      "text": "incentivize user-centric schemas",
-      "maxWidth": "incentivize killer interfaces",
-      "position": "right",
+      "animation": "fade-up",
+      "colorTheme": "black",
       "type": "default",
-      "animation": "fade-up-right",
+      "position": "center",
+      "text": "iterate dot-com e-services",
+      "maxWidth": "orchestrate open-source functionalities",
       "size-xl": "40-px",
       "size-lg": "24-px",
       "size-md": "21-px",

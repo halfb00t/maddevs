@@ -4,16 +4,14 @@
       'project-start-slice',
       `project-start-slice--${colorTheme}-theme`,
     ]"
-    :style="{
-      backgroundColor: sliceBackground,
-    }"
+    :style="{ backgroundColor: sliceBackground }"
   >
     <div
       class="container"
-      :data-aos="slice.primary.animation"
+      :data-aos="animation"
     >
       <h2 class="project-start-slice__title">
-        {{ slice.primary.title || 'Quick Project Start' }}
+        {{ title || 'Quick Project Start' }}
       </h2>
       <div class="project-start-slice__list">
         <div
@@ -70,6 +68,7 @@
 <script>
 import { steps } from '@/data/quickProjectStart'
 import UIOutlinedButton from '@/components/shared/UIOutlinedButton'
+
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
@@ -100,6 +99,8 @@ export default {
   data() {
     return {
       steps,
+      title: this.slice.primary.title,
+      animation: this.slice.primary.animation,
     }
   },
 
@@ -107,7 +108,8 @@ export default {
     sliceBackground() {
       if (this.slice.primary.background === 'white') return '#fff'
       if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      return '#111213' // black
+      if (this.slice.primary.background === 'black') return '#111213'
+      return null
     },
 
     colorTheme() {

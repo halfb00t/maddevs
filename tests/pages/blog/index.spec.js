@@ -1,14 +1,12 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import Blog from '@/pages/blog/'
 
 const DESCRIPTION = 'test description'
 
-const store = {
-  getters: {
-    homePageContent: () => ({ description: DESCRIPTION }),
-  },
-}
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 const META_DATA = {
   description: DESCRIPTION,
@@ -29,9 +27,24 @@ const META_DATA = {
 
 const stubs = ['Main']
 
+const actions = {
+  setHeaderTransparentArea: () => {},
+  setHeaderTransparent: () => {},
+}
+
+const getters = {
+  homePageContent: () => ({ description: DESCRIPTION }),
+}
+
+const store = new Vuex.Store({
+  actions,
+  getters,
+})
+
 describe('Blog index component', () => {
   it('should render correctly', () => {
     const { container } = render(Blog, {
+      localVue,
       store,
       stubs,
     })
@@ -41,6 +54,7 @@ describe('Blog index component', () => {
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(Blog, {
+      localVue,
       store,
       stubs,
     })
@@ -59,6 +73,7 @@ describe('Blog index component', () => {
 
   it('should correct work head method if haven\'t description', () => {
     const wrapper = shallowMount(Blog, {
+      localVue,
       store,
       stubs,
     })

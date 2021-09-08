@@ -5,7 +5,6 @@ export default {
   title: 'client/prismicSlices/pageParts/CardGridSlice'
 }
 
-
 export const _DefaultSlice = () => ({
   components: {
     MyComponent,
@@ -24,25 +23,6 @@ export const _DefaultSlice = () => ({
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
 _DefaultSlice.storyName = 'Default slice'
-
-export const _CardGridWithList = () => ({
-  components: {
-    MyComponent,
-    SliceZone
-  },
-  methods: {
-    resolve() {
-      return MyComponent
-    }
-  },
-  data() {
-    return {
-      mock: {"variation":"cardGridWithList","name":"Card Grid With List","slice_type":"card_grid_slice","items":[{"title":"synthesize innovative channels","description":[{"type":"paragraph","text":"Deserunt eu nisi ex exercitation cillum sint irure esse ullamco reprehenderit non aute.","spans":[]}],"list":"scale strategic e-tailers","fullWidth":true},{"title":"deliver synergistic technologies","description":[{"type":"paragraph","text":"Cupidatat non Lorem officia nostrud eu.","spans":[]}],"list":"architect B2C e-services","fullWidth":false},{"title":"exploit revolutionary convergence","description":[{"type":"paragraph","text":"Laboris excepteur sint nostrud laborum cupidatat cillum minim nulla labore Lorem id proident eu.","spans":[]}],"list":"aggregate intuitive ROI","fullWidth":false},{"title":"matrix bricks-and-clicks relationships","description":[{"type":"paragraph","text":"Excepteur ea cupidatat cupidatat in sint aliqua cupidatat consectetur do ad.","spans":[]}],"list":"unleash rich eyeballs","fullWidth":false}],"primary":{"colorTheme":"white","animation":"none"},"id":"_CardGridWithList"}
-    }
-  },
-  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
-})
-_CardGridWithList.storyName = 'Card Grid With List'
 
 export const _CardGridWithIcon = () => ({
   components: {

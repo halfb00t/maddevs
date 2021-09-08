@@ -1,7 +1,11 @@
 import { render, screen, fireEvent } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import SirJohnMonashCentre from '@/pages/case-studies/sir-john-monash-centre'
 import formBaseProps from '../../__mocks__/formBaseProps'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 const DESCRIPTION = 'BYOD Case Study. Read how Mad Devs enhanced and developed new features for the Sir John Monash Centre’s software, mobile applications, and technological debt.'
 
@@ -25,12 +29,6 @@ const META_DATA = {
   url: '',
   jsonLd: '{"@context": "http://www.schema.org", "@type": "Organization", "name": "Mad Devs Group LTD - Custom Software Development Company", "url": "https://maddevs.io", "logo": "https://maddevs.io/Open-Graph.png", "foundingDate": "2016", "email": "team@maddevs.io", "description": "Mad Devs Group LTD is a software development company headquartered in London, which specializes in developing highly scalable, enterprise-level software solutions. Since the year 2016, the Mad Devs Group LTD team has developed 50+ projects and online services for finance, transportation & logistics, security, edtech, and advertising industries. The company’s customers are based in the United States, Australia, United Kingdom, France, Germany, Switzerland, Austria, Poland, Vietnam, Singapore, Russia, and CIS countries.", "address": {"@type": "PostalAddress", "streetAddress": "27 Old Gloucester Street", "addressLocality": "London", "addressRegion": "UK", "postalCode": "WC1N3AX"}, "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+442039848555"}, "sameAs": ["https://www.facebook.com/maddevsllc", "http://www.linkedin.com/company/mad-devs", "https://blog.maddevs.io", "https://clutch.co/profile/mad-devs", "https://www.glassdoor.com/Overview/Working-at-Mad-Devs-EI_IE2507466.11,19.htm", "https://twitter.com/MadDevsIO", "https://www.insAuthorram.com/maddevsio", "https://www.crunchbase.com/organization/mad-devs", "https://github.com/maddevsio", "https://www.behance.net/maddevs"]}',
   image: 'https://maddevs.io/blog.png',
-}
-
-const store = {
-  getters: {
-    homePageContent: () => ({ description: DESCRIPTION }),
-  },
 }
 
 const mocks = {
@@ -58,6 +56,20 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const actions = {
+  setHeaderTransparentArea: () => {},
+  setHeaderTransparent: () => {},
+}
+
+const getters = {
+  homePageContent: () => ({ description: DESCRIPTION }),
+}
+
+const store = new Vuex.Store({
+  actions,
+  getters,
+})
+
 describe('SirJohnMonashCentre _uid component', () => {
   global.$nuxt = {
     $route: {
@@ -67,6 +79,7 @@ describe('SirJohnMonashCentre _uid component', () => {
 
   it('should render correctly', () => {
     const { container } = render(SirJohnMonashCentre, {
+      localVue,
       store,
       mocks,
       stubs,
@@ -78,6 +91,7 @@ describe('SirJohnMonashCentre _uid component', () => {
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(SirJohnMonashCentre, {
+      localVue,
       store,
       mocks,
       stubs,
@@ -93,6 +107,7 @@ describe('SirJohnMonashCentre _uid component', () => {
 
   it('should correct work click handler', async () => {
     render(SirJohnMonashCentre, {
+      localVue,
       store,
       mocks,
       stubs,

@@ -47,6 +47,7 @@ import CaseHeader from '@/components/Cases/shared/CaseHeader'
 import Main from '@/components/Cases/nambafood/Main'
 import Footer from '@/components/Cases/shared/CaseFooter'
 import { getMetadata, buildHead } from '@/data/seo'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'NambaFood',
@@ -55,6 +56,8 @@ export default {
     Main,
     Footer,
   },
+
+  mixins: [headerMixin('.case_header')],
 
   nuxtI18n: false,
 

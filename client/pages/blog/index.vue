@@ -6,6 +6,7 @@
 import { mapGetters } from 'vuex'
 import Main from '@/components/Blog/Main/Main'
 import { getMetadata, buildHead } from '@/data/seo'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'Blog',
@@ -14,6 +15,8 @@ export default {
   },
 
   nuxtI18n: false,
+
+  mixins: [headerMixin('.blog-header')],
 
   async asyncData({ store, error }) {
     try {

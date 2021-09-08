@@ -28,8 +28,19 @@
             "label": "Animation list",
             "placeholder": "Select aos animation",
             "options": [
-              "none",
-              "fade"
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
             ]
           },
           "type": "Select"
@@ -79,83 +90,6 @@
       }
     },
     {
-      "id": "cardGridWithList",
-      "name": "Card Grid With List",
-      "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "Card Grid slice",
-      "primary": {
-        "colorTheme": {
-          "config": {
-            "label": "Theme color",
-            "placeholder": "",
-            "options": [
-              "white",
-              "black"
-            ],
-            "default_value": "white"
-          },
-          "type": "Select"
-        },
-        "animation": {
-          "config": {
-            "label": "Animation list",
-            "placeholder": "Select aos animation",
-            "options": [
-              "fade-up",
-              "fade-down",
-              "fade-right",
-              "fade-left",
-              "fade-up-right",
-              "fade-up-left",
-              "fade-down-righ",
-              "fade-down-left",
-              "zoom-in",
-              "zoom-in-up",
-              "zoom-in-left",
-              "zoom-in-right",
-              "none"
-            ]
-          },
-          "type": "Select"
-        }
-      },
-      "items": {
-        "title": {
-          "config": {
-            "label": "Main Title",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "description": {
-          "config": {
-            "label": "Main Description",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          },
-          "type": "StructuredText"
-        },
-        "list": {
-          "config": {
-            "label": "List",
-            "placeholder": "Example: item 1, item 2, item 3"
-          },
-          "type": "Text"
-        },
-        "fullWidth": {
-          "config": {
-            "label": "Set to full width?",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
-          },
-          "type": "Boolean"
-        }
-      }
-    },
-    {
       "id": "cardGridWithIcon",
       "name": "Card Grid With Icon",
       "docURL": "...",
@@ -192,6 +126,28 @@
               "black"
             ],
             "default_value": "white"
+          },
+          "type": "Select"
+        },
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
           },
           "type": "Select"
         }

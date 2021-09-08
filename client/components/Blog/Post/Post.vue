@@ -62,6 +62,16 @@
           :slices-type="type"
           class="blog-post__text-container"
         />
+        <Feature flag="blogComments">
+          <div class="blog-post__comments">
+            <Disqus
+              shortname="maddevs-io"
+              :url="`https://maddevs.io/blog/${getPostUid}/`"
+              :identifier="`/blog/${getPostUid}`"
+              lang="en"
+            />
+          </div>
+        </Feature>
       </div>
     </div>
     <div
@@ -115,6 +125,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { Disqus } from 'vue-disqus'
+import Feature from '@/featureFlags/Feature'
 import SlicesBlock from '@/components/slices'
 import TableOfContents from '@/components/Blog/Post/TableOfContents'
 import BlogHeader from '@/components/Blog/header/Blog'
@@ -136,6 +148,8 @@ export default {
     BlogHeader,
     CustomerUniversityHeader,
     CustomerUniversityNavigation,
+    Disqus,
+    Feature,
   },
 
   mixins: [findPostAuthorMixin],
@@ -225,6 +239,10 @@ export default {
 
   computed: {
     ...mapGetters(['allAuthors', 'blogTag']),
+
+    getPostUid() {
+      return this.$route.params.uid
+    },
 
     tableOfContentsSlice() {
       return this.slices && this.slices.find(slice => slice.slice_type === 'table_of_contents')
@@ -499,6 +517,10 @@ export default {
     }
   }
 
+  &__comments {
+    margin-top: 70px;
+  }
+
   &__back-to-list {
     padding: 12px 14px 4px;
     position: fixed;
@@ -583,7 +605,8 @@ export default {
     }
 
     &__introduction-paragraph,
-    &__text-container {
+    &__text-container,
+    &__comments {
       padding: 0 24px;
     }
 

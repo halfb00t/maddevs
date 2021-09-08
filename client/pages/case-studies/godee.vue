@@ -7,12 +7,15 @@
 <script>
 import Main from '@/components/Cases/godee/Main'
 import { getMetadata, buildHead } from '@/data/seo'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   name: 'GoDeeCase',
   components: {
     Main,
   },
+
+  mixins: [headerMixin('.case_header')],
 
   nuxtI18n: false,
 

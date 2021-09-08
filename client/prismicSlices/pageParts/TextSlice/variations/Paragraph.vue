@@ -12,35 +12,19 @@
         `paragraph-slice-text--${type}`,
       ]"
       :style="{ maxWidth }"
-      :data-aos="animation"
       v-html="text"
     />
   </section>
 </template>
 
 <script>
-import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
-
 export default {
   name: 'ParagraphSlice',
-
-  mixins: [animateOnScrollMixin({
-    offset: 200,
-    delay: 50,
-    anchorPlacement: 'top-center',
-    duration: 1000,
-    once: true,
-  })],
 
   props: {
     text: {
       type: String,
       default: '',
-    },
-
-    animation: {
-      type: String,
-      default: 'none',
     },
 
     maxWidth: {

@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"button_slice","items":[],"primary":{"fullWidth":false,"alignment":"left","text":"Default red button","link":{"link_type":"Web","url":"https://prismic.io"},"background":"black","maxWidth":"synergize seamless systems","animation":"none"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"button_slice","items":[],"primary":{"fullWidth":false,"animation":"none","background":"black","alignment":"left","text":"Default red button","link":{"link_type":"Web","url":"https://prismic.io"},"maxWidth":"grow leading-edge portals"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -37,7 +37,7 @@ export const _OutlinedButton = () => ({
   },
   data() {
     return {
-      mock: {"variation":"outlinedButton","name":"Outlined Button","slice_type":"button_slice","items":[],"primary":{"fullWidth":true,"alignment":"left","color":"red","text":"Outlined button","link":{"link_type":"Web","url":"http://twitter.com"},"background":"grey","maxWidth":"reintermediate sexy methodologies","animation":"none"},"id":"_OutlinedButton"}
+      mock: {"variation":"outlinedButton","name":"Outlined Button","slice_type":"button_slice","items":[],"primary":{"fullWidth":true,"animation":"none","background":"black","color":"black","alignment":"left","text":"Outlined button","link":{"link_type":"Web","url":"http://twitter.com"},"maxWidth":"empower e-business markets"},"id":"_OutlinedButton"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -56,7 +56,7 @@ export const _LinkButton = () => ({
   },
   data() {
     return {
-      mock: {"variation":"linkButton","name":"Link Button","slice_type":"button_slice","items":[],"primary":{"fullWidth":false,"alignment":"left","color":"black","text":"Link button","link":{"link_type":"Web","url":"https://prismic.io"},"background":"black","maxWidth":"drive end-to-end partnerships","animation":"none"},"id":"_LinkButton"}
+      mock: {"variation":"linkButton","name":"Link Button","slice_type":"button_slice","items":[],"primary":{"fullWidth":false,"animation":"none","background":"black","color":"red","alignment":"right","text":"Link button","link":{"link_type":"Web","url":"http://google.com"},"maxWidth":"revolutionize user-centric vortals"},"id":"_LinkButton"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

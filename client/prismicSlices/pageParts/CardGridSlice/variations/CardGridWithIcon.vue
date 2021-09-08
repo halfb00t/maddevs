@@ -1,8 +1,7 @@
 <template>
-  <section
+  <div
     class="card-grid-with-icon"
     :class="colorThemeClass"
-    :style="{ backgroundColor: sliceBackground }"
   >
     <div class="container">
       <ul class="card-grid-with-icon__content">
@@ -36,7 +35,7 @@
         </li>
       </ul>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -54,11 +53,6 @@ export default {
       default: 'white',
     },
 
-    background: {
-      type: String,
-      default: 'black',
-    },
-
     displayButtons: {
       type: Boolean,
       default: false,
@@ -71,12 +65,6 @@ export default {
   },
 
   computed: {
-    sliceBackground() {
-      if (this.background === 'white') return '#fff'
-      if (this.background === 'grey') return '#f5f7f9'
-      return '#111213' // black
-    },
-
     colorThemeClass() {
       if (this.colorTheme === 'black') return 'card-grid-with-icon--black-theme'
       return 'card-grid-with-icon--white-theme'

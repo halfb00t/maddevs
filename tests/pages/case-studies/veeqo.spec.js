@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import Veeqo from '@/pages/case-studies/veeqo'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 const DESCRIPTION = 'Infrastructure Case Study: How to optimize and reduce infrastructure costs? Read Veeqo’s story of optimizing the costs along with improving the system’s performance.'
 
@@ -39,12 +43,23 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const actions = {
+  setHeaderTransparentArea: () => {},
+  setHeaderTransparent: () => {},
+}
+
+const store = new Vuex.Store({
+  actions,
+})
+
 describe('Veeqo root component', () => {
   it('should render correctly', () => {
     const { container } = render(Veeqo, {
+      localVue,
       mocks,
       stubs,
       directives,
+      store,
     })
 
     expect(screen.getByText('Optimization for Veeqo')).not.toBeNull()
@@ -53,9 +68,11 @@ describe('Veeqo root component', () => {
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(Veeqo, {
+      localVue,
       mocks,
       stubs,
       directives,
+      store,
     })
 
     const actual = wrapper.vm.$options.head.call(wrapper.vm)

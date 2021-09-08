@@ -1,6 +1,10 @@
 <template>
   <section class="customer-rates-slice">
-    <div class="container">
+    <div
+      class="container"
+      data-testid="container"
+      :data-aos="animation"
+    >
       <h2 class="customer-rates-slice__title">
         <span>Fantastic</span> <br>
         customer&nbsp;&nbsp;&nbsp;<span class="customer-rates-slice__title-icon">rates:</span>
@@ -11,10 +15,16 @@
           :key="rateItem.title"
           class="rate-card"
         >
-          <div class="rate-card__title">
+          <div
+            class="rate-card__title"
+            data-testid="title"
+          >
             {{ rateItem.title }}
           </div>
-          <div class="rate-card__subtitle">
+          <div
+            class="rate-card__subtitle"
+            data-testid="subtitle"
+          >
             {{ rateItem.subtitle }}
           </div>
         </div>
@@ -24,8 +34,19 @@
 </template>
 
 <script>
+import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+
 export default {
   name: 'CustomerRatesSlice',
+
+  mixins: [animateOnScrollMixin({
+    offset: 200,
+    delay: 50,
+    anchorPlacement: 'top-center',
+    duration: 1000,
+    once: true,
+  })],
+
   props: {
     slice: {
       type: Object,
@@ -39,6 +60,7 @@ export default {
   data() {
     return {
       ratesList: this.slice.items,
+      animation: this.slice.primary.animation,
     }
   },
 }

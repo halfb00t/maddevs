@@ -6,10 +6,10 @@
       </h2>
       <div class="container_regular">
         <UIBeforeAfterImage
-          :base-width="'1000'"
-          :base-height="'578.47'"
-          before-image="/images/Cases/godee/png/application-before.png"
-          after-image="/images/Cases/godee/png/application-after.png"
+          :before-image="$getMediaFromS3(`/images/Cases/godee/png/application-before.png`)"
+          :after-image="$getMediaFromS3(`/images/Cases/godee/png/application-after.png`)"
+          base-width="1000"
+          base-height="578.47"
           :alt="'GoDee Public Transportation App at 2018 and now.'"
         />
       </div>
@@ -25,6 +25,7 @@ import UIBeforeAfterImage from '@/components/shared/UIBeforeAfterImage'
 
 export default {
   name: 'BeforeAfter',
+
   components: {
     UIBeforeAfterImage,
   },

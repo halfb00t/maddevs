@@ -5,8 +5,8 @@
     "slice_type": "customer_testimonials",
     "items": [],
     "primary": {
-      "title": "Customer Testimonials",
-      "animation": "none"
+      "animation": "none",
+      "title": "Customer Testimonials"
     }
   }
 ]

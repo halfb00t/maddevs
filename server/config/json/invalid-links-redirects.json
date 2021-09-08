@@ -22,5 +22,9 @@
   {
     "from": "/projects/#open-source",
     "to": "https://maddevs.io/open-source/"
+  },
+  {
+    "from": "/profile/mad-devs",
+    "to": "https://maddevs.io/"
   }
 ]

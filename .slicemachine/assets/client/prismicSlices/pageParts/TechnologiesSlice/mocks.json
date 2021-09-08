@@ -5,8 +5,8 @@
     "slice_type": "technologies_slice",
     "items": [],
     "primary": {
-      "title": "Technologies & Tools",
-      "animation": "none"
+      "animation": "none",
+      "title": "Technologies & Tools"
     }
   }
 ]

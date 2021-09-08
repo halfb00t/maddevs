@@ -12,35 +12,19 @@
         `title-slice-text`,
         `title-slice-text--${size}`,
       ]"
-      :data-aos="animation"
       v-html="title"
     />
   </section>
 </template>
 
 <script>
-import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
-
 export default {
   name: 'TitleSlice',
-
-  mixins: [animateOnScrollMixin({
-    offset: 200,
-    delay: 50,
-    anchorPlacement: 'top-center',
-    duration: 1000,
-    once: true,
-  })],
 
   props: {
     title: {
       type: String,
       default: '',
-    },
-
-    animation: {
-      type: String,
-      default: 'none',
     },
 
     tag: {

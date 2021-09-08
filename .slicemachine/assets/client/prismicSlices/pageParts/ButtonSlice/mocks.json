@@ -6,15 +6,15 @@
     "items": [],
     "primary": {
       "fullWidth": false,
+      "animation": "none",
+      "background": "black",
       "alignment": "left",
       "text": "Default red button",
       "link": {
         "link_type": "Web",
         "url": "https://prismic.io"
       },
-      "background": "black",
-      "maxWidth": "synergize seamless systems",
-      "animation": "none"
+      "maxWidth": "grow leading-edge portals"
     }
   },
   {
@@ -24,16 +24,16 @@
     "items": [],
     "primary": {
       "fullWidth": true,
+      "animation": "none",
+      "background": "black",
+      "color": "black",
       "alignment": "left",
-      "color": "red",
       "text": "Outlined button",
       "link": {
         "link_type": "Web",
         "url": "http://twitter.com"
       },
-      "background": "grey",
-      "maxWidth": "reintermediate sexy methodologies",
-      "animation": "none"
+      "maxWidth": "empower e-business markets"
     }
   },
   {
@@ -43,16 +43,16 @@
     "items": [],
     "primary": {
       "fullWidth": false,
-      "alignment": "left",
-      "color": "black",
+      "animation": "none",
+      "background": "black",
+      "color": "red",
+      "alignment": "right",
       "text": "Link button",
       "link": {
         "link_type": "Web",
-        "url": "https://prismic.io"
+        "url": "http://google.com"
       },
-      "background": "black",
-      "maxWidth": "drive end-to-end partnerships",
-      "animation": "none"
+      "maxWidth": "revolutionize user-centric vortals"
     }
   }
 ]

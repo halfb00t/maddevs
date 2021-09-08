@@ -1,7 +1,11 @@
-import { shallowMount, RouterLinkStub } from '@vue/test-utils'
+import { shallowMount, RouterLinkStub, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import { render, screen, fireEvent } from '@testing-library/vue'
 
 import Header from '@/components/core/Header/Header'
+
+const localVue = createLocalVue()
+localVue.use(Vuex)
 
 const mocks = {
   $nuxt: {
@@ -21,9 +25,22 @@ const GODEE_MOCK = {
   },
 }
 
-const stubs = ['NuxtLink', 'FooterContacts']
+const actions = {
+  setHeaderTransparentArea: () => {},
+  setHeaderTransparent: () => {},
+}
 
-const setDefaultStateForHeader = jest.fn()
+const getters = {
+  headerTransparentArea: () => '.selector',
+  headerTransparent: () => false,
+}
+
+const store = new Vuex.Store({
+  actions,
+  getters,
+})
+
+const stubs = ['NuxtLink', 'FooterContacts']
 
 const containerToRender = document.createElement('div')
 containerToRender.setAttribute('id', 'case-scroll-container')
@@ -46,23 +63,12 @@ describe('Header component', () => {
     jest.spyOn(window, 'removeEventListener').mockImplementation(() => {})
   })
 
-  it('correctly call update class function from watcher', () => {
-    const wrapper = shallowMount(Header, {
-      mocks,
-      stubs,
-    })
-
-    wrapper.vm.$options.watch.$route.call({
-      setDefaultStateForHeader,
-    })
-
-    expect(setDefaultStateForHeader).toHaveBeenCalledTimes(1)
-  })
-
   it('should render correctly', () => {
     const { container } = render(Header, {
+      localVue,
       mocks,
       stubs,
+      store,
     })
 
     expect(container).toMatchSnapshot()
@@ -74,8 +80,10 @@ describe('Header component', () => {
       document.documentElement.scrollTop = y
     }
     await render(Header, {
+      localVue,
       mocks,
       stubs,
+      store,
     })
 
     await fireEvent.scroll(document.documentElement, { target: { scrollTop: SCROLL_POSITION } })
@@ -87,8 +95,10 @@ describe('Header component', () => {
 
   it('should correct work burger click handler', async () => {
     render(Header, {
+      localVue,
       mocks,
       stubs,
+      store,
     })
 
     const burgerButton = screen.getByTestId('test-burger')
@@ -103,6 +113,8 @@ describe('Header component', () => {
 
   it('should correct work scroll handler', async () => {
     render(Header, {
+      localVue,
+      store,
       mocks: GODEE_MOCK,
       stubs,
       container: document.body.appendChild(containerToRender),
@@ -115,8 +127,10 @@ describe('Header component', () => {
 
   it('should correct work mobile scroll bar', async () => {
     render(Header, {
+      localVue,
       mocks: GODEE_MOCK,
       stubs,
+      store,
       container: document.body.appendChild(containerToRender),
     })
 
@@ -131,8 +145,10 @@ describe('Header component', () => {
   it('if call method "show" and ref modalContactMe is undefined > "show" method in ref modalContactMe not call', () => {
     const mockShow = jest.fn()
     const wrapper = shallowMount(Header, {
+      localVue,
       mocks: GODEE_MOCK,
       stubs,
+      store,
       container: document.body.appendChild(containerToRender),
     })
     wrapper.vm.showModal()
@@ -142,8 +158,10 @@ describe('Header component', () => {
   it('if call method "show" and ref modalContactMe exist > "show" method in ref modalContactMe call', () => {
     const mockShow = jest.fn()
     const wrapper = shallowMount(Header, {
+      localVue,
       mocks: GODEE_MOCK,
       container: document.body.appendChild(containerToRender),
+      store,
       stubs: {
         NuxtLink: RouterLinkStub,
         ModalContactMe: {

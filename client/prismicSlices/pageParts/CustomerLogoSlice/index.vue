@@ -5,7 +5,7 @@
   >
     <div class="container">
       <div
-        :data-aos="slice.primary.animation"
+        :data-aos="animation"
         class="customer-logo-slice_list"
       >
         <div
@@ -51,6 +51,7 @@ export default {
 
   data() {
     return {
+      animation: this.slice.primary.animation,
       title: this.slice.primary.title,
       description: this.slice.primary.description,
       customers: this.slice.items,

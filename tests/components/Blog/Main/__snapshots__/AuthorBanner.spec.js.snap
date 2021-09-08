@@ -11,19 +11,12 @@ exports[`AuthorBanner component should render correctly 1`] = `
       <div
         class="current-author__image"
       >
-        <picture>
-          <source
-            data-src="&w=256&h=256"
-            media="(max-width: 991px)"
-          />
-           
-          <img
-            alt=""
-            data-src="&w=330&h=330"
-            height="165"
-            width="165"
-          />
-        </picture>
+        <img
+          alt=""
+          data-src=""
+          height="165"
+          width="165"
+        />
       </div>
        
       <h1

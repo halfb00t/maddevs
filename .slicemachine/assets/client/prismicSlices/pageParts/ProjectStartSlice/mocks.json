@@ -5,10 +5,10 @@
     "slice_type": "project_start_slice",
     "items": [],
     "primary": {
-      "title": "Quick Project Start",
+      "animation": "none",
       "background": "black",
       "colorTheme": "white",
-      "animation": "none"
+      "title": "Quick Project Start"
     }
   }
 ]
