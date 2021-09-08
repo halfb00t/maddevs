@@ -97,6 +97,7 @@ const getRoutes = async () => {
     '/case-studies/godee',
     'case-studies/yourcast/',
     'case-studies/veeqo/',
+    'customer-university/',
     '/blog',
     ...careerPageRoutes,
     ...blogPageRoutes,
