@@ -8,11 +8,14 @@
 <script>
 import { mapActions } from 'vuex'
 import SliceZone from 'vue-slicezone'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   components: {
     SliceZone,
   },
+
+  mixins: [headerMixin('.start-screen-slice')],
 
   beforeRouteLeave(to, from, next) {
     this.showFooter(true)

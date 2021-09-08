@@ -11,6 +11,30 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "StartScreen",
       "primary": {
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ]
+          },
+          "type": "Select"
+        },
+        "gradientColor": {
+          "config": {
+            "label": "Gradient color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black",
+              "grey"
+            ]
+          },
+          "type": "Select"
+        },
         "image": {
           "config": {
             "label": "Image",
@@ -39,30 +63,6 @@
             "placeholder": ""
           },
           "type": "Text"
-        },
-        "background": {
-          "config": {
-            "label": "Slice background",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white",
-              "grey"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
-        },
-        "gradientColor": {
-          "config": {
-            "label": "Gradient color",
-            "placeholder": "",
-            "options": [
-              "white",
-              "black"
-            ]
-          },
-          "type": "Select"
         }
       },
       "items": {}

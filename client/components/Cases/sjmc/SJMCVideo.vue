@@ -27,7 +27,7 @@
     </div>
     <button
       class="exit"
-      @click="exitFullscreen"
+      @click="closeFullscreen"
     >
       <img
         src="@/assets/img/Studies/svg/close-icon.svg"
@@ -41,19 +41,21 @@
 
 <script>
 import mainMixins from '@/mixins/mainMixins'
+import checkBrowserMixin from '@/mixins/checkBrowserMixin'
 
 export default {
   name: 'SJMCVideo',
-  mixins: [mainMixins],
+  mixins: [mainMixins, checkBrowserMixin],
   data() {
     return {
-      fullscreenModIsActive: false,
       showIcon: false,
       flagFirstStartVideo: true,
+      fullscreenModIsActive: false,
     }
   },
 
   mounted() {
+    this.closeFullscreen()
     // event bus handler
     this.$nuxt.$on('open-fullscreen', () => this.emitHandler())
 
@@ -82,15 +84,14 @@ export default {
       this.showIcon = true
     },
 
-    exitFullscreen() {
-      document.exitFullscreen()
+    closeFullscreen() {
+      this.checkBrowserExitFullscreen()
       this.fullscreenModIsActive = false
     },
 
     emitHandler() {
-      this.$refs.videoContainer.requestFullscreen()
+      this.checkBrowserReqFullscreen(this.$refs.videoContainer)
       this.fullscreenModIsActive = true
-
       if (this.flagFirstStartVideo) {
         try {
           this.MixinPlayVideo(this.$refs.video)

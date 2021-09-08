@@ -5,6 +5,8 @@
     "slice_type": "start_screen",
     "items": [],
     "primary": {
+      "background": "black",
+      "gradientColor": "white",
       "image": {
         "dimensions": {
           "width": 900,
@@ -16,9 +18,7 @@
       },
       "imageOpacity": 1,
       "title": "Mad Devs Engineering Your Growth",
-      "subtitle": "Without empty words, here at Mad Devs we partner with projects where our teams thrive. Innovating solutions, carrying ownership, delivering sustainable value and celebrating successes — make a happy workplace, where things get done. ",
-      "background": "black",
-      "gradientColor": "white"
+      "subtitle": "Without empty words, here at Mad Devs we partner with projects where our teams thrive. Innovating solutions, carrying ownership, delivering sustainable value and celebrating successes — make a happy workplace, where things get done. "
     }
   }
 ]

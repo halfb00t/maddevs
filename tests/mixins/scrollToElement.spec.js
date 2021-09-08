@@ -15,6 +15,9 @@ const store = {
 
 const mocks = {
   $t: () => 'translated',
+  $route: {
+    path: '/careers',
+  },
 }
 
 const stubs = ['UnderlinedButton', 'NuxtLink']

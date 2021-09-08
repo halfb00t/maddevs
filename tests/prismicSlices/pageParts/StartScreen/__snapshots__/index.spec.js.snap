@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartScreen slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="start-screen-slice"
+    data-testid="start-screen-slice"
+    id="transparent-header-area"
+  >
+    <img
+      alt="alt"
+      class="start-screen-slice__image"
+      data-testid="start-screen-slice__image"
+      src="url"
+      style="opacity: 0.3; background-color: rgb(17, 18, 19);"
+    />
+     
+    <div
+      class="container"
+    >
+      <div
+        class="start-screen-slice__content"
+        style="opacity: 1;"
+      >
+        <h1
+          class="start-screen-slice__title"
+          data-testid="start-screen-slice__title"
+        >
+          StartScreen title
+        </h1>
+         
+        <p
+          class="start-screen-slice__subtitle"
+          data-testid="start-screen-slice__subtitle"
+        >
+          StartScreen subtitle
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`StartScreen slice should render correctly without data 1`] = `
+<div>
+  <section
+    class="start-screen-slice"
+    data-testid="start-screen-slice"
+    id="transparent-header-area"
+  >
+    <img
+      class="start-screen-slice__image"
+      data-testid="start-screen-slice__image"
+    />
+     
+    <div
+      class="container"
+    >
+      <div
+        class="start-screen-slice__content"
+        style="opacity: 1;"
+      >
+        <h1
+          class="start-screen-slice__title"
+          data-testid="start-screen-slice__title"
+        />
+         
+        <!---->
+      </div>
+    </div>
+  </section>
+</div>
+`;

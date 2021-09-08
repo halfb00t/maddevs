@@ -1,7 +1,7 @@
 <template>
   <div
     class="key-metrics-slice__content"
-    :class="colorThemeClass"
+    :class="`key-metrics-slice__content--${colorThemeOption}-theme`"
   >
     <h2 class="key-metrics-slice__title">
       Mad Devs’ key metrics
@@ -11,6 +11,7 @@
         v-for="metric in metrics"
         :key="metric.title"
         class="key-metric"
+        data-testid="key-metric"
       >
         <h3 class="key-metric__title">
           {{ metric.title }}
@@ -40,9 +41,9 @@ export default {
   },
 
   computed: {
-    colorThemeClass() {
-      if (this.colorTheme === 'black') return 'key-metrics-slice__content--black-theme'
-      return 'key-metrics-slice__content--white-theme'
+    colorThemeOption() {
+      if (this.colorTheme === 'black') return 'black'
+      return 'white'
     },
   },
 }

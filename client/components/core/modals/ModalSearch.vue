@@ -206,30 +206,33 @@ export default {
     },
 
     listenKeys(event) {
-      if (event.keyCode === 27) {
-        document.removeEventListener('keyup', this.listenKeys)
-        this.onClose()
-        return true
+      if (event.keyCode === 27) this.cleanUp()
+      if (event.keyCode === 13) this.onEnter()
+    },
+
+    updateUrl() {
+      if (this.value && this.value.length) {
+        this.$router.push({ path: '/blog/search-result/', query: { searchBy: this.value } })
+      } else {
+        this.$router.push('/blog/')
       }
-      if (this.searchPosts && this.searchPosts.length) {
-        if (event.keyCode === 13) {
-          if (this.value && this.value.length) {
-            this.$router.push({ path: '/blog/search-result/', query: { searchBy: this.value } })
-          } else {
-            this.$router.push('/blog/')
-          }
-          document.removeEventListener('keyup', this.listenKeys)
-          this.onClose()
-          return true
-        }
-        return false
-      }
-      return true
+    },
+
+    cleanUp() {
+      document.removeEventListener('keyup', this.listenKeys)
+      this.onClose()
     },
 
     onClose() {
       this.$emit('on-close')
       this.response = null
+    },
+
+    onEnter() {
+      if (this.searchPosts && this.searchPosts.length) {
+        this.updateUrl()
+        this.cleanUp()
+      }
     },
   },
 }

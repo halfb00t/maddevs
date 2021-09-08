@@ -268,12 +268,14 @@ export default {
 
       this.handleLogo(scrollTop)
 
-      if (!area) return
+      if (!area) {
+        this.setHeaderTransparent(false)
+      } else {
+        const areaHeight = (area.offsetTop + area.offsetHeight) - headerHeight
+        const isBeforeBottomPointSection = scrollTop <= areaHeight - earlyStartBGChange // Before Bottom point of the section
 
-      const areaHeight = (area.offsetTop + area.offsetHeight) - headerHeight
-      const isBeforeBottomPointSection = scrollTop <= areaHeight - earlyStartBGChange // Before Bottom point of the section
-
-      this.setHeaderTransparent(isBeforeBottomPointSection)
+        this.setHeaderTransparent(isBeforeBottomPointSection)
+      }
     },
 
     addEventListeners() {

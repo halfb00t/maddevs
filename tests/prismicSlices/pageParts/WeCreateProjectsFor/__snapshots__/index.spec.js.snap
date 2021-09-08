@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeCreateProjectsFor slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="create-projects-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="create-projects-slice__content aos-init aos-animate"
+        data-aos="fade-up"
+        data-testid="create-projects-slice__content"
+      >
+        <h2
+          class="create-projects-slice__title"
+        >
+          
+        We create 
+          <br />
+           IT projects for:
+      
+        </h2>
+         
+        <div
+          class="create-projects-slice__projects projects-list"
+        >
+          <div
+            class="projects-list__item"
+            data-testid="projects-list__item"
+          >
+            <p
+              class="projects-list__item-paragraph"
+            >
+              
+            Content Streaming
+            
+              <br />
+              
+            Transportation
+          
+            </p>
+          </div>
+          <div
+            class="projects-list__item"
+            data-testid="projects-list__item"
+          >
+            <p
+              class="projects-list__item-paragraph"
+            >
+              
+            E-Commerce
+            
+              <br />
+              
+            AdTech
+          
+            </p>
+          </div>
+          <div
+            class="projects-list__item"
+            data-testid="projects-list__item"
+          >
+            <p
+              class="projects-list__item-paragraph"
+            >
+              
+            E-Learning
+            
+              <br />
+              
+            FinTech
+          
+            </p>
+          </div>
+        </div>
+         
+        <ul
+          class="create-projects-slice__flags flags-list"
+        >
+          <li
+            class="flags-list__item"
+            data-testid="flags-list__item"
+          >
+            <img
+              alt="usa"
+              height="32"
+              src="[object Object]"
+              width="32"
+            />
+          </li>
+          <li
+            class="flags-list__item"
+            data-testid="flags-list__item"
+          >
+            <img
+              alt="australia"
+              height="32"
+              src="[object Object]"
+              width="32"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`WeCreateProjectsFor slice should render correctly without data 1`] = `
+<div>
+  <section
+    class="create-projects-slice"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="create-projects-slice__content"
+        data-testid="create-projects-slice__content"
+      >
+        <h2
+          class="create-projects-slice__title"
+        >
+          
+        We create 
+          <br />
+           IT projects for:
+      
+        </h2>
+         
+        <div
+          class="create-projects-slice__projects projects-list"
+        />
+         
+        <ul
+          class="create-projects-slice__flags flags-list"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

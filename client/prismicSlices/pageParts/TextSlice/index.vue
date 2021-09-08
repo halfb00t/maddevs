@@ -115,7 +115,7 @@ export default {
         || this.slice.primary['size-xl']
       } if (window.innerWidth > 1200 && window.innerWidth <= 1440) {
         this.size = this.slice.primary['size-lg']
-        this.size = this.slice.primary['size-xl']
+        || this.slice.primary['size-xl']
       } if (window.innerWidth > 1440) {
         this.size = this.slice.primary['size-xl']
       }
