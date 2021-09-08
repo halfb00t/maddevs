@@ -64,8 +64,9 @@
         />
         <div class="blog-post__comments">
           <Disqus
-            :url="`https://maddevs.io/blog/${postUID}/`"
-            :identifier="`/blog/${postUID}`"
+            shortname="maddevs-io"
+            :url="`https://maddevs.io/blog/${getPostUid}/`"
+            :identifier="`/blog/${getPostUid}`"
             lang="en"
           />
         </div>
@@ -122,6 +123,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { Disqus } from 'vue-disqus'
 import SlicesBlock from '@/components/slices'
 import TableOfContents from '@/components/Blog/Post/TableOfContents'
 import BlogHeader from '@/components/Blog/header/Blog'
@@ -143,6 +145,7 @@ export default {
     BlogHeader,
     CustomerUniversityHeader,
     CustomerUniversityNavigation,
+    Disqus,
   },
 
   mixins: [findPostAuthorMixin],
@@ -233,7 +236,7 @@ export default {
   computed: {
     ...mapGetters(['allAuthors', 'blogTag']),
 
-    postUID() {
+    getPostUid() {
       return this.$route.params.uid
     },
 
