@@ -124,7 +124,7 @@ describe('Post component', () => {
   })
 
   it('should correct get the route uid', () => {
-    expect(wrapper.vm.getRoute).toBe(mocks.$route.params.uid)
+    expect(wrapper.vm.postUID).toBe(mocks.$route.params.uid)
   })
 
   it('should correct call scroll top', async () => {

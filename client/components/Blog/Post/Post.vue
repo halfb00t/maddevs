@@ -64,8 +64,9 @@
         />
         <div class="blog-post__comments">
           <Disqus
-            :url="`https://maddevs.io/blog/${getRoute}/`"
-            :identifier="`/blog/${getRoute}`"
+            :url="`https://maddevs.io/blog/${postUID}/`"
+            :identifier="`/blog/${postUID}`"
+            lang="en"
           />
         </div>
       </div>
@@ -232,7 +233,7 @@ export default {
   computed: {
     ...mapGetters(['allAuthors', 'blogTag']),
 
-    getRoute() {
+    postUID() {
       return this.$route.params.uid
     },
 

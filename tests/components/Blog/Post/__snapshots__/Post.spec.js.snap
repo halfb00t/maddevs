@@ -39,6 +39,7 @@ exports[`Post component should render correctly with default props 1`] = `
         >
           <disqus
             identifier="/blog/uid"
+            lang="en"
             url="https://maddevs.io/blog/uid/"
           />
         </div>
