@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerRates slice should render correctly 1`] = `
+<div>
+  <section
+    class="customer-rates-slice"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="zoom-in"
+      data-testid="container"
+    >
+      <h2
+        class="customer-rates-slice__title"
+      >
+        <span>
+          Fantastic
+        </span>
+         
+        <br />
+        
+      customer   
+        <span
+          class="customer-rates-slice__title-icon"
+        >
+          rates:
+        </span>
+      </h2>
+       
+      <div
+        class="customer-rates-slice__grid"
+      >
+        <div
+          class="rate-card"
+        >
+          <div
+            class="rate-card__title"
+            data-testid="title"
+          >
+            
+          CustomerRates title one
+        
+          </div>
+           
+          <div
+            class="rate-card__subtitle"
+            data-testid="subtitle"
+          >
+            
+          CustomerRatesSlice subtitle one
+        
+          </div>
+        </div>
+        <div
+          class="rate-card"
+        >
+          <div
+            class="rate-card__title"
+            data-testid="title"
+          >
+            
+          CustomerRates title two
+        
+          </div>
+           
+          <div
+            class="rate-card__subtitle"
+            data-testid="subtitle"
+          >
+            
+          CustomerRatesSlice subtitle two
+        
+          </div>
+        </div>
+        <div
+          class="rate-card"
+        >
+          <div
+            class="rate-card__title"
+            data-testid="title"
+          >
+            
+          CustomerRates title three
+        
+          </div>
+           
+          <div
+            class="rate-card__subtitle"
+            data-testid="subtitle"
+          >
+            
+          CustomerRatesSlice subtitle three
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
