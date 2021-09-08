@@ -55,8 +55,8 @@ describe('Custom logo slice', () => {
   })
 })
 
-describe('data-aos animation attribute', () => {
-  it(`should be '${apiData.animation}'`, () => {
+describe('Custom logo slice data-aos animation attribute', () => {
+  it(`should the data-aos to be '${apiData.animation}'`, () => {
     render(CustomerLogoSlice, {
       data,
       props: getProps(apiData),
@@ -65,12 +65,11 @@ describe('data-aos animation attribute', () => {
     expect(screen.getByTestId('customer-logo-slice-container').getAttribute('data-aos')).toBe(apiData.animation)
   })
 
-  it('should be null', () => {
+  it('should the data-aos to be null', () => {
     render(CustomerLogoSlice, {
       data,
       props: getProps({}),
     })
-
     expect(screen.getByTestId('customer-logo-slice-container').getAttribute('data-aos')).toBeNull()
   })
 })
