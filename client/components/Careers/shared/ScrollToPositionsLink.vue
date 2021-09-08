@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="`/careers/#open-positions`"
+    :to="link"
     :class="[(show && vacanciesLoaded && vacanciesCount) ? null : 'scroll-to-positions--hidden']"
     class="scroll-to-positions"
     @click.native="scrollToElement('#open-positions')"
@@ -36,6 +36,10 @@ export default {
 
     vacanciesCount() {
       return (this.vacancies && this.vacancies.length) || 0
+    },
+
+    link() {
+      return `${this.$route.path}#open-positions`
     },
   },
 
