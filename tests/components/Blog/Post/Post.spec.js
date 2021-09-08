@@ -51,6 +51,9 @@ const mocks = {
   },
   $route: {
     name: 'test-route',
+    params: {
+      uid: 'uid',
+    },
   },
   $router: {
     currentRoute: {
@@ -118,6 +121,10 @@ describe('Post component', () => {
     })
 
     expect(container).toMatchSnapshot()
+  })
+
+  it('should correct get the route uid', () => {
+    expect(wrapper.vm.getRoute).toBe(mocks.$route.params.uid)
   })
 
   it('should correct call scroll top', async () => {

@@ -37,7 +37,10 @@ exports[`Post component should render correctly with default props 1`] = `
         <div
           class="blog-post__comments"
         >
-          <disqus />
+          <disqus
+            identifier="/blog/uid"
+            url="https://maddevs.io/blog/uid/"
+          />
         </div>
       </div>
     </div>
