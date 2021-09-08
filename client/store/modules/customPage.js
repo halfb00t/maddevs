@@ -3,7 +3,7 @@ import { getCustomPage } from '@/api/customPage'
 import extractSchemaOrg from '@/helpers/extractSchemaOrg'
 
 const extractCustomPageData = page => {
-  if (!page && !page.data) return {}
+  if (!page && !page?.data) return {}
   return {
     released: page.data.released,
     showFooter: page.data.show_footer,

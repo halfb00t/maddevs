@@ -49,23 +49,33 @@ describe('Custom page module mutations', () => {
     },
   }
 
-  const expectedData = {
-    slices: [],
-    released: false,
-    showFooter: false,
-    metaTitle: 'Meta title',
-    metaDescription: 'Meta description',
-    schemaOrgSnippet: '',
-  }
-
-  it('should correct mutate state after calling SET_CUSTOM_PAGE mutation', () => {
+  it('should correct mutate state after calling SET_CUSTOM_PAGE mutation with prismicResponse', () => {
     const state = defaultState()
+    const expectedData = {
+      slices: [],
+      released: false,
+      showFooter: false,
+      metaTitle: 'Meta title',
+      metaDescription: 'Meta description',
+      schemaOrgSnippet: '',
+    }
 
     mutations.SET_CUSTOM_PAGE(state, prismicResponse)
 
     expect(state).toEqual({
       ...defaultState(),
       customPage: expectedData,
+    })
+  })
+
+  it('should correct mutate state after calling SET_CUSTOM_PAGE mutation without prismicResponse', () => {
+    const state = defaultState()
+
+    mutations.SET_CUSTOM_PAGE(state)
+
+    expect(state).toEqual({
+      ...defaultState(),
+      customPage: {},
     })
   })
 })
