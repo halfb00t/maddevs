@@ -24,7 +24,6 @@ const IGNORE_ROUTES = [
   '/blog/tag/assistant-delivery-manager',
   '/blog/tag/software-features',
   '/blog/mad-devs-devops',
-  '/mad-devs-ishet-golang-razrabotchika',
   '/blog/middle-python-developer',
   '/blog/vue-vuetify-middle-v-saas-proekt',
   '/blog/senior-android-developer',
@@ -37,6 +36,7 @@ const IGNORE_ROUTES = [
   '/blog/ios-middle-senior-developer-v-finteh-proekt',
   '/blog/it-recruiter-middle-maddevs',
   '/blog/mad-devs-ishet-golang-razrabotchika',
+  '/mad-devs-ishet-golang-razrabotchika',
 ]
 
 const getRoutes = async () => {
@@ -95,9 +95,8 @@ const getRoutes = async () => {
     '/case-studies/namba-food',
     '/case-studies/sir-john-monash-centre',
     '/case-studies/godee',
-    'case-studies/yourcast/',
-    'case-studies/veeqo/',
-    'customer-university/',
+    '/case-studies/yourcast/',
+    '/case-studies/veeqo/',
     '/blog',
     ...careerPageRoutes,
     ...blogPageRoutes,
