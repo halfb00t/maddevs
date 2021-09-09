@@ -6,6 +6,7 @@
         :key="`card-grid-slice__item-${i}`"
         class="card-grid-slice__item"
         :class="{ 'card-grid-slice__item--full-width': item.fullWidth }"
+        data-testid="card-grid-item"
       >
         <a
           :href="item.btnLink"

@@ -10,6 +10,7 @@
             item.fullWidth ? 'card-item--full-width' : null,
             item.alignText ? `card-item--text-${item.alignText}` : null,
           ]"
+          data-testid="rich-text-card-item"
           :style="{ backgroundColor: item.background || null }"
         >
           <h3
@@ -29,7 +30,6 @@
 <script>
 export default {
   name: 'RichTextCards',
-
   props: {
     items: {
       type: Array,
