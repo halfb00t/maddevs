@@ -26,16 +26,7 @@ export default {
   nuxtI18n: false,
 
   head() {
-    return {
-      ...buildHead(getMetadata('caseStudies')),
-      link: [
-        {
-          rel: 'preload',
-          as: 'image',
-          href: 'https://d6xkme6dcvajw.cloudfront.net/videos/veeqo-banner.mp4',
-        },
-      ],
-    }
+    return buildHead(getMetadata('caseStudies'))
   },
 }
 </script>

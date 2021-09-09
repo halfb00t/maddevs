@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card grid slices cardGridWithIcon component should render correctly with data 1`] = `
+<div>
+  <div
+    class="card-grid-with-icon card-grid-with-icon--black-theme"
+  >
+    <div
+      class="container"
+    >
+      <ul
+        class="card-grid-with-icon__content"
+      >
+        <li
+          class="card-item"
+          data-testid="card-grid-with-icon-item"
+        >
+          <a
+            class="card-item__wrapper"
+            href="https://maddevs.io/"
+            target="_blank"
+          >
+            <div
+              class="card-item__content"
+            >
+              <img
+                alt="First item image alt"
+                class="card-item__logo"
+                src="https://maddevs.io/Open-Graph.png"
+              />
+               
+              <h3
+                class="card-item__title"
+              >
+                First item title
+              </h3>
+               
+              <p
+                class="card-item__description"
+              >
+                
+              First item description
+            
+              </p>
+            </div>
+             
+            <!---->
+          </a>
+        </li>
+        <li
+          class="card-item"
+          data-testid="card-grid-with-icon-item"
+        >
+          <a
+            class="card-item__wrapper"
+            href="https://maddevs.io/"
+            target="_blank"
+          >
+            <div
+              class="card-item__content"
+            >
+              <img
+                alt="second item image alt"
+                class="card-item__logo"
+                src="https://maddevs.io/Open-Graph.png"
+              />
+               
+              <h3
+                class="card-item__title"
+              >
+                second item title
+              </h3>
+               
+              <p
+                class="card-item__description"
+              >
+                
+              second item description
+            
+              </p>
+            </div>
+             
+            <!---->
+          </a>
+        </li>
+        <li
+          class="card-item"
+          data-testid="card-grid-with-icon-item"
+        >
+          <a
+            class="card-item__wrapper"
+            href="https://maddevs.io/"
+            target="_blank"
+          >
+            <div
+              class="card-item__content"
+            >
+              <img
+                alt="third item image alt"
+                class="card-item__logo"
+                src="https://maddevs.io/Open-Graph.png"
+              />
+               
+              <h3
+                class="card-item__title"
+              >
+                third item title
+              </h3>
+               
+              <p
+                class="card-item__description"
+              >
+                
+              third item description
+            
+              </p>
+            </div>
+             
+            <!---->
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card grid slices cardGridWithIcon component should render correctly without data 1`] = `
+<div>
+  <div
+    class="card-grid-with-icon card-grid-with-icon--white-theme"
+  >
+    <div
+      class="container"
+    >
+      <ul
+        class="card-grid-with-icon__content"
+      />
+    </div>
+  </div>
+</div>
+`;

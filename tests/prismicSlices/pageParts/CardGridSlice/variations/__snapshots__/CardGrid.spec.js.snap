@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card grid slices CardGrid component should render correctly with data 1`] = `
+<div>
+  <div
+    class="container"
+    colortheme="black"
+  >
+    <ul
+      class="card-grid-slice"
+    >
+      <li
+        class="card-grid-slice__item"
+        data-testid="card-grid-item"
+      >
+        <a
+          class="card-grid-slice__item-link"
+          target="_blank"
+        >
+          <div
+            class="card-grid-slice__item-info"
+          >
+            <h3>
+              First item title
+            </h3>
+             
+            <p>
+              First item description
+            </p>
+             
+            <button
+              class="ui-arrow-button card-grid-slice__item-button ui-arrow-button--black"
+              type="button"
+            >
+              <span>
+                ↓
+              </span>
+            </button>
+          </div>
+           
+          <img
+            alt="First item image alt"
+            class="card-grid-slice__item-logo"
+            height="100%"
+            src="https://maddevs.io/Open-Graph.png"
+            width="100%"
+          />
+        </a>
+      </li>
+      <li
+        class="card-grid-slice__item"
+        data-testid="card-grid-item"
+      >
+        <a
+          class="card-grid-slice__item-link"
+          target="_blank"
+        >
+          <div
+            class="card-grid-slice__item-info"
+          >
+            <h3>
+              second item title
+            </h3>
+             
+            <p>
+              second item description
+            </p>
+             
+            <button
+              class="ui-arrow-button card-grid-slice__item-button ui-arrow-button--black"
+              type="button"
+            >
+              <span>
+                ↓
+              </span>
+            </button>
+          </div>
+           
+          <img
+            alt="second item image alt"
+            class="card-grid-slice__item-logo"
+            height="100%"
+            src="https://maddevs.io/Open-Graph.png"
+            width="100%"
+          />
+        </a>
+      </li>
+      <li
+        class="card-grid-slice__item"
+        data-testid="card-grid-item"
+      >
+        <a
+          class="card-grid-slice__item-link"
+          target="_blank"
+        >
+          <div
+            class="card-grid-slice__item-info"
+          >
+            <h3>
+              third item title
+            </h3>
+             
+            <p>
+              third item description
+            </p>
+             
+            <button
+              class="ui-arrow-button card-grid-slice__item-button ui-arrow-button--black"
+              type="button"
+            >
+              <span>
+                ↓
+              </span>
+            </button>
+          </div>
+           
+          <img
+            alt="third item image alt"
+            class="card-grid-slice__item-logo"
+            height="100%"
+            src="https://maddevs.io/Open-Graph.png"
+            width="100%"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Card grid slices CardGrid component should render correctly without data 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <ul
+      class="card-grid-slice"
+    />
+  </div>
+</div>
+`;
