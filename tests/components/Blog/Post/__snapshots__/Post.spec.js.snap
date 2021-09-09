@@ -33,6 +33,19 @@ exports[`Post component should render correctly with default props 1`] = `
           slices="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
           slicestype="blog_post"
         />
+         
+        <div>
+          <div
+            class="blog-post__comments"
+          >
+            <div
+              id="disqus_thread"
+              identifier="/blog/uid"
+              style="min-height: 200px;"
+              url="https://maddevs.io/blog/uid/"
+            />
+          </div>
+        </div>
       </div>
     </div>
      
