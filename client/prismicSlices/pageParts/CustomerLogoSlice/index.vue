@@ -3,8 +3,11 @@
     class="customer-logo-slice"
     :class="colorThemeClass"
   >
-    <div class="container">
+    <div
+      class="container"
+    >
       <div
+        data-testid="customer-logo-slice-container"
         :data-aos="animation"
         class="customer-logo-slice_list"
       >
@@ -12,6 +15,7 @@
           v-for="(customer, i) of customers"
           :key="`customer-logo-slice-${i}`"
           class="customer-logo-slice_logo"
+          data-testid="customer-logo-slice-item"
         >
           <img
             width="143"
