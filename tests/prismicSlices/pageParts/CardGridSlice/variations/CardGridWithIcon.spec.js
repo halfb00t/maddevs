@@ -10,6 +10,10 @@ const props = {
       icon: {
         url: 'https://maddevs.io/Open-Graph.png',
         alt: 'First item image alt',
+        dimensions: {
+          width: '200',
+          height: '300',
+        },
       },
       link: {
         url: 'https://maddevs.io/',
@@ -21,6 +25,10 @@ const props = {
       icon: {
         url: 'https://maddevs.io/Open-Graph.png',
         alt: 'second item image alt',
+        dimensions: {
+          width: '200',
+          height: '300',
+        },
       },
       link: {
         url: 'https://maddevs.io/',
@@ -32,6 +40,10 @@ const props = {
       icon: {
         url: 'https://maddevs.io/Open-Graph.png',
         alt: 'third item image alt',
+        dimensions: {
+          width: '200',
+          height: '300',
+        },
       },
       link: {
         url: 'https://maddevs.io/',
@@ -40,7 +52,7 @@ const props = {
   ],
 }
 
-describe('Card grid slices cardGridWithIcon component', () => {
+describe('CardGridSlice - CardGridWithIcon variation', () => {
   it('should render correctly with data', () => {
     const { container } = render(CardGridWithIcon, {
       props,

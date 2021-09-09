@@ -1,7 +1,7 @@
 <template>
   <div
     class="card-grid-with-icon"
-    :class="colorThemeClass"
+    :class="`card-grid-with-icon--${colorThemeOption}-theme`"
   >
     <div class="container">
       <ul class="card-grid-with-icon__content">
@@ -12,15 +12,17 @@
           data-testid="card-grid-with-icon-item"
         >
           <Component
-            :is="item.link.url ? 'a' : 'div'"
-            :href="item.link.url ? item.link.url : null"
-            :target="item.link.url ? '_blank' : null"
+            :is="item.link && item.link.url ? 'a' : 'div'"
+            :href="item.link && item.link.url ? item.link.url : null"
+            :target="item.link && item.link.url ? '_blank' : null"
             class="card-item__wrapper"
           >
             <div class="card-item__content">
               <img
-                :src="item.icon.url"
-                :alt="item.icon.alt"
+                :src="item.icon && item.icon.url"
+                :alt="item.icon && item.icon.alt"
+                :width="item.icon && item.icon.dimensions && item.icon.dimensions.width"
+                :height="item.icon && item.icon.dimensions && item.icon.dimensions.height"
                 class="card-item__logo"
               >
               <h3
@@ -66,9 +68,9 @@ export default {
   },
 
   computed: {
-    colorThemeClass() {
-      if (this.colorTheme === 'black') return 'card-grid-with-icon--black-theme'
-      return 'card-grid-with-icon--white-theme'
+    colorThemeOption() {
+      if (this.colorTheme === 'black') return 'black'
+      return 'white'
     },
   },
 }

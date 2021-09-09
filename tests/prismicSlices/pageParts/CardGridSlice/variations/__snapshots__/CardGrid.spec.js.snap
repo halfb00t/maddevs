@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card grid slices CardGrid component should render correctly with data 1`] = `
+exports[`CardGridSlice - CardGrid variation should render correctly with data 1`] = `
 <div>
   <div
     class="container"
@@ -128,7 +128,7 @@ exports[`Card grid slices CardGrid component should render correctly with data 1
 </div>
 `;
 
-exports[`Card grid slices CardGrid component should render correctly without data 1`] = `
+exports[`CardGridSlice - CardGrid variation should render correctly without data 1`] = `
 <div>
   <div
     class="container"

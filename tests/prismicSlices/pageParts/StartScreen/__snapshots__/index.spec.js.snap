@@ -11,8 +11,10 @@ exports[`StartScreen slice should render correctly with data 1`] = `
       alt="alt"
       class="start-screen-slice__image"
       data-testid="start-screen-slice__image"
+      height="969"
       src="url"
       style="opacity: 0.3; background-color: rgb(17, 18, 19);"
+      width="1680"
     />
      
     <div
@@ -51,6 +53,8 @@ exports[`StartScreen slice should render correctly without data 1`] = `
     <img
       class="start-screen-slice__image"
       data-testid="start-screen-slice__image"
+      height="969"
+      width="1680"
     />
      
     <div
