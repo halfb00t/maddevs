@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button slice should correctly render UIButton 1`] = `
+<div>
+  <div
+    class="button-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container button-slice__content--align-left aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="container"
+    >
+      <a
+        class="ui-button button-slice__button button-slice__button--normal"
+        data-testid="button-ui"
+        href="url"
+        style="position: relative; overflow: hidden;"
+        target="_blank"
+      >
+        
+      
+    
+        <div
+          class="wave"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button slice should correctly render UILinkButton 1`] = `
+<div>
+  <div
+    class="button-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container button-slice__content--align-left aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="container"
+    >
+      <a
+        class="ui-link-button ui-link-button--grey button-slice__button button-slice__button--link"
+        data-testid="button-link"
+        href="url"
+        target="_blank"
+      >
+        
+      
+    
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button slice should correctly render UIOutlinedButton 1`] = `
+<div>
+  <div
+    class="button-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container button-slice__content--align-left aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="container"
+    >
+      <a
+        class="ui-outlined-button ui-outlined-button--grey button-slice__button button-slice__button--outlined"
+        data-testid="button-outline"
+        href="url"
+        target="_blank"
+        type="button"
+      >
+        
+      
+    
+      </a>
+    </div>
+  </div>
+</div>
+`;

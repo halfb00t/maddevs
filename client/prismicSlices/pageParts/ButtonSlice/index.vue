@@ -6,6 +6,8 @@
     <div
       class="container"
       :class="`button-slice__content--align-${sliceAlignment}`"
+      :data-aos="animation"
+      data-testid="container"
     >
       <UIButton
         v-if="variation === 'default-slice'"
@@ -13,12 +15,12 @@
         is-link
         :to="link.url"
         target="_blank"
+        data-testid="button-ui"
         :class="[
           'button-slice__button',
           'button-slice__button--normal',
         ]"
         :style="{ maxWidth }"
-        :data-aos="animation"
       >
         {{ text }}
       </UIButton>
@@ -29,12 +31,12 @@
         is-link
         :to="link.url"
         target="_blank"
+        data-testid="button-outline"
         :class="[
           'button-slice__button',
           'button-slice__button--outlined',
         ]"
         :style="{ maxWidth }"
-        :data-aos="animation"
       >
         {{ text }}
       </UIOutlinedButton>
@@ -45,12 +47,12 @@
         is-link
         :to="link.url"
         target="_blank"
+        data-testid="button-link"
         :class="[
           'button-slice__button',
           'button-slice__button--link',
         ]"
         :style="{ maxWidth }"
-        :data-aos="animation"
       >
         {{ text }}
       </UILinkButton>
