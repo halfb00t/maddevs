@@ -292,10 +292,13 @@ export default {
         align-items: unset;
         &__image,
         &__none-image {
-          width: 20px;
-          min-width: 20px;
-          height: 20px;
-          margin-bottom: 0;
+          &,
+          img {
+            width: 20px;
+            min-width: 20px;
+            height: 20px;
+            margin-bottom: 0;
+          }
         }
         &__name,
         &__position {

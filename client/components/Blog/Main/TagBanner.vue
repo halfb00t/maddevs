@@ -2,23 +2,29 @@
   <div class="container">
     <div class="current-tag">
       <h1 class="current-tag__title">
-        {{ blogTag }}
+        {{ title }}
       </h1>
       <p class="current-tag__posts-count">
-        A collection of {{ tagPostsCount }} posts
+        A collection of {{ count }} posts
       </p>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
   name: 'TagBanner',
 
-  computed: {
-    ...mapGetters(['blogTag', 'tagPostsCount']),
+  props: {
+    title: {
+      type: String,
+      default: null,
+    },
+
+    count: {
+      type: Number,
+      default: 0,
+    },
   },
 }
 </script>

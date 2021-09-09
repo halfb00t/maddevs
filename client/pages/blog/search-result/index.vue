@@ -31,25 +31,12 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['getSearchResponse', 'getSearchQuery', 'allAuthors']),
+    ...mapGetters(['getSearchResponse', 'getSearchQuery']),
 
     posts() {
       if (!this.getSearchResponse || !this.getSearchResponse.results) return null
       if (!this.getSearchResponse || !this.getSearchResponse.results || !this.getSearchResponse.results.length) return []
-      this.$nextTick(() => {
-        this.resetLazyLoad()
-      })
       return this.getSearchResponse.results
-    },
-  },
-
-  watch: {
-    allAuthors(newVal) {
-      if (newVal && newVal.length) {
-        this.$nextTick(() => {
-          this.resetLazyLoad()
-        })
-      }
     },
   },
 

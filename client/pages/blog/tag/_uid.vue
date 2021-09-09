@@ -1,6 +1,9 @@
 <template>
   <section class="tag">
-    <TagBanner />
+    <TagBanner
+      :title="blogTag"
+      :count="tagPostsCount"
+    />
     <TagPostsSection />
   </section>
 </template>
@@ -45,7 +48,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['blogTag']),
+    ...mapGetters(['blogTag', 'tagPostsCount']),
   },
 
   created() {

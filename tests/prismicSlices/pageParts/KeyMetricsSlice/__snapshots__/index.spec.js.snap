@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyMetrics slice should render correctly with FirstVariation component 1`] = `
+<div>
+  <section
+    class="key-metrics-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="key-metrics-slice__container"
+    >
+      <firstvariation-stub
+        animation="fade-up"
+        background="black"
+        data-testid="first-variation"
+        metrics=""
+      />
+    </div>
+  </section>
+</div>
+`;
+
+exports[`KeyMetrics slice should render correctly with SecondVariation component 1`] = `
+<div>
+  <section
+    class="key-metrics-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="key-metrics-slice__container"
+    >
+      <secondvariation-stub
+        animation="fade-up"
+        background="black"
+        colortheme="white"
+        data-testid="second-variation"
+        metrics=""
+      />
+    </div>
+  </section>
+</div>
+`;
+
+exports[`KeyMetrics slice should render correctly with ThirdVariation component 1`] = `
+<div>
+  <section
+    class="key-metrics-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="key-metrics-slice__container"
+    >
+      <thirdvariation-stub
+        animation="fade-up"
+        background="black"
+        colortheme="white"
+        data-testid="third-variation"
+        metrics=""
+      />
+    </div>
+  </section>
+</div>
+`;

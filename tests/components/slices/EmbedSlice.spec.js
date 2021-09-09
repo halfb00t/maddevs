@@ -1,75 +1,167 @@
-// eslint-disalbe quotes
+import 'regenerator-runtime'
+import { render, screen } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
-import { render } from '@testing-library/vue'
 import EmbedSlice from '@/components/slices/EmbedSlice'
 
+const directives = {
+  'lazy-load': () => {},
+}
+
+const resizeWindow = width => {
+  global.innerWidth = width
+  window.dispatchEvent(new Event('resize'))
+}
+
+const apiData = {
+  embed: {
+    type: 'link',
+    title: 'title',
+    html: 'html',
+    url: 'url',
+    thumbnail_url: 'url',
+  },
+  embed_title: 'Embed title',
+  embed_description: 'Embed description',
+}
+
+const getProps = params => ({
+  slice: {
+    primary: {},
+    items: [
+      { ...params },
+    ],
+  },
+})
+
 describe('EmbedSlice component', () => {
-  const props = {
-    slice: {
-      items: [
-        {
-          embed: {
-            title: 'Title',
-            url: 'https://test',
-            type: 'video',
-            html:
-              '<div><img src="" height="300" width="300"/></div><h1>hello</h1><a href="http://maddevs.io">Hi</a> </div>',
-          },
-          embed_title: 'Embed title',
-        },
-      ],
-      primary: {
-        code: [
-          {
-            spans: [],
-            text:
-              'getAllHeadings() {\n  this.document.body.forEach(listItem => {\n    if(listItem.primary.text !== undefined) {\n      if(listItem.primary.text[0].type === \'heading1\') {\n        this.headingsList.push({\n          textContent: listItem.primary.text[0].text,\n          headingName: listItem.primary.text[0].text.toLowerCase().replace(/s/g , \'-\')\n        });\n      }\n    }\n  });',
-            type: 'paragraph',
-          },
-        ],
-        language: 'javascript',
-      },
-      slice_label: null,
-      slice_type: 'codeblock',
-    },
-  }
-  it('should render correctly', () => {
+  it('should render correctly with embed link', () => {
     const { container } = render(EmbedSlice, {
+      directives,
+      stubs: ['PrismicEmbed', 'Component'],
+      props: getProps(apiData),
+    })
+
+    expect(screen.queryByTestId('embed__image')).not.toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should render correctly with embed video', () => {
+    const props = getProps(apiData)
+    props.slice.items[0].embed.type = 'video'
+
+    const { container } = render(EmbedSlice, {
+      directives,
+      stubs: ['PrismicEmbed', 'Component'],
       props,
-      stubs: ['PrismicEmbed'],
-      mocks: {
-        $prismic: {
-          asHtml: name => name,
-        },
-      },
     })
 
+    expect(screen.queryByTestId('embed__image')).toBeNull()
     expect(container).toMatchSnapshot()
   })
 
-  it('must replace tags', async () => {
-    const { container } = await render(EmbedSlice, {
-      props: {
-        slice: {
-          items: [],
-          primary: {
-            code: [],
-            language: 'javascript',
-          },
-          slice_label: null,
-          slice_type: 'codeblock',
-        },
-      },
-      stubs: ['PrismicEmbed'],
+  describe('isTag computed method', () => {
+    it('should return data for embed link', () => {
+      const props = getProps(apiData)
+      props.slice.items[0].embed.type = 'link'
+
+      const wrapper = shallowMount(EmbedSlice, {
+        directives,
+        stubs: ['PrismicEmbed', 'Component'],
+        propsData: props,
+      })
+
+      const expectedData = {
+        is: 'a',
+        target: '_blank',
+        href: apiData.embed.url,
+        class: 'embed__link',
+      }
+
+      expect(wrapper.vm.isTag).toEqual(expectedData)
     })
 
-    expect(container).toMatchSnapshot()
+    it('should return data for embed video', () => {
+      const props = getProps(apiData)
+      props.slice.items[0].embed.type = 'video'
+
+      const wrapper = shallowMount(EmbedSlice, {
+        directives,
+        stubs: ['PrismicEmbed', 'Component'],
+        propsData: props,
+      })
+
+      const expectedData = {
+        is: 'div',
+        class: 'embed__video',
+      }
+
+      expect(wrapper.vm.isTag).toEqual(expectedData)
+    })
   })
 
-  it('by default prop slice return empty object', () => {
-    const wrapper = shallowMount(EmbedSlice, {
-      stubs: ['PrismicEmbed'],
+  describe('embedImage data key', () => {
+    it('should have params for window.innerWidth > 1024px', () => {
+      const props = getProps(apiData)
+      props.slice.items[0].embed.type = 'link'
+
+      const wrapper = shallowMount(EmbedSlice, {
+        directives,
+        stubs: ['PrismicEmbed', 'Component'],
+        propsData: props,
+      })
+
+      resizeWindow(1025)
+      expect(wrapper.vm.embedImage.url).toBe(`${apiData.embed.thumbnail_url}?w=400&h=218`)
+      expect(wrapper.vm.embedImage.width).toBe('200')
+      expect(wrapper.vm.embedImage.height).toBe('109')
     })
-    expect(wrapper.vm.slice).toStrictEqual({})
+
+    it('should have params for window.innerWidth < 1024px', () => {
+      const props = getProps(apiData)
+      props.slice.items[0].embed.type = 'link'
+
+      const wrapper = shallowMount(EmbedSlice, {
+        directives,
+        stubs: ['PrismicEmbed', 'Component'],
+        propsData: props,
+      })
+
+      resizeWindow(1022)
+      expect(wrapper.vm.embedImage.url).toBe(`${apiData.embed.thumbnail_url}?w=1164&h=632`)
+      expect(wrapper.vm.embedImage.width).toBe('582')
+      expect(wrapper.vm.embedImage.height).toBe('316')
+    })
+  })
+
+  describe('embedFieldData data key', () => {
+    it('should return html for embed link', () => {
+      const props = getProps(apiData)
+      props.slice.items[0].embed.type = 'link'
+      props.slice.items[0].embed.html = 'iframe'
+
+      const wrapper = shallowMount(EmbedSlice, {
+        directives,
+        stubs: ['PrismicEmbed', 'Component'],
+        propsData: props,
+      })
+
+      expect(wrapper.vm.embedFieldData.html.includes('embed__title')).toBeTruthy()
+      expect(wrapper.vm.embedFieldData.html.includes('iframe')).toBeFalsy()
+    })
+
+    it('should return html for embed video', () => {
+      const props = getProps(apiData)
+      props.slice.items[0].embed.type = 'video'
+      props.slice.items[0].embed.html = 'iframe'
+
+      const wrapper = shallowMount(EmbedSlice, {
+        directives,
+        stubs: ['PrismicEmbed', 'Component'],
+        propsData: props,
+      })
+
+      expect(wrapper.vm.embedFieldData.html).toBe('iframe')
+      expect(wrapper.vm.embedFieldData.html.includes('embed__title')).toBeFalsy()
+    })
   })
 })
