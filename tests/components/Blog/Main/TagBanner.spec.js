@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import TagBanner from '@/components/Blog/Main/TagBanner'
 
 const store = {
@@ -15,6 +15,5 @@ describe('TagBanner component', () => {
     })
 
     expect(container).toMatchSnapshot()
-    expect(screen.getByText(store.getters.blogTag())).toBeTruthy()
   })
 })
