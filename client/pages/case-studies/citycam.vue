@@ -16,7 +16,7 @@
         slot="description"
         class="case_header-description"
       >
-        Build hardware and software for energy-efficient <br> and highly autonomous traffic cameras
+        Building hardware and software for energy-efficient <br> and highly autonomous traffic cameras
       </p>
     </CaseHeader>
     <Main />
@@ -54,8 +54,6 @@ export default {
     Footer,
     Main,
   },
-
-  nuxtI18n: false,
 
   mixins: [
     animateOnScrollMixin({
@@ -100,11 +98,14 @@ export default {
   }
 
   &_header-title {
-    margin-right: 200px;
+    width:735px;
     margin-bottom: 28px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1320px) {
+      width:650px;
+    }
+    @media screen and (max-width: 655px) {
       margin-bottom: 0;
-      margin-right: 0;
+      width:327px;
       br {
         display: none;
       }
@@ -115,23 +116,15 @@ export default {
     width: 253px;
     height: 93px;
     margin-top:120px;
-    margin-left: 100px;
-
-    @media screen and (max-width: 1320px) {
-      margin-top:0;
-      margin-left: 70px;
-    }
 
     @media screen and (max-width: 1170px) {
-      margin-top:0;
-      margin-left: 0;
       margin-bottom: 30px;
     }
 
     @media screen and (max-width: 655px) {
       margin-top:0;
-      width: 137.86px;
-      height: 99.25px;
+      width: 193px;
+      height: 71px;
     }
   }
 

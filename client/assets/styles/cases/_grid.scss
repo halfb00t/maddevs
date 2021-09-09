@@ -86,6 +86,7 @@ $backgroundColors: (
   'blue-itc': #4154b3,
   'blue-itc-darken': #132E50,
   'gray': #404143,
+  'gray-light':#FBFBFB,
   'gray-darken': #eaeaea,
   'yellow': #ffd31b,
 );
@@ -116,15 +117,15 @@ $backgroundColors: (
     .media-p-#{$name}_top {
       padding-top: $variable;
     }
-  
+
     .media-m-#{$name}_top {
       margin-top: $variable;
     }
-  
+
     .media-p-#{$name}_bottom {
       padding-bottom: $variable;
     }
-  
+
     .media-m-#{$name}_bottom {
       margin-bottom: $variable;
     }
