@@ -1,14 +1,8 @@
-import { render, screen } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import CustomerTestimonialsSlice from '@/prismicSlices/pageParts/CustomerTestimonials'
 
-const defaultTitle = 'Customer testimonials title'
-
-const directives = {
-  'lazy-load': () => {},
-}
-
 const apiData = {
-  title: defaultTitle,
+  title: 'Customer testimonials title',
   animation: 'fade-up',
 }
 
@@ -23,19 +17,10 @@ const getProps = params => ({
 describe('CustomerTestimonials slice', () => {
   it('should render correctly with data', () => {
     const { container } = render(CustomerTestimonialsSlice, {
-      directives,
+      stubs: ['CustomerTestimonials'],
       props: getProps(apiData),
     })
-    expect(screen.getByText(defaultTitle)).not.toBeNull()
-    expect(container).toMatchSnapshot()
-  })
 
-  it('should render correctly without data', () => {
-    const { container } = render(CustomerTestimonialsSlice, {
-      directives,
-      props: getProps({}),
-    })
-    expect(screen.getByText(defaultTitle)).not.toBeNull()
     expect(container).toMatchSnapshot()
   })
 })
