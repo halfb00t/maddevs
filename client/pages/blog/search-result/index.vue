@@ -31,7 +31,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['getSearchResponse', 'getSearchQuery', 'allAuthors']),
+    ...mapGetters(['getSearchResponse', 'getSearchQuery']),
 
     posts() {
       if (!this.getSearchResponse || !this.getSearchResponse.results) return null

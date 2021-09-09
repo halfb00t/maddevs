@@ -2,7 +2,7 @@
 
 exports[`Tag _uid component should render correctly 1`] = `
 <section class="tag">
-  <tagbanner-stub></tagbanner-stub>
+  <tagbanner-stub title="seo" count="1"></tagbanner-stub>
   <tagpostssection-stub></tagpostssection-stub>
 </section>
 `;
