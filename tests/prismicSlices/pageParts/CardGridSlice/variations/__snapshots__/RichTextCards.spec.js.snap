@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card grid slices RichTextCards component should render correctly with data 1`] = `
+<div>
+  <div
+    class="rich-text-cards"
+    colortheme="black"
+  >
+    <div
+      class="container"
+    >
+      <ul
+        class="rich-text-cards__grid"
+      >
+        <li
+          class="card-item"
+          data-testid="rich-text-card-item"
+          style="background-color: rgb(255, 255, 255);"
+        >
+          <h3
+            class="card-item__title"
+          >
+            First item title
+          </h3>
+           
+          <div
+            class="card-item__content"
+          />
+        </li>
+        <li
+          class="card-item"
+          data-testid="rich-text-card-item"
+          style="background-color: rgb(255, 255, 255);"
+        >
+          <h3
+            class="card-item__title"
+          >
+            second item title
+          </h3>
+           
+          <div
+            class="card-item__content"
+          />
+        </li>
+        <li
+          class="card-item"
+          data-testid="rich-text-card-item"
+          style="background-color: rgb(0, 0, 0);"
+        >
+          <h3
+            class="card-item__title"
+          >
+            third item title
+          </h3>
+           
+          <div
+            class="card-item__content"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card grid slices RichTextCards component should render correctly without data 1`] = `
+<div>
+  <div
+    class="rich-text-cards"
+  >
+    <div
+      class="container"
+    >
+      <ul
+        class="rich-text-cards__grid"
+      />
+    </div>
+  </div>
+</div>
+`;
