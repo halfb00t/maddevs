@@ -56,6 +56,18 @@ export default {
     }
   },
 
+  head() {
+    return {
+      link: [
+        {
+          rel: 'preload',
+          as: 'image',
+          href: this.$getMediaFromS3(this.casesList[0].video),
+        },
+      ],
+    }
+  },
+
   mounted() {
     this.$nextTick(() => {
       if (window.innerWidth <= 992) {

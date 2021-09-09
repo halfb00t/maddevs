@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Grid slice should correctly render CardGrid component 1`] = `
+<div>
+  <section
+    class="card-grid-main"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="card-grid"
+      primary="[object Object]"
+      variation="default-slice"
+    >
+      <ul
+        class="card-grid-slice"
+      />
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Card Grid slice should correctly render CardGridWithIcon component 1`] = `
+<div>
+  <section
+    class="card-grid-main"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      animation="fade-up"
+      background="black"
+      class="card-grid-with-icon card-grid-with-icon--white-theme aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="card-grid-with-icon"
+    >
+      <div
+        class="container"
+      >
+        <ul
+          class="card-grid-with-icon__content"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Card Grid slice should correctly render RichTextCard component 1`] = `
+<div>
+  <section
+    class="card-grid-main"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      animation="fade-up"
+      background="black"
+      class="rich-text-cards aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="rich-text-card"
+    >
+      <div
+        class="container"
+      >
+        <ul
+          class="rich-text-cards__grid"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;
