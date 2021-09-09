@@ -7,21 +7,21 @@
       v-if="slice.variation === 'default-slice'"
       v-bind="slice"
       :data-aos="slice.primary.animation"
-      data-testid="card-grid"
+      data-testid="card-grid-variation"
     />
     <CardGridWithIcon
       v-else-if="slice.variation === 'cardGridWithIcon'"
       v-bind="slice.primary"
       :items="slice.items"
       :data-aos="slice.primary.animation"
-      data-testid="card-grid-with-icon"
+      data-testid="card-grid-with-icon-variation"
     />
     <RichTextCards
       v-else-if="slice.variation === 'richTextCards'"
       v-bind="slice.primary"
       :items="slice.items"
       :data-aos="slice.primary.animation"
-      data-testid="rich-text-card"
+      data-testid="rich-text-card-variation"
     />
   </section>
 </template>
@@ -30,7 +30,6 @@
 import CardGrid from './variations/CardGrid'
 import CardGridWithIcon from './variations/CardGridWithIcon'
 import RichTextCards from './variations/RichTextCards'
-
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
@@ -63,9 +62,9 @@ export default {
 
   computed: {
     sliceBackground() {
-      if (this.slice.primary.background === 'white') return '#ffffff'
-      if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      if (this.slice.primary.background === 'black') return '#111213'
+      if (this.slice?.primary?.background === 'white') return '#ffffff'
+      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
+      if (this.slice?.primary?.background === 'black') return '#111213'
       return null
     },
   },

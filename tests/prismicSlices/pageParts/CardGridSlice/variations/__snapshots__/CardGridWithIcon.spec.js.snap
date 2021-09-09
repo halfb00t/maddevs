@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card grid slices cardGridWithIcon component should render correctly with data 1`] = `
+exports[`CardGridSlice - CardGridWithIcon variation should render correctly with data 1`] = `
 <div>
   <div
     class="card-grid-with-icon card-grid-with-icon--black-theme"
@@ -26,7 +26,9 @@ exports[`Card grid slices cardGridWithIcon component should render correctly wit
               <img
                 alt="First item image alt"
                 class="card-item__logo"
+                height="300"
                 src="https://maddevs.io/Open-Graph.png"
+                width="200"
               />
                
               <h3
@@ -62,7 +64,9 @@ exports[`Card grid slices cardGridWithIcon component should render correctly wit
               <img
                 alt="second item image alt"
                 class="card-item__logo"
+                height="300"
                 src="https://maddevs.io/Open-Graph.png"
+                width="200"
               />
                
               <h3
@@ -98,7 +102,9 @@ exports[`Card grid slices cardGridWithIcon component should render correctly wit
               <img
                 alt="third item image alt"
                 class="card-item__logo"
+                height="300"
                 src="https://maddevs.io/Open-Graph.png"
+                width="200"
               />
                
               <h3
@@ -125,7 +131,7 @@ exports[`Card grid slices cardGridWithIcon component should render correctly wit
 </div>
 `;
 
-exports[`Card grid slices cardGridWithIcon component should render correctly without data 1`] = `
+exports[`CardGridSlice - CardGridWithIcon variation should render correctly without data 1`] = `
 <div>
   <div
     class="card-grid-with-icon card-grid-with-icon--white-theme"

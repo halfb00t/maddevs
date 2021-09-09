@@ -5,13 +5,13 @@
         <li
           v-for="item in items"
           :key="item.title"
-          class="card-item"
           :class="[
             item.fullWidth ? 'card-item--full-width' : null,
             item.alignText ? `card-item--text-${item.alignText}` : null,
           ]"
-          data-testid="rich-text-card-item"
           :style="{ backgroundColor: item.background || null }"
+          class="card-item"
+          data-testid="rich-text-card-item"
         >
           <h3
             class="card-item__title"
@@ -50,7 +50,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .rich-text-cards {
   &__grid {
     display: grid;

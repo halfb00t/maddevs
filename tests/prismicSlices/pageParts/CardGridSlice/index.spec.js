@@ -29,9 +29,9 @@ describe('Card Grid slice', () => {
       props,
     })
 
-    expect(screen.queryByTestId('card-grid')).not.toBeNull()
-    expect(screen.queryByTestId('card-grid-with-icon')).toBeNull()
-    expect(screen.queryByTestId('rich-text-card')).toBeNull()
+    expect(screen.queryByTestId('card-grid-variation')).not.toBeNull()
+    expect(screen.queryByTestId('card-grid-with-icon-variation')).toBeNull()
+    expect(screen.queryByTestId('rich-text-card-variation')).toBeNull()
     expect(container).toMatchSnapshot()
   })
 
@@ -42,9 +42,9 @@ describe('Card Grid slice', () => {
       props,
     })
 
-    expect(screen.queryByTestId('card-grid')).toBeNull()
-    expect(screen.queryByTestId('card-grid-with-icon')).not.toBeNull()
-    expect(screen.queryByTestId('rich-text-card')).toBeNull()
+    expect(screen.queryByTestId('card-grid-variation')).toBeNull()
+    expect(screen.queryByTestId('card-grid-with-icon-variation')).not.toBeNull()
+    expect(screen.queryByTestId('rich-text-card-variation')).toBeNull()
     expect(container).toMatchSnapshot()
   })
 
@@ -55,14 +55,14 @@ describe('Card Grid slice', () => {
       props,
     })
 
-    expect(screen.queryByTestId('card-grid')).toBeNull()
-    expect(screen.queryByTestId('card-grid-with-icon')).toBeNull()
-    expect(screen.queryByTestId('rich-text-card')).not.toBeNull()
+    expect(screen.queryByTestId('card-grid-variation')).toBeNull()
+    expect(screen.queryByTestId('card-grid-with-icon-variation')).toBeNull()
+    expect(screen.queryByTestId('rich-text-card-variation')).not.toBeNull()
     expect(container).toMatchSnapshot()
   })
 
   describe('sliceBackground computed method', () => {
-    it(`should return ${backgrounds.white}`, () => {
+    it('should return white hex', () => {
       const wrapper = shallowMount(CardGridSlice, {
         propsData: getProps({
           ...apiData,
@@ -73,7 +73,7 @@ describe('Card Grid slice', () => {
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.white)
     })
 
-    it(`should return ${backgrounds.grey}`, () => {
+    it('should return grey hex', () => {
       const wrapper = shallowMount(CardGridSlice, {
         propsData: getProps({
           ...apiData,
@@ -84,7 +84,7 @@ describe('Card Grid slice', () => {
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.grey)
     })
 
-    it(`should return ${backgrounds.black}`, () => {
+    it('should return black hex', () => {
       const wrapper = shallowMount(CardGridSlice, {
         propsData: getProps({
           ...apiData,

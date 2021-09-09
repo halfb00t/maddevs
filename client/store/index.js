@@ -5,6 +5,7 @@ import * as blogTags from './modules/blogTags'
 import * as blogSearch from './modules/blogSearch'
 import * as leads from './modules/leads'
 import * as careers from './modules/careers'
+import * as customPage from './modules/customPage'
 import * as header from './modules/header'
 import * as footer from './modules/footer'
 
@@ -17,6 +18,7 @@ export default {
     blogSearch,
     leads,
     careers,
+    customPage,
     header,
     footer,
   },

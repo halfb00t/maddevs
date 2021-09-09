@@ -10,8 +10,10 @@ const props = {
       image: {
         url: 'https://maddevs.io/Open-Graph.png',
         alt: 'First item image alt',
-        width: '100%',
-        height: '100%',
+        dimensions: {
+          width: '100%',
+          height: '100%',
+        },
       },
     },
     {
@@ -20,8 +22,10 @@ const props = {
       image: {
         url: 'https://maddevs.io/Open-Graph.png',
         alt: 'second item image alt',
-        width: '100%',
-        height: '100%',
+        dimensions: {
+          width: '100%',
+          height: '100%',
+        },
       },
     },
     {
@@ -30,14 +34,16 @@ const props = {
       image: {
         url: 'https://maddevs.io/Open-Graph.png',
         alt: 'third item image alt',
-        width: '100%',
-        height: '100%',
+        dimensions: {
+          width: '100%',
+          height: '100%',
+        },
       },
     },
   ],
 }
 
-describe('Card grid slices CardGrid component', () => {
+describe('CardGridSlice - CardGrid variation', () => {
   it('should render correctly with data', () => {
     const { container } = render(CardGrid, {
       props,

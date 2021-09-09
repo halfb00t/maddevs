@@ -42,9 +42,9 @@
           :alt="image && image.alt"
         >
         <div class="cta-banner-slice__man">
-          <h6 class="cta-banner-slice__man-name">
+          <h3 class="cta-banner-slice__man-name">
             {{ name }}
-          </h6>
+          </h3>
           <span class="cta-banner-slice__man-position">
             {{ position }}
           </span>
