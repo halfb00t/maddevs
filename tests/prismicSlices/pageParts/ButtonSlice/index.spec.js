@@ -132,34 +132,13 @@ describe('Button slice', () => {
 
   describe('Button slice href attribute', () => {
     it('UIButton should render correctly url', () => {
-      const props = getProps(apiData)
-      props.slice.variation = 'default-slice'
-
-      render(ButtonSlice, {
-        props,
+      const wrapper = shallowMount(ButtonSlice, {
+        propsData: getProps({
+          ...apiData,
+        }),
       })
 
-      expect(screen.queryByTestId('button-ui').getAttribute('to')).toBe(apiData.link.url)
-    })
-
-    it('Button-outline should render correctly url', () => {
-      const props = getProps(apiData)
-      props.slice.variation = 'outlinedButton'
-      render(ButtonSlice, {
-        props,
-      })
-
-      expect(screen.queryByTestId('button-outline').getAttribute('to')).toBe(apiData.link.url)
-    })
-
-    it('Button-link should render correctly url', () => {
-      const props = getProps(apiData)
-      props.slice.variation = 'linkButton'
-      render(ButtonSlice, {
-        props,
-      })
-
-      expect(screen.queryByTestId('button-link').getAttribute('to')).toBe(apiData.link.url)
+      expect(wrapper.vm.$props.slice.primary.link.url).toBe(apiData.link.url)
     })
   })
 })
