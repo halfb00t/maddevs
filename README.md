@@ -398,8 +398,7 @@ Otherwise, you should get success result:
 
 ### Create and push slices to prismic dashboard
 Slice machine dev tools are used to develop and push slices to prismic dashboard.
-* [How to configure the slice machine dev tools](https://prismic.io/docs/technologies/configure-project-manually-nuxtjs)
-* [How to use the slice machine dev tools](https://prismic.io/docs/technologies/create-model-component-nuxtjs)
+* [Configuration of the slice machine dev tools in the project](https://prismic.io/docs/technologies/configure-project-manually-nuxtjs)
 
 The main folder for developing slices is located in the following path - `client/prismicSlices`. <br>
 Slices can be divided into categories(libraries) by creating different folders for them inside the `client/prismicSlices` folder and adding the path to this folders to the `sm.json` config file.
@@ -415,7 +414,7 @@ After installation you need login to prismic
 prismic login
 ```
 
-After login you need to run the prismic slice machine dashboard: [localhost:9999](http://localhost:9999/)
+After login you need to run the slices builder dashboard: [localhost:9999](http://localhost:9999/)
 ```bash
 prismic sm --develop
 ```
@@ -425,13 +424,11 @@ Also you need to run the storybook dashboard in other terminal: [localhost:3003]
 npm run storybook
 ```
 
-```bash
-🗂 Where should we create your new local library? ./client/prismicSlices/<folder>
-...
-```
+[Create a new slice in the slices builder dashboard](https://prismic.io/docs/technologies/create-model-component-nuxtjs)
 
-The new slice will be displayed in the slice machine dashboard - [localhost:9999](http://localhost:9999/) <br>
-To display this slice in the storybook you need to create and describe the `index.stories.js` file in his directory - [localhost:3003](http://localhost:3003/)
+[Edit code of created slice in the project filesystem](https://prismic.io/docs/technologies/update-and-style-components-nuxtjs)
+
+[Push created slice to prismic from slices builder dashboard](https://prismic.io/docs/technologies/send-slices-screenshots-prismic-nuxtjs)
 
 ## 📻 Radiator
 Advanced tool for collect core metrics from analytics and pagespeed and send it to our slack/telegram channels.
