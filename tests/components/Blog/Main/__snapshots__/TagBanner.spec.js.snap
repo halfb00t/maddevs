@@ -12,7 +12,7 @@ exports[`TagBanner component should render correctly 1`] = `
         class="current-tag__title"
       >
         
-      Blog tag
+      
     
       </h1>
        
@@ -20,7 +20,7 @@ exports[`TagBanner component should render correctly 1`] = `
         class="current-tag__posts-count"
       >
         
-      A collection of 5 posts
+      A collection of 0 posts
     
       </p>
     </div>
