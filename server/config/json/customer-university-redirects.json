@@ -50,5 +50,17 @@
   {
     "from": "/blog/tag/featured-post",
     "to": "https://maddevs.io/blog/"
+  },
+  {
+    "from": "/blog/tag/customer-university",
+    "to": "https://maddevs.io/"
+  },
+  {
+    "from": "/customer-university",
+    "to": "https://maddevs.io/"
+  },
+  {
+    "from": "/blog/tag/pricing-strategies",
+    "to": "https://maddevs.io/"
   }
 ]
