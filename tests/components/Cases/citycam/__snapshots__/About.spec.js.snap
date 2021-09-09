@@ -21,7 +21,7 @@ exports[`About component should render correctly 1`] = `
     </section>
      
     <section
-      class="container_full background-color-gray-light"
+      class="container_full background-color-gray-light m-72_bottom media-m-24_bottom"
     >
       <div
         class="case_lottie"

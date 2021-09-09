@@ -10,7 +10,7 @@
         application with frontend and backend.
       </TextParagraph>
     </section>
-    <section class="container_full background-color-gray-light">
+    <section class="container_full background-color-gray-light m-72_bottom media-m-24_bottom">
       <Lottie
         id="about-citycam"
         :options="options"
