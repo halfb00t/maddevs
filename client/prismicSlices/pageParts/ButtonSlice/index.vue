@@ -5,7 +5,7 @@
   >
     <div
       class="container"
-      :class="sliceAlignmentClass"
+      :class="`button-slice__content--align-${sliceAlignment}`"
     >
       <UIButton
         v-if="variation === 'default-slice'"
@@ -92,28 +92,28 @@ export default {
 
   data() {
     return {
-      variation: this.slice.variation,
-      fullWidth: this.slice.primary.fullWidth,
-      maxWidth: this.slice.primary.maxWidth,
-      link: this.slice.primary.link,
-      text: this.slice.primary.text,
-      color: this.slice.primary.color,
-      animation: this.slice.primary.animation,
+      variation: this.slice?.variation,
+      fullWidth: this.slice?.primary?.fullWidth,
+      maxWidth: this.slice?.primary?.maxWidth,
+      link: this.slice?.primary?.link,
+      text: this.slice?.primary?.text,
+      color: this.slice?.primary?.color,
+      animation: this.slice?.primary?.animation,
     }
   },
 
   computed: {
     sliceBackground() {
-      if (this.slice.primary.background === 'white') return '#fff'
-      if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      if (this.slice.primary.background === 'black') return '#111213'
+      if (this.slice?.primary?.background === 'white') return '#fff'
+      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
+      if (this.slice?.primary?.background === 'black') return '#111213'
       return null
     },
 
-    sliceAlignmentClass() {
-      if (this.slice.primary.alignment === 'center') return 'button-slice__content--align-center'
-      if (this.slice.primary.alignment === 'right') return 'button-slice__content--align-right'
-      return 'button-slice__content--align-left'
+    sliceAlignment() {
+      if (this.slice?.primary?.alignment === 'center') return 'center'
+      if (this.slice?.primary?.alignment === 'right') return 'right'
+      return 'left'
     },
   },
 }
