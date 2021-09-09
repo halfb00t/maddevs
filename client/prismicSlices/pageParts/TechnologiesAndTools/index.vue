@@ -2,7 +2,7 @@
   <section class="technologies-slice">
     <div
       class="container"
-      data-testid="container"
+      data-testid="technologies-slice-container"
       :data-aos="animation"
     >
       <h2
@@ -90,8 +90,8 @@ export default {
       activeCategory: '',
       categories,
       technologies,
-      title: this.slice.primary.title,
-      animation: this.slice.primary.animation,
+      title: this.slice?.primary?.title,
+      animation: this.slice?.primary?.animation,
     }
   },
 
