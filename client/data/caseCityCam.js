@@ -54,3 +54,30 @@ export const idSolutionsList = [
   'solution-item-4',
   'solution-item-5',
 ]
+
+export const components = [
+  {
+    title: 'Controller module based on an STM32L152RBTA microcontroller:',
+    text: 'operates and commands other modules.',
+  },
+  {
+    title: 'Modem module based on a sim5360e chip:',
+    text: 'connects the device to the mobile network and the Internet and transmits images taken by the cameras to the cloud data storage.',
+  },
+  {
+    title: 'Arducam Mini Module Camera Shield 2 MP Plus OV2640:',
+    text: 'takes images at a specified frequency.',
+  },
+  {
+    title: '',
+    text: 'DC/DC upconverter (step-up) based on the IP5306 microcircuit: stabilises the input current for the correct operation of the device.',
+  },
+  {
+    title: 'TP4056 micro USB charge controller:',
+    text: 'checks if the power bank is discharged.',
+  },
+  {
+    title: 'In-house engineered printed circuit boards for the modules:',
+    text: 'consolidate all modules into one device.',
+  },
+]
