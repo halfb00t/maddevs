@@ -6,13 +6,13 @@
   >
     <picture>
       <source
-        :srcset="[$getMediaFromS3('/images/Careers/webp/office_black-min.webp') + ' ', $getMediaFromS3('/images/Careers/webp/office_black-min@2x.webp 2x')]"
+        :srcset="[$getMediaFromS3('/images/Careers/webp/office_black.webp') + ' ', $getMediaFromS3('/images/Careers/webp/office_black@2x.webp 2x')]"
         type="image/webp"
         class="careers-banner__image"
       >
       <img
-        :src="$getMediaFromS3('/images/Careers/png/office_black-min.png')"
-        :srcset="$getMediaFromS3('/images/Careers/png/office_black-min@2x.png')"
+        :src="$getMediaFromS3('/images/Careers/jpg/office_black.jpg')"
+        :srcset="$getMediaFromS3('/images/Careers/jpg/office_black@2x.jpg')"
         width="1239"
         height="606"
         class="careers-banner__image"
