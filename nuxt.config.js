@@ -181,6 +181,7 @@ module.exports = {
     sentryDsnFront: process.env.NODE_SENTRY_DSN_FRONT,
     ffEnvironment: process.env.FF_ENVIRONMENT,
     prismicApi: process.env.NODE_PRISMIC_API,
+    ipInfoToken: process.env.NODE_IP_INFO_TOKEN,
   },
   router: {
     trailingSlash: true,
