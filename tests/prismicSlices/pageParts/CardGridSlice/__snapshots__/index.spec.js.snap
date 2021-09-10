@@ -9,7 +9,7 @@ exports[`Card Grid slice should correctly render CardGrid component 1`] = `
     <div
       class="container aos-init aos-animate"
       data-aos="fade-up"
-      data-testid="card-grid"
+      data-testid="card-grid-variation"
       primary="[object Object]"
       variation="default-slice"
     >
@@ -32,7 +32,7 @@ exports[`Card Grid slice should correctly render CardGridWithIcon component 1`] 
       background="black"
       class="card-grid-with-icon card-grid-with-icon--white-theme aos-init aos-animate"
       data-aos="fade-up"
-      data-testid="card-grid-with-icon"
+      data-testid="card-grid-with-icon-variation"
     >
       <div
         class="container"
@@ -57,7 +57,7 @@ exports[`Card Grid slice should correctly render RichTextCard component 1`] = `
       background="black"
       class="rich-text-cards aos-init aos-animate"
       data-aos="fade-up"
-      data-testid="rich-text-card"
+      data-testid="rich-text-card-variation"
     >
       <div
         class="container"

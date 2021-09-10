@@ -13,22 +13,22 @@ const props = {
     {
       title: 'First item title',
       content: '<p>First item content</p>',
-      background: '#FFF',
+      background: '#FFFFFF',
     },
     {
       title: 'second item title',
       content: '<p>second item content</p>',
-      background: '#FFF',
+      background: '#FFFFFF',
     },
     {
       title: 'third item title',
       content: '<p>third item content</p>',
-      background: '#000',
+      background: '#000000',
     },
   ],
 }
 
-describe('Card grid slices RichTextCards component', () => {
+describe('CardGridSlice - RichTextCards variation', () => {
   it('should render correctly with data', () => {
     const { container } = render(RichTextCards, {
       props,

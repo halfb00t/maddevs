@@ -14,6 +14,7 @@ const apiData = {
   link: {
     url: 'url',
   },
+  alignment: 'center',
 }
 
 const getProps = params => ({
@@ -139,6 +140,48 @@ describe('Button slice', () => {
       })
 
       expect(wrapper.vm.$props.slice.primary.link.url).toBe(apiData.link.url)
+    })
+
+    it('UIButton should render null', () => {
+      const wrapper = shallowMount(ButtonSlice, {
+        propsData: getProps({}),
+      })
+
+      expect(wrapper.vm.$props.slice.primary.link).toBeUndefined()
+    })
+  })
+
+  describe('Button slice alignment computed method', () => {
+    it('should return alignment center', () => {
+      const wrapper = shallowMount(ButtonSlice, {
+        propsData: getProps({
+          ...apiData,
+        }),
+      })
+
+      expect(wrapper.vm.sliceAlignment).toBe(apiData.alignment)
+    })
+
+    it('should return alignment left', () => {
+      const wrapper = shallowMount(ButtonSlice, {
+        propsData: getProps({
+          ...apiData,
+          alignment: '',
+        }),
+      })
+
+      expect(wrapper.vm.sliceAlignment).toBe('left')
+    })
+
+    it('should return alignment right', () => {
+      const wrapper = shallowMount(ButtonSlice, {
+        propsData: getProps({
+          ...apiData,
+          alignment: 'right',
+        }),
+      })
+
+      expect(wrapper.vm.sliceAlignment).toBe('right')
     })
   })
 })

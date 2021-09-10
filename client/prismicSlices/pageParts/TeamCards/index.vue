@@ -41,7 +41,7 @@
             :href="expert.linkedin.url"
             rel="nofollow"
             target="_blank"
-          />
+          >{{ expert.name }}</a>
         </div>
       </div>
     </div>
@@ -133,6 +133,9 @@ export default {
       right: 0;
       bottom: 0;
       transition: all .3s ease;
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
     }
   }
 

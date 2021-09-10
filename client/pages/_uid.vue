@@ -1,13 +1,14 @@
 <template>
   <SliceZone
     type="page"
-    :slices="slices"
+    :slices="customPage.slices"
   />
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 import SliceZone from 'vue-slicezone'
+import { buildHead } from '@/data/seo'
 import headerMixin from '@/mixins/headerMixin'
 
 export default {
@@ -22,21 +23,29 @@ export default {
     next()
   },
 
-  async asyncData({
-    error,
-    params,
-    $prismic,
-    store,
-  }) {
-    const response = await $prismic.api.getByUID('custom_page', params.uid)
-    if (!response?.data?.body) return error({ statusCode: 404, message: 'Page not found' })
-    if (!response.data.released && process.env.ffEnvironment === 'production') {
+  async asyncData({ error, params, store }) {
+    await store.dispatch('getCustomPage', params.uid)
+    const { customPage } = store?.getters
+
+    if (!customPage?.slices) return error({ statusCode: 404, message: 'Page not found' })
+    if (!customPage.released && process.env.ffEnvironment === 'production') {
       return error({ statusCode: 404, message: 'Page not found' })
     }
-    store.dispatch('showFooter', response.data.show_footer)
+
+    store.dispatch('showFooter', customPage.showFooter)
     return {
-      slices: response.data.body,
+      customPage,
+      openGraphUrl: `${process.env.domain}/${params.uid}/`,
     }
+  },
+
+  head() {
+    return buildHead({
+      url: this.openGraphUrl,
+      title: this.customPage.metaTitle || '',
+      description: this.customPage.metaDescription || '',
+      jsonLd: this.customPage.schemaOrgSnippet,
+    })
   },
 
   methods: {

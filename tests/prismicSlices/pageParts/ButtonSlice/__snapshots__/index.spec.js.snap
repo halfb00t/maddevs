@@ -7,7 +7,7 @@ exports[`Button slice should correctly render UIButton 1`] = `
     style="background-color: rgb(17, 18, 19);"
   >
     <div
-      class="container button-slice__content--align-left aos-init aos-animate"
+      class="container button-slice__content--align-center aos-init aos-animate"
       data-aos="fade-up"
       data-testid="container"
     >
@@ -37,7 +37,7 @@ exports[`Button slice should correctly render UILinkButton 1`] = `
     style="background-color: rgb(17, 18, 19);"
   >
     <div
-      class="container button-slice__content--align-left aos-init aos-animate"
+      class="container button-slice__content--align-center aos-init aos-animate"
       data-aos="fade-up"
       data-testid="container"
     >
@@ -63,7 +63,7 @@ exports[`Button slice should correctly render UIOutlinedButton 1`] = `
     style="background-color: rgb(17, 18, 19);"
   >
     <div
-      class="container button-slice__content--align-left aos-init aos-animate"
+      class="container button-slice__content--align-center aos-init aos-animate"
       data-aos="fade-up"
       data-testid="container"
     >
