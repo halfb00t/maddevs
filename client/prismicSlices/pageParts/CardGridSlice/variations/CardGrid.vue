@@ -23,10 +23,10 @@
           </div>
           <img
             class="card-grid-slice__item-logo"
-            :src="item.image.url"
-            :alt="item.image.alt"
-            :width="item.image.width"
-            :height="item.image.height"
+            :src="item.image && item.image.url"
+            :alt="item.image && item.image.alt"
+            :width="item.image && item.image.dimensions && item.image.dimensions.width"
+            :height="item.image && item.image.dimensions && item.image.dimensions.height"
           >
         </a>
       </li>

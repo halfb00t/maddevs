@@ -44,13 +44,13 @@ exports[`CtaBannerSlice component should render correctly 1`] = `
         <div
           class="cta-banner-slice__man"
         >
-          <h6
+          <h3
             class="cta-banner-slice__man-name"
           >
             
           
         
-          </h6>
+          </h3>
            
           <span
             class="cta-banner-slice__man-position"

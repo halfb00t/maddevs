@@ -12,6 +12,7 @@ describe('CustomerTestimonials', () => {
       directives,
     })
 
+    expect(screen.getByText('Customer Testimonials')).not.toBeNull()
     expect(screen.getByText('Daniel Vartanov,')).not.toBeNull()
     expect(container).toMatchSnapshot()
   })
@@ -43,5 +44,28 @@ describe('CustomerTestimonials', () => {
 
     await fireEvent.scroll(global, { target: { scrollY: 100 } })
     expect(getAllByTestId('test-clutch-script')).toHaveLength(4)
+  })
+
+  describe('data-aos animation attribute', () => {
+    it('should be \'fade-up\' value', () => {
+      render(CustomerTestimonials, {
+        directives,
+        props: {
+          aos: 'fade-up',
+        },
+        stubs: ['ClientOnly'],
+      })
+
+      expect(screen.getByTestId('customer-testimonial-container').getAttribute('data-aos')).toBe('fade-up')
+    })
+
+    it('should be null value', () => {
+      render(CustomerTestimonials, {
+        directives,
+        stubs: ['ClientOnly'],
+      })
+
+      expect(screen.getByTestId('customer-testimonial-container').getAttribute('data-aos')).toBeNull()
+    })
   })
 })

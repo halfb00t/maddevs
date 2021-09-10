@@ -2,13 +2,19 @@ import 'regenerator-runtime'
 import { shallowMount } from '@vue/test-utils'
 import ModalEbook from '@/components/core/modals/ModalEbook'
 
+const directives = {
+  'lazy-load': () => {},
+}
+
 describe('ModalEbook component', () => {
   let wrapper = null
   let mockShow = null
   let mockClose = null
 
   beforeEach(() => {
-    wrapper = shallowMount(ModalEbook)
+    wrapper = shallowMount(ModalEbook, {
+      directives,
+    })
     mockShow = jest.fn()
     mockClose = jest.fn()
   })
@@ -23,7 +29,9 @@ describe('ModalEbook component', () => {
   })
 
   it('if call method "show" and ref modalEbook is undefined > "show" method in ref modalEbook not call', () => {
-    wrapper = shallowMount(ModalEbook)
+    wrapper = shallowMount(ModalEbook, {
+      directives,
+    })
     wrapper.vm.show()
     expect(mockShow).not.toHaveBeenCalled()
   })
@@ -38,13 +46,16 @@ describe('ModalEbook component', () => {
           },
         },
       },
+      directives,
     })
     wrapper.vm.show()
     expect(mockShow).toHaveBeenCalledTimes(1)
   })
 
   it('if call method "close" and ref modalEbook is undefined > "close" method in ref modalEbook not call', () => {
-    wrapper = shallowMount(ModalEbook)
+    wrapper = shallowMount(ModalEbook, {
+      directives,
+    })
     wrapper.vm.close()
     expect(mockClose).not.toHaveBeenCalled()
   })
@@ -59,6 +70,7 @@ describe('ModalEbook component', () => {
           },
         },
       },
+      directives,
     })
     wrapper.vm.close()
     expect(mockClose).toHaveBeenCalledTimes(1)
