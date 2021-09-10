@@ -47,24 +47,24 @@ export default {
   name: 'Banner',
   mixins: [changeSectionTextOpacityMixin('sectionText')],
 
-  head() {
-    return {
-      link: [
-        {
-          rel: 'preload',
-          as: 'image',
-          imagesrcset:
-            `${this.$getMediaFromS3('/images/OpenSource/webp/programmer.webp')}, ${this.$getMediaFromS3('/images/OpenSource/webp/programmer@2x.webp')} 2x`,
-        },
-        {
-          rel: 'preload',
-          as: 'image',
-          imagesrcset:
-            `${this.$getMediaFromS3('/images/OpenSource/png/programmer.png')}, ${this.$getMediaFromS3('/images/OpenSource/png/programmer@2x.png')} 2x`,
-        },
-      ],
-    }
-  },
+  // head() {
+  //   return {
+  //     link: [
+  //       {
+  //         rel: 'preload',
+  //         as: 'image',
+  //         imagesrcset:
+  //           `${this.$getMediaFromS3('/images/OpenSource/webp/programmer.webp')}, ${this.$getMediaFromS3('/images/OpenSource/webp/programmer@2x.webp')} 2x`,
+  //       },
+  //       {
+  //         rel: 'preload',
+  //         as: 'image',
+  //         imagesrcset:
+  //           `${this.$getMediaFromS3('/images/OpenSource/png/programmer.png')}, ${this.$getMediaFromS3('/images/OpenSource/png/programmer@2x.png')} 2x`,
+  //       },
+  //     ],
+  //   }
+  // },
 }
 </script>
 
