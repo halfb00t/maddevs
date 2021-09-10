@@ -112,6 +112,7 @@ exports[`WhyCityCam component should render correctly 1`] = `
        
       <div
         class="case_card background-color-blue-citycam-dark"
+        id="citycam-card-2"
       >
         <h3
           class="case_title_h4 case_card-title m-8_bottom"

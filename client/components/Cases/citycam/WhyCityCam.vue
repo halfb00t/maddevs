@@ -44,7 +44,10 @@
           </TextParagraph>
         </Card>
       </div>
-      <Card class="background-color-blue-citycam-dark">
+      <Card
+        :id="`citycam-card-2`"
+        class="background-color-blue-citycam-dark"
+      >
         <h3 class="case_title_h4 case_card-title m-8_bottom">
           City administrators
         </h3>
@@ -67,7 +70,7 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Picture from '@/components/Cases/shared/Picture'
 import Card from '@/components/Cases/shared/Card'
-import { whyCityCamCards, idList } from '@/data/caseCityCam'
+import { whyCityCamCards, idCardList } from '@/data/caseCityCam'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
 
@@ -81,7 +84,7 @@ export default {
 
   mixins: [
     IntersectionObserverMixin(
-      idList,
+      idCardList,
       setBackground,
     ),
   ],

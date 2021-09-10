@@ -87,6 +87,7 @@ $backgroundColors: (
   'blue-itc-darken': #132E50,
   'blue-citycam':#3A52D4,
   'blue-citycam-dark':#23338B,
+  'silver-citycam':#F3F3F3,
   'gray': #404143,
   'gray-light':#FBFBFB,
   'gray-darken': #eaeaea,
@@ -140,6 +141,11 @@ $backgroundColors: (
   // selector based on class name
   .background-color-#{$name} {
     background-color: $variable;
+  }
+  @media screen and (max-width: 768px) {
+    .media-background-color-#{$name} {
+      background-color: $variable;
+    }
   }
 }
 
