@@ -6,6 +6,7 @@
     <div
       :data-aos="aos"
       class="container"
+      data-testid="customer-testimonial-container"
     >
       <h2 class="customer-testimonials__title">
         {{ title }}
