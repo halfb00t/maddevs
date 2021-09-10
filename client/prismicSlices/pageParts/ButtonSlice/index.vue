@@ -7,7 +7,7 @@
       class="container"
       :class="`button-slice__content--align-${sliceAlignment}`"
       :data-aos="animation"
-      data-testid="container"
+      data-testid="button-slice-container"
     >
       <UIButton
         v-if="variation === 'default-slice'"
@@ -106,7 +106,7 @@ export default {
 
   computed: {
     sliceBackground() {
-      if (this.slice?.primary?.background === 'white') return '#fff'
+      if (this.slice?.primary?.background === 'white') return '#ffffff'
       if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
       if (this.slice?.primary?.background === 'black') return '#111213'
       return null

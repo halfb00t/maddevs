@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils'
 import ButtonSlice from '@/prismicSlices/pageParts/ButtonSlice'
 
 const backgrounds = {
-  white: '#fff',
+  white: '#ffffff',
   black: '#111213',
   grey: '#f5f7f9',
 }
@@ -120,14 +120,14 @@ describe('Button slice', () => {
         props: getProps(apiData),
       })
 
-      expect(screen.getByTestId('container').getAttribute('data-aos')).toBe(apiData.animation)
+      expect(screen.getByTestId('button-slice-container').getAttribute('data-aos')).toBe(apiData.animation)
     })
 
     it('should container the data-aos to be null', () => {
       render(ButtonSlice, {
         props: getProps({}),
       })
-      expect(screen.getByTestId('container').getAttribute('data-aos')).toBeNull()
+      expect(screen.getByTestId('button-slice-container').getAttribute('data-aos')).toBeNull()
     })
   })
 
