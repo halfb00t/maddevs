@@ -81,8 +81,8 @@ export default {
       const params = {
         region: 'eu-west-1',
         bucket: 'maddevsio',
-        file: 'images/Blog/blog-header-bg.png',
-        expiresIn: 30, // 30 sec
+        file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
+        expiresIn: 86400, // sec -> 24h
       }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
       const requestSender = {
