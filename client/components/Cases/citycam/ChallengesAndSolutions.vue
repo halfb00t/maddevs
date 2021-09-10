@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container_regular media-background-color-silver-citycam">
+    <div class="container_regular media-background-color-gray-lightened">
       <h2 class="case_title_h2 p-56_top media-p-48_top m-16_bottom media-m-12_bottom">
         Challenges & solutions
       </h2>

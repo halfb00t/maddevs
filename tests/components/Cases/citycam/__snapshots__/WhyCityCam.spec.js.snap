@@ -74,7 +74,7 @@ exports[`WhyCityCam component should render correctly 1`] = `
           </p>
         </div>
         <div
-          class="case_card background-color-blue-citycam"
+          class="case_card background-color-blue-darkened"
           id="citycam-card-1"
         >
           <div
@@ -111,7 +111,7 @@ exports[`WhyCityCam component should render correctly 1`] = `
       </div>
        
       <div
-        class="case_card background-color-blue-citycam-dark"
+        class="case_card background-color-blue-dark"
         id="citycam-card-2"
       >
         <h3

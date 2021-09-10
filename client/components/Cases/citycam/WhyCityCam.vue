@@ -45,8 +45,8 @@
         </Card>
       </div>
       <Card
-        :id="`citycam-card-2`"
-        class="background-color-blue-citycam-dark"
+        id="citycam-card-2"
+        class="background-color-blue-dark"
       >
         <h3 class="case_title_h4 case_card-title m-8_bottom">
           City administrators

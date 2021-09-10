@@ -8,7 +8,7 @@ export const whyCityCamCards = [
   {
     title: 'Local businesses',
     description: 'They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.',
-    color: 'blue-citycam',
+    color: 'blue-darkened',
     img: 'mall',
   },
 ]
