@@ -76,7 +76,7 @@ export default {
   },
 
   destroyed() {
-    this.$refs.video.removeEventListener('ended', this.onEnded)
+    this.$refs.video?.removeEventListener('ended', this.onEnded)
   },
 
   methods: {
