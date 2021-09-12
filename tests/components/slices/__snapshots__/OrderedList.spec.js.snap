@@ -1,16 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`orderedListSlice component is a Vue instance 1`] = `
+exports[`orderedListSlice component should render correctly with data 1`] = `
 <div>
   <ol
     class="case-list_numbered"
   >
-    <prismicrichtext
+    <prismicrichtext-stub
       field="list introduction"
-      html-serializer="function _default() {
-          /* istanbul ignore next */
-          cov_2j5h4f3ly4().f[2]++;
-          cov_2j5h4f3ly4().s[7]++;
+      html-serializer="function htmlSerializer() {
           return null;
         }"
     />
