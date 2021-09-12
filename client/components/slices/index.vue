@@ -37,7 +37,10 @@
         <DividerSlice />
       </template>
       <template v-else-if="slice.slice_type === 'ordered_list'">
-        <OrderedList :slice="slice" />
+        <OrderedList
+          :slice="slice"
+          :html-serializer="serializer"
+        />
       </template>
       <template v-else-if="slice.slice_type === 'doublecolumn_bordered'">
         <DoubleColumnBorderedSlice :slice="slice" />

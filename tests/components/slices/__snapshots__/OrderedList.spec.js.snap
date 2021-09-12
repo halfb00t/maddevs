@@ -5,9 +5,15 @@ exports[`orderedListSlice component is a Vue instance 1`] = `
   <ol
     class="case-list_numbered"
   >
-    <div>
-      list introduction
-    </div>
+    <prismicrichtext
+      field="list introduction"
+      html-serializer="function _default() {
+          /* istanbul ignore next */
+          cov_2j5h4f3ly4().f[2]++;
+          cov_2j5h4f3ly4().s[7]++;
+          return null;
+        }"
+    />
      
     <li
       class="case_list-numbered_item"

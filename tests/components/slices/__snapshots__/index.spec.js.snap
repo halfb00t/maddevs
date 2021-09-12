@@ -105,11 +105,9 @@ exports[`slice block component should render correctly 1`] = `
       <ol
         class="case-list_numbered"
       >
-        <div>
-          <p>
-            list introduction
-          </p>
-        </div>
+        <prismicrichtext-stub
+          field="list introduction"
+        />
          
         <li
           class="case_list-numbered_item"
