@@ -1,5 +1,5 @@
 import { getStoriesPaths } from 'slice-machine-ui/helpers/storybook'
-import getRoutes, { getSitemapRoutes } from './utils/getRoutes'
+import getRoutes, { getSitemapRoutes, getCustomPageRoutes } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
 
 require('dotenv').config()
@@ -185,6 +185,10 @@ module.exports = {
   },
   router: {
     trailingSlash: true,
+    extendRoutes: async routes => {
+      const customPageRoutes = await getCustomPageRoutes()
+      routes.push(...customPageRoutes)
+    },
   },
   styleResources: {
     scss: [
