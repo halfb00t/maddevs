@@ -35,6 +35,7 @@
 import { email, maxLength, required } from 'vuelidate/lib/validators'
 import BaseInput from '@/components/core/forms/BaseInput'
 import { sendEmail } from '@/api/email'
+import { getLinkWithLifeTime } from '@/api/s3'
 
 export default {
   name: 'ReadForm',
@@ -77,6 +78,13 @@ export default {
   methods: {
     async submit() {
       if (!this.isValid) return
+      const params = {
+        region: 'eu-west-1',
+        bucket: 'maddevsio',
+        file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
+        expiresIn: 86400, // sec -> 24h
+      }
+      const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
       const requestSender = {
         body: {
           email: {
@@ -84,6 +92,7 @@ export default {
             variables: {
               subject: 'Your Pricing Strategies Ebook by Mad Devs',
               emailTo: this.email,
+              pdfUrl,
             },
 
             attachment: null,
