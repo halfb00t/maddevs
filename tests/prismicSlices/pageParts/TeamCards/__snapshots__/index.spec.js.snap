@@ -60,7 +60,9 @@ exports[`TeamCards slice should render correctly 1`] = `
             href="https://linkedin.com/bob/"
             rel="nofollow"
             target="_blank"
-          />
+          >
+            Uncle Bob
+          </a>
         </div>
         <div
           class="meet-our-experts__expert-item"
@@ -109,7 +111,9 @@ exports[`TeamCards slice should render correctly 1`] = `
             href="https://linkedin.com/alice/"
             rel="nofollow"
             target="_blank"
-          />
+          >
+            Alice
+          </a>
         </div>
       </div>
     </div>

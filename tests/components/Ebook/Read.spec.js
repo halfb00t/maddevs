@@ -6,6 +6,10 @@ import Read from '@/components/Ebook/Read'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
+const directives = {
+  'lazy-load': () => {},
+}
+
 const postsList = [
   {
     data: {
@@ -59,6 +63,7 @@ describe('Read component', () => {
           },
         },
       },
+      directives,
     })
   })
 
@@ -84,6 +89,7 @@ describe('Read component', () => {
     const localWrapper = shallowMount(Read, {
       store,
       localVue,
+      directives,
     })
     const { posts } = localWrapper.vm
     expect(posts).toHaveLength(0)

@@ -1,8 +1,8 @@
 <template>
   <div class="contacts-slice-form">
-    <h3 class="contacts-slice-form__title">
+    <h2 class="contacts-slice-form__title">
       Tell Us About <br> Your Project
-    </h3>
+    </h2>
     <BaseForm
       id="contacts-slice-form"
       ref="baseForm"

@@ -3,8 +3,10 @@
     <div class="contacts-slice-fields__item">
       <img
         :src="require(`@/assets/img/Footer/svg/location.svg`)"
-        alt="location"
+        alt="Location."
         class="contacts-slice-fields__item-icon"
+        width="40"
+        height="40"
       >
       <div class="contacts-slice-fields__item-content">
         <p class="contacts-slice-fields__item-label">
@@ -18,8 +20,10 @@
     <div class="contacts-slice-fields__item">
       <img
         :src="require(`@/assets/img/Footer/svg/mail.svg`)"
-        alt="location"
+        alt="Mail."
         class="contacts-slice-fields__item-icon"
+        width="40"
+        height="41"
       >
       <div class="contacts-slice-fields__item-content">
         <p class="contacts-slice-fields__item-label">
@@ -36,8 +40,10 @@
     <div class="contacts-slice-fields__item">
       <img
         :src="require(`@/assets/img/Footer/svg/phone.svg`)"
-        alt="location"
+        alt="Phone."
         class="contacts-slice-fields__item-icon"
+        width="40"
+        height="40"
       >
       <div class="contacts-slice-fields__item-content">
         <p class="contacts-slice-fields__item-label">

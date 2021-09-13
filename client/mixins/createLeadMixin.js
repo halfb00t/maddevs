@@ -13,7 +13,7 @@ const createLeadMixin = (templateId, title = 'Individuals', subject = 'Marketing
       if (!templateId) throw new Error('Template ID was not provided')
 
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
-      const { ip = 'Unknown', country_name: country = 'Unknown', city = 'Unknown' } = await getIPInfo()
+      const { ip = 'Unknown', country = 'Unknown', city = 'Unknown' } = await getIPInfo()
 
       const baseTitle = 'Mad Devs Website Forms'
       const payload = {

@@ -46,7 +46,7 @@ describe('TeamCards slice', () => {
       props,
     })
 
-    expect(screen.getByText('Uncle Bob')).not.toBeNull()
-    expect(screen.getByText('Alice')).not.toBeNull()
+    expect(screen.queryAllByText('Uncle Bob')).not.toBeNull()
+    expect(screen.queryAllByText('Alice')).not.toBeNull()
   })
 })

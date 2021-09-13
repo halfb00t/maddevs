@@ -35,8 +35,8 @@ export default {
 
   data() {
     return {
-      animation: this.slice.primary.animation,
-      title: this.slice.primary.title,
+      animation: this.slice?.primary?.animation,
+      title: this.slice?.primary?.title,
     }
   },
 }

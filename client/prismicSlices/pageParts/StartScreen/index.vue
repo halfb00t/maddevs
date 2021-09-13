@@ -8,6 +8,8 @@
     <img
       :src="image && image.url"
       :alt="image && image.alt"
+      width="1680"
+      height="969"
       :style="{
         opacity: imageOpacity,
         backgroundColor: sliceBackground,
