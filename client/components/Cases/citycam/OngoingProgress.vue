@@ -4,7 +4,7 @@
       <h2 class="case_title_h2 m-12_bottom">
         Ongoing progress
       </h2>
-      <TextParagraph class="m-48_bottom media-m-24-bottom">
+      <TextParagraph class="m-24_bottom">
         Our recent brave move in perfecting the device was to shift from microcontrollers to microprocessors as the
         latter offer wider opportunities. The prototypes and the first batch were based on Raspberry Pi Zero with a
         Huawei 4G modem as the transceiver and an OV5640 camera via the MIPI interface. The combination proved to be as
@@ -12,7 +12,7 @@
       </TextParagraph>
     </div>
     <div
-      class="container_middle m-96_bottom media-m-48_bottom slider"
+      class="container_middle m-48_bottom media-m-8_bottom slider"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
@@ -40,7 +40,7 @@ import Swiper from '@/components/Cases/shared/Swiper'
 import { sliderTwo } from '@/data/caseCityCam'
 
 export default {
-  name: 'DevicePerfecting',
+  name: 'OngoingProgress',
   components: {
     TextParagraph,
     Swiper,
