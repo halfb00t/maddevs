@@ -130,8 +130,8 @@ export default {
     },
 
     validation: {
-      type: Object,
-      default: () => ({}),
+      type: String,
+      default: '',
     },
 
     value: {

@@ -5,6 +5,10 @@ import {
 import { shallowMount } from '@vue/test-utils'
 import ModalContentLocker from '@/components/core/modals/ModalContentLocker'
 
+const directives = {
+  'lazy-load': () => {},
+}
+
 describe('ModalContentLocker component', () => {
   let wrapper
   let mockShow
@@ -16,13 +20,17 @@ describe('ModalContentLocker component', () => {
   })
 
   it('should correctly render', () => {
-    const { container } = render(ModalContentLocker)
+    const { container } = render(ModalContentLocker, {
+      directives,
+    })
 
     expect(container).toMatchSnapshot()
   })
 
   it('if call method "show" and ref modalContactMe is undefined > "show" method in ref modalContactMe not call', () => {
-    wrapper = shallowMount(ModalContentLocker)
+    wrapper = shallowMount(ModalContentLocker, {
+      directives,
+    })
     wrapper.vm.show()
     expect(mockShow).not.toHaveBeenCalled()
   })
@@ -37,13 +45,16 @@ describe('ModalContentLocker component', () => {
           },
         },
       },
+      directives,
     })
     wrapper.vm.show()
     expect(mockShow).toHaveBeenCalledTimes(1)
   })
 
   it('if call method "close" and ref modalContactMe is undefined > "close" method in ref modalContactMe not call', () => {
-    wrapper = shallowMount(ModalContentLocker)
+    wrapper = shallowMount(ModalContentLocker, {
+      directives,
+    })
     wrapper.vm.close()
     expect(mockClose).not.toHaveBeenCalled()
   })
@@ -58,6 +69,7 @@ describe('ModalContentLocker component', () => {
           },
         },
       },
+      directives,
     })
     wrapper.vm.close()
     expect(mockClose).toHaveBeenCalledTimes(1)
@@ -73,6 +85,7 @@ describe('ModalContentLocker component', () => {
           },
         },
       },
+      directives,
     })
     wrapper.vm.handleSendedForm({ email: 'test@email.com' })
     expect(wrapper).toMatchSnapshot()

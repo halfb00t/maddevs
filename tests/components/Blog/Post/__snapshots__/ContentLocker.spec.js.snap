@@ -2,12 +2,8 @@
 
 exports[`ContentLocker component should correctly render 1`] = `
 <div>
-  <transition-stub
-    class="modal-content-locker"
-    mode="out-in"
-    name="main-fade"
-  >
-    <!---->
-  </transition-stub>
+  <modalcontentlocker-stub
+    id="content-locker"
+  />
 </div>
 `;
