@@ -5,4 +5,5 @@
  */
 export const config = {
   blogComments: ['development', 'staging'],
+  cityCamCase: ['development', 'staging'],
 }

@@ -1,0 +1,1295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component should render correctly 1`] = `
+<div>
+  <section>
+    <section
+      class="container_regular m-48_top media-m-24_top m-24_bottom media-m-48_bottom"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      Keeping up with the technological evolution, Mad Devs undertook the development of a new-generation
+      intersection monitoring system for a company called CityCam. The system’s purpose is to let anyone
+      monitor traffic in a city in real time. Traffic monitoring can help prevent congestion, and overall,
+      it makes transportation safer and faster. The project, known internally as Microphotographer, was largely
+      about hardware and featured two major parts: engineering the camera device with backend for it and building an
+      application with frontend and backend.
+    
+      </p>
+    </section>
+     
+    <section
+      class="container_full background-color-gray-light m-72_bottom media-m-24_bottom"
+    >
+      <div
+        class="case_lottie"
+        id="about-citycam"
+        style="width: 100%; height: 100%; overflow: hidden; margin: 0px auto;"
+      >
+        <svg
+          height="395"
+          preserveAspectRatio="xMidYMid meet"
+          style="width: 100%; height: 100%; transform: translate3d(0,0,0);"
+          viewBox="0 0 820 395"
+          width="820"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <clippath
+              id="__lottie_element_2"
+            >
+              <rect
+                height="395"
+                width="820"
+                x="0"
+                y="0"
+              />
+            </clippath>
+            <clippath
+              id="__lottie_element_16"
+            >
+              <path
+                d="M0,0 L820,0 L820,395 L0,395z"
+              />
+            </clippath>
+          </defs>
+          <g
+            clip-path="url(#__lottie_element_2)"
+          >
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path
+                  fill-opacity="0"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path
+                  fill-opacity="0"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              clip-path="url(#__lottie_element_16)"
+              opacity="1"
+              style="display: block;"
+              transform="matrix(1,0,0,1,-4,13.125)"
+            >
+              <g
+                style="display: none;"
+              >
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+              </g>
+              <g
+                style="display: none;"
+              >
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+              </g>
+              <g
+                style="display: none;"
+              >
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+                <g>
+                  <path />
+                </g>
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+            <g
+              style="display: none;"
+            >
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+              <g>
+                <path />
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+  </section>
+</div>
+`;
