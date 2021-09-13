@@ -31,10 +31,10 @@
             :lazy="false"
           />
           <p
-            v-if="element.slideTitle"
+            v-if="element.title"
             class="slide-description"
           >
-            {{ element.slideTitle }}
+            {{ element.title }}
           </p>
         </swiper-slide>
       </swiper>
