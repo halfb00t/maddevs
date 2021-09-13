@@ -5,6 +5,9 @@ import extractSchemaOrg from '@/helpers/extractSchemaOrg'
 const extractCustomPageData = page => {
   if (!page && !page?.data) return {}
   return {
+    id: page.id,
+    uid: page.uid,
+    routePrefix: page.data.route_prefix,
     released: page.data.released,
     showFooter: page.data.show_footer,
     slices: page.data.body,
