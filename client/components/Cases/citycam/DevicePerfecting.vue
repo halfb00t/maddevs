@@ -22,7 +22,7 @@
       data-aos-anchor-placement="bottom"
     >
       <Swiper
-        :components="sliderOne"
+        :components="devicePerfectingSlides"
         :safari-top-bar="false"
       />
     </div>
@@ -60,7 +60,7 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Swiper from '@/components/Cases/shared/Swiper'
-import { sliderOne } from '@/data/caseCityCam'
+import { devicePerfectingSlides } from '@/data/caseCityCam'
 import TextQuote from '@/components/Cases/shared/TextQuote'
 
 export default {
@@ -73,7 +73,7 @@ export default {
 
   data() {
     return {
-      sliderOne,
+      devicePerfectingSlides,
     }
   },
 }

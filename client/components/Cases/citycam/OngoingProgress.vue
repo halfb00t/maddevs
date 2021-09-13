@@ -17,7 +17,7 @@
       data-aos-anchor-placement="bottom"
     >
       <Swiper
-        :components="sliderTwo"
+        :components="ongoingProcessSlides"
         :safari-top-bar="false"
       />
     </div>
@@ -39,7 +39,7 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Swiper from '@/components/Cases/shared/Swiper'
-import { sliderTwo } from '@/data/caseCityCam'
+import { ongoingProcessSlides } from '@/data/caseCityCam'
 
 export default {
   name: 'OngoingProgress',
@@ -50,7 +50,7 @@ export default {
 
   data() {
     return {
-      sliderTwo,
+      ongoingProcessSlides,
     }
   },
 }
