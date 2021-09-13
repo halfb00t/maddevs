@@ -105,3 +105,20 @@ export const sliderOne = [
     alt: 'Device perfection',
   },
 ]
+
+export const sliderTwo = [
+  {
+    fileName: 'citycam-slide-two-first',
+    pictureFolder: 'citycam',
+    fileExtension: 'jpg',
+    slideTitle: 'Assembled power module:',
+    alt: 'Ongoing progress',
+  },
+  {
+    fileName: 'citycam-slide-two-second',
+    pictureFolder: 'citycam',
+    fileExtension: 'jpg',
+    slideTitle: 'Assembled power module with RPi Zero:',
+    alt: 'Ongoing progress',
+  },
+]
