@@ -31,6 +31,8 @@
     "build-storybook": "nuxt storybook build"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.30.0",
+    "@aws-sdk/s3-request-presigner": "^3.30.0",
     "@maddevs/mad-radiator": "1.6.0",
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/gtm": "^2.4.0",
