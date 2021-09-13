@@ -50,6 +50,8 @@ exports[`Swift component should render correctly 1`] = `
                   height="525"
                   width="1026"
                 />
+                 
+                <!---->
               </div>
               <div
                 class="swiper-slide"
@@ -62,6 +64,8 @@ exports[`Swift component should render correctly 1`] = `
                   height="525"
                   width="1026"
                 />
+                 
+                <!---->
               </div>
             </div>
             <span

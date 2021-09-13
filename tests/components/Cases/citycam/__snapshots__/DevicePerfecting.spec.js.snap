@@ -78,7 +78,13 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                   />
                 </picture>
                  
-                <!---->
+                <p
+                  class="slide-description"
+                >
+                  
+          Device’s modules:
+        
+                </p>
               </div>
               <div
                 class="swiper-slide"
