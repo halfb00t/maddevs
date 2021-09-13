@@ -7,10 +7,12 @@
     <h2 class="case_title_h2 m-12_bottom media-m-24_bottom">
       Why cities need systems like CityCam
     </h2>
-    <TextParagraph class="m-72_bottom media-m-24_bottom">
+    <TextParagraph class="m-12_bottom">
       If traffic is poorly organised, virtually any process in a modern city’s life can come to a halt. Around the
       world, the most advanced technologies are applied to urban traffic to make sure that hundreds of thousands of
-      people and vehicles moving around simultaneously can do it safely and efficiently.<br><br>
+      people and vehicles moving around simultaneously can do it safely and efficiently.
+    </TextParagraph>
+    <TextParagraph class="m-72_bottom media-m-24_bottom">
       Traffic cameras are one of the solutions that allow making better transportation decisions in real time. If you
       can monitor roads and intersections, you can plan itineraries optimally, whether you’re just a resident driving
       around or an official in charge of traffic management. Consider the benefits of traffic cameras for three
