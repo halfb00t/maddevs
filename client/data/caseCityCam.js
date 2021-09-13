@@ -225,3 +225,82 @@ export const technologies = [
     imgAlt: 'Altium Designer',
   },
 ]
+export const team = [
+  {
+    name: 'Belek Abylov',
+    position: 'Full-Stack Developer',
+    image: {
+      file: 'belek-abylov',
+    },
+  },
+  {
+    name: 'Vlad Andreev',
+    position: 'Delivery Manager',
+    image: {
+      file: 'vlad-andreev',
+    },
+  },
+  {
+    name: 'Kirill Avdeev',
+    position: 'Hardware Engineer',
+    image: {
+      file: 'avdeev',
+    },
+  },
+  {
+    name: 'Aleksandr Edakin',
+    position: 'Software Developer',
+    image: {
+      file: 'aleksandr-edakin',
+    },
+  },
+  {
+    name: 'Maksim Gachevski',
+    position: 'Frontend Developer',
+    image: {
+      file: 'maksim-gachevski',
+    },
+  },
+  {
+    name: 'Gennady Karev',
+    position: 'Full-Stack Developer',
+    image: {
+      file: 'gennady-karev',
+    },
+  },
+  {
+    name: 'Oleg Katkov',
+    position: 'Tech Lead',
+    image: {
+      file: 'oleg-katkov',
+    },
+  },
+  {
+    name: 'Dmitri Kononenko',
+    position: 'Project Manager',
+    image: {
+      file: 'dmitri-kononenko',
+    },
+  },
+  {
+    name: 'Anton Kozlov',
+    position: 'Hardware Engineer',
+    image: {
+      file: 'anton-kozlov',
+    },
+  },
+  {
+    name: 'Andrew Sapozhnikov',
+    position: 'Head of DevOps',
+    image: {
+      file: 'andrew-sapozhnikov',
+    },
+  },
+  {
+    name: 'Gaukhar Taspolatova',
+    position: 'Project Manager',
+    image: {
+      file: 'gaukhar-taspolatova',
+    },
+  },
+]
