@@ -30,6 +30,12 @@
             :alt="element.alt"
             :lazy="false"
           />
+          <p
+            v-if="element.slideTitle"
+            class="slide-description"
+          >
+            {{ element.slideTitle }}
+          </p>
         </swiper-slide>
       </swiper>
     </div>
@@ -185,5 +191,12 @@ export default {
   padding: 0 24px;
   text-align: center;
   @include default-text($text-color--grey-img-description, 13px, 21.58px, -0.02em, normal);
+}
+
+.slide-description {
+  margin: 0;
+  padding: 0 0 16px;
+  text-align: center;
+  @include default-text($text-color--black, 13px, 21.58px, -0.02em, 700);
 }
 </style>

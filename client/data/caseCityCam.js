@@ -81,3 +81,27 @@ export const components = [
     text: 'consolidate all modules into one device.',
   },
 ]
+
+export const sliderOne = [
+  {
+    fileName: 'citycam-slide-one-first',
+    pictureFolder: 'citycam',
+    fileExtension: 'jpg',
+    slideTitle: 'Device’s modules:',
+    alt: 'Device perfection',
+  },
+  {
+    fileName: 'citycam-slide-one-second',
+    pictureFolder: 'citycam',
+    fileExtension: 'jpg',
+    slideTitle: 'Assembled device:',
+    alt: 'Device perfection',
+  },
+  {
+    fileName: 'citycam-slide-one-third',
+    pictureFolder: 'citycam',
+    fileExtension: 'jpg',
+    slideTitle: 'Device inside the case:',
+    alt: 'Device perfection',
+  },
+]
