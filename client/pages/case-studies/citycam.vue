@@ -1,42 +1,44 @@
 <template>
-  <main class="case case--citycam">
-    <CaseHeader
-      :logo="logo"
-      project="citycam"
-      video-name="/videos/citycam-banner.mp4"
-      video-fallback-path="/images/Cases/citycam/png/citycam-banner.png"
-    >
-      <h1
-        slot="title"
-        class="case_header-title"
+  <Feature flag="cityCamCase">
+    <main class="case case--citycam">
+      <CaseHeader
+        :logo="logo"
+        project="citycam"
+        video-name="/videos/citycam-banner.mp4"
+        video-fallback-path="/images/Cases/citycam/png/citycam-banner.png"
       >
-        Better cities <br> with CityCam
-      </h1>
-      <p
-        slot="description"
-        class="case_header-description"
+        <h1
+          slot="title"
+          class="case_header-title"
+        >
+          Better cities <br> with CityCam
+        </h1>
+        <p
+          slot="description"
+          class="case_header-description"
+        >
+          Building hardware and software for energy-efficient <br> and highly autonomous traffic cameras
+        </p>
+      </CaseHeader>
+      <Main />
+      <Footer
+        link="/case-studies/peklo/"
+        class-name="peklo"
       >
-        Building hardware and software for energy-efficient <br> and highly autonomous traffic cameras
-      </p>
-    </CaseHeader>
-    <Main />
-    <Footer
-      link="/case-studies/peklo/"
-      class-name="peklo"
-    >
-      <img
-        slot="icon"
-        v-lazy-load
-        :data-src="require(`@/assets/img/Studies/svg/peklo-footer.svg`)"
-        width="195"
-        height="72"
-        alt="Peklo Tool for search ad campaigns"
-        class="case_logotype-peklo"
-      >
-      Peklo Tool for better
-      ad campaigns
-    </Footer>
-  </main>
+        <img
+          slot="icon"
+          v-lazy-load
+          :data-src="require(`@/assets/img/Studies/svg/peklo-footer.svg`)"
+          width="195"
+          height="72"
+          alt="Peklo Tool for search ad campaigns"
+          class="case_logotype-peklo"
+        >
+        Peklo Tool for better
+        ad campaigns
+      </Footer>
+    </main>
+  </Feature>
 </template>
 
 <script>
