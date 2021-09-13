@@ -20,6 +20,8 @@
         :components="sliderTwo"
         :safari-top-bar="false"
       />
+    </div>
+    <div class="container_regular">
       <TextParagraph class="m-12_bottom">
         The power module adds three important functions to the RPi. First, we now can use LiFePO4 accumulators as the
         power source. Second, we can quickly charge (4A) these accumulators using solar panels at their highest
