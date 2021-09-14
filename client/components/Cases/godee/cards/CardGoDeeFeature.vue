@@ -4,7 +4,7 @@
       v-if="iconName"
       v-lazy-load
       :data-src="require(`@/assets/img/Studies/svg/${iconName}.svg`)"
-      :alt="iconName"
+      :alt="iconName || 'Icon'"
       width="51.94"
       height="51.94"
       class="card-content_icon"
