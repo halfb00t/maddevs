@@ -30,11 +30,13 @@
       <h2 class="case_title_h2 m-12_bottom">
         Software components
       </h2>
-      <TextParagraph class="m-96_bottom media-m-48_bottom">
+      <TextParagraph class="m-12_bottom">
         The project featured several levels of complexity: focusing on hardware engineering, we also needed to take care
         of the software part. We built an application—backend and frontend—to enable end users’ access to traffic
         monitoring. The app’s major strength was its payment system module: we made it easily scalable and capable of
-        effortless integration of new payment systems. <br><br>
+        effortless integration of new payment systems.
+      </TextParagraph>
+      <TextParagraph class="m-96_bottom media-m-48_bottom">
         To ensure smooth and efficient communication between the cameras and their backend, we built an original
         protocol on top of the transmission control protocol (TCP). We made server deployment simple so that it required
         minimal human involvement: the whole project could be deployed in just a few clicks.
