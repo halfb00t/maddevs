@@ -6,6 +6,9 @@
     <Prototype />
     <PowerSupply />
     <DevicePerfecting />
+    <OngoingProgress />
+    <Technologies />
+    <Team />
   </section>
 </template>
 
@@ -17,10 +20,16 @@ import ChallengesAndSolutions from '@/components/Cases/citycam/ChallengesAndSolu
 import Prototype from '@/components/Cases/citycam/Prototype'
 import PowerSupply from '@/components/Cases/citycam/PowerSupply'
 import DevicePerfecting from '@/components/Cases/citycam/DevicePerfecting'
+import OngoingProgress from '@/components/Cases/citycam/OngoingProgress'
+import Technologies from '@/components/Cases/citycam/Technologies'
+import Team from '@/components/Cases/citycam/Team'
 
 export default {
   name: 'Main',
   components: {
+    Team,
+    Technologies,
+    OngoingProgress,
     DevicePerfecting,
     PowerSupply,
     Prototype,
