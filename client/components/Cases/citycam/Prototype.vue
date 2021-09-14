@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container_full background-color-black m-80_top media-m-48_top">
+    <div class="container_full background-color-black media-m-48_top">
       <div class="container_regular">
         <h2 class="case_title_h2 case_subtitle p-48_top m-12_bottom">
           Building a prototype
