@@ -118,4 +118,21 @@ export const casesList = [
       alt: 'Godee logo',
     },
   },
+  {
+    width: 'full',
+    id: 'citycam',
+    link: '/case-studies/citycam/',
+    video: '/videos/citycam-banner.mp4#t=1',
+    subtitle: 'Transportation',
+    title: 'Better cities with CityCam',
+    desc: 'Building hardware and software for energy-efficient and highly autonomous traffic cameras',
+    poster: '/images/Cases/citycam/png/citycam-banner.png',
+    logo: {
+      width: 253,
+      height: 93,
+      folder: 'citycam',
+      file: 'citycam-logo',
+      alt: 'citycam logo',
+    },
+  },
 ]
