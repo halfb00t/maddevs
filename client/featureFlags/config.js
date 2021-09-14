@@ -4,5 +4,5 @@
  * Available environments - [development, staging, production]
  */
 export const config = {
-  blogComments: ['development', 'staging'],
+  cityCamCase: ['development', 'staging'],
 }
