@@ -13,17 +13,26 @@ const directives = {
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-const store = {
-  getters: {
-    showContentLocker: () => true,
-  },
-
-  actions: {
-    changeContentLockerDisplay: () => jest.fn(),
-  },
-}
-
 describe('ContentLocker component', () => {
+  let store
+  let actions
+  let getters
+
+  beforeEach(() => {
+    actions = {
+      changeContentLockerDisplay: () => jest.fn(),
+    }
+
+    getters = {
+      showContentLocker: () => true,
+    }
+
+    store = new Vuex.Store({
+      getters,
+      actions,
+    })
+  })
+
   it('should correctly render', () => {
     const { container } = render(ContentLocker, {
       store,

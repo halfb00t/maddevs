@@ -4,6 +4,7 @@ exports[`ContentLocker component should correctly render 1`] = `
 <div>
   <modalcontentlocker-stub
     id="content-locker"
+    location=""
   />
 </div>
 `;
