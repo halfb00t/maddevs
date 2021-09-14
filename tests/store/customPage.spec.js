@@ -40,7 +40,7 @@ describe('Custom page module mutations', () => {
     lang: 'en-us',
     alternate_languages: [],
     data: {
-      route_prefix: '/route/prefix/',
+      route_prefix: 'route/prefix',
       body: [],
       released: false,
       show_footer: false,
