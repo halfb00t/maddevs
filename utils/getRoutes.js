@@ -39,22 +39,55 @@ const IGNORE_ROUTES = [
   '/mad-devs-ishet-golang-razrabotchika',
 ]
 
-const getRoutes = async () => {
-  const getPosts = async pageUrl => {
-    let posts = []
-    const response = await axios.get(pageUrl)
-    posts = posts.concat(response.data.results)
+export const CUSTOM_PAGE_ROUTES = [
+  {
+    name: 'custom-page-one-slug',
+    path: '/:slug1/:uid',
+    component: '~/pages/_uid.vue',
+  },
+  {
+    name: 'custom-page-two-slugs',
+    path: '/:slug1/:slug2/:uid',
+    component: '~/pages/_uid.vue',
+  },
+  {
+    name: 'custom-page-three-slugs',
+    path: '/:slug1/:slug2/:slug3/:uid',
+    component: '~/pages/_uid.vue',
+  },
+  {
+    name: 'custom-page-four-slugs',
+    path: '/:slug1/:slug2/:slug3/:slug4/:uid',
+    component: '~/pages/_uid.vue',
+  },
+]
 
-    if (response.data.next_page) {
-      posts = posts.concat(await getPosts(response.data.next_page))
-    }
-    return posts
-  }
-  const convertToSlug = text => text.toLowerCase()
+const getPosts = async pageUrl => {
+  let posts = []
+  const response = await axios.get(pageUrl)
+
+  posts = posts.concat(response.data.results)
+  if (response.data.next_page) posts = posts.concat(await getPosts(response.data.next_page))
+  return posts
+}
+
+const convertToSlug = text => {
+  if (typeof text !== 'string') return ''
+  return text.toLowerCase()
     .trim()
     .replace(/[^\w ]+/g, '')
     .replace(/ +/g, '-')
+}
 
+const getRoutePrefix = routePrefix => {
+  if (typeof routePrefix !== 'string' || !routePrefix) return ''
+  let prefix = routePrefix
+  if (prefix.charAt(prefix.length - 1) === '/') prefix = prefix.slice(0, prefix.length - 1)
+  if (prefix.charAt(0) === '/') prefix = prefix.slice(1)
+  return prefix
+}
+
+const getRoutes = async () => {
   // Getting data from prismic
   const prismicData = await axios.get(process.env.NODE_PRISMIC_API)
   const prismicTags = prismicData.data.tags
@@ -83,6 +116,10 @@ const getRoutes = async () => {
   const tagPageRoutes = prismicTags
     .map(tag => `/blog/tag/${convertToSlug(tag)}`)
 
+  const customPageRoutes = prismicPosts
+    .filter(post => post.type === 'custom_page')
+    .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
+
   const routes = [
     '/',
     '/services',
@@ -103,6 +140,7 @@ const getRoutes = async () => {
     ...cuPageRoutes,
     ...authorPageRoutes,
     ...tagPageRoutes,
+    ...customPageRoutes,
   ]
 
   return routes
