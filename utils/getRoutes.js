@@ -39,6 +39,29 @@ const IGNORE_ROUTES = [
   '/mad-devs-ishet-golang-razrabotchika',
 ]
 
+export const CUSTOM_PAGE_ROUTES = [
+  {
+    name: 'custom-page-one-slug',
+    path: '/:slug1/:uid',
+    component: '~/pages/_uid.vue',
+  },
+  {
+    name: 'custom-page-two-slugs',
+    path: '/:slug1/:slug2/:uid',
+    component: '~/pages/_uid.vue',
+  },
+  {
+    name: 'custom-page-three-slugs',
+    path: '/:slug1/:slug2/:slug3/:uid',
+    component: '~/pages/_uid.vue',
+  },
+  {
+    name: 'custom-page-four-slugs',
+    path: '/:slug1/:slug2/:slug3/:slug4/:uid',
+    component: '~/pages/_uid.vue',
+  },
+]
+
 const getPosts = async pageUrl => {
   let posts = []
   const response = await axios.get(pageUrl)
@@ -58,7 +81,6 @@ const convertToSlug = text => {
 
 const getRoutePrefix = routePrefix => {
   if (typeof routePrefix !== 'string' || !routePrefix) return '/'
-
   let prefix = routePrefix
   if (prefix.charAt(prefix.length - 1) !== '/') prefix = `${prefix}/`
   if (prefix.charAt(0) !== '/') prefix = `/${prefix}`
@@ -96,10 +118,7 @@ const getRoutes = async () => {
 
   const customPageRoutes = prismicPosts
     .filter(post => post.type === 'custom_page')
-    .map(page => {
-      const routePrefix = getRoutePrefix(page.data.route_prefix)
-      return `${routePrefix}${page.uid}`
-    })
+    .map(page => `${getRoutePrefix(page.data.route_prefix)}${page.uid}`)
 
   const routes = [
     '/',
@@ -158,24 +177,4 @@ export const getSitemapRoutes = async () => {
   })
 
   return sitemap
-}
-
-export const getCustomPageRoutes = async () => {
-  const routes = []
-  const prismicData = await axios.get(process.env.NODE_PRISMIC_API)
-  const { ref } = prismicData.data.refs[0]
-  const customPages = await getPosts(
-    `${process.env.NODE_PRISMIC_API}/documents/search?ref=${ref}&q=[[at(document.type, "custom_page")]]&format=json`,
-  )
-
-  customPages.forEach(page => {
-    const routePrefix = getRoutePrefix(page.data.route_prefix)
-    const routePrefixSlug = convertToSlug(routePrefix)
-    routes.push({
-      name: routePrefixSlug ? `${routePrefixSlug}-${page.uid}` : page.uid,
-      path: `${routePrefix}:uid`,
-      component: '~/pages/_uid.vue',
-    })
-  })
-  return routes
 }
