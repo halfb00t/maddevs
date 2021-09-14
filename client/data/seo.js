@@ -108,6 +108,12 @@ export const meta = {
     url: 'https://maddevs.io/case-studies/peklo/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Peklo Tool Keyword Grouping Software", "description": "AdTech Case Study: How to build a keyword grouping tool? Read Peklo Tool\'s story of preparing keywords groups to launch effective ads in Google and Yandex.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
+  citycam: {
+    title: 'Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities',
+    description: 'IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.',
+    url: 'https://maddevs.io/case-studies/citycam/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
+  },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
     url: 'https://maddevs.io/blog/',
