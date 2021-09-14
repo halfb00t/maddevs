@@ -82,26 +82,26 @@ export const components = [
   },
 ]
 
-export const sliderOne = [
+export const devicePerfectingSlides = [
   {
     fileName: 'citycam-slide-one-first',
     pictureFolder: 'citycam',
     fileExtension: 'jpg',
-    slideTitle: 'Device’s modules:',
+    title: 'Device’s modules:',
     alt: 'Device perfection',
   },
   {
     fileName: 'citycam-slide-one-second',
     pictureFolder: 'citycam',
     fileExtension: 'jpg',
-    slideTitle: 'Assembled device:',
+    title: 'Assembled device:',
     alt: 'Device perfection',
   },
   {
     fileName: 'citycam-slide-one-third',
     pictureFolder: 'citycam',
     fileExtension: 'jpg',
-    slideTitle: 'Device inside the case:',
+    title: 'Device inside the case:',
     alt: 'Device perfection',
   },
 ]
