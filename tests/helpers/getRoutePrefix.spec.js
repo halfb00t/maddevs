@@ -1,7 +1,7 @@
 import getRoutePrefix from '@/helpers/getRoutePrefix'
 
 describe('getRoutePrefix helper', () => {
-  it('should return empty string with incorrect params', () => {
+  it('should return empty string with incorrect parameter', () => {
     const prefix = getRoutePrefix(123)
     expect(prefix).toBe('')
   })
