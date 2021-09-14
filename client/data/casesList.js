@@ -123,7 +123,7 @@ export const casesList = [
     id: 'citycam',
     link: '/case-studies/citycam/',
     video: '/videos/citycam-banner.mp4#t=1',
-    subtitle: 'Transportation',
+    subtitle: 'Internet of Things',
     title: 'Better cities with CityCam',
     desc: 'Building hardware and software for energy-efficient and highly autonomous traffic cameras',
     poster: '/images/Cases/citycam/png/citycam-banner.png',

@@ -114,7 +114,7 @@ exports[`CasesList component should render correctly 1`] = `
         link="/case-studies/citycam/"
         logo="[object Object]"
         posterlink="/images/Cases/citycam/png/citycam-banner.png"
-        subtitle="Transportation"
+        subtitle="Internet of Things"
         title="Better cities with CityCam"
         titletag="h3"
         videofilename="/videos/citycam-banner.mp4#t=1"
