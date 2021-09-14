@@ -16,7 +16,7 @@ module.exports = class HTagsRule {
         const nextHTagLevel = nextHTag.tagName.toLowerCase().replace('h', '')
         if (currentHTagLevel < nextHTagLevel - 1) {
           if (currentHTagLevel !== nextHTagLevel - 1) {
-            const message = `Tag <h${nextHTagLevel}>${hTags[index + 1].textContent.replace(/(\r\n|\n|\r)/gm, '').trim()}</h${nextHTagLevel}> should be </h${+currentHTagLevel + 1}>\n\n`
+            const message = `Tag <h${nextHTagLevel}>${hTags[index + 1].textContent.replace(/(\r\n|\n|\r)/gm, '').trim()}</h${nextHTagLevel}> should be </h${+currentHTagLevel + 1}>`
             report += message
           }
         }
