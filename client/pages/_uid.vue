@@ -50,7 +50,7 @@ export default {
     if (
       !customPage?.slices
       || (!customPage.released && process.env.ffEnvironment === 'production')
-      || getRoutePrefix(route.path) !== `${customPage.routePrefix}/${params.uid}`
+      || getRoutePrefix(route.path) !== `${customPage.routePrefix ? `${customPage.routePrefix}/` : ''}${params.uid}`
     ) {
       return error({ statusCode: 404, message: 'Page not found' })
     }
