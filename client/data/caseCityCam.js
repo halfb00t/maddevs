@@ -225,6 +225,7 @@ export const technologies = [
     imgAlt: 'Altium Designer',
   },
 ]
+
 export const team = [
   {
     name: 'Belek Abylov',
