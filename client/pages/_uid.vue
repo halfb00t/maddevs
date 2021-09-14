@@ -19,6 +19,21 @@ export default {
 
   mixins: [headerMixin('.start-screen-slice')],
 
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      const { params } = to
+      const { customPage } = vm
+      /**
+       * Prismic saves all previous UID and they both still resolve
+       * This condition checks the current uid and redirects to it
+       * https://community.prismic.io/t/when-does-cache-expire-uid-history/874 - about this issue
+       */
+      if (params.uid !== customPage.uid && typeof customPage.uid === 'string') {
+        next({ path: `/${customPage.routePrefix}/${customPage.uid}/` })
+      }
+    })
+  },
+
   beforeRouteLeave(to, from, next) {
     this.showFooter(true)
     next()
