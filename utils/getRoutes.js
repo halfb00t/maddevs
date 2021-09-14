@@ -80,10 +80,10 @@ const convertToSlug = text => {
 }
 
 const getRoutePrefix = routePrefix => {
-  if (typeof routePrefix !== 'string' || !routePrefix) return '/'
+  if (typeof routePrefix !== 'string' || !routePrefix) return ''
   let prefix = routePrefix
-  if (prefix.charAt(prefix.length - 1) !== '/') prefix = `${prefix}/`
-  if (prefix.charAt(0) !== '/') prefix = `/${prefix}`
+  if (prefix.charAt(prefix.length - 1) === '/') prefix = prefix.slice(0, prefix.length - 1)
+  if (prefix.charAt(0) === '/') prefix = prefix.slice(1)
   return prefix
 }
 
@@ -118,7 +118,7 @@ const getRoutes = async () => {
 
   const customPageRoutes = prismicPosts
     .filter(post => post.type === 'custom_page')
-    .map(page => `${getRoutePrefix(page.data.route_prefix)}${page.uid}`)
+    .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
   const routes = [
     '/',

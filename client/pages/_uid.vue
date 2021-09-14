@@ -35,7 +35,7 @@ export default {
     store.dispatch('showFooter', customPage.showFooter)
     return {
       customPage,
-      openGraphUrl: `${process.env.domain}/${params.uid}/`,
+      openGraphUrl: `${process.env.domain}/${customPage.routePrefix}/${params.uid}/`,
     }
   },
 
