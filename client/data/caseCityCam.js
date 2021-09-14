@@ -106,19 +106,19 @@ export const devicePerfectingSlides = [
   },
 ]
 
-export const sliderTwo = [
+export const ongoingProcessSlides = [
   {
     fileName: 'citycam-slide-two-first',
     pictureFolder: 'citycam',
     fileExtension: 'jpg',
-    slideTitle: 'Assembled power module:',
+    title: 'Assembled power module:',
     alt: 'Ongoing progress',
   },
   {
     fileName: 'citycam-slide-two-second',
     pictureFolder: 'citycam',
     fileExtension: 'jpg',
-    slideTitle: 'Assembled power module with RPi Zero:',
+    title: 'Assembled power module with RPi Zero:',
     alt: 'Ongoing progress',
   },
 ]

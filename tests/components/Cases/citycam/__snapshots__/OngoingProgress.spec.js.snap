@@ -173,7 +173,11 @@ exports[`OngoingProgress component should render correctly 1`] = `
           />
         </div>
       </div>
-       
+    </div>
+     
+    <div
+      class="container_regular"
+    >
       <p
         class="case_paragraph m-12_bottom"
       >
