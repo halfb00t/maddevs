@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListNumberedItem component should render correctly 1`] = `
+<div>
+  <li
+    class="case_list_numbered-plain_item"
+  >
+    <span>
+      Main Bold
+    </span>
+     Main Content
+  </li>
+</div>
+`;

@@ -40,6 +40,7 @@ describe('Custom page module mutations', () => {
     lang: 'en-us',
     alternate_languages: [],
     data: {
+      route_prefix: '/route/prefix/',
       body: [],
       released: false,
       show_footer: false,
@@ -52,6 +53,9 @@ describe('Custom page module mutations', () => {
   it('should correct mutate state after calling SET_CUSTOM_PAGE mutation with prismicResponse', () => {
     const state = defaultState()
     const expectedData = {
+      id: 'id',
+      uid: 'uid',
+      routePrefix: 'route/prefix',
       slices: [],
       released: false,
       showFooter: false,

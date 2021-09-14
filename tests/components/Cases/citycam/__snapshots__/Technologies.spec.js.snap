@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Technologies component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h2
+      class="case_title_h2 m-24_bottom media-m-12_bottom"
+    >
+      
+    Technology stack
+  
+    </h2>
+     
+    <ul
+      class="case_list-technologies m-96_bottom media-m-48_bottom"
+    >
+      <listtechnologiesitem-stub
+        alt="Python"
+        class="case_tech-list-item"
+        imgalt="Python"
+        name="python"
+      />
+      <listtechnologiesitem-stub
+        alt="Django"
+        class="case_tech-list-item"
+        imgalt="Django"
+        name="django"
+      />
+      <listtechnologiesitem-stub
+        alt="MinIO"
+        class="case_tech-list-item"
+        imgalt="MinIO"
+        name="minio"
+      />
+      <listtechnologiesitem-stub
+        alt="Go"
+        class="case_tech-list-item"
+        imgalt="Go"
+        name="go"
+      />
+      <listtechnologiesitem-stub
+        alt="PostgreSQL"
+        class="case_tech-list-item"
+        imgalt="PostgreSQL"
+        name="postgresql"
+      />
+      <listtechnologiesitem-stub
+        alt="React"
+        class="case_tech-list-item"
+        imgalt="React"
+        name="react"
+      />
+      <listtechnologiesitem-stub
+        alt="Celery"
+        class="case_tech-list-item"
+        imgalt="Celery"
+        name="celery"
+      />
+      <listtechnologiesitem-stub
+        alt="Prometheus"
+        class="case_tech-list-item"
+        imgalt="Prometheus"
+        name="prometheus"
+      />
+      <listtechnologiesitem-stub
+        alt="Grafana"
+        class="case_tech-list-item"
+        imgalt="Grafana"
+        name="grafana"
+      />
+      <listtechnologiesitem-stub
+        alt="C"
+        class="case_tech-list-item"
+        imgalt="C"
+        name="c"
+      />
+      <listtechnologiesitem-stub
+        alt="STMicroelectronics"
+        class="case_tech-list-item"
+        imgalt="STMicroelectronics"
+        name="st-microelectronics"
+      />
+      <listtechnologiesitem-stub
+        alt="Texas Instruments"
+        class="case_tech-list-item"
+        imgalt="Texas Instruments"
+        name="texas-instruments"
+      />
+      <listtechnologiesitem-stub
+        alt="ARM"
+        class="case_tech-list-item"
+        imgalt="ARM"
+        name="arm"
+      />
+      <listtechnologiesitem-stub
+        alt="EasyEDA"
+        class="case_tech-list-item"
+        imgalt="EasyEDA"
+        name="easy-eda"
+      />
+      <listtechnologiesitem-stub
+        alt="JLCPCB"
+        class="case_tech-list-item"
+        imgalt="JLCPCB"
+        name="jlcpcb"
+      />
+      <listtechnologiesitem-stub
+        alt="WEBANCH Power Designer"
+        class="case_tech-list-item"
+        imgalt="WEBANCH Power Designer"
+        name="webench-power-designer"
+      />
+      <listtechnologiesitem-stub
+        alt="Corel Draw"
+        class="case_tech-list-item"
+        imgalt="Corel Draw"
+        name="corel-draw"
+      />
+      <listtechnologiesitem-stub
+        alt="Topor"
+        class="case_tech-list-item"
+        imgalt="Topor"
+        name="topor"
+      />
+      <listtechnologiesitem-stub
+        alt="SOLIDWORKS"
+        class="case_tech-list-item"
+        imgalt="SOLIDWORKS"
+        name="solidworks"
+      />
+      <listtechnologiesitem-stub
+        alt="Altium Designer"
+        class="case_tech-list-item"
+        imgalt="Altium Designer"
+        name="altium-designer"
+      />
+    </ul>
+  </section>
+</div>
+`;
