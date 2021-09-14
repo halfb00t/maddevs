@@ -105,3 +105,203 @@ export const devicePerfectingSlides = [
     alt: 'Device perfection',
   },
 ]
+
+export const ongoingProcessSlides = [
+  {
+    fileName: 'citycam-slide-two-first',
+    pictureFolder: 'citycam',
+    fileExtension: 'jpg',
+    title: 'Assembled power module:',
+    alt: 'Ongoing progress',
+  },
+  {
+    fileName: 'citycam-slide-two-second',
+    pictureFolder: 'citycam',
+    fileExtension: 'jpg',
+    title: 'Assembled power module with RPi Zero:',
+    alt: 'Ongoing progress',
+  },
+]
+
+export const technologies = [
+  {
+    name: 'python',
+    alt: 'Python',
+    imgAlt: 'Python',
+  },
+  {
+    name: 'django',
+    alt: 'Django',
+    imgAlt: 'Django',
+  },
+  {
+    name: 'minio',
+    alt: 'MinIO',
+    imgAlt: 'MinIO',
+  },
+  {
+    name: 'go',
+    alt: 'Go',
+    imgAlt: 'Go',
+  },
+  {
+    name: 'postgresql',
+    alt: 'PostgreSQL',
+    imgAlt: 'PostgreSQL',
+  },
+  {
+    name: 'react',
+    alt: 'React',
+    imgAlt: 'React',
+  },
+  {
+    name: 'celery',
+    alt: 'Celery',
+    imgAlt: 'Celery',
+  },
+  {
+    name: 'prometheus',
+    alt: 'Prometheus',
+    imgAlt: 'Prometheus',
+  },
+  {
+    name: 'grafana',
+    alt: 'Grafana',
+    imgAlt: 'Grafana',
+  },
+  {
+    name: 'c',
+    alt: 'C',
+    imgAlt: 'C',
+  },
+  {
+    name: 'st-microelectronics',
+    alt: 'STMicroelectronics',
+    imgAlt: 'STMicroelectronics',
+  },
+  {
+    name: 'texas-instruments',
+    alt: 'Texas Instruments',
+    imgAlt: 'Texas Instruments',
+  },
+  {
+    name: 'arm',
+    alt: 'ARM',
+    imgAlt: 'ARM',
+  },
+  {
+    name: 'easy-eda',
+    alt: 'EasyEDA',
+    imgAlt: 'EasyEDA',
+  },
+  {
+    name: 'jlcpcb',
+    alt: 'JLCPCB',
+    imgAlt: 'JLCPCB',
+  },
+  {
+    name: 'webench-power-designer',
+    alt: 'WEBANCH Power Designer',
+    imgAlt: 'WEBANCH Power Designer',
+  },
+  {
+    name: 'corel-draw',
+    alt: 'Corel Draw',
+    imgAlt: 'Corel Draw',
+  },
+  {
+    name: 'topor',
+    alt: 'Topor',
+    imgAlt: 'Topor',
+  },
+  {
+    name: 'solidworks',
+    alt: 'SOLIDWORKS',
+    imgAlt: 'SOLIDWORKS',
+  },
+  {
+    name: 'altium-designer',
+    alt: 'Altium Designer',
+    imgAlt: 'Altium Designer',
+  },
+]
+
+export const team = [
+  {
+    name: 'Belek Abylov',
+    position: 'Full-Stack Developer',
+    image: {
+      file: 'belek-abylov',
+    },
+  },
+  {
+    name: 'Vlad Andreev',
+    position: 'Delivery Manager',
+    image: {
+      file: 'vlad-andreev',
+    },
+  },
+  {
+    name: 'Kirill Avdeev',
+    position: 'Hardware Engineer',
+    image: {
+      file: 'avdeev',
+    },
+  },
+  {
+    name: 'Aleksandr Edakin',
+    position: 'Software Developer',
+    image: {
+      file: 'aleksandr-edakin',
+    },
+  },
+  {
+    name: 'Maksim Gachevski',
+    position: 'Frontend Developer',
+    image: {
+      file: 'maksim-gachevski',
+    },
+  },
+  {
+    name: 'Gennady Karev',
+    position: 'Full-Stack Developer',
+    image: {
+      file: 'gennady-karev',
+    },
+  },
+  {
+    name: 'Oleg Katkov',
+    position: 'Tech Lead',
+    image: {
+      file: 'oleg-katkov',
+    },
+  },
+  {
+    name: 'Dmitri Kononenko',
+    position: 'Project Manager',
+    image: {
+      file: 'dmitri-kononenko',
+    },
+  },
+  {
+    name: 'Anton Kozlov',
+    position: 'Hardware Engineer',
+    image: {
+      file: 'anton-kozlov',
+    },
+  },
+  {
+    name: 'Andrew Sapozhnikov',
+    position: 'Head of DevOps',
+    image: {
+      file: 'andrew-sapozhnikov',
+    },
+  },
+  {
+    name: 'Gaukhar Taspolatova',
+    position: 'Project Manager',
+    image: {
+      file: 'gaukhar-taspolatova',
+    },
+  },
+]
