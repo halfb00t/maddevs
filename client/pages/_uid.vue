@@ -30,6 +30,8 @@ export default {
        */
       if (params.uid !== customPage.uid && typeof customPage.uid === 'string') {
         next({ path: `/${customPage.routePrefix}/${customPage.uid}/` })
+      } else {
+        next()
       }
     })
   },
