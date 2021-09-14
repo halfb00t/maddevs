@@ -10,6 +10,7 @@ import { mapActions } from 'vuex'
 import SliceZone from 'vue-slicezone'
 import { buildHead } from '@/data/seo'
 import headerMixin from '@/mixins/headerMixin'
+import getRoutePrefix from '@/helpers/getRoutePrefix'
 
 export default {
   components: {
@@ -23,12 +24,17 @@ export default {
     next()
   },
 
-  async asyncData({ error, params, store }) {
+  async asyncData({
+    error, params, store, route,
+  }) {
     await store.dispatch('getCustomPage', params.uid)
     const { customPage } = store?.getters
 
-    if (!customPage?.slices) return error({ statusCode: 404, message: 'Page not found' })
-    if (!customPage.released && process.env.ffEnvironment === 'production') {
+    if (
+      !customPage?.slices
+      || (!customPage.released && process.env.ffEnvironment === 'production')
+      || getRoutePrefix(route.path) !== `${customPage.routePrefix}/${params.uid}`
+    ) {
       return error({ statusCode: 404, message: 'Page not found' })
     }
 
