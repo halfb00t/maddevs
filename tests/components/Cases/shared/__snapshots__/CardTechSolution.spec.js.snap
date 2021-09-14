@@ -6,7 +6,7 @@ exports[`CardTechSolution component should render correctly 1`] = `
     class="case_card card-content background-color-silver"
   >
     <img
-      alt=""
+      alt="Icon"
       class="card-content_icon"
       data-src="img.jpg"
       height="51.94"

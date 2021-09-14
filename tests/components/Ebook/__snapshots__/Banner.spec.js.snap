@@ -14,7 +14,7 @@ exports[`Banner component should render correctly with no data 1`] = `
       <div class="ebook-banner_info-btns">
         <uibutton-stub to="/">
           Download PDF
-          <img width="20" height="20" src="@/assets/img/common/arrow-up-right.svg">
+          <img width="20" height="20" src="@/assets/img/common/arrow-up-right.svg" alt="Arrow">
         </uibutton-stub>
         <nuxtlink-stub to="#read-online-anchor">
           Read it online
