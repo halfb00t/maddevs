@@ -62,16 +62,14 @@
           :slices-type="type"
           class="blog-post__text-container"
         />
-        <Feature flag="blogComments">
-          <div class="blog-post__comments">
-            <Disqus
-              shortname="maddevs-io"
-              :url="`https://maddevs.io/blog/${getPostUid}/`"
-              :identifier="`/blog/${getPostUid}`"
-              lang="en"
-            />
-          </div>
-        </Feature>
+        <div class="blog-post__comments">
+          <Disqus
+            shortname="maddevs-io"
+            :url="`https://maddevs.io/blog/${getPostUid}/`"
+            :identifier="`/blog/${getPostUid}`"
+            lang="en"
+          />
+        </div>
       </div>
     </div>
     <div
@@ -126,7 +124,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import { Disqus } from 'vue-disqus'
-import Feature from '@/featureFlags/Feature'
 import SlicesBlock from '@/components/slices'
 import TableOfContents from '@/components/Blog/Post/TableOfContents'
 import BlogHeader from '@/components/Blog/header/Blog'
@@ -149,7 +146,6 @@ export default {
     CustomerUniversityHeader,
     CustomerUniversityNavigation,
     Disqus,
-    Feature,
   },
 
   mixins: [findPostAuthorMixin],
