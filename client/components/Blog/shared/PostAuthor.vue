@@ -188,7 +188,7 @@ export default {
 
   &__position {
     display: inline;
-    color: $text-color--grey-pale;
+    color: $text-color--grey-matterhorn;
   }
 
   &__date {
