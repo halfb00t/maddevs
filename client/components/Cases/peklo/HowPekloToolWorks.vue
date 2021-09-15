@@ -47,7 +47,7 @@
             :width="card.iconWidth"
             :height="card.iconHeight"
             :data-src="$getMediaFromS3(`/images/Cases/peklo/svg/${card.icon}.svg`)"
-            :alt="card.title"
+            :alt="card.title || 'Image'"
             class="case_card-icon"
           >
         </Card>

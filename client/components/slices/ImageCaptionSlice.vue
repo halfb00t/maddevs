@@ -9,7 +9,7 @@
           v-lazy-load
           :class="{ 'block-img-zoom': zoomEnabled }"
           :data-src="img.url"
-          :alt="img.alt"
+          :alt="img.alt || 'Image'"
           width="632"
           height="170"
           @click="openModal"
@@ -20,7 +20,7 @@
         >
           <img
             :src="img.url"
-            :alt="img.alt"
+            :alt="img.alt || 'Image'"
           >
         </SimpleModal>
       </div>

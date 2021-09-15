@@ -13,7 +13,7 @@
         height="64"
         class="icon-wrapper__icon"
         :data-src="fileName(customer)"
-        :alt="customer"
+        :alt="customer || 'Image'"
         data-testid="customer-icon"
       >
     </div>

@@ -19,7 +19,7 @@
         :folder="pictureFolder"
         :file="fileName"
         :extension="fileExtension"
-        :alt="alt"
+        :alt="alt || 'Image'"
         :lazy="false"
         :class="{ 'card-content_desktop-image': mobileImage }"
         :width="width"

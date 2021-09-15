@@ -21,7 +21,7 @@
             width="143"
             height="64"
             :src="customer.logo.url"
-            :alt="customer.logo.alt"
+            :alt="customer.logo.alt || 'Image'"
           >
         </div>
       </div>

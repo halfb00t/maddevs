@@ -7,7 +7,7 @@
       <img
         v-lazy-load
         :data-src="post.data.featured_image.url"
-        :alt="post.data.featured_image.alt"
+        :alt="post.data.featured_image.alt || 'Feature image'"
         width="400"
         height="217"
       >

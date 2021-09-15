@@ -66,7 +66,7 @@
                     width="42"
                     height="42"
                     :src="require(`@/assets/img/Footer/svg/${messenger.key}.svg`)"
-                    :alt="messenger.label"
+                    :alt="messenger.label || 'Image'"
                   >
                   <p class="mobile-header__messenger-name">{{ messenger.label }}</p>
                 </a>

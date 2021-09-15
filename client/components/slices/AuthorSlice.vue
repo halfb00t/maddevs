@@ -8,7 +8,7 @@
         <img
           v-lazy-load
           :data-src="authorImage.url"
-          :alt="authorImage.alt"
+          :alt="authorImage.alt || 'Image'"
           width="68"
           height="68"
         >
@@ -38,7 +38,7 @@
               <img
                 v-lazy-load
                 :data-src="require(`@/assets/img/AuthorSlice/svg/${network.key}.svg`)"
-                :alt="network.title"
+                :alt="network.title || 'Image'"
                 width="22"
                 height="22"
               >
@@ -67,7 +67,7 @@
             <img
               v-lazy-load
               :data-src="contributor.image.url"
-              :alt="contributor.image.alt"
+              :alt="contributor.image.alt || 'Image'"
               width="28"
               height="28"
             >
@@ -76,7 +76,7 @@
             v-else
             v-lazy-load
             :data-src="contributor.image.url"
-            :alt="contributor.image.alt"
+            :alt="contributor.image.alt || 'Image'"
             width="28"
             height="28"
           >

@@ -7,7 +7,7 @@
           :folder="folder"
           :file="file"
           :extension="extension"
-          :alt="author"
+          :alt="author || 'Image'"
           :width="71"
           :height="71"
         />

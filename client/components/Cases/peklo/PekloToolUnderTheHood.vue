@@ -38,7 +38,7 @@
             <img
               v-lazy-load
               :data-src="$getMediaFromS3(`/images/Cases/peklo/svg/${card.icon}.svg`)"
-              :alt="card.title"
+              :alt="card.title || 'Image'"
               :width="card.iconWidth"
               :height="card.iconHeight"
               :class="`case_card-icon-${card.icon}`"

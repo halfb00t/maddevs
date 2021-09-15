@@ -7,7 +7,7 @@
   >
     <img
       :src="image && image.url"
-      :alt="image && image.alt"
+      :alt="image && image.alt || 'Image'"
       width="1680"
       height="969"
       :style="{

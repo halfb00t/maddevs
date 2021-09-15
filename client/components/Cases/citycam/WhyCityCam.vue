@@ -33,7 +33,7 @@
               :width="396"
               :height="200"
               :file="card.img"
-              :alt="card.title"
+              :alt="card.title || 'Image'"
               folder="citycam"
               extension="png"
             />

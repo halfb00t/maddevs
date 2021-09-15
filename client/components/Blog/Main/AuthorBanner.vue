@@ -5,7 +5,7 @@
         <img
           v-lazy-load
           :data-src="authorImage.url"
-          :alt="authorImage.alt"
+          :alt="authorImage.alt || 'Image'"
           width="165"
           height="165"
         >

@@ -16,7 +16,7 @@
           <UIImage
             :file-name="expert.image"
             :file-name-retina="`${expert.image}@2x`"
-            :alt="expert.alt"
+            :alt="expert.alt || 'Image'"
             width="295"
             height="401"
           />

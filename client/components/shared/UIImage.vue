@@ -13,7 +13,7 @@
       v-lazy-load
       :data-src="[require(`@/assets/img/Home/jpg/experts/${fileName}.jpg`)]"
       :data-srcset="[require(`@/assets/img/Home/jpg/experts/${fileNameRetina}.jpg`) + ' 2x']"
-      :alt="alt"
+      :alt="alt || 'Image'"
       data-testid="test-multi-image"
       :width="width"
       :height="height"
