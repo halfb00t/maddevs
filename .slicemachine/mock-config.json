@@ -422,6 +422,11 @@
     },
     "WeCreateProjectsFor": {},
     "QuickProjectStart": {},
-    "TechnologiesAndTools": {}
+    "TechnologiesAndTools": {
+      "toolsGrid": {
+        "primary": {},
+        "items": {}
+      }
+    }
   }
 }

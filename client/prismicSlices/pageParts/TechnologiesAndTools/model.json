@@ -42,6 +42,34 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "toolsGrid",
+      "name": "Tools grid",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TechnologiesAndTools",
+      "primary": {
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 26,
+              "height": 26
+            },
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {}
     }
   ]
 }

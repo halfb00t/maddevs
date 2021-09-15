@@ -18,9 +18,28 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"technologies_and_tools","items":[],"primary":{"title":[{"type":"heading1","text":"Reintermediate granular architectures","spans":[]}],"description":[{"type":"paragraph","text":"Consectetur fugiat veniam culpa id. Eu et excepteur pariatur.","spans":[]}]},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"technologies_and_tools","items":[],"primary":{"animation":"zoom-in-up","title":"streamline rich models"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
 _DefaultSlice.storyName = 'Default slice'
+
+export const _ToolsGrid = () => ({
+  components: {
+    MyComponent,
+    SliceZone
+  },
+  methods: {
+    resolve() {
+      return MyComponent
+    }
+  },
+  data() {
+    return {
+      mock: {"variation":"toolsGrid","name":"Tools grid","slice_type":"technologies_and_tools","items":[],"primary":{"image":{"dimensions":{"width":26,"height":26},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=26&h=26&fit=crop"},"text":"monetize robust vortals"},"id":"_ToolsGrid"}
+    }
+  },
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_ToolsGrid.storyName = 'Tools grid'
