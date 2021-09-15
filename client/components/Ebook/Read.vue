@@ -69,14 +69,13 @@ export default {
 
   computed: {
     ...mapGetters(['CUPosts']),
+
     posts() {
-      if (this.CUPosts.length) {
-        const posts = [...this.CUPosts]
-        return posts
-          .sort(this.sortedPosts)
-          .filter(({ tags }) => tags && tags.includes('Pricing strategies'))
-      }
-      return []
+      if (!this.CUPosts.length) return []
+      const posts = [...this.CUPosts]
+      return posts
+        .sort(this.sortPosts)
+        .filter(({ tags }) => tags && tags.includes('Pricing strategies'))
     },
   },
 
@@ -86,7 +85,8 @@ export default {
 
   methods: {
     ...mapActions(['getCustomerUniversityPosts']),
-    sortedPosts(a, b) {
+
+    sortPosts(a, b) {
       return (Number(a.data.title[0].text.match(/(\d+)/g)[0])
         - Number((b.data.title[0].text.match(/(\d+)/g)[0])))
     },

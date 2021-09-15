@@ -72,8 +72,8 @@ describe('Read component', () => {
   })
 
   it('sortedCUPosts should return sorted list with CUPosts', () => {
-    const { sortedPosts } = wrapper.vm
-    const sorted = postsList.sort(sortedPosts)
+    const { sortPosts } = wrapper.vm
+    const sorted = postsList.sort(sortPosts)
     expect(sorted).toHaveLength(2)
     expect(sorted[0].data.title[0].text).toEqual('1. title')
     expect(sorted[1].data.title[0].text).toEqual('2. title')
