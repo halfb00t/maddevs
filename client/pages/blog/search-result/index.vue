@@ -24,8 +24,8 @@ export default {
     return buildHead({
       title: 'Mad Devs: Blog search result',
       metaTitle: 'Blog',
-      description: '',
-      url: this.openGraphUrl,
+      description: 'Page for search result',
+      url: 'https://maddevs.io/blog/search-result/?searchBy=Mad/',
       image: 'https://maddevs.io/blog.png',
     })
   },
