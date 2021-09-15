@@ -85,5 +85,10 @@ export default {
   &_lottie {
     max-width: 813px;
   }
+
+  /deep/ &_list-numbered_item {
+    background-color: $bgcolor--grey-cases;
+    transition: 1s;
+  }
 }
 </style>
