@@ -50,7 +50,7 @@
         We made infrastructure deployment simple so that it required minimal human involvement. In fact, you can now
         click a couple dozen buttons, and the whole project is deployed.
       </TextQuote>
-      <TextParagraph class="m-24_bottom media-m-48_bottom">
+      <TextParagraph class="m-96_bottom media-m-48_bottom">
         For the frontend part, we used a PWA: a rather recent technology that makes the project’s website in many ways
         akin to a regular mobile application. PWAs combine the benefits of web apps and websites as they, for example,
         both are indexable by search engines and offer dynamic data access, even when the users are offline.

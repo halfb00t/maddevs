@@ -49,7 +49,8 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "TechnologiesAndTools",
-      "primary": {
+      "primary": {},
+      "items": {
         "image": {
           "config": {
             "label": "Image",
@@ -68,8 +69,7 @@
           },
           "type": "Text"
         }
-      },
-      "items": {}
+      }
     }
   ]
 }

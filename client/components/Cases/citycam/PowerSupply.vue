@@ -26,7 +26,7 @@
       </h2>
 
       <div
-        class="m-48_bottom media-m-24_bottom"
+        class="m-96_bottom media-m-24_bottom"
       >
         <ListNumbered>
           <ListNumberedItem
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div
-      class="container_full background-color-purple-blue p-66-top media-p-48-top m-96_bottom media-m-48_bottom"
+      class="container_full background-color-purple-blue m-96_bottom media-m-48_bottom"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
@@ -52,6 +52,7 @@
       </h3>
       <Lottie
         id="power-supply"
+        class="case_lottie"
         :options="options"
         @animCreated="handleAnimation"
       />
@@ -97,6 +98,9 @@ export default {
 
 <style lang="scss" scoped>
 .case {
+  &_lottie {
+    padding-bottom: 48px;
+  }
   &_subtitle{
     text-align: center;
   }
