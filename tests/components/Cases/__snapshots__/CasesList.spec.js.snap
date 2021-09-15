@@ -106,20 +106,6 @@ exports[`CasesList component should render correctly 1`] = `
         videofilename="/videos/godee-case-main-video.mp4#t=1"
         width="full"
       />
-      <caseslistitem-stub
-        class="cases-list_citycam"
-        data-testid="test-case-card"
-        desc="Building hardware and software for energy-efficient and highly autonomous traffic cameras"
-        item="[object Object]"
-        link="/case-studies/citycam/"
-        logo="[object Object]"
-        posterlink="/images/Cases/citycam/png/citycam-banner.png"
-        subtitle="Internet of Things"
-        title="Better cities with CityCam"
-        titletag="h3"
-        videofilename="/videos/citycam-banner.mp4#t=1"
-        width="full"
-      />
     </section>
      
     <nuxtlink-stub
