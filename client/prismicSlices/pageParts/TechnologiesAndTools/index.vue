@@ -11,7 +11,7 @@
     />
     <ToolsGrid
       v-if="slice.variation !== 'default-slice'"
-      v-bind="slice.primary"
+      v-bind="slice"
       :data-aos="slice.primary.animation"
       :items="slice.items"
       data-testid="tools-grid-variation"
