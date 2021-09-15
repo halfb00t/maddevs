@@ -299,7 +299,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
       </div>
        
       <p
-        class="case_paragraph m-24_bottom media-m-48_bottom"
+        class="case_paragraph m-96_bottom media-m-48_bottom"
       >
         
       For the frontend part, we used a PWA: a rather recent technology that makes the project’s website in many ways

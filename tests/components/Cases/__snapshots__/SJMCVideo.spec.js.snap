@@ -10,7 +10,6 @@ exports[`SJMCVideo component renders correctly 1`] = `
     <!---->
      
     <video
-      autoplay="autoplay"
       class="main-video"
     >
       <source

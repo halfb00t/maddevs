@@ -55,7 +55,7 @@ describe('Custom page module mutations', () => {
     const expectedData = {
       id: 'id',
       uid: 'uid',
-      routePrefix: '/route/prefix/',
+      routePrefix: 'route/prefix',
       slices: [],
       released: false,
       showFooter: false,
