@@ -72,7 +72,9 @@ export default {
     posts() {
       if (this.CUPosts.length) {
         const posts = [...this.CUPosts]
-        return posts.sort(this.sortedPosts)
+        return posts
+          .sort(this.sortedPosts)
+          .filter(({ tags }) => tags && tags.includes('Pricing strategies'))
       }
       return []
     },
