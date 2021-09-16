@@ -22,4 +22,5 @@ jobs:
     - run: npm run generate
     - run: npm run seo-analyze
       env:
+        NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
         CI: true
