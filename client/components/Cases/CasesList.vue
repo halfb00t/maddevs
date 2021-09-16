@@ -71,10 +71,9 @@ export default {
 
   computed: {
     filteredCaseList() {
-      if (!featureFlag('cityCamCase')) {
-        return casesList.filter(caseItem => caseItem.id !== 'citycam')
-      }
-      return casesList
+      if (featureFlag('cityCamCase')) return casesList
+
+      return casesList.filter(caseItem => caseItem.id !== 'citycam')
     },
   },
 
