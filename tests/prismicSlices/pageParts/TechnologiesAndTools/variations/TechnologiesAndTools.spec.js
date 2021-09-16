@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/vue'
 import { categories, technologies } from '@/data/technologiesAndTools'
 import ToolsGridMain from '@/prismicSlices/pageParts/TechnologiesAndTools/variations/TechnologiesAndTools'
+import { getFakePropsByParams } from '../testUtils'
 
 const directives = {
   'lazy-load': () => {},
@@ -10,14 +11,6 @@ const apiData = {
   title: 'Title',
   animation: 'fade-up',
 }
-
-const getProps = params => ({
-  slice: {
-    primary: {
-      ...params,
-    },
-  },
-})
 
 const data = () => ({
   categories,
@@ -29,7 +22,7 @@ describe('ToolsGridMain slice', () => {
     const { container } = render(ToolsGridMain, {
       directives,
       data,
-      props: getProps(apiData),
+      props: getFakePropsByParams(apiData),
     })
 
     expect(screen.getByText(apiData.title)).not.toBeNull()
@@ -42,7 +35,7 @@ describe('ToolsGridMain slice', () => {
   it('should render correctly the title without data', () => {
     const { container } = render(ToolsGridMain, {
       directives,
-      props: getProps({}),
+      props: getFakePropsByParams({}),
       data: () => ({
         categories: [],
         technologies: [],
@@ -60,7 +53,7 @@ describe('ToolsGridMain slice', () => {
     const { html } = render(ToolsGridMain, {
       directives,
       data,
-      props: getProps(apiData),
+      props: getFakePropsByParams(apiData),
     })
 
     const categoryCheckboxes = screen.getAllByTestId('technologies-slice-category')
@@ -74,7 +67,7 @@ describe('ToolsGridMain slice', () => {
     it('should be fade-up value', () => {
       render(ToolsGridMain, {
         directives,
-        props: getProps(apiData),
+        props: getFakePropsByParams(apiData),
       })
 
       expect(screen.getByTestId('technologies-slice-container').getAttribute('data-aos')).toBe(apiData.animation)
@@ -83,7 +76,7 @@ describe('ToolsGridMain slice', () => {
     it('should be null value', () => {
       render(ToolsGridMain, {
         directives,
-        props: getProps({}),
+        props: getFakePropsByParams({}),
       })
 
       expect(screen.getByTestId('technologies-slice-container').getAttribute('data-aos')).toBeNull()

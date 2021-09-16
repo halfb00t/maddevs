@@ -8,7 +8,7 @@
       <div class="tools-slice__grid">
         <div
           v-for="(item, i) in items"
-          :key="`${item}-${i}`"
+          :key="`${item.text}-${i}`"
           class="tools-slice__technology"
           data-testid="tools-slice-technology"
         >

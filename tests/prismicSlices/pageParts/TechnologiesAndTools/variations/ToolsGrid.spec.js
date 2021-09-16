@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/vue'
 import ToolsGrid from '@/prismicSlices/pageParts/TechnologiesAndTools/variations/ToolsGrid'
+import { getFakePropsByParams } from '../testUtils'
 
 const directives = {
   'lazy-load': () => {},
@@ -18,17 +19,9 @@ const items = [
   },
 ]
 
-const getProps = params => ({
-  slice: {
-    primary: {
-      ...params,
-    },
-  },
-})
-
 describe('ToolsGrid slice data-aos animation attribute', () => {
   it('should render correctly with data', () => {
-    const props = getProps(apiData)
+    const props = getFakePropsByParams(apiData)
     props.slice.items = [...items]
 
     const { container } = render(ToolsGrid, {
@@ -43,7 +36,7 @@ describe('ToolsGrid slice data-aos animation attribute', () => {
   it('should render correctly without data', () => {
     const { container } = render(ToolsGrid, {
       directives,
-      props: getProps({}),
+      props: getFakePropsByParams({}),
     })
 
     expect(screen.queryByTestId('tools-slice-technology')).toBeNull()
@@ -53,7 +46,7 @@ describe('ToolsGrid slice data-aos animation attribute', () => {
   it('should be fade-up value', () => {
     render(ToolsGrid, {
       directives,
-      props: getProps(apiData),
+      props: getFakePropsByParams(apiData),
     })
 
     expect(screen.getByTestId('tools-slice-container').getAttribute('data-aos')).toBe(apiData.animation)
@@ -62,7 +55,7 @@ describe('ToolsGrid slice data-aos animation attribute', () => {
   it('should be null value', () => {
     render(ToolsGrid, {
       directives,
-      props: getProps({}),
+      props: getFakePropsByParams({}),
     })
 
     expect(screen.getByTestId('tools-slice-container').getAttribute('data-aos')).toBeNull()

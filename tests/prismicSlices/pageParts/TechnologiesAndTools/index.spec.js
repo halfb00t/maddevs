@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import TechnologiesAndTools from '@/prismicSlices/pageParts/TechnologiesAndTools'
+import { getFakePropsByParams } from './testUtils'
 
 const backgrounds = {
   white: '#ffffff',
@@ -13,17 +14,9 @@ const apiData = {
   animation: 'fade-up',
 }
 
-const getProps = params => ({
-  slice: {
-    primary: {
-      ...params,
-    },
-  },
-})
-
 describe('Technologies and Tools Grid slice', () => {
   it('should correctly render TechnologiesAndTools component', () => {
-    const props = getProps(apiData)
+    const props = getFakePropsByParams(apiData)
     props.slice.variation = 'default-slice'
     const { container } = render(TechnologiesAndTools, {
       props,
@@ -35,7 +28,7 @@ describe('Technologies and Tools Grid slice', () => {
   })
 
   it('should correctly render CardGridWithIcon component', () => {
-    const props = getProps(apiData)
+    const props = getFakePropsByParams(apiData)
     props.slice.variation = 'not-default-slice'
     const { container } = render(TechnologiesAndTools, {
       props,
@@ -49,7 +42,7 @@ describe('Technologies and Tools Grid slice', () => {
   describe('sliceBackground computed method', () => {
     it('should return white hex', () => {
       const wrapper = shallowMount(TechnologiesAndTools, {
-        propsData: getProps({
+        propsData: getFakePropsByParams({
           ...apiData,
           background: 'white',
         }),
@@ -60,7 +53,7 @@ describe('Technologies and Tools Grid slice', () => {
 
     it('should return grey hex', () => {
       const wrapper = shallowMount(TechnologiesAndTools, {
-        propsData: getProps({
+        propsData: getFakePropsByParams({
           ...apiData,
           background: 'grey',
         }),
@@ -71,7 +64,7 @@ describe('Technologies and Tools Grid slice', () => {
 
     it('should return black hex', () => {
       const wrapper = shallowMount(TechnologiesAndTools, {
-        propsData: getProps({
+        propsData: getFakePropsByParams({
           ...apiData,
           background: 'black',
         }),
@@ -82,7 +75,7 @@ describe('Technologies and Tools Grid slice', () => {
 
     it('should return null', () => {
       const wrapper = shallowMount(TechnologiesAndTools, {
-        propsData: getProps({
+        propsData: getFakePropsByParams({
           ...apiData,
           background: 'unknown',
         }),
