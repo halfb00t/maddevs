@@ -8,7 +8,7 @@ exports[`CardResult component should render correctly 1`] = `
     <!---->
      
     <img
-      alt=""
+      alt="Image"
       class="card_icon card_icon_gears-card"
       data-src="img.jpg"
       height="66"

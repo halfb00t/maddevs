@@ -9,6 +9,7 @@ exports[`BenefitCard is a Vue instance 1`] = `
       class="benefit-card__icon-wrapper"
     >
       <img
+        alt="Image"
         class="benefit-card__icon"
         data-src="img.jpg"
         height="32"

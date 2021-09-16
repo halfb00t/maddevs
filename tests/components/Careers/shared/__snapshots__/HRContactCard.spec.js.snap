@@ -35,6 +35,7 @@ exports[`HRContactCard is a Vue instance 1`] = `
           href="mailto:undefined"
         >
           <img
+            alt="Gmail"
             height="17"
             src="@/assets/img/common/gmail.svg"
             width="20"
