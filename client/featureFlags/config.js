@@ -4,5 +4,4 @@
  * Available environments - [development, staging, production]
  */
 export const config = {
-  cityCamCase: ['development', 'staging'],
 }
