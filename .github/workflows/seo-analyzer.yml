@@ -17,10 +17,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env:
-        NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
-        CI: true
     - run: npm install
     - run: npm run build
     - run: npm run generate
+      env:
+        NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
+        CI: true
     - run: npm run seo-analyze
