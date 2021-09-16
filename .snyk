@@ -4,14 +4,17 @@ version: v1.19.0
 ignore:
   SNYK-JS-D3COLOR-1076592:
     - '@maddevs/mad-radiator > vega > vega-functions > d3-color':
-        reason: non used on website
-        expires: '2021-08-20T10:03:40.285Z'
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
     - '@maddevs/mad-radiator > vega > vega-geo > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.285Z'
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
     - '@maddevs/mad-radiator > vega > vega-scale > d3-interpolate > d3-color':
         reason: non used on web
         expires: '2021-08-20T10:03:40.285Z'
+      '@maddevs/mad-radiator > vega > vega-encode > d3-interpolate > d3-color':
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
     - '@maddevs/mad-radiator > vega > vega-encode > d3-interpolate > d3-color':
         reason: non used on web
         expires: '2021-08-20T10:03:40.285Z'
@@ -107,24 +110,110 @@ ignore:
         expires: '2021-09-03T11:25:06.363Z'
   SNYK-JS-GLOBPARENT-1016905:
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack > watchpack > watchpack-chokidar2 > chokidar > glob-parent:
-        reason: None given
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
   SNYK-JS-CSSWHAT-1298035:
     - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
         reason: None given
         expires: '2021-09-03T11:32:14.619Z'
+      slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.130Z'
+    - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.130Z'
   SNYK-JS-LODASHTEMPLATE-1088054:
     - nuxt > @nuxt/core > @nuxt/server > @nuxt/vue-renderer > vue-server-renderer > lodash.template:
-        reason: None given
-        expires: '2021-09-03T11:32:14.619Z'
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
   SNYK-JS-TRIMNEWLINES-1298042:
     - nuxt-sm > sm-commons > validate-npm-package > meow > trim-newlines:
-        reason: None given
-        expires: '2021-09-03T11:32:14.619Z'
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.132Z'
+    - slice-machine-ui > sm-commons > validate-npm-package > meow > trim-newlines:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.132Z'
   SNYK-JS-SWIPER-1088062:
     - swiper:
-        reason: None given
-        expires: '2021-09-03T11:50:43.362Z'
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.128Z'
+  SNYK-JS-ANSIREGEX-1583908:
+    - '@maddevs/mad-radiator > yargs > cliui > string-width > strip-ansi > ansi-regex':
+        reason: Will wait a fix
+        expires: '2021-10-16T07:58:08.126Z'
+    - '@nuxtjs/style-resources > glob-all > yargs > cliui > string-width > strip-ansi > ansi-regex':
+        reason: Will wait a fix
+        expires: '2021-10-16T07:58:08.126Z'
+    - cli-progress > string-width > strip-ansi > ansi-regex:
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.126Z'
+    - nuxt > @nuxt/builder > @nuxt/webpack > webpackbar > wrap-ansi > string-width > strip-ansi > ansi-regex:
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.127Z'
+    - nuxt-sm > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > expect > jest-matcher-utils > jest-diff > pretty-format > ansi-regex:
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.128Z'
+    - nuxt-sm > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > yargs > cliui > string-width > strip-ansi > ansi-regex:
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.128Z'
+    - nuxt > @nuxt/builder > @nuxt/webpack > html-webpack-plugin > pretty-error > renderkid > strip-ansi > ansi-regex:
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.128Z'
+    - nuxt > @nuxt/core > @nuxt/server > @nuxt/vue-renderer > vue-server-renderer > chalk > has-ansi > ansi-regex:
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.129Z'
+    - '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.130Z'
+    - slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.130Z'
+    - nuxt > @nuxt/builder > @nuxt/webpack > @nuxt/friendly-errors-webpack-plugin > string-width > strip-ansi > ansi-regex:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.130Z'
+    - nuxt > @nuxt/cli > boxen > ansi-align > string-width > strip-ansi > ansi-regex:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.130Z'
+    - nuxt-sm > jest > @jest/core > @jest/reporters > string-length > strip-ansi > ansi-regex:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.130Z'
+  SNYK-JS-ANSIHTML-1296849:
+    - nuxt > @nuxt/builder > @nuxt/webpack > webpack-hot-middleware > ansi-html:
+        reason: will wait a fix
+        expires: '2021-10-16T07:58:08.128Z'
+  SNYK-JS-PRISMJS-1585202:
+    - prismjs:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
+  SNYK-JS-SETVALUE-1540541:
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
+    - nuxt > @nuxt/builder > @nuxt/webpack > webpack > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
+    - nuxt > @nuxt/builder > @nuxt/webpack > webpack > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
+    - nuxt-sm > jest > @jest/core > @jest/reporters > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
+    - nuxt-sm > jest > @jest/core > @jest/reporters > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.132Z'
+  SNYK-JS-UTILSEXTEND-560385:
+    - slice-machine-ui > base64-img > ajax-request > utils-extend:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.132Z'
+    - slice-machine-ui > base64-img > ajax-request > file-system > utils-extend:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.132Z'
+    - slice-machine-ui > base64-img > ajax-request > file-system > file-match > utils-extend:
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.132Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   SNYK-JS-LODASH-450202:
