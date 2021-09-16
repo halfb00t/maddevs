@@ -12,7 +12,7 @@
 
     <ToolsGrid
       v-if="slice.variation !== 'default-slice'"
-      v-bind="slice.primary"
+      v-bind="slice"
       :slice="slice"
       data-testid="tools-grid-variation"
     />
