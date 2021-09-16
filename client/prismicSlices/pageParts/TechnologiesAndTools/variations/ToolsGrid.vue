@@ -4,23 +4,21 @@
       class="container"
       :data-aos="animation"
     >
-      <div
-        class="tools-slice__grid"
-      >
+      <div class="tools-slice__grid">
         <div
-          v-for="item in items"
+          v-for="(item, i) in items"
           :key="`${item}-${i}`"
           class="tools-slice__technology"
           data-testid="tools-slice-technology"
         >
-          <prismic-image
+          <img
             v-lazy-load
             :data-src="`${item.image.url}`"
             :alt="`${item.text}`"
             width="26"
             height="26"
             :field="item.image"
-          />
+          >
           <span>{{ item.text }}</span>
         </div>
       </div>
@@ -50,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 .tools-slice {
+  padding-top: 54px;
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -65,6 +65,7 @@ export default {
   }
 
   &__technology {
+    width: 100%;
     height: 90px;
     display: flex;
     flex-direction: column;

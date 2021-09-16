@@ -13,7 +13,6 @@
     <ToolsGrid
       v-if="slice.variation !== 'default-slice'"
       v-bind="slice.primary"
-      :data-aos="slice.primary.animation"
       :slice="slice"
       data-testid="tools-grid-variation"
     />
