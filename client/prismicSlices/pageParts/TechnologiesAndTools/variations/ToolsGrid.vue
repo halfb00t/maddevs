@@ -3,6 +3,7 @@
     <div
       class="container"
       :data-aos="animation"
+      data-testid="tools-slice-container"
     >
       <div class="tools-slice__grid">
         <div
