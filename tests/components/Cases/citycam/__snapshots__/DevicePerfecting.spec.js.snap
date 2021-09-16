@@ -37,7 +37,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
     </div>
      
     <div
-      class="container_middle m-96_bottom media-m-48_bottom slider"
+      class="container_middle case_swiper m-96_bottom media-m-48_bottom"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >

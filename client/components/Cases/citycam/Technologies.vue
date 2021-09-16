@@ -36,12 +36,30 @@ export default {
 
 <style lang="scss" scoped>
 .case {
-  &_tech-list-item::v-deep p {
-    font-size: 12px;
-  }
-  @media screen and (max-width: 768px) {
-    &_tech-list-item::v-deep p {
-      font-size: 8px;
+  &_tech-list-item::v-deep {
+    p {
+      font-size: 12px;
+    }
+
+    .django {
+      width: 57px;
+    }
+
+    @media screen and (max-width: 768px) {
+      p {
+        font-size: 8px;
+      }
+      .tech{
+        &-texas-instruments,
+        &-altium-designer{
+          white-space: normal;
+          line-height: 7.5px;
+        }
+      }
+
+      .django {
+        width: 30px;
+      }
     }
   }
 }

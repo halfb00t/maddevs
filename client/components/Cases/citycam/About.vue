@@ -1,6 +1,6 @@
 <template>
   <section>
-    <section class="container_regular m-48_top media-m-24_top m-24_bottom media-m-48_bottom">
+    <section class="container_regular m-48_top media-m-24_top m-48_bottom media-m-24_bottom">
       <TextParagraph>
         Keeping up with the technological evolution, Mad Devs undertook the development of a new-generation
         intersection monitoring system for a company called CityCam. The system’s purpose is to let anyone
@@ -10,11 +10,10 @@
         application with frontend and backend.
       </TextParagraph>
     </section>
-    <section class="container_full background-color-gray-light m-72_bottom media-m-24_bottom">
+    <section class="container_regular m-72_bottom media-m-48_bottom">
       <Lottie
         id="about-citycam"
         :options="options"
-        class="case_lottie"
         @animCreated="handleAnimation"
       />
     </section>
@@ -41,28 +40,3 @@ export default {
   })],
 }
 </script>
-
-<style scoped lang="scss">
-.case {
-  &_lottie {
-    max-width: 764px;
-    height: 368px;
-    position: relative;
-    padding: 13px 0 14px;
-
-    @media screen and (max-width: 768px) {
-      padding: 35px 0;
-    }
-
-    @media screen and (max-width: 576px) {
-      max-width: 230px;
-      padding: 20px 0;
-      left: 16px;
-    }
-  }
-}
-
-.text-center {
-  text-align: center;
-}
-</style>

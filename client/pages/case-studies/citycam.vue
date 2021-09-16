@@ -138,6 +138,9 @@ export default {
 
   &_title-peklo {
     margin-bottom: 51px;
+    @media screen and (max-width: 500px) {
+      max-width: 400px;
+    }
     @media screen and (max-width: 430px) {
       max-width: 190px;
     }
@@ -145,9 +148,8 @@ export default {
 
   @media screen and (max-width: 768px) {
     &_logotype-peklo {
-      width: 135px;
-      height: 55px;
-      margin-bottom: 21px;
+      width: 180px;
+      height: 65px;
     }
 
     &_title-peklo {
