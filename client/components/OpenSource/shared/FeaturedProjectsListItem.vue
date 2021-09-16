@@ -11,7 +11,7 @@
           :data-src="$getMediaFromS3(`/images/OpenSource/svg/${logo.name}.svg`)"
           width="62"
           height="62"
-          :alt="logo.alt"
+          :alt="logo.alt || 'Image'"
         >
         <h3>{{ title }}</h3>
         <p>{{ description }}</p>

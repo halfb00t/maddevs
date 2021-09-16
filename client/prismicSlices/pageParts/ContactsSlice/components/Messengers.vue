@@ -14,7 +14,7 @@
           :src="require(`@/assets/img/Footer/svg/${messenger.key}.svg`)"
           width="42"
           height="42"
-          :alt="messenger.label"
+          :alt="messenger.label || 'Image'"
           class="contacts-slice-messengers__item-icon"
         >
         <p class="contacts-slice-messengers__item-name">{{ messenger.label }}</p>

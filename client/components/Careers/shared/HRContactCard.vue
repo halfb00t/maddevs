@@ -18,6 +18,7 @@
             src="@/assets/img/common/gmail.svg"
             width="20"
             height="17"
+            alt="Gmail"
           >
           <span>{{ mailCV }}</span>
         </a>

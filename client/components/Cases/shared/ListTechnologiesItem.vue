@@ -4,7 +4,7 @@
       v-if="name"
       v-lazy-load
       :data-src="require(`@/assets/img/Home/svg/technologies/${name}.svg`)"
-      :alt="imgAlt || alt"
+      :alt="imgAlt || alt || 'Image'"
       width="40"
       height="40"
       class="case_technologies-item__tech-icon"

@@ -20,7 +20,7 @@
             <div class="card-item__content">
               <img
                 :src="item.icon && item.icon.url"
-                :alt="item.icon && item.icon.alt"
+                :alt="item.icon && item.icon.alt || 'Image'"
                 :width="item.icon && item.icon.dimensions && item.icon.dimensions.width"
                 :height="item.icon && item.icon.dimensions && item.icon.dimensions.height"
                 class="card-item__logo"

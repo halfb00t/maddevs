@@ -18,7 +18,7 @@ exports[`CardThematicArea component should render correctly 1`] = `
       class="card_image-wrapper"
     >
       <picture-stub
-        alt=""
+        alt="Image"
         extension="png"
         file="null-desktop"
         folder="itc"
@@ -31,7 +31,7 @@ exports[`CardThematicArea component should render correctly 1`] = `
       class="card_image-wrapper-mobile"
     >
       <picture-stub
-        alt=""
+        alt="Image"
         extension="png"
         file="null-mobile"
         folder="itc"

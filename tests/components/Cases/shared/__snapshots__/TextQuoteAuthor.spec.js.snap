@@ -19,7 +19,7 @@ exports[`TextQuoteAuthor component should render correctly 1`] = `
         class="case_blockquote-author__photo m-auto"
       >
         <picture-stub
-          alt=""
+          alt="Image"
           extension=""
           file=""
           folder=""

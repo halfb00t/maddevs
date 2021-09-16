@@ -63,6 +63,7 @@ exports[`featured post component is a Vue instance 1`] = `
           to="/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
         >
           <img
+            alt="Image"
             data-src="https://images.prismic.io/superpupertest/e746f4e6-ce33-47b7-b828-5f315fea2bbb_1_bmF_K9TNqtHpHzUUiI_y5Q.jpeg?auto=compress,format"
             height="380"
             width="700"

@@ -35,7 +35,7 @@
           >
             <img
               :src="require(`@/assets/img/Home/flags/${country}.svg`)"
-              :alt="country"
+              :alt="country || 'Image'"
               width="32"
               height="32"
             >

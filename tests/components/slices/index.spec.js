@@ -347,7 +347,7 @@ describe('Post component copyAnchorLink', () => {
       url: '',
       alt: '',
     }
-    const imageHtml = '<p class=" block-img"><img src="" alt="" copyright=""></p>'
+    const imageHtml = '<p class=" block-img"><img src="" alt="Image" copyright=""></p>'
     const result = wrapper.vm.htmlSerializer('image', element, null, ['Blog post title'])
     expect(toOneLine(result)).toStrictEqual(toOneLine(imageHtml))
   })

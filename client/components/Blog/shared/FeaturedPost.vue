@@ -43,7 +43,7 @@
           <img
             v-lazy-load
             :data-src="post.data.featured_image.url"
-            :alt="post.data.featured_image.alt"
+            :alt="post.data.featured_image.alt || 'Image'"
             :width="post.data.featured_image.dimensions.width"
             :height="post.data.featured_image.dimensions.height"
           >

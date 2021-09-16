@@ -7,7 +7,7 @@
       <Picture
         v-if="safariTopBar"
         :file="safariTopBarImage"
-        :alt="safariTopBarAlt"
+        :alt="safariTopBarAlt || 'Image'"
         folder="common"
         extension="jpg"
       />
@@ -27,7 +27,7 @@
             :folder="element.pictureFolder"
             :file="element.fileName"
             :extension="element.fileExtension"
-            :alt="element.alt"
+            :alt="element.alt || 'Image'"
             :lazy="false"
           />
           <p
@@ -58,7 +58,7 @@
           :folder="element.pictureFolder"
           :file="element.fileName"
           :extension="element.fileExtension"
-          :alt="element.alt"
+          :alt="element.alt || 'Image'"
         />
       </swiper-slide>
     </swiper>

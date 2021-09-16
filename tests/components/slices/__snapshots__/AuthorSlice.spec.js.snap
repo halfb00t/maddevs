@@ -12,7 +12,7 @@ exports[`AuthorSlice component should render correctly 1`] = `
         class="author-slice__image"
       >
         <img
-          alt=""
+          alt="Image"
           data-src=""
           height="68"
           width="68"
@@ -92,6 +92,7 @@ exports[`AuthorSlice component should render correctly 1`] = `
           data-testid="test-contributors"
         >
           <img
+            alt="Image"
             data-src="some-url"
             height="28"
             width="28"

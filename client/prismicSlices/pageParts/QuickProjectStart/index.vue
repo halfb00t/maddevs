@@ -26,7 +26,7 @@
             <img
               v-lazy-load
               :data-src="require(`@/assets/img/Home/svg/qickProjectIcons/${colorTheme}/${step.name}.svg`)"
-              :alt="step.name"
+              :alt="step.name || 'Image'"
               width="52"
               height="73"
               class="project-start__main-icon"

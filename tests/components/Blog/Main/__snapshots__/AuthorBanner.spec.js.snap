@@ -12,7 +12,7 @@ exports[`AuthorBanner component should render correctly 1`] = `
         class="current-author__image"
       >
         <img
-          alt=""
+          alt="Image"
           data-src=""
           height="165"
           width="165"

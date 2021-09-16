@@ -15,7 +15,7 @@
         >
           <img
             :src="expert.image.url"
-            :alt="expert.image.alt"
+            :alt="expert.image.alt || 'Image'"
             width="295"
             height="401"
             class="meet-our-experts__expert-item-img"

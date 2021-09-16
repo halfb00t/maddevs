@@ -19,7 +19,7 @@
           :description="useСase.description"
           :file-name="useСase.fileName"
           :file-extension="useСase.fileExtension"
-          :alt="useСase.alt"
+          :alt="useСase.alt || 'Image'"
           :class-list="useСase.classList"
           picture-folder="nambafood"
         />

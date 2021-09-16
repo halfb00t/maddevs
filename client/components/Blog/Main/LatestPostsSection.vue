@@ -20,7 +20,7 @@
                 width="390"
                 height="516"
                 :data-src="post.banner.url"
-                :alt="post.id"
+                :alt="post.id || 'Image'"
               >
             </a>
             <PostCard

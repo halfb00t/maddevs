@@ -25,7 +25,7 @@
     "test:staging": "node ./jest && node ./jest/utils/sendCoverageToSlack.js",
     "test:e2e": "cypress run",
     "generate:coverage-badges": "node ./jest/utils/generateCoverageBadges.js -output './client/static'",
-    "seo-analyze": "npm run generate && node ./SEOAnalyzer/index.js",
+    "seo-analyze": "node ./SEOAnalyzer/index.js",
     "slicemachine": "start-slicemachine --port 9999",
     "storybook": "nuxt storybook",
     "build-storybook": "nuxt storybook build"
