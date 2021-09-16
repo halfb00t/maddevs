@@ -1,8 +1,5 @@
 <template>
-  <button
-    :class="`customer-university__btn customer-university__btn--${size}`"
-    @click="showAll = true"
-  >
+  <button :class="`customer-university__btn customer-university__btn--${size}`">
     {{ label }}
   </button>
 </template>
@@ -23,8 +20,8 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.customer-university{
-  &__btn{
+.customer-university {
+  &__btn {
     @include font('Inter', 16px, 400);
     font-style: normal;
     line-height: 26px;
@@ -34,19 +31,23 @@ export default {
     border: 1px solid $border-color--grey-pale;
     background-color: transparent;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       color: $text-color--white-primary;
       background: $button-bgcolor--red;
       border: 1px solid $border-color--red;
     }
+
+    &--md {
+      height: 48px;
+      margin-top: 48px;
+    }
+
+    &--lg {
+      height: 70px;
+      margin-top: 72px;
+    }
   }
-  &__btn--md{
-    height: 48px;
-    margin-top: 48px;
-  }
-  &__btn--lg{
-    height: 70px;
-    margin-top: 72px;
-  }
+
 }
 </style>

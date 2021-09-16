@@ -157,73 +157,92 @@ export default {
   letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
+
 .customer-university {
   background-color: $bgcolor--black-oil;
   padding: 88px 0 98px;
-  &__rows{
+
+  &__rows {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
   }
-  &__columns{
+
+  &__columns {
     width: 100%;
-    .customer-university__featured-post{
+
+    .customer-university__featured-post {
       width: 90%;
     }
   }
+
   a {
     text-decoration: none;
   }
-  &__text{
+
+  &__text {
     @include font('Inter', 32px, 400);
     line-height: 137%;
     letter-spacing: -0.013em;
     color: $text-color--white-primary;
+
+    &--yellow {
+      color: $text-color--yellow;
+    }
+
+    &--margin {
+      margin: 50px 0 96px 0;
+    }
   }
-  &__text--yellow{
-    color: $text-color--yellow;
-  }
-  &__text--margin{
-    margin: 50px 0 96px 0;
-  }
-  &__hr{
+
+  &__hr {
     border: 1px solid #28282A;
-  }
-  &__hr--margin{
-    margin:96px 0;
+
+    &--margin {
+      margin: 96px 0;
+    }
   }
 }
-.mad-community{
-  &__posts-section{
+
+.mad-community {
+  &__posts-section {
     margin-top: 128px;
-    .customer-university__featured-post{
+
+    .customer-university__featured-post {
       margin-bottom: 48px;
     }
   }
-  &__posts-grid{
+
+  &__posts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
   }
 }
+
 @media screen and (max-width: 1024px) {
   .customer-university {
     padding: 35px 0 69px;
-    &__rows{
+
+    &__rows {
       grid-template-columns: 1fr;
     }
-    &__columns{
-      .customer-university__featured-post{
+
+    &__columns {
+      .customer-university__featured-post {
         width: 100%;
       }
     }
-    &__text{
+
+    &__text {
       @include font('Inter', 28px, 400);
       line-height: 157%;
+
+      &--margin {
+        margin: 50px 0 72px 0;
+      }
     }
-    &__text--margin{
-      margin: 50px 0 72px 0;
-    }
+
     &__title {
       font-size: 50px;
       line-height: 101%;
@@ -231,36 +250,41 @@ export default {
       font-feature-settings: 'ss02' on;
       margin-bottom: 38px;
     }
-    &__hr{
+
+    &__hr {
       border: 1px solid #28282A;
-      margin:32px 0 72px 0;
-    }
-    &__hr--margin{
-      margin:32px 0 72px 0;
+      margin: 32px 0 72px 0;
+
+      &--margin {
+        margin: 32px 0 72px 0;
+      }
     }
   }
-  .mad-community{
-    &__posts-section{
+  .mad-community {
+    &__posts-section {
       margin-top: 72px;
     }
-    &__posts-grid{
+
+    &__posts-grid {
       grid-template-columns: 1fr;
       grid-gap: 32px;
     }
   }
 }
+
 @media screen and (max-width: 768px) {
-  .customer-university{
-    &__text{
+  .customer-university {
+    &__text {
       @include font('Inter', 21px, 400);
       line-height: 143%;
-    }
-    &__text--margin{
-      margin: 24px 0 72px 0;
+
+      &--margin {
+        margin: 24px 0 72px 0;
+      }
     }
   }
-  .mad-community{
-    &__posts-section{
+  .mad-community {
+    &__posts-section {
       margin-top: 48px;
     }
   }
