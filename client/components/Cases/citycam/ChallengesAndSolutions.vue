@@ -11,7 +11,7 @@
         the user app and the customer’s website. The general flow of the system went like this:
       </TextParagraph>
       <div
-        class="m-24_bottom"
+        class="m-48_bottom media-m-24_bottom"
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
