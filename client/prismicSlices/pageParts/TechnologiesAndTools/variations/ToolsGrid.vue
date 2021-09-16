@@ -2,21 +2,26 @@
   <section class="tools-slice">
     <div
       class="container"
+      :data-aos="animation"
     >
-      <div class="tools-slice__container">
+      <div
+        class="tools-slice__grid"
+      >
         <div
           v-for="item in items"
-          :key="item.text"
-          class="tools-slice__item"
+          :key="`${item}-${i}`"
+          class="tools-slice__technology"
+          data-testid="tools-slice-technology"
         >
-          <img
+          <prismic-image
             v-lazy-load
-            :src="`${item.image.url}`"
-            :alt="item.text"
+            :data-src="`${item.image.url}`"
+            :alt="`${item.text}`"
             width="26"
             height="26"
-          >
-          <span class="tools-slice__span">{{ item.text }}</span>
+            :field="item.image"
+          />
+          <span>{{ item.text }}</span>
         </div>
       </div>
     </div>
@@ -28,41 +33,68 @@ export default {
   name: 'ToolsGrid',
 
   props: {
-    items: {
-      type: Array,
-      default: () => ([]),
+    slice: {
+      type: Object,
+      default: () => ({}),
     },
+  },
+
+  data() {
+    return {
+      items: this.slice?.items,
+      animation: this.slice?.primary?.animation,
+    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .tools-slice {
+  &__grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1px 1px;
+
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(9, 1fr);
     }
+
     @media screen and (max-width: 568px) {
       grid-template-columns: repeat(6, 1fr);
     }
+  }
 
-    &__item {
-      width: 100%;
-      height: 90px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      transition: opacity 0.2s linear;
+  &__technology {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.2s linear;
+    background: #26261F;
+
+    @media screen and (max-width: 976px) {
+      height: 74px;
     }
 
-    &__span {
-      font-family: "Inter", sans-serif;
-      font-size: 11px;
-      font-weight: 400;
+    @media screen and (max-width: 668px) {
+      height: 54px;
+      justify-content: flex-end;
+    }
+
+    img {
+      width: 26px;
+      height: 26px;
+
+      @media screen and (max-width: 976px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    span {
+      @include font('Inter', 11px, 400);
       white-space: nowrap;
       line-height: 13px;
       color: rgba(255, 255, 255, 0.25);
@@ -73,6 +105,40 @@ export default {
       text-overflow: ellipsis;
       text-align: center;
       overflow: hidden;
+
+      @media screen and (max-width: 1370px) {
+        max-width: 60px;
+      }
+
+      @media screen and (max-width: 1090px) {
+        max-width: 40px;
+      }
+
+      @media screen and (max-width: 976px) {
+        font-size: 8px;
+        line-height: 13px;
+        margin-top: 11px;
+        max-width: 65px;
+      }
+
+      @media screen and (max-width: 850px) {
+        max-width: 45px;
+      }
+
+      @media screen and (max-width: 668px) {
+        margin-top: 9px;
+        margin-bottom: 3px;
+        max-width: 25px;
+      }
+
+      @media screen and (max-width: 576px) {
+        max-width: 50px;
+      }
+
+      @media screen and (max-width: 420px) {
+        max-width: 30px;
+      }
     }
+  }
 }
 </style>

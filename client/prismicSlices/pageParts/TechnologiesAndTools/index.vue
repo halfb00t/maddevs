@@ -14,7 +14,7 @@
       v-if="slice.variation !== 'default-slice'"
       v-bind="slice.primary"
       :data-aos="slice.primary.animation"
-      :items="slice.items"
+      :slice="slice"
       data-testid="tools-grid-variation"
     />
   </section>
