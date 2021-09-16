@@ -9,6 +9,7 @@
       :data-aos="slice.primary.animation"
       data-testid="technologies-grid-variation"
     />
+
     <ToolsGrid
       v-if="slice.variation !== 'default-slice'"
       v-bind="slice.primary"
@@ -25,7 +26,7 @@ import ToolsGrid from './variations/ToolsGrid'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
-  name: 'CardGridMain',
+  name: 'ToolsGridMain',
   components: {
     TechnologiesAndTools,
     ToolsGrid,
