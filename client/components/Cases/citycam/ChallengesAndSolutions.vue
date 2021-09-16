@@ -89,6 +89,9 @@ export default {
   /deep/ &_list-numbered_item {
     background-color: $bgcolor--grey-cases;
     transition: 1s;
+    @media screen and (max-width: 768px) {
+      background-color: $bgcolor--grey-cases;
+    }
   }
 }
 </style>
