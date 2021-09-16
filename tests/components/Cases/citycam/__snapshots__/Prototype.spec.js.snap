@@ -4,7 +4,7 @@ exports[`Prototype component should render correctly 1`] = `
 <div>
   <section>
     <div
-      class="container_full background-color-black media-m-48_top"
+      class="container_full background-color-black"
     >
       <div
         class="container_regular"
