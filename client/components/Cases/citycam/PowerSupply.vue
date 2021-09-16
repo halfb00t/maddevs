@@ -47,9 +47,9 @@
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
-      <h3 class="case_title_h3 case_subtitle p-48_top m-42_bottom media-m-24_bottom">
+      <h2 class="case_title_h2 case_subtitle p-48_top m-42_bottom media-m-24_bottom">
         Board tracing
-      </h3>
+      </h2>
       <Lottie
         id="power-supply"
         class="case_lottie"
