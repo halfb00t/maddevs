@@ -195,8 +195,11 @@ export default {
 
 .slide-description {
   margin: 0;
-  padding: 0 0 16px;
+  padding: 10px 0 8px;
   text-align: center;
   @include default-text($text-color--black, 13px, 21.58px, -0.02em, 700);
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+  }
 }
 </style>
