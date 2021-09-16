@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container_regular media-background-color-gray-lightened">
-      <h2 class="case_title_h2 p-56_top media-p-48_top m-16_bottom media-m-12_bottom">
+      <h2 class="case_title_h2 media-p-48_top m-16_bottom media-m-12_bottom">
         Challenges & solutions
       </h2>
       <TextParagraph class="m-16_bottom media-m-24_bottom">
@@ -23,7 +23,7 @@
         />
       </div>
       <div
-        class="p-118_bottom media-p-48_bottom"
+        class="p-80_bottom media-p-32_bottom"
       >
         <ListNumberedBox>
           <ListNumberedItemBox
@@ -84,6 +84,11 @@ export default {
 .case {
   &_lottie {
     max-width: 813px;
+  }
+
+  /deep/ &_list-numbered_item {
+    background-color: $bgcolor--grey-cases;
+    transition: 1s;
   }
 }
 </style>

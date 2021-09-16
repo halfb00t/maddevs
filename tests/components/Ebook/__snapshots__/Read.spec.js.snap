@@ -6,10 +6,7 @@ exports[`Read component should render correctly with no data 1`] = `
     <h2 class="ebook-read__title">
       Read articles online
     </h2>
-    <div class="ebook-read__cards">
-      <readcard-stub post="[object Object]"></readcard-stub>
-      <readcard-stub post="[object Object]"></readcard-stub>
-    </div>
+    <div class="ebook-read__cards"></div>
     <div class="ebook-read__form"><img width="110" height="155" data-src="@/assets/img/Ebook/book.svg" alt="Pricing strategies" class="ebook-read__form-img">
       <h2 class="ebook-read__form-title">
         Get your copy of “Custom Software Development: Pricing Strategies”

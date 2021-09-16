@@ -23,7 +23,7 @@
         >
           <Picture
             :width="1026"
-            :height="525"
+            :height="490"
             :folder="element.pictureFolder"
             :file="element.fileName"
             :extension="element.fileExtension"
