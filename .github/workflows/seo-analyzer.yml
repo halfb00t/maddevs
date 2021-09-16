@@ -1,4 +1,4 @@
-name: Linter CI
+name: Seo Analyzer CI
 
 on: [pull_request]
 
@@ -18,6 +18,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run lint
+    - run: npm run build
+    - run: npm run generate
+    - run: npm run seo-analyze
       env:
         CI: true
