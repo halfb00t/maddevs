@@ -7,8 +7,8 @@
       >
         <img
           v-lazy-load
-          :data-src="post.featured_image.url"
-          :alt="post.featured_image.alt"
+          :data-src="featured_image.url"
+          :alt="featured_image.alt"
           width="560"
           height="347"
         >
@@ -17,14 +17,15 @@
         :to="`/customer-university/${postId}/`"
         class="featured-post__info"
       >
-        <span class="featured-post__date">{{ post.date }}</span>
+        <span class="featured-post__date">{{ date }}</span>
         <h2 class="featured-post__title">
-          {{ $prismic.asText(post.title).replace(/^[0-9]*\. /, '') }}
+          {{ $prismic.asText(title).replace(/^[0-9]*\. /, '') }}
         </h2>
         <p class="featured-post__text">
           {{ firstParagraph }}
         </p>
         <PostAuthor
+          v-if="author"
           v-bind="author"
           theme="dark"
         />
@@ -43,9 +44,24 @@ export default {
   },
 
   props: {
-    post: {
+    featured_image: {
       type: Object,
       default: () => ({}),
+    },
+
+    title: {
+      type: Array,
+      default: () => ([]),
+    },
+
+    body: {
+      type: Array,
+      default: () => ([]),
+    },
+
+    date: {
+      type: String,
+      default: '',
     },
 
     postId: {
@@ -66,9 +82,9 @@ export default {
 
   computed: {
     firstParagraph() {
-      const { body: slices } = this.post
+      const paragraphList = this.body
       const WORDS_LIMIT_IN_PARAGRAPH = 150
-      return getFirstParagraph(slices, WORDS_LIMIT_IN_PARAGRAPH)
+      return getFirstParagraph(paragraphList, WORDS_LIMIT_IN_PARAGRAPH)
     },
   },
 }

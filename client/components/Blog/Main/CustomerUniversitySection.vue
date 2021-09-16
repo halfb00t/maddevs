@@ -28,7 +28,7 @@
           <div>
             <CustomerUniversityCard
               v-if="featuredCUPost"
-              :post="featuredCUPost"
+              v-bind="featuredCUPost"
               :post-id="customerContent.featured_cu.uid"
               :author="findAuthor(featuredCUPost.post_author.id, allAuthors)"
             />
@@ -36,7 +36,8 @@
             <CustomerUniversityListItem
               v-for="(cluster, i) in clustersToShow"
               :key="i"
-              :cluster="cluster"
+              v-bind="cluster.primary"
+              :items="cluster.items"
             />
             <CustomerUniversityButton
               label=" See more"
@@ -55,14 +56,15 @@
           <div>
             <CustomerUniversityCard
               v-if="featuredCUPost"
-              :post="featuredCUPost"
+              v-bind="featuredCUPost"
               :post-id="customerContent.featured_cu.uid"
               :author="findAuthor(featuredCUPost.post_author.id, allAuthors)"
             />
             <CustomerUniversityListItem
               v-for="(cluster, i) in clustersToShow"
               :key="i"
-              :cluster="cluster"
+              v-bind="cluster.primary"
+              :items="cluster.items"
             />
           </div>
         </div>
@@ -81,17 +83,17 @@
       <div class="mad-community__posts-section">
         <CustomerUniversityCard
           v-if="featuredCUPost"
-          :post="featuredCUPost"
+          v-bind="featuredCUPost"
           :post-id="customerContent.featured_cu.uid"
           :author="findAuthor(featuredCUPost.post_author.id, allAuthors)"
           direction="row"
-          class-name="mb-48px"
         />
         <div class="mad-community__posts-grid">
           <CustomerUniversityListItem
             v-for="(cluster, i) in clustersToShow"
             :key="i"
-            :cluster="cluster"
+            v-bind="cluster.primary"
+            :items="cluster.items"
           />
         </div>
       </div>

@@ -7,18 +7,18 @@
       <div class="single-cluster__image">
         <img
           v-lazy-load
-          :data-src="cluster.primary.cover_image.url"
-          :alt="cluster.primary.cover_image.alt"
+          :data-src="cover_image.url"
+          :alt="cover_image.alt"
           width="295"
           height="160"
         >
       </div>
       <div class="single-cluster__info">
         <h3 class="single-cluster__title">
-          {{ $prismic.asText(cluster.primary.cluster_name) }}
+          {{ $prismic.asText(cluster_name) }}
         </h3>
         <div class="single-cluster__description">
-          {{ $prismic.asText(cluster.primary.description) }}
+          {{ $prismic.asText(description) }}
         </div>
       </div>
     </div>
@@ -29,16 +29,32 @@
 export default {
   name: 'CustomerUniversityListItem',
   props: {
-    cluster: {
+    cluster_name: {
+      type: Array,
+      default: () => ([]),
+    },
+
+    description: {
+      type: Array,
+      default: () => ([]),
+    },
+
+    cover_image: {
       type: Object,
       default: () => ({}),
     },
+
+    items: {
+      type: Array,
+      default: () => ([]),
+    },
+
   },
 
   computed: {
     getPostLink() {
-      if (!this.cluster.items.length) return ''
-      return `/customer-university/${this.cluster.items[0].cu_post.uid}/`
+      if (!this.items.length) return ''
+      return `/customer-university/${this.items[0].cu_post.uid}/`
     },
   },
 }
