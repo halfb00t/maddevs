@@ -4,104 +4,104 @@ version: v1.22.1
 ignore:
   SNYK-JS-D3COLOR-1076592:
     - '@maddevs/mad-radiator > vega > vega-functions > d3-color':
-        reason: ' will wait a fix'
-        expires: '2021-10-16T07:58:08.131Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
     - '@maddevs/mad-radiator > vega > vega-geo > d3-color':
-        reason: ' will wait a fix'
-        expires: '2021-10-16T07:58:08.131Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
     - '@maddevs/mad-radiator > vega > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.285Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
     - '@maddevs/mad-radiator > vega > vega-encode > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.285Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
     - '@maddevs/mad-radiator > vega > vega-parser > vega-functions > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.285Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
     - '@maddevs/mad-radiator > vega > vega-view > vega-functions > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.285Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
     - '@maddevs/mad-radiator > vega > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.285Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-encode > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-scenegraph > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-functions > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-parser > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-wordcloud > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-encode > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-scenegraph > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-functions > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-parser > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-wordcloud > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-functions > vega-scenegraph > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-label > vega-scenegraph > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-view > vega-scenegraph > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.967Z'
     - '@maddevs/mad-radiator > vega > vega-view-transforms > vega-scenegraph > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-parser > vega-functions > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-view > vega-functions > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-functions > vega-scenegraph > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-label > vega-scenegraph > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-view > vega-scenegraph > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-view-transforms > vega-scenegraph > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-parser > vega-functions > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-view > vega-functions > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-parser > vega-functions > vega-scenegraph > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-view > vega-functions > vega-scenegraph > vega-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-parser > vega-functions > vega-scenegraph > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.968Z'
     - '@maddevs/mad-radiator > vega > vega-view > vega-functions > vega-scenegraph > vega-scale > d3-scale > d3-interpolate > d3-color':
-        reason: non used on web
-        expires: '2021-08-20T10:03:40.286Z'
+        reason: None given
+        expires: '2021-10-17T07:21:01.969Z'
     - '@maddevs/mad-radiator > vega > vega-geo > d3-color':
         reason: None given
         expires: '2021-09-03T11:25:06.363Z'
@@ -117,14 +117,17 @@ ignore:
         reason: None given
         expires: '2021-09-03T11:32:14.619Z'
       slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
     - slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
+    - slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
   SNYK-JS-LODASHTEMPLATE-1088054:
     - nuxt > @nuxt/core > @nuxt/server > @nuxt/vue-renderer > vue-server-renderer > lodash.template:
         reason: ' will wait a fix'
@@ -135,87 +138,159 @@ ignore:
         expires: '2021-10-16T07:58:08.132Z'
       slice-machine-ui > sm-commons > validate-npm-package > meow > trim-newlines:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.970Z'
     - slice-machine-ui > sm-commons > validate-npm-package > meow > trim-newlines:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
+    - slice-machine-ui > sm-commons > validate-npm-package > meow > trim-newlines:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
   SNYK-JS-SWIPER-1088062:
     - swiper:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
   SNYK-JS-ANSIREGEX-1583908:
     - '@maddevs/mad-radiator > yargs > cliui > string-width > strip-ansi > ansi-regex':
         reason: Will wait a fix
         expires: '2021-10-16T07:58:08.126Z'
-      '@mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex':
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > yargs > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.964Z'
     - '@nuxtjs/style-resources > glob-all > yargs > cliui > string-width > strip-ansi > ansi-regex':
         reason: Will wait a fix
         expires: '2021-10-16T07:58:08.126Z'
-      '@mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > yargs > cliui > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.964Z'
     - cli-progress > string-width > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.126Z'
-      canvas > @mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > yargs > cliui > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.964Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > webpackbar > wrap-ansi > string-width > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.127Z'
-      '@mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > yargs > cliui > wrap-ansi > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - nuxt-sm > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > expect > jest-matcher-utils > jest-diff > pretty-format > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.128Z'
-      canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > yargs > cliui > wrap-ansi > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - nuxt-sm > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > yargs > cliui > string-width > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.128Z'
-      canvas > @mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+      '@nuxtjs/style-resources > glob-all > yargs > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > html-webpack-plugin > pretty-error > renderkid > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.128Z'
-      slice-machine-ui > yargs > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+      '@nuxtjs/style-resources > glob-all > yargs > cliui > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - nuxt > @nuxt/core > @nuxt/server > @nuxt/vue-renderer > vue-server-renderer > chalk > has-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.129Z'
-      slice-machine-ui > yargs > cliui > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+      '@nuxtjs/style-resources > glob-all > yargs > cliui > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.130Z'
-      slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+      '@nuxtjs/style-resources > glob-all > yargs > cliui > wrap-ansi > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
-      slice-machine-ui > yargs > cliui > wrap-ansi > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+      '@nuxtjs/style-resources > glob-all > yargs > cliui > wrap-ansi > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > @nuxt/friendly-errors-webpack-plugin > string-width > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
-      slice-machine-ui > yargs > cliui > wrap-ansi > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+      cli-progress > string-width > strip-ansi > ansi-regex:
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - nuxt > @nuxt/cli > boxen > ansi-align > string-width > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
+      '@maddevs/mad-radiator > sharp > prebuild-install > npmlog > gauge > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
     - nuxt-sm > jest > @jest/core > @jest/reporters > string-length > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
+      '@maddevs/mad-radiator > sharp > prebuild-install > npmlog > gauge > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
+    - '@mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex':
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.965Z'
+    - '@mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > sharp > prebuild-install > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - canvas > @mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - '@mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+      '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+      slice-machine-ui > yargs > string-width > strip-ansi > ansi-regex:
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - canvas > @mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+      slice-machine-ui > yargs > cliui > strip-ansi > ansi-regex:
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - slice-machine-ui > yargs > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+      slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - slice-machine-ui > yargs > cliui > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+      slice-machine-ui > yargs > cliui > wrap-ansi > strip-ansi > ansi-regex:
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+      slice-machine-ui > yargs > cliui > wrap-ansi > string-width > strip-ansi > ansi-regex:
+        reason: 'y'
+        expires: '2021-10-17T07:21:01.966Z'
+    - slice-machine-ui > yargs > cliui > wrap-ansi > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > yargs > cliui > wrap-ansi > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
+        reason: None given
+        expires: '2021-10-17T06:40:22.241Z'
   SNYK-JS-ANSIHTML-1296849:
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack-hot-middleware > ansi-html:
         reason: will wait a fix
@@ -223,54 +298,72 @@ ignore:
   SNYK-JS-PRISMJS-1585202:
     - prismjs:
         reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+        expires: '2021-10-17T07:21:01.969Z'
   SNYK-JS-SETVALUE-1540541:
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
       slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
       slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
       slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
       slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - nuxt-sm > jest > @jest/core > @jest/reporters > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
       slice-machine-ui > copy-template-dir > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - nuxt-sm > jest > @jest/core > @jest/reporters > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
       slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.969Z'
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2021-10-17T07:21:01.969Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
         expires: '2021-10-17T06:01:34.365Z'
   SNYK-JS-UTILSEXTEND-560385:
@@ -279,23 +372,32 @@ ignore:
         expires: '2021-10-16T07:58:08.132Z'
       slice-machine-ui > base64-img > file-system > utils-extend:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.970Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > utils-extend:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
       slice-machine-ui > base64-img > ajax-request > utils-extend:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.970Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > file-match > utils-extend:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
       slice-machine-ui > base64-img > file-system > file-match > utils-extend:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.970Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > utils-extend:
         reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
+        expires: '2021-10-17T07:21:01.970Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > file-match > utils-extend:
+        reason: None given
+        expires: '2021-10-17T07:21:01.970Z'
+    - slice-machine-ui > base64-img > file-system > utils-extend:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
+    - slice-machine-ui > base64-img > ajax-request > utils-extend:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
+    - slice-machine-ui > base64-img > file-system > file-match > utils-extend:
         reason: None given
         expires: '2021-10-17T06:01:34.365Z'
 # patches apply the minimum changes required to fix a vulnerability
