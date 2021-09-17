@@ -1,8 +1,6 @@
 <template>
   <div class="default-layout">
-    <div v-if="showHeaderV2">
-      Header V2
-    </div>
+    <HeaderV2 v-if="showHeaderV2" />
     <Header v-else />
     <Nuxt class="main-section" />
     <ClientOnly>
@@ -14,6 +12,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import HeaderV2 from '@/components/core/HeaderV2'
 import Header from '@/components/core/Header/Header'
 import Footer from '@/components/core/Footer/Footer'
 import initIntercom from '@/helpers/intercom'
@@ -24,6 +23,7 @@ export default {
   name: 'Default',
   components: {
     CookieNotice,
+    HeaderV2,
     Header,
     Footer,
   },
