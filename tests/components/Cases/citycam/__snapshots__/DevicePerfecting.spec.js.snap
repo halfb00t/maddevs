@@ -25,7 +25,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
       </p>
        
       <p
-        class="case_paragraph m-48_bottom media-m-24-bottom"
+        class="case_paragraph m-48_bottom media-m-24_bottom"
       >
         
       Another major strength of the revised device was the use of solar energy. We added an adjustable solar charge
