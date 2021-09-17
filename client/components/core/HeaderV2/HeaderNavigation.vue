@@ -1,7 +1,7 @@
 <template>
   <ul class="header-navigation">
     <li
-      v-for="{ name, label } in navigation"
+      v-for="{ name, label } in filteredNavigation"
       :key="name"
       class="header-navigation__item"
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
@@ -59,15 +59,16 @@ export default {
     },
   },
 
-  data() {
-    return {
-      navigation,
-    }
-  },
-
   computed: {
     ...mapGetters(['headerContent']),
 
+    filteredNavigation() {
+      return navigation.filter(({ name }) => Boolean(
+        this.headerContent[name]
+        && this.headerContent[name].menus
+        && this.headerContent[name].menus.length,
+      ))
+    },
   },
 
   methods: {
