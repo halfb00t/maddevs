@@ -4,10 +4,7 @@
       v-for="{ name, label } in navigation"
       :key="name"
       class="header-navigation__item"
-      :class="[
-        `header-navigation__item-${name}`,
-        activeNavigation === name ? 'header-navigation__item--is-hover' : null,
-      ]"
+      :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
     >
       <span @mouseenter="setNavigation(name)">
         {{ label }}
@@ -70,11 +67,17 @@ export default {
 
   computed: {
     ...mapGetters(['headerContent']),
+
   },
 
   methods: {
     setNavigation(navigationName) {
       this.$emit('changedNavigation', navigationName)
+    },
+
+    getIsHoverClass(navigationName) {
+      if (this.activeNavigation === navigationName) return 'header-navigation__item--is-hover'
+      return null
     },
   },
 }
