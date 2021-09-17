@@ -24,7 +24,7 @@
             <nav class="header__navigation">
               <HeaderNavigation
                 :active-navigation="activeNavigation"
-                @changeNavigation="setNavigation"
+                @changedNavigation="setNavigation"
               />
             </nav>
           </div>
@@ -206,10 +206,6 @@ export default {
   methods: {
     ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
 
-    goToTopPage() {
-      window.scrollTo(0, 0)
-    },
-
     setNavigation(navigationName) {
       this.activeNavigation = navigationName
     },
@@ -310,12 +306,13 @@ export default {
 
   &__container {
     @media screen and (max-width: 1012px) {
-      padding: 0 25px;
+      padding: 0 10px 0 25px;
       max-width: 100%;
     }
   }
 
   &__content {
+    z-index: 3;
     position: relative;
     width: 100%;
     height: 63px;
@@ -351,9 +348,14 @@ export default {
     @media screen and (max-width: 1012px) {
       transform: translateX(0);
       margin-left: 0;
-      padding-top: 18px;
+      padding-top: 22px;
       width: 28px;
       height: 49px;
+    }
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 

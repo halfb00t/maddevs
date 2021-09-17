@@ -151,6 +151,7 @@ export default {
       uid: documentUID,
     }) {
       const linkType = link_type.toLowerCase()
+
       if (linkType === 'web') {
         if (url.includes(process.env.domain)) {
           return {
@@ -165,6 +166,7 @@ export default {
           url,
         }
       }
+
       if (
         linkType === 'document'
         && (documentType === 'post' || documentType === 'customer_university')
@@ -176,6 +178,7 @@ export default {
           url: this.getPostPath(documentType, documentUID),
         }
       }
+
       if (linkType === 'media') {
         return {
           isExternalLink: true,
@@ -183,6 +186,7 @@ export default {
           url,
         }
       }
+
       return {
         isExternalLink: false,
         target: null,

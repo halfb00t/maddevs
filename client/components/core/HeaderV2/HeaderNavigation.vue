@@ -74,7 +74,7 @@ export default {
 
   methods: {
     setNavigation(navigationName) {
-      this.$emit('changeNavigation', navigationName)
+      this.$emit('changedNavigation', navigationName)
     },
   },
 }
