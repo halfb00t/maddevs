@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`СustomerUniversityTextCard component should render correctly with data 1`] = `
+<div>
+  <div
+    class="customer-university-text-card"
+  >
+    <h3
+      class="customer-university-text-card__title"
+    >
+      
+    Сustomer University title
+  
+    </h3>
+     
+    <p
+      class="customer-university-text-card__description"
+    >
+      
+    Сustomer University description
+  
+    </p>
+  </div>
+</div>
+`;
+
+exports[`СustomerUniversityTextCard component should render correctly without data 1`] = `
+<div>
+  <div
+    class="customer-university-text-card"
+  >
+    <h3
+      class="customer-university-text-card__title"
+    >
+      
+    
+  
+    </h3>
+     
+    <p
+      class="customer-university-text-card__description"
+    >
+      
+    
+  
+    </p>
+  </div>
+</div>
+`;
