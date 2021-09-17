@@ -1,78 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StartScreen slice should render correctly with data 1`] = `
+exports[`StartScreen slice should correctly render CardGrid component 1`] = `
 <div>
   <section
-    class="start-screen-slice"
-    data-testid="start-screen-slice"
-    id="transparent-header-area"
+    class="card-grid-main"
+    style="background-color: rgb(17, 18, 19);"
   >
-    <img
-      alt="alt"
-      class="start-screen-slice__image"
-      data-testid="start-screen-slice__image"
-      height="969"
-      src="url"
-      style="opacity: 0.3; background-color: rgb(17, 18, 19);"
-      width="1680"
-    />
-     
-    <div
-      class="container"
+    <section
+      class="start-screen-slice"
+      data-testid="start-screen-variation"
+      id="transparent-header-area"
+      primary="[object Object]"
+      variation="default-slice"
     >
+      <img
+        alt="Image"
+        class="start-screen-slice__image"
+        data-testid="start-screen-slice__image"
+        height="969"
+        style="background-color: rgb(17, 18, 19);"
+        width="1680"
+      />
+       
       <div
-        class="start-screen-slice__content"
-        style="opacity: 1;"
+        class="container"
       >
-        <h1
-          class="start-screen-slice__title"
-          data-testid="start-screen-slice__title"
+        <div
+          class="start-screen-slice__content"
+          style="opacity: 1;"
         >
-          StartScreen title
-        </h1>
-         
-        <p
-          class="start-screen-slice__subtitle"
-          data-testid="start-screen-slice__subtitle"
-        >
-          StartScreen subtitle
-        </p>
+          <h1
+            class="start-screen-slice__title"
+            data-testid="start-screen-slice__title"
+          />
+           
+          <!---->
+        </div>
       </div>
-    </div>
+    </section>
+     
+    <!---->
   </section>
 </div>
 `;
 
-exports[`StartScreen slice should render correctly without data 1`] = `
+exports[`StartScreen slice should correctly render CardGridWithIcon component 1`] = `
 <div>
   <section
-    class="start-screen-slice"
-    data-testid="start-screen-slice"
-    id="transparent-header-area"
+    class="card-grid-main"
+    style="background-color: rgb(17, 18, 19);"
   >
-    <img
-      alt="Image"
-      class="start-screen-slice__image"
-      data-testid="start-screen-slice__image"
-      height="969"
-      width="1680"
-    />
+    <!---->
      
-    <div
-      class="container"
+    <section
+      class="description-slice"
+      data-testid="description-variation"
+      primary="[object Object]"
+      variation="cardGridWithIcon"
     >
       <div
-        class="start-screen-slice__content"
-        style="opacity: 1;"
+        class="container"
       >
-        <h1
-          class="start-screen-slice__title"
-          data-testid="start-screen-slice__title"
-        />
-         
-        <!---->
+        <div
+          class="description-slice__content"
+        >
+          <h1
+            class="description-slice__title"
+            data-testid="description-slice__title"
+          />
+           
+          <!---->
+        </div>
       </div>
-    </div>
+    </section>
   </section>
 </div>
 `;

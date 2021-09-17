@@ -3,38 +3,42 @@
 exports[`StartScreen slice should render correctly with data 1`] = `
 <div>
   <section
-    class="card-grid-main"
-    style="background-color: rgb(17, 18, 19);"
+    class="start-screen-slice"
+    data-testid="start-screen-slice"
+    id="transparent-header-area"
   >
-    <!---->
+    <img
+      alt="alt"
+      class="start-screen-slice__image"
+      data-testid="start-screen-slice__image"
+      height="969"
+      src="url"
+      style="opacity: 0.3; background-color: rgb(17, 18, 19);"
+      width="1680"
+    />
      
-    <section
-      class="description-slice"
-      data-testid="description-variation"
-      primary="[object Object]"
+    <div
+      class="container"
     >
       <div
-        class="container"
+        class="start-screen-slice__content"
+        style="opacity: 1;"
       >
-        <div
-          class="description-slice__content"
+        <h1
+          class="start-screen-slice__title"
+          data-testid="start-screen-slice__title"
         >
-          <h1
-            class="description-slice__title"
-            data-testid="description-slice__title"
-          >
-            StartScreen title
-          </h1>
-           
-          <p
-            class="description-slice__subtitle"
-            data-testid="description-slice__subtitle"
-          >
-            StartScreen subtitle
-          </p>
-        </div>
+          StartScreen title
+        </h1>
+         
+        <p
+          class="start-screen-slice__subtitle"
+          data-testid="start-screen-slice__subtitle"
+        >
+          StartScreen subtitle
+        </p>
       </div>
-    </section>
+    </div>
   </section>
 </div>
 `;

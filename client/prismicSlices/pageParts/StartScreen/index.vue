@@ -24,7 +24,7 @@ import Description from './variations/Description'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
-  name: 'CardGridMain',
+  name: 'StartScreenMain',
   components: {
     StartScreen,
     Description,
