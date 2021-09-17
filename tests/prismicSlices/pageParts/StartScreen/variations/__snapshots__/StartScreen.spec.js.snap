@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartScreen slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="card-grid-main"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <!---->
+     
+    <section
+      class="description-slice"
+      data-testid="description-variation"
+      primary="[object Object]"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="description-slice__content"
+        >
+          <h1
+            class="description-slice__title"
+            data-testid="description-slice__title"
+          >
+            StartScreen title
+          </h1>
+           
+          <p
+            class="description-slice__subtitle"
+            data-testid="description-slice__subtitle"
+          >
+            StartScreen subtitle
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+`;
+
+exports[`StartScreen slice should render correctly without data 1`] = `
+<div>
+  <section
+    class="start-screen-slice"
+    data-testid="start-screen-slice"
+    id="transparent-header-area"
+  >
+    <img
+      alt="Image"
+      class="start-screen-slice__image"
+      data-testid="start-screen-slice__image"
+      height="969"
+      width="1680"
+    />
+     
+    <div
+      class="container"
+    >
+      <div
+        class="start-screen-slice__content"
+        style="opacity: 1;"
+      >
+        <h1
+          class="start-screen-slice__title"
+          data-testid="start-screen-slice__title"
+        />
+         
+        <!---->
+      </div>
+    </div>
+  </section>
+</div>
+`;

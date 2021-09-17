@@ -50,9 +50,7 @@ export default {
     slice: {
       type: Object,
       required: true,
-      default() {
-        return {}
-      },
+      default: () => ({}),
     },
   },
 

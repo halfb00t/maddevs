@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Description slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="description-slice"
+    data-testid="description-slice"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="description-slice__content"
+      >
+        <h1
+          class="description-slice__title"
+          data-testid="description-slice__title"
+        >
+          Description title
+        </h1>
+         
+        <p
+          class="description-slice__subtitle"
+          data-testid="description-slice__subtitle"
+        >
+          Description subtitle
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Description slice should render correctly without data 1`] = `
+<div>
+  <section
+    class="description-slice"
+    data-testid="description-slice"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="description-slice__content"
+      >
+        <h1
+          class="description-slice__title"
+          data-testid="description-slice__title"
+        />
+         
+        <!---->
+      </div>
+    </div>
+  </section>
+</div>
+`;
