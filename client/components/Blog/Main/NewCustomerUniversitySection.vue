@@ -129,7 +129,7 @@ export default {
 
   data() {
     return {
-      showAll: false,
+      isShowAllClusters: false,
     }
   },
 
@@ -140,7 +140,7 @@ export default {
     },
 
     clustersToShow() {
-      return this.showAll ? this.clusters : this.clusters.slice(0, 3)
+      return this.isShowAllClusters ? this.clusters : this.clusters.slice(0, 3)
     },
   },
 
