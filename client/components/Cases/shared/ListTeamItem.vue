@@ -4,7 +4,7 @@
       :folder="image.folder || 'common'"
       :file="image.file"
       :extension="image.extension || 'png'"
-      :alt="name"
+      :alt="name || 'Image'"
       :width="50"
       :height="50"
       :background="true"

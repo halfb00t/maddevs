@@ -39,7 +39,7 @@
           height="490"
           class="cta-banner-slice__image"
           :src="image && image.url"
-          :alt="image && image.alt"
+          :alt="image && image.alt || 'Image'"
         >
         <div class="cta-banner-slice__man">
           <h3 class="cta-banner-slice__man-name">

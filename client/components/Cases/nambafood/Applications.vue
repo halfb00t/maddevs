@@ -21,6 +21,7 @@
           :data-src="$getMediaFromS3('/images/Cases/nambafood/png/iphone-video-preview.png')"
           class="case_phone-ios-image"
           data-testid="test-case_phone-ios-image"
+          alt="Video preview"
         >
         <video
           v-else

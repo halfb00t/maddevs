@@ -36,6 +36,7 @@ exports[`CtaBannerSlice component should render correctly 1`] = `
         </div>
          
         <img
+          alt="Image"
           class="cta-banner-slice__image"
           height="490"
           width="395"

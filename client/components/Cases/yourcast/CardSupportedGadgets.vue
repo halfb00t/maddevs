@@ -13,7 +13,7 @@
         :width="width"
         :height="height"
         :file="`${file}-card`"
-        :alt="alt"
+        :alt="alt || 'Image'"
         folder="yourcast"
         extension="png"
         class="card-content_picture"
@@ -29,7 +29,7 @@
         :width="width"
         :height="height"
         :file="file"
-        :alt="alt"
+        :alt="alt || 'Image'"
         folder="yourcast"
         extension="png"
       />

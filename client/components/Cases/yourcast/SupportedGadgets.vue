@@ -18,7 +18,7 @@
           :width="gadget.width"
           :height="gadget.height"
           :file="gadget.file"
-          :alt="gadget.alt"
+          :alt="gadget.alt || 'Image'"
         />
       </Card>
     </div>

@@ -63,6 +63,7 @@ exports[`CustomerUniversitySection component should render correctly 1`] = `
               to="/customer-university/uid/"
             >
               <img
+                alt="Image"
                 data-src=""
                 height="347"
                 width="560"

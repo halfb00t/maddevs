@@ -27,7 +27,7 @@
           :folder="pictureFolder"
           :file="fileName"
           :extension="fileExtension"
-          :alt="alt"
+          :alt="alt || 'Image'"
           :lazy="false"
         />
       </div>
@@ -39,7 +39,7 @@
           :folder="pictureFolder"
           :file="`${fileName}-mobile`"
           :extension="fileExtension"
-          :alt="alt"
+          :alt="alt || 'Image'"
           :lazy="false"
         />
       </div>

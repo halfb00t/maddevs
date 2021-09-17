@@ -11,7 +11,7 @@
         the user app and the customer’s website. The general flow of the system went like this:
       </TextParagraph>
       <div
-        class="m-24_bottom"
+        class="m-48_bottom media-m-24_bottom"
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
@@ -84,6 +84,14 @@ export default {
 .case {
   &_lottie {
     max-width: 813px;
+  }
+
+  /deep/ &_list-numbered_item {
+    background-color: $bgcolor--grey-cases;
+    transition: 1s;
+    @media screen and (max-width: 768px) {
+      background-color: $bgcolor--grey-cases;
+    }
   }
 }
 </style>

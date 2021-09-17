@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerUniversityTitle component should render correctly with data 1`] = `
+<div>
+  <h2
+    class="customer-university-title"
+  >
+    <span>
+      
+    Customer
+  
+    </span>
+     
+    <br />
+    
+  University
+
+  </h2>
+</div>
+`;
+
+exports[`CustomerUniversityTitle component should render correctly without data 1`] = `
+<div>
+  <h2
+    class="customer-university-title"
+  >
+    <span>
+      
+    
+  
+    </span>
+     
+    <br />
+    
+  
+
+  </h2>
+</div>
+`;

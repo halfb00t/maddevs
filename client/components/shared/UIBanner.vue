@@ -13,7 +13,7 @@
       height="490"
       class="cta-banner__image"
       :data-src="image"
-      :alt="imageAltText"
+      :alt="imageAltText || 'Image'"
     >
     <div class="cta-banner__man">
       {{ manName }}

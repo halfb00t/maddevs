@@ -7,7 +7,7 @@
       <Picture
         v-if="safariTopBar"
         :file="safariTopBarImage"
-        :alt="safariTopBarAlt"
+        :alt="safariTopBarAlt || 'Image'"
         folder="common"
         extension="jpg"
       />
@@ -23,11 +23,11 @@
         >
           <Picture
             :width="1026"
-            :height="525"
+            :height="490"
             :folder="element.pictureFolder"
             :file="element.fileName"
             :extension="element.fileExtension"
-            :alt="element.alt"
+            :alt="element.alt || 'Image'"
             :lazy="false"
           />
           <p
@@ -58,7 +58,7 @@
           :folder="element.pictureFolder"
           :file="element.fileName"
           :extension="element.fileExtension"
-          :alt="element.alt"
+          :alt="element.alt || 'Image'"
         />
       </swiper-slide>
     </swiper>
@@ -195,8 +195,11 @@ export default {
 
 .slide-description {
   margin: 0;
-  padding: 0 0 16px;
+  padding: 10px 0 8px;
   text-align: center;
   @include default-text($text-color--black, 13px, 21.58px, -0.02em, 700);
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+  }
 }
 </style>

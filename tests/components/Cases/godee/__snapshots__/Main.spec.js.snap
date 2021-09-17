@@ -470,6 +470,7 @@ exports[`Main component should render correctly 1`] = `
               hover="true"
             >
               <img
+                alt="Image for compare"
                 height="578.47"
                 slot="first"
                 src="/images/Cases/godee/png/application-before.png"
@@ -477,6 +478,7 @@ exports[`Main component should render correctly 1`] = `
               />
                
               <img
+                alt="Image for compare"
                 height="578.47"
                 slot="second"
                 src="/images/Cases/godee/png/application-after.png"

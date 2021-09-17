@@ -44,7 +44,7 @@
         :width="logo.width"
         :height="logo.height"
         :src="$getMediaFromS3(`/images/Cases/${logo.folder}/svg/${logo.file}.svg`)"
-        :alt="logo.alt"
+        :alt="logo.alt || 'Image'"
         :class="`case_${logo.file}`"
         class="case_header-logo"
       >

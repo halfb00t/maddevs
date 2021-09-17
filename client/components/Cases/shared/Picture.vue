@@ -15,7 +15,7 @@
       :class="{ 'box-shadow': shadow, 'border-radius': radius, 'grey-background': background }"
       :data-src="[$getMediaFromS3(`/images/Cases/${folder}/${extension}/${file}.${extension}`)]"
       :data-srcset="[$getMediaFromS3(`/images/Cases/${folder}/${extension}/${file}.${extension}`)]"
-      :alt="alt"
+      :alt="alt || 'Image'"
       :width="width"
       :height="height"
       data-testid="test-picture-img"

@@ -34,7 +34,7 @@
               <img
                 v-lazy-load
                 :data-src="featuredCUPost.featured_image.url"
-                :alt="featuredCUPost.featured_image.alt"
+                :alt="featuredCUPost.featured_image.alt || 'Image'"
                 width="560"
                 height="347"
               >
@@ -54,7 +54,7 @@
                 <img
                   v-lazy-load
                   :data-src="cluster.primary.cover_image.url"
-                  :alt="cluster.primary.cover_image.alt"
+                  :alt="cluster.primary.cover_image.alt || 'Image'"
                   width="295"
                   height="160"
                 >
@@ -91,7 +91,6 @@ import { mapGetters } from 'vuex'
 import PostAuthor from '@/components/Blog/shared/PostAuthor'
 import getFirstParagraph from '@/helpers/getFirstParagraph'
 import initializeLazyLoad from '@/helpers/lazyLoad'
-
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 
 export default {
@@ -101,7 +100,6 @@ export default {
   },
 
   mixins: [findPostAuthorMixin],
-
   data() {
     return {
       showAll: false,
@@ -110,7 +108,6 @@ export default {
 
   computed: {
     ...mapGetters(['customerContent', 'featuredCUPost', 'allAuthors']),
-
     clusters() {
       return this.customerContent.body || []
     },
@@ -158,6 +155,7 @@ export default {
     -webkit-text-stroke: 1.13px $text-color--grey-opacity-40-percent;
     color: $text-color--black-oil;
     margin-bottom: 63px;
+
     span {
       color: $bgcolor--silver;
       -webkit-text-stroke: 0;
@@ -181,6 +179,7 @@ export default {
 
   &__list {
     padding-left: 60px;
+
     &-title {
       display: block;
       @include label;
@@ -190,6 +189,7 @@ export default {
   &__list-item {
     display: block;
     margin-bottom: 43px;
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -206,6 +206,7 @@ export default {
     border: 1px solid $text-color--red;
     background-color: transparent;
     cursor: pointer;
+
     &-wrapper {
       margin-top: 41px;
     }
@@ -217,6 +218,7 @@ export default {
     display: block;
     @include label;
   }
+
   &__title {
     @include font('Poppins', 33.2px, 600);
     font-style: normal;
@@ -226,6 +228,7 @@ export default {
     margin-bottom: 28px;
     color: $text-color--white-primary;
   }
+
   &__text {
     @include font('Inter', 16px, 400);
     font-style: normal;
@@ -234,12 +237,14 @@ export default {
     margin-bottom: 28px;
     color: $text-color--grey-pale;
   }
+
   &__image {
     display: block;
     text-align: center;
     margin-top: 33px;
     width: 100%;
     max-width: 100%;
+
     img {
       display: block;
       width: 100%;
@@ -252,12 +257,14 @@ export default {
 
 .single-cluster {
   display: flex;
+
   &__image {
     display: block;
     flex-shrink: 0;
     text-align: center;
     width: 52.68%;
     margin-right: 20px;
+
     img {
       display: block;
       width: 100%;
@@ -266,6 +273,7 @@ export default {
       vertical-align: middle;
     }
   }
+
   &__title {
     @include font('Poppins', 21.25px, 600);
     font-style: normal;
@@ -275,6 +283,7 @@ export default {
     color: $text-color--white-primary;
     margin-bottom: 6px;
   }
+
   &__description {
     @include font('Inter', 16px, 400);
     font-style: normal;
@@ -300,6 +309,7 @@ export default {
 @media screen and (max-width: 1024px) {
   .customer-university {
     padding: 35px 0 69px;
+
     &__title {
       font-size: 50px;
       line-height: 101%;
@@ -307,24 +317,30 @@ export default {
       font-feature-settings: 'ss02' on;
       margin-bottom: 38px;
     }
+
     &__content {
       display: block;
     }
+
     &__list {
       width: 100%;
       padding-left: 0;
+
       &-title {
         display: none;
       }
     }
+
     &__featured-post {
       width: 100%;
       padding-right: 0;
     }
+
     &__list-item,
     &__featured-post {
       margin-bottom: 56px;
     }
+
     &__show-more {
       font-weight: normal;
       font-size: 16px;
@@ -332,42 +348,48 @@ export default {
       letter-spacing: -0.035em;
       width: 100%;
       border-color: rgba(236, 28, 36, 0.4);
+
       &-wrapper {
         margin-top: 56px;
       }
     }
   }
-
   .featured-post {
     display: flex;
     flex-direction: column;
+
     &__date,
     .post-author {
       display: none;
     }
+
     &__title {
       margin-bottom: 6px;
       font-size: 22.78px;
     }
+
     &__text {
       margin-bottom: 0;
     }
+
     &__info {
       order: 1;
     }
+
     &__image {
       order: 0;
       margin-top: 0;
       margin-bottom: 14px;
     }
   }
-
   .single-cluster {
     display: block;
+
     &__image {
       width: 100%;
       margin-bottom: 14px;
     }
+
     &__title {
       color: $text-color--grey-opacity-20-percent;
       font-size: 22.78px;
@@ -375,6 +397,7 @@ export default {
       letter-spacing: -1px;
       font-feature-settings: 'zero' on, 'ordn' on, 'ss02' on, 'ss05' on;
     }
+
     &__description {
       font-weight: normal;
       font-size: 16px;

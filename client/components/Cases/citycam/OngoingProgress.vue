@@ -12,7 +12,7 @@
       </TextParagraph>
     </div>
     <div
-      class="container_middle m-48_bottom media-m-8_bottom slider"
+      class="container_middle case_swiper m-48_bottom media-m-8_bottom"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
@@ -63,6 +63,12 @@ export default {
     font-weight: 700;
   }
 
+  &_swiper{
+    @media screen and (max-width: 440px) {
+      padding: 0;
+    }
+  }
+
   &_img-wrapper {
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   }
@@ -99,6 +105,12 @@ export default {
 
 /deep/ .list-item_dot {
   margin-bottom: 0;
+}
+
+/deep/ .gallery-thumbs{
+  @media screen and (max-width: 440px) {
+    display: none;
+  }
 }
 
 /deep/ .swiper.gallery-thumbs .swiper-slide {

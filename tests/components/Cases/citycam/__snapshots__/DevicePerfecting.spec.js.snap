@@ -25,7 +25,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
       </p>
        
       <p
-        class="case_paragraph m-48_bottom media-m-24-bottom"
+        class="case_paragraph m-48_bottom media-m-24_bottom"
       >
         
       Another major strength of the revised device was the use of solar energy. We added an adjustable solar charge
@@ -37,7 +37,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
     </div>
      
     <div
-      class="container_middle m-96_bottom media-m-48_bottom slider"
+      class="container_middle case_swiper m-96_bottom media-m-48_bottom"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
@@ -73,7 +73,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="525"
+                    height="490"
                     width="1026"
                   />
                 </picture>
@@ -102,7 +102,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="525"
+                    height="490"
                     width="1026"
                   />
                 </picture>
@@ -131,7 +131,7 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="525"
+                    height="490"
                     width="1026"
                   />
                 </picture>

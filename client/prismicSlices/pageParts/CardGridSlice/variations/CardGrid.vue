@@ -24,7 +24,7 @@
           <img
             class="card-grid-slice__item-logo"
             :src="item.image && item.image.url"
-            :alt="item.image && item.image.alt"
+            :alt="item.image && item.image.alt || 'Image'"
             :width="item.image && item.image.dimensions && item.image.dimensions.width"
             :height="item.image && item.image.dimensions && item.image.dimensions.height"
           >
