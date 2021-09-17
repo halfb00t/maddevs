@@ -253,6 +253,9 @@
             "content": "black"
           }
         }
+      },
+      "description": {
+        "primary": {}
       }
     },
     "KeyMetricsSlice": {

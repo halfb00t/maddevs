@@ -66,6 +66,30 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "description",
+      "name": "Description",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "StartScreen",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "subtitle": {
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {}
     }
   ]
 }
