@@ -1,8 +1,11 @@
 {
-  "baseUrl": "http://localhost:3000/",
-  "pluginsFile": "cypress/plugins/index.js",
-  "screenshotsFolder": false,
-  "supportFile": false,
+  "baseUrl": "http://localhost:4000",
+  "chromeWebSecurity": false,
+  "pluginsFile": "tests/e2e/plugins/index.js",
+  "integrationFolder": "tests/e2e/pages",
+  "testFiles": "**/*.spec.js*",
+  "nodeVersion":"system",
   "video": false,
-  "fixtures": false
+  "viewportWidth": 1366,
+  "viewportHeight": 768
 }
