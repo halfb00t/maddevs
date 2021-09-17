@@ -9,7 +9,7 @@
         framerate of 1 to 30, and automatic night vision. Low power consumption still was our main achievement: the
         device uses less than 300 mW in the sleep mode and less than 1.5 W in the active mode.
       </TextParagraph>
-      <TextParagraph class="m-48_bottom media-m-24-bottom">
+      <TextParagraph class="m-48_bottom media-m-24_bottom">
         Another major strength of the revised device was the use of solar energy. We added an adjustable solar charge
         controller with MPPT: the default voltage is 18 V, and the charging current can go up to 4 amps. In a sunny
         place, thanks to its +20 W solar cell and +15 Ah battery, the device can work 24/7 with no charge in the active
