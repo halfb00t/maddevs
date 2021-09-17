@@ -61,7 +61,7 @@ export default {
   }
   &--dark-theme {
     background-color: $text-color--quote-box !important;
-    color: $text-color--black !important;
+    color: $text-color--white-transparent !important;
   }
 }
 </style>
