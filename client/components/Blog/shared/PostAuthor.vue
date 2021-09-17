@@ -129,6 +129,7 @@ export default {
   max-width: 100%;
   display: inline-flex;
   align-items: center;
+  overflow: hidden;
   &--dark-theme {
     .post-author {
       &__image,

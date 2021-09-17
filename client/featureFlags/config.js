@@ -7,4 +7,5 @@ export const config = {
   blogComments: ['development', 'staging'],
   newCustomerUniversitySection: ['development'],
   customerUniversitySection: ['production', 'staging'],
+  headerV2: ['development', 'staging'],
 }
