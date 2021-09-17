@@ -116,15 +116,15 @@ ignore:
     - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
         reason: None given
         expires: '2021-09-03T11:32:14.619Z'
-      slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
     - slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
+    - slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
   SNYK-JS-LODASHTEMPLATE-1088054:
     - nuxt > @nuxt/core > @nuxt/server > @nuxt/vue-renderer > vue-server-renderer > lodash.template:
         reason: ' will wait a fix'
@@ -133,12 +133,12 @@ ignore:
     - nuxt-sm > sm-commons > validate-npm-package > meow > trim-newlines:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
-      slice-machine-ui > sm-commons > validate-npm-package > meow > trim-newlines:
-        reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
     - slice-machine-ui > sm-commons > validate-npm-package > meow > trim-newlines:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
+    - slice-machine-ui > sm-commons > validate-npm-package > meow > trim-newlines:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
   SNYK-JS-SWIPER-1088062:
     - swiper:
         reason: None given
@@ -147,75 +147,78 @@ ignore:
     - '@maddevs/mad-radiator > yargs > cliui > string-width > strip-ansi > ansi-regex':
         reason: Will wait a fix
         expires: '2021-10-16T07:58:08.126Z'
-      '@mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex':
+      '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
         reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
+        expires: '2021-10-17T06:40:22.241Z'
     - '@nuxtjs/style-resources > glob-all > yargs > cliui > string-width > strip-ansi > ansi-regex':
         reason: Will wait a fix
         expires: '2021-10-16T07:58:08.126Z'
-      '@mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
     - cli-progress > string-width > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.126Z'
-      canvas > @mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > webpackbar > wrap-ansi > string-width > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.127Z'
-      '@mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
     - nuxt-sm > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > expect > jest-matcher-utils > jest-diff > pretty-format > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.128Z'
-      canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
     - nuxt-sm > jest > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > yargs > cliui > string-width > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.128Z'
-      canvas > @mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > html-webpack-plugin > pretty-error > renderkid > strip-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.128Z'
-      slice-machine-ui > yargs > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.363Z'
     - nuxt > @nuxt/core > @nuxt/server > @nuxt/vue-renderer > vue-server-renderer > chalk > has-ansi > ansi-regex:
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.129Z'
-      slice-machine-ui > yargs > cliui > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - '@maddevs/mad-radiator > chartjs-node-canvas > canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
         reason: will wait a fix
         expires: '2021-10-16T07:58:08.130Z'
-      slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
-      slice-machine-ui > yargs > cliui > wrap-ansi > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > @nuxt/friendly-errors-webpack-plugin > string-width > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
-      slice-machine-ui > yargs > cliui > wrap-ansi > string-width > strip-ansi > ansi-regex:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - nuxt > @nuxt/cli > boxen > ansi-align > string-width > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
     - nuxt-sm > jest > @jest/core > @jest/reporters > string-length > strip-ansi > ansi-regex:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
+    - '@mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex':
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+    - '@mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex':
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+    - canvas > @mapbox/node-pre-gyp > npmlog > gauge > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+    - '@mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex':
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+    - canvas > @mapbox/node-pre-gyp > npmlog > gauge > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+    - canvas > @mapbox/node-pre-gyp > npmlog > gauge > wide-align > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+    - slice-machine-ui > yargs > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.363Z'
+    - slice-machine-ui > yargs > cliui > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > yargs > cliui > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > yargs > cliui > wrap-ansi > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > yargs > cliui > wrap-ansi > string-width > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
   SNYK-JS-ANSIHTML-1296849:
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack-hot-middleware > ansi-html:
         reason: will wait a fix
@@ -228,39 +231,21 @@ ignore:
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
-      slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > set-value:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
-      slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
-      slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
-      slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - nuxt-sm > jest > @jest/core > @jest/reporters > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.131Z'
-      slice-machine-ui > copy-template-dir > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
-        reason: None given
-        expires: '2021-10-17T06:01:34.364Z'
     - nuxt-sm > jest > @jest/core > @jest/reporters > @jest/transform > jest-haste-map > sane > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
-      slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
-        reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
         expires: '2021-10-17T06:01:34.365Z'
@@ -273,29 +258,47 @@ ignore:
     - slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
         reason: None given
         expires: '2021-10-17T06:01:34.365Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.364Z'
+    - slice-machine-ui > copy-template-dir > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
   SNYK-JS-UTILSEXTEND-560385:
     - slice-machine-ui > base64-img > ajax-request > utils-extend:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
-      slice-machine-ui > base64-img > file-system > utils-extend:
-        reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > utils-extend:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
-      slice-machine-ui > base64-img > ajax-request > utils-extend:
-        reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > file-match > utils-extend:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.132Z'
-      slice-machine-ui > base64-img > file-system > file-match > utils-extend:
-        reason: None given
-        expires: '2021-10-17T06:01:34.365Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > utils-extend:
         reason: None given
         expires: '2021-10-17T06:01:34.365Z'
     - slice-machine-ui > base64-img > ajax-request > file-system > file-match > utils-extend:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
+    - slice-machine-ui > base64-img > file-system > utils-extend:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
+    - slice-machine-ui > base64-img > ajax-request > utils-extend:
+        reason: None given
+        expires: '2021-10-17T06:01:34.365Z'
+    - slice-machine-ui > base64-img > file-system > file-match > utils-extend:
         reason: None given
         expires: '2021-10-17T06:01:34.365Z'
 # patches apply the minimum changes required to fix a vulnerability
