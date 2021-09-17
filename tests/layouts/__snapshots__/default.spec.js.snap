@@ -4,7 +4,7 @@ exports[`Default layout renders correctly 1`] = `
 <div
   class="default-layout"
 >
-  <header-stub />
+  <headerv2-stub />
    
   <nuxt-stub
     class="main-section"
