@@ -52,7 +52,7 @@ export default {
   },
 
   computed: {
-    getPostLink() {
+    postLink() {
       if (!this.items.length) return ''
       return `/customer-university/${this.items[0].cu_post.uid}/`
     },
