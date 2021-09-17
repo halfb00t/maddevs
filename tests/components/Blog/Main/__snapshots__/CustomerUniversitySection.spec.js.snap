@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerUniversitySection component should render correctly 1`] = `
+<div>
+  <section
+    class="customer-university"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="customer-university__title"
+      >
+        
+      Customer
+        <br />
+         
+        <span>
+          University
+        </span>
+      </div>
+       
+      <div
+        class="customer-university__content"
+      >
+        <div
+          class="customer-university__featured-post"
+        >
+          <div
+            class="featured-post"
+          >
+            <nuxtlink-stub
+              class="featured-post__info"
+              to="/customer-university/uid/"
+            >
+              <span
+                class="featured-post__date"
+              >
+                
+              </span>
+               
+              <h2
+                class="featured-post__title"
+              >
+                
+              img.png
+            
+              </h2>
+               
+              <p
+                class="featured-post__text"
+              >
+                
+              
+            
+              </p>
+            </nuxtlink-stub>
+             
+            <!---->
+             
+            <nuxtlink-stub
+              class="featured-post__image"
+              to="/customer-university/uid/"
+            >
+              <img
+                data-src=""
+                height="347"
+                width="560"
+              />
+            </nuxtlink-stub>
+          </div>
+        </div>
+         
+        <div
+          class="customer-university__list"
+        >
+          <span
+            class="customer-university__list-title"
+          >
+            Series of articles:
+          </span>
+            
+          <!---->
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
