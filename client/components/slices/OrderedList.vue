@@ -1,8 +1,9 @@
 <template>
   <ListNumberedBox>
-    <div
+    <PrismicRichText
       v-if="hasListIntroduction"
-      v-html="$prismic.asHtml(slice.primary.list_introduction)"
+      :field="slice.primary.list_introduction"
+      :html-serializer="htmlSerializer"
     />
     <ListNumberedItemBox
       v-for="(item, index) in slice.items"
@@ -28,6 +29,11 @@ export default {
     slice: {
       type: Object,
       required: true,
+    },
+
+    htmlSerializer: {
+      type: Function,
+      default: () => null,
     },
   },
 

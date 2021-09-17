@@ -47,9 +47,11 @@ exports[`Swift component should render correctly 1`] = `
                   extension="jpg"
                   file="admin"
                   folder="nambafood"
-                  height="525"
+                  height="490"
                   width="1026"
                 />
+                 
+                <!---->
               </div>
               <div
                 class="swiper-slide"
@@ -59,9 +61,11 @@ exports[`Swift component should render correctly 1`] = `
                   extension="jpg"
                   file="dashboard"
                   folder="nambafood"
-                  height="525"
+                  height="490"
                   width="1026"
                 />
+                 
+                <!---->
               </div>
             </div>
             <span
@@ -299,6 +303,7 @@ exports[`Swift component should render correctly 1`] = `
         class="case_map-video-wrapper"
       >
         <img
+          alt="Video preview"
           class="case_ios-map-video-image case_box-shadow"
           data-testid="test-case_ios-map-video-image"
           src="img.jpg"

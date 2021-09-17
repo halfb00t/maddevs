@@ -17,7 +17,7 @@ exports[`UIBanner component should render correctly 1`] = `
     </div>
      
     <img
-      alt=""
+      alt="Image"
       class="cta-banner__image"
       data-src=""
       height="490"

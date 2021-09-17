@@ -10,6 +10,7 @@ exports[`UIBeforeAfterImage component should render correctly with slot 1`] = `
       hover="true"
     >
       <img
+        alt="Image for compare"
         height=""
         slot="first"
         src=""
@@ -17,6 +18,7 @@ exports[`UIBeforeAfterImage component should render correctly with slot 1`] = `
       />
        
       <img
+        alt="Image for compare"
         height=""
         slot="second"
         src=""

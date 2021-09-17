@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhyCityCam component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+    data-aos="fade-up"
+    data-aos-anchor-placement="bottom"
+  >
+    <h2
+      class="case_title_h2 m-12_bottom media-m-24_bottom"
+    >
+      
+    Why cities need systems like CityCam
+  
+    </h2>
+     
+    <p
+      class="case_paragraph m-12_bottom"
+    >
+      
+    If traffic is poorly organised, virtually any process in a modern city’s life can come to a halt. Around the
+    world, the most advanced technologies are applied to urban traffic to make sure that hundreds of thousands of
+    people and vehicles moving around simultaneously can do it safely and efficiently.
+  
+    </p>
+     
+    <p
+      class="case_paragraph m-72_bottom media-m-24_bottom"
+    >
+      
+    Traffic cameras are one of the solutions that allow making better transportation decisions in real time. If you
+    can monitor roads and intersections, you can plan itineraries optimally, whether you’re just a resident driving
+    around or an official in charge of traffic management. Consider the benefits of traffic cameras for three
+    potential categories of users.
+  
+    </p>
+     
+    <div
+      class="case_cards m-24_bottom"
+    >
+      <div
+        class="case_cards-group"
+      >
+        <div
+          class="case_card background-color-yellow-dark"
+          id="citycam-card-0"
+        >
+          <div
+            class="case_card-img"
+          >
+            <picture-stub
+              alt="Individual citizens"
+              extension="png"
+              file="street"
+              folder="citycam"
+              height="200"
+              lazy="true"
+              width="396"
+            />
+          </div>
+           
+          <h3
+            class="case_title_h4 case_card-title m-24_top m-8_bottom"
+          >
+            
+          Individual citizens
+        
+          </h3>
+           
+          <p
+            class="case_paragraph"
+            style="color: rgb(255, 255, 255);"
+          >
+            
+          They can check what’s happening on major crossroads (or those they’re planning to include in their routes) before even getting in the car for their drive home, to work, or elsewhere. It’s convenient, and it can save residents time and money.
+        
+          </p>
+        </div>
+        <div
+          class="case_card background-color-blue-darkened"
+          id="citycam-card-1"
+        >
+          <div
+            class="case_card-img"
+          >
+            <picture-stub
+              alt="Local businesses"
+              extension="png"
+              file="mall"
+              folder="citycam"
+              height="200"
+              lazy="true"
+              width="396"
+            />
+          </div>
+           
+          <h3
+            class="case_title_h4 case_card-title m-24_top m-8_bottom"
+          >
+            
+          Local businesses
+        
+          </h3>
+           
+          <p
+            class="case_paragraph"
+            style="color: rgb(255, 255, 255);"
+          >
+            
+          They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.
+        
+          </p>
+        </div>
+      </div>
+       
+      <div
+        class="case_card background-color-blue-dark"
+        id="citycam-card-2"
+      >
+        <h3
+          class="case_title_h4 case_card-title m-8_bottom"
+        >
+          
+        City administrators
+      
+        </h3>
+         
+        <p
+          class="case_paragraph"
+          style="color: rgb(255, 255, 255);"
+        >
+          
+        They can identify weaknesses in the way traffic is currently organised by statistically analysing what
+        crossroads and road sections get clogged frequently. Adjustments, like making certain green lights last
+        longer, can solve congestion problems.
+      
+        </p>
+      </div>
+    </div>
+     
+    <p
+      class="case_paragraph m-96_bottom media-m-48_bottom"
+    >
+      
+    Providing these benefits takes cutting-edge technological solutions. The cameras need to require minimum energy
+    supply and function continuously without frequent external inputs. It was a serious challenge to build them that
+    way.
+  
+    </p>
+  </section>
+</div>
+`;

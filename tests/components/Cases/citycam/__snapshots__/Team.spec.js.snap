@@ -1,0 +1,441 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Team component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h3
+      class="case_title_h3 m-96_top m-24_bottom media-m-48_top media-m-12_bottom"
+    >
+      
+    Meet the team
+  
+    </h3>
+     
+    <ul
+      class="case_list-team m-72_bottom media-m-41_bottom"
+    >
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Belek Abylov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="belek-abylov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Belek Abylov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Full-Stack Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Vlad Andreev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="vlad-andreev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Vlad Andreev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Delivery Manager
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Kirill Avdeev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="avdeev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Kirill Avdeev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Hardware Engineer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Aleksandr Edakin"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="aleksandr-edakin"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Aleksandr Edakin
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Software Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Maksim Gachevski"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="maksim-gachevski"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Maksim Gachevski
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Frontend Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Gennady Karev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="gennady-karev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Gennady Karev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Full-Stack Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Oleg Katkov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="oleg-katkov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Oleg Katkov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Tech Lead
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Dmitri Kononenko"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="dmitri-kononenko"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Dmitri Kononenko
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Project Manager
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Anton Kozlov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="anton-kozlov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Anton Kozlov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Hardware Engineer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Andrew Sapozhnikov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="andrew-sapozhnikov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Andrew Sapozhnikov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Head of DevOps
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Gaukhar Taspolatova"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="gaukhar-taspolatova"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Gaukhar Taspolatova
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Project Manager
+    
+          </p>
+        </div>
+      </li>
+    </ul>
+     
+    <blockquote
+      alt="Iskender Bektemir"
+      class="case_blockquote-author m-auto case_text-align-center m-72_bottom p-48_top media-m-48_bottom"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom"
+    >
+      
+    “The Mad Devs specialists aren’t afraid of challenges and are able to combine both hardware and software skills.
+    This is what was needed for us. We also appreciate the professional approach to the work and constant
+    communication. ”
+   
+      <div
+        class="case_blockquote-author__author-info m-24_top"
+      >
+        <div
+          class="case_blockquote-author__photo m-auto"
+        >
+          <picture-stub
+            alt="Iskender Bektemir"
+            extension="png"
+            file="iskender-bektemir"
+            folder="citycam"
+            height="71"
+            width="71"
+          />
+        </div>
+         
+        <p
+          class="case_paragraph case_blockquote-author__name"
+        >
+          
+      Iskender Bektemir
+    
+        </p>
+         
+        <p
+          class="case_blockquote-author__position"
+        >
+          
+      Managing Director at CityCam
+    
+        </p>
+      </div>
+    </blockquote>
+  </section>
+</div>
+`;

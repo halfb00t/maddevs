@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CityCam _uid component should render correctly 1`] = `
+<div>
+  <main
+    class="case case--citycam"
+  >
+    <section
+      class="case_header case_header-citycam"
+      id="transparent-header-area"
+    >
+      <div
+        class="case_main-video_fallback"
+        style="background-image: url(img.jpg);"
+      />
+       
+      <!---->
+       
+      <div
+        class="case_header-content"
+      >
+        <div
+          class="case_header-text"
+          style="opacity: 1;"
+        >
+          <div
+            class="case_case-study-item"
+          >
+            
+        Case Study
+      
+          </div>
+           
+          <h1
+            class="case_header-title"
+          >
+            
+      Better cities 
+            <br />
+             with CityCam
+    
+          </h1>
+           
+          <p
+            class="case_header-description"
+          >
+            
+      Building hardware and software for energy-efficient 
+            <br />
+             and highly autonomous traffic cameras
+    
+          </p>
+           
+        </div>
+         
+        <img
+          alt="CityCam intersection monitoring system"
+          class="case_header-logo case_citycam-logo"
+          height="93"
+          src="img.jpg"
+          style="opacity: 1;"
+          width="253"
+        />
+      </div>
+    </section>
+     
+    <main-stub />
+     
+    <section
+      class="case_footer container_full"
+    >
+      <img
+        alt="Peklo Tool for search ad campaigns"
+        class="case_logotype-peklo"
+        data-src="[object Object]"
+        height="72"
+        width="195"
+      />
+       
+      <h2
+        class="case_title case_title_h2 case_title-peklo"
+      >
+        
+    Peklo Tool for better
+    ad campaigns
+  
+      </h2>
+       
+      <nuxtlink-stub
+        class="case_next-project-button"
+        to="/case-studies/peklo/"
+      >
+        
+    Read next project
+  
+      </nuxtlink-stub>
+    </section>
+  </main>
+</div>
+`;

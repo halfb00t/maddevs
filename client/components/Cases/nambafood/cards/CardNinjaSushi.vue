@@ -46,7 +46,7 @@
           ref="img"
           :src="[img.x1]"
           :srcset="[img.x2 + ' 2x']"
-          :alt="img.alt"
+          :alt="img.alt || 'Image'"
           width="1028"
           height="547"
           class="case_card-content_image"

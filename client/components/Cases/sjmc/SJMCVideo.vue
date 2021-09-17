@@ -16,7 +16,6 @@
       <video
         ref="video"
         class="main-video"
-        autoplay="true"
       >
         <source
           :src="$getMediaFromS3('/videos/sjmc/sjmc-modal-video.00bd869.mp4')"
@@ -76,7 +75,7 @@ export default {
   },
 
   destroyed() {
-    this.$refs.video.removeEventListener('ended', this.onEnded)
+    this.$refs.video?.removeEventListener('ended', this.onEnded)
   },
 
   methods: {

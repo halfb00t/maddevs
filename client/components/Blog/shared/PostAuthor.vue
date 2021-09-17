@@ -12,7 +12,7 @@
     >
       <img
         :src="authorImage.url"
-        :alt="authorImage.alt"
+        :alt="authorImage.alt || 'Image'"
         width="40"
         height="40"
       >

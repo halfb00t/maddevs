@@ -9,6 +9,7 @@
         :width="baseWidth"
         :height="baseHeight"
         :src="beforeImage"
+        alt="Image for compare"
       >
 
       <img
@@ -16,6 +17,7 @@
         :width="baseWidth"
         :height="baseHeight"
         :src="afterImage"
+        alt="Image for compare"
       >
     </img-comparison-slider>
   </div>

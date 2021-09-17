@@ -37,7 +37,10 @@
         <DividerSlice />
       </template>
       <template v-else-if="slice.slice_type === 'ordered_list'">
-        <OrderedList :slice="slice" />
+        <OrderedList
+          :slice="slice"
+          :html-serializer="serializer"
+        />
       </template>
       <template v-else-if="slice.slice_type === 'doublecolumn_bordered'">
         <DoubleColumnBorderedSlice :slice="slice" />
@@ -173,7 +176,7 @@ export default {
           // eslint-disable-next-line
           const wrapperClassList = [element.label || '', 'block-img']
           // eslint-disable-next-line
-          const img = `<img src="${element.url}" alt="${element.alt || ''}" copyright="${element.copyright || ''}">`
+          const img = `<img src="${element.url}" alt="${element.alt || 'Image'}" copyright="${element.copyright || ''}">`
           return (`
             <p class="${wrapperClassList.join(' ')}">
               ${linkUrl ? `<a ${linkTarget} href="${linkUrl}">${img}</a>` : img}

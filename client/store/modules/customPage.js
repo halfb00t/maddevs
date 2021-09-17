@@ -1,10 +1,14 @@
 /* eslint-disable no-shadow */
 import { getCustomPage } from '@/api/customPage'
 import extractSchemaOrg from '@/helpers/extractSchemaOrg'
+import getRoutePrefix from '@/helpers/getRoutePrefix'
 
 const extractCustomPageData = page => {
   if (!page && !page?.data) return {}
   return {
+    id: page.id,
+    uid: page.uid,
+    routePrefix: getRoutePrefix(page.data.route_prefix),
     released: page.data.released,
     showFooter: page.data.show_footer,
     slices: page.data.body,

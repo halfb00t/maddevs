@@ -34,7 +34,7 @@
               <img
                 v-lazy-load
                 :data-src="featuredCUPost.featured_image.url"
-                :alt="featuredCUPost.featured_image.alt"
+                :alt="featuredCUPost.featured_image.alt || 'Image'"
                 width="560"
                 height="347"
               >
@@ -54,7 +54,7 @@
                 <img
                   v-lazy-load
                   :data-src="cluster.primary.cover_image.url"
-                  :alt="cluster.primary.cover_image.alt"
+                  :alt="cluster.primary.cover_image.alt || 'Image'"
                   width="295"
                   height="160"
                 >

@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChallengesAndSolutions component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container_regular media-background-color-gray-lightened"
+    >
+      <h2
+        class="case_title_h2 media-p-48_top m-16_bottom media-m-12_bottom"
+      >
+        
+      Challenges & solutions
+    
+      </h2>
+       
+      <p
+        class="case_paragraph m-16_bottom media-m-24_bottom"
+      >
+        
+      The project’s two main ambitions were low energy use and high load capacity. To pursue the former, we engineered
+      a device that could take photos and send them to the server every three seconds while using under one watt of
+      electricity. A high-load service we were simultaneously building, in turn, needed to save and transmit images to
+      the user app and the customer’s website. The general flow of the system went like this:
+    
+      </p>
+       
+      <div
+        class="m-48_bottom media-m-24_bottom"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <lottie-stub
+          class="case_lottie"
+          id="challenges-solutions"
+          options="[object Object]"
+        />
+      </div>
+       
+      <div
+        class="p-80_bottom media-p-32_bottom"
+      >
+        <ol
+          class="case-list_numbered"
+        >
+          <li
+            class="case_list-numbered_item"
+            data-background="#FFECB3"
+            id="solution-item-0"
+          >
+            
+          Cameras send images to the cameras’ backend
+        
+          </li>
+          <li
+            class="case_list-numbered_item"
+            data-background="#FFE7A1"
+            id="solution-item-1"
+          >
+            
+          The cameras’ backend sends images to Amazon S3
+        
+          </li>
+          <li
+            class="case_list-numbered_item"
+            data-background="#FFE187"
+            id="solution-item-2"
+          >
+            
+          The cameras’ backend supplies information about images sent to S3 and data about devices from the cameras (battery charge and SIM card balance)
+        
+          </li>
+          <li
+            class="case_list-numbered_item"
+            data-background="#FFD762"
+            id="solution-item-3"
+          >
+            
+          The progressive web application (PWA) backend goes to S3 to get presigned links for images that have just been uploaded
+        
+          </li>
+          <li
+            class="case_list-numbered_item"
+            data-background="#FFCA2E"
+            id="solution-item-4"
+          >
+            
+          The PWA backend sends links to images stored in S3 to users’ devices
+        
+          </li>
+          <li
+            class="case_list-numbered_item"
+            data-background="#FFBE00"
+            id="solution-item-5"
+          >
+            
+          Users’ devices send requests to S3 to get images according to presigned links
+        
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</div>
+`;

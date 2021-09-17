@@ -7,8 +7,9 @@ const params = require('./params')
 // Rules
 const MetaSocialRule = require('./rules/MetaSocialRule')
 const MetaBaseRule = require('./rules/MetaBaseRule')
-const JsonLdRule = require('./rules/JsonLdRule')
+// const JsonLdRule = require('./rules/JsonLdRule')
 const CanonicalLinkRule = require('./rules/CanonicalLinkRule')
+const HTagsRule = require('./rules/HTagsRule')
 
 async function asyncSome(arr, predicate) {
   for (const e of arr) {
@@ -45,8 +46,9 @@ function analyzeFile(pathFile) {
     },
   })
     .read(fs.createReadStream(pathFile))
+    .addRule('HTagsRule', { object: new HTagsRule() })
     .addRule('CanonicalLinkRule', { object: new CanonicalLinkRule() })
-    .addRule('JsonLdRule', { object: new JsonLdRule(params.JsonLdRule.enabled, params.JsonLdRule.keys) })
+    // .addRule('JsonLdRule', { object: new JsonLdRule(params.JsonLdRule.enabled, params.JsonLdRule.keys) })
     .addRule('MetaSocialRule', { object: new MetaSocialRule(params.MetaSocialRule.enabled, params.MetaSocialRule.properties) })
     .addRule('MetaBaseRule', { object: new MetaBaseRule(params.MetaBaseRule.enabled, params.MetaBaseRule.names) })
     .addRule('ImgTagWithAltAttritube')

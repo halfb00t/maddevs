@@ -9,7 +9,7 @@ exports[`Swiper component should render correctly 1`] = `
       class="swiper-container thumb-example box-shadow"
     >
       <picture-stub
-        alt=""
+        alt="Image"
         extension="jpg"
         file=""
         folder="common"
@@ -30,25 +30,29 @@ exports[`Swiper component should render correctly 1`] = `
             class="swiper-slide"
           >
             <picture-stub
-              alt=""
+              alt="Image"
               extension="jpg"
               file="admin"
               folder="nambafood"
-              height="525"
+              height="490"
               width="1026"
             />
+             
+            <!---->
           </div>
           <div
             class="swiper-slide"
           >
             <picture-stub
-              alt=""
+              alt="Image"
               extension="jpg"
               file="dashboard"
               folder="nambafood"
-              height="525"
+              height="490"
               width="1026"
             />
+             
+            <!---->
           </div>
         </div>
         <span
@@ -78,7 +82,7 @@ exports[`Swiper component should render correctly 1`] = `
           class="swiper-slide"
         >
           <picture-stub
-            alt=""
+            alt="Image"
             extension="jpg"
             file="admin"
             folder="nambafood"
@@ -91,7 +95,7 @@ exports[`Swiper component should render correctly 1`] = `
           class="swiper-slide"
         >
           <picture-stub
-            alt=""
+            alt="Image"
             extension="jpg"
             file="dashboard"
             folder="nambafood"

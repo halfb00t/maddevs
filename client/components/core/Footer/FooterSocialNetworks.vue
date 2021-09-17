@@ -13,7 +13,7 @@
         <img
           v-lazy-load
           :data-src="require(`@/assets/img/Footer/svg/${network.key}.svg`)"
-          :alt="network.title"
+          :alt="network.title || 'Image'"
           width="42"
           height="42"
         >

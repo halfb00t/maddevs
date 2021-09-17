@@ -10,7 +10,7 @@
       v-if="icon"
       v-lazy-load
       :data-src="$getMediaFromS3(`/images/Cases/veeqo/svg/${icon}.svg`)"
-      :alt="alt"
+      :alt="alt || 'Image'"
       width="66"
       height="66"
       class="card_icon"

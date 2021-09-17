@@ -17,6 +17,7 @@
               width="20"
               height="20"
               src="@/assets/img/common/arrow-up-right.svg"
+              alt="Arrow"
             >
           </UIButton>
           <NuxtLink to="#read-online-anchor">
