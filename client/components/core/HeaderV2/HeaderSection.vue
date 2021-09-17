@@ -78,6 +78,7 @@
               />
             </div>
             <NuxtLink
+              v-if="$route.name !== 'blog'"
               to="/blog/"
               class="header-post__more-btn"
             >
