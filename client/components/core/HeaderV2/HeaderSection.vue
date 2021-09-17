@@ -78,6 +78,7 @@
               />
             </div>
             <NuxtLink
+              v-if="$route.name !== 'blog'"
               to="/blog/"
               class="header-post__more-btn"
             >
@@ -294,7 +295,7 @@ export default {
   width: 100%;
 
   &__name {
-    font-size: 15px;
+    @include font('Inter', 15px, 400);
     line-height: 25px;
     color: $text-color--grey-pale;
     margin-bottom: 2px;
@@ -305,10 +306,10 @@ export default {
   }
 
   &__item {
-    display: flex;
-    font-size: 15px;
+    @include font('Inter', 15px, 400);
     line-height: 25px;
     letter-spacing: -0.1px;
+    display: flex;
     &::before {
       content: '';
       display: block;
@@ -366,13 +367,12 @@ export default {
       margin-top: 20px;
     }
     &-title {
-      font-weight: bold;
-      font-size: 18px;
+      @include font('Inter', 18px, 700);
       line-height: 22px;
       letter-spacing: -0.4px;
     }
     &-paragraph {
-      font-size: 15px;
+      @include font('Inter', 15px, 400);
       line-height: 24px;
       letter-spacing: -0.4px;
       margin-top: 8px;
@@ -412,6 +412,8 @@ export default {
   }
 
   &__more-btn {
+    @include font('Inter', 15px, 400);
+    line-height: 25px;
     margin-top: 24px;
     display: flex;
     align-items: center;
@@ -421,9 +423,6 @@ export default {
     color: $text-color--white-primary;
     border: 1px solid $border-color--grey-selected;
     padding: 7px 20px;
-    font-size: 15px;
-    line-height: 25px;
-    letter-spacing: -0.1px;
     transition: 0.3s ease;
     &:hover {
       background-color: $bgcolor--grey-dark;

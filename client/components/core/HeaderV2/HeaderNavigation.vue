@@ -97,13 +97,13 @@ export default {
       margin-right: 0;
     }
     span {
+      @include font('Inter', 15px, 400);
+      line-height: 25px;
+      letter-spacing: -0.1px;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 15px;
-      line-height: 25px;
-      letter-spacing: -0.1px;
       color: $text-color--white-primary;
       transition: all .15s ease;
     }
