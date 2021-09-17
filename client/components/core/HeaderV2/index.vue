@@ -1,11 +1,18 @@
 <template>
-  <div class="header-wrapper">
+  <div
+    id="header"
+    class="header-wrapper"
+  >
     <header
       ref="header"
       class="header"
+      :class="{ 'header--transparent-bg': headerIsTransparent }"
       @mouseleave="setNavigation(null)"
     >
-      <div class="header__container container">
+      <div
+        id="header-container"
+        class="header__container container"
+      >
         <div class="header__content">
           <div class="header__content-left">
             <NuxtLink
@@ -161,9 +168,17 @@ export default {
     logoTextIsActive() {
       return (this.showLogoText && !this.activeNavigation)
     },
+
+    headerIsTransparent() {
+      return (!this.isActiveMobileMenu && !this.activeNavigation && this.headerTransparent)
+    },
   },
 
   watch: {
+    $route() {
+      this.setNavigation(null)
+    },
+
     isActiveModalSearch(opened) {
       if (opened) {
         this.disableScrollOnBody()
@@ -273,6 +288,9 @@ export default {
   width: 100%;
   background-color: $bgcolor--black;
   transition: all .3s ease;
+  &--transparent-bg {
+    background-color: transparent;
+  }
 
   button {
     border: 0px solid;
