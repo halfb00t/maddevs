@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.19.0
+version: v1.22.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-D3COLOR-1076592:
@@ -12,9 +12,6 @@ ignore:
     - '@maddevs/mad-radiator > vega > vega-scale > d3-interpolate > d3-color':
         reason: non used on web
         expires: '2021-08-20T10:03:40.285Z'
-      '@maddevs/mad-radiator > vega > vega-encode > d3-interpolate > d3-color':
-        reason: ' will wait a fix'
-        expires: '2021-10-16T07:58:08.131Z'
     - '@maddevs/mad-radiator > vega > vega-encode > d3-interpolate > d3-color':
         reason: non used on web
         expires: '2021-08-20T10:03:40.285Z'
@@ -108,6 +105,9 @@ ignore:
     - '@maddevs/mad-radiator > vega > vega-geo > d3-color':
         reason: None given
         expires: '2021-09-03T11:25:06.363Z'
+    - '@maddevs/mad-radiator > vega > vega-encode > d3-interpolate > d3-color':
+        reason: ' will wait a fix'
+        expires: '2021-10-16T07:58:08.131Z'
   SNYK-JS-GLOBPARENT-1016905:
     - nuxt > @nuxt/builder > @nuxt/webpack > webpack > watchpack > watchpack-chokidar2 > chokidar > glob-parent:
         reason: ' will wait a fix'
@@ -116,10 +116,10 @@ ignore:
     - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
         reason: None given
         expires: '2021-09-03T11:32:14.619Z'
-      slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
+    - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
-    - nuxt > @nuxt/builder > @nuxt/webpack > cssnano > cssnano-preset-default > postcss-svgo > svgo > css-select > css-what:
+    - slice-machine-ui > @svgr/webpack > @svgr/plugin-svgo > svgo > css-select > css-what:
         reason: ' will wait a fix'
         expires: '2021-10-16T07:58:08.130Z'
   SNYK-JS-LODASHTEMPLATE-1088054:
