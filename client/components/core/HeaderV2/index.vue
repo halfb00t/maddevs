@@ -133,8 +133,8 @@
 import { mapGetters, mapActions } from 'vuex'
 import scrollOnBody from '@/mixins/scrollOnBody'
 import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
-import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation.vue'
-import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile.vue'
+import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
+import HeaderMobile from '@/components/core/Header/HeaderMobile'
 import ModalSearch from '@/components/core/modals/ModalSearch'
 
 export default {
