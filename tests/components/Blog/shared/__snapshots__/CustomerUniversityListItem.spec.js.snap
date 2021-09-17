@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerUniversityListItem component should render correctly with data 1`] = `
+<div>
+  <nuxtlink
+    class="customer-university__list-item"
+  >
+    <div
+      class="single-cluster"
+    >
+      <div
+        class="single-cluster__image"
+      >
+        <img
+          height="160"
+          width="295"
+        />
+      </div>
+       
+      <div
+        class="single-cluster__info"
+      >
+        <h3
+          class="single-cluster__title"
+        >
+          
+        cluster name
+      
+        </h3>
+         
+        <div
+          class="single-cluster__description"
+        >
+          
+        cluster name
+      
+        </div>
+      </div>
+    </div>
+  </nuxtlink>
+</div>
+`;
