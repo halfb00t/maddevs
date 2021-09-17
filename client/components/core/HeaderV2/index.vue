@@ -382,12 +382,12 @@ export default {
   }
 
   &__phone {
+    @include font('Inter', 15px, 400);
+    line-height: 25px;
+    letter-spacing: -0.1px;
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 15px;
-    line-height: 25px;
-    letter-spacing: -0.1px;
     color: $text-color--white-primary;
     margin-right: 55px;
     @media screen and (max-width: 1140px) {
@@ -406,12 +406,12 @@ export default {
   }
 
   &__contact-btn {
-    border: 1px solid $bgcolor--red-extra-dark !important;
-    color: $text-color--red;
-    width: 122px;
-    font-size: 15px;
+    @include font('Inter', 15px, 400);
     line-height: 25px;
     letter-spacing: -0.1px;
+    border: 1px solid $bgcolor--red-extra-dark !important;
+    color: $text-color--red;
+    min-width: 122px;
     border-radius: 4px;
     padding: 7px 20px;
     transition: all 0.3s ease;
