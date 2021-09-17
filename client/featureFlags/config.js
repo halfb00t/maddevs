@@ -5,4 +5,5 @@
  */
 export const config = {
   cityCamCase: ['development', 'staging'],
+  headerV2: ['development', 'staging'],
 }

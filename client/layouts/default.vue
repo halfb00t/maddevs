@@ -1,6 +1,9 @@
 <template>
   <div class="default-layout">
-    <Header />
+    <div v-if="showHeaderV2">
+      Header V2
+    </div>
+    <Header v-else />
     <Nuxt class="main-section" />
     <ClientOnly>
       <CookieNotice />
@@ -15,6 +18,7 @@ import Header from '@/components/core/Header/Header'
 import Footer from '@/components/core/Footer/Footer'
 import initIntercom from '@/helpers/intercom'
 import CookieNotice from '@/components/core/CookieNotice'
+import featureFlag from '@/featureFlags/featureFlag'
 
 export default {
   name: 'Default',
@@ -40,6 +44,11 @@ export default {
 
   computed: {
     ...mapGetters(['showFooter']),
+
+    showHeaderV2() {
+      if (featureFlag('headerV2')) return true
+      return false
+    },
   },
 
   mounted() {
