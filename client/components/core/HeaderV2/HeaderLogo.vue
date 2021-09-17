@@ -38,7 +38,7 @@ export default {
 .fade-leave-active {
   transition: all 0.2s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+.fade-enter, .fade-leave-to /* .fade-leave-active was before 2.1.8 version */ {
   transform: translateY(-100px) translateX(5%) scale(0.9);
   opacity: 0;
 }
