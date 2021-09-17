@@ -16,3 +16,6 @@ jobs:
           wait-on: 'http://localhost:3000'
           browser: chrome
           headless: true
+        env:
+          NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
+          CI: true
