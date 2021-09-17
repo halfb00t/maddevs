@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    :to="getPostLink"
+    :to="postLink"
     class="customer-university__list-item"
   >
     <div class="single-cluster">
