@@ -10,7 +10,6 @@ export const state = () => ({
 export const mutations = {
   SET_CUSTOMER_UNIVERSITY_POSTS(state, data) {
     state.customerUniversityPosts = data
-    console.log(data, 'data')
   },
   SET_CUSTOMER_UNIVERSITY_POSTS_LOADED(state, value) {
     state.isCustomerUniversityPostsLoaded = value
