@@ -22,26 +22,6 @@
 import { mapGetters } from 'vuex'
 import HeaderSection from '@/components/core/HeaderV2/HeaderSection'
 
-// TODO: Need to transfer this constant to @/data/navigation.js
-const navigation = [
-  {
-    name: 'company',
-    label: 'Company',
-  },
-  {
-    name: 'services',
-    label: 'Services',
-  },
-  {
-    name: 'clients',
-    label: 'Clients',
-  },
-  {
-    name: 'insights',
-    label: 'Insights',
-  },
-]
-
 export default {
   name: 'HeaderNavigation',
   components: {
@@ -49,16 +29,15 @@ export default {
   },
 
   props: {
+    navigation: {
+      type: Array,
+      default: () => ([]),
+    },
+
     activeNavigation: {
       type: String,
       default: null,
     },
-  },
-
-  data() {
-    return {
-      navigation,
-    }
   },
 
   computed: {
