@@ -13,10 +13,11 @@ jobs:
         with:
           browser: chrome
           headless: true
-          start: npm run dev
+          build: npm run build
+          start: npm start
           wait-on: 'http://localhost:3000'
-          wait-on-timeout: 120
         env:
           FF_ENVIRONMENT: development
           NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
           CI: true
+          NODE_ENV: test

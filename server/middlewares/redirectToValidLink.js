@@ -2,7 +2,7 @@ function redirectToValidLink(req, res, next) {
   let link = null
 
   // Redirect to https if the request is http
-  if (process.env.NODE_ENV !== 'development') {
+  if (process.env.NODE_ENV === 'production') {
     if (!req.secure) link = `https://${req.headers.host}${req.url}`
   }
 
