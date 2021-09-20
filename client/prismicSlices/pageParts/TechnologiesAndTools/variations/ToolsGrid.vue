@@ -87,7 +87,7 @@ export default {
     }
 
     span {
-      @include font('Inter', 11px, 400);
+      @include font('Inter', 12px, 400);
       white-space: nowrap;
       line-height: 13px;
       color: rgba(255, 255, 255, 0.25);

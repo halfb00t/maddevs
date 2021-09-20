@@ -24,7 +24,7 @@
       data-testid="rich-text-card-variation"
     />
     <RichTextCardsAnimation
-      v-else-if="slice.variation === 'richTechCardsAnimations'"
+      v-else-if="slice.variation === 'richTextCardsAnimation'"
       v-bind="slice.primary"
       :items="slice.items"
       :data-aos="slice.primary.animation"
