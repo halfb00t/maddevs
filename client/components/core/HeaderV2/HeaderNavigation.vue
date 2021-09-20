@@ -12,6 +12,7 @@
       <HeaderSection
         v-if="headerContent[name]"
         v-bind="headerContent[name]"
+        :is-active="activeNavigation === name"
         :class="{ 'header-section--active': activeNavigation === name }"
       />
     </li>

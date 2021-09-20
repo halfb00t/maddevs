@@ -1,33 +1,36 @@
 <template>
-  <div
-    class="header-mobile-section"
-    :class="`header-mobile-section-${name}`"
-  >
-    <div class="header-mobile-section__scroll safary-only container">
-      <div class="header-mobile-section__content">
-        <button
-          type="button"
-          class="header-mobile-section__back-btn"
-          @click="close"
-        >
-          Back
-        </button>
-        <div class="header-mobile-section__menu">
-          <HeaderMobileMenu
-            v-for="(menu, idx) in mappedMenus"
-            :key="menu.name || `menu-${idx}`"
-            :is-active="menu.name === activeMenu"
-            :menu-name="menu.name"
-            :menu-routes="menu.routes"
-            :class="{
-              'header-mobile-menu--active': activeMenu === menu.name
-            }"
-            @changedActiveMobileMenu="setActiveMenu"
-          />
+  <transition name="fade">
+    <div
+      v-if="isActive"
+      class="header-mobile-section"
+      :class="`header-mobile-section-${name}`"
+    >
+      <div class="header-mobile-section__scroll safary-only container">
+        <div class="header-mobile-section__content">
+          <button
+            type="button"
+            class="header-mobile-section__back-btn"
+            @click="close"
+          >
+            Back
+          </button>
+          <div class="header-mobile-section__menu">
+            <HeaderMobileMenu
+              v-for="(menu, idx) in mappedMenus"
+              :key="menu.name || `menu-${idx}`"
+              :is-active="menu.name === activeMenu"
+              :menu-name="menu.name"
+              :menu-routes="menu.routes"
+              :class="{
+                'header-mobile-menu--active': activeMenu === menu.name
+              }"
+              @changedActiveMobileMenu="setActiveMenu"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -40,6 +43,11 @@ export default {
   },
 
   props: {
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
+
     name: {
       type: String,
       default: '',
@@ -102,17 +110,8 @@ export default {
   margin-right: calc(-50vw + 50%);
   padding-top: 68px;
   background-color: $bgcolor--black;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all .3s ease;
   @media screen and (max-width: 1012px) {
     padding-top: 48px;
-  }
-  &--active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
   }
 
   /deep/ button {
@@ -150,6 +149,21 @@ export default {
       color: $text-color--red;
     }
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: all .3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* iphone 5 */
