@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import TeamsForm from '@/components/core/forms/TeamsForm'
 import formBaseProps from '../../../__mocks__/formBaseProps'
 
-import delay from '../../../../client/helpers/delay'
+import delay from '../../../../../client/helpers/delay'
 
 jest.mock('@/api/ipInfo', () => (
   {

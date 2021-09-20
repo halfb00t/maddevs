@@ -1,5 +1,5 @@
 import { render } from '@testing-library/vue'
-import WatchWhatYouLikeVideo from '../../../../client/components/Cases/yourcast/WatchWhatYouLikeVideo'
+import WatchWhatYouLikeVideo from '@/components/Cases/yourcast/WatchWhatYouLikeVideo'
 
 const stubs = ['Picture']
 

@@ -2,6 +2,6 @@ const base = require('./base.config')
 
 module.exports = {
   ...base,
-  roots: ['./tests'],
+  roots: ['./tests/unit'],
   coverageDirectory: '<rootDir>/coverage/client',
 }

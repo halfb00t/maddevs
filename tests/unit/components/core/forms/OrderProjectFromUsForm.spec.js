@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import OrderProjectFromUsForm from '@/components/core/forms/OrderProjectFromUsForm'
 import formBaseProps from '../../../__mocks__/formBaseProps'
 
-import delay from '../../../../client/helpers/delay'
+import delay from '../../../../../client/helpers/delay'
 
 jest.mock('@/api/ipInfo', () => (
   {

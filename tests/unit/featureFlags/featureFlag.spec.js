@@ -1,6 +1,6 @@
 import { createLocalVue } from '@vue/test-utils'
 import Vuelidate from 'vuelidate'
-import featureFlag from '../../client/featureFlags/featureFlag'
+import featureFlag from '../../../client/featureFlags/featureFlag'
 
 const localVue = createLocalVue()
 

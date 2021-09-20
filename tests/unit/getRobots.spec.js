@@ -1,4 +1,4 @@
-import getRobots from '../utils/getRobots'
+import getRobots from '../../utils/getRobots'
 
 describe('getRobots util', () => {
   it('if env not "staging" will return { UserAgent: "*", Sitemap: "https://maddevs.io/sitemap.xml" }', () => {
