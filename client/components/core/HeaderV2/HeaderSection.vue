@@ -156,8 +156,7 @@ export default {
   }
 }
 
-.fade-enter-active,
-.fade-leave-active {
+.fade-enter-active {
   opacity: 1;
   transform: scaleY(1);
   pointer-events: auto;

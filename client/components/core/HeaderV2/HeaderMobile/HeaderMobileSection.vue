@@ -110,6 +110,7 @@ export default {
   margin-right: calc(-50vw + 50%);
   padding-top: 68px;
   background-color: $bgcolor--black;
+  transition: all .3s ease;
   @media screen and (max-width: 1012px) {
     padding-top: 48px;
   }
@@ -156,7 +157,6 @@ export default {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: all .3s ease;
 }
 
 .fade-enter,
