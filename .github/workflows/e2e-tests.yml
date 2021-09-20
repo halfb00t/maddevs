@@ -15,7 +15,7 @@ jobs:
           headless: true
           start: npm run dev
           wait-on: 'http://localhost:3000'
-          wait-on-timeout: 60
+          wait-on-timeout: 120
         env:
           FF_ENVIRONMENT: development
           NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
