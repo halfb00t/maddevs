@@ -49,12 +49,11 @@ export default {
 
 <style lang="scss" scoped>
 .tools-slice {
-  padding-top: 54px;
-
   &__grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1px 1px;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(9, 1fr);

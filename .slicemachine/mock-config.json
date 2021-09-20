@@ -427,6 +427,11 @@
         "primary": {},
         "items": {}
       }
-    }
+    },
+    "SingleImage": {}
+  },
+  "_cts": {
+    "singleimage": {},
+    "custom-page": {}
   }
 }
