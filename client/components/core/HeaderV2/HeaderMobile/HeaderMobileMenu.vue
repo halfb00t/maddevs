@@ -19,7 +19,7 @@
       @after-leave="transitionEnd"
     >
       <ul
-        v-if="isActive"
+        v-show="isActive"
         ref="mobileMenuList"
         class="header-mobile-menu__list"
       >

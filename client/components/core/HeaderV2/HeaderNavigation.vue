@@ -1,7 +1,7 @@
 <template>
   <ul class="header-navigation">
     <li
-      v-for="{ name, label } in navigation"
+      v-for="{name, label} in navigation"
       :key="name"
       class="header-navigation__item"
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"

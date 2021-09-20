@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div
-      v-if="isActive"
+      v-show="isActive"
       class="header-section"
       :class="`header-section-${name}`"
     >
