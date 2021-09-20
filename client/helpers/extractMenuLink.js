@@ -1,3 +1,12 @@
+const DOMAINS = [
+  'http://maddevs.co',
+  'https://maddevs.co',
+  'http://maddevs.io',
+  'https://maddevs.io',
+  'http://localhost:3000',
+  'https://localhost:3000',
+]
+
 export default ({
   link_type = '', // eslint-disable-line
   url = '/',
@@ -8,11 +17,13 @@ export default ({
   const linkType = link_type.toLowerCase()
 
   if (linkType === 'web') {
-    if (url.includes(process.env.domain)) {
+    const currentDomain = DOMAINS.find(domain => url.includes(domain))
+
+    if (currentDomain) {
       return {
         isExternalLink: false,
         target,
-        url: url.split(process.env.domain)[1],
+        url: url.split(currentDomain)[1],
       }
     }
     return {
@@ -22,15 +33,11 @@ export default ({
     }
   }
 
-  if (
-    linkType === 'document'
-    && (documentType === 'post' || documentType === 'customer_university')
-    && documentUID
-  ) {
+  if (linkType === 'document' && documentType === 'post' && documentUID) {
     return {
       isExternalLink: false,
       target: null,
-      url: this.getPostPath(documentType, documentUID),
+      url: `/blog/${documentUID}/`,
     }
   }
 
