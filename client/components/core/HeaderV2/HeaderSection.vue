@@ -1,32 +1,29 @@
 <template>
-  <transition name="fade">
-    <div
-      v-show="isActive"
-      class="header-section"
-      :class="`header-section-${name}`"
-    >
-      <div class="container">
-        <div class="header-section__content">
-          <div class="header-section__menus">
-            <HeaderMenu
-              v-for="(menu, idx) in menus"
-              :key="menu.name || `menu-${idx}`"
-              :menu-name="menu.name"
-              :menu-routes="menu.routes"
-            />
-          </div>
-          <hr class="header-section__divider">
-          <div class="header-section__post">
-            <HeaderPost
-              v-bind="post"
-              :post-type="post.type"
-              :post-author="postAuthor"
-            />
-          </div>
+  <div
+    class="header-section"
+    :class="`header-section-${name}`"
+  >
+    <div class="container">
+      <div class="header-section__content">
+        <div class="header-section__menus">
+          <HeaderMenu
+            v-for="(menu, idx) in menus"
+            :key="menu.name || `menu-${idx}`"
+            :menu-name="menu.name"
+            :menu-routes="menu.routes"
+          />
+        </div>
+        <hr class="header-section__divider">
+        <div class="header-section__post">
+          <HeaderPost
+            v-bind="post"
+            :post-type="post.type"
+            :post-author="postAuthor"
+          />
         </div>
       </div>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>
@@ -92,6 +89,17 @@ export default {
   background: rgba(17, 17, 17, 0.85);
   backdrop-filter: blur(16px);
   transform-origin: top;
+  opacity: 0;
+  transform: scaleY(0);
+  pointer-events: none;
+  visibility: hidden;
+  transition: all .5s ease;
+  &--active {
+    opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
+    visibility: visible;
+  }
 
   a {
     color: $text-color--white-primary;
@@ -154,21 +162,5 @@ export default {
       max-width: 340px;
     }
   }
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transform: scaleY(1);
-  pointer-events: auto;
-  visibility: visible;
-  transition: all .5s ease;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-  transform: scaleY(0);
-  pointer-events: none;
-  visibility: hidden;
 }
 </style>
