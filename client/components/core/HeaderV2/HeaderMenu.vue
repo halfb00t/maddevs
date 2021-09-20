@@ -11,7 +11,7 @@
     </p>
     <ul class="header-menu__list">
       <li
-        v-for="{label, link} in menuRoutes"
+        v-for="{ label, link } in menuRoutes"
         :key="label"
         class="header-menu__item"
       >

@@ -12,7 +12,7 @@
       <span class="header-mobile-menu__button-icon">↓</span>
     </button>
     <transition
-      name="accordion"
+      name="collapse"
       @enter="transitionStart"
       @after-enter="transitionEnd"
       @before-leave="transitionStart"
@@ -86,7 +86,7 @@ export default {
     },
 
     transitionEnd(el) {
-      el.style.height = ''
+      el.style.height = null
     },
   },
 }
@@ -160,15 +160,15 @@ export default {
   }
 }
 
-/deep/ .accordion-enter-active,
-/deep/ .accordion-leave-active {
+.collapse-enter-active,
+.collapse-leave-active {
   will-change: height, opacity;
   transition: height 0.35s ease-in-out, opacity 0.35s ease-in-out;
   overflow: hidden;
 }
 
-/deep/ .accordion-enter,
-/deep/ .accordion-leave-to {
+.collapse-enter,
+.collapse-leave-to {
   height: 0 !important;
   opacity: 0;
 }

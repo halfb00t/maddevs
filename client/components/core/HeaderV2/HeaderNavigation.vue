@@ -1,7 +1,7 @@
 <template>
   <ul class="header-navigation">
     <li
-      v-for="{ name, label } in navigation"
+      v-for="{name, label} in navigation"
       :key="name"
       class="header-navigation__item"
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
@@ -12,6 +12,7 @@
       <HeaderSection
         v-if="headerContent[name]"
         v-bind="headerContent[name]"
+        :is-active="activeNavigation === name"
         :class="{ 'header-section--active': activeNavigation === name }"
       />
     </li>

@@ -16,7 +16,7 @@
       <HeaderMobileSection
         v-if="headerContent[name]"
         v-bind="headerContent[name]"
-        :is-active="(activeNavigation === name)"
+        :is-active="activeNavigation === name"
         :class="{ 'header-mobile-section--active': activeNavigation === name }"
         @closedMobileSection="activeNavigation = null"
       />
