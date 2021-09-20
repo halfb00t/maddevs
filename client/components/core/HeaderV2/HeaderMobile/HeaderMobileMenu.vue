@@ -142,6 +142,10 @@ export default {
     }
   }
 
+  &__list {
+    overflow: hidden;
+  }
+
   &__route {
     @include font('Inter', 24px, 400);
     line-height: 31px;
