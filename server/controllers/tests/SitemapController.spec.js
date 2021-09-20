@@ -1,4 +1,4 @@
-import { getSitemap } from './SitemapController'
+import { getSitemap } from '../SitemapController'
 
 describe('SitemapController function', () => {
   it('should return true and print error if config not include flag', () => {
