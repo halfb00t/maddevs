@@ -216,11 +216,13 @@ export default {
   background: rgba(17, 17, 17, 0.85);
   backdrop-filter: blur(16px);
   transform-origin: top;
+  pointer-events: none;
   transform: scaleY(0);
   opacity: 0;
   visibility: hidden;
   transition: all 0;
   &--active {
+    pointer-events: auto;
     transform: scaleY(1);
     opacity: 1;
     visibility: visible;

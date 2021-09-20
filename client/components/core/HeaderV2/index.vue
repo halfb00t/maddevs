@@ -23,6 +23,7 @@
             </NuxtLink>
             <nav class="header__navigation">
               <HeaderNavigation
+                :navigation="navigation"
                 :active-navigation="activeNavigation"
                 @changedNavigation="setNavigation"
               />
@@ -137,6 +138,26 @@ import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
 import HeaderMobile from '@/components/core/Header/HeaderMobile'
 import ModalSearch from '@/components/core/modals/ModalSearch'
 
+// TODO: Need to transfer this constant to @/data/navigation.js
+const navigation = [
+  {
+    name: 'company',
+    label: 'Company',
+  },
+  {
+    name: 'services',
+    label: 'Services',
+  },
+  {
+    name: 'clients',
+    label: 'Clients',
+  },
+  {
+    name: 'insights',
+    label: 'Insights',
+  },
+]
+
 export default {
   name: 'HeaderV2',
   components: {
@@ -151,6 +172,7 @@ export default {
 
   data() {
     return {
+      navigation,
       activeNavigation: null,
       showLogoText: true,
       isActiveModalSearch: false,
@@ -288,7 +310,7 @@ export default {
     background-color: transparent;
   }
 
-  button {
+  /deep/ button {
     border: 0px solid;
     cursor: pointer;
     outline: none;
