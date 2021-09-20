@@ -23,4 +23,4 @@ jobs:
         NODE_JEST_COVERAGE_SLACK_WEBHOOK_URL: ${{ secrets.JEST_COVERAGE_SLACK_WEBHOOK_URL }}
         NODE_CYPRESS_BASE_URL: http://localhost:3000
         CI: true
-        NODE_ENV: production
+        NODE_ENV: test
