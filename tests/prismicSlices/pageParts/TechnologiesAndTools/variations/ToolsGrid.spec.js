@@ -21,8 +21,7 @@ const items = [
 
 describe('ToolsGrid slice data-aos animation attribute', () => {
   it('should render correctly with data', () => {
-    const props = getFakePropsByParams(apiData)
-    props.slice.items = [...items]
+    const props = getFakePropsByParams(apiData, { items })
 
     const { container } = render(ToolsGrid, {
       directives,

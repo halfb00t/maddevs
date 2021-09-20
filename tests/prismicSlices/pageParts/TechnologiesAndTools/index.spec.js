@@ -16,8 +16,9 @@ const apiData = {
 
 describe('Technologies and Tools Grid slice', () => {
   it('should correctly render TechnologiesAndTools component', () => {
-    const props = getFakePropsByParams(apiData)
-    props.slice.variation = 'default-slice'
+    const variation = 'default-slice'
+    const props = getFakePropsByParams(apiData, { variation })
+
     const { container } = render(TechnologiesAndTools, {
       props,
     })
@@ -28,8 +29,9 @@ describe('Technologies and Tools Grid slice', () => {
   })
 
   it('should correctly render CardGridWithIcon component', () => {
-    const props = getFakePropsByParams(apiData)
-    props.slice.variation = 'not-default-slice'
+    const variation = 'not-default-slice'
+    const props = getFakePropsByParams(apiData, { variation })
+
     const { container } = render(TechnologiesAndTools, {
       props,
     })

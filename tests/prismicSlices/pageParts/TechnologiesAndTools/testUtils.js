@@ -1,7 +1,8 @@
-export const getFakePropsByParams = params => ({
+export const getFakePropsByParams = (primaryParams, params = {}) => ({
   slice: {
     primary: {
-      ...params,
+      ...primaryParams,
     },
+    ...params,
   },
 })

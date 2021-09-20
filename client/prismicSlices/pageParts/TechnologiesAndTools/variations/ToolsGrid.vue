@@ -50,22 +50,14 @@ export default {
 <style lang="scss" scoped>
 .tools-slice {
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: repeat(9, 1fr);
-    }
-
-    @media screen and (max-width: 568px) {
-      grid-template-columns: repeat(6, 1fr);
-    }
   }
 
   &__technology {
-    width: 100%;
+    width: 90px;
     height: 90px;
     display: flex;
     flex-direction: column;

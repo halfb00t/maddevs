@@ -114,10 +114,11 @@ export default {
     max-width: 1113px;
   }
   &__title {
-    @include font('Inter', 64px, 700);
+    @include font('Inter', 100px, 700);
     line-height: 79px;
     letter-spacing: -2px;
     color: $text-color--white-primary;
+    margin-bottom: 50px;
     @media screen and (max-width: 768px) {
       font-size: 42px;
       line-height: 48px;
@@ -135,14 +136,12 @@ export default {
     @include font('Inter', 32px, 600);
     line-height: 44px;
     letter-spacing: -1px;
-    margin-top: 10px;
     color: $text-color--white-primary;
     @media screen and (max-width: 1024px) {
       font-size: 32px;
       line-height: 44px;
     }
     @media screen and (max-width: 768px) {
-      margin-top: 8px;
       font-size: 21px;
       line-height: 30px;
     }
