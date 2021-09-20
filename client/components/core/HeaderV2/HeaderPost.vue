@@ -70,8 +70,8 @@ export default {
     },
 
     title: {
-      type: String,
-      default: '',
+      type: Array,
+      default: () => ([]),
       required: true,
     },
 

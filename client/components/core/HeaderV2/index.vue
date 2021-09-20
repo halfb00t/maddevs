@@ -110,6 +110,7 @@
 
     <HeaderMobile
       v-if="isActiveMobileMenu"
+      :navigation="navigation"
       @changed-page="onChangePage"
       @open-modal="showModal"
     />
@@ -133,10 +134,10 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import scrollOnBody from '@/mixins/scrollOnBody'
+import ModalSearch from '@/components/core/modals/ModalSearch'
 import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
 import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
-import HeaderMobile from '@/components/core/Header/HeaderMobile'
-import ModalSearch from '@/components/core/modals/ModalSearch'
+import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
 
 // TODO: Need to transfer this constant to @/data/navigation.js
 const navigation = [
@@ -253,7 +254,7 @@ export default {
 
     handleMobileMenuScroll(e) {
       e.stopImmediatePropagation()
-      this.handleLogo(this.mobileHeaderScrollbar.scrollTop)
+      this.handleLogo(e.target.scrollTop)
     },
 
     toggleMobileMenu() {
@@ -261,14 +262,11 @@ export default {
       if (this.isActiveMobileMenu) {
         this.disableScrollOnBody()
         this.$nextTick(() => {
-          this.mobileHeaderScrollbar = document.getElementById('mobile-header-scrollbar')
-          this.mobileHeaderScrollbar.addEventListener('scroll', this.handleMobileMenuScroll)
-          this.mobileHeaderScrollbar.addEventListener('touchmove', this.handleMobileMenuScroll)
+          document.addEventListener('scroll', this.handleMobileMenuScroll, true)
         })
       } else {
         this.enableScrollOnBody()
-        this.mobileHeaderScrollbar.removeEventListener('scroll', this.handleMobileMenuScroll)
-        this.mobileHeaderScrollbar.removeEventListener('touchmove', this.handleMobileMenuScroll)
+        document.removeEventListener('scroll', this.handleMobileMenuScroll, true)
       }
     },
 
