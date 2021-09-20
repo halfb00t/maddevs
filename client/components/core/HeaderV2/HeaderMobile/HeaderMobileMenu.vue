@@ -6,41 +6,59 @@
     <button
       type="button"
       class="header-mobile-menu__button"
-      @click="setActiveMenu"
+      @click="open"
     >
       <span class="header-mobile-menu__button-label">{{ menuName }}</span>
       <span class="header-mobile-menu__button-icon">↓</span>
     </button>
-    <div
-      ref="mobileMenuDropdown"
-      class="header-mobile-menu__dropdown"
+    <transition
+      name="accordion"
+      @enter="transitionStart"
+      @after-enter="transitionEnd"
+      @before-leave="transitionStart"
+      @after-leave="transitionEnd"
     >
       <ul
+        v-show="isActive"
         ref="mobileMenuList"
         class="header-mobile-menu__list"
       >
         <li
-          v-for="{ label } in menuRoutes"
+          v-for="{ label, link } in menuRoutes"
           :key="label"
           class="header-mobile-menu__route"
         >
+          <NuxtLink
+            v-if="!extractMenuLink(link).isExternalLink"
+            :to="extractMenuLink(link).url"
+          >
+            {{ label }}
+          </NuxtLink>
           <a
-            href="#"
-            class="header-mobile-menu__route-link"
+            v-else
+            :href="extractMenuLink(link).url"
+            :target="extractMenuLink(link).target"
           >
             {{ label }}
           </a>
         </li>
       </ul>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script>
+import extractMenuLink from '@/helpers/extractMenuLink'
+
 export default {
   name: 'HeaderMobileMenu',
 
   props: {
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
+
     menuName: {
       type: String,
       default: '',
@@ -53,8 +71,22 @@ export default {
   },
 
   methods: {
-    setActiveMenu() {
-      this.$emit('changedActiveMobileMenu', this.menuName)
+    extractMenuLink,
+
+    open() {
+      if (this.isActive) {
+        this.$emit('changedActiveMobileMenu', null)
+      } else {
+        this.$emit('changedActiveMobileMenu', this.menuName)
+      }
+    },
+
+    transitionStart(el) {
+      el.style.height = `${el.scrollHeight}px`
+    },
+
+    transitionEnd(el) {
+      el.style.height = ''
     },
   },
 }
@@ -64,22 +96,14 @@ export default {
 .header-mobile-menu {
   border-bottom: 1px solid $border-color--grey-dark-transparent;
   &:first-of-type {
-    border: 0px solid;
+    border-top: 1px solid $border-color--grey-dark-transparent;
   }
-  &--active {
-    .header-mobile-menu {
-      &__button {
-          &-label {
-          color: $text-color--red;
-        }
-        &-icon {
-          transform: rotate(0);
-        }
-      }
-      &__dropdown {
-        max-height: none;
-        pointer-events: auto;
-      }
+  &--active .header-mobile-menu__button {
+    &-label {
+      color: $text-color--red;
+    }
+    &-icon {
+      transform: rotate(0);
     }
   }
   &__button {
@@ -118,30 +142,34 @@ export default {
     }
   }
 
-  &__dropdown {
-    transition: all .5s ease-in-out;
-    max-height: 0px;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
   &__route {
     @include font('Inter', 24px, 400);
     line-height: 31px;
     letter-spacing: -0.04em;
     color: $text-color--grey-opacity-20-percent;
     border-top: 1px solid $border-color--grey-dark-transparent;
-    &:hover {
-      .header-mobile-menu__route-link {
-        color: $text-color--red;
-      }
+    &:hover a {
+      color: $text-color--red;
     }
-    &-link {
+    a {
       display: block;
       padding: 18px 0;
       color: $text-color--grey-opacity-20-percent;
       transition: all .15s ease;
     }
   }
+}
+
+/deep/ .accordion-enter-active,
+/deep/ .accordion-leave-active {
+  will-change: height, opacity;
+  transition: height 0.35s ease-in-out, opacity 0.35s ease-in-out;
+  overflow: hidden;
+}
+
+/deep/ .accordion-enter,
+/deep/ .accordion-leave-to {
+  height: 0 !important;
+  opacity: 0;
 }
 </style>

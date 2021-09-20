@@ -64,16 +64,8 @@ export default {
   &__item {
     display: block;
     border-bottom: 1px solid $border-color--grey-dark-transparent;
-    &:first-child {
-      .header-mobile-navigation__item-button {
-        padding-top: 0;
-      }
-    }
-    &:last-child {
-      border: 0px solid;
-      .header-mobile-navigation__item-button {
-        padding-bottom: 0;
-      }
+    &:first-of-type {
+      border-top: 1px solid $border-color--grey-dark-transparent;
     }
     &:hover {
       .header-mobile-navigation__item-label {

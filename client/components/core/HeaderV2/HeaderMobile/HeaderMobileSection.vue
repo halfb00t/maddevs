@@ -76,15 +76,12 @@ export default {
 
   methods: {
     close() {
+      this.activeMenu = null
       this.$emit('closedMobileSection')
     },
 
     setActiveMenu(menuName) {
-      if (this.activeMenu === menuName) {
-        this.activeMenu = null
-      } else {
-        this.activeMenu = menuName
-      }
+      this.activeMenu = menuName
     },
   },
 }
