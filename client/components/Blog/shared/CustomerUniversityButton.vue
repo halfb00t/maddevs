@@ -1,5 +1,8 @@
 <template>
-  <button :class="`customer-university__btn customer-university__btn--${size}`">
+  <button
+    :class="`customer-university__btn customer-university__btn--${size}`"
+    @click="handleClick"
+  >
     {{ label }}
   </button>
 </template>
@@ -15,6 +18,12 @@ export default {
     size: {
       type: String,
       default: 'md',
+    },
+  },
+
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
     },
   },
 }

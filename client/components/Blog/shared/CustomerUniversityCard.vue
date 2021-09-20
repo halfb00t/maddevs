@@ -17,7 +17,10 @@
         :to="`/customer-university/${postId}/`"
         class="featured-post__info"
       >
-        <span class="featured-post__date">{{ date }}</span>
+        <span
+          v-if="isMain"
+          class="featured-post__date"
+        >{{ date }}</span>
         <h2 class="featured-post__title">
           {{ $prismic.asText(title).replace(/^[0-9]*\. /, '') }}
         </h2>
@@ -25,7 +28,7 @@
           {{ firstParagraph }}
         </p>
         <PostAuthor
-          v-if="author"
+          v-if="author && isMain"
           v-bind="author"
           theme="dark"
         />
@@ -77,6 +80,11 @@ export default {
     direction: {
       type: String,
       default: 'column',
+    },
+
+    isMain: {
+      type: Boolean,
+      default: false,
     },
   },
 
