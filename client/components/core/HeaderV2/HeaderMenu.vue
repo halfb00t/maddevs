@@ -1,5 +1,8 @@
 <template>
-  <div class="header-menu">
+  <div
+    v-if="menuRoutes && menuRoutes.length"
+    class="header-menu"
+  >
     <p
       v-if="menuName"
       class="header-menu__name"
