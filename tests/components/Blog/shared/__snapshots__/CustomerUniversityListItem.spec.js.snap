@@ -4,6 +4,7 @@ exports[`CustomerUniversityListItem component should render correctly with data 
 <div>
   <nuxtlink
     class="customer-university__list-item"
+    to=""
   >
     <div
       class="single-cluster"
