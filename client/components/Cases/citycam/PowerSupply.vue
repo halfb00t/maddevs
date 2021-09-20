@@ -47,15 +47,17 @@
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
-      <h3 class="case_title_h3 case_subtitle p-48_top m-42_bottom media-m-24_bottom">
-        Board tracing
-      </h3>
-      <Lottie
-        id="power-supply"
-        class="case_lottie"
-        :options="options"
-        @animCreated="handleAnimation"
-      />
+      <div class="container_regular">
+        <h2 class="case_title_h2 case_subtitle p-48_top media-p-24_top m-24_bottom media-m-12_bottom">
+          Board tracing
+        </h2>
+        <Lottie
+          id="power-supply"
+          class="case_lottie"
+          :options="options"
+          @animCreated="handleAnimation"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -100,9 +102,15 @@ export default {
 .case {
   &_lottie {
     padding-bottom: 48px;
+    @media screen and (max-width: 576px) {
+      padding-bottom: 24px;
+    }
   }
   &_subtitle{
     text-align: center;
+    @media screen and (max-width: 576px) {
+      font-size: 20px;
+    }
   }
 }
 </style>

@@ -51,6 +51,7 @@ exports[`StartScreen slice should render correctly without data 1`] = `
     id="transparent-header-area"
   >
     <img
+      alt="Image"
       class="start-screen-slice__image"
       data-testid="start-screen-slice__image"
       height="969"

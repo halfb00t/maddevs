@@ -9,7 +9,7 @@
         framerate of 1 to 30, and automatic night vision. Low power consumption still was our main achievement: the
         device uses less than 300 mW in the sleep mode and less than 1.5 W in the active mode.
       </TextParagraph>
-      <TextParagraph class="m-48_bottom media-m-24-bottom">
+      <TextParagraph class="m-48_bottom media-m-24_bottom">
         Another major strength of the revised device was the use of solar energy. We added an adjustable solar charge
         controller with MPPT: the default voltage is 18 V, and the charging current can go up to 4 amps. In a sunny
         place, thanks to its +20 W solar cell and +15 Ah battery, the device can work 24/7 with no charge in the active
@@ -17,7 +17,7 @@
       </TextParagraph>
     </div>
     <div
-      class="container_middle m-96_bottom media-m-48_bottom slider"
+      class="container_middle case_swiper m-96_bottom media-m-48_bottom"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
@@ -88,6 +88,12 @@ export default {
     font-weight: 700;
   }
 
+  &_swiper{
+    @media screen and (max-width: 440px) {
+      padding: 0;
+    }
+  }
+
   &_img-wrapper {
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
   }
@@ -124,6 +130,12 @@ export default {
 
 /deep/ .list-item_dot {
   margin-bottom: 0;
+}
+
+/deep/ .gallery-thumbs{
+  @media screen and (max-width: 440px) {
+    display: none;
+  }
 }
 
 /deep/ .swiper.gallery-thumbs .swiper-slide {

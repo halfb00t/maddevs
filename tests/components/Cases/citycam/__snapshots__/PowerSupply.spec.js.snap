@@ -158,19 +158,23 @@ exports[`PowerSupply component should render correctly 1`] = `
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
-      <h3
-        class="case_title_h3 case_subtitle p-48_top m-42_bottom media-m-24_bottom"
+      <div
+        class="container_regular"
       >
-        
-      Board tracing
-    
-      </h3>
-       
-      <lottie-stub
-        class="case_lottie"
-        id="power-supply"
-        options="[object Object]"
-      />
+        <h2
+          class="case_title_h2 case_subtitle p-48_top media-p-24_top m-24_bottom media-m-12_bottom"
+        >
+          
+        Board tracing
+      
+        </h2>
+         
+        <lottie-stub
+          class="case_lottie"
+          id="power-supply"
+          options="[object Object]"
+        />
+      </div>
     </div>
   </section>
 </div>

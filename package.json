@@ -25,7 +25,7 @@
     "test:staging": "node ./jest && node ./jest/utils/sendCoverageToSlack.js",
     "test:e2e": "cypress run",
     "generate:coverage-badges": "node ./jest/utils/generateCoverageBadges.js -output './client/static'",
-    "seo-analyze": "npm run generate && node ./SEOAnalyzer/index.js",
+    "seo-analyze": "node ./SEOAnalyzer/index.js",
     "slicemachine": "start-slicemachine --port 9999",
     "storybook": "nuxt storybook",
     "build-storybook": "nuxt storybook build"
@@ -56,7 +56,7 @@
     "img-comparison-slider": "^7.2.0",
     "mobile-device-detect": "^0.4.3",
     "multer": "^1.4.2",
-    "nuxt": "^2.15.7",
+    "nuxt": "2.15.8",
     "nuxt-i18n": "^6.28.0",
     "nuxt-lazy-load": "^1.2.6",
     "nuxt-sm": "0.0.8",

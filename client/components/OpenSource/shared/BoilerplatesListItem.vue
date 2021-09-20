@@ -25,7 +25,7 @@
         v-lazy-load
         class="boilerplates-list__item-logo"
         :data-src="$getMediaFromS3(`/images/OpenSource/svg/${logo.name}.svg`)"
-        :alt="logo.alt"
+        :alt="logo.alt || 'Image'"
         :width="logo.width"
         :height="logo.height"
       >

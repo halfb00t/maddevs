@@ -12,7 +12,7 @@
     >
       <img
         :src="authorImage.url"
-        :alt="authorImage.alt"
+        :alt="authorImage.alt || 'Image'"
         width="40"
         height="40"
       >
@@ -129,6 +129,7 @@ export default {
   max-width: 100%;
   display: inline-flex;
   align-items: center;
+  overflow: hidden;
   &--dark-theme {
     .post-author {
       &__image,
@@ -188,7 +189,7 @@ export default {
 
   &__position {
     display: inline;
-    color: $text-color--grey-pale;
+    color: $text-color--grey-matterhorn;
   }
 
   &__date {

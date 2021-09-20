@@ -20,7 +20,7 @@ const mocks = {
   $getMediaFromS3: () => {},
 }
 
-const stubs = ['NuxtLink', 'FeaturedPost', 'CustomerUniversitySection', 'PostCard']
+const stubs = ['NuxtLink', 'FeaturedPost', 'NewCustomerUniversitySection', 'CustomerUniversitySection', 'PostCard']
 
 const store = {
   getters: {

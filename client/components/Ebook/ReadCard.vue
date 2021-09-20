@@ -8,7 +8,7 @@
       width="288"
       height="178"
       :data-src="img.url"
-      :alt="img.alt"
+      :alt="img.alt || 'Image'"
     >
     <h3>{{ title }}</h3>
   </NuxtLink>

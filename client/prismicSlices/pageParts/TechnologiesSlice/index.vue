@@ -48,7 +48,7 @@
           <img
             v-lazy-load
             :data-src="require(`@/assets/img/Home/svg/technologies/${technology.value}.svg`)"
-            :alt="technology.title"
+            :alt="technology.title || 'Image'"
             width="26"
             height="26"
           >

@@ -4,7 +4,7 @@ exports[`About component should render correctly 1`] = `
 <div>
   <section>
     <section
-      class="container_regular m-48_top media-m-24_top m-24_bottom media-m-48_bottom"
+      class="container_regular m-48_top media-m-24_top m-48_bottom media-m-24_bottom"
     >
       <p
         class="case_paragraph"
@@ -21,10 +21,9 @@ exports[`About component should render correctly 1`] = `
     </section>
      
     <section
-      class="container_full background-color-gray-light m-72_bottom media-m-24_bottom"
+      class="container_regular m-72_bottom media-m-48_bottom"
     >
       <div
-        class="case_lottie"
         id="about-citycam"
         style="width: 100%; height: 100%; overflow: hidden; margin: 0px auto;"
       >

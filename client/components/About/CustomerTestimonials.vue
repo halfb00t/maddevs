@@ -41,7 +41,7 @@
                 <img
                   v-lazy-load
                   :data-src="require(`@/assets/img/Home/png/customers/${testimonial.customerImageName}.png`)"
-                  :alt="testimonial.alt"
+                  :alt="testimonial.alt || 'Image'"
                   class="customer-testimonials__customer-image"
                   width="42"
                   height="42"
@@ -60,7 +60,7 @@
                     v-lazy-load
                     :data-src="require(`@/assets/img/Home/svg/testimonials/${testimonial.customerProject}.svg`)"
                     :class="`customer-testimonials__${testimonial.customerProject}`"
-                    :alt="testimonial.alt"
+                    :alt="testimonial.alt || 'Image'"
                     :width="testimonial.logoWidth"
                     height="31"
                     class="single-project__logo"

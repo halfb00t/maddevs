@@ -4,7 +4,7 @@
       v-if="name"
       v-lazy-load
       :data-src="require(`@/assets/img/Home/svg/technologies/${name}.svg`)"
-      :alt="imgAlt || alt"
+      :alt="imgAlt || alt || 'Image'"
       width="40"
       height="40"
       class="case_technologies-item__tech-icon"
@@ -12,7 +12,7 @@
     >
     <p
       v-if="alt"
-      class="case_technologies-item__tech-name"
+      :class="`case_technologies-item__tech-name tech-${name}`"
     >
       {{ alt }}
     </p>
@@ -76,8 +76,25 @@ export default {
     width: 59px;
   }
 
-  &__asp-net {
+  &__asp-net,
+  &__minio{
     width: 60px;
+  }
+
+  &__st-microelectronics{
+    width:50px;
+  }
+  &__texas-instruments{
+    width: 73px;
+  }
+  &__arm{
+    width:48px;
+  }
+  &__solidworks{
+    width:37px;
+  }
+  &__altium-designer{
+    width:67px;
   }
 
   @media screen and (max-width: 768px) {
@@ -104,11 +121,26 @@ export default {
       width: 62px;
     }
 
-    &__plex {
+    &__solidworks{
+      width:17px;
+    }
+
+    &__st-microelectronics,
+    &__arm {
+      width:23px;
+    }
+
+    &__texas-instruments{
+      width: 33px;
+    }
+
+    &__plex,
+    &__altium-designer{
       width: 28px;
     }
 
-    &__asp-net {
+    &__asp-net,
+    &__minio{
       width: 30px;
     }
 

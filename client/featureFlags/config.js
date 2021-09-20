@@ -4,5 +4,8 @@
  * Available environments - [development, staging, production]
  */
 export const config = {
-  cityCamCase: ['development', 'staging'],
+  blogComments: ['development', 'staging'],
+  newCustomerUniversitySection: ['development'],
+  customerUniversitySection: ['production', 'staging'],
+  headerV2: ['development', 'staging'],
 }

@@ -10,7 +10,7 @@
           <img
             v-lazy-load
             :data-src="img.url"
-            :alt="img.alt"
+            :alt="img.alt || 'Image'"
             width="632"
             height="170"
           >
@@ -23,7 +23,7 @@
           <img
             v-lazy-load
             :data-src="img.url"
-            :alt="img.alt"
+            :alt="img.alt || 'Image'"
             width="680"
             height="170"
           >

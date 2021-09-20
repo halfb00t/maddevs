@@ -14,7 +14,7 @@
           v-lazy-load
           :width="logoWidth"
           :data-src="require(`@/assets/img/Home/svg/caseIcons/${logo}.svg`)"
-          :alt="alt"
+          :alt="alt || 'Image'"
           height="41"
           class="single-project__logo"
         >
@@ -62,7 +62,7 @@
             v-lazy-load
             :data-src="[require(`@/assets/img/Studies/${extension}/${background}.${extension}`)]"
             :data-srcset="[require(`@/assets/img/Studies/${extension}/${background}.${extension}`) + ' 2x']"
-            :alt="alt"
+            :alt="alt || 'Image'"
             width="610"
             height="294"
           >

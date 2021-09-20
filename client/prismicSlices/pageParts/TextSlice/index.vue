@@ -11,7 +11,7 @@
           :data-aos="slice.primary.animation"
         />
         <Title
-          v-else-if="size && slice.variation === 'title'"
+          v-else-if="slice.variation === 'title'"
           v-bind="slice.primary"
           :size="size"
           :data-aos="slice.primary.animation"
@@ -27,7 +27,7 @@
           :data-aos="slice.primary.animation"
         />
         <Paragraph
-          v-else-if="size && slice.variation === 'paragraph'"
+          v-else-if="slice.variation === 'paragraph'"
           v-bind="slice.primary"
           :size="size"
           :data-aos="slice.primary.animation"
@@ -76,7 +76,7 @@ export default {
 
   data() {
     return {
-      size: null,
+      size: 'size-md',
     }
   },
 

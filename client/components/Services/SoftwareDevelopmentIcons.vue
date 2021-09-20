@@ -9,7 +9,7 @@
       <img
         v-lazy-load
         :data-src="require(`@/assets/img/Home/svg/technologies/${icon.name}.svg`)"
-        :alt="icon.alt"
+        :alt="icon.alt || 'Image'"
         width="26"
         height="26"
       >
