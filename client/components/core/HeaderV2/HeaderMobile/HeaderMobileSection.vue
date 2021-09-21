@@ -97,6 +97,7 @@ export default {
 
 <style lang="scss" scoped>
 .header-mobile-section {
+  overflow: hidden;
   cursor: auto;
   z-index: 3;
   position: fixed;
@@ -104,11 +105,10 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding-top: 68px;
+  min-height: calc(100vh - (100vh - 100%)); // 100vh height for mobile Safari browser
+  padding-top: 63px; // 63px - height of sticky header
   background-color: $bgcolor--black;
   transition: all .3s ease;
   @media screen and (max-width: 1012px) {
@@ -125,12 +125,12 @@ export default {
 
   &__scroll {
     position: relative;
-    height: calc(100vh - 62px);
+    height: calc(100vh - 63px);
     overflow: auto;
   }
 
   &__content {
-    padding-top: 54px;
+    padding-top: 44px;
     padding-bottom: 25px;
   }
 
@@ -142,8 +142,7 @@ export default {
     cursor: pointer;
     line-height: 21px;
     letter-spacing: -0.04em;
-    padding: 8px 0;
-    margin-bottom: 10px;
+    padding: 18px 0;
     color: $text-color--grey-pale;
     transition: all .15s ease;
     &:hover {

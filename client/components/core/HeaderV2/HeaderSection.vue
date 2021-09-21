@@ -74,18 +74,16 @@ export default {
 
 <style lang="scss" scoped>
 .header-section {
+  overflow: hidden;
   cursor: auto;
-  position: absolute;
-  top: 63px;
+  width: 100%;
+  height: auto;
+  min-height: 275px;
+  position: fixed;
+  top: 62px;
   right: 0;
   left: 0;
   padding: 24px 0;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  width: 100vw;
-  height: auto;
-  min-height: 275px;
-  overflow: hidden;
   background: rgba(17, 17, 17, 0.85);
   backdrop-filter: blur(16px);
   transform-origin: top;
