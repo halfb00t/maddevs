@@ -31,12 +31,16 @@
             v-bind="post.data"
             :author="findAuthor(post.data.post_author.id, allAuthors)"
             :post-id="post.uid"
+            :type="post.type"
             :is-main="isFirstElement(idx)"
-            :direction="calculateDirection(idx)"
+            :direction="calculateCardDirection(idx)"
+            :size="calculateCardSize(idx)"
           />
           <CustomerUniversityButton
-            label=" See more"
+            v-if="customerUniversityPost.redirectLink"
+            label="See more"
             size="md"
+            @click="redirectTo(customerUniversityPost.redirectLink)"
           />
         </div>
       </div>
@@ -61,13 +65,15 @@
           v-bind="madCommunityPost.data"
           :author="findAuthor(madCommunityPostToShow[0].data.post_author.id, allAuthors)"
           :post-id="madCommunityPost.uid"
+          :type="madCommunityPost.type"
           direction="row"
           :is-main="isFirstElement(idx)"
+          :size="calculateCardSize(idx)"
         />
       </div>
       <CustomerUniversityButton
         v-if="madCommunityPost.length > 3 && !isShowAllMadCommunityPosts"
-        label="See more"
+        label="All articles"
         size="lg"
         @click="isShowAllMadCommunityPosts=true"
       />
@@ -115,12 +121,22 @@ export default {
         pricing_strategies: pricingStrategies,
         development_process: developmentProcess,
       } = this.customerUniversitySectionPosts
-      const { pricingStrategiesInfo, developmentProcessInfo } = customerUniversitySectionData
+      const {
+        pricingStrategiesInfo,
+        developmentProcessInfo,
+      } = customerUniversitySectionData
       const allPosts = [...this.CUPosts, ...this.allPosts]
 
       return [
-        { ...pricingStrategiesInfo, posts: this.filterPosts(pricingStrategies, allPosts) },
-        { ...developmentProcessInfo, posts: this.filterPosts(developmentProcess, allPosts) },
+        {
+          ...pricingStrategiesInfo,
+          posts: this.filterPosts(pricingStrategies, allPosts),
+          redirectLink: '/insights/ebooks/pricing-strategies/',
+        },
+        {
+          ...developmentProcessInfo,
+          posts: this.filterPosts(developmentProcess, allPosts),
+        },
       ]
     },
 
@@ -145,9 +161,18 @@ export default {
       return idx === 0
     },
 
-    calculateDirection(idx) {
+    calculateCardDirection(idx) {
       if (idx === 0) return 'column'
       return 'row'
+    },
+
+    calculateCardSize(idx) {
+      if (idx === 0) return 'md'
+      return 'sm'
+    },
+
+    redirectTo(url) {
+      this.$router.push(url)
     },
   },
 
@@ -179,10 +204,6 @@ export default {
 
   &__columns {
     width: 100%;
-
-    .customer-university__featured-post {
-      width: 90%;
-    }
   }
 
   a {
@@ -194,6 +215,7 @@ export default {
     line-height: 137%;
     letter-spacing: -0.013em;
     color: $text-color--white-primary;
+    max-width: 1028px;
 
     &--yellow {
       color: $text-color--yellow;
@@ -216,16 +238,23 @@ export default {
 .mad-community {
   &__posts-section {
     margin-top: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     .customer-university__featured-post {
-      margin-bottom: 48px;
+      &:first-child {
+        margin-bottom: 48px;
+        width: 100%;
+      }
+      width: 48.8%;
+      margin-bottom: 24px;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin-bottom: 48px;
+      }
     }
-  }
-
-  &__posts-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 32px;
   }
 }
 
@@ -262,8 +291,6 @@ export default {
 
     &__hr {
       border: 1px solid #28282A;
-      margin: 32px 0 72px 0;
-
       &--margin {
         margin: 32px 0 72px 0;
       }
