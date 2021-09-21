@@ -662,6 +662,7 @@ export default {
 
   &__title {
     @include h2-title;
+    @include font('Inter', 62px, 700);
   }
 
   &__sec-title {
