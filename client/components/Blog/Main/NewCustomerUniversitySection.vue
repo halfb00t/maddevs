@@ -111,21 +111,23 @@ export default {
     ...mapGetters(['customerUniversitySectionPosts', 'CUPosts', 'allAuthors', 'allPosts']),
 
     customerUniversityPostsList() {
-      /* eslint-disable camelcase */
-      const { pricing_strategies, development_process } = this.customerUniversitySectionPosts
+      const {
+        pricing_strategies: pricingStrategies,
+        development_process: developmentProcess,
+      } = this.customerUniversitySectionPosts
       const { pricingStrategiesInfo, developmentProcessInfo } = customerUniversitySectionData
       const allPosts = [...this.CUPosts, ...this.allPosts]
 
       return [
-        { ...pricingStrategiesInfo, posts: this.filterPosts(pricing_strategies, allPosts) },
-        { ...developmentProcessInfo, posts: this.filterPosts(development_process, allPosts) },
+        { ...pricingStrategiesInfo, posts: this.filterPosts(pricingStrategies, allPosts) },
+        { ...developmentProcessInfo, posts: this.filterPosts(developmentProcess, allPosts) },
       ]
     },
 
     madCommunityPost() {
-      const { mad_community } = this.customerUniversitySectionPosts
+      const { mad_community: madCommunity } = this.customerUniversitySectionPosts
       const allPosts = [...this.CUPosts, ...this.allPosts]
-      return this.filterPosts(mad_community, allPosts) || []
+      return this.filterPosts(madCommunity, allPosts) || []
     },
 
     madCommunityPostToShow() {
