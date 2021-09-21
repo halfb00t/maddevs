@@ -14,7 +14,7 @@ const buildBlogPostMixin = (postType = 'post') => ({
       if (post.data.post_author) await store.dispatch('getBlogAuthor', post.data.post_author.uid)
 
       // Schema org snippet
-      schemaOrgSnippet = extractSchemaOrg(post.data.schema_org_snippets)
+      schemaOrgSnippet = extractSchemaOrg(post.data.schema_org_snippets, post)
 
       // Recommended posts
       post.recommendedPosts = post.recommendedPosts && post.recommendedPosts
