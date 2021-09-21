@@ -161,7 +161,7 @@ export const buildHead = ({
   script: [
     {
       type: 'application/ld+json',
-      innerHTML: jsonLd,
+      innerHTML: jsonLd || meta.blog.jsonLd,
     },
     ...scripts,
   ],
