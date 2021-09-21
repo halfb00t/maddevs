@@ -1,8 +1,8 @@
 <template>
-  <div class="customer-university__featured-post">
+  <div :class="`customer-university__featured-post customer-university__featured-post--${size}`">
     <div :class="`featured-post featured-post--${direction}`">
       <NuxtLink
-        :to="`/customer-university/${postId}/`"
+        :to="postLink"
         class="featured-post__image"
       >
         <img
@@ -10,7 +10,7 @@
           :data-src="featured_image.url"
           :alt="featured_image.alt"
           width="560"
-          height="347"
+          height="311"
         >
       </NuxtLink>
       <NuxtLink
@@ -22,7 +22,10 @@
           class="featured-post__date"
         >{{ date }}</span>
         <h2 class="featured-post__title">
-          {{ $prismic.asText(title).replace(/^[0-9]*\. /, '') }}
+          {{
+            $prismic.asText(title)
+              .replace(/^[0-9]*\. /, '')
+          }}
         </h2>
         <p class="featured-post__text">
           {{ firstParagraph }}
@@ -72,6 +75,11 @@ export default {
       default: '',
     },
 
+    type: {
+      type: String,
+      default: '',
+    },
+
     author: {
       type: Object,
       default: null,
@@ -86,9 +94,19 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    size: {
+      type: String,
+      default: 'md',
+    },
   },
 
   computed: {
+    postLink() {
+      if (this.type === 'customer_university') return `/customer-university/${this.postId}/`
+      return `/blog/${this.postId}/`
+    },
+
     firstParagraph() {
       const paragraphList = this.body
       const WORDS_LIMIT_IN_PARAGRAPH = 150
@@ -110,7 +128,85 @@ export default {
 .customer-university {
   &__featured-post {
     width: 100%;
-    margin-bottom: 72px;
+
+    &--md {
+      margin-bottom: 72px;
+
+      .featured-post {
+        width: 90%;
+
+        &__text {
+          margin-bottom: 32px;
+        }
+
+        &__image {
+          height: 311px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          &__text {
+            margin-bottom: 0;
+          }
+          &__image {
+            height: auto;
+          }
+        }
+
+        &--row {
+          .featured-post {
+            &__image {
+              width: 55%;
+            }
+
+            &__info {
+              width: 45%;
+            }
+
+            @media screen and (max-width: 1024px) {
+              &__info, &__image {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--sm {
+      margin-bottom: 32px;
+
+      .featured-post {
+        min-height: 180px;
+
+        &__title {
+          @include font('Poppins', 21.25px, 600);
+          color: $text-color--white-primary;
+          font-style: normal;
+          line-height: 130%;
+          letter-spacing: -0.02em;
+          font-feature-settings: 'ss02' on;
+          margin-bottom: 6px;
+        }
+
+        &__text {
+          @include font('Inter', 16px, 400);
+          font-style: normal;
+          line-height: 166%;
+          letter-spacing: -0.035em;
+          color: $text-color--grey-matterhorn;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &__image {
+          margin-right: 20px !important;
+        }
+      }
+    }
   }
 }
 
@@ -132,6 +228,8 @@ export default {
     font-feature-settings: 'zero' on, 'ordn' on, 'ss02' on, 'ss05' on;
     margin-bottom: 32px;
     color: $text-color--white-primary;
+    max-width: 400px;
+    width: 100%;
   }
 
   &__text {
@@ -139,7 +237,6 @@ export default {
     font-style: normal;
     line-height: 166%;
     letter-spacing: -0.035em;
-    margin-bottom: 32px;
     color: $text-color--grey-matterhorn;
   }
 
@@ -148,18 +245,28 @@ export default {
     text-align: center;
     width: 100%;
     max-width: 100%;
+    overflow: hidden;
 
     img {
       display: block;
       width: 100%;
       max-width: 100%;
-      height: auto;
-      vertical-align: middle;
+      height: 100%;
+      object-fit: fill;
     }
   }
 
   &--column {
     flex-direction: column;
+
+    .featured-post {
+      &__text {
+        min-height: 80px;
+        @media screen and (max-width: 1024px) {
+          min-height: auto;
+        }
+      }
+    }
   }
 
   &--row {
@@ -187,7 +294,7 @@ export default {
     &__featured-post {
       width: 100%;
       padding-right: 0;
-      margin-bottom: 56px;
+      margin-bottom: 32px;
     }
   }
   .featured-post {

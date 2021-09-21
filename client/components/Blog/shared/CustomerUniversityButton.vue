@@ -31,7 +31,7 @@ export default {
 <style scoped lang="scss">
 .customer-university {
   &__btn {
-    @include font('Inter', 16px, 400);
+    @include font('Inter', 16px, 600);
     font-style: normal;
     line-height: 26px;
     letter-spacing: -0.035em;
@@ -49,12 +49,18 @@ export default {
 
     &--md {
       height: 48px;
-      margin-top: 48px;
+      margin-top: 16px;
     }
 
     &--lg {
       height: 70px;
-      margin-top: 72px;
+      margin-top: 70px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      &--lg {
+        height: 48px;
+      }
     }
   }
 

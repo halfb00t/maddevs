@@ -3,17 +3,17 @@
 exports[`СustomerUniversityCard component should render correctly with data 1`] = `
 <div>
   <div
-    class="customer-university__featured-post"
+    class="customer-university__featured-post customer-university__featured-post--md"
   >
     <div
       class="featured-post featured-post--column"
     >
       <nuxtlink
         class="featured-post__image"
-        to="/customer-university//"
+        to="/blog//"
       >
         <img
-          height="347"
+          height="311"
           width="560"
         />
       </nuxtlink>
