@@ -325,6 +325,32 @@
             "multi": "list-item,o-list-item"
           },
           "type": "StructuredText"
+        },
+        "alignText": {
+          "config": {
+            "label": "Content Alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center"
+            ],
+            "default_value": "left"
+          },
+          "type": "Select"
+        },
+        "lottie-animations": {
+          "config": {
+            "label": "Lottie-animations",
+            "placeholder": "",
+            "options": [
+              "research-animate",
+              "testing-stage",
+              "stack-selection",
+              "infrastructure-animation",
+              "development-stage"
+            ]
+          },
+          "type": "Select"
         }
       }
     }
