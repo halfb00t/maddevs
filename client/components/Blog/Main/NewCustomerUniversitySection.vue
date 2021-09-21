@@ -31,8 +31,8 @@
             v-bind="post.data"
             :author="findAuthor(post.data.post_author.id, allAuthors)"
             :post-id="post.uid"
-            :is-main="idx === 0"
-            :direction="idx === 0 ? 'column' : 'row'"
+            :is-main="isFirstElement(idx)"
+            :direction="calculateDirection(idx)"
           />
           <CustomerUniversityButton
             label=" See more"
@@ -62,7 +62,7 @@
           :author="findAuthor(madCommunityPostToShow[0].data.post_author.id, allAuthors)"
           :post-id="madCommunityPost.uid"
           direction="row"
-          :is-main="idx === 0"
+          :is-main="isFirstElement(idx)"
         />
       </div>
       <CustomerUniversityButton
@@ -137,6 +137,15 @@ export default {
     ...mapActions(['getCustomerUniversitySectionPosts', 'getCustomerUniversityPosts']),
     filterPosts(postIdList, allPosts) {
       return postIdList?.map(postIdListItem => allPosts?.filter(allPostsItem => allPostsItem.id === postIdListItem.post.id)).flat()
+    },
+
+    isFirstElement(idx) {
+      return idx === 0
+    },
+
+    calculateDirection(idx) {
+      if (idx === 0) return 'column'
+      return 'row'
     },
   },
 
