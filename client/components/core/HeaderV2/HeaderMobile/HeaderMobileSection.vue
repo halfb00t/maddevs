@@ -127,11 +127,14 @@ export default {
     position: relative;
     height: calc(100vh - 63px);
     overflow: auto;
+    @media screen and (max-width: 1012px) {
+      height: calc(100vh - 48px);
+    }
   }
 
   &__content {
-    padding-top: 44px;
-    padding-bottom: 25px;
+    padding-top: 62px;
+    padding-bottom: 200px;
   }
 
   &__back-btn {
