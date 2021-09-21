@@ -51,21 +51,25 @@ export default {
 
 <style lang="scss" scoped>
 .header-mobile {
-  width: 100%;
-  height: 100vh;
-  min-height: calc(100vh - (100vh - 100%)); // 100vh height for mobile Safari browser
-  padding-top: 48px; // 48px - height of sticky header
+  z-index: 2;
+  overflow: hidden;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: calc(100vh - (100vh - 100%)); // 100vh height for mobile Safari browser
+  padding-top: 63px; // 63px - height of sticky header
   background-color: $bgcolor--black;
-  z-index: 2;
+  @media screen and (max-width: 1012px) {
+    padding-top: 48px;
+  }
 
   &__scroll {
     position: relative;
-    height: calc(100vh - 62px);
+    height: calc(100vh - 63px);
     overflow: auto;
   }
 
