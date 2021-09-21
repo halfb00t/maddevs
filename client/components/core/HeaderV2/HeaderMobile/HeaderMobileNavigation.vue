@@ -18,7 +18,8 @@
         v-bind="headerContent[name]"
         :is-active="activeNavigation === name"
         :class="{ 'header-mobile-section--active': activeNavigation === name }"
-        @closedMobileSection="activeNavigation = null"
+        @closed-mobile-section="activeNavigation = null"
+        @changed-page="onChangePage"
       />
     </li>
   </ul>
@@ -52,6 +53,11 @@ export default {
   },
 
   methods: {
+    onChangePage() {
+      this.activeNavigation = null
+      this.$emit('changed-page')
+    },
+
     setNavigation(navigationName) {
       this.activeNavigation = navigationName
     },

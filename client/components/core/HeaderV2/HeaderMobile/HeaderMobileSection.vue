@@ -24,7 +24,8 @@
               :class="{
                 'header-mobile-menu--active': activeMenu === menu.name
               }"
-              @changedActiveMobileMenu="setActiveMenu"
+              @changed-active-mobile-menu="onChageActiveMenu"
+              @changed-page="onChangePage"
             />
           </div>
         </div>
@@ -85,10 +86,15 @@ export default {
   methods: {
     close() {
       this.activeMenu = null
-      this.$emit('closedMobileSection')
+      this.$emit('closed-mobile-section')
     },
 
-    setActiveMenu(menuName) {
+    onChangePage() {
+      this.activeMenu = null
+      this.$emit('changed-page')
+    },
+
+    onChageActiveMenu(menuName) {
       this.activeMenu = menuName
     },
   },

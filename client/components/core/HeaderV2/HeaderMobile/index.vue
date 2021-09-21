@@ -4,7 +4,10 @@
       <div class="header-mobile__content-wrapper">
         <div class="header-mobile__content">
           <nav class="header-mobile__navigation">
-            <HeaderMobileNavigation :navigation="navigation" />
+            <HeaderMobileNavigation
+              :navigation="navigation"
+              @changed-page="onChangePage"
+            />
           </nav>
           <div class="header-mobile__contacts">
             <HeaderMobileContacts />
@@ -44,6 +47,12 @@ export default {
     navigation: {
       type: Array,
       default: () => ([]),
+    },
+  },
+
+  methods: {
+    onChangePage() {
+      this.$emit('changed-page')
     },
   },
 }

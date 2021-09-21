@@ -240,7 +240,7 @@ export default {
     },
 
     onChangePage() {
-      this.isActiveMobileMenu = false
+      this.toggleMobileMenu()
       this.enableScrollOnBody()
     },
 
