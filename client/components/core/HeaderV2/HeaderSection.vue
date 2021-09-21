@@ -11,6 +11,7 @@
             :key="menu.name || `menu-${idx}`"
             :menu-name="menu.name"
             :menu-routes="menu.routes"
+            @changed-page="onChangePage"
           />
         </div>
         <hr class="header-section__divider">
@@ -19,6 +20,7 @@
             v-bind="post"
             :post-type="post.type"
             :post-author="postAuthor"
+            @changed-page="onChangePage"
           />
         </div>
       </div>
@@ -66,6 +68,12 @@ export default {
       type: Object,
       default: () => ({}),
       required: true,
+    },
+  },
+
+  methods: {
+    onChangePage() {
+      this.$emit('changed-page')
     },
   },
 
