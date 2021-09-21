@@ -1,10 +1,10 @@
 import { render, fireEvent, screen } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import IndividualsForm from '@/components/core/forms/IndividualsForm'
+import TeamsForm from '@/components/core/forms/TeamsForm'
 import formBaseProps from '../../../__mocks__/formBaseProps'
 
-import delay from '../../../../client/helpers/delay'
+import delay from '../../../../../client/helpers/delay'
 
 jest.mock('@/api/ipInfo', () => (
   {
@@ -26,9 +26,9 @@ const store = {
 }
 const mocks = formBaseProps
 
-describe('IndividualsForm component', () => {
+describe('TeamsForm component', () => {
   it('should render correctly', () => {
-    const { container } = render(IndividualsForm, {
+    const { container } = render(TeamsForm, {
       mocks,
       store,
     })
@@ -37,7 +37,7 @@ describe('IndividualsForm component', () => {
   })
 
   it('should correct call handler', async () => {
-    render(IndividualsForm, {
+    render(TeamsForm, {
       mocks,
       store,
     })
@@ -47,7 +47,7 @@ describe('IndividualsForm component', () => {
     await fireEvent.update(screen.getByTestId('test-base-form-fullName'), 'John Johnson')
 
     await fireEvent.click(screen.queryByTestId('test-privacy-policy-checkbox-input'))
-    await fireEvent.click(screen.getByText('Get individual proactive rockets'))
+    await fireEvent.click(screen.getByText(/Get a team of ultra fast coders/))
 
     await delay(500) // createLeadMixin calls the delay method
     expect(mocks.$v.$reset).toHaveBeenCalledTimes(1)

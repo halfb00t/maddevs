@@ -1,10 +1,10 @@
 import { render, fireEvent, screen } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import GetYourTrustedItPartnerForm from '@/components/core/forms/GetYourTrustedItPartnerForm'
+import GetExpertAdviceForm from '@/components/core/forms/GetExpertAdviceForm'
 import formBaseProps from '../../../__mocks__/formBaseProps'
 
-import delay from '../../../../client/helpers/delay'
+import delay from '../../../../../client/helpers/delay'
 
 jest.mock('@/api/ipInfo', () => (
   {
@@ -25,13 +25,13 @@ const store = {
   },
 }
 const mocks = formBaseProps
-mocks.$v.needAssistanceWith = {
+mocks.$v.questionsOnItConsulting = {
   $touch: jest.fn(),
 }
 
-describe('GetYourTrustedItPartnerForm component', () => {
+describe('GetExpertAdviceForm component', () => {
   it('should render correctly', () => {
-    const { container } = render(GetYourTrustedItPartnerForm, {
+    const { container } = render(GetExpertAdviceForm, {
       mocks,
       store,
     })
@@ -40,7 +40,7 @@ describe('GetYourTrustedItPartnerForm component', () => {
   })
 
   it('should correct call handler', async () => {
-    render(GetYourTrustedItPartnerForm, {
+    render(GetExpertAdviceForm, {
       mocks,
       store,
     })
@@ -50,10 +50,10 @@ describe('GetYourTrustedItPartnerForm component', () => {
     await fireEvent.update(screen.getByTestId('test-base-form-fullName'), 'John Johnson')
 
     await fireEvent.click(screen.queryByTestId('test-privacy-policy-checkbox-input'))
-    await fireEvent.click(screen.getByText('Get your trusted IT partner'))
+    await fireEvent.click(screen.getByText('Get expert advice'))
 
     await delay(500) // createLeadMixin calls the delay method
-    // Called in BaseForm and GetYourTrustedItPartnerForm components
+    // Called in BaseForm and GetExpertAdviceForm components
     expect(mocks.$v.$reset).toHaveBeenCalledTimes(2)
   })
 })

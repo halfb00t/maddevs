@@ -1,10 +1,10 @@
 import { render, fireEvent, screen } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import ContactMeForm from '@/components/core/forms/ContactMeForm'
+import InfrastructureAuditForm from '@/components/core/forms/InfrastructureAuditForm'
 import formBaseProps from '../../../__mocks__/formBaseProps'
 
-import delay from '../../../../client/helpers/delay'
+import delay from '../../../../../client/helpers/delay'
 
 jest.mock('@/api/ipInfo', () => (
   {
@@ -26,9 +26,9 @@ const store = {
 }
 const mocks = formBaseProps
 
-describe('ContactMeForm component', () => {
+describe('InfrastructureAuditForm component', () => {
   it('should render correctly', () => {
-    const { container } = render(ContactMeForm, {
+    const { container } = render(InfrastructureAuditForm, {
       mocks,
       store,
     })
@@ -37,18 +37,17 @@ describe('ContactMeForm component', () => {
   })
 
   it('should correct call handler', async () => {
-    render(ContactMeForm, {
+    render(InfrastructureAuditForm, {
       mocks,
       store,
     })
 
     await fireEvent.update(screen.getByTestId('test-base-form-phoneNumber'), '+3 4546-657-9098-7875645342245')
     await fireEvent.update(screen.getByTestId('test-base-form-email'), 'someemail@maddevs.io')
-    await fireEvent.update(screen.getByTestId('test-base-form-company'), 'Maddevs.io')
     await fireEvent.update(screen.getByTestId('test-base-form-fullName'), 'John Johnson')
 
     await fireEvent.click(screen.queryByTestId('test-privacy-policy-checkbox-input'))
-    await fireEvent.click(screen.getByText('Сontact Me'))
+    await fireEvent.click(screen.getByText(/Get an infrastructure audit/))
 
     await delay(500) // createLeadMixin calls the delay method
     expect(mocks.$v.$reset).toHaveBeenCalledTimes(1)

@@ -1,0 +1,23 @@
+name: e2e Tests CI
+
+on: [pull_request]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          headless: true
+          build: npm run build
+          start: npm start
+          wait-on: 'http://localhost:3000'
+        env:
+          FF_ENVIRONMENT: development
+          NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
+          CI: true
+          NODE_ENV: cypress

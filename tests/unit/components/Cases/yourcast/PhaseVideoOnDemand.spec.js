@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/vue'
-import PhaseVideoOnDemand from '../../../../client/components/Cases/yourcast/PhaseVideoOnDemand'
+import PhaseVideoOnDemand from '@/components/Cases/yourcast/PhaseVideoOnDemand'
 import '../../../__mocks__/intersectionObserverMock'
 
 describe('PhaseVideoOnDemand component', () => {
