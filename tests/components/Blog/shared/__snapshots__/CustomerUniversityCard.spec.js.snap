@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`СustomerUniversityTextCard component should render correctly with data 1`] = `
+exports[`СustomerUniversityCard component should render correctly with data 1`] = `
 <div>
   <div
     class="customer-university__featured-post"
