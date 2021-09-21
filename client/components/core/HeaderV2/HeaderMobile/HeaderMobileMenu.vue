@@ -31,6 +31,7 @@
           <NuxtLink
             v-if="!extractMenuLink(link).isExternalLink"
             :to="extractMenuLink(link).url"
+            @click.native="goToPage"
           >
             {{ label }}
           </NuxtLink>
@@ -73,11 +74,15 @@ export default {
   methods: {
     extractMenuLink,
 
+    goToPage() {
+      this.$emit('changed-page')
+    },
+
     open() {
       if (this.isActive) {
-        this.$emit('changedActiveMobileMenu', null)
+        this.$emit('changed-active-mobile-menu', null)
       } else {
-        this.$emit('changedActiveMobileMenu', this.menuName)
+        this.$emit('changed-active-mobile-menu', this.menuName)
       }
     },
 
