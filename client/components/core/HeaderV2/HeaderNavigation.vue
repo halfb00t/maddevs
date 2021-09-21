@@ -14,6 +14,7 @@
         v-bind="headerContent[name]"
         :is-active="activeNavigation === name"
         :class="{ 'header-section--active': activeNavigation === name }"
+        @changed-page="onChangePage"
       />
     </li>
   </ul>
@@ -47,7 +48,11 @@ export default {
 
   methods: {
     setNavigation(navigationName) {
-      this.$emit('changedNavigation', navigationName)
+      this.$emit('changed-navigation', navigationName)
+    },
+
+    onChangePage() {
+      this.$emit('changed-page')
     },
 
     getIsHoverClass(navigationName) {

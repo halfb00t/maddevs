@@ -7,7 +7,7 @@
       ref="header"
       class="header"
       :class="{ 'header--transparent-bg': headerIsTransparent }"
-      @mouseleave="setNavigation(null)"
+      @mouseleave="onChangeNavigation(null)"
     >
       <div
         id="header-container"
@@ -25,7 +25,8 @@
               <HeaderNavigation
                 :navigation="navigation"
                 :active-navigation="activeNavigation"
-                @changedNavigation="setNavigation"
+                @changed-navigation="onChangeNavigation"
+                @changed-page="onChangePage"
               />
             </nav>
           </div>
@@ -198,10 +199,6 @@ export default {
   },
 
   watch: {
-    $route() {
-      this.setNavigation(null)
-    },
-
     isActiveModalSearch(opened) {
       if (opened) {
         this.disableScrollOnBody()
@@ -229,19 +226,21 @@ export default {
   methods: {
     ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
 
-    setNavigation(navigationName) {
-      this.activeNavigation = navigationName
-    },
-
     showModal() {
       if (!this.$refs?.modalContactMe?.show) return
       this.$refs.modalContactMe.show()
       this.isActiveMobileMenu = false
     },
 
+    onChangeNavigation(navigationName) {
+      this.activeNavigation = navigationName
+    },
+
     onChangePage() {
-      this.toggleMobileMenu()
+      window.scrollTo(0, 0)
+      this.activeNavigation = null
       this.enableScrollOnBody()
+      if (this.isActiveMobileMenu) this.toggleMobileMenu()
     },
 
     handleLogo(scrollTop) {

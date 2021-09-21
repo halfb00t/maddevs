@@ -39,7 +39,6 @@
             v-else
             :href="extractMenuLink(link).url"
             :target="extractMenuLink(link).target"
-            @click="goToPage"
           >
             {{ label }}
           </a>

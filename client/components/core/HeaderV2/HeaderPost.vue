@@ -3,6 +3,7 @@
     <NuxtLink
       :to="getPostPath(postType, uid)"
       class="header-post__content"
+      @click.native="goToPage"
     >
       <div class="header-post__text">
         <p class="header-post__text-title">
@@ -26,18 +27,21 @@
         :date="date"
         theme="dark"
         class="header-post__meta-author"
+        @click.native="goToPage"
       />
       <PostTag
         v-if="tags && tags.length"
         :tag="tags[0]"
         theme="dark"
         class="header-post__meta-tag"
+        @click.native="goToPage"
       />
     </div>
     <NuxtLink
       v-if="$route.name !== 'blog'"
       to="/blog/"
       class="header-post__more-btn"
+      @click.native="goToPage"
     >
       More articles
     </NuxtLink>
@@ -114,9 +118,12 @@ export default {
 
   methods: {
     getPostPath(type, uid) {
-      if (type === 'post') return `/blog/${uid}/`
-      if (type === 'customer_university') return `/customer-university/${uid}/`
+      if (type === 'post' && uid) return `/blog/${uid}/`
       return '/'
+    },
+
+    goToPage() {
+      this.$emit('changed-page')
     },
   },
 }
