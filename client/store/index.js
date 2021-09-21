@@ -1,4 +1,5 @@
 import * as blog from './modules/blog'
+import * as customerUniversitySection from './modules/customerUniversitySection'
 import * as blogAuthors from './modules/blogAuthors'
 import * as blogPost from './modules/blogPost'
 import * as blogTags from './modules/blogTags'
@@ -12,6 +13,7 @@ import * as footer from './modules/footer'
 export default {
   modules: {
     blog,
+    customerUniversitySection,
     blogAuthors,
     blogPost,
     blogTags,

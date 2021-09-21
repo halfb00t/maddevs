@@ -1,8 +1,16 @@
 {
-  "baseUrl": "http://localhost:3000/",
-  "pluginsFile": "cypress/plugins/index.js",
-  "screenshotsFolder": false,
-  "supportFile": false,
+  "baseUrl": "http://localhost:3000",
+  "chromeWebSecurity": false,
+  "pluginsFile": "tests/e2e/plugins/index.js",
+  "testFiles": "**/*.spec.js*",
+  "fixturesFolder": "tests/e2e/fixtures",
+  "integrationFolder": "tests/e2e/integration",
+  "screenshotsFolder": "tests/e2e/screenshots",
+  "videosFolder": "tests/e2e/videos",
+  "supportFile": "tests/e2e/support/index.js",
+  "nodeVersion":"system",
   "video": false,
-  "fixtures": false
+  "viewportWidth": 1366,
+  "viewportHeight": 768,
+  "trashAssetsBeforeRuns": true
 }
