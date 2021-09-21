@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`СustomerUniversityTextCard component should render correctly with data 1`] = `
+<div>
+  <div
+    class="customer-university__featured-post"
+  >
+    <div
+      class="featured-post featured-post--column"
+    >
+      <nuxtlink
+        class="featured-post__image"
+        to="/customer-university//"
+      >
+        <img
+          height="347"
+          width="560"
+        />
+      </nuxtlink>
+       
+      <nuxtlink
+        class="featured-post__info"
+        to="/customer-university//"
+      >
+        <!---->
+         
+        <h2
+          class="featured-post__title"
+        >
+          
+        Сustomer University card
+      
+        </h2>
+         
+        <p
+          class="featured-post__text"
+        >
+          
+        
+      
+        </p>
+         
+        <!---->
+      </nuxtlink>
+    </div>
+  </div>
+</div>
+`;
