@@ -34,9 +34,7 @@ exports[`Banner component should render correctly 1`] = `
           class="delivery-model-banner__title"
         >
           
-        Delivery 
-          <br />
-           models
+        Delivery models
       
         </h1>
          

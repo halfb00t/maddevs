@@ -26,7 +26,7 @@
         :style="{opacity: sectionTextOpacity}"
       >
         <h1 class="delivery-model-banner__title">
-          Delivery <br> models
+          Delivery models
         </h1>
         <p class="delivery-model-banner__subtitle">
           At Mad Devs, we provide a full range of services aimed at delivering long-term value for both our customers and end users.
@@ -76,42 +76,30 @@ export default {
     text-align: center;
   }
   &__title {
-    color: $text-color--white;
-    font-size: 100px;
-    line-height: 96px;
-    letter-spacing: -0.04em;
+    @include font('Inter', 100px, 800);
+    line-height: 105px;
+    letter-spacing: -2px;
+    color: $text-color--white-primary;
   }
   &__subtitle {
-    margin-top: 55px;
-    font-size: 32px;
+    @include font('Inter', 32px, 600);
     line-height: 44px;
-    letter-spacing: -0.013em;
-    color: $text-color--silver;
+    letter-spacing: -1px;
+    margin-top: 20px;
+    color: $text-color--white-primary;
   }
 
   @media screen and (max-width: 1120px) {
     padding-top: 48px;
   }
 
-  @media screen and (max-width: 1024px) {
-    &__title {
-      font-size: 80px;
-      line-height: 88px;
-    }
-    &__subtitle {
-      margin-top: 35px;
-      font-size: 24px;
-      line-height: 34px;
-    }
-  }
-
   @media screen and (max-width: 768px) {
     &__title {
-      font-size: 52px;
-      line-height: 57px;
+      font-size: 56px;
+      line-height: 48px;
     }
     &__subtitle {
-      margin-top: 30px;
+      margin-top: 8px;
       font-size: 21px;
       line-height: 30px;
     }
