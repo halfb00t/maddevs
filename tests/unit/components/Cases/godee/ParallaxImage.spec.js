@@ -29,6 +29,6 @@ describe('ParallaxImage component', () => {
       },
     })
 
-    expect(screen.getByTestId('test-case_parallax-image').style.background).toBe(`url(${mocks.$getMediaFromS3()})`)
+    expect(screen.getByTestId('test-case_parallax-image').getAttribute('data-src')).toBe(`${mocks.$getMediaFromS3()}`)
   })
 })
