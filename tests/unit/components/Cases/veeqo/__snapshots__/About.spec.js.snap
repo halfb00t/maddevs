@@ -37,7 +37,7 @@ exports[`About component should render correctly 1`] = `
     </p>
      
     <div
-      class="case_statistics-container m-96_bottom media-m-48_bottom"
+      class="m-96_bottom media-m-48_bottom case_statistics-container case_statistics-container-3"
     >
       <div
         class="case_statistics-item"
