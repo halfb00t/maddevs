@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner component should render correctly 1`] = `
+<div>
+  <div
+    class="delivery-model-banner"
+    id="transparent-header-area"
+  >
+    <picture>
+      <source
+        class="delivery-model-banner__image"
+        srcset="img.jpg ,img.jpg"
+        type="image/webp"
+      />
+       
+      <img
+        alt="Team"
+        class="delivery-model-banner__image"
+        height="827"
+        src="img.jpg"
+        srcset="img.jpg"
+        width="1680"
+      />
+    </picture>
+     
+    <div
+      class="container"
+    >
+      <div
+        class="delivery-model-banner__content"
+        style="opacity: 1;"
+      >
+        <h1
+          class="delivery-model-banner__title"
+        >
+          
+        Delivery models
+      
+        </h1>
+         
+        <p
+          class="delivery-model-banner__subtitle"
+        >
+          
+        At Mad Devs, we provide a full range of services aimed at delivering long-term value for both our customers and end users.
+      
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

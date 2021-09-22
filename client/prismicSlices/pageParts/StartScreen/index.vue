@@ -124,7 +124,7 @@ export default {
       line-height: 48px;
     }
     /deep/ .large {
-      @include font('Inter', 110px, 800);
+      @include font('Inter', 100px, 800);
       line-height: 105px;
       @media screen and (max-width: 768px) {
         font-size: 56px;
@@ -136,6 +136,10 @@ export default {
     @include font('Inter', 32px, 600);
     line-height: 44px;
     letter-spacing: -1px;
+<<<<<<< HEAD
+=======
+    margin-top: 20px;
+>>>>>>> origin
     color: $text-color--white-primary;
     @media screen and (max-width: 1024px) {
       font-size: 32px;

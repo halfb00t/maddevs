@@ -3,17 +3,20 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "cypress/globals": true
   },
   "plugins": [
-    "vue"
+    "vue",
+    "cypress"
   ],
   "parserOptions": {
     "parser": "@babel/eslint-parser"
   },
   "extends": [
     "airbnb-base",
-    "plugin:vue/recommended"
+    "plugin:vue/recommended",
+    "plugin:cypress/recommended"
   ],
   "rules": {
     "no-tabs": ["error"],
@@ -76,11 +79,12 @@
     ]
   },
   "globals": {
-    "$nuxt": true
+    "$nuxt": true,
+    "cy": true
   },
   "overrides": [
     {
-      "files": ["tests/**/*.test.js", "tests/**/*.spec.js", "server/**/*.test.js", "server/**/*.spec.js"],
+      "files": ["tests/unit/**/*.test.js", "tests/unit/**/*.spec.js", "server/**/*.test.js", "server/**/*.spec.js"],
       "plugins": [
         "jest"
       ],
@@ -112,41 +116,6 @@
         "import/no-extraneous-dependencies": "off",
         "import/no-dynamic-require": "off",
         "import/prefer-default-export": 0
-      }
-    },
-    {
-      "files": ["cypress/**/*.test.js", "cypress/**/*.spec.js"],
-      "plugins": [
-        "cypress"
-      ],
-      "extends": [
-        "airbnb-base",
-        "plugin:cypress/recommended"
-      ],
-      "rules": {
-        "no-tabs": ["error"],
-        "semi": ["error", "never"],
-        "quotes": ["error", "single"],
-        "max-len": "off",
-        "global-require": "off",
-        "no-param-reassign": "off",
-        "no-unused-vars": [
-          "error"
-        ],
-        "arrow-parens": [
-          "error",
-          "as-needed"
-        ],
-        "import/no-unresolved": "off",
-        "import/extensions": "off",
-        "import/no-extraneous-dependencies": "off",
-        "import/no-dynamic-require": "off",
-        "import/prefer-default-export": 0,
-        "cypress/no-assigning-return-values": "error",
-        "cypress/no-unnecessary-waiting": "error",
-        "cypress/assertion-before-screenshot": "warn",
-        "cypress/no-force": "warn",
-        "cypress/no-async-tests": "error"
       }
     }
   ]

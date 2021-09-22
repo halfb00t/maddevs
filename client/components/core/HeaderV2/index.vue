@@ -7,7 +7,7 @@
       ref="header"
       class="header"
       :class="{ 'header--transparent-bg': headerIsTransparent }"
-      @mouseleave="setNavigation(null)"
+      @mouseleave="onChangeNavigation(null)"
     >
       <div
         id="header-container"
@@ -23,8 +23,10 @@
             </NuxtLink>
             <nav class="header__navigation">
               <HeaderNavigation
+                :navigation="navigation"
                 :active-navigation="activeNavigation"
-                @changedNavigation="setNavigation"
+                @changed-navigation="onChangeNavigation"
+                @changed-page="onChangePage"
               />
             </nav>
           </div>
@@ -109,6 +111,7 @@
 
     <HeaderMobile
       v-if="isActiveMobileMenu"
+      :navigation="navigation"
       @changed-page="onChangePage"
       @open-modal="showModal"
     />
@@ -132,10 +135,30 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import scrollOnBody from '@/mixins/scrollOnBody'
+import ModalSearch from '@/components/core/modals/ModalSearch'
 import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
 import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
-import HeaderMobile from '@/components/core/Header/HeaderMobile'
-import ModalSearch from '@/components/core/modals/ModalSearch'
+import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
+
+// TODO: Need to transfer this constant to @/data/navigation.js
+const navigation = [
+  {
+    name: 'company',
+    label: 'Company',
+  },
+  {
+    name: 'services',
+    label: 'Services',
+  },
+  {
+    name: 'clients',
+    label: 'Clients',
+  },
+  {
+    name: 'insights',
+    label: 'Insights',
+  },
+]
 
 export default {
   name: 'HeaderV2',
@@ -151,8 +174,9 @@ export default {
 
   data() {
     return {
+      navigation,
       activeNavigation: null,
-      showLogoText: true,
+      showLogoText: false,
       isActiveModalSearch: false,
       isActiveMobileMenu: false,
     }
@@ -175,10 +199,6 @@ export default {
   },
 
   watch: {
-    $route() {
-      this.setNavigation(null)
-    },
-
     isActiveModalSearch(opened) {
       if (opened) {
         this.disableScrollOnBody()
@@ -197,6 +217,11 @@ export default {
   mounted() {
     this.addEventListeners()
     this.setStylesForHeader()
+
+    // Show logo text when only page loaded
+    this.$nextTick(() => {
+      this.showLogoText = true
+    })
   },
 
   beforeDestroy() {
@@ -206,19 +231,21 @@ export default {
   methods: {
     ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
 
-    setNavigation(navigationName) {
-      this.activeNavigation = navigationName
-    },
-
     showModal() {
       if (!this.$refs?.modalContactMe?.show) return
       this.$refs.modalContactMe.show()
       this.isActiveMobileMenu = false
     },
 
+    onChangeNavigation(navigationName) {
+      this.activeNavigation = navigationName
+    },
+
     onChangePage() {
-      this.isActiveMobileMenu = false
+      window.scrollTo(0, 0)
+      this.activeNavigation = null
       this.enableScrollOnBody()
+      if (this.isActiveMobileMenu) this.toggleMobileMenu()
     },
 
     handleLogo(scrollTop) {
@@ -231,7 +258,7 @@ export default {
 
     handleMobileMenuScroll(e) {
       e.stopImmediatePropagation()
-      this.handleLogo(this.mobileHeaderScrollbar.scrollTop)
+      this.handleLogo(e.target.scrollTop)
     },
 
     toggleMobileMenu() {
@@ -239,14 +266,11 @@ export default {
       if (this.isActiveMobileMenu) {
         this.disableScrollOnBody()
         this.$nextTick(() => {
-          this.mobileHeaderScrollbar = document.getElementById('mobile-header-scrollbar')
-          this.mobileHeaderScrollbar.addEventListener('scroll', this.handleMobileMenuScroll)
-          this.mobileHeaderScrollbar.addEventListener('touchmove', this.handleMobileMenuScroll)
+          document.addEventListener('scroll', this.handleMobileMenuScroll, true)
         })
       } else {
         this.enableScrollOnBody()
-        this.mobileHeaderScrollbar.removeEventListener('scroll', this.handleMobileMenuScroll)
-        this.mobileHeaderScrollbar.removeEventListener('touchmove', this.handleMobileMenuScroll)
+        document.removeEventListener('scroll', this.handleMobileMenuScroll, true)
       }
     },
 
@@ -288,7 +312,7 @@ export default {
     background-color: transparent;
   }
 
-  button {
+  /deep/ button {
     border: 0px solid;
     cursor: pointer;
     outline: none;

@@ -48,3 +48,11 @@ export const getCustomerUniversityFeaturedPost = async (prismic, master) => {
     return error
   }
 }
+export const getCustomerUniversitySectionPosts = async prismic => {
+  try {
+    const response = await prismic.api.getSingle('customer_university_section')
+    return response.data
+  } catch (error) {
+    return error
+  }
+}

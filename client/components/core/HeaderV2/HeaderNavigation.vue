@@ -1,18 +1,23 @@
 <template>
   <ul class="header-navigation">
     <li
-      v-for="{ name, label } in navigation"
+      v-for="{name, label} in navigation"
       :key="name"
       class="header-navigation__item"
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
     >
-      <span @mouseenter="setNavigation(name)">
+      <span
+        @click="goTo(name)"
+        @mouseenter="setNavigation(name)"
+      >
         {{ label }}
       </span>
       <HeaderSection
         v-if="headerContent[name]"
         v-bind="headerContent[name]"
+        :is-active="activeNavigation === name"
         :class="{ 'header-section--active': activeNavigation === name }"
+        @changed-page="onChangePage"
       />
     </li>
   </ul>
@@ -22,26 +27,6 @@
 import { mapGetters } from 'vuex'
 import HeaderSection from '@/components/core/HeaderV2/HeaderSection'
 
-// TODO: Need to transfer this constant to @/data/navigation.js
-const navigation = [
-  {
-    name: 'company',
-    label: 'Company',
-  },
-  {
-    name: 'services',
-    label: 'Services',
-  },
-  {
-    name: 'clients',
-    label: 'Clients',
-  },
-  {
-    name: 'insights',
-    label: 'Insights',
-  },
-]
-
 export default {
   name: 'HeaderNavigation',
   components: {
@@ -49,16 +34,15 @@ export default {
   },
 
   props: {
+    navigation: {
+      type: Array,
+      default: () => ([]),
+    },
+
     activeNavigation: {
       type: String,
       default: null,
     },
-  },
-
-  data() {
-    return {
-      navigation,
-    }
   },
 
   computed: {
@@ -67,7 +51,17 @@ export default {
 
   methods: {
     setNavigation(navigationName) {
-      this.$emit('changedNavigation', navigationName)
+      this.$emit('changed-navigation', navigationName)
+    },
+
+    onChangePage() {
+      this.$emit('changed-page')
+    },
+
+    goTo(name) {
+      const path = this.headerContent[name]?.link
+      if (!path) return
+      this.$router.push({ path })
     },
 
     getIsHoverClass(navigationName) {
