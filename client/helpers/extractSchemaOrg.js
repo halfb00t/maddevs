@@ -1,4 +1,4 @@
-function extractSchemaOrg(schemaOrgSnippets) {
+function extractSchemaOrg(schemaOrgSnippets, fallback) {
   let schemaOrgSnippet = ''
   if (
     schemaOrgSnippets
@@ -11,7 +11,30 @@ function extractSchemaOrg(schemaOrgSnippets) {
     schemaOrgSnippet = schemaOrgSnippet.substring(schemaOrgSnippet.indexOf('{'), schemaOrgSnippet.lastIndexOf('}') + 1)
     return schemaOrgSnippet
   }
-  return schemaOrgSnippet
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: fallback?.data?.title[0]?.text || 'Mad Devs: Software & Mobile App Development Company | Blog',
+    alternativeHeadline: fallback?.data?.title[0]?.text || 'Mad Devs: Software & Mobile App Development Company | Blog',
+    image: fallback?.data?.featured_image?.url || 'https://maddevs.io/blog.png',
+    genre: 'IT',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Mad Devs Group LTD',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://maddevs.io/Open-Graph.png',
+      },
+    },
+    url: fallback?.uid ? `https://maddevs.io/blog/${fallback?.uid}/` : 'https://maddevs.io/blog/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://maddevs.io/blog/',
+    },
+    datePublished: fallback?.data?.date || 'N/A',
+    dateCreated: fallback?.data?.date || 'N/A',
+    dateModified: fallback?.data?.date || 'N/A',
+  })
 }
 
 export default extractSchemaOrg

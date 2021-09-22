@@ -27,12 +27,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .customer-university-text-card {
-  width: 90%;
-  min-height: 475px;
+  width: 100%;
+  max-width: 486px;
+  min-height: 512px;
   margin-bottom: 72px;
 
   @media screen and (max-width: 1124px) {
-    width: 100%;
+    max-width: 100%;
     min-height: auto;
   }
 

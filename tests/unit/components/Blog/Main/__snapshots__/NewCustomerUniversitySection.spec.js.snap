@@ -1,319 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewCustomerUniversitySection component should render correctly 1`] = `
-<div>
-  <section
-    class="customer-university"
-  >
-    <div
-      class="container"
-    >
-      <h2
-        class="customer-university-title"
-      >
-        <span>
-          
-    Customer
-  
-        </span>
-         
-        <br />
-        
-  University
-
-      </h2>
-       
-      <p
-        class="customer-university__text"
-      >
-        
+exports[`NewCustomerUniversitySection component should render correctly with no data 1`] = `
+<section class="customer-university">
+  <div class="container">
+    <customeruniversitytitle-stub title="Customer" subtitle="University"></customeruniversitytitle-stub>
+    <p class="customer-university__text">
       Many businesses still hesitate to hire an IT company to develop a technical solution or
       enhance an existing product because they aren’t aware of many processes and have more
       questions than replies. If you are one of them, this section is for you.
-    
-      </p>
-       
-      <p
-        class="customer-university__text customer-university__text--margin"
-      >
-        
-      Here, you can find information 
-        <span
-          class="customer-university__text--yellow"
-        >
-           about the main software development processes, useful tips on
-        choosing a company to work on your product, determining whether the budget is reasonable,
-        </span>
-         and
-      how Mad Devs company approaches and takes care of every project.
-    
-      </p>
-       
-      <div
-        class="customer-university__rows"
-      >
-        <div
-          class="customer-university__columns"
-        >
-          <div
-            class="customer-university-text-card"
-          >
-            <h3
-              class="customer-university-text-card__title"
-            >
-              
-    Pricing Strategies
-  
-            </h3>
-             
-            <p
-              class="customer-university-text-card__description"
-            >
-              
-    If it seems that you are overpaying for upgrading your existing or
-          developing a new solution, or if you have doubts about how much your product will
-          cost, this section is for you. Here, you learn about the main pricing strategies and
-          factors that influence price formation and get useful tips on choosing the best development
-          company to work on your project.
-  
-            </p>
-          </div>
-           
-          <div>
-            <div
-              class="customer-university__featured-post"
-              post_author="[object Object]"
-            >
-              <div
-                class="featured-post featured-post--column"
-              >
-                <nuxtlink-stub
-                  class="featured-post__image"
-                  to="/customer-university/uid/"
-                >
-                  <img
-                    data-src=""
-                    height="347"
-                    width="560"
-                  />
-                </nuxtlink-stub>
-                 
-                <nuxtlink-stub
-                  class="featured-post__info"
-                  to="/customer-university/uid/"
-                >
-                  <span
-                    class="featured-post__date"
-                  >
-                    
-                  </span>
-                   
-                  <h2
-                    class="featured-post__title"
-                  >
-                    
-        img.png
-      
-                  </h2>
-                   
-                  <p
-                    class="featured-post__text"
-                  >
-                    
-        
-      
-                  </p>
-                   
-                  <!---->
-                </nuxtlink-stub>
-              </div>
-            </div>
-              
-            <button
-              class="customer-university__btn customer-university__btn--md"
-            >
-              
-   See more
-
-            </button>
-          </div>
-        </div>
-         
-        <div
-          class="customer-university__columns"
-        >
-          <div
-            class="customer-university-text-card"
-          >
-            <h3
-              class="customer-university-text-card__title"
-            >
-              
-    Development Process
-  
-            </h3>
-             
-            <p
-              class="customer-university-text-card__description"
-            >
-              
-    Here, you can learn about development processes, artefacts delivered at every
-          stage of work on a project, approaches, and the best practices for software development.
-          And also about what rules we at Mad Devs adhere to when working on technical solutions for
-          our clients and why our approach helps them achieve success.
-  
-            </p>
-          </div>
-           
-          <div>
-            <div
-              class="customer-university__featured-post"
-              post_author="[object Object]"
-            >
-              <div
-                class="featured-post featured-post--column"
-              >
-                <nuxtlink-stub
-                  class="featured-post__image"
-                  to="/customer-university/uid/"
-                >
-                  <img
-                    data-src=""
-                    height="347"
-                    width="560"
-                  />
-                </nuxtlink-stub>
-                 
-                <nuxtlink-stub
-                  class="featured-post__info"
-                  to="/customer-university/uid/"
-                >
-                  <span
-                    class="featured-post__date"
-                  >
-                    
-                  </span>
-                   
-                  <h2
-                    class="featured-post__title"
-                  >
-                    
-        img.png
-      
-                  </h2>
-                   
-                  <p
-                    class="featured-post__text"
-                  >
-                    
-        
-      
-                  </p>
-                   
-                  <!---->
-                </nuxtlink-stub>
-              </div>
-            </div>
-             
-          </div>
-        </div>
+    </p>
+    <p class="customer-university__text customer-university__text--margin">
+      Here, you can find information <span class="customer-university__text--yellow"> about the main software development
+        processes, useful tips on choosing a company to work on your product, determining whether the budget is reasonable,</span>
+      and how Mad Devs company approaches and takes care of every project.
+    </p>
+    <div class="customer-university__rows">
+      <div class="customer-university__columns">
+        <customeruniversitytextcard-stub title="Pricing Strategies" description="If it seems that you are overpaying for upgrading your existing or developing a new solution, or if you have doubts about how much your product will cost, this section is for you. Here, you learn about the main pricing strategies and factors that influence price formation and get useful tips on choosing the best development company to work on your project."></customeruniversitytextcard-stub>
+        <customeruniversitybutton-stub label="See more" size="md"></customeruniversitybutton-stub>
       </div>
-       
-      <hr
-        class="customer-university__hr customer-university__hr--margin"
-      />
-       
-      <h2
-        class="customer-university-title"
-      >
-        <span>
-          
-    Mad
-  
-        </span>
-         
-        <br />
-        
-  Community
-
-      </h2>
-       
-      <p
-        class="customer-university__text"
-      >
-        
+      <div class="customer-university__columns">
+        <customeruniversitytextcard-stub title="Development Process" description="Here, you can learn about development processes, artefacts delivered at every stage of work on a project, approaches, and the best practices for software development. And also about what rules we at Mad Devs adhere to when working on technical solutions for our clients and why our approach helps them achieve success."></customeruniversitytextcard-stub>
+        <!---->
+      </div>
+    </div>
+    <hr class="customer-university__hr customer-university__hr--margin">
+    <customeruniversitytitle-stub title="Mad" subtitle="Community"></customeruniversitytitle-stub>
+    <p class="customer-university__text">
       Are you considering Mad Devs as a company to work on your next project,
       or are you interested in building a career with us? This section is for
       you! Here, we share information about us as a team, our culture and our
       approaches to work.
-    
-      </p>
-       
-      <div
-        class="mad-community__posts-section"
-      >
-        <div
-          class="customer-university__featured-post"
-          post_author="[object Object]"
-        >
-          <div
-            class="featured-post featured-post--row"
-          >
-            <nuxtlink-stub
-              class="featured-post__image"
-              to="/customer-university/uid/"
-            >
-              <img
-                data-src=""
-                height="347"
-                width="560"
-              />
-            </nuxtlink-stub>
-             
-            <nuxtlink-stub
-              class="featured-post__info"
-              to="/customer-university/uid/"
-            >
-              <span
-                class="featured-post__date"
-              >
-                
-              </span>
-               
-              <h2
-                class="featured-post__title"
-              >
-                
-        img.png
-      
-              </h2>
-               
-              <p
-                class="featured-post__text"
-              >
-                
-        
-      
-              </p>
-               
-              <!---->
-            </nuxtlink-stub>
-          </div>
-        </div>
-         
-        <div
-          class="mad-community__posts-grid"
-        />
-      </div>
-       
-      <button
-        class="customer-university__btn customer-university__btn--lg"
-      >
-        
-  See more
-
-      </button>
-    </div>
-  </section>
-</div>
+    </p>
+    <!---->
+    <!---->
+  </div>
+</section>
 `;
