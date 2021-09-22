@@ -122,7 +122,6 @@ export default {
   font-style: normal;
   line-height: 166%;
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
 }
 
 .customer-university {
@@ -130,17 +129,17 @@ export default {
     width: 100%;
 
     &--md {
-      margin-bottom: 72px;
+      margin-bottom: 48px;
 
       .featured-post {
         width: 90%;
 
-        &__text {
-          margin-bottom: 32px;
-        }
-
         &__image {
           height: 311px;
+        }
+
+        &__text {
+          margin-bottom: 24px;
         }
 
         @media screen and (max-width: 1024px) {
@@ -180,7 +179,7 @@ export default {
         min-height: 180px;
 
         &__title {
-          @include font('Poppins', 21.25px, 600);
+          @include font('Poppins', 20px, 600);
           color: $text-color--white-primary;
           font-style: normal;
           line-height: 130%;
@@ -217,19 +216,19 @@ export default {
   &__date {
     display: block;
     @include label;
-    margin: 24px 0 32px 0;
+    margin-top: 24px;
   }
 
   &__title {
-    @include font('Poppins', 33.2px, 600);
+    @include font('Poppins', 28px, 600);
     font-style: normal;
     line-height: 130%;
     letter-spacing: -0.04em;
     font-feature-settings: 'zero' on, 'ordn' on, 'ss02' on, 'ss05' on;
-    margin-bottom: 32px;
     color: $text-color--white-primary;
     max-width: 400px;
     width: 100%;
+    margin-top: 8px;
   }
 
   &__text {
@@ -238,6 +237,7 @@ export default {
     line-height: 166%;
     letter-spacing: -0.035em;
     color: $text-color--grey-matterhorn;
+    margin-top: 6px;
   }
 
   &__image {
