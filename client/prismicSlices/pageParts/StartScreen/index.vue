@@ -115,7 +115,7 @@ export default {
   }
   &__title {
     @include font('Inter', 100px, 700);
-    line-height: 79px;
+    line-height: 105px;
     letter-spacing: -2px;
     color: $text-color--white-primary;
     margin-bottom: 50px;
