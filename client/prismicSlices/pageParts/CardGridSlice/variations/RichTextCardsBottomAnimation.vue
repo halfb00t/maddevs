@@ -86,6 +86,7 @@ export default {
 
   @media screen and (max-width: 1024px) {
     padding: 32px;
+    padding-bottom: 0;
   }
 
   &--full-width {
@@ -96,9 +97,14 @@ export default {
   }
 
   &__lottie {
-    width: 689px;
-    height: 278px;
+    max-width: 689px;
+    height: auto;
     margin: 0 auto;
+
+    @media screen and (max-width: 343px) {
+      width: 289px;
+      height: 117px;
+    }
   }
 
   &--text-center {
