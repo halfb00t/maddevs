@@ -36,7 +36,6 @@ describe('CustomerRates slice', () => {
     expect(screen.getByTestId('container').getAttribute('data-aos')).toBe(apiData.animation)
     expect(screen.getAllByTestId('title')).toHaveLength(apiData.items.length)
     expect(screen.getAllByTestId('subtitle')).toHaveLength(apiData.items.length)
-    expect(container)
-      .toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 })
