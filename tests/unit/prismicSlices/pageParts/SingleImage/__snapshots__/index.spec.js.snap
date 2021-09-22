@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleImage slice should correctly render with data 1`] = `
+<div>
+  <section
+    class="image-slice"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="image-slice__wrapper"
+        style="background-image: url(url);"
+      >
+        <div
+          class="image-slice__title"
+        >
+          
+        title
+      
+        </div>
+         
+        <div
+          class="image-slice__subtitle"
+        >
+          <div
+            class="image-slice__text"
+          >
+            
+          text
+        
+          </div>
+           
+          <div
+            class="image-slice__description"
+          >
+            
+          subtitle
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`SingleImage slice should correctly render without data 1`] = `
+<div>
+  <section
+    class="image-slice"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="image-slice__wrapper"
+        style="background-image: url(undefined);"
+      >
+        <div
+          class="image-slice__title"
+        >
+          
+        
+      
+        </div>
+         
+        <div
+          class="image-slice__subtitle"
+        >
+          <div
+            class="image-slice__text"
+          >
+            
+          
+        
+          </div>
+           
+          <div
+            class="image-slice__description"
+          >
+            
+          
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

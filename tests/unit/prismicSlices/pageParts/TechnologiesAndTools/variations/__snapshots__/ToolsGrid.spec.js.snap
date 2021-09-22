@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolsGrid slice data-aos animation attribute should render correctly with data 1`] = `
+<div>
+  <section
+    class="tools-slice"
+  >
+    <div
+      class="container"
+      data-aos="fade-up"
+      data-testid="tools-slice-container"
+    >
+      <div
+        class="tools-slice__grid"
+      >
+        <div
+          class="tools-slice__technology"
+          data-testid="tools-slice-technology"
+        >
+          <img
+            alt="text"
+            data-src="url"
+            field="[object Object]"
+            height="26"
+            width="26"
+          />
+           
+          <span>
+            text
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`ToolsGrid slice data-aos animation attribute should render correctly without data 1`] = `
+<div>
+  <section
+    class="tools-slice"
+  >
+    <div
+      class="container"
+      data-testid="tools-slice-container"
+    >
+      <div
+        class="tools-slice__grid"
+      />
+    </div>
+  </section>
+</div>
+`;

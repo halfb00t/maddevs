@@ -58,6 +58,9 @@ export default {
     }
 
     @media screen and (max-width: 1024px) {
+      &--md {
+        margin-bottom: 72px;
+      }
       &--lg {
         height: 48px;
       }

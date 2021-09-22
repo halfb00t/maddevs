@@ -46,6 +46,16 @@
             }
           }
         }
+      },
+      "richTechCardsAnimations": {
+        "items": {}
+      },
+      "richTextCardsAnimation": {
+        "items": {},
+        "primary": {}
+      },
+      "richTextCardsBottomAnimation": {
+        "items": {}
       }
     },
     "CtaBannerSlice": {
@@ -422,6 +432,16 @@
     },
     "WeCreateProjectsFor": {},
     "QuickProjectStart": {},
-    "TechnologiesAndTools": {}
+    "TechnologiesAndTools": {
+      "toolsGrid": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "SingleImage": {}
+  },
+  "_cts": {
+    "singleimage": {},
+    "custom-page": {}
   }
 }
