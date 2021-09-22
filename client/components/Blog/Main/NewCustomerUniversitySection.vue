@@ -11,62 +11,37 @@
         questions than replies. If you are one of them, this section is for you.
       </p>
       <p class="customer-university__text customer-university__text--margin">
-        Here, you can find information <span class="customer-university__text--yellow"> about the main software development processes, useful tips on
-          choosing a company to work on your product, determining whether the budget is reasonable,</span> and
-        how Mad Devs company approaches and takes care of every project.
+        Here, you can find information <span class="customer-university__text--yellow"> about the main software development
+          processes, useful tips on choosing a company to work on your product, determining whether the budget is reasonable,</span>
+        and how Mad Devs company approaches and takes care of every project.
       </p>
       <div class="customer-university__rows">
-        <div class="customer-university__columns">
+        <div
+          v-for="customerUniversityPost in customerUniversityPostsList"
+          :key="customerUniversityPost.title"
+          class="customer-university__columns"
+        >
           <CustomerUniversityTextCard
-            title="Pricing Strategies"
-            description="If it seems that you are overpaying for upgrading your existing or
-            developing a new solution, or if you have doubts about how much your product will
-            cost, this section is for you. Here, you learn about the main pricing strategies and
-            factors that influence price formation and get useful tips on choosing the best development
-            company to work on your project."
+            :title="customerUniversityPost.title"
+            :description="customerUniversityPost.description"
           />
-          <div>
-            <CustomerUniversityCard
-              v-if="featuredCUPost"
-              v-bind="featuredCUPost"
-              :post-id="customerContent.featured_cu.uid"
-              :author="findAuthor(featuredCUPost.post_author.id, allAuthors)"
-            />
-
-            <CustomerUniversityListItem
-              v-for="(cluster, i) in clustersToShow"
-              :key="i"
-              v-bind="cluster.primary"
-              :items="cluster.items"
-            />
-            <CustomerUniversityButton
-              label=" See more"
-              size="md"
-            />
-          </div>
-        </div>
-        <div class="customer-university__columns">
-          <CustomerUniversityTextCard
-            title="Development Process"
-            description="Here, you can learn about development processes, artefacts delivered at every
-            stage of work on a project, approaches, and the best practices for software development.
-            And also about what rules we at Mad Devs adhere to when working on technical solutions for
-            our clients and why our approach helps them achieve success."
+          <CustomerUniversityCard
+            v-for="(post,idx) in customerUniversityPost.posts"
+            :key="post.id"
+            v-bind="post.data"
+            :author="findAuthor(post.data.post_author.id, allAuthors)"
+            :post-id="post.uid"
+            :type="post.type"
+            :is-main="isFirstElement(idx)"
+            :direction="calculateCardDirection(idx)"
+            :size="calculateCardSize(idx)"
           />
-          <div>
-            <CustomerUniversityCard
-              v-if="featuredCUPost"
-              v-bind="featuredCUPost"
-              :post-id="customerContent.featured_cu.uid"
-              :author="findAuthor(featuredCUPost.post_author.id, allAuthors)"
-            />
-            <CustomerUniversityListItem
-              v-for="(cluster, i) in clustersToShow"
-              :key="i"
-              v-bind="cluster.primary"
-              :items="cluster.items"
-            />
-          </div>
+          <CustomerUniversityButton
+            v-if="customerUniversityPost.redirectLink"
+            label="See more"
+            size="md"
+            @click="redirectTo(customerUniversityPost.redirectLink)"
+          />
         </div>
       </div>
       <hr class="customer-university__hr customer-university__hr--margin">
@@ -80,40 +55,41 @@
         you! Here, we share information about us as a team, our culture and our
         approaches to work.
       </p>
-      <div class="mad-community__posts-section">
+      <div
+        v-if="madCommunityPostToShow.length"
+        class="mad-community__posts-section"
+      >
         <CustomerUniversityCard
-          v-if="featuredCUPost"
-          v-bind="featuredCUPost"
-          :post-id="customerContent.featured_cu.uid"
-          :author="findAuthor(featuredCUPost.post_author.id, allAuthors)"
+          v-for="(madCommunityPost,idx) in madCommunityPostToShow"
+          :key="madCommunityPost.id"
+          v-bind="madCommunityPost.data"
+          :author="findAuthor(madCommunityPostToShow[0].data.post_author.id, allAuthors)"
+          :post-id="madCommunityPost.uid"
+          :type="madCommunityPost.type"
           direction="row"
+          :is-main="isFirstElement(idx)"
+          :size="calculateCardSize(idx)"
         />
-        <div class="mad-community__posts-grid">
-          <CustomerUniversityListItem
-            v-for="(cluster, i) in clustersToShow"
-            :key="i"
-            v-bind="cluster.primary"
-            :items="cluster.items"
-          />
-        </div>
       </div>
       <CustomerUniversityButton
-        label="See more"
+        v-if="madCommunityPost.length > 3 && !isShowAllMadCommunityPosts"
+        label="All articles"
         size="lg"
+        @click="isShowAllMadCommunityPosts=true"
       />
     </div>
   </section>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import initializeLazyLoad from '@/helpers/lazyLoad'
 import CustomerUniversityTitle from '@/components/Blog/shared/СustomerUniversityTitle'
 import CustomerUniversityTextCard from '@/components/Blog/shared/CustomerUniversityTextCard'
 import CustomerUniversityCard from '@/components/Blog/shared/CustomerUniversityCard'
-import CustomerUniversityListItem from '@/components/Blog/shared/CustomerUniversityListItem'
 import CustomerUniversityButton from '@/components/Blog/shared/CustomerUniversityButton'
+import { customerUniversitySectionData } from '@/data/customerUniversitySection'
 
 export default {
   name: 'NewCustomerUniversitySection',
@@ -121,7 +97,6 @@ export default {
     CustomerUniversityTitle,
     CustomerUniversityTextCard,
     CustomerUniversityCard,
-    CustomerUniversityListItem,
     CustomerUniversityButton,
   },
 
@@ -129,18 +104,75 @@ export default {
 
   data() {
     return {
-      isShowAllClusters: false,
+      isShowAllMadCommunityPosts: false,
     }
   },
 
+  created() {
+    this.getCustomerUniversitySectionPosts()
+    this.getCustomerUniversityPosts()
+  },
+
   computed: {
-    ...mapGetters(['customerContent', 'featuredCUPost', 'allAuthors']),
-    clusters() {
-      return this.customerContent.body || []
+    ...mapGetters(['customerUniversitySectionPosts', 'CUPosts', 'allAuthors', 'allPosts']),
+
+    customerUniversityPostsList() {
+      const {
+        pricing_strategies: pricingStrategies,
+        development_process: developmentProcess,
+      } = this.customerUniversitySectionPosts
+      const {
+        pricingStrategiesInfo,
+        developmentProcessInfo,
+      } = customerUniversitySectionData
+      const allPosts = [...this.CUPosts, ...this.allPosts]
+
+      return [
+        {
+          ...pricingStrategiesInfo,
+          posts: this.filterPosts(pricingStrategies, allPosts),
+          redirectLink: '/insights/ebooks/pricing-strategies/',
+        },
+        {
+          ...developmentProcessInfo,
+          posts: this.filterPosts(developmentProcess, allPosts),
+        },
+      ]
     },
 
-    clustersToShow() {
-      return this.isShowAllClusters ? this.clusters : this.clusters.slice(0, 3)
+    madCommunityPost() {
+      const { mad_community: madCommunity } = this.customerUniversitySectionPosts
+      const allPosts = [...this.CUPosts, ...this.allPosts]
+      return this.filterPosts(madCommunity, allPosts) || []
+    },
+
+    madCommunityPostToShow() {
+      return this.isShowAllMadCommunityPosts ? this.madCommunityPost : this.madCommunityPost.slice(0, 3)
+    },
+  },
+
+  methods: {
+    ...mapActions(['getCustomerUniversitySectionPosts', 'getCustomerUniversityPosts']),
+    filterPosts(postIdList, allPosts) {
+      return postIdList?.map(postIdListItem => allPosts?.filter(allPostsItem => allPostsItem.id === postIdListItem.post.id)).flat()
+    },
+
+    isFirstElement(idx) {
+      return idx === 0
+    },
+
+    calculateCardDirection(idx) {
+      if (idx === 0) return 'column'
+      return 'row'
+    },
+
+    calculateCardSize(idx) {
+      if (idx === 0) return 'md'
+      return 'sm'
+    },
+
+    redirectTo(url) {
+      this.$router.push(url)
     },
   },
 
@@ -172,10 +204,6 @@ export default {
 
   &__columns {
     width: 100%;
-
-    .customer-university__featured-post {
-      width: 90%;
-    }
   }
 
   a {
@@ -187,6 +215,7 @@ export default {
     line-height: 137%;
     letter-spacing: -0.013em;
     color: $text-color--white-primary;
+    max-width: 1028px;
 
     &--yellow {
       color: $text-color--yellow;
@@ -209,16 +238,23 @@ export default {
 .mad-community {
   &__posts-section {
     margin-top: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     .customer-university__featured-post {
-      margin-bottom: 48px;
+      &:first-child {
+        margin-bottom: 48px;
+        width: 100%;
+      }
+      width: 48.8%;
+      margin-bottom: 24px;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin-bottom: 48px;
+      }
     }
-  }
-
-  &__posts-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 32px;
   }
 }
 
@@ -255,8 +291,6 @@ export default {
 
     &__hr {
       border: 1px solid #28282A;
-      margin: 32px 0 72px 0;
-
       &--margin {
         margin: 32px 0 72px 0;
       }

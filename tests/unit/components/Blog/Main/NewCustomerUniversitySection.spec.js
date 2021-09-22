@@ -1,5 +1,4 @@
-import { render } from '@testing-library/vue'
-import { createLocalVue } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import NewCustomerUniversitySection from '@/components/Blog/Main/NewCustomerUniversitySection'
 
@@ -11,62 +10,85 @@ const mocks = {
     asText: () => 'img.png',
   },
 }
-
-const store = {
-  modules: {
-    blog: {
-      state: {
-        customerContent: {
-          featured_cu: {
-            uid: 'uid',
-          },
-        },
-      },
-      getters: {
-        customerContent(state) {
-          return state.customerContent
-        },
+const customerUniversitySectionPosts = {
+  pricing_strategies: [
+    {
+      post: {
+        id: 'YRarARAAACEARTec',
+        uid: 'mad-devs-corporate-culture',
       },
     },
-    blogAuthors: {
-      state: {
-        authors: [],
-      },
-      getters: {
-        allAuthors(state) {
-          return state.authors
-        },
+  ],
+  development_process: [
+    {
+      post: {
+        id: 'YRarARAAACEARTec',
+        uid: 'mad-devs-corporate-culture',
       },
     },
-  },
-  getters: {
-    featuredCUPost: () => ({
-      body: [],
-      post_author: {
-        id: 'id',
-      },
-      featured_image: {
-        url: '',
-      },
-    }),
-  },
+  ],
 }
 
-const stubs = ['PrismicImage', 'NuxtLink']
+const postsList = [
+  {
+    data: {
+      title: [
+        {
+          text: '2. title',
+        },
+      ],
+      featured_image: {
+        url: 'https://example.com/image2.jpg',
+        alt: 'alt text',
+      },
+    },
+  },
+  {
+    data: {
+      title: [
+        {
+          text: '1. title',
+        },
+      ],
+      featured_image: {
+        url: 'https://example.com/image.jpg',
+        alt: 'alt text',
+      },
+    },
+  },
+]
+
+const actions = {
+  getCustomerUniversitySectionPosts: jest.fn(),
+  getCustomerUniversityPosts: jest.fn(),
+}
+
+const getters = {
+  customerUniversitySectionPosts: () => customerUniversitySectionPosts,
+  CUPosts: () => postsList,
+  allPosts: () => postsList,
+}
+
+const stubs = ['PrismicImage', 'NuxtLink', 'Feature']
 
 const directives = {
-  'lazy-load': () => {},
+  'lazy-load': () => {
+  },
 }
-
 describe('NewCustomerUniversitySection component', () => {
-  it('should render correctly', () => {
-    const { container } = render(NewCustomerUniversitySection, {
+  let wrapper = null
+
+  beforeEach(() => {
+    const store = new Vuex.Store({ actions, getters })
+    wrapper = shallowMount(NewCustomerUniversitySection, {
+      store,
+      localVue,
       stubs,
       mocks,
-      store,
       directives,
     })
-
-    expect(container).toMatchSnapshot()
+  })
+  it('should render correctly with no data', () => {
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })
