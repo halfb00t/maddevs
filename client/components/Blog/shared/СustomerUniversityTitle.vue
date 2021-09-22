@@ -25,21 +25,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 .customer-university-title {
-  @include font('Poppins', 120px, 700);
+  @include font('Poppins', 80px, 700);
   font-style: normal;
-  line-height: 96%;
+  line-height: 101%;
   letter-spacing: -0.04em;
   color: $bgcolor--silver;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
 
   span {
     -webkit-text-stroke: 1.13333px $bgcolor--white;
     color: $text-color--black-oil;
-  }
-
-  @media screen and (max-width: 1024px) {
-    @include font('Poppins', 100px, 700);
-    line-height: 101%;
   }
 
   @media screen and (max-width: 768px) {
