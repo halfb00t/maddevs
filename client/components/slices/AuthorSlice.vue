@@ -4,7 +4,10 @@
     class="author-slice"
   >
     <div class="author-slice__info">
-      <div class="author-slice__image">
+      <NuxtLink
+        class="author-slice__image author-slice__link"
+        :to="link"
+      >
         <img
           v-lazy-load
           :data-src="authorImage.url"
@@ -12,14 +15,19 @@
           width="68"
           height="68"
         >
-      </div>
+      </NuxtLink>
       <div>
-        <p class="author-slice__name">
-          {{ blogAuthor.name }}
-        </p>
-        <span class="author-slice__position">
-          {{ blogAuthor.position }}
-        </span>
+        <NuxtLink
+          class="author-slice__link"
+          :to="link"
+        >
+          <p class="author-slice__name">
+            {{ blogAuthor.name }}
+          </p>
+          <span class="author-slice__position">
+            {{ blogAuthor.position }}
+          </span>
+        </NuxtLink>
         <ul
           v-if="blogAuthor.socialNetworks.length"
           class="author-slice__social-list"
@@ -88,6 +96,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import linkResolver from '@/plugins/link-resolver'
 
 export default {
   name: 'AuthorSlice',
@@ -110,6 +119,10 @@ export default {
     authorImage() {
       const { author_slice: authorSlice = {} } = this.blogAuthor?.image
       return authorSlice
+    },
+
+    link() {
+      return linkResolver({ type: 'author', uid: this.blogAuthor.uid })
     },
   },
 
@@ -161,12 +174,15 @@ export default {
       }
     }
   }
+  &__link {
+    text-decoration: none;
+  }
   &__name {
     @include font('Poppins', 21px, 600);
     line-height: 130%;
     letter-spacing: -0.02px;
     color: $text-color--black-oil;
-    margin: 6px 0;
+    margin: 8px 0 2px;
     @media screen and (max-width: 1024px) {
       margin-top: 13px;
     }
