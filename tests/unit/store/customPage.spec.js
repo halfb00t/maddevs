@@ -21,6 +21,46 @@ describe('Custom page module state', () => {
   })
 })
 
+const fallback = {
+  data: {
+    title: [
+      {
+        text: 'Mad Devs: Software & Mobile App Development Company | Blog',
+      },
+    ],
+    featured_image: {
+      url: 'https://maddevs.io/blog.png',
+    },
+    date: 'N/A',
+  },
+  uid: 'uid',
+}
+
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: fallback?.data?.title[0]?.text,
+  alternativeHeadline: fallback?.data?.title[0]?.text,
+  image: fallback?.data?.featured_image?.url,
+  genre: 'IT',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Mad Devs Group LTD',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://maddevs.io/Open-Graph.png',
+    },
+  },
+  url: 'https://maddevs.io/blog/',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://maddevs.io/blog/',
+  },
+  datePublished: fallback?.data?.date,
+  dateCreated: fallback?.data?.date,
+  dateModified: fallback?.data?.date,
+})
+
 describe('Custom page module mutations', () => {
   const prismicResponse = {
     id: 'id',
@@ -61,7 +101,7 @@ describe('Custom page module mutations', () => {
       showFooter: false,
       metaTitle: 'Meta title',
       metaDescription: 'Meta description',
-      schemaOrgSnippet: '',
+      schemaOrgSnippet: schema,
     }
 
     mutations.SET_CUSTOM_PAGE(state, prismicResponse)
