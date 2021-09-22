@@ -14,9 +14,9 @@ function extractSchemaOrg(schemaOrgSnippets, fallback) {
   return JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: fallback.data.title[0].text,
-    alternativeHeadline: fallback.data.title[0].text,
-    image: fallback.data.featured_image.url,
+    headline: fallback?.data?.title[0]?.text || 'Mad Devs: Software & Mobile App Development Company | Blog',
+    alternativeHeadline: fallback?.data?.title[0]?.text || 'Mad Devs: Software & Mobile App Development Company | Blog',
+    image: fallback?.data?.featured_image?.url || 'https://maddevs.io/blog.png',
     genre: 'IT',
     publisher: {
       '@type': 'Organization',
@@ -26,14 +26,14 @@ function extractSchemaOrg(schemaOrgSnippets, fallback) {
         url: 'https://maddevs.io/Open-Graph.png',
       },
     },
-    url: `https://maddevs.io/blog/${fallback.uid}/`,
+    url: fallback?.uid ? `https://maddevs.io/blog/${fallback?.uid}/` : 'https://maddevs.io/blog/',
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': 'https://maddevs.io/blog/',
     },
-    datePublished: fallback.data.date,
-    dateCreated: fallback.data.date,
-    dateModified: fallback.data.date,
+    datePublished: fallback?.data?.date || 'N/A',
+    dateCreated: fallback?.data?.date || 'N/A',
+    dateModified: fallback?.data?.date || 'N/A',
   })
 }
 
