@@ -6,7 +6,10 @@
       class="header-navigation__item"
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
     >
-      <span @mouseenter="setNavigation(name)">
+      <span
+        @click="goTo(name)"
+        @mouseenter="setNavigation(name)"
+      >
         {{ label }}
       </span>
       <HeaderSection
@@ -53,6 +56,12 @@ export default {
 
     onChangePage() {
       this.$emit('changed-page')
+    },
+
+    goTo(name) {
+      const path = this.headerContent[name]?.link
+      if (!path) return
+      this.$router.push({ path })
     },
 
     getIsHoverClass(navigationName) {

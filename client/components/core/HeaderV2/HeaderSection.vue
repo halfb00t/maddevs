@@ -91,7 +91,7 @@ export default {
   top: 62px;
   right: 0;
   left: 0;
-  padding: 24px 0;
+  padding: 20px 0;
   background: rgba(17, 17, 17, 0.85);
   backdrop-filter: blur(16px);
   transform-origin: top;
@@ -113,6 +113,7 @@ export default {
 
   &__content {
     display: flex;
+    padding: 4px 0;
   }
 
   &__menus {
@@ -162,10 +163,7 @@ export default {
     max-width: 540px;
     overflow: hidden;
     @media screen and (max-width: 1360px) {
-      max-width: 450px;
-    }
-    @media screen and (max-width: 1280px) {
-      max-width: 340px;
+      max-width: 55%;
     }
   }
 }
