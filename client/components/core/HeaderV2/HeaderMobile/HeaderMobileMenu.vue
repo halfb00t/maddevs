@@ -4,6 +4,7 @@
     class="header-mobile-menu"
   >
     <button
+      v-show="menuName"
       type="button"
       class="header-mobile-menu__button"
       @click="open"

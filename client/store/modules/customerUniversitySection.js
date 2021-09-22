@@ -20,7 +20,7 @@ export const mutations = {
 }
 
 export const actions = {
-  async getCustomerUniversityPosts({ commit }) {
+  async getCustomerUniversitySectionPosts({ commit }) {
     commit('SET_CUSTOMER_UNIVERSITY_POSTS_LOADED', true)
     try {
       const posts = await getCustomerUniversitySectionPosts(this.$prismic)
@@ -34,13 +34,13 @@ export const actions = {
 }
 
 export const getters = {
-  customerUniversityPosts(state) {
+  customerUniversitySectionPosts(state) {
     return state.customerUniversityPosts
   },
-  customerUniversityPostsLoaded(state) {
+  customerUniversitySectionPostsLoaded(state) {
     return state.isCustomerUniversityPostsLoaded
   },
-  customerUniversityPostsError(state) {
+  customerUniversitySectionPostsError(state) {
     return state.customerUniversityPostsError
   },
 }

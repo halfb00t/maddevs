@@ -71,7 +71,7 @@ export default {
   computed: {
     mappedMenus() {
       const otherMenu = {
-        name: 'Other',
+        name: null,
         routes: [],
       }
       const filteredMenus = this.menus.filter(({ name }) => Boolean(name))
