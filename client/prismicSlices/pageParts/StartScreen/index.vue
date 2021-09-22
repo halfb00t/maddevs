@@ -136,10 +136,6 @@ export default {
     @include font('Inter', 32px, 600);
     line-height: 44px;
     letter-spacing: -1px;
-<<<<<<< HEAD
-=======
-    margin-top: 20px;
->>>>>>> origin
     color: $text-color--white-primary;
     @media screen and (max-width: 1024px) {
       font-size: 32px;
