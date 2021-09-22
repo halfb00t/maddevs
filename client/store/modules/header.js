@@ -16,6 +16,11 @@ const extractHeaderSection = async (prismic, headerContent = {}, navSection) => 
   const { type: postType, uid: postUID } = headerContent[`${navSection}_blog_post`]
   const post = await getBlogPost(prismic, { type: postType, uid: postUID })
   const author = await getBlogAuthor(prismic, post?.data?.post_author?.uid)
+  const getLink = () => {
+    const link = headerContent.body
+      .find(item => item.primary?.nav_section.toLowerCase() === navSection)
+    return link?.primary?.link[0]?.text
+  }
 
   menus = headerContent.body
     .filter(slice => slice.primary?.nav_section.toLowerCase() === navSection)
@@ -26,6 +31,7 @@ const extractHeaderSection = async (prismic, headerContent = {}, navSection) => 
 
   return {
     name: navSection,
+    link: getLink(),
     menus,
     post: extractPostData(post),
     postAuthor: extractAuthorData(author),
