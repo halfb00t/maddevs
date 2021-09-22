@@ -1,14 +1,14 @@
 <template>
   <Lottie
     id="dev-page"
-    :options="options"
-    @animCreated="handleAnimation"
+    :options="lottieOptions"
+    @animCreated="animCreatedHandler"
   />
 </template>
 
 <script>
 import Lottie from 'vue-lottie/src/lottie.vue'
-import playLottieMixin from '@/mixins/playLottieMixin'
+import playLottie from '@/helpers/playLottie'
 
 export default {
   name: 'CardAnimation',
@@ -17,18 +17,32 @@ export default {
     Lottie,
   },
 
-  mixins: [
-    playLottieMixin('dev-page', {
-      animationData: () => require(`@/assets/lottie/development/${this.animation}.json`),
-      autoplay: false,
-      loop: false,
-    }),
-  ],
-
   props: {
-    animation: {
+    animationName: {
       type: String,
       default: '',
+    },
+  },
+
+  data() {
+    return {
+      animationData: null,
+    }
+  },
+
+  computed: {
+    lottieOptions() {
+      return {
+        animationData: require(`@/assets/lottie/development/${this.animationName}.json`),
+        autoplay: false,
+        loop: false,
+      }
+    },
+  },
+
+  methods: {
+    animCreatedHandler(animation) {
+      playLottie(animation, 'dev-page')
     },
   },
 }

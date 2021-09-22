@@ -30,6 +30,13 @@
       :data-aos="slice.primary.animation"
       data-testid="rich-text-card-animation"
     />
+    <RichTextCardsBottomAnimation
+      v-else-if="slice.variation === 'richTextCardsBottomAnimation'"
+      v-bind="slice.primary"
+      :items="slice.items"
+      :data-aos="slice.primary.animation"
+      data-testid="rich-text-card-bottom-animation"
+    />
   </section>
 </template>
 
@@ -38,6 +45,7 @@ import CardGrid from './variations/CardGrid'
 import CardGridWithIcon from './variations/CardGridWithIcon'
 import RichTextCards from './variations/RichTextCards'
 import RichTextCardsAnimation from './variations/RichTextCardsAnimation'
+import RichTextCardsBottomAnimation from './variations/RichTextCardsBottomAnimation'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
@@ -47,6 +55,7 @@ export default {
     CardGridWithIcon,
     RichTextCards,
     RichTextCardsAnimation,
+    RichTextCardsBottomAnimation,
   },
 
   mixins: [

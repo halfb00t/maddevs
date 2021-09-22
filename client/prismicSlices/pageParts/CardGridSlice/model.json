@@ -346,8 +346,95 @@
               "research-animate",
               "testing-stage",
               "stack-selection",
-              "infrastructure-animation",
               "development-stage"
+            ]
+          },
+          "type": "Select"
+        }
+      }
+    },
+    {
+      "id": "richTextCardsBottomAnimation",
+      "name": "RichTextCardsBottomAnimation",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Card Grid slice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animations List",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "fullWidth": {
+          "config": {
+            "label": "Full width",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
+        "background": {
+          "config": {
+            "label": "Background",
+            "placeholder": ""
+          },
+          "type": "Color"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "content": {
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "list-item,o-list-item"
+          },
+          "type": "StructuredText"
+        },
+        "alignText": {
+          "config": {
+            "label": "Content Alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center"
+            ],
+            "default_value": "left"
+          },
+          "type": "Select"
+        },
+        "lottie-animations": {
+          "config": {
+            "label": "Lottie-animations",
+            "placeholder": "",
+            "options": [
+              "infrastructure-animation",
+              "-"
             ]
           },
           "type": "Select"

@@ -13,11 +13,6 @@
           class="card-item"
           data-testid="rich-text-animation-item"
         >
-          <div class="card-item__lottie">
-            <CardAnimation
-              :animation-name="item['lottie-animations']"
-            />
-          </div>
           <h3
             class="card-item__title"
             v-html="item.title"
@@ -26,6 +21,11 @@
             class="card-item__content"
             v-html="renderCardContent($prismic.asHtml(item.content))"
           />
+          <div class="card-item__lottie">
+            <CardAnimation
+              :animation-name="item['lottie-animations']"
+            />
+          </div>
         </li>
       </ul>
     </div>
@@ -36,7 +36,7 @@
 import CardAnimation from '@/prismicSlices/pageParts/CardGridSlice/components/CardAnimation'
 
 export default {
-  name: 'RichTextCardsAnimation',
+  name: 'RichTextCardsBottomAnimation',
 
   components: {
     CardAnimation,
@@ -80,9 +80,10 @@ export default {
   display: block;
   box-sizing: border-box;
   padding: 80px;
-  padding-bottom: 96px;
+  padding-bottom: 0;
   color: $text-color--white-primary;
   background-color: $bgcolor--black-pale;
+
   @media screen and (max-width: 1024px) {
     padding: 32px;
   }
@@ -95,20 +96,22 @@ export default {
   }
 
   &__lottie {
-    max-width: 385px;
-    height: 95px;
-    margin-bottom: 60px;
+    width: 689px;
+    height: 278px;
+    margin: 0 auto;
   }
 
   &--text-center {
     .card-item__title {
       text-align: center;
+
       @media screen and (max-width: 1024px) {
         text-align: left;
       }
     }
     /deep/ p {
       text-align: center;
+
       @media screen and (max-width: 1024px) {
         text-align: left;
       }
@@ -132,6 +135,7 @@ export default {
     letter-spacing: -0.013em;
     word-break: break-word;
     max-width: 1080px;
+    margin-bottom: 40px;
     @media screen and (max-width: 1260px) {
       font-size: 20px;
       line-height: 30px;

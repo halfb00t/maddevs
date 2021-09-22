@@ -53,6 +53,9 @@
       "richTextCardsAnimation": {
         "items": {},
         "primary": {}
+      },
+      "richTextCardsBottomAnimation": {
+        "items": {}
       }
     },
     "CtaBannerSlice": {
