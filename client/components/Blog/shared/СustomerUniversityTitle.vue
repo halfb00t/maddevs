@@ -30,7 +30,7 @@ export default {
   line-height: 101%;
   letter-spacing: -0.04em;
   color: $bgcolor--silver;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 
   span {
     -webkit-text-stroke: 1.13333px $bgcolor--white;
@@ -40,7 +40,7 @@ export default {
   @media screen and (max-width: 768px) {
     @include font('Poppins', 50px, 700);
     line-height: 104%;
-    margin: 42px 0 32px 0;
+    margin: 42px 0 16px 0;
   }
 }
 </style>

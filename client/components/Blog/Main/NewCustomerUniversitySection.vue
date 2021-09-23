@@ -35,6 +35,7 @@
             :is-main="isFirstElement(idx)"
             :direction="calculateCardDirection(idx)"
             :size="calculateCardSize(idx)"
+            :width="calculateCardWidth(idx)"
           />
           <CustomerUniversityButton
             v-if="customerUniversityPost.redirectLink"
@@ -172,6 +173,11 @@ export default {
       return 'sm'
     },
 
+    calculateCardWidth(idx) {
+      if (idx === 0) return '90'
+      return '100'
+    },
+
     redirectTo(url) {
       this.$router.push(url)
     },
@@ -223,7 +229,7 @@ export default {
     }
 
     &--margin {
-      margin: 32px 0 48px 0;
+      margin: 32px 0 72px 0;
     }
   }
 
@@ -244,14 +250,14 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
 
-    .customer-university__featured-post {
+    .customer-university-card {
       &:first-child {
         margin-bottom: 48px;
         width: 100%;
       }
 
       width: 48.8%;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
       @media screen and (max-width: 1024px) {
         width: 100%;
         margin-bottom: 48px;
@@ -273,6 +279,7 @@ export default {
         width: 100%;
       }
     }
+
     &__title {
       font-size: 50px;
       line-height: 101%;
@@ -285,7 +292,7 @@ export default {
       border: 1px solid #28282A;
 
       &--margin {
-        margin: 32px 0 72px 0;
+        margin: 72px 0;
       }
     }
   }
@@ -306,6 +313,10 @@ export default {
     &__text {
       @include font('Inter', 18px, 400);
       line-height: 143%;
+
+      &--margin {
+        margin: 32px 0;
+      }
     }
   }
   .mad-community {
