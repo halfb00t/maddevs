@@ -6,17 +6,19 @@
     <img-comparison-slider hover="true">
       <img
         slot="first"
+        v-lazy-load
         :width="baseWidth"
         :height="baseHeight"
-        :src="beforeImage"
+        :data-src="beforeImage"
         alt="Image for compare"
       >
 
       <img
         slot="second"
+        v-lazy-load
         :width="baseWidth"
         :height="baseHeight"
-        :src="afterImage"
+        :data-src="afterImage"
         alt="Image for compare"
       >
     </img-comparison-slider>

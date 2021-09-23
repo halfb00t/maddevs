@@ -471,17 +471,17 @@ exports[`Main component should render correctly 1`] = `
             >
               <img
                 alt="Image for compare"
+                data-src="/images/Cases/godee/png/application-before.png"
                 height="578.47"
                 slot="first"
-                src="/images/Cases/godee/png/application-before.png"
                 width="1000"
               />
                
               <img
                 alt="Image for compare"
+                data-src="/images/Cases/godee/png/application-after.png"
                 height="578.47"
                 slot="second"
-                src="/images/Cases/godee/png/application-after.png"
                 width="1000"
               />
             </img-comparison-slider>

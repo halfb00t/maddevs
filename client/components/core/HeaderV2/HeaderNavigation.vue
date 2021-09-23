@@ -25,6 +25,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { isMobile } from 'mobile-device-detect'
 import HeaderSection from '@/components/core/HeaderV2/HeaderSection'
 
 export default {
@@ -59,6 +60,7 @@ export default {
     },
 
     goTo(name) {
+      if (isMobile) return
       const path = this.headerContent[name]?.link
       if (!path) return
       this.$router.push({ path })
