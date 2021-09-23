@@ -9,9 +9,10 @@ exports[`CityCam _uid component should render correctly 1`] = `
       class="case_header case_header-citycam"
       id="transparent-header-area"
     >
-      <div
+      <img
+        alt="case video fallback"
         class="case_main-video_fallback"
-        style="background-image: url(img.jpg);"
+        data-src="img.jpg"
       />
        
       <!---->
