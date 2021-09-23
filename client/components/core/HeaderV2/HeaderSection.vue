@@ -113,7 +113,6 @@ export default {
 
   &__content {
     display: flex;
-    padding: 4px 0;
   }
 
   &__menus {
@@ -162,6 +161,7 @@ export default {
     width: 100%;
     max-width: 540px;
     overflow: hidden;
+    padding-bottom: 2px; // Fix for Hidden border bottom for post button
     @media screen and (max-width: 1360px) {
       max-width: 55%;
     }
