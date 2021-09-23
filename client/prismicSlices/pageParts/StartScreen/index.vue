@@ -114,7 +114,7 @@ export default {
     max-width: 1113px;
   }
   &__title {
-    @include font('Inter', 100px, 700);
+    @include font('Inter', 64px, 700);
     line-height: 105px;
     letter-spacing: -2px;
     color: $text-color--white-primary;

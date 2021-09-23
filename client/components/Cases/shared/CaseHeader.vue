@@ -5,10 +5,13 @@
     :class="`case_header-${project}`"
   >
     <!-- Image placeholder fallback for Video -->
-    <div
+
+    <img
+      v-lazy-load
       class="case_main-video_fallback"
-      :style="{ backgroundImage: `url(${$getMediaFromS3(videoFallbackPath)})` }"
-    />
+      :data-src="$getMediaFromS3(videoFallbackPath)"
+      alt="case video fallback"
+    >
     <!-- End Image placeholder fallback for Video -->
     <video
       v-if="!isIphone && loaded"
@@ -40,6 +43,7 @@
         <slot name="actions" />
       </div>
       <img
+        v-lazy-load
         :style="{opacity: sectionTextOpacity}"
         :width="logo.width"
         :height="logo.height"
@@ -196,12 +200,10 @@ export default {
   &_main-video_fallback {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     z-index: -1;
   }
 

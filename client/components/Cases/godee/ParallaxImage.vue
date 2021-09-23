@@ -4,11 +4,13 @@
       v-parallax="0.4"
       class="case_parallax-wrapper"
     >
-      <div
+      <img
+        v-lazy-load
         class="case_parallax"
         data-testid="test-case_parallax-image"
-        :style="{ backgroundImage: `url(${$getMediaFromS3('/images/Cases/godee/jpg/parallax.jpg')})` }"
-      />
+        :data-src="$getMediaFromS3('/images/Cases/godee/jpg/parallax.jpg')"
+        alt="Issues and solution"
+      >
     </div>
   </div>
 </template>
@@ -20,26 +22,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .case {
-    &_parallax-layer {
-      height: 576px;
-      max-width: 1440px;
-      position: relative;
-      transform-style: preserve-3d;
-      overflow: hidden;
-    }
-
-    &_parallax-wrapper {
-      position: relative;
-      height: 100vh;
-      transform-style: preserve-3d;
-    }
-
-    &_parallax {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: 50%;
-    }
+.case {
+  &_parallax-layer {
+    height: 576px;
+    max-width: 1440px;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
   }
+
+  &_parallax-wrapper {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+  }
+
+  &_parallax {
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>
