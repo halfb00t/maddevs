@@ -336,9 +336,9 @@ exports[`Main component should render correctly 1`] = `
     >
       <iframe
         allowfullscreen="allowfullscreen"
+        data-src="https://www.youtube.com/embed/_XCRbXmTUwI"
         frameborder="0"
         height="809"
-        src="https://www.youtube.com/embed/_XCRbXmTUwI"
         width="1440"
       />
     </section>
