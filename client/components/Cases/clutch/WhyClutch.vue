@@ -60,9 +60,6 @@ export default {
 
 <style lang="scss" scoped>
 .case {
-  &_lottie {
-    max-width: 813px;
-  }
   &_title_h2 br{
     @media screen and (max-width: 390px) {
       display: none;
