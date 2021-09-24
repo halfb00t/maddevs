@@ -7,10 +7,11 @@
       'video-slice--middle': width === 'middle',
       'video-slice--small': width === 'small',
       'is-mobile': isMobile
-    }, colorThemeClass]"
+    }, `video-slice--${colorThemeClass}-theme`]"
   >
     <div
       class="container"
+      :data-aos="animation"
       @mouseover="play"
       @mouseout="pause"
     >
@@ -97,13 +98,14 @@ export default {
       logoHeight: this.slice?.primary?.logoHeight,
       alt: this.slice?.primary?.alt,
       colorTheme: this.slice?.primary?.colorTheme,
+      animation: this.slice?.primary?.animation,
     }
   },
 
   computed: {
     colorThemeClass() {
-      if (this.colorTheme === 'black') return 'video-slice--black-theme'
-      return 'video-slice--white-theme'
+      if (this.colorTheme === 'black') return 'black'
+      return 'white'
     },
   },
 
@@ -175,6 +177,22 @@ export default {
       background-color: rgba(0, 0, 0, 0.40);
       user-select: none;
       pointer-events: none;
+    }
+
+    &:hover {
+      .video-slice-info {
+        p {
+          height: auto;
+          margin: 16px 0;
+          transform: none;
+        }
+
+        > a {
+          height: auto;
+          padding: 8px;
+          transform: none;
+        }
+      }
     }
   }
 
@@ -329,22 +347,6 @@ export default {
 
       @media screen and (max-width: 375px) {
         font-size: 14px;
-      }
-    }
-  }
-
-  &:hover {
-    .video-slice-info {
-      p {
-        height: auto;
-        margin: 16px 0;
-        transform: none;
-      }
-
-      > a {
-        height: auto;
-        padding: 8px;
-        transform: none;
       }
     }
   }
