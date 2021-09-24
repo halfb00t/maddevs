@@ -129,10 +129,7 @@ export default {
     line-height: 65px;
     letter-spacing: -0.04em;
     max-width: 1080px;
-    @media screen and (max-width: 1260px) {
-      font-size: 30px;
-      line-height: 37px;
-    }
+    font-size: 56px;
   }
 
   &__content {
@@ -142,10 +139,6 @@ export default {
     word-break: break-word;
     max-width: 1080px;
     margin-bottom: 40px;
-    @media screen and (max-width: 1260px) {
-      font-size: 20px;
-      line-height: 30px;
-    }
 
     /deep/ p {
       margin-top: 40px;

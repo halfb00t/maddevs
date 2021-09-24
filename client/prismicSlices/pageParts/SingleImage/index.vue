@@ -1,6 +1,9 @@
 <template>
   <section class="image-slice">
-    <div class="container">
+    <div
+      class="container"
+      :data-aos="animation"
+    >
       <div
         class="image-slice__wrapper"
         :style="{backgroundImage:`url(${url})`}"
@@ -36,6 +39,7 @@ export default {
 
   data() {
     return {
+      animation: this.slice?.primary?.animation,
       url: this.slice?.primary?.image?.url,
     }
   },
