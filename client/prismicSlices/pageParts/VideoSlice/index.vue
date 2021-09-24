@@ -1,66 +1,67 @@
 <template>
-  <div
-    class="cases-list_item"
-    :class="{
-      'cases-list_item--full': width === 'full',
-      'cases-list_item--big': width === 'big',
-      'cases-list_item--middle': width === 'middle',
-      'cases-list_item--small': width === 'small',
-      'is-mobile': isMobile,
-    }"
-    @mouseover="play"
-    @mouseout="pause"
-  >
-    <NuxtLink
-      :to="link"
-      :disabled="isMobile"
-      :tag="isMobile ? 'button' : 'a'"
-      class="cases-list_item-link"
+  <div class="godee-theme">
+    <div
+      class="container"
+      :class="{
+        'cases-list_item--full': width === 'full',
+        'cases-list_item--big': width === 'big',
+        'cases-list_item--middle': width === 'middle',
+        'cases-list_item--small': width === 'small',
+        'is-mobile': isMobile,
+      }"
+      @mouseover="play"
+      @mouseout="pause"
     >
-      <!-- Video BG poster -->
-      <div
-        class="cases-list_item-video_poster"
-        :lazy-background="$getMediaFromS3(posterLink)"
-      />
-      <!-- Video BG -->
-      <video
-        ref="video"
-        v-lazy-load
-        muted="true"
-        loop="true"
-        class="cases-list_item-video"
-      >
-        <source
-          :data-src="$getMediaFromS3(videoFileName)"
-          type="video/mp4"
+      <section class="cases-list_item">
+        <NuxtLink
+          :to="link"
+          :disabled="isMobile"
+          :tag="isMobile ? 'button' : 'a'"
+          class="cases-list_item-link"
         >
-        Your browser does not support the video tag.
-      </video>
-      <!-- END Video BG -->
-      <!-- Card info -->
-      <div class="cases-list_item-info">
-        <img
-          v-lazy-load
-          :width="logo.width"
-          :height="logo.height"
-          :data-src="$getMediaFromS3(`/images/Cases/${logo.folder}/svg/${logo.file}.svg`)"
-          :alt="logo.alt || 'Image'"
-          :class="`cases-list_item-info-${logo.file}`"
-          class="cases-list_item-info-logo"
-        >
-        <span>{{ subtitle }}</span>
-        <Component
-          :is="titleTag"
-        >
-          {{ title }}
-        </Component>
-        <p>{{ desc }}</p>
-        <NuxtLink :to="link">
-          Explore
+          <!-- Video BG poster -->
+          <div
+            class="cases-list_item-video_poster"
+            :lazy-background="$getMediaFromS3(posterLink)"
+          />
+          <!-- Video BG -->
+          <video
+            ref="video"
+            v-lazy-load
+            muted="true"
+            loop="true"
+            class="cases-list_item-video"
+          >
+            <source
+              :data-src="$getMediaFromS3(videoFileName)"
+              type="video/mp4"
+            >
+            Your browser does not support the video tag.
+          </video>
+          <!-- END Video BG -->
+          <!-- Card info -->
+          <div class="cases-list_item-info">
+            <img
+              v-lazy-load
+              :width="logoWidth"
+              :height="logoHeight"
+              :data-src="$getMediaFromS3(`/images/Cases/${folder}/svg/${file}.svg`)"
+              :alt="alt || 'Image'"
+              :class="`cases-list_item-info-${file}`"
+              class="cases-list_item-info-logo"
+            >
+            <span>{{ subtitle }}</span>
+            <h2>
+              {{ title }}
+            </h2>
+            <NuxtLink :to="link">
+              Explore
+            </NuxtLink>
+          </div>
+        <!-- END Card info -->
         </NuxtLink>
-      </div>
-      <!-- END Card info  -->
-    </NuxtLink>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -69,63 +70,32 @@ import { isMobile } from 'mobile-device-detect'
 import mainMixins from '@/mixins/mainMixins'
 
 export default {
+  name: 'VideoSlice',
   mixins: [mainMixins],
   props: {
-    titleTag: {
-      type: String,
-      default: 'h3',
-    },
-
-    width: {
-      type: String,
-      default: 'full',
-    },
-
-    videoFileName: {
-      type: String,
-      default: null,
-    },
-
-    logo: {
+    slice: {
       type: Object,
-      default: () => ({
-        width: 260,
-        height: 80,
-        folder: '',
-        file: '',
-        alt: '',
-      }),
-    },
-
-    title: {
-      type: String,
-      default: null,
-    },
-
-    link: {
-      type: String,
-      default: '/',
-    },
-
-    subtitle: {
-      type: String,
-      default: null,
-    },
-
-    desc: {
-      type: String,
-      default: null,
-    },
-
-    posterLink: {
-      type: String,
-      default: null,
+      required: true,
+      default() {
+        return {}
+      },
     },
   },
 
   data() {
     return {
       isMobile,
+      title: this.slice?.primary?.title,
+      subtitle: this.slice?.primary?.subtitle,
+      width: this.slice?.primary?.width,
+      link: this.slice?.primary?.link,
+      videoFileName: this.slice?.primary?.video,
+      posterLink: this.slice?.primary?.poster,
+      file: this.slice?.primary?.file,
+      folder: this.slice?.primary?.folder,
+      logoWidth: this.slice?.primary?.logoWidth,
+      logoHeight: this.slice?.primary?.logoHeight,
+      alt: this.slice?.primary?.alt,
     }
   },
 
@@ -164,6 +134,7 @@ export default {
     padding: 40px;
     box-sizing: border-box;
     text-decoration: none;
+    background-color: transparent;
     border: 0;
     text-align: left;
 
@@ -286,6 +257,7 @@ export default {
       letter-spacing: -0.04em;
       font-weight: bold;
       line-height: 100%;
+      margin: 16px 0;
 
       @media screen and (max-width: 375px) {
         font-size: 32px;
