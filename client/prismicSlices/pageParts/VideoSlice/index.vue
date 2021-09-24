@@ -1,68 +1,67 @@
 <template>
-  <div class="godee-theme">
-    <div
-      class="container"
-      :class="{
-        'cases-list_item--full': width === 'full',
-        'cases-list_item--big': width === 'big',
-        'cases-list_item--middle': width === 'middle',
-        'cases-list_item--small': width === 'small',
-        'is-mobile': isMobile,
-      }"
-      @mouseover="play"
-      @mouseout="pause"
-    >
-      <section class="cases-list_item">
-        <NuxtLink
-          :to="link"
-          :disabled="isMobile"
-          :tag="isMobile ? 'button' : 'a'"
-          class="cases-list_item-link"
+  <section
+    class="video-slice"
+    :class="{
+      'video-slice--full': width === 'full',
+      'video-slice--big': width === 'big',
+      'video-slice--middle': width === 'middle',
+      'video-slice--small': width === 'small',
+      'is-mobile': isMobile,
+      colorThemeClass
+    }"
+    @mouseover="play"
+    @mouseout="pause"
+  >
+    <div class="container">
+      <NuxtLink
+        :to="link"
+        :disabled="isMobile"
+        :tag="isMobile ? 'button' : 'a'"
+        class="video-slice-link"
+      >
+        <!-- Video BG poster -->
+        <div
+          class="video-slice-video_poster"
+          :lazy-background="$getMediaFromS3(posterLink)"
+        />
+        <!-- Video BG -->
+        <video
+          ref="video"
+          v-lazy-load
+          muted="true"
+          loop="true"
+          class="video-slice-video"
         >
-          <!-- Video BG poster -->
-          <div
-            class="cases-list_item-video_poster"
-            :lazy-background="$getMediaFromS3(posterLink)"
-          />
-          <!-- Video BG -->
-          <video
-            ref="video"
-            v-lazy-load
-            muted="true"
-            loop="true"
-            class="cases-list_item-video"
+          <source
+            :data-src="$getMediaFromS3(videoFileName)"
+            type="video/mp4"
           >
-            <source
-              :data-src="$getMediaFromS3(videoFileName)"
-              type="video/mp4"
-            >
-            Your browser does not support the video tag.
-          </video>
-          <!-- END Video BG -->
-          <!-- Card info -->
-          <div class="cases-list_item-info">
-            <img
-              v-lazy-load
-              :width="logoWidth"
-              :height="logoHeight"
-              :data-src="$getMediaFromS3(`/images/Cases/${folder}/svg/${file}.svg`)"
-              :alt="alt || 'Image'"
-              :class="`cases-list_item-info-${file}`"
-              class="cases-list_item-info-logo"
-            >
-            <span>{{ subtitle }}</span>
-            <h2>
-              {{ title }}
-            </h2>
-            <NuxtLink :to="link">
-              Explore
-            </NuxtLink>
-          </div>
-        <!-- END Card info -->
-        </NuxtLink>
-      </section>
+          Your browser does not support the video tag.
+        </video>
+        <!-- END Video BG -->
+        <!-- Card info -->
+        <div class="video-slice-info">
+          <img
+            v-lazy-load
+            :width="logoWidth"
+            :height="logoHeight"
+            :data-src="$getMediaFromS3(`/images/Cases/${folder}/svg/${file}.svg`)"
+            :alt="alt || 'Image'"
+            :class="`video-slice-info-${file}`"
+            class="video-slice-info-logo"
+          >
+          <span>{{ subtitle }}</span>
+          <h2>
+            {{ title }}
+          </h2>
+          <NuxtLink :to="link">
+            Explore
+          </NuxtLink>
+        </div>
+      <!-- END Card info -->
+      </NuxtLink>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -99,6 +98,13 @@ export default {
     }
   },
 
+  computed: {
+    colorThemeClass() {
+      if (this.slice?.primary?.colorTheme === 'white') return 'video-slice--white-theme'
+      return 'video-slice--black-theme'
+    },
+  },
+
   methods: {
     play() {
       this.MixinPlayVideo(this.$refs.video)
@@ -114,7 +120,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cases-list_item {
+.video-slice {
   width: 100%;
   max-width: 100%;
   height: 605px;
@@ -124,6 +130,18 @@ export default {
   overflow: hidden;
   text-decoration: none;
 
+  .container {
+    height: 100%;
+  }
+
+  &--white-theme {
+    background-color: #fff;
+  }
+
+  &--black-theme {
+    background-color: #000;
+  }
+
   &-link {
     width: 100%;
     height: 100%;
@@ -131,6 +149,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
     padding: 40px;
     box-sizing: border-box;
     text-decoration: none;
@@ -312,7 +331,7 @@ export default {
   }
 
   &:hover {
-    .cases-list_item-info {
+    .video-slice-info {
       p {
         height: auto;
         margin: 16px 0;
@@ -329,7 +348,7 @@ export default {
 }
 
 .is-mobile {
-  .cases-list_item-info {
+  .video-slice-info {
     p {
       display: none;
     }
