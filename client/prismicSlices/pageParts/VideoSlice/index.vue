@@ -1,18 +1,19 @@
 <template>
   <section
     class="video-slice"
-    :class="{
+    :class="[{
       'video-slice--full': width === 'full',
       'video-slice--big': width === 'big',
       'video-slice--middle': width === 'middle',
       'video-slice--small': width === 'small',
-      'is-mobile': isMobile,
-      colorThemeClass
-    }"
-    @mouseover="play"
-    @mouseout="pause"
+      'is-mobile': isMobile
+    }, colorThemeClass]"
   >
-    <div class="container">
+    <div
+      class="container"
+      @mouseover="play"
+      @mouseout="pause"
+    >
       <NuxtLink
         :to="link"
         :disabled="isMobile"
@@ -95,13 +96,14 @@ export default {
       logoWidth: this.slice?.primary?.logoWidth,
       logoHeight: this.slice?.primary?.logoHeight,
       alt: this.slice?.primary?.alt,
+      colorTheme: this.slice?.primary?.colorTheme,
     }
   },
 
   computed: {
     colorThemeClass() {
-      if (this.slice?.primary?.colorTheme === 'white') return 'video-slice--white-theme'
-      return 'video-slice--black-theme'
+      if (this.colorTheme === 'black') return 'video-slice--black-theme'
+      return 'video-slice--white-theme'
     },
   },
 
@@ -156,9 +158,23 @@ export default {
     background-color: transparent;
     border: 0;
     text-align: left;
+    z-index: 1;
 
     @media screen and (max-width: 375px) {
       padding: 24px;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background-color: rgba(0, 0, 0, 0.40);
+      user-select: none;
+      pointer-events: none;
     }
   }
 
@@ -220,19 +236,6 @@ export default {
       z-index: -1;
       margin: -1px;
     }
-  }
-
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-color: rgba(0, 0, 0, 0.40);
-    user-select: none;
-    pointer-events: none;
   }
 
   &-info {
