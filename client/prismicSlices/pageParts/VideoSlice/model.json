@@ -116,6 +116,17 @@
             "placeholder": ""
           },
           "type": "Text"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "colorTheme",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black"
+            ]
+          },
+          "type": "Select"
         }
       },
       "items": {}
