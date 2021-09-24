@@ -1,67 +1,65 @@
 <template>
-  <div class="godee-theme">
-    <div
-      class="container"
-      :class="{
-        'cases-list_item--full': width === 'full',
-        'cases-list_item--big': width === 'big',
-        'cases-list_item--middle': width === 'middle',
-        'cases-list_item--small': width === 'small',
-        'is-mobile': isMobile,
-      }"
-      @mouseover="play"
-      @mouseout="pause"
-    >
-      <section class="cases-list_item">
-        <NuxtLink
-          :to="link"
-          :disabled="isMobile"
-          :tag="isMobile ? 'button' : 'a'"
-          class="cases-list_item-link"
+  <div
+    class="container"
+    :class="{
+      'cases-list_item--full': width === 'full',
+      'cases-list_item--big': width === 'big',
+      'cases-list_item--middle': width === 'middle',
+      'cases-list_item--small': width === 'small',
+      'is-mobile': isMobile,
+    }"
+    @mouseover="play"
+    @mouseout="pause"
+  >
+    <section class="cases-list_item">
+      <NuxtLink
+        :to="link"
+        :disabled="isMobile"
+        :tag="isMobile ? 'button' : 'a'"
+        class="cases-list_item-link"
+      >
+        <!-- Video BG poster -->
+        <div
+          class="cases-list_item-video_poster"
+          :lazy-background="$getMediaFromS3(posterLink)"
+        />
+        <!-- Video BG -->
+        <video
+          ref="video"
+          v-lazy-load
+          muted="true"
+          loop="true"
+          class="cases-list_item-video"
         >
-          <!-- Video BG poster -->
-          <div
-            class="cases-list_item-video_poster"
-            :lazy-background="$getMediaFromS3(posterLink)"
-          />
-          <!-- Video BG -->
-          <video
-            ref="video"
-            v-lazy-load
-            muted="true"
-            loop="true"
-            class="cases-list_item-video"
+          <source
+            :data-src="$getMediaFromS3(videoFileName)"
+            type="video/mp4"
           >
-            <source
-              :data-src="$getMediaFromS3(videoFileName)"
-              type="video/mp4"
-            >
-            Your browser does not support the video tag.
-          </video>
-          <!-- END Video BG -->
-          <!-- Card info -->
-          <div class="cases-list_item-info">
-            <img
-              v-lazy-load
-              :width="logoWidth"
-              :height="logoHeight"
-              :data-src="$getMediaFromS3(`/images/Cases/${folder}/svg/${file}.svg`)"
-              :alt="alt || 'Image'"
-              :class="`cases-list_item-info-${file}`"
-              class="cases-list_item-info-logo"
-            >
-            <span>{{ subtitle }}</span>
-            <h2>
-              {{ title }}
-            </h2>
-            <NuxtLink :to="link">
-              Explore
-            </NuxtLink>
-          </div>
+          Your browser does not support the video tag.
+        </video>
+        <!-- END Video BG -->
+        <!-- Card info -->
+        <div class="cases-list_item-info">
+          <img
+            v-lazy-load
+            :width="logoWidth"
+            :height="logoHeight"
+            :data-src="$getMediaFromS3(`/images/Cases/${folder}/svg/${file}.svg`)"
+            :alt="alt || 'Image'"
+            :class="`cases-list_item-info-${file}`"
+            class="cases-list_item-info-logo"
+          >
+          <span>{{ subtitle }}</span>
+          <h2>
+            {{ title }}
+          </h2>
+          <NuxtLink :to="link">
+            Explore
+          </NuxtLink>
+        </div>
         <!-- END Card info -->
-        </NuxtLink>
-      </section>
-    </div>
+      </NuxtLink>
+    </section>
   </div>
 </template>
 
