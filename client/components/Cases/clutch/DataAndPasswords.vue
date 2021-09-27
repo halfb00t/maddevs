@@ -114,7 +114,7 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import StatisticsContainer from '@/components/Cases/shared/StatisticsContainer'
 import StatisticCard from '@/components/Cases/shared/StatisticsCard'
-import { speedStatistics } from '@/data/clutch'
+import { speedStatistics } from '@/data/caseClutch'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import countDown from '@/helpers/countDown'
 

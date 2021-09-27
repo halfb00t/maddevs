@@ -3,7 +3,7 @@
 exports[`WidgetSpeed component should render correctly 1`] = `
 <div>
   <section
-    class="case_container"
+    class="case_container media-m-48_bottom m-96_bottom"
   >
     <div
       class="container_regular"
