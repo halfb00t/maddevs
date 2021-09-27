@@ -4,11 +4,9 @@ const config = require('../config')
 function redirectToCorrectBlogUrl(req, res, next) {
   const allowedHosts = ['blog.maddevs.co', 'blog.maddevs.io']
   if (allowedHosts.includes(req.headers.host)) {
-    const isBlogPost = /\/blog\/(.*\d|\w+)/.test(req.url)
     const match = config.blogRedirects.find(url => url.from === getRequestUrl(req))
 
-    if (isBlogPost) res.redirect(301, `https://maddevs.io/insights${req.url}`)
-    else if (match && Boolean(match.to)) res.redirect(301, match.to)
+    if (match && Boolean(match.to)) res.redirect(301, match.to)
     else res.redirect(301, 'https://maddevs.io/insights/blog/')
   } else {
     next()
