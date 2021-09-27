@@ -63,7 +63,6 @@
     "prismjs": "^1.24.1",
     "request": "^2.88.2",
     "sendpulse-api": "^1.1.4",
-    "seo-inspector": "0.0.2",
     "simplebar-vue": "^1.6.2",
     "slice-machine-ui": "0.1.0-beta.2",
     "snyk": "^1.563.0",
@@ -117,6 +116,7 @@
     "sass-lint": "^1.13.1",
     "sass-lint-vue": "^0.4.0",
     "sass-loader": "^7.3.1",
+    "seo-analyzer": "^1.0.4",
     "vue-jest": "^3.0.7",
     "vue-loader": "15.9.6"
   },
