@@ -245,7 +245,7 @@ export default [
               type: 'hyperlink',
               data: {
                 link_type: 'Web',
-                url: 'https://maddevs.io/blog/software-architecture-design/',
+                url: 'https://maddevs.io/insights/blog/software-architecture-design/',
               },
             },
           ],
@@ -414,8 +414,8 @@ export default [
     items: [
       {
         embed: {
-          url: 'https://maddevs.io/blog/swot-team-for-software-development-projects/',
-          embed_url: 'https://maddevs.io/blog/swot-team-for-software-development-projects/',
+          url: 'https://maddevs.io/insights/blog/swot-team-for-software-development-projects/',
+          embed_url: 'https://maddevs.io/insights/blog/swot-team-for-software-development-projects/',
           type: 'link',
           version: '1.0',
           title: 'The SWOT team: What It Is and Why We Leverage It | Mad Devs Blog',
@@ -427,7 +427,7 @@ export default [
           thumbnail_url: 'https://images.prismic.io/superpupertest/0e07041e-3600-4dd5-a101-99886804861a_What+is+SWOT+team_.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533',
           thumbnail_width: null,
           thumbnail_height: null,
-          html: '\n        <div data-type="website">\n          <a href="https://maddevs.io/blog/swot-team-for-software-development-projects/" target="_blank">\n            <div class="embed__title">The SWOT team: What It Is and Why We Leverage It</div>\n            <p>Before starting a software development project, we at Mad Devs do SWOT analysis. With SWOT analysis, we will identify functional and reliable things and those that, on the contrary, need work.</p>\n          </a>\n        </div>\n      ',
+          html: '\n        <div data-type="website">\n          <a href="https://maddevs.io/insights/blog/swot-team-for-software-development-projects/" target="_blank">\n            <div class="embed__title">The SWOT team: What It Is and Why We Leverage It</div>\n            <p>Before starting a software development project, we at Mad Devs do SWOT analysis. With SWOT analysis, we will identify functional and reliable things and those that, on the contrary, need work.</p>\n          </a>\n        </div>\n      ',
         },
         embed_title: null,
         embed_description: null,

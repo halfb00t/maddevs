@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import OpenSource from '@/pages/open-source'
+import OpenSource from '@/pages/insights/open-source'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

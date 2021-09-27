@@ -5,7 +5,7 @@ exports[`caseStudies component renders correctly 1`] = `
   class="single-project"
   style="background: rgb(255, 106, 1);"
   target="_self"
-  to="/case-studies/godee/"
+  to="/clients/case-studies/godee/"
 >
   <div
     class="single-project__container single-project_black-letters-theme"

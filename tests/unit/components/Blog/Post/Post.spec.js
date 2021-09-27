@@ -14,7 +14,7 @@ const props = {
   formattedDate: 'Apr 12, 2021',
   id: 'YHRrABEAACkAwDuj',
   jsonLd: '',
-  openGraphUrl: 'undefined/blog/software-project-handover/',
+  openGraphUrl: 'undefined/insights/blog/software-project-handover/',
   recommendedPosts: recomendedPosts,
   slices: blogSlices,
   tags: [
@@ -57,7 +57,7 @@ const mocks = {
   },
   $router: {
     currentRoute: {
-      path: '/blog-post-title',
+      path: '/insights/blog-post-title',
     },
   },
 }
@@ -308,7 +308,7 @@ describe('Post component copyAnchorLink', () => {
       },
     }
     const result = wrapper.vm.copyAnchorLink(event)
-    expect(result).toBe('http://localhost/blog-post-title#blog-post-title')
+    expect(result).toBe('http://localhost/insights/blog-post-title#blog-post-title')
   })
 
   it('if not have attr data-id in btn will return null', () => {

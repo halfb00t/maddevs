@@ -21,7 +21,7 @@
     </CaseHeader>
     <Main />
     <Footer
-      link="/case-studies/yourcast/"
+      link="/clients/case-studies/yourcast/"
       class-name="yourcast"
     >
       <img
@@ -79,9 +79,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/cases/base';
-@import '../../assets/styles/cases/components';
-@import '../../assets/styles/cases/media';
+@import '../../../assets/styles/cases/base';
+@import '../../../assets/styles/cases/components';
+@import '../../../assets/styles/cases/media';
 
 .case {
   &_header-veeqo {

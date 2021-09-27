@@ -16,6 +16,7 @@ const redirectToCustomerUrl = require('./middlewares/redirectToCustomerUrl')
 const redirectToCorrectPostUrl = require('./middlewares/redirectToCorrectPostUrl')
 const redirectHrTags = require('./middlewares/redirectHrTags')
 const redirectInvalidLinks = require('./middlewares/redirectInvalidLinks')
+const redirectToCorrectCareersUrl = require('./middlewares/redirectToCorrectCareersUrl')
 
 // config
 const config = require('./config')
@@ -48,6 +49,7 @@ function bootstrap() {
   app.use(redirectToCorrectPostUrl)
   app.use(redirectHrTags)
   app.use(redirectInvalidLinks)
+  app.use(redirectToCorrectCareersUrl)
 
   // Routers
   app.use(webRouter)

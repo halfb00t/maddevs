@@ -36,7 +36,7 @@ exports[`CaseStudies should render correctly 1`] = `
           data-testid="test-case-card"
           desc="Our DevOps team optimized the infrastructure for Veeqo, an inventory and shipping e-commerce platform, and made it highly efficient, smooth, and cost-effective for our partners."
           item="[object Object]"
-          link="/case-studies/veeqo/"
+          link="/clients/case-studies/veeqo/"
           logo="[object Object]"
           poster-link="/images/Cases/veeqo/svg/veeqo-banner-bg.svg"
           subtitle="Logistics"
@@ -50,7 +50,7 @@ exports[`CaseStudies should render correctly 1`] = `
           data-testid="test-case-card"
           desc="A web app customized for the delivery of export management coaching missions that contributes to the development of intra-regional and international trade in Central Asia"
           item="[object Object]"
-          link="/case-studies/R4TCA-web-application/"
+          link="/clients/case-studies/R4TCA-web-application/"
           logo="[object Object]"
           poster-link="/images/Cases/itc/jpg/itc-banner.jpg"
           subtitle="Digital transformation"
@@ -64,7 +64,7 @@ exports[`CaseStudies should render correctly 1`] = `
           data-testid="test-case-card"
           desc="Mad Devs developed parsing- and clusterisation-based software that automates keyword grouping and text generation, making the launch of contextual ads two times faster."
           item="[object Object]"
-          link="/case-studies/peklo/"
+          link="/clients/case-studies/peklo/"
           logo="[object Object]"
           poster-link="/images/Cases/peklo/jpg/peklo-banner.jpg"
           subtitle="Contextual ad launcher"
@@ -78,7 +78,7 @@ exports[`CaseStudies should render correctly 1`] = `
           data-testid="test-case-card"
           desc="Mad Devs engineers helped Sir John Monash Centre to enhance and maintain the BYOD multimedia technology."
           item="[object Object]"
-          link="/case-studies/sir-john-monash-centre/"
+          link="/clients/case-studies/sir-john-monash-centre/"
           logo="[object Object]"
           poster-link="/images/Cases/sjmc/jpg/sjmc-poster.jpg"
           subtitle="BYOD"
@@ -91,7 +91,7 @@ exports[`CaseStudies should render correctly 1`] = `
        
       <nuxtlink-stub
         class="cases-list_see-more"
-        to="/case-studies/"
+        to="/clients/case-studies/"
       >
         <span>
           See More

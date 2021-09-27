@@ -42,7 +42,7 @@
     <section>
       <Main />
       <CaseFooter
-        link="/case-studies/namba-food/"
+        link="/clients/case-studies/namba-food/"
         class-name="namba-food"
       >
         <img
@@ -109,8 +109,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/cases/base';
-@import '../../assets/styles/cases/components';
-@import '../../assets/styles/cases/sir-john-monash-centre/styles';
-@import '../../assets/styles/cases/media';
+@import '../../../assets/styles/cases/base';
+@import '../../../assets/styles/cases/components';
+@import '../../../assets/styles/cases/sir-john-monash-centre/styles';
+@import '../../../assets/styles/cases/media';
 </style>

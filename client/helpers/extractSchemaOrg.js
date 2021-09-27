@@ -26,10 +26,10 @@ function extractSchemaOrg(schemaOrgSnippets, fallback) {
         url: 'https://maddevs.io/Open-Graph.png',
       },
     },
-    url: fallback?.uid ? `https://maddevs.io/blog/${fallback?.uid}/` : 'https://maddevs.io/blog/',
+    url: fallback?.uid ? `https://maddevs.io/insights/blog/${fallback?.uid}/` : 'https://maddevs.io/insights/blog/',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://maddevs.io/blog/',
+      '@id': 'https://maddevs.io/insights/blog/',
     },
     datePublished: fallback?.data?.date || 'N/A',
     dateCreated: fallback?.data?.date || 'N/A',

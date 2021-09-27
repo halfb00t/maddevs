@@ -32,7 +32,7 @@ export default {
   components: { UIBanner, UIButton },
   methods: {
     goToDeliveryPage() {
-      this.$router.push('/delivery-models/')
+      this.$router.push('/approach/delivery-models/')
     },
   },
 }
