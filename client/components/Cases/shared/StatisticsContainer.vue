@@ -31,7 +31,7 @@ export default {
     @include grid(repeat(2, 1fr), auto, 0, 0);
   }
 
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 820px) {
     &_statistics-container {
       @include grid(repeat(1, 222px), auto, 0, 0);
       justify-content: center;
