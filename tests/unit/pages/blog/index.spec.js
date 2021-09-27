@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Blog from '@/pages/blog/'
+import Blog from '@/pages/insights/blog/'
 
 const DESCRIPTION = 'test description'
 

@@ -44,7 +44,7 @@ describe('text slice component', () => {
 
     const result = wrapper.vm.$options.computed.link.call(callObject)
 
-    expect(result).toBe(`/insights/author/${callObject.uid}/`)
+    expect(result).toBe(`/insights/blog/author/${callObject.uid}/`)
   })
 
   it('should correct work shortTitle method', () => {

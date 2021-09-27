@@ -22,7 +22,7 @@ describe('redirectToCorrectBlogUrl', () => {
   it('blog host with redirect to main page', () => {
     req.headers.host = 'blog.maddevs.io'
     redirectToCorrectBlogUrl(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/insights/blog')
+    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/insights/blog/')
   })
 
   it('blog host with redirect to specific page', () => {

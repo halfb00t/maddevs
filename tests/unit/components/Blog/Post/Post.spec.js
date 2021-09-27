@@ -57,7 +57,7 @@ const mocks = {
   },
   $router: {
     currentRoute: {
-      path: '/blog-post-title',
+      path: '/insights/blog-post-title',
     },
   },
 }

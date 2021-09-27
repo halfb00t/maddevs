@@ -57,6 +57,8 @@ export default {
     Main,
   },
 
+  nuxtI18n: false,
+
   mixins: [
     animateOnScrollMixin({
       offset: 200,
