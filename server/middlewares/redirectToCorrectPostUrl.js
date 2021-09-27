@@ -3,10 +3,10 @@ function redirectToCorrectPostUrl(req, res, next) {
   const blogPageTypes = ['author', 'tag']
   /**
    * Get blog page type and postUid from req.path
-   * If page type is author or tag - redirect to /insights/blog/${postUid}
+   * If page type is author or tag - redirect to /blog/${postUid}
    * else next
    * @example
-   * // path = '/insights/blog/author/denis/post-custom-slug'
+   * // path = '/blog/author/denis/post-custom-slug'
    * // type = 'author', postUid = 'post-custom-slug'
    */
   const [_, type, __, postUid] = req.path.split('/').filter(path => Boolean(path))
