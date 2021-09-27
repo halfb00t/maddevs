@@ -13,12 +13,15 @@
           class="card-item"
           data-testid="rich-text-animation-item"
         >
-          <div class="card-item__lottie">
+          <div
+            class="card-item__lottie"
+            :style="{ 'maxWidth': `${item.width}px`, 'height': `${item.height}px` }"
+          >
             <CardAnimation
               :animation-name="item['lottie-animations']"
             />
           </div>
-          <h3
+          <h2
             class="card-item__title"
             v-html="item.title"
           />
@@ -81,20 +84,16 @@ export default {
 .card-item {
   display: block;
   box-sizing: border-box;
-  padding: 80px 100px 80px 80px;
+  padding: 80px;
   color: $text-color--white-primary;
   background-color: $bgcolor--black-pale;
 
   @media screen and (max-width: 1024px) {
-    padding-top: 60px;
-    padding-right: 83px;
-    padding-left: 60px;
+    padding: 60px;
   }
 
   @media screen and (max-width: 580px) {
-    padding-top: 32px;
-    padding-right: 36px;
-    padding-left: 32px;
+    padding: 32px;
   }
 
   &--full-width {
