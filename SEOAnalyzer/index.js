@@ -1,6 +1,7 @@
 const SeoAnalyzer = require('seo-analyzer')
 
 new SeoAnalyzer()
+  .ignoreFiles(['dist/404.html'])
   .inputFolders(['dist'])
   .addRule('titleLengthRule', { min: 10, max: 100 })
   .addRule('metaBaseRule', { list: ['description', 'viewport'] })
