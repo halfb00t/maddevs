@@ -1,26 +1,20 @@
 <template>
   <section>
     <About />
-    <WhyClutch />
-    <TechChallenges />
-    <DataProcessed />
+    <OutStuffing />
   </section>
 </template>
 
 <script>
 
-import TechChallenges from '@/components/Cases/clutch/TechChallenges'
 import About from '@/components/Cases/clutch/About'
-import WhyClutch from '@/components/Cases/clutch/WhyClutch'
-import DataProcessed from '@/components/Cases/clutch/DataProcessed'
+import OutStuffing from '@/components/Cases/clutch/OutStuffing'
 
 export default {
   name: 'Main',
   components: {
-    DataProcessed,
-    WhyClutch,
+    OutStuffing,
     About,
-    TechChallenges,
   },
 }
 </script>
