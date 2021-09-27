@@ -438,7 +438,11 @@
         "items": {}
       }
     },
-    "SingleImage": {}
+    "SingleImage": {
+      "default-slice": {
+        "primary": {}
+      }
+    }
   },
   "_cts": {
     "singleimage": {},

@@ -68,7 +68,6 @@ export default {
   display: block;
   box-sizing: border-box;
   padding: 80px;
-  padding-bottom: 96px;
   color: $text-color--white-primary;
   background-color: $bgcolor--black-pale;
   @media screen and (max-width: 1024px) {

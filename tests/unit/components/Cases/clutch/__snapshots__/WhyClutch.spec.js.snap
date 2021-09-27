@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhyClutch component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container_regular"
+    >
+      <h2
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      Why do top firms & decision 
+        <br />
+        
+      makers trust Clutch?
+    
+      </h2>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      Clutch's founder created the platform to make it easy to perform credible and accessible market research. They
+      saw a challenge in how advertorials and superficial data distorted businesses’ buying decisions.
+    
+      </p>
+       
+      <div
+        class="p-96_bottom media-p-48_bottom"
+      >
+        <ol
+          class="case-list_numbered"
+        >
+          <li
+            class="case_list-numbered_item"
+            data-background="#22B3E2"
+            id="whyClutch-item-0"
+          >
+            
+          Clutch is a credible platform with data, case studies, and client testimonials that guide readers through the process of choosing a business service or solution.
+        
+          </li>
+          <li
+            class="case_list-numbered_item"
+            data-background="#1B85CE"
+            id="whyClutch-item-1"
+          >
+            
+          Clutch provides a dedicated team that interviews real clients, collects data, and enables comparison against competitors to help users find suitable partners.
+        
+          </li>
+          <li
+            class="case_list-numbered_item"
+            data-background="#043AB4"
+            id="whyClutch-item-2"
+          >
+            
+          The clear indication of paid endorsements and sponsored posts on Clutch enables well-informed market research.
+        
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</div>
+`;
