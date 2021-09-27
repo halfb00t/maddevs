@@ -346,10 +346,26 @@
               "research-animate",
               "testing-stage",
               "stack-selection",
-              "development-stage"
+              "development-stage",
+              "design-animation",
+              "active-development"
             ]
           },
           "type": "Select"
+        },
+        "width": {
+          "config": {
+            "label": "Width",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "height": {
+          "config": {
+            "label": "Height",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       }
     },
