@@ -141,6 +141,7 @@ $tech_legends: (
     text-align: center;
     margin-bottom: 24px;
     color: $text-color--white;
+
     @media screen and (max-width: 1024px) {
       font-size: 26px;
       line-height: 33px;
@@ -153,6 +154,7 @@ $tech_legends: (
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 43px;
+
     @each $name, $color in $tech_legends {
       &--#{$name} {
         .technologies-slice__category--#{$name}:after {
@@ -160,15 +162,18 @@ $tech_legends: (
         }
       }
     }
+
     @media screen and (max-width: 976px) {
       max-width: 460px;
       margin: auto auto 10px 0;
       flex-wrap: wrap;
     }
+
     @media screen and (max-width: 390px) {
       margin-left: -7px;
       justify-content: space-between;
     }
+
     @media screen and (max-width: 330px) {
       margin-left: 0;
     }
@@ -245,12 +250,15 @@ $tech_legends: (
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1px 1px;
+
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(9, 1fr);
     }
+
     @media screen and (max-width: 568px) {
       grid-template-columns: repeat(6, 1fr);
     }
+
     @each $name, $color in $tech_legends {
       &--#{$name} {
         .technologies-slice__technology:not(.#{$name}) {
@@ -261,7 +269,7 @@ $tech_legends: (
   }
 
   &__technology {
-    width: 100%;
+    width: 102px;
     height: 90px;
     display: flex;
     flex-direction: column;
@@ -269,9 +277,11 @@ $tech_legends: (
     justify-content: center;
     overflow: hidden;
     transition: opacity 0.2s linear;
+
     @media screen and (max-width: 976px) {
       height: 74px;
     }
+
     @media screen and (max-width: 668px) {
       height: 54px;
       justify-content: flex-end;
@@ -280,6 +290,7 @@ $tech_legends: (
     img {
       width: 26px;
       height: 26px;
+
       @media screen and (max-width: 976px) {
         width: 20px;
         height: 20px;
@@ -298,29 +309,36 @@ $tech_legends: (
       text-overflow: ellipsis;
       text-align: center;
       overflow: hidden;
+
       @media screen and (max-width: 1370px) {
         max-width: 60px;
       }
+
       @media screen and (max-width: 1090px) {
         max-width: 40px;
       }
+
       @media screen and (max-width: 976px) {
         font-size: 8px;
         line-height: 13px;
         margin-top: 11px;
         max-width: 65px;
       }
+
       @media screen and (max-width: 850px) {
         max-width: 45px;
       }
+
       @media screen and (max-width: 668px) {
         margin-top: 9px;
         margin-bottom: 3px;
         max-width: 25px;
       }
+
       @media screen and (max-width: 576px) {
         max-width: 50px;
       }
+
       @media screen and (max-width: 420px) {
         max-width: 30px;
       }

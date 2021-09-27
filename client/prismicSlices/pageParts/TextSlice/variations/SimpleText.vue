@@ -32,10 +32,12 @@ export default {
     font-weight: 600;
     font-size: 60px;
     line-height: 70px;
+
     @media screen and (max-width: 1024px) {
       font-size: 32px;
       line-height: 40px;
     }
+
     @media screen and (max-width: 768px) {
       font-size: 28px;
     }

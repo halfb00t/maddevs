@@ -28,7 +28,7 @@ describe('redirectHrTags', () => {
 
   it('if path "/insights/blog/tag/copywriter" has in ignore list > will be redirect to careers page', () => {
     req.headers.host = 'maddevs.io'
-    req.url = '/insights/blog/tag/copywriter'
+    req.url = '/blog/tag/copywriter'
     redirectHrTags(req, res, next)
     expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/about/careers/#open-positions')
   })

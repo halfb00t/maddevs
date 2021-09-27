@@ -442,10 +442,16 @@
       "default-slice": {
         "primary": {}
       }
+    },
+    "VideoSlice": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
     "singleimage": {},
-    "custom-page": {}
+    "custom-page": {},
+    "video-block": {}
   }
 }

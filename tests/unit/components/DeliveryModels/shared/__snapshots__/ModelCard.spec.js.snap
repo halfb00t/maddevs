@@ -7,7 +7,7 @@ exports[`ModelCard component should render correctly 1`] = `
   >
     <nuxtlink-stub
       class="model-card__link"
-      to="/delivery-models/uid/"
+      to="/approach/delivery-models/uid/"
     >
       <div
         class="model-card__animation"

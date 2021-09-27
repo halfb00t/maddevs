@@ -7,7 +7,7 @@ exports[`СustomerUniversityCard component should render correctly with data 1`]
   >
     <nuxtlink
       class="customer-university-card__image"
-      to="/blog//"
+      to="/insights/blog//"
     >
       <img
         height="311"

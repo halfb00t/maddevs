@@ -24,7 +24,7 @@ describe('redirectToCorrectPostUrl middleware', () => {
   })
 
   it('should correctly called redirect to correct post url if req.path contains author and postUid', () => {
-    req.path = '/insights/blog/author/denis/post-custom-slug'
+    req.path = '/blog/author/denis/post-custom-slug'
 
     redirectToCorrectPostUrl(req, res, next)
 
@@ -33,7 +33,7 @@ describe('redirectToCorrectPostUrl middleware', () => {
   })
 
   it('should correctly called redirect to correct post url if req.path contains tag and postUid', () => {
-    req.path = '/insights/blog/tag/frontend/post-custom-slug'
+    req.path = '/blog/tag/frontend/post-custom-slug'
 
     redirectToCorrectPostUrl(req, res, next)
 
@@ -42,7 +42,7 @@ describe('redirectToCorrectPostUrl middleware', () => {
   })
 
   it('should correctly called next if req.path doesn`t contains author or tag or postUid', () => {
-    req.path = '/insights/blog/author/denis'
+    req.path = '/blog/author/denis'
 
     redirectToCorrectPostUrl(req, res, next)
 
