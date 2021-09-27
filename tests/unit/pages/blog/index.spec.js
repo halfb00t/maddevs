@@ -10,7 +10,7 @@ localVue.use(Vuex)
 
 const META_DATA = {
   description: DESCRIPTION,
-  'og:url': 'https://maddevs.io/blog/',
+  'og:url': 'https://maddevs.io/insights/blog/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs: Software & Mobile App Development Company | Blog',
@@ -22,7 +22,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs: Software & Mobile App Development Company | Blog',
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/blog.png',
-  'twitter:url': 'https://maddevs.io/blog/',
+  'twitter:url': 'https://maddevs.io/insights/blog/',
 }
 
 const stubs = ['Main']

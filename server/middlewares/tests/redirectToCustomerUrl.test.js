@@ -20,7 +20,7 @@ describe('redirectToCorrectBlogUrl', () => {
   })
 
   it('customer url', () => {
-    req.url = '/blog/why-it-projects-are-late-and-exceed-budgets'
+    req.url = '/insights/blog/why-it-projects-are-late-and-exceed-budgets'
     redirectToCustomerUrl(req, res, next)
     expect(res.redirect).toHaveBeenCalledWith(
       301,

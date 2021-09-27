@@ -24,25 +24,25 @@ describe('redirectToCorrectPostUrl middleware', () => {
   })
 
   it('should correctly called redirect to correct post url if req.path contains author and postUid', () => {
-    req.path = '/blog/author/denis/post-custom-slug'
+    req.path = '/insights/blog/author/denis/post-custom-slug'
 
     redirectToCorrectPostUrl(req, res, next)
 
-    expect(res.redirect).toHaveBeenCalledWith(301, '/blog/post-custom-slug')
+    expect(res.redirect).toHaveBeenCalledWith(301, '/insights/blog/post-custom-slug')
     expect(next).not.toHaveBeenCalled()
   })
 
   it('should correctly called redirect to correct post url if req.path contains tag and postUid', () => {
-    req.path = '/blog/tag/frontend/post-custom-slug'
+    req.path = '/insights/blog/tag/frontend/post-custom-slug'
 
     redirectToCorrectPostUrl(req, res, next)
 
-    expect(res.redirect).toHaveBeenCalledWith(301, '/blog/post-custom-slug')
+    expect(res.redirect).toHaveBeenCalledWith(301, '/insights/blog/post-custom-slug')
     expect(next).not.toHaveBeenCalled()
   })
 
   it('should correctly called next if req.path doesn`t contains author or tag or postUid', () => {
-    req.path = '/blog/author/denis'
+    req.path = '/insights/blog/author/denis'
 
     redirectToCorrectPostUrl(req, res, next)
 

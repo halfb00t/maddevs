@@ -4,38 +4,38 @@ const EXCLUDE_ROUTES = {
   '/': 1,
   '/gdpr': 0.7,
   '/nda': 0.7,
-  '/privacy': 0.7,
+  '/approach/privacy': 0.7,
   '/faq': 0.7,
 }
 
 const IGNORE_ROUTES = [
-  '/blog/tag/featured-post',
-  '/blog/tag/copywriter',
-  '/blog/tag/marketing',
-  '/blog/tag/it',
-  '/blog/tag/python',
-  '/blog/tag/django',
-  '/blog/tag/go',
-  '/blog/tag/golang',
-  '/blog/tag/ios',
-  '/blog/tag/hr',
-  '/blog/tag/assistant',
-  '/blog/tag/hr-department',
-  '/blog/tag/assistant-delivery-manager',
-  '/blog/tag/software-features',
-  '/blog/mad-devs-devops',
-  '/blog/middle-python-developer',
-  '/blog/vue-vuetify-middle-v-saas-proekt',
-  '/blog/senior-android-developer',
-  '/blog/project-manager-v-finteh-proekt',
-  '/blog/middle-ios-developer',
-  '/blog/golang-middle-senior-developer-v-finteh-proekt',
-  '/blog/senior-ios-developer',
-  '/blog/mad-devs-ishet-senior-python-developer-v-proekt-clutch',
-  '/blog/middle-android-developer',
-  '/blog/ios-middle-senior-developer-v-finteh-proekt',
-  '/blog/it-recruiter-middle-maddevs',
-  '/blog/mad-devs-ishet-golang-razrabotchika',
+  '/insights/blog/tag/featured-post',
+  '/insights/blog/tag/copywriter',
+  '/insights/blog/tag/marketing',
+  '/insights/blog/tag/it',
+  '/insights/blog/tag/python',
+  '/insights/blog/tag/django',
+  '/insights/blog/tag/go',
+  '/insights/blog/tag/golang',
+  '/insights/blog/tag/ios',
+  '/insights/blog/tag/hr',
+  '/insights/blog/tag/assistant',
+  '/insights/blog/tag/hr-department',
+  '/insights/blog/tag/assistant-delivery-manager',
+  '/insights/blog/tag/software-features',
+  '/insights/blog/mad-devs-devops',
+  '/insights/blog/middle-python-developer',
+  '/insights/blog/vue-vuetify-middle-v-saas-proekt',
+  '/insights/blog/senior-android-developer',
+  '/insights/blog/project-manager-v-finteh-proekt',
+  '/insights/blog/middle-ios-developer',
+  '/insights/blog/golang-middle-senior-developer-v-finteh-proekt',
+  '/insights/blog/senior-ios-developer',
+  '/insights/blog/mad-devs-ishet-senior-python-developer-v-proekt-clutch',
+  '/insights/blog/middle-android-developer',
+  '/insights/blog/ios-middle-senior-developer-v-finteh-proekt',
+  '/insights/blog/it-recruiter-middle-maddevs',
+  '/insights/blog/mad-devs-ishet-golang-razrabotchika',
   '/mad-devs-ishet-golang-razrabotchika',
 ]
 
@@ -99,7 +99,7 @@ const getRoutes = async () => {
   // Creating a list of routes
   const blogPageRoutes = prismicPosts
     .filter(post => post.type === 'post')
-    .map(post => `/blog/${post.uid}`)
+    .map(post => `/insights/blog/${post.uid}`)
 
   const cuPageRoutes = prismicPosts
     .filter(post => post.type === 'customer_university')
@@ -107,14 +107,14 @@ const getRoutes = async () => {
 
   const authorPageRoutes = prismicPosts
     .filter(post => post.type === 'author')
-    .map(author => `/blog/author/${author.uid}`)
+    .map(author => `/insights/blog/author/${author.uid}`)
 
   const careerPageRoutes = prismicPosts
     .filter(post => post.type === 'vacancy')
-    .map(vacancy => `/ru/careers/${vacancy.uid}`)
+    .map(vacancy => `/ru/about/careers/${vacancy.uid}`)
 
   const tagPageRoutes = prismicTags
-    .map(tag => `/blog/tag/${convertToSlug(tag)}`)
+    .map(tag => `/insights/blog/tag/${convertToSlug(tag)}`)
 
   const customPageRoutes = prismicPosts
     .filter(post => post.type === 'custom_page')
@@ -123,18 +123,18 @@ const getRoutes = async () => {
   const routes = [
     '/',
     '/services',
-    '/careers',
-    '/ru/careers',
+    '/about/careers',
+    '/ru/about/careers',
     '/gdpr',
     '/nda',
-    '/privacy',
+    '/approach/privacy',
     '/faq',
-    '/case-studies/namba-food',
-    '/case-studies/sir-john-monash-centre',
-    '/case-studies/godee',
-    '/case-studies/yourcast/',
-    '/case-studies/veeqo/',
-    '/blog',
+    '/clients/case-studies/namba-food',
+    '/clients/case-studies/sir-john-monash-centre',
+    '/clients/case-studies/godee',
+    '/clients/case-studies/yourcast/',
+    '/clients/case-studies/veeqo/',
+    '/insights/blog',
     ...careerPageRoutes,
     ...blogPageRoutes,
     ...cuPageRoutes,

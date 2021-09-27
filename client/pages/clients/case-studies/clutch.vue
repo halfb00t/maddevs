@@ -23,7 +23,7 @@
       </CaseHeader>
       <Main />
       <Footer
-        link="/case-studies/citycam/"
+        link="/clients/case-studies/citycam/"
         class-name="citycam"
       >
         <img

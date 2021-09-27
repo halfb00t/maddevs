@@ -92,7 +92,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "How to configure SSG and SSR on Nuxt",\n "alternativeHeadline": "This article also about how to set up SSG, SSR in production and create your own API using nuxt server",\n "image": "https://images.prismic.io/superpupertest/60f7cc05-4f36-4e26-82a9-69bd3370cceb_SSRonNuxten.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533",\n "author": "Denis Grushkin", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "set up vue js project, how to set up a project with vue, vue project, how to set up a vue project with nuxt, ", \n "wordcount": "",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/blog/how-to-configure-ssg-and-ssr-on-nuxt/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/blog/"\n  },\n "datePublished": "2021-04-20",\n "dateCreated": "2021-04-15",\n "dateModified": "2021-04-21",\n "description": "Nuxt.js: Everything you need to know about nuxt.js to configure SSG and SSR on Vue application.",\n "articleBody": "When I started learning Vue, I was pleasantly surprised by this framework. It turned out to be very simple and easy to learn. Its API had enough functionality for everyday tasks. All in all, I was delighted.\n\nBut one day, when I needed to configure a website for SEO, the internal tools of Vue were not enough. I had to dive into the depths of the Internet, where I found a framework that never ceases to amaze me.\n\nNuxt.js is a multifunctional, intuitive framework, or a very high-quality add-on to Vue. Its main task is to simplify a developer’s life by giving him or her all the tools needed to create websites of any complexity.\nI suggest that today we take a brief look at its main features.\n\nIn this article, let’s talk about:\nBasic structure of files and folders\nnuxt.config.js settings file\nSEO settings\nRoutes\nPlugins\nStoring\nSSG\nSSR\nSeparately, I will show you how to set up SSG, SSR in production and create your own API using nuxt server."\n }',
+              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "How to configure SSG and SSR on Nuxt",\n "alternativeHeadline": "This article also about how to set up SSG, SSR in production and create your own API using nuxt server",\n "image": "https://images.prismic.io/superpupertest/60f7cc05-4f36-4e26-82a9-69bd3370cceb_SSRonNuxten.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533",\n "author": "Denis Grushkin", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "set up vue js project, how to set up a project with vue, vue project, how to set up a vue project with nuxt, ", \n "wordcount": "",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/insights/blog/how-to-configure-ssg-and-ssr-on-nuxt/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/insights/blog/"\n  },\n "datePublished": "2021-04-20",\n "dateCreated": "2021-04-15",\n "dateModified": "2021-04-21",\n "description": "Nuxt.js: Everything you need to know about nuxt.js to configure SSG and SSR on Vue application.",\n "articleBody": "When I started learning Vue, I was pleasantly surprised by this framework. It turned out to be very simple and easy to learn. Its API had enough functionality for everyday tasks. All in all, I was delighted.\n\nBut one day, when I needed to configure a website for SEO, the internal tools of Vue were not enough. I had to dive into the depths of the Internet, where I found a framework that never ceases to amaze me.\n\nNuxt.js is a multifunctional, intuitive framework, or a very high-quality add-on to Vue. Its main task is to simplify a developer’s life by giving him or her all the tools needed to create websites of any complexity.\nI suggest that today we take a brief look at its main features.\n\nIn this article, let’s talk about:\nBasic structure of files and folders\nnuxt.config.js settings file\nSEO settings\nRoutes\nPlugins\nStoring\nSSG\nSSR\nSeparately, I will show you how to set up SSG, SSR in production and create your own API using nuxt server."\n }',
               spans: [],
             },
           ],
@@ -210,8 +210,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/boilerplate-to-set-up-a-vue-project/',
-                embed_url: 'https://maddevs.io/blog/boilerplate-to-set-up-a-vue-project/',
+                url: 'https://maddevs.io/insights/blog/boilerplate-to-set-up-a-vue-project/',
+                embed_url: 'https://maddevs.io/insights/blog/boilerplate-to-set-up-a-vue-project/',
                 type: 'link',
                 version: '1.0',
                 title: 'Vue Boilerplate: Fast and reliable shortcut to set up your project',
@@ -223,7 +223,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/e6da4751-a91e-49fb-a5f1-10cc4c6974e4_boilerplate-vue.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/boilerplate-to-set-up-a-vue-project/"><h1>Vue Boilerplate: Fast and reliable shortcut to set up your project</h1><img src="https://images.prismic.io/superpupertest/e6da4751-a91e-49fb-a5f1-10cc4c6974e4_boilerplate-vue.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533"><p>A ready-made boilerplate to set up a Vue.JS project which includes the basic structure of styles, package of icons, configure the linter properly, etc.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/boilerplate-to-set-up-a-vue-project/"><h1>Vue Boilerplate: Fast and reliable shortcut to set up your project</h1><img src="https://images.prismic.io/superpupertest/e6da4751-a91e-49fb-a5f1-10cc4c6974e4_boilerplate-vue.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533"><p>A ready-made boilerplate to set up a Vue.JS project which includes the basic structure of styles, package of icons, configure the linter properly, etc.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -662,8 +662,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/progressive-web-apps-practical-usage-guide/',
-                embed_url: 'https://maddevs.io/blog/progressive-web-apps-practical-usage-guide/',
+                url: 'https://maddevs.io/insights/blog/progressive-web-apps-practical-usage-guide/',
+                embed_url: 'https://maddevs.io/insights/blog/progressive-web-apps-practical-usage-guide/',
                 type: 'link',
                 version: '1.0',
                 title: 'Progressive Web Apps: Practical Usage Guide | Mad Devs Blog',
@@ -675,7 +675,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/c2fe46a4-59b1-4b75-8ef1-f2d12b7f6fbc_1.png?auto=compress,format&rect=0,22,800,434&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/progressive-web-apps-practical-usage-guide/"><h1>Progressive Web Apps: Practical Usage Guide | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/c2fe46a4-59b1-4b75-8ef1-f2d12b7f6fbc_1.png?auto=compress,format&rect=0,22,800,434&w=983&h=533"><p>Basic and important information on how to create and set up PWA(Progressive Web Apps) technology on a real example.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/progressive-web-apps-practical-usage-guide/"><h1>Progressive Web Apps: Practical Usage Guide | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/c2fe46a4-59b1-4b75-8ef1-f2d12b7f6fbc_1.png?auto=compress,format&rect=0,22,800,434&w=983&h=533"><p>Basic and important information on how to create and set up PWA(Progressive Web Apps) technology on a real example.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -1075,8 +1075,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/',
-                embed_url: 'https://maddevs.io/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/',
+                url: 'https://maddevs.io/insights/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/',
+                embed_url: 'https://maddevs.io/insights/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/',
                 type: 'link',
                 version: '1.0',
                 title: 'Setting Up Integration Tests in a Vue Application | Mad Devs Blog',
@@ -1088,7 +1088,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/f295b7bb-2030-42fa-8f22-27930704e93c_1_B5IMpkuNUDs5Abi7d9LoAA.jpeg?auto=compress,format&rect=0,1,1280,694&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/"><h1>Setting Up Integration Tests in a Vue Application | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/f295b7bb-2030-42fa-8f22-27930704e93c_1_B5IMpkuNUDs5Abi7d9LoAA.jpeg?auto=compress,format&rect=0,1,1280,694&w=983&h=533"><p>Automated tests in a Vue project: how to test entire pages and individual components, mock server requests, and run it all in Docker.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/"><h1>Setting Up Integration Tests in a Vue Application | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/f295b7bb-2030-42fa-8f22-27930704e93c_1_B5IMpkuNUDs5Abi7d9LoAA.jpeg?auto=compress,format&rect=0,1,1280,694&w=983&h=533"><p>Automated tests in a Vue project: how to test entire pages and individual components, mock server requests, and run it all in Docker.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -1510,7 +1510,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "React Boilerplate: Everything you need to quick-start a new React project inside one repo",\n "alternativeHeadline": "Everything you need to quick-start a new React project inside one repo",\n "image": "https://images.prismic.io/superpupertest/9c72c729-40ce-498f-aa2f-483962a72413_boilerplate-react.jpg?auto=compress,format&rect=1,0,1997,1086&w=980&h=533",\n "author": "Roman Chasovitin", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "frontend development, react js", \n "wordcount": "1678",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/blog/amazing-template-for-react-application/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/blog/"\n  },\n "datePublished": "2021-03-30",\n "dateCreated": "2021-03-30",\n "dateModified": "2021-03-30",\n "description": "This article shows you the boilerplate that we actively use when creating new React application projects. The boilerplate includes everything you need and describes some additional useful things such as typescript and cypress.",\n "articleBody": "When creating a new React project, I faced the same problems every time. I need to build it manually because `create-react-app` do not provide everything that we use in real projects. We need to set up data storage, routing, configure REST, styles, etc. This was quite time-consuming, and our team decided to create some boilerplates to quick-start new projects. We’re starting to develop boilerplates for different use cases. In this article, I want to present my work to you: a boilerplate for a `React` application.\nTechnology Stack\nHere’s a list of libraries and dependencies used for this boilerplate. We’d decided to use minimal dependencies, and you can add anything if you need.\nReact-router-dom\nDeclarative routing for React.\nStyled-components\nUse the best bits of ES6 and CSS to style your apps without stress. The best CSS-in-JS library for React.\nReact-use\nSome very simple and useful hooks for components that you can build amazing things with.\nProp-types\nRuntime type checking for React props and similar objects.\nAxios\nThe best promise-based HTTP client for Javascript.\nJest\nDelightful JavaScript Testing Framework with a focus on simplicity.\nTesting-library\nSimple and complete testing utilities that encourage good testing practices.\nESLint+Prettier\nLinter to find and fix problems in your JavaScript code. Prettier for code formatting."\n }',
+              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "React Boilerplate: Everything you need to quick-start a new React project inside one repo",\n "alternativeHeadline": "Everything you need to quick-start a new React project inside one repo",\n "image": "https://images.prismic.io/superpupertest/9c72c729-40ce-498f-aa2f-483962a72413_boilerplate-react.jpg?auto=compress,format&rect=1,0,1997,1086&w=980&h=533",\n "author": "Roman Chasovitin", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "frontend development, react js", \n "wordcount": "1678",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/insights/blog/amazing-template-for-react-application/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/insights/blog/"\n  },\n "datePublished": "2021-03-30",\n "dateCreated": "2021-03-30",\n "dateModified": "2021-03-30",\n "description": "This article shows you the boilerplate that we actively use when creating new React application projects. The boilerplate includes everything you need and describes some additional useful things such as typescript and cypress.",\n "articleBody": "When creating a new React project, I faced the same problems every time. I need to build it manually because `create-react-app` do not provide everything that we use in real projects. We need to set up data storage, routing, configure REST, styles, etc. This was quite time-consuming, and our team decided to create some boilerplates to quick-start new projects. We’re starting to develop boilerplates for different use cases. In this article, I want to present my work to you: a boilerplate for a `React` application.\nTechnology Stack\nHere’s a list of libraries and dependencies used for this boilerplate. We’d decided to use minimal dependencies, and you can add anything if you need.\nReact-router-dom\nDeclarative routing for React.\nStyled-components\nUse the best bits of ES6 and CSS to style your apps without stress. The best CSS-in-JS library for React.\nReact-use\nSome very simple and useful hooks for components that you can build amazing things with.\nProp-types\nRuntime type checking for React props and similar objects.\nAxios\nThe best promise-based HTTP client for Javascript.\nJest\nDelightful JavaScript Testing Framework with a focus on simplicity.\nTesting-library\nSimple and complete testing utilities that encourage good testing practices.\nESLint+Prettier\nLinter to find and fix problems in your JavaScript code. Prettier for code formatting."\n }',
               spans: [],
             },
           ],
@@ -1676,8 +1676,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/best-architecture-for-the-react-project/',
-                embed_url: 'https://maddevs.io/blog/best-architecture-for-the-react-project/',
+                url: 'https://maddevs.io/insights/blog/best-architecture-for-the-react-project/',
+                embed_url: 'https://maddevs.io/insights/blog/best-architecture-for-the-react-project/',
                 type: 'link',
                 version: '1.0',
                 title: 'Best Architecture for the React Project | Mad Devs Blog',
@@ -1689,7 +1689,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format&rect=0,390,6240,3383&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/best-architecture-for-the-react-project/"><h1>Best Architecture for the React Project | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format&rect=0,390,6240,3383&w=983&h=533"><p>What the arc.js is - the advantages and disadvantages of arc.js architecture. Solving problems related to the implementation of arc.js architecture.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/best-architecture-for-the-react-project/"><h1>Best Architecture for the React Project | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format&rect=0,390,6240,3383&w=983&h=533"><p>What the arc.js is - the advantages and disadvantages of arc.js architecture. Solving problems related to the implementation of arc.js architecture.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -2896,7 +2896,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables/',
+                      url: 'https://maddevs.io/insights/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables/',
                     },
                   },
                 ],
@@ -3176,8 +3176,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/',
-                embed_url: 'https://maddevs.io/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/',
+                url: 'https://maddevs.io/insights/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/',
+                embed_url: 'https://maddevs.io/insights/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/',
                 type: 'link',
                 version: '1.0',
                 title: 'Automatic Delivery of iOS Applications with Fastlane and GitlabCI | Mad Devs Blog',
@@ -3189,7 +3189,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/11a0f864-7acc-400e-a227-2a8949b47317_1_M3NvLPCI2K6p7J9Uk4Y3LA.jpeg?auto=compress,format&rect=0,1,1400,759&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/"><h1>Automatic Delivery of iOS Applications with Fastlane and GitlabCI | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/11a0f864-7acc-400e-a227-2a8949b47317_1_M3NvLPCI2K6p7J9Uk4Y3LA.jpeg?auto=compress,format&rect=0,1,1400,759&w=983&h=533"><p>How to configure continuous integration GitLab CI via Fastlane to test your IOS applications automatically.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/"><h1>Automatic Delivery of iOS Applications with Fastlane and GitlabCI | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/11a0f864-7acc-400e-a227-2a8949b47317_1_M3NvLPCI2K6p7J9Uk4Y3LA.jpeg?auto=compress,format&rect=0,1,1400,759&w=983&h=533"><p>How to configure continuous integration GitLab CI via Fastlane to test your IOS applications automatically.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -3335,8 +3335,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
-                embed_url: 'https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
+                url: 'https://maddevs.io/insights/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
+                embed_url: 'https://maddevs.io/insights/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
                 type: 'link',
                 version: '1.0',
                 title: 'How to Run Code Climate Code Analysis Locally Using VSCode + Remote-Containers | Mad Devs Blog',
@@ -3348,7 +3348,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/e7a9249f-827a-497f-8029-17e4a841e6ca_1_c9_PccwaLaKUe9O42CqRcg.png?auto=compress,format&rect=32,0,741,402&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/"><h1>How to Run Code Climate Code Analysis Locally Using VSCode + Remote-Containers | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/e7a9249f-827a-497f-8029-17e4a841e6ca_1_c9_PccwaLaKUe9O42CqRcg.png?auto=compress,format&rect=32,0,741,402&w=983&h=533"><p>How to configure a local launch of the analysis of the quality of your code using Code Climate in ensemble with VSCode. </p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/"><h1>How to Run Code Climate Code Analysis Locally Using VSCode + Remote-Containers | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/e7a9249f-827a-497f-8029-17e4a841e6ca_1_c9_PccwaLaKUe9O42CqRcg.png?auto=compress,format&rect=32,0,741,402&w=983&h=533"><p>How to configure a local launch of the analysis of the quality of your code using Code Climate in ensemble with VSCode. </p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -3508,7 +3508,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "Boilerplate for Vue Project with All the Necessary Functionality",\n "alternativeHeadline": "This article also about how to set up a project with vue",\n "image": "https://images.prismic.io/superpupertest/e6da4751-a91e-49fb-a5f1-10cc4c6974e4_boilerplate-vue.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533",\n "author": "Denis Grushkin", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "set up vue js project, how to set up a project with vue, vue project, how to set up a vue project with npm and cli, vue template, vue boilerplate", \n "wordcount": "2058",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/blog/boilerplate-to-set-up-a-vue-project/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/blog/"\n  },\n "datePublished": "2021-03-29",\n "dateCreated": "2021-03-25",\n "dateModified": "2021-03-29",\n "description": "A ready-made boilerplate to set up a Vue.JS project which includes the basic structure of styles, package of icons, configure the linter properly, etc.",\n "articleBody": "When starting a project in Vue, I constantly faced the fact that I had to set up the store again and again, add the basic structure of styles, look for a package of icons, configure the linter properly, etc. This was quite time-consuming. And what if a person just starts digging into all this?! Even a week won’t be enough to put it all together.\nVue Mad Boiler can take the hassle out of it by giving you a ready-made, set-up project.\nFeatures\nJWT tokens;\nAn example of a configured Vuex Store that uses a modular approach;\nA very angry linter. Scolds you for styles, layout, and scripts;\nTests that generate a code coverage report;\nReady-made folder structure;\nVery cool Material icon pack;\nVuetify: a framework of ready-made ui elements;\nBasic scss style structure;\nExample of a directive that adds wave animation for buttons;\nMultilanguage functionality;\nExample of a service for working with localstorage;\nRouter settings + middleware."\n }',
+              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "Boilerplate for Vue Project with All the Necessary Functionality",\n "alternativeHeadline": "This article also about how to set up a project with vue",\n "image": "https://images.prismic.io/superpupertest/e6da4751-a91e-49fb-a5f1-10cc4c6974e4_boilerplate-vue.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533",\n "author": "Denis Grushkin", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "set up vue js project, how to set up a project with vue, vue project, how to set up a vue project with npm and cli, vue template, vue boilerplate", \n "wordcount": "2058",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/insights/blog/boilerplate-to-set-up-a-vue-project/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/insights/blog/"\n  },\n "datePublished": "2021-03-29",\n "dateCreated": "2021-03-25",\n "dateModified": "2021-03-29",\n "description": "A ready-made boilerplate to set up a Vue.JS project which includes the basic structure of styles, package of icons, configure the linter properly, etc.",\n "articleBody": "When starting a project in Vue, I constantly faced the fact that I had to set up the store again and again, add the basic structure of styles, look for a package of icons, configure the linter properly, etc. This was quite time-consuming. And what if a person just starts digging into all this?! Even a week won’t be enough to put it all together.\nVue Mad Boiler can take the hassle out of it by giving you a ready-made, set-up project.\nFeatures\nJWT tokens;\nAn example of a configured Vuex Store that uses a modular approach;\nA very angry linter. Scolds you for styles, layout, and scripts;\nTests that generate a code coverage report;\nReady-made folder structure;\nVery cool Material icon pack;\nVuetify: a framework of ready-made ui elements;\nBasic scss style structure;\nExample of a directive that adds wave animation for buttons;\nMultilanguage functionality;\nExample of a service for working with localstorage;\nRouter settings + middleware."\n }',
               spans: [],
             },
           ],
@@ -3642,8 +3642,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/software-features-acceptance-process-by-clients/',
-                embed_url: 'https://maddevs.io/blog/software-features-acceptance-process-by-clients/',
+                url: 'https://maddevs.io/insights/blog/software-features-acceptance-process-by-clients/',
+                embed_url: 'https://maddevs.io/insights/blog/software-features-acceptance-process-by-clients/',
                 type: 'link',
                 version: '1.0',
                 title: 'Software Features Acceptance by Client | Mad Devs Blog',
@@ -3655,7 +3655,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/493d2497-7257-4bf6-94c5-5659a0779b4f_6.png?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/software-features-acceptance-process-by-clients/"><h1>Software Features Acceptance by Client | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/493d2497-7257-4bf6-94c5-5659a0779b4f_6.png?auto=compress,format"><p>What problems with a customer can arise from feature acceptance in software development and how to avoid them.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/software-features-acceptance-process-by-clients/"><h1>Software Features Acceptance by Client | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/493d2497-7257-4bf6-94c5-5659a0779b4f_6.png?auto=compress,format"><p>What problems with a customer can arise from feature acceptance in software development and how to avoid them.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -3807,8 +3807,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/running-postgres-as-a-build-requirement-in-teamcity-build/',
-                embed_url: 'https://maddevs.io/blog/running-postgres-as-a-build-requirement-in-teamcity-build/',
+                url: 'https://maddevs.io/insights/blog/running-postgres-as-a-build-requirement-in-teamcity-build/',
+                embed_url: 'https://maddevs.io/insights/blog/running-postgres-as-a-build-requirement-in-teamcity-build/',
                 type: 'link',
                 version: '1.0',
                 title: 'Running Postgres as a Build Requirement in TeamCity Build | Mad Devs Blog',
@@ -3820,7 +3820,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/2e7c5f3e-f06c-45fd-8ba6-ae07ea443003_1_z1KTyQK2WQm0O-ELTT-ovg.jpeg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/running-postgres-as-a-build-requirement-in-teamcity-build/"><h1>Running Postgres as a Build Requirement in TeamCity Build | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/2e7c5f3e-f06c-45fd-8ba6-ae07ea443003_1_z1KTyQK2WQm0O-ELTT-ovg.jpeg?auto=compress,format"><p>Fixing gaps in TeamCity\'s documentation. How to make sure that Postgres is running and how to configure the credentials to connect to the database.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/running-postgres-as-a-build-requirement-in-teamcity-build/"><h1>Running Postgres as a Build Requirement in TeamCity Build | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/2e7c5f3e-f06c-45fd-8ba6-ae07ea443003_1_z1KTyQK2WQm0O-ELTT-ovg.jpeg?auto=compress,format"><p>Fixing gaps in TeamCity\'s documentation. How to make sure that Postgres is running and how to configure the credentials to connect to the database.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -4422,7 +4422,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/',
+                      url: 'https://maddevs.io/insights/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/',
                     },
                   },
                 ],
@@ -4556,8 +4556,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/how-to-test-a-web-product-manually/',
-                embed_url: 'https://maddevs.io/blog/how-to-test-a-web-product-manually/',
+                url: 'https://maddevs.io/insights/blog/how-to-test-a-web-product-manually/',
+                embed_url: 'https://maddevs.io/insights/blog/how-to-test-a-web-product-manually/',
                 type: 'link',
                 version: '1.0',
                 title: 'How to Test a Web Product Manually | Mad Devs Blog',
@@ -4569,7 +4569,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/8378981c-879b-4d63-acf7-1c1ea95a3f76_0000000.png?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/how-to-test-a-web-product-manually/"><h1>How to Test a Web Product Manually | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/8378981c-879b-4d63-acf7-1c1ea95a3f76_0000000.png?auto=compress,format"><p>This article can come in handy for project managers, who continuously accept features, for developers and QA specialists, who want to go over their work and check if every feature is working as planned initially by covering specific auto-tests use cases.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/how-to-test-a-web-product-manually/"><h1>How to Test a Web Product Manually | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/8378981c-879b-4d63-acf7-1c1ea95a3f76_0000000.png?auto=compress,format"><p>This article can come in handy for project managers, who continuously accept features, for developers and QA specialists, who want to go over their work and check if every feature is working as planned initially by covering specific auto-tests use cases.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -4958,7 +4958,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables/',
+                      url: 'https://maddevs.io/insights/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables/',
                     },
                   },
                 ],

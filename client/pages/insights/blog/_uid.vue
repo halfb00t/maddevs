@@ -30,7 +30,7 @@ export default {
        * https://community.prismic.io/t/when-does-cache-expire-uid-history/874 - about this issue
        */
       if (params.uid !== post.uid && typeof post.uid === 'string') {
-        next({ path: `/blog/${post.uid}/` })
+        next({ path: `/insights/blog/${post.uid}/` })
       }
     })
   },
