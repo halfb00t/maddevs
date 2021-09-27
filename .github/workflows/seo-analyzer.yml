@@ -23,4 +23,4 @@ jobs:
       env:
         NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
         CI: true
-    - run: npm run seo-analyze
+    - run: node ./SEOAnalyzer/index.js
