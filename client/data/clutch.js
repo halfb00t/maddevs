@@ -72,3 +72,24 @@ export const clutchAwards = [
     },
   },
 ]
+
+export const dataRep = [
+  {
+    text: 'The service we developed improved the registration experience with the autofill of location-based inputs.',
+    background: '#59C6E9',
+  },
+  {
+    text: 'Location-based taxonomy enables Clutch.co users to find vendors from a given point within a given radius.',
+    background: '#1B85CE',
+  },
+  {
+    text: 'A user-friendly interface allows managing and editing locations.',
+    background: '#043AB4',
+  },
+]
+
+export const idDataRep = [
+  'data-item-0',
+  'data-item-1',
+  'data-item-2',
+]
