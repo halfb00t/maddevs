@@ -1,23 +1,20 @@
 <template>
   <section>
     <About />
-    <TechChallenges />
-    <DataAndPasswords />
+    <OutStuffing />
   </section>
 </template>
 
 <script>
 
-import TechChallenges from '@/components/Cases/clutch/TechChallenges'
-import DataAndPasswords from '@/components/Cases/clutch/DataAndPasswords'
 import About from '@/components/Cases/clutch/About'
+import OutStuffing from '@/components/Cases/clutch/OutStuffing'
 
 export default {
   name: 'Main',
   components: {
+    OutStuffing,
     About,
-    TechChallenges,
-    DataAndPasswords,
   },
 }
 </script>
