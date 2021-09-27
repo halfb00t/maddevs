@@ -25,7 +25,7 @@ export default {
       title: 'Mad Devs: Blog search result',
       metaTitle: 'Blog',
       description: 'Page for search result',
-      url: 'https://maddevs.io/blog/search-result/?searchBy=Mad/',
+      url: 'https://maddevs.io/insights/blog/search-result/?searchBy=Mad/',
       image: 'https://maddevs.io/blog.png',
     })
   },
@@ -47,7 +47,7 @@ export default {
         if (query && query.length) {
           this.getPosts(query.replace(/\//g, ''))
         } else {
-          this.$router.push('/blog/')
+          this.$router.push('/insights/blog/')
         }
       }
     }

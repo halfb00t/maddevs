@@ -4,7 +4,7 @@ exports[`ScrollToPositionsLink component should render correctly 1`] = `
 <div>
   <nuxtlink-stub
     class="scroll-to-positions scroll-to-positions--hidden"
-    to="/careers#open-positions"
+    to="/about/careers#open-positions"
   >
     <button
       class="underlined-button"

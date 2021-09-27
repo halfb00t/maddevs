@@ -91,7 +91,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "IT outsourcing: Your ultimate guide to successfully completing a project with a time-and-materials contract",\n "alternativeHeadline": "This article also about software development services",\n "image": "https://images.prismic.io/superpupertest/d4a67382-896f-4ee6-ab1a-4cf4f326cedd_Times+%26+Materials+in+IT+outsourcing.jpg?auto=compress,format&rect=0,0,2000,1086&w=982&h=533",\n "author": "Tamara Mun", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "project management, ", \n "wordcount": "1264",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/blog/ultimate-guide-to-time-and-materials-contract/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/blog/"\n  },\n "datePublished": "2021-03-30",\n "dateCreated": "2021-03-30",\n "dateModified": "2021-03-30",\n "description": "How to successfully complete a software development project with a time-and-materials contract? Here are the handy tips to improve your experience with IT vendors.",\n "articleBody": "What is a time-and-materials contract?\nThe name of the time-and-materials business model is pretty self-explanatory. The customer is paying for the time and the materials that the contractor has invested in the development of a product. In the case of software development, it means that the customer pays for the developers’ time according to their rates and additionally for the tools and infrastructure the developers will need to deliver the product. \nIt’s important to avoid confusion here. The client is actually paying not for the amount of work but for the man-hours it takes to deliver a product and push it to the market. So there’s a risk for the client to get stuck with a dishonest vendor who will inflate the time it takes to deliver the project (thus increasing their own earnings) into infinity."\n }',
+              text: '{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "IT outsourcing: Your ultimate guide to successfully completing a project with a time-and-materials contract",\n "alternativeHeadline": "This article also about software development services",\n "image": "https://images.prismic.io/superpupertest/d4a67382-896f-4ee6-ab1a-4cf4f326cedd_Times+%26+Materials+in+IT+outsourcing.jpg?auto=compress,format&rect=0,0,2000,1086&w=982&h=533",\n "author": "Tamara Mun", \n "editor": "Altynai N. Alamanova", \n "genre": "IT", \n "keywords": "project management, ", \n "wordcount": "1264",\n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs Group LTD",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/insights/blog/ultimate-guide-to-time-and-materials-contract/",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/insights/blog/"\n  },\n "datePublished": "2021-03-30",\n "dateCreated": "2021-03-30",\n "dateModified": "2021-03-30",\n "description": "How to successfully complete a software development project with a time-and-materials contract? Here are the handy tips to improve your experience with IT vendors.",\n "articleBody": "What is a time-and-materials contract?\nThe name of the time-and-materials business model is pretty self-explanatory. The customer is paying for the time and the materials that the contractor has invested in the development of a product. In the case of software development, it means that the customer pays for the developers’ time according to their rates and additionally for the tools and infrastructure the developers will need to deliver the product. \nIt’s important to avoid confusion here. The client is actually paying not for the amount of work but for the man-hours it takes to deliver a product and push it to the market. So there’s a risk for the client to get stuck with a dishonest vendor who will inflate the time it takes to deliver the project (thus increasing their own earnings) into infinity."\n }',
               spans: [],
             },
           ],
@@ -260,7 +260,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/software-project-handover/',
+                      url: 'https://maddevs.io/insights/blog/software-project-handover/',
                     },
                   },
                 ],
@@ -408,7 +408,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/guide-to-software-development-methodologies/',
+                      url: 'https://maddevs.io/insights/blog/guide-to-software-development-methodologies/',
                     },
                   },
                 ],
@@ -562,7 +562,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/why-do-you-need-senior-developers-in-project/',
+                      url: 'https://maddevs.io/insights/blog/why-do-you-need-senior-developers-in-project/',
                     },
                   },
                 ],
@@ -703,7 +703,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/how-to-automate-jira-mad-devs-experience/"\n      },\n "headline": "How to Automate Jira: Mad Devs Experience",\n "alternativeHeadline": "Automate management internal company processes to Jira with extensions. How Mad Flow helps solve problems in the early stages and guides PMs to solve these problems.",\n "image":\n"https://images.prismic.io/superpupertest/10dfe050-06a5-4dba-b3d6-3cb97401b32d_1_FBu9fkHh-CevUb01sjYuWQ.jpeg?auto=compress,format",\n "editor": "Altynai N. Alamanova", \n "genre": "Project Management", \n "keywords": " Jira, Mad Flow", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/how-to-automate-jira-mad-devs-experience/",\n "datePublished": "2020-06-04",\n "dateCreated": "2020-06-04" ,\n "dateModified": "2021-02-14",\n "description": "  Automate management internal company processes to Jira with extensions. How Mad Flow helps solve problems in the early stages and guides PMs to solve these problems.",\n "articleBody": "People bring a human factor to company regulations and standards. We forget tasks while creating to-do lists and waste time by fixing the crappy consequences. At Mad Devs, our goal was to bring Jira automation with the right intention to help project manager teams discover problems ahead of time and empower them with the right software.",\n   "author": {\n    "@type": "Person",\n    "name": "Altynai "\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/how-to-automate-jira-mad-devs-experience/"\n      },\n "headline": "How to Automate Jira: Mad Devs Experience",\n "alternativeHeadline": "Automate management internal company processes to Jira with extensions. How Mad Flow helps solve problems in the early stages and guides PMs to solve these problems.",\n "image":\n"https://images.prismic.io/superpupertest/10dfe050-06a5-4dba-b3d6-3cb97401b32d_1_FBu9fkHh-CevUb01sjYuWQ.jpeg?auto=compress,format",\n "editor": "Altynai N. Alamanova", \n "genre": "Project Management", \n "keywords": " Jira, Mad Flow", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/how-to-automate-jira-mad-devs-experience/",\n "datePublished": "2020-06-04",\n "dateCreated": "2020-06-04" ,\n "dateModified": "2021-02-14",\n "description": "  Automate management internal company processes to Jira with extensions. How Mad Flow helps solve problems in the early stages and guides PMs to solve these problems.",\n "articleBody": "People bring a human factor to company regulations and standards. We forget tasks while creating to-do lists and waste time by fixing the crappy consequences. At Mad Devs, our goal was to bring Jira automation with the right intention to help project manager teams discover problems ahead of time and empower them with the right software.",\n   "author": {\n    "@type": "Person",\n    "name": "Altynai "\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -850,7 +850,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/case-studies/namba-food/',
+                      url: 'https://maddevs.io/clients/case-studies/namba-food/',
                     },
                   },
                 ],
@@ -1463,8 +1463,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/bullet-issues-tasks-that-kill/',
-                embed_url: 'https://maddevs.io/blog/bullet-issues-tasks-that-kill/',
+                url: 'https://maddevs.io/insights/blog/bullet-issues-tasks-that-kill/',
+                embed_url: 'https://maddevs.io/insights/blog/bullet-issues-tasks-that-kill/',
                 type: 'link',
                 version: '1.0',
                 title: 'Bullet-Issues: Tasks That Kill | Mad Devs Blog',
@@ -1476,7 +1476,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/3e58d49c-fb0b-4c49-bc8a-fa0f026d748d_Bullet+issues.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/bullet-issues-tasks-that-kill/"><h1>Bullet-Issues: Tasks That Kill | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/3e58d49c-fb0b-4c49-bc8a-fa0f026d748d_Bullet+issues.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533"><p>Bullet-issues… Each IT project has tasks of this type. They are small, simple, but once you forget about them, something gets killed suddenly.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/bullet-issues-tasks-that-kill/"><h1>Bullet-Issues: Tasks That Kill | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/3e58d49c-fb0b-4c49-bc8a-fa0f026d748d_Bullet+issues.jpg?auto=compress,format&rect=0,1,2000,1084&w=983&h=533"><p>Bullet-issues… Each IT project has tasks of this type. They are small, simple, but once you forget about them, something gets killed suddenly.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -1527,8 +1527,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/',
-                embed_url: 'https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/',
+                url: 'https://maddevs.io/insights/blog/the-five-rules-when-we-work-with-jira/',
+                embed_url: 'https://maddevs.io/insights/blog/the-five-rules-when-we-work-with-jira/',
                 type: 'link',
                 version: '1.0',
                 title: '5 Rules: How to work with Jira to drive results | Mad Devs Blog',
@@ -1540,7 +1540,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/748bf9ca-a933-422d-95f0-a7c1cee816f9_1_88MI7TLzV2q2tfxN39615Q.jpeg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/"><h1>5 Rules: How to work with Jira to drive results | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/748bf9ca-a933-422d-95f0-a7c1cee816f9_1_88MI7TLzV2q2tfxN39615Q.jpeg?auto=compress,format"><p>The five rules when we work with Jira and why what\'s not written down never happened.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/the-five-rules-when-we-work-with-jira/"><h1>5 Rules: How to work with Jira to drive results | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/748bf9ca-a933-422d-95f0-a7c1cee816f9_1_88MI7TLzV2q2tfxN39615Q.jpeg?auto=compress,format"><p>The five rules when we work with Jira and why what\'s not written down never happened.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -1696,7 +1696,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/blog/software-features-acceptance-process-by-clients/"\r\n      },\r\n "headline": "Software Features Acceptance by Client",\r\n "alternativeHeadline": "One of the most frequent problems is when teams do not think through feature requirements.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/493d2497-7257-4bf6-94c5-5659a0779b4f_6.png?auto=compress,format",\r\n "editor": "Tamara Mun", \r\n "genre": "Project Management", \r\n "keywords": " feature requirements, Feature planning, Feature misunderstanding", \r\n "publisher": {\r\n   },\r\n "url":\r\n"https://maddevs.io/blog/software-features-acceptance-process-by-clients/",\r\n "datePublished": "2020-07-30",\r\n "dateCreated": "2020-07-30" ,\r\n "dateModified": "2021-02-14",\r\n "description": "What problems with a customer can arise from feature acceptance in software development and how to avoid them.",\r\n "articleBody": "Feature acceptance by the client is one of the important phases in the project\'s life cycle, which ultimately determines the product\'s functionality delivered to the end-users. The whole point of this step is to successfully sign off the feature with the client and make the release, but to achieve it you have to make sure that all the objectives are met. Sometimes not everything goes so smoothly. It often happens when just before the deadline you discover that some functions are acting up or stop working at all. As a result, you get stressed teams and unsatisfied clients. Let\'s work out why these problems occur and the ways you can ensure stressful-free feature completion.",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Tamara"\r\n  }\r\n },\r\n</script>',
+              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/insights/blog/software-features-acceptance-process-by-clients/"\r\n      },\r\n "headline": "Software Features Acceptance by Client",\r\n "alternativeHeadline": "One of the most frequent problems is when teams do not think through feature requirements.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/493d2497-7257-4bf6-94c5-5659a0779b4f_6.png?auto=compress,format",\r\n "editor": "Tamara Mun", \r\n "genre": "Project Management", \r\n "keywords": " feature requirements, Feature planning, Feature misunderstanding", \r\n "publisher": {\r\n   },\r\n "url":\r\n"https://maddevs.io/insights/blog/software-features-acceptance-process-by-clients/",\r\n "datePublished": "2020-07-30",\r\n "dateCreated": "2020-07-30" ,\r\n "dateModified": "2021-02-14",\r\n "description": "What problems with a customer can arise from feature acceptance in software development and how to avoid them.",\r\n "articleBody": "Feature acceptance by the client is one of the important phases in the project\'s life cycle, which ultimately determines the product\'s functionality delivered to the end-users. The whole point of this step is to successfully sign off the feature with the client and make the release, but to achieve it you have to make sure that all the objectives are met. Sometimes not everything goes so smoothly. It often happens when just before the deadline you discover that some functions are acting up or stop working at all. As a result, you get stressed teams and unsatisfied clients. Let\'s work out why these problems occur and the ways you can ensure stressful-free feature completion.",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Tamara"\r\n  }\r\n },\r\n</script>',
               spans: [],
             },
           ],
@@ -1816,7 +1816,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/case-studies/sir-john-monash-centre/',
+                      url: 'https://maddevs.io/clients/case-studies/sir-john-monash-centre/',
                     },
                   },
                 ],
@@ -1895,8 +1895,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/software-quality-assurance/',
-                embed_url: 'https://maddevs.io/blog/software-quality-assurance/',
+                url: 'https://maddevs.io/insights/blog/software-quality-assurance/',
+                embed_url: 'https://maddevs.io/insights/blog/software-quality-assurance/',
                 type: 'link',
                 version: '1.0',
                 title: 'Why Software Projects Fail: Importance of Quality Assurance | Mad Devs Blog',
@@ -1908,7 +1908,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/bd341a57-64a1-4461-8e84-ce69633ab179_Frame+1942.jpg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/software-quality-assurance/"><h1>Why Software Projects Fail: Importance of Quality Assurance | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/bd341a57-64a1-4461-8e84-ce69633ab179_Frame+1942.jpg?auto=compress,format"><p>If you make software quality assurance a top priority right from the start, you will avoid spending additional bug fixing resources when it’s too late.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/software-quality-assurance/"><h1>Why Software Projects Fail: Importance of Quality Assurance | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/bd341a57-64a1-4461-8e84-ce69633ab179_Frame+1942.jpg?auto=compress,format"><p>If you make software quality assurance a top priority right from the start, you will avoid spending additional bug fixing resources when it’s too late.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -1986,8 +1986,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/how-to-communicate-with-client-to-build-a-successful-software/',
-                embed_url: 'https://maddevs.io/blog/how-to-communicate-with-client-to-build-a-successful-software/',
+                url: 'https://maddevs.io/insights/blog/how-to-communicate-with-client-to-build-a-successful-software/',
+                embed_url: 'https://maddevs.io/insights/blog/how-to-communicate-with-client-to-build-a-successful-software/',
                 type: 'link',
                 version: '1.0',
                 title: 'How to Communicate with Client to Build a Successful Software | Mad Devs Blog',
@@ -1999,7 +1999,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/f0ef8857-c149-4893-a03f-6213f38376bd_7.jpeg?auto=compress,format&rect=0,177,1400,759&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/how-to-communicate-with-client-to-build-a-successful-software/"><h1>How to Communicate with Client to Build a Successful Software | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/f0ef8857-c149-4893-a03f-6213f38376bd_7.jpeg?auto=compress,format&rect=0,177,1400,759&w=983&h=533"><p>The list of common principles of work communication with clients to build a successful product. These guidelines are applicable to all customer-facing roles in software development.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/how-to-communicate-with-client-to-build-a-successful-software/"><h1>How to Communicate with Client to Build a Successful Software | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/f0ef8857-c149-4893-a03f-6213f38376bd_7.jpeg?auto=compress,format&rect=0,177,1400,759&w=983&h=533"><p>The list of common principles of work communication with clients to build a successful product. These guidelines are applicable to all customer-facing roles in software development.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -2082,8 +2082,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/how-to-automate-tasks-estimation-in-jira/',
-                embed_url: 'https://maddevs.io/blog/how-to-automate-tasks-estimation-in-jira/',
+                url: 'https://maddevs.io/insights/blog/how-to-automate-tasks-estimation-in-jira/',
+                embed_url: 'https://maddevs.io/insights/blog/how-to-automate-tasks-estimation-in-jira/',
                 type: 'link',
                 version: '1.0',
                 title: 'How to Automate Tasks Estimation in JIRA | Mad Devs Blog',
@@ -2095,7 +2095,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/820f3d3a-174c-4d1e-98cd-2a6be65d3f42_1_9EXM3IcfihDTOBG2284wKw.jpeg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/how-to-automate-tasks-estimation-in-jira/"><h1>How to Automate Tasks Estimation in JIRA | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/820f3d3a-174c-4d1e-98cd-2a6be65d3f42_1_9EXM3IcfihDTOBG2284wKw.jpeg?auto=compress,format"><p>Planning means more than just "staying organized". How to estimate the time of execution for your tasks in Jira to drive the best results.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/how-to-automate-tasks-estimation-in-jira/"><h1>How to Automate Tasks Estimation in JIRA | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/820f3d3a-174c-4d1e-98cd-2a6be65d3f42_1_9EXM3IcfihDTOBG2284wKw.jpeg?auto=compress,format"><p>Planning means more than just "staying organized". How to estimate the time of execution for your tasks in Jira to drive the best results.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -2126,8 +2126,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/',
-                embed_url: 'https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/',
+                url: 'https://maddevs.io/insights/blog/the-five-rules-when-we-work-with-jira/',
+                embed_url: 'https://maddevs.io/insights/blog/the-five-rules-when-we-work-with-jira/',
                 type: 'link',
                 version: '1.0',
                 title: '5 Rules: How to work with Jira to drive results | Mad Devs Blog',
@@ -2139,7 +2139,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/748bf9ca-a933-422d-95f0-a7c1cee816f9_1_88MI7TLzV2q2tfxN39615Q.jpeg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/"><h1>5 Rules: How to work with Jira to drive results | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/748bf9ca-a933-422d-95f0-a7c1cee816f9_1_88MI7TLzV2q2tfxN39615Q.jpeg?auto=compress,format"><p>The five rules when we work with Jira and why what\'s not written down never happened.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/the-five-rules-when-we-work-with-jira/"><h1>5 Rules: How to work with Jira to drive results | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/748bf9ca-a933-422d-95f0-a7c1cee816f9_1_88MI7TLzV2q2tfxN39615Q.jpeg?auto=compress,format"><p>The five rules when we work with Jira and why what\'s not written down never happened.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,

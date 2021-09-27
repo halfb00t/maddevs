@@ -39,9 +39,9 @@ exports[`Post component should render correctly with default props 1`] = `
         >
           <div
             id="disqus_thread"
-            identifier="/blog/uid"
+            identifier="/insights/blog/uid"
             style="min-height: 200px;"
-            url="https://maddevs.io/blog/uid/"
+            url="https://maddevs.io/insights/blog/uid/"
           />
         </div>
       </div>

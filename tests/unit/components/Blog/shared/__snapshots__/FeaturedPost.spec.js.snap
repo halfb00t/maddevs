@@ -13,7 +13,7 @@ exports[`featured post component is a Vue instance 1`] = `
       >
         <nuxtlink-stub
           class="featured-post__info"
-          to="/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
+          to="/insights/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
         >
           <h2
             class="featured-post__title"
@@ -45,7 +45,7 @@ exports[`featured post component is a Vue instance 1`] = `
               class="post-tag post-tag--dark-theme"
               data-testid="test-tag"
               event="click"
-              to="/blog/tag/markup/"
+              to="/insights/blog/tag/markup/"
             >
               
   markup
@@ -60,7 +60,7 @@ exports[`featured post component is a Vue instance 1`] = `
       >
         <nuxtlink-stub
           class="featured-post__image"
-          to="/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
+          to="/insights/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
         >
           <img
             alt="Image"

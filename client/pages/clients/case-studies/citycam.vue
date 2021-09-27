@@ -21,7 +21,7 @@
     </CaseHeader>
     <Main />
     <Footer
-      link="/case-studies/peklo/"
+      link="/clients/case-studies/peklo/"
       class-name="peklo"
     >
       <img
@@ -54,6 +54,8 @@ export default {
     Footer,
     Main,
   },
+
+  nuxtI18n: false,
 
   mixins: [
     animateOnScrollMixin({
@@ -88,9 +90,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/cases/base';
-@import '../../assets/styles/cases/components';
-@import '../../assets/styles/cases/media';
+@import '../../../assets/styles/cases/base';
+@import '../../../assets/styles/cases/components';
+@import '../../../assets/styles/cases/media';
 
 .case {
   &_header-citycam {

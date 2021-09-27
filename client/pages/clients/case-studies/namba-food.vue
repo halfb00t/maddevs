@@ -1,30 +1,28 @@
 <template>
-  <main class="case case--yourcast">
+  <main class="main case case--nambafood">
     <CaseHeader
       :logo="logo"
-      project="yourcast"
-      video-name="/videos/yourcast-banner.mp4"
-      video-fallback-path="/images/Cases/yourcast/png/banner-bg.png"
+      project="nambafood"
+      video-name="/videos/main.ef19480.mp4"
+      video-fallback-path="/images/Cases/nambafood/jpg/blank.jpg"
     >
       <h1
         slot="title"
         class="case_header-title"
       >
-        The Evolution <br>
-        of Yourcast.TV
+        Namba Food
       </h1>
       <p
         slot="description"
         class="case_header-description"
       >
-        Mad Devs developed a secure and private video streaming service and live <br>
-        video broadcasting cinema to provide entertainment experience to isolated <br>
-        groups feeling homesick.
+        Mad Devs created the Namba Food delivery service from scratch. The solution <br>
+        orchestrates feature-rich apps for couriers, end-users, and business owners.
       </p>
     </CaseHeader>
     <Main />
     <Footer
-      link="/case-studies/sir-john-monash-centre/"
+      link="/clients/case-studies/sir-john-monash-centre/"
       class-name="sjmc"
     >
       <img
@@ -46,17 +44,17 @@
 
 <script>
 import CaseHeader from '@/components/Cases/shared/CaseHeader'
+import Main from '@/components/Cases/nambafood/Main'
 import Footer from '@/components/Cases/shared/CaseFooter'
-import Main from '@/components/Cases/yourcast/Main'
 import { getMetadata, buildHead } from '@/data/seo'
 import headerMixin from '@/mixins/headerMixin'
 
 export default {
-  name: 'CaseYourcast',
+  name: 'NambaFood',
   components: {
     CaseHeader,
-    Footer,
     Main,
+    Footer,
   },
 
   mixins: [headerMixin('.case_header')],
@@ -66,27 +64,27 @@ export default {
   data() {
     return {
       logo: {
-        width: 387,
-        height: 81.23,
-        folder: 'yourcast',
-        file: 'yourcast-logo',
-        alt: 'YourcastTV - Video Streaming Platform Logo.',
+        width: 259,
+        height: 82,
+        folder: 'nambafood',
+        file: 'nambafood-logo',
+        alt: 'Nambafood Logo',
       },
     }
   },
 
   head() {
     return buildHead({
-      ...getMetadata('yourcast'),
-      image: 'https://maddevs.io/yourcast.jpg',
+      ...getMetadata('nambafood'),
+      image: 'https://maddevs.io/namba-food.png',
     })
   },
 }
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/cases/base';
-@import '../../assets/styles/cases/components';
-@import '../../assets/styles/cases/yourcast/styles';
-@import '../../assets/styles/cases/media';
+@import '../../../assets/styles/cases/base';
+@import '../../../assets/styles/cases/components';
+@import '../../../assets/styles/cases/nambafood/styles';
+@import '../../../assets/styles/cases/media';
 </style>
