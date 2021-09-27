@@ -1,5 +1,5 @@
 <template>
-  <section class="case_container">
+  <section class="case_container media-m-48_bottom m-96_bottom">
     <div class="container_regular">
       <h2 class="case_title_h2 m-24_bottom media-m-12_bottom">
         Widget speed optimisation

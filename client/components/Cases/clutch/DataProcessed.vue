@@ -87,7 +87,7 @@ import animationData from '@/assets/lottie/clutch/data-processed.json'
 import playLottieMixin from '@/mixins/playLottieMixin'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
-import { dataRep, idDataRep } from '@/data/clutch'
+import { dataRep, idDataRep } from '@/data/caseClutch'
 
 export default {
   name: 'DataProcessed',

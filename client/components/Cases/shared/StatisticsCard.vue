@@ -1,26 +1,36 @@
 <template>
   <div class="case_statistics-item">
+    <TextParagraph
+      v-if="headerText"
+      class="case_statistics-item_header"
+      :color="headerTextColor"
+    >
+      {{ headerText }}
+    </TextParagraph>
     <img
       v-if="icon"
       v-lazy-load
+      class="m-21_bottom"
       :data-src="$getMediaFromS3(`/images/Cases/${icon.folder}/${icon.type}/${icon.name}.${icon.type}`)"
       :alt="icon.name || 'Icon'"
       :width="icon.width || '30px'"
       :height="icon.height || '30px'"
     >
-    <h3
-      class="case_statistics-item_number p-16_bottom p-21_top"
+    <h5
+      class="case_statistics-item_number p-16_bottom"
       :style="colorNumber"
     >
       <span
         :id="`statistics-${section}-${index}`"
         :data-end-value="number"
+        :data-start-value="numberText"
       >
         {{ numberText }}
       </span>
       {{ name ? name : '' }}
-    </h3>
+    </h5>
     <TextParagraph
+      v-if="description"
       class="case_statistics-item_description"
       :color="descriptionColor"
     >
@@ -39,6 +49,14 @@ export default {
   },
 
   props: {
+    headerText: {
+      type: String,
+    },
+
+    headerTextColor: {
+      type: String,
+    },
+
     number: {
       type: Number,
       default: 0,
@@ -100,6 +118,10 @@ export default {
     align-items: center;
     padding: 0;
     text-align: center;
+    &_header{
+      text-align: center;
+      @include font($text-color--black, 16px, 400)
+    }
 
     &_number {
       width: 100%;

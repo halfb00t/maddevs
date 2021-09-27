@@ -83,7 +83,7 @@ import Card from '@/components/Cases/shared/Card'
 import StatisticCard from '@/components/Cases/shared/StatisticsCard'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import countUp from '@/helpers/countUp'
-import { clutchAwards, reviewsStatistics } from '@/data/clutch'
+import { clutchAwards, reviewsStatistics } from '@/data/caseClutch'
 
 export default {
   name: 'About',
