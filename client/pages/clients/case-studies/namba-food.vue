@@ -83,8 +83,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/cases/base';
-@import '../../assets/styles/cases/components';
-@import '../../assets/styles/cases/nambafood/styles';
-@import '../../assets/styles/cases/media';
+@import '../../../assets/styles/cases/base';
+@import '../../../assets/styles/cases/components';
+@import '../../../assets/styles/cases/nambafood/styles';
+@import '../../../assets/styles/cases/media';
 </style>
