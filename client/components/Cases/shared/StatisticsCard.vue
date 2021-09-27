@@ -8,7 +8,7 @@
       :width="icon.width || '30px'"
       :height="icon.height || '30px'"
     >
-    <h5
+    <h3
       class="case_statistics-item_number p-16_bottom p-21_top"
       :style="colorNumber"
     >
@@ -19,7 +19,7 @@
         {{ numberText }}
       </span>
       {{ name ? name : '' }}
-    </h5>
+    </h3>
     <TextParagraph
       class="case_statistics-item_description"
       :color="descriptionColor"

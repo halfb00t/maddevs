@@ -1,17 +1,20 @@
 <template>
   <section>
-    <TechChallenges />
+    <About />
+    <OutStuffing />
   </section>
 </template>
 
 <script>
 
-import TechChallenges from '@/components/Cases/clutch/TechChallenges'
+import About from '@/components/Cases/clutch/About'
+import OutStuffing from '@/components/Cases/clutch/OutStuffing'
 
 export default {
   name: 'Main',
   components: {
-    TechChallenges,
+    OutStuffing,
+    About,
   },
 }
 </script>
