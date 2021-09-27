@@ -5,7 +5,7 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-down",
+      "animation": "zoom-in",
       "colorTheme": "white",
       "maxWidth": "1028px",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies."
@@ -19,10 +19,10 @@
     "primary": {
       "animation": "zoom-in",
       "colorTheme": "white",
-      "position": "center",
+      "position": "right",
       "title": "Featured projects",
       "maxWidth": "1028px",
-      "tag": "h4",
+      "tag": "h6",
       "size-xl": "80-px",
       "size-lg": "40-px",
       "size-md": "33-px",
@@ -67,12 +67,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-up",
+      "animation": "fade-down",
       "colorTheme": "black",
       "type": "default",
-      "position": "center",
-      "text": "iterate dot-com e-services",
-      "maxWidth": "orchestrate open-source functionalities",
+      "position": "right",
+      "text": "aggregate customized mindshare",
+      "maxWidth": "leverage user-centric supply-chains",
       "size-xl": "40-px",
       "size-lg": "24-px",
       "size-md": "21-px",
