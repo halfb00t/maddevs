@@ -71,7 +71,7 @@ import { isMobile } from 'mobile-device-detect'
 import mainMixins from '@/mixins/mainMixins'
 
 export default {
-  name: 'VideoSlice',
+  name: 'CaseStudiesPreviewSlice',
   mixins: [mainMixins],
   props: {
     slice: {
