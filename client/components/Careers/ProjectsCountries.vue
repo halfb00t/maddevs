@@ -27,7 +27,7 @@
       :customers="careersCustomers"
     />
     <div class="projects-countries_link-btn">
-      <NuxtLink to="/case-studies/">
+      <NuxtLink to="/clients/case-studies/">
         <UIButton>{{ $t('careers.section-2.btn') }}</UIButton>
       </NuxtLink>
     </div>

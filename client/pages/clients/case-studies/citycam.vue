@@ -21,7 +21,7 @@
     </CaseHeader>
     <Main />
     <Footer
-      link="/case-studies/peklo/"
+      link="/clients/case-studies/peklo/"
       class-name="peklo"
     >
       <img

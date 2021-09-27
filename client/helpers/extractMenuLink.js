@@ -37,7 +37,7 @@ export default ({
     return {
       isExternalLink: false,
       target: null,
-      url: `/blog/${documentUID}/`,
+      url: `/insights/blog/${documentUID}/`,
     }
   }
 

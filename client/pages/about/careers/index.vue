@@ -28,9 +28,9 @@ export default {
         }, // meta tags
         [], // scripts
         [
-          { rel: 'alternate', hreflang: 'en', href: 'https://maddevs.io/careers/' },
-          { rel: 'alternate', hreflang: 'x-default', href: 'https://maddevs.io/careers/' },
-          { rel: 'alternate', hreflang: 'ru', href: 'https://maddevs.io/ru/careers/' },
+          { rel: 'alternate', hreflang: 'en', href: 'https://maddevs.io/about/careers/' },
+          { rel: 'alternate', hreflang: 'x-default', href: 'https://maddevs.io/about/careers/' },
+          { rel: 'alternate', hreflang: 'ru', href: 'https://maddevs.io/ru/about/careers/' },
         ], // links
       ),
 

@@ -87,7 +87,7 @@ describe('Post _uid component', () => {
     wrapper.vm.$options.beforeRouteEnter(callObject.to, callObject.from, callObject.next)
 
     expect(callObject.next).toHaveBeenCalledTimes(2)
-    expect(callObject.next).toHaveBeenLastCalledWith({ path: `/blog/${vm.post.uid}/` })
+    expect(callObject.next).toHaveBeenLastCalledWith({ path: `/insights/blog/${vm.post.uid}/` })
   })
 
   it('should correctly work beforeRouteEnter method if from and to equals', () => {

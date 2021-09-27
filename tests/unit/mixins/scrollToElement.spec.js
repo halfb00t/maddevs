@@ -16,7 +16,7 @@ const store = {
 const mocks = {
   $t: () => 'translated',
   $route: {
-    path: '/careers',
+    path: '/about/careers',
   },
 }
 

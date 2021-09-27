@@ -21,7 +21,7 @@
     </CaseHeader>
     <Main />
     <Footer
-      link="/case-studies/R4TCA-web-application/"
+      link="/clients/case-studies/R4TCA-web-application/"
       class-name="itc"
     >
       <img

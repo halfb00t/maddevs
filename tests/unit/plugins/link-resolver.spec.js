@@ -21,7 +21,7 @@ describe('link resolver function', () => {
   })
 
   it('should return blog path if type post', () => {
-    const RESULT = '/blog/'
+    const RESULT = '/insights/blog/'
     const DOC = {
       isBroken: false,
       type: 'post',
@@ -32,7 +32,7 @@ describe('link resolver function', () => {
   })
 
   it('should return author blog path if type author', () => {
-    const RESULT = '/blog/author/'
+    const RESULT = '/insights/blog/author/'
     const DOC = {
       isBroken: false,
       type: 'author',
@@ -43,7 +43,7 @@ describe('link resolver function', () => {
   })
 
   it('should return blog tag if type tag', () => {
-    const RESULT = '/blog/tag/'
+    const RESULT = '/insights/blog/tag/'
     const DOC = {
       isBroken: false,
       type: 'tag',

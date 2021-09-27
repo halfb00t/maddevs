@@ -126,7 +126,7 @@ exports[`ContactMeForm component should render correctly 1`] = `
       Mad Devs’
       
           <a
-            href="/privacy/"
+            href="/approach/privacy/"
             target="_blank"
           >
             Privacy Policy

@@ -7,7 +7,7 @@
       <div>
         Mad Devs’
         <a
-          href="/privacy/"
+          href="/approach/privacy/"
           target="_blank"
         >Privacy Policy</a>
       </div>

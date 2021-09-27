@@ -9,7 +9,7 @@ describe('caseStudies component', () => {
     logo: 'godee-icon',
     logoWidth: 121,
     mdLogo: 'md-logo-black',
-    link: '/case-studies/godee/',
+    link: '/clients/case-studies/godee/',
     isBlank: false,
     background: 'godeeBackground',
     extension: 'png',
