@@ -80,7 +80,7 @@ exports[`Header component should render correctly 1`] = `
               <nuxtlink-stub
                 class="header__navigation-link"
                 data-testid="test-navigation-link"
-                to="/case-studies/"
+                to="/clients/case-studies/"
               >
                 
               Case Studies
@@ -89,7 +89,7 @@ exports[`Header component should render correctly 1`] = `
               <nuxtlink-stub
                 class="header__navigation-link"
                 data-testid="test-navigation-link"
-                to="/delivery-models/"
+                to="/approach/delivery-models/"
               >
                 
               Delivery models
@@ -98,7 +98,7 @@ exports[`Header component should render correctly 1`] = `
               <nuxtlink-stub
                 class="header__navigation-link"
                 data-testid="test-navigation-link"
-                to="/open-source/"
+                to="/insights/open-source/"
               >
                 
               Open Source
@@ -107,7 +107,7 @@ exports[`Header component should render correctly 1`] = `
               <nuxtlink-stub
                 class="header__navigation-link"
                 data-testid="test-navigation-link"
-                to="/careers/"
+                to="/about/careers/"
               >
                 
               Careers
@@ -116,7 +116,7 @@ exports[`Header component should render correctly 1`] = `
               <nuxtlink-stub
                 class="header__navigation-link"
                 data-testid="test-navigation-link"
-                to="/blog/"
+                to="/insights/blog/"
               >
                 
               Blog

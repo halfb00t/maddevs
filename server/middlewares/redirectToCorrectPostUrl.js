@@ -11,7 +11,7 @@ function redirectToCorrectPostUrl(req, res, next) {
    */
   const [_, type, __, postUid] = req.path.split('/').filter(path => Boolean(path))
   if (blogPageTypes.includes(type) && postUid) {
-    res.redirect(301, `/blog/${postUid}`)
+    res.redirect(301, `/insights/blog/${postUid}`)
   } else {
     next()
   }

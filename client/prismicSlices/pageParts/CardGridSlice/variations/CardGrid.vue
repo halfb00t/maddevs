@@ -14,7 +14,7 @@
           class="card-grid-slice__item-link"
         >
           <div class="card-grid-slice__item-info">
-            <h3 v-html="item.title" />
+            <span v-html="item.title" />
             <p v-html="item.description" />
             <UIArrowButton
               color="black"
@@ -100,7 +100,7 @@ export default {
         }
       }
       &-info {
-        h3 {
+        span {
           font-size: 56px;
           line-height: 60px;
           letter-spacing: -0.013em;

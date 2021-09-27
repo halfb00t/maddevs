@@ -50,7 +50,7 @@ exports[`RealTimeETA component should render correctly 1`] = `
         <nuxtlink-stub
           class="case_real-time-eta-more-button"
           target="_blank"
-          to="/blog/how-to-make-three-paid-eta-services-one-free/"
+          to="/insights/blog/how-to-make-three-paid-eta-services-one-free/"
         >
           
         Find out more

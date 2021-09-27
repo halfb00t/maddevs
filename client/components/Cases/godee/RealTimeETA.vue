@@ -24,7 +24,7 @@
           The information is displayed on their mobile application.
         </TextParagraph>
         <NuxtLink
-          to="/blog/how-to-make-three-paid-eta-services-one-free/"
+          to="/insights/blog/how-to-make-three-paid-eta-services-one-free/"
           target="_blank"
           class="case_real-time-eta-more-button"
         >

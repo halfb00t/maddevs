@@ -20,9 +20,9 @@ exports[`CardGridSlice - CardGrid variation should render correctly with data 1`
           <div
             class="card-grid-slice__item-info"
           >
-            <h3>
+            <span>
               First item title
-            </h3>
+            </span>
              
             <p>
               First item description
@@ -58,9 +58,9 @@ exports[`CardGridSlice - CardGrid variation should render correctly with data 1`
           <div
             class="card-grid-slice__item-info"
           >
-            <h3>
+            <span>
               second item title
-            </h3>
+            </span>
              
             <p>
               second item description
@@ -96,9 +96,9 @@ exports[`CardGridSlice - CardGrid variation should render correctly with data 1`
           <div
             class="card-grid-slice__item-info"
           >
-            <h3>
+            <span>
               third item title
-            </h3>
+            </span>
              
             <p>
               third item description

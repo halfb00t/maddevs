@@ -9,22 +9,78 @@
   },
   {
     "from": "/projects",
-    "to": "https://maddevs.io/case-studies/"
+    "to": "https://maddevs.io/clients/case-studies/"
   },
   {
     "from": "/projects/#case-studies",
-    "to": "https://maddevs.io/case-studies/"
+    "to": "https://maddevs.io/clients/case-studies/"
   },
   {
     "from": "/projects/#customers",
-    "to": "https://maddevs.io/case-studies/"
+    "to": "https://maddevs.io/clients/case-studies/"
   },
   {
     "from": "/projects/#open-source",
-    "to": "https://maddevs.io/open-source/"
+    "to": "https://maddevs.io/insights/open-source/"
   },
   {
     "from": "/profile/mad-devs",
     "to": "https://maddevs.io/"
+  },
+  {
+    "from": "/careers",
+    "to": "https://maddevs.io/about/careers/"
+  },
+  {
+    "from": "/delivery-models",
+    "to": "https://maddevs.io/approach/delivery-models/"
+  },
+  {
+    "from": "/privacy",
+    "to": "https://maddevs.io/approach/privacy/"
+  },
+  {
+    "from": "/case-studies",
+    "to": "https://maddevs.io/clients/case-studies/"
+  },
+  {
+    "from": "/case-studies/veeqo",
+    "to": "https://maddevs.io/clients/case-studies/veeqo/"
+  },
+  {
+    "from": "/case-studies/R4TCA-web-application",
+    "to": "https://maddevs.io/clients/case-studies/R4TCA-web-application/"
+  },
+  {
+    "from": "/case-studies/peklo",
+    "to": "https://maddevs.io/clients/case-studies/peklo/"
+  },
+  {
+    "from": "/case-studies/sir-john-monash-centre",
+    "to": "https://maddevs.io/clients/case-studies/sir-john-monash-centre/"
+  },
+  {
+    "from": "/case-studies/sir-john-monash-centre",
+    "to": "https://maddevs.io/clients/case-studies/sir-john-monash-centre/"
+  },
+  {
+    "from": "/case-studies/yourcast",
+    "to": "https://maddevs.io/clients/case-studies/sir-john-monash-centre/"
+  },
+  {
+    "from": "/case-studies/namba-food",
+    "to": "https://maddevs.io/clients/case-studies/namba-food/"
+  },
+  {
+    "from": "/case-studies/godee",
+    "to": "https://maddevs.io/clients/case-studies/godee/"
+  },
+  {
+    "from": "/case-studies/citycam",
+    "to": "https://maddevs.io/clients/case-studies/citycam/"
+  },
+  {
+    "from": "/blog",
+    "to": "https://maddevs.io/insights/blog/"
   }
 ]

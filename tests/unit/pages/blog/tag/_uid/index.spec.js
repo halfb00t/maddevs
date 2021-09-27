@@ -1,7 +1,7 @@
 import '@testing-library/vue'
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Tag from '@/pages/blog/tag/_uid.vue'
+import Tag from '@/pages/insights/blog/tag/_uid.vue'
 
 const localVue = createLocalVue()
 
@@ -75,7 +75,7 @@ describe('Tag _uid component', () => {
     })
     const result = await wrapper.vm.$options.asyncData.call(store, callObject)
     expect(mocks.$store.dispatch).toHaveBeenCalledWith('getBlogTag', callObject.params.uid)
-    expect(result.openGraphUrl).toContain(`/blog/tag/${callObject.params.uid}/`)
+    expect(result.openGraphUrl).toContain(`/insights/blog/tag/${callObject.params.uid}/`)
   })
 
   it('should async data work with failed promise', async () => {
