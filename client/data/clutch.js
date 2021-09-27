@@ -72,3 +72,30 @@ export const clutchAwards = [
     },
   },
 ]
+
+export const speedStatistics = [
+  {
+    numberText: '1',
+    number: 10,
+    name: 'second',
+    numberColor: '#ffffff',
+    headerText: 'First Contentful Paint',
+    headerTextColor: '#A0A0A1',
+  },
+  {
+    numberText: '1',
+    number: 10,
+    name: 'second',
+    numberColor: '#ffffff',
+    headerText: 'Speed Index',
+    headerTextColor: '#A0A0A1',
+  },
+  {
+    numberText: '1',
+    number: 10,
+    name: 'second',
+    numberColor: '#ffffff',
+    headerText: 'Last Painted Hero',
+    headerTextColor: '#A0A0A1',
+  },
+]
