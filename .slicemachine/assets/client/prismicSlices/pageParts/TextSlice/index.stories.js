@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_slice","items":[],"primary":{"animation":"zoom-in","colorTheme":"white","maxWidth":"1028px","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies."},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_slice","items":[],"primary":{"animation":"zoom-in-right","colorTheme":"white","maxWidth":"1028px","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies."},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -37,7 +37,7 @@ export const _Title = () => ({
   },
   data() {
     return {
-      mock: {"variation":"title","name":"Title","slice_type":"text_slice","items":[],"primary":{"animation":"zoom-in","colorTheme":"white","position":"right","title":"Featured projects","maxWidth":"1028px","tag":"h6","size-xl":"80-px","size-lg":"40-px","size-md":"33-px","size-sm":"16-px","size-xs":"60-px"},"id":"_Title"}
+      mock: {"variation":"title","name":"Title","slice_type":"text_slice","items":[],"primary":{"animation":"fade-up","colorTheme":"white","position":"center","title":"Featured projects","maxWidth":"1028px","tag":"h1","size-xl":"80-px","size-lg":"40-px","size-md":"33-px","size-sm":"16-px","size-xs":"60-px"},"id":"_Title"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -56,7 +56,7 @@ export const _TitleText = () => ({
   },
   data() {
     return {
-      mock: {"variation":"titleText","name":"Title + Text","slice_type":"text_slice","items":[],"primary":{"animation":"fade-right","colorTheme":"white","title":"Featured projects","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.","maxWidth":"1028px"},"id":"_TitleText"}
+      mock: {"variation":"titleText","name":"Title + Text","slice_type":"text_slice","items":[],"primary":{"animation":"zoom-in-right","colorTheme":"white","title":"Featured projects","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.","maxWidth":"1028px"},"id":"_TitleText"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -75,7 +75,7 @@ export const _TitleTextButton = () => ({
   },
   data() {
     return {
-      mock: {"variation":"titleTextButton","name":"Title + Text + Button","slice_type":"text_slice","items":[],"primary":{"animation":"zoom-in-right","colorTheme":"white","title":"Featured projects","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.","buttonText":"Get presentation","buttonLink":{"link_type":"Web","url":"https://maddevs.co/delivery-models.pdf"},"maxWidth":"1028px"},"id":"_TitleTextButton"}
+      mock: {"variation":"titleTextButton","name":"Title + Text + Button","slice_type":"text_slice","items":[],"primary":{"animation":"fade-right","colorTheme":"white","title":"Featured projects","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.","buttonText":"Get presentation","buttonLink":{"link_type":"Web","url":"https://maddevs.co/delivery-models.pdf"},"maxWidth":"1028px"},"id":"_TitleTextButton"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -94,7 +94,7 @@ export const _Paragraph = () => ({
   },
   data() {
     return {
-      mock: {"variation":"paragraph","name":"Paragraph","slice_type":"text_slice","items":[],"primary":{"animation":"fade-down","colorTheme":"black","type":"default","position":"right","text":"aggregate customized mindshare","maxWidth":"leverage user-centric supply-chains","size-xl":"40-px","size-lg":"24-px","size-md":"21-px","size-sm":"16-px","size-xs":"32-px"},"id":"_Paragraph"}
+      mock: {"variation":"paragraph","name":"Paragraph","slice_type":"text_slice","items":[],"primary":{"animation":"fade-up","colorTheme":"white","type":"default","position":"left","text":"repurpose scalable interfaces","maxWidth":"utilize strategic niches","size-xl":"40-px","size-lg":"24-px","size-md":"21-px","size-sm":"16-px","size-xs":"32-px"},"id":"_Paragraph"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -130,7 +130,7 @@ export default {
     letter-spacing: -0.04em;
     max-width: 1080px;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 580px) {
       font-size: 30px;
       line-height: 37px;
     }
@@ -144,7 +144,7 @@ export default {
     max-width: 1080px;
     margin-bottom: 40px;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 580px) {
       font-size: 20px;
       line-height: 30px;
     }

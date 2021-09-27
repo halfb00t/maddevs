@@ -129,6 +129,10 @@ export default {
       line-height: 72px;
     }
 
+    @media screen and (max-width: 580px) {
+      margin-bottom: 27px;
+    }
+
     /deep/ .large {
       @include font('Inter', 100px, 800);
       line-height: 105px;
@@ -136,6 +140,11 @@ export default {
       @media screen and (max-width: 768px) {
         font-size: 76px;
         line-height: 72px;
+      }
+
+      @media screen and (max-width: 580px) {
+        font-size: 42px;
+        line-height: 48px;
       }
     }
   }
@@ -154,6 +163,11 @@ export default {
     @media screen and (max-width: 768px) {
       font-size: 24px;
       line-height: 35px;
+    }
+
+    @media screen and (max-width: 580px) {
+      font-size: 21px;
+      line-height: 30px;
     }
   }
 
