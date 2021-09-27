@@ -39,7 +39,7 @@
     </div>
     <NuxtLink
       v-if="$route.name !== 'blog'"
-      to="/blog/"
+      to="/insights/blog/"
       class="header-post__more-btn"
       @click.native="goToPage"
     >
@@ -118,7 +118,7 @@ export default {
 
   methods: {
     getPostPath(type, uid) {
-      if (type === 'post' && uid) return `/blog/${uid}/`
+      if (type === 'post' && uid) return `/insights/blog/${uid}/`
       return '/'
     },
 

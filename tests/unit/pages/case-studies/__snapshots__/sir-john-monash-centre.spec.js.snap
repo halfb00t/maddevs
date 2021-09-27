@@ -85,7 +85,7 @@ exports[`SirJohnMonashCentre _uid component should render correctly 1`] = `
          
         <nuxtlink-stub
           class="case_next-project-button"
-          to="/case-studies/namba-food/"
+          to="/clients/case-studies/namba-food/"
         >
           
     Read next project

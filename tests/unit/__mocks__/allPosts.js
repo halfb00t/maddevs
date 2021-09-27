@@ -93,7 +93,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/blog/software-architecture-design/"\r\n      },\r\n "headline": "Software Architecture 101",\r\n "alternativeHeadline": "We have 3 main and 3 spare servers with a lot of launched applications. Every application writes logs in the JSON-strings format into Syslog. In the near future, we will need to collect logs from a lot of Windows machines, but this is a completely different story.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/93d447b6-2865-4da7-ad2c-5cd07c98d4e3_8.jpeg?auto=compress,format",\r\n "editor": "Nuradil Alymkulov", \r\n "genre": "Backend development", \r\n "keywords": "application design.", \r\n "publisher": {\r\n   },\r\n"url":"https://maddevs.io/blog/software-architecture-design/",\r\n "datePublished": "2020-12-17",\r\n "dateCreated": "2020-12-17" ,\r\n "dateModified": "2021-02-15",\r\n "description": "A quick intro to Software Architecture: from business requirements to code in production.",\r\n "articleBody": "Once we set goals for the application architecture, we can start preparing Sequence Diagrams. Sequence Diagrams are great for translating business requirements into a distinct set of operations between various application components. Also, given Sequence Diagrams of the app, we could refactor architecture & planned functionality to reduce complexity & increase the app\'s effectiveness even before writing a single line of code!\r\n",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Nuradil"\r\n  }\r\n },\r\n</script>',
+              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/insights/blog/software-architecture-design/"\r\n      },\r\n "headline": "Software Architecture 101",\r\n "alternativeHeadline": "We have 3 main and 3 spare servers with a lot of launched applications. Every application writes logs in the JSON-strings format into Syslog. In the near future, we will need to collect logs from a lot of Windows machines, but this is a completely different story.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/93d447b6-2865-4da7-ad2c-5cd07c98d4e3_8.jpeg?auto=compress,format",\r\n "editor": "Nuradil Alymkulov", \r\n "genre": "Backend development", \r\n "keywords": "application design.", \r\n "publisher": {\r\n   },\r\n"url":"https://maddevs.io/insights/blog/software-architecture-design/",\r\n "datePublished": "2020-12-17",\r\n "dateCreated": "2020-12-17" ,\r\n "dateModified": "2021-02-15",\r\n "description": "A quick intro to Software Architecture: from business requirements to code in production.",\r\n "articleBody": "Once we set goals for the application architecture, we can start preparing Sequence Diagrams. Sequence Diagrams are great for translating business requirements into a distinct set of operations between various application components. Also, given Sequence Diagrams of the app, we could refactor architecture & planned functionality to reduce complexity & increase the app\'s effectiveness even before writing a single line of code!\r\n",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Nuradil"\r\n  }\r\n },\r\n</script>',
               spans: [],
             },
           ],
@@ -615,8 +615,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/case-studies/godee/',
-                embed_url: 'https://maddevs.io/case-studies/godee/',
+                url: 'https://maddevs.io/clients/case-studies/godee/',
+                embed_url: 'https://maddevs.io/clients/case-studies/godee/',
                 type: 'link',
                 version: '1.0',
                 title: 'Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service',
@@ -628,7 +628,7 @@ export default [
                 thumbnail_url: 'https://maddevs.io/godee.png',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/case-studies/godee/"><h1>Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service</h1><img src="https://maddevs.io/godee.png"><p>GoDee is a transportation app and management panel to commute in Ho Chi Minh City, Vietnam. Users can find routes, select the time, book seats and pay for the ride online.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/clients/case-studies/godee/"><h1>Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service</h1><img src="https://maddevs.io/godee.png"><p>GoDee is a transportation app and management panel to commute in Ho Chi Minh City, Vietnam. Users can find routes, select the time, book seats and pay for the ride online.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -765,7 +765,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/cost-of-errors-in-hardware-projects/',
+                      url: 'https://maddevs.io/insights/blog/cost-of-errors-in-hardware-projects/',
                     },
                   },
                 ],
@@ -911,7 +911,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/blog/how-to-make-three-paid-eta-services-one-free/"\r\n      },\r\n "headline": "How to Make Three Paid ETA Services One Free",\r\n "alternativeHeadline": "How to process more than 350,000 requests per month free using three free ETA (estimated time of arrival) services instead of one paid.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/7b3c67c5-b80e-488d-ad0e-e90745ede392_1_q9EOHqrYhaLpY1ZIL0C4Qw.jpeg?auto=compress,format",\r\n "editor": "Meder Akkozov", \r\n "genre": "Mobile Development", \r\n "keywords": "ETA, GoDee project", \r\n "publisher": {\r\n   },\r\n "url":\r\n"https://maddevs.io/blog/how-to-make-three-paid-eta-services-one-free/",\r\n "datePublished": "2020-12-17",\r\n "dateCreated": "2020-12-17" ,\r\n "dateModified": "2021-02-14",\r\n "description": " How to process more than 350,000 requests per month free using three free ETA (estimated time of arrival) services instead of one paid.",\r\n "articleBody": "GoDee is a public transportation app. Bus transportation by GoDee is more convenient than motorbikes common for Southeast Asia and cheaper than a taxi. The app-based system allows users to find an appropriate route, select the time, book the seat, and pay for the ride online. And one of the problems of GoDee is traffic jams that severely impact the user experience. Users get tired of waiting and get annoyed by trying to guess the bus arrival time. So, to make the commuting more convenient, it needed service to calculate the bus\'s approximate arrival time, aka ETA.",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Meder "\r\n  }\r\n },\r\n</script>',
+              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/insights/blog/how-to-make-three-paid-eta-services-one-free/"\r\n      },\r\n "headline": "How to Make Three Paid ETA Services One Free",\r\n "alternativeHeadline": "How to process more than 350,000 requests per month free using three free ETA (estimated time of arrival) services instead of one paid.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/7b3c67c5-b80e-488d-ad0e-e90745ede392_1_q9EOHqrYhaLpY1ZIL0C4Qw.jpeg?auto=compress,format",\r\n "editor": "Meder Akkozov", \r\n "genre": "Mobile Development", \r\n "keywords": "ETA, GoDee project", \r\n "publisher": {\r\n   },\r\n "url":\r\n"https://maddevs.io/insights/blog/how-to-make-three-paid-eta-services-one-free/",\r\n "datePublished": "2020-12-17",\r\n "dateCreated": "2020-12-17" ,\r\n "dateModified": "2021-02-14",\r\n "description": " How to process more than 350,000 requests per month free using three free ETA (estimated time of arrival) services instead of one paid.",\r\n "articleBody": "GoDee is a public transportation app. Bus transportation by GoDee is more convenient than motorbikes common for Southeast Asia and cheaper than a taxi. The app-based system allows users to find an appropriate route, select the time, book the seat, and pay for the ride online. And one of the problems of GoDee is traffic jams that severely impact the user experience. Users get tired of waiting and get annoyed by trying to guess the bus arrival time. So, to make the commuting more convenient, it needed service to calculate the bus\'s approximate arrival time, aka ETA.",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Meder "\r\n  }\r\n },\r\n</script>',
               spans: [],
             },
           ],
@@ -959,7 +959,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/case-studies/godee/',
+                      url: 'https://maddevs.io/clients/case-studies/godee/',
                     },
                   },
                 ],
@@ -1431,7 +1431,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/web-app-deploy-to-glitch/"\n      },\n "headline": "Web App Deploy to Glitch.com 🥳",\n "alternativeHeadline": "Creation of special delivery packages",\n "image":\n"https://images.prismic.io/superpupertest/be3b3263-a5f1-444b-97b8-37302a21b73a_1_ss8qVJYmj4njzGc_Nf8UdA.png?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Frontend development", \n "keywords": "glitch.com, FogCreek", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/web-app-deploy-to-glitch/",\n "datePublished": "2019-09-19",\n "dateCreated": "2019-09-19" ,\n "dateModified": "2021-02-12",\n "description": "Standard and non-standard deploy methods to glitch.com. Creation of special delivery packages that don\'t add extra files and allow you to change settings without affecting the source files  ",\n "articleBody": "Standard and non-standard deploy methods to glitch.com. Creation of special delivery packages that don\'t add extra files and allow you to change settings without affecting the source files. \nSo, this is the second part of my interaction with Glitch.com and in this part, we will talk about deployment methods, both standard and non-standard (which suits me better than the standard method). Here is the first part of the article. ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander "\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/web-app-deploy-to-glitch/"\n      },\n "headline": "Web App Deploy to Glitch.com 🥳",\n "alternativeHeadline": "Creation of special delivery packages",\n "image":\n"https://images.prismic.io/superpupertest/be3b3263-a5f1-444b-97b8-37302a21b73a_1_ss8qVJYmj4njzGc_Nf8UdA.png?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Frontend development", \n "keywords": "glitch.com, FogCreek", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/web-app-deploy-to-glitch/",\n "datePublished": "2019-09-19",\n "dateCreated": "2019-09-19" ,\n "dateModified": "2021-02-12",\n "description": "Standard and non-standard deploy methods to glitch.com. Creation of special delivery packages that don\'t add extra files and allow you to change settings without affecting the source files  ",\n "articleBody": "Standard and non-standard deploy methods to glitch.com. Creation of special delivery packages that don\'t add extra files and allow you to change settings without affecting the source files. \nSo, this is the second part of my interaction with Glitch.com and in this part, we will talk about deployment methods, both standard and non-standard (which suits me better than the standard method). Here is the first part of the article. ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander "\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -1467,7 +1467,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/meet-glitch-com/',
+                      url: 'https://maddevs.io/insights/blog/meet-glitch-com/',
                     },
                   },
                   {
@@ -1603,8 +1603,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/addled-deploy/',
-                embed_url: 'https://maddevs.io/blog/addled-deploy/',
+                url: 'https://maddevs.io/insights/blog/addled-deploy/',
+                embed_url: 'https://maddevs.io/insights/blog/addled-deploy/',
                 type: 'link',
                 version: '1.0',
                 title: 'An Addled Deploy | Mad Devs Blog',
@@ -1616,7 +1616,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/da67f010-4576-4bf1-a645-f5ec21c11259_1_2mH33SBVn9qzMfPwiGSSUg.png?auto=compress,format&rect=0,15,1600,868&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/addled-deploy/"><h1>An Addled Deploy | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/da67f010-4576-4bf1-a645-f5ec21c11259_1_2mH33SBVn9qzMfPwiGSSUg.png?auto=compress,format&rect=0,15,1600,868&w=983&h=533"><p>As code has the concept of code smell, so the deploys have their own gradation of problems calling «Deploy Smell”. I would call “Deploy Smell” the deploy that is new but smells bad, i.e. the deployment is regular but done in a wrong way. </p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/addled-deploy/"><h1>An Addled Deploy | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/da67f010-4576-4bf1-a645-f5ec21c11259_1_2mH33SBVn9qzMfPwiGSSUg.png?auto=compress,format&rect=0,15,1600,868&w=983&h=533"><p>As code has the concept of code smell, so the deploys have their own gradation of problems calling «Deploy Smell”. I would call “Deploy Smell” the deploy that is new but smells bad, i.e. the deployment is regular but done in a wrong way. </p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -2309,7 +2309,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/"\r\n      },\r\n "headline": "Effective Refactoring of Heavy Database Interface",\r\n "alternativeHeadline": "How to refactor heavy database interface in Golang step-by-step to make it more readable, flexible, maintainable, and easy to work with.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/d9fd1cce-d1a8-44fa-b90c-11fa2834c824_1_vlNV_wVecX-_9r55T7E2-w.jpeg?auto=compress,format",\r\n "editor": "Anatoliy Fedorenko", \r\n "genre": "Backend development", \r\n "keywords": " Gorm,  SOLID, ", \r\n "publisher": {\r\n   },\r\n "url":\r\n"https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/",\r\n "datePublished": "2020-07-14",\r\n "dateCreated": "2020-07-14" ,\r\n "dateModified": "2021-02-14",\r\n "description": "  How to refactor heavy database interface in Golang step-by-step to make it more readable, flexible, maintainable, and easy to work with. ",\r\n "articleBody": "This story is about pain, agony, and denial of ready-made solutions. It is also about changes that improve the code\'s readability and help the development team stay happy. The object of this post is an interface that helps a program communicate with a database.\r\nDisclaimer: If we would use various ORMs such as Gorm in this project, most probably we would not face this issue, yet, we decided to write our implementation, so this created the issue and therefore this post.\r\n",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Anatoliy "\r\n  }\r\n },\r\n</script>',
+              text: '<script type="application/ld+json">\r\n{ "@context": "https://schema.org", \r\n "@type": "BlogPosting",\r\n "mainEntityOfPage": {\r\n         "@type": "WebPage",\r\n         "@id": "https://maddevs.io/insights/blog/effective-refactoring-of-heavy-database-interface/"\r\n      },\r\n "headline": "Effective Refactoring of Heavy Database Interface",\r\n "alternativeHeadline": "How to refactor heavy database interface in Golang step-by-step to make it more readable, flexible, maintainable, and easy to work with.",\r\n "image":\r\n"https://images.prismic.io/superpupertest/d9fd1cce-d1a8-44fa-b90c-11fa2834c824_1_vlNV_wVecX-_9r55T7E2-w.jpeg?auto=compress,format",\r\n "editor": "Anatoliy Fedorenko", \r\n "genre": "Backend development", \r\n "keywords": " Gorm,  SOLID, ", \r\n "publisher": {\r\n   },\r\n "url":\r\n"https://maddevs.io/insights/blog/effective-refactoring-of-heavy-database-interface/",\r\n "datePublished": "2020-07-14",\r\n "dateCreated": "2020-07-14" ,\r\n "dateModified": "2021-02-14",\r\n "description": "  How to refactor heavy database interface in Golang step-by-step to make it more readable, flexible, maintainable, and easy to work with. ",\r\n "articleBody": "This story is about pain, agony, and denial of ready-made solutions. It is also about changes that improve the code\'s readability and help the development team stay happy. The object of this post is an interface that helps a program communicate with a database.\r\nDisclaimer: If we would use various ORMs such as Gorm in this project, most probably we would not face this issue, yet, we decided to write our implementation, so this created the issue and therefore this post.\r\n",\r\n   "author": {\r\n    "@type": "Person",\r\n    "name": "Anatoliy "\r\n  }\r\n },\r\n</script>',
               spans: [],
             },
           ],
@@ -2464,8 +2464,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/',
-                embed_url: 'https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/',
+                url: 'https://maddevs.io/insights/blog/how-to-start-with-logging-in-golang-projects-part-1/',
+                embed_url: 'https://maddevs.io/insights/blog/how-to-start-with-logging-in-golang-projects-part-1/',
                 type: 'link',
                 version: '1.0',
                 title: 'How to Start with Logging in Go Projects. Part 1 | Mad Devs Blog',
@@ -2477,7 +2477,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/2767800e-7419-4f93-a9d2-cabde13b22b8_1_6mY93Z3wBTUpcRdEvhIBeg.jpeg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/"><h1>How to Start with Logging in Go Projects. Part 1 | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/2767800e-7419-4f93-a9d2-cabde13b22b8_1_6mY93Z3wBTUpcRdEvhIBeg.jpeg?auto=compress,format"><p>Two important aspects of project logging in Go: log formatting and log levels. How to log properly, and also when and where to use different types of levels.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/how-to-start-with-logging-in-golang-projects-part-1/"><h1>How to Start with Logging in Go Projects. Part 1 | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/2767800e-7419-4f93-a9d2-cabde13b22b8_1_6mY93Z3wBTUpcRdEvhIBeg.jpeg?auto=compress,format"><p>Two important aspects of project logging in Go: log formatting and log levels. How to log properly, and also when and where to use different types of levels.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -2717,8 +2717,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
-                embed_url: 'https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
+                url: 'https://maddevs.io/insights/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
+                embed_url: 'https://maddevs.io/insights/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/',
                 type: 'link',
                 version: '1.0',
                 title: 'How to Run Code Climate Code Analysis Locally Using VSCode + Remote-Containers | Mad Devs Blog',
@@ -2730,7 +2730,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/e7a9249f-827a-497f-8029-17e4a841e6ca_1_c9_PccwaLaKUe9O42CqRcg.png?auto=compress,format&rect=32,0,741,402&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/"><h1>How to Run Code Climate Code Analysis Locally Using VSCode + Remote-Containers | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/e7a9249f-827a-497f-8029-17e4a841e6ca_1_c9_PccwaLaKUe9O42CqRcg.png?auto=compress,format&rect=32,0,741,402&w=983&h=533"><p>How to configure a local launch of the analysis of the quality of your code using Code Climate in ensemble with VSCode. </p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/"><h1>How to Run Code Climate Code Analysis Locally Using VSCode + Remote-Containers | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/e7a9249f-827a-497f-8029-17e4a841e6ca_1_c9_PccwaLaKUe9O42CqRcg.png?auto=compress,format&rect=32,0,741,402&w=983&h=533"><p>How to configure a local launch of the analysis of the quality of your code using Code Climate in ensemble with VSCode. </p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -3013,7 +3013,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '{"@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/running-geo-django-on-elasticbeanstalk/"\n      },\n "headline": "Running Geo Django on ElasticBeanstalk",\n "alternativeHeadline": "How to successfully run GeoDjango on Elasticbeanstalk container using Python.",\n "image":\n"https://images.prismic.io/superpupertest/638ccb04-1340-4efc-9a7d-7ba9812f6929_1*BmpD-5oBin9o583biKxvCQ.jpeg?auto=compress,format",\n "editor": "Andrew Minkin", \n "genre": "Backend development", \n "keywords": "GeoDjango", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/running-geo-django-on-elasticbeanstalk/",\n "datePublished": "2020-06-11",\n "dateCreated": "2020-06-11" ,\n "dateModified": "2021-02-14",\n "description": " How to successfully run GeoDjango on Elasticbeanstalk container using Python.",\n "articleBody": "We have been using ElasticBeanstalk for 2 years to deploy our Django application in one of our projects. However, we weren\'t using Geocoding features for our Django app. In one of our services, we decided to use Geo features of Django and enable PostGIS support for the project.",\n   "author": {\n    "@type": "Person",\n    "name": "Andrew "\n  }\n }',
+              text: '{"@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/running-geo-django-on-elasticbeanstalk/"\n      },\n "headline": "Running Geo Django on ElasticBeanstalk",\n "alternativeHeadline": "How to successfully run GeoDjango on Elasticbeanstalk container using Python.",\n "image":\n"https://images.prismic.io/superpupertest/638ccb04-1340-4efc-9a7d-7ba9812f6929_1*BmpD-5oBin9o583biKxvCQ.jpeg?auto=compress,format",\n "editor": "Andrew Minkin", \n "genre": "Backend development", \n "keywords": "GeoDjango", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/running-geo-django-on-elasticbeanstalk/",\n "datePublished": "2020-06-11",\n "dateCreated": "2020-06-11" ,\n "dateModified": "2021-02-14",\n "description": " How to successfully run GeoDjango on Elasticbeanstalk container using Python.",\n "articleBody": "We have been using ElasticBeanstalk for 2 years to deploy our Django application in one of our projects. However, we weren\'t using Geocoding features for our Django app. In one of our services, we decided to use Geo features of Django and enable PostGIS support for the project.",\n   "author": {\n    "@type": "Person",\n    "name": "Andrew "\n  }\n }',
               spans: [],
             },
           ],
@@ -3440,8 +3440,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/media-storage-on-multiple-django/',
-                embed_url: 'https://maddevs.io/blog/media-storage-on-multiple-django/',
+                url: 'https://maddevs.io/insights/blog/media-storage-on-multiple-django/',
+                embed_url: 'https://maddevs.io/insights/blog/media-storage-on-multiple-django/',
                 type: 'link',
                 version: '1.0',
                 title: 'Storage of Media Files on Multiple Django or My First Experience in Open Source | by Belek Abylov | Mad Devs Blog — Custom Software Development Company',
@@ -3453,7 +3453,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/2bfd106d-6ace-4d36-b6f8-8080def16799_1_LQBnX_vdQCdV5WcQnajzWA.png?auto=compress,format&rect=0,13,1400,759&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/media-storage-on-multiple-django/"><h1>Storage of Media Files on Multiple Django or My First Experience in Open Source | by Belek Abylov | Mad Devs Blog — Custom Software Development Company</h1><img src="https://images.prismic.io/superpupertest/2bfd106d-6ace-4d36-b6f8-8080def16799_1_LQBnX_vdQCdV5WcQnajzWA.png?auto=compress,format&rect=0,13,1400,759&w=983&h=533"><p>How to build a python package by publishing it in PyPI, as well as to offer a solution for storing media files in scalable Django projects.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/media-storage-on-multiple-django/"><h1>Storage of Media Files on Multiple Django or My First Experience in Open Source | by Belek Abylov | Mad Devs Blog — Custom Software Development Company</h1><img src="https://images.prismic.io/superpupertest/2bfd106d-6ace-4d36-b6f8-8080def16799_1_LQBnX_vdQCdV5WcQnajzWA.png?auto=compress,format&rect=0,13,1400,759&w=983&h=533"><p>How to build a python package by publishing it in PyPI, as well as to offer a solution for storing media files in scalable Django projects.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -3490,7 +3490,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/testing-django-on-steroids-with-pytest/',
+                      url: 'https://maddevs.io/insights/blog/testing-django-on-steroids-with-pytest/',
                     },
                   },
                 ],
@@ -3626,7 +3626,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/guaranteed-delivery-with-grpc-streams/"\n      },\n "headline": "Guaranteed Delivery with gRPC Streams",\n "alternativeHeadline": "For frontend and backend integration, as web developers, we have two basic options to create an HTTP API: RPC and REST.",\n "image":\n"https://images.prismic.io/superpupertest/ffcc13e7-abed-4806-ac94-ec0f95bb88ee_1_hwJDs4aWX8ioOeHmWG13lw.png?auto=compress,format",\n "editor": "Andrew Minkin", \n "genre": "Backend development", \n "keywords": "RPC API, REST API", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/guaranteed-delivery-with-grpc-streams/",\n "datePublished": "2019-11-26",\n "dateCreated": "2019-11-26" ,\n "dateModified": "2021-02-12",\n "description": "How we implemented the solution to organize guaranteed delivery between microservices using gRPC without MQ addition",\n "articleBody": "Nowadays web developers should care about interactions with mobile phones too. Responsive layout, SPA, adaptive layout were introduced and quickly became trends for a few upcoming years in web development. Today, developers mostly split into the following camps: frontend and backend. Web development became more challenging for beginners. The frontend part of a web project has turned into an independent project with integration with a backend via API.\nFor frontend and backend integration, as web developers, we have two basic options to create an HTTP API: RPC and REST.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Andrew"\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/guaranteed-delivery-with-grpc-streams/"\n      },\n "headline": "Guaranteed Delivery with gRPC Streams",\n "alternativeHeadline": "For frontend and backend integration, as web developers, we have two basic options to create an HTTP API: RPC and REST.",\n "image":\n"https://images.prismic.io/superpupertest/ffcc13e7-abed-4806-ac94-ec0f95bb88ee_1_hwJDs4aWX8ioOeHmWG13lw.png?auto=compress,format",\n "editor": "Andrew Minkin", \n "genre": "Backend development", \n "keywords": "RPC API, REST API", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/guaranteed-delivery-with-grpc-streams/",\n "datePublished": "2019-11-26",\n "dateCreated": "2019-11-26" ,\n "dateModified": "2021-02-12",\n "description": "How we implemented the solution to organize guaranteed delivery between microservices using gRPC without MQ addition",\n "articleBody": "Nowadays web developers should care about interactions with mobile phones too. Responsive layout, SPA, adaptive layout were introduced and quickly became trends for a few upcoming years in web development. Today, developers mostly split into the following camps: frontend and backend. Web development became more challenging for beginners. The frontend part of a web project has turned into an independent project with integration with a backend via API.\nFor frontend and backend integration, as web developers, we have two basic options to create an HTTP API: RPC and REST.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Andrew"\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -3656,8 +3656,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/',
-                embed_url: 'https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/',
+                url: 'https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/',
+                embed_url: 'https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/',
                 type: 'link',
                 version: '1.0',
                 title: 'Top 3 Best CI for Your JS Projects with Puppeteer Tests | Mad Devs Blog ',
@@ -3669,7 +3669,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/"><h1>Top 3 Best CI for Your JS Projects with Puppeteer Tests | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format"><p> Comparison of Circle, Cirrus, and Travis CIs\' for JS Projects with Puppeteer Tests. The speed of work, the complexity of configuration, and other differences of these CIs\'.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/"><h1>Top 3 Best CI for Your JS Projects with Puppeteer Tests | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format"><p> Comparison of Circle, Cirrus, and Travis CIs\' for JS Projects with Puppeteer Tests. The speed of work, the complexity of configuration, and other differences of these CIs\'.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -3878,7 +3878,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/go-rest-or-grpc/',
+                      url: 'https://maddevs.io/insights/blog/go-rest-or-grpc/',
                     },
                   },
                   {
@@ -4412,7 +4412,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/"\n      },\n "headline": "How to Start with Logging in Go Projects. Part 1",\n "alternativeHeadline": "The importance of logging",\n "image":\n"https://images.prismic.io/superpupertest/2767800e-7419-4f93-a9d2-cabde13b22b8_1_6mY93Z3wBTUpcRdEvhIBeg.jpeg?auto=compress,format",\n "editor": "Anatoliy Fedorenko", \n "genre": "Backend development", \n "keywords": "Fatal/Panic", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/",\n "datePublished": "2019-11-05",\n "dateCreated": "2019-11-05" ,\n "dateModified": "2021-02-12",\n "description": "Two important aspects of project logging in Go: log formatting and log levels. How to log properly, and also when and where to use different types of levels.",\n "articleBody": "Logs are recorded events that your software produces. They are essential to every IT project since they provide the context to help debugging and solving problems in the application.\nLogs in the project is a necessity. They show the quality level of the software team and the code.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Anatoliy"\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/how-to-start-with-logging-in-golang-projects-part-1/"\n      },\n "headline": "How to Start with Logging in Go Projects. Part 1",\n "alternativeHeadline": "The importance of logging",\n "image":\n"https://images.prismic.io/superpupertest/2767800e-7419-4f93-a9d2-cabde13b22b8_1_6mY93Z3wBTUpcRdEvhIBeg.jpeg?auto=compress,format",\n "editor": "Anatoliy Fedorenko", \n "genre": "Backend development", \n "keywords": "Fatal/Panic", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/how-to-start-with-logging-in-golang-projects-part-1/",\n "datePublished": "2019-11-05",\n "dateCreated": "2019-11-05" ,\n "dateModified": "2021-02-12",\n "description": "Two important aspects of project logging in Go: log formatting and log levels. How to log properly, and also when and where to use different types of levels.",\n "articleBody": "Logs are recorded events that your software produces. They are essential to every IT project since they provide the context to help debugging and solving problems in the application.\nLogs in the project is a necessity. They show the quality level of the software team and the code.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Anatoliy"\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -4549,8 +4549,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/',
-                embed_url: 'https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/',
+                url: 'https://maddevs.io/insights/blog/effective-refactoring-of-heavy-database-interface/',
+                embed_url: 'https://maddevs.io/insights/blog/effective-refactoring-of-heavy-database-interface/',
                 type: 'link',
                 version: '1.0',
                 title: 'Effective Refactoring of Heavy Database Interface | Mad Devs Blog',
@@ -4562,7 +4562,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/d9fd1cce-d1a8-44fa-b90c-11fa2834c824_1_vlNV_wVecX-_9r55T7E2-w.jpeg?auto=compress,format&rect=0,1,1400,759&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/"><h1>Effective Refactoring of Heavy Database Interface | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/d9fd1cce-d1a8-44fa-b90c-11fa2834c824_1_vlNV_wVecX-_9r55T7E2-w.jpeg?auto=compress,format&rect=0,1,1400,759&w=983&h=533"><p>How to refactor heavy database interface in Golang step-by-step to make it more readable, flexible, maintainable, and easy to work with.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/effective-refactoring-of-heavy-database-interface/"><h1>Effective Refactoring of Heavy Database Interface | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/d9fd1cce-d1a8-44fa-b90c-11fa2834c824_1_vlNV_wVecX-_9r55T7E2-w.jpeg?auto=compress,format&rect=0,1,1400,759&w=983&h=533"><p>How to refactor heavy database interface in Golang step-by-step to make it more readable, flexible, maintainable, and easy to work with.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -5110,7 +5110,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/how-to-start-with-logging-in-go-projects-part-2/',
+                      url: 'https://maddevs.io/insights/blog/how-to-start-with-logging-in-go-projects-part-2/',
                     },
                   },
                 ],
@@ -5239,7 +5239,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/how-to-start-developing-for-raspberry-pi-with-qt/"\n      },\n "headline": "How to Stop Worrying and Start Developing for Raspberry Pi with Qt",\n "alternativeHeadline": "We reviewed three options of modules for the basis of the project: ESP32, RaspberryPi (RPi), and STM32.",\n "image":\n"https://images.prismic.io/superpupertest/e4a2fb29-2906-479e-a875-0dd278f4bc08_Raspberry+Pi+with+Qt.png?auto=compress,format",\n "editor": "Kirill Avdeev", \n "genre": "Hardware", \n "keywords": "Hardware,  ESP32, RaspberryPi (RPi), and STM32", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/how-to-start-developing-for-raspberry-pi-with-qt/",\n "datePublished": "2019-10-21",\n "dateCreated": "2019-10-21" ,\n "dateModified": "2021-02-12",\n "description": "My personal way of software development for a single-board Raspberry Pi computer and custom hardware, but in general terms, it will fit other single-board computers of a similar class.   ",\n "articleBody": "One fine day, it became necessary to finish the project for an international mining company. The workers regularly complained about the quality of the... uh... internets in rooms of the residential building of the factory. There are a lot of factors that determine the quality of working with the Internet, and often the issue is about an old smartphone but not an IT department or ISP.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Kirill"\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/how-to-start-developing-for-raspberry-pi-with-qt/"\n      },\n "headline": "How to Stop Worrying and Start Developing for Raspberry Pi with Qt",\n "alternativeHeadline": "We reviewed three options of modules for the basis of the project: ESP32, RaspberryPi (RPi), and STM32.",\n "image":\n"https://images.prismic.io/superpupertest/e4a2fb29-2906-479e-a875-0dd278f4bc08_Raspberry+Pi+with+Qt.png?auto=compress,format",\n "editor": "Kirill Avdeev", \n "genre": "Hardware", \n "keywords": "Hardware,  ESP32, RaspberryPi (RPi), and STM32", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/how-to-start-developing-for-raspberry-pi-with-qt/",\n "datePublished": "2019-10-21",\n "dateCreated": "2019-10-21" ,\n "dateModified": "2021-02-12",\n "description": "My personal way of software development for a single-board Raspberry Pi computer and custom hardware, but in general terms, it will fit other single-board computers of a similar class.   ",\n "articleBody": "One fine day, it became necessary to finish the project for an international mining company. The workers regularly complained about the quality of the... uh... internets in rooms of the residential building of the factory. There are a lot of factors that determine the quality of working with the Internet, and often the issue is about an old smartphone but not an IT department or ISP.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Kirill"\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -7013,7 +7013,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/a-bit-about-event-delegation-in-react/"\n      },\n "headline": "A Bit about Event Delegation in Pure JS",\n "alternativeHeadline": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. ",\n "image":\n"https://images.prismic.io/superpupertest/83f9d80e-d90e-4694-bfca-9633adf0bb76_1_wcAi1bMW4Xrj57-rbiE7hg.png?auto=compress,format",\n "editor": "Alexandr Vishnyakov", \n "genre": "Frontend development", \n "keywords": "delegation", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/a-bit-about-event-delegation-in-react/",\n "datePublished": "2019-09-30",\n "dateCreated": "2019-09-30" ,\n "dateModified": "2021-02-12",\n "description": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS.  ",\n "articleBody": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. \nUnfortunately, in our modern world, there is no way to delve into the little things and how frameworks work.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Alexandr "\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-react/"\n      },\n "headline": "A Bit about Event Delegation in Pure JS",\n "alternativeHeadline": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. ",\n "image":\n"https://images.prismic.io/superpupertest/83f9d80e-d90e-4694-bfca-9633adf0bb76_1_wcAi1bMW4Xrj57-rbiE7hg.png?auto=compress,format",\n "editor": "Alexandr Vishnyakov", \n "genre": "Frontend development", \n "keywords": "delegation", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-react/",\n "datePublished": "2019-09-30",\n "dateCreated": "2019-09-30" ,\n "dateModified": "2021-02-12",\n "description": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS.  ",\n "articleBody": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. \nUnfortunately, in our modern world, there is no way to delve into the little things and how frameworks work.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Alexandr "\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -7039,7 +7039,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/a-bit-about-event-delegation-in-react/',
+                      url: 'https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-react/',
                     },
                   },
                 ],
@@ -7078,8 +7078,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/',
-                embed_url: 'https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/',
+                url: 'https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/',
+                embed_url: 'https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/',
                 type: 'link',
                 version: '1.0',
                 title: 'Top 3 Best CI for Your JS Projects with Puppeteer Tests | Mad Devs Blog ',
@@ -7091,7 +7091,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format&rect=109,0,950,515&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/"><h1>Top 3 Best CI for Your JS Projects with Puppeteer Tests | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format&rect=109,0,950,515&w=983&h=533"><p> Comparison of Circle, Cirrus, and Travis CIs\' for JS Projects with Puppeteer Tests. The speed of work, the complexity of configuration, and other differences of these CIs\'.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/"><h1>Top 3 Best CI for Your JS Projects with Puppeteer Tests | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format&rect=109,0,950,515&w=983&h=533"><p> Comparison of Circle, Cirrus, and Travis CIs\' for JS Projects with Puppeteer Tests. The speed of work, the complexity of configuration, and other differences of these CIs\'.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -7306,8 +7306,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/functional-programming-principles-in-javascript/',
-                embed_url: 'https://maddevs.io/blog/functional-programming-principles-in-javascript/',
+                url: 'https://maddevs.io/insights/blog/functional-programming-principles-in-javascript/',
+                embed_url: 'https://maddevs.io/insights/blog/functional-programming-principles-in-javascript/',
                 type: 'link',
                 version: '1.0',
                 title: 'Functional Programming principles in JavaScript | Mad Devs Blog',
@@ -7319,7 +7319,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/c94b995a-7e4c-4086-af60-f546128e6b15_5.png?auto=compress,format&rect=0,1,1400,759&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/functional-programming-principles-in-javascript/"><h1>Functional Programming principles in JavaScript | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/c94b995a-7e4c-4086-af60-f546128e6b15_5.png?auto=compress,format&rect=0,1,1400,759&w=983&h=533"><p>Functional Programming is the standard of building modern JavaScript applications. Concepts from this article will allow you to take advantage of Functional Programming and write cleaner code.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/functional-programming-principles-in-javascript/"><h1>Functional Programming principles in JavaScript | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/c94b995a-7e4c-4086-af60-f546128e6b15_5.png?auto=compress,format&rect=0,1,1400,759&w=983&h=533"><p>Functional Programming is the standard of building modern JavaScript applications. Concepts from this article will allow you to take advantage of Functional Programming and write cleaner code.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -8529,7 +8529,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/a-bit-about-event-delegation-in-react/"\n      },\n "headline": "A Bit about Event Delegation in React",\n "alternativeHeadline": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. ",\n "image":\n"https://images.prismic.io/superpupertest/83f9d80e-d90e-4694-bfca-9633adf0bb76_1_wcAi1bMW4Xrj57-rbiE7hg.png?auto=compress,format",\n "editor": "Alexandr Vishnyakov", \n "genre": "Frontend development", \n "keywords": "delegation", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/a-bit-about-event-delegation-in-react/",\n "datePublished": "2019-09-30",\n "dateCreated": "2019-09-30" ,\n "dateModified": "2021-02-12",\n "description": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS.  ",\n "articleBody": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. \nUnfortunately, in our modern world, there is no way to delve into the little things and how frameworks work.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Alexandr "\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-react/"\n      },\n "headline": "A Bit about Event Delegation in React",\n "alternativeHeadline": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. ",\n "image":\n"https://images.prismic.io/superpupertest/83f9d80e-d90e-4694-bfca-9633adf0bb76_1_wcAi1bMW4Xrj57-rbiE7hg.png?auto=compress,format",\n "editor": "Alexandr Vishnyakov", \n "genre": "Frontend development", \n "keywords": "delegation", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-react/",\n "datePublished": "2019-09-30",\n "dateCreated": "2019-09-30" ,\n "dateModified": "2021-02-12",\n "description": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS.  ",\n "articleBody": "In this article, we will consider event delegation and what it is for. How it can help you in understanding the mechanisms of the framework, and maybe even in improving your decisions in pure JS. \nUnfortunately, in our modern world, there is no way to delve into the little things and how frameworks work.\n",\n   "author": {\n    "@type": "Person",\n    "name": "Alexandr "\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -8575,7 +8575,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/amazing-template-for-react-application/',
+                      url: 'https://maddevs.io/insights/blog/amazing-template-for-react-application/',
                     },
                   },
                 ],
@@ -8589,8 +8589,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/a-bit-about-event-delegation-in-pure-js/',
-                embed_url: 'https://maddevs.io/blog/a-bit-about-event-delegation-in-pure-js/',
+                url: 'https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-pure-js/',
+                embed_url: 'https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-pure-js/',
                 type: 'link',
                 version: '1.0',
                 title: 'A Bit about Event Delegation in Pure JS | Mad Devs Blog ',
@@ -8602,7 +8602,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/ee76dea8-07c8-4c08-ab9f-5f337a1fd0b0_1_d28fyQqH7yGrZ6NvNpm2jA.png?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/a-bit-about-event-delegation-in-pure-js/"><h1>A Bit about Event Delegation in Pure JS | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/ee76dea8-07c8-4c08-ab9f-5f337a1fd0b0_1_d28fyQqH7yGrZ6NvNpm2jA.png?auto=compress,format"><p>Event Delegation in pure JS: organization of centralized event processing and concatenation of all the code in one place, with dividing into modules.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/a-bit-about-event-delegation-in-pure-js/"><h1>A Bit about Event Delegation in Pure JS | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/ee76dea8-07c8-4c08-ab9f-5f337a1fd0b0_1_d28fyQqH7yGrZ6NvNpm2jA.png?auto=compress,format"><p>Event Delegation in pure JS: organization of centralized event processing and concatenation of all the code in one place, with dividing into modules.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -9347,8 +9347,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/best-architecture-for-the-react-project/',
-                embed_url: 'https://maddevs.io/blog/best-architecture-for-the-react-project/',
+                url: 'https://maddevs.io/insights/blog/best-architecture-for-the-react-project/',
+                embed_url: 'https://maddevs.io/insights/blog/best-architecture-for-the-react-project/',
                 type: 'link',
                 version: '1.0',
                 title: 'Best Architecture for the React Project | Mad Devs Blog',
@@ -9360,7 +9360,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format&rect=0,390,6240,3383&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/best-architecture-for-the-react-project/"><h1>Best Architecture for the React Project | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format&rect=0,390,6240,3383&w=983&h=533"><p>What the arc.js is - the advantages and disadvantages of arc.js architecture. Solving problems related to the implementation of arc.js architecture.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/best-architecture-for-the-react-project/"><h1>Best Architecture for the React Project | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format&rect=0,390,6240,3383&w=983&h=533"><p>What the arc.js is - the advantages and disadvantages of arc.js architecture. Solving problems related to the implementation of arc.js architecture.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -9558,7 +9558,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/"\n      },\n "headline": "Top 3 Best CI for Your JS Projects with Puppeteer Tests",\n "alternativeHeadline": "Continuous Integrationis a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily -- leading to multiple integrations per day. ",\n "image":\n"https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Backend development", \n "keywords": " Circle CI, Cirrus CI, Travis-CI", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/best-ci-for-js-projects-with-puppeteer-tests/",\n "datePublished": "2019-07-19",\n "dateCreated": "2019-07-19,",\n "dateModified": "2021-02-12",\n "description": "Comparison of Circle, Cirrus, and Travis CIs\' for JS Projects with Puppeteer Tests. The speed of work, the complexity of configuration, and other differences of these CIs ",\n "articleBody": "For the first time, it was conceptualized and proposed by Grady Booch in 1991. It is one of the main elements of extreme programming practice. I already have such a project, on which I tried the following three CIs: Circle CI, Cirrus CI, Travis-CI. And so, in descending order, I will talk about each of this CIs in the list. I\'ll tell you about the speed of work, the complexity of configuration and other differences.\n ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander "\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/"\n      },\n "headline": "Top 3 Best CI for Your JS Projects with Puppeteer Tests",\n "alternativeHeadline": "Continuous Integrationis a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily -- leading to multiple integrations per day. ",\n "image":\n"https://images.prismic.io/superpupertest/f0ac1d09-037c-4d09-8599-13dd754d2b13_1_MccluIYzshmdLz4cM_HsEg.png?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Backend development", \n "keywords": " Circle CI, Cirrus CI, Travis-CI", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/best-ci-for-js-projects-with-puppeteer-tests/",\n "datePublished": "2019-07-19",\n "dateCreated": "2019-07-19,",\n "dateModified": "2021-02-12",\n "description": "Comparison of Circle, Cirrus, and Travis CIs\' for JS Projects with Puppeteer Tests. The speed of work, the complexity of configuration, and other differences of these CIs ",\n "articleBody": "For the first time, it was conceptualized and proposed by Grady Booch in 1991. It is one of the main elements of extreme programming practice. I already have such a project, on which I tried the following three CIs: Circle CI, Cirrus CI, Travis-CI. And so, in descending order, I will talk about each of this CIs in the list. I\'ll tell you about the speed of work, the complexity of configuration and other differences.\n ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander "\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -11301,8 +11301,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/',
-                embed_url: 'https://maddevs.io/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/',
+                url: 'https://maddevs.io/insights/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/',
+                embed_url: 'https://maddevs.io/insights/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/',
                 type: 'link',
                 version: '1.0',
                 title: 'The Nuances of Testing in Pair Cucumber.js + Puppeteer | Mad Devs Blog ',
@@ -11314,7 +11314,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/e62b18f4-e98f-4e1c-ad9b-b6633d3ea7d9_Frame+1372.jpg?auto=compress,format&rect=149,0,823,446&w=983&h=533',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/"><h1>The Nuances of Testing in Pair Cucumber.js + Puppeteer | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/e62b18f4-e98f-4e1c-ad9b-b6633d3ea7d9_Frame+1372.jpg?auto=compress,format&rect=149,0,823,446&w=983&h=533"><p>How to save time when you write tests with Cucumber.js and Puppeteer. Practical tips that I learned from my OSS project.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/"><h1>The Nuances of Testing in Pair Cucumber.js + Puppeteer | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/e62b18f4-e98f-4e1c-ad9b-b6633d3ea7d9_Frame+1372.jpg?auto=compress,format&rect=149,0,823,446&w=983&h=533"><p>How to save time when you write tests with Cucumber.js and Puppeteer. Practical tips that I learned from my OSS project.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -11535,7 +11535,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/mad-fake-slack/"\n      },\n "headline": "Mad-Fake-Slack",\n "alternativeHeadline": "Mad-fake-slack is primarily a tool for testing your bot, without using real slack servers. In the future, it will be a powerful tool for integration and e2e tests. ",\n "image":\n"https://images.prismic.io/superpupertest/dd6df0bd-221c-4392-9eb1-4d782d6e2ddd_1_Kw5pRjj9dpQIDye2-0sjAQ.jpeg?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Backend development", \n "keywords": " Mad-fake-slack, testing bot", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/mad-fake-slack/",\n "datePublished": "2019-07-03",\n "dateCreated": "2019-07-03,",\n "dateModified": "2021-02-12",\n "description": "Mad Devs created a powerful tool for integration and e2e tests to test your bots. This tool helps you to test your bot locally without using real servers",\n "articleBody": "In this world, much is changing, and flying at a tremendous speed and client libraries, instant messengers are often updated by developers. Any copy of the real service will lag behind the real implementation.\nAnd in this case, it all depends on the team, supporting the fake service. But if the company developing the service follow the principle of backward compatibility, then in principle everything should be fine.\n ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander "\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/mad-fake-slack/"\n      },\n "headline": "Mad-Fake-Slack",\n "alternativeHeadline": "Mad-fake-slack is primarily a tool for testing your bot, without using real slack servers. In the future, it will be a powerful tool for integration and e2e tests. ",\n "image":\n"https://images.prismic.io/superpupertest/dd6df0bd-221c-4392-9eb1-4d782d6e2ddd_1_Kw5pRjj9dpQIDye2-0sjAQ.jpeg?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Backend development", \n "keywords": " Mad-fake-slack, testing bot", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/mad-fake-slack/",\n "datePublished": "2019-07-03",\n "dateCreated": "2019-07-03,",\n "dateModified": "2021-02-12",\n "description": "Mad Devs created a powerful tool for integration and e2e tests to test your bots. This tool helps you to test your bot locally without using real servers",\n "articleBody": "In this world, much is changing, and flying at a tremendous speed and client libraries, instant messengers are often updated by developers. Any copy of the real service will lag behind the real implementation.\nAnd in this case, it all depends on the team, supporting the fake service. But if the company developing the service follow the principle of backward compatibility, then in principle everything should be fine.\n ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander "\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -12581,8 +12581,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/meet-glitch-com/',
-                embed_url: 'https://maddevs.io/blog/meet-glitch-com/',
+                url: 'https://maddevs.io/insights/blog/meet-glitch-com/',
+                embed_url: 'https://maddevs.io/insights/blog/meet-glitch-com/',
                 type: 'link',
                 version: '1.0',
                 title: 'Meet Glitch.com 🥳 🤟🏻 | Mad Devs Blog ',
@@ -12594,7 +12594,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/f933a63e-e224-4a7b-98de-4d2d68137806_Frame+1373.jpg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/meet-glitch-com/"><h1>Meet Glitch.com 🥳 🤟🏻 | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/f933a63e-e224-4a7b-98de-4d2d68137806_Frame+1373.jpg?auto=compress,format"><p>Process for delivering your node.js app with Glitch.com. The Glitch project review and application experience. </p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/meet-glitch-com/"><h1>Meet Glitch.com 🥳 🤟🏻 | Mad Devs Blog </h1><img src="https://images.prismic.io/superpupertest/f933a63e-e224-4a7b-98de-4d2d68137806_Frame+1373.jpg?auto=compress,format"><p>Process for delivering your node.js app with Glitch.com. The Glitch project review and application experience. </p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -13123,7 +13123,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "“Comedian” standup chatbot preview: how remote standups can help your team",\n "alternativeHeadline": "Why writing daily reports is important and how we monitor this process with a Comedian chatbot. How to implement this bot for your business.",\n "image": "https://images.prismic.io/superpupertest/d765c67a-821c-4f88-abf7-7a6822df8ede_1_bNuvXMgfV9hkVO-U-gQQ2g.png?auto=compress,format",\n "author": "Anatoliy Fedorenko", \n "editor": "Anatoliy Fedorenko", \n "genre": "Slack bot", \n "keywords": "tand-up, standup, agile, scrum, slack, bot, app", \n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs LLC",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/blog/comedian-slack-standup-bot",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/blog/comedian-slack-standup-bot"\n  },\n "datePublished": "2018-10-01",\n "dateCreated": "2018-10-01",\n "dateModified": "2020-09-20",\n "description": "How remote standups can help your team",\n "articleBody": "Any business always strives to effectively use the time and skills of its employees since it directly affects the profit. Therefore, a business intends to solve employees’ problems and encourages their growth.\nOne of the biggest issues is that problems are often solved either by developers themselves (which is a bad practice) or by Project Managers(PMs) /Team Leads who are usually involved in many projects and do not have enough time to address all problems. The solution is effective communication within a team through remote standup meetings. So, what is a remote standup, and why it is so useful?"\n }\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "Article",\n "headline": "“Comedian” standup chatbot preview: how remote standups can help your team",\n "alternativeHeadline": "Why writing daily reports is important and how we monitor this process with a Comedian chatbot. How to implement this bot for your business.",\n "image": "https://images.prismic.io/superpupertest/d765c67a-821c-4f88-abf7-7a6822df8ede_1_bNuvXMgfV9hkVO-U-gQQ2g.png?auto=compress,format",\n "author": "Anatoliy Fedorenko", \n "editor": "Anatoliy Fedorenko", \n "genre": "Slack bot", \n "keywords": "tand-up, standup, agile, scrum, slack, bot, app", \n"publisher": {\n    "@type": "Organization",\n    "name": "Mad Devs LLC",\n    "logo": {\n      "@type": "ImageObject",\n      "url": "https://maddevs.io/Open-Graph.png"\n    }\n  },\n "url": "https://maddevs.io/insights/blog/comedian-slack-standup-bot",\n   "mainEntityOfPage": {\n    "@type": "WebPage",\n    "@id": "https://maddevs.io/insights/blog/comedian-slack-standup-bot"\n  },\n "datePublished": "2018-10-01",\n "dateCreated": "2018-10-01",\n "dateModified": "2020-09-20",\n "description": "How remote standups can help your team",\n "articleBody": "Any business always strives to effectively use the time and skills of its employees since it directly affects the profit. Therefore, a business intends to solve employees’ problems and encourages their growth.\nOne of the biggest issues is that problems are often solved either by developers themselves (which is a bad practice) or by Project Managers(PMs) /Team Leads who are usually involved in many projects and do not have enough time to address all problems. The solution is effective communication within a team through remote standup meetings. So, what is a remote standup, and why it is so useful?"\n }\n</script>',
               spans: [],
             },
           ],
@@ -13492,7 +13492,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/blog/comedian-slack-standup-bot/#first-section',
+                      url: 'https://maddevs.io/insights/blog/comedian-slack-standup-bot/#first-section',
                     },
                   },
                 ],
@@ -13733,7 +13733,7 @@ export default [
           single_snippet: [
             {
               type: 'preformatted',
-              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/blog/best-architecture-for-the-react-project/"\n      },\n "headline": "Best Architecture for the React Project",\n "alternativeHeadline": "Brief description of arc.js architecture\n",\n "image":\n"https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Backend development", \n "keywords": " arc.js architecture\n", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/blog/best-architecture-for-the-react-project/",\n "datePublished": "2017-07-06",\n "dateCreated": "2017-07-06,",\n "dateModified": "2021-02-10",\n "description": " What the arc.js is - the advantages and disadvantages of arc.js architecture. Solving problems related to the implementation of arc.js architecture. ",\n "articleBody": "Brief description of arc.js architecture\nWhat is the arc.js approach? Firstly, it is atom approach to the design of the components.\nAtoms are the smallest components that are responsible for one specific function. For example, button with label, text field, spinner, etc. \n\n ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander"\n  }\n },\n</script>',
+              text: '<script type="application/ld+json">\n{ "@context": "https://schema.org", \n "@type": "BlogPosting",\n "mainEntityOfPage": {\n         "@type": "WebPage",\n         "@id": "https://maddevs.io/insights/blog/best-architecture-for-the-react-project/"\n      },\n "headline": "Best Architecture for the React Project",\n "alternativeHeadline": "Brief description of arc.js architecture\n",\n "image":\n"https://images.prismic.io/superpupertest/0af584bc-4da6-469d-954a-ae4f2d6b7e37_react.jpg?auto=compress,format",\n "editor": "Alexander Vishnyakov", \n "genre": "Backend development", \n "keywords": " arc.js architecture\n", \n "publisher": {\n   },\n "url":\n"https://maddevs.io/insights/blog/best-architecture-for-the-react-project/",\n "datePublished": "2017-07-06",\n "dateCreated": "2017-07-06,",\n "dateModified": "2021-02-10",\n "description": " What the arc.js is - the advantages and disadvantages of arc.js architecture. Solving problems related to the implementation of arc.js architecture. ",\n "articleBody": "Brief description of arc.js architecture\nWhat is the arc.js approach? Firstly, it is atom approach to the design of the components.\nAtoms are the smallest components that are responsible for one specific function. For example, button with label, text field, spinner, etc. \n\n ",\n   "author": {\n    "@type": "Person",\n    "name": "Alexander"\n  }\n },\n</script>',
               spans: [],
             },
           ],
@@ -13994,8 +13994,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/blog/amazing-template-for-react-application/',
-                embed_url: 'https://maddevs.io/blog/amazing-template-for-react-application/',
+                url: 'https://maddevs.io/insights/blog/amazing-template-for-react-application/',
+                embed_url: 'https://maddevs.io/insights/blog/amazing-template-for-react-application/',
                 type: 'link',
                 version: '1.0',
                 title: 'An Amazing Template for Your React Application | Mad Devs Blog',
@@ -14007,7 +14007,7 @@ export default [
                 thumbnail_url: 'https://images.prismic.io/superpupertest/4fa5af62-98e9-4beb-9fa4-aee11b5cc686_An+amazing+template+for+your+React+application.jpg?auto=compress,format',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/blog/amazing-template-for-react-application/"><h1>An Amazing Template for Your React Application | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/4fa5af62-98e9-4beb-9fa4-aee11b5cc686_An+amazing+template+for+your+React+application.jpg?auto=compress,format"><p>This article shows you the template that we actively use when creating new React application projects. The template includes everything you need and describes some additional useful things such as typescript and cypress.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/insights/blog/amazing-template-for-react-application/"><h1>An Amazing Template for Your React Application | Mad Devs Blog</h1><img src="https://images.prismic.io/superpupertest/4fa5af62-98e9-4beb-9fa4-aee11b5cc686_An+amazing+template+for+your+React+application.jpg?auto=compress,format"><p>This article shows you the template that we actively use when creating new React application projects. The template includes everything you need and describes some additional useful things such as typescript and cypress.</p></a></div>',
               },
               embed_title: 'An amazing template for your React application',
               embed_description: 'This article shows you the template that we actively use when creating new React application projects. The template includes everything you need and describes some additional useful things such as typescript and cypress.',

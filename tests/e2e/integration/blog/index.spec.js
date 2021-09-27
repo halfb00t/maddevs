@@ -2,7 +2,7 @@ describe('Blog page', () => {
   const img = 'blog.png'
 
   it('Meta tags has a correct image URL', () => {
-    cy.visit('/blog/')
+    cy.visit('/insights/blog/')
 
     cy.get('head meta[property="og:image"]').should('have.attr', 'content', `https://maddevs.io/${img}`)
     cy.get('head meta[property="twitter:image:src"]').should('have.attr', 'content', `https://maddevs.io/${img}`)

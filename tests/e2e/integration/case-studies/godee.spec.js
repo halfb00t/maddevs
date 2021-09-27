@@ -2,7 +2,7 @@ describe('Godee case page', () => {
   const img = 'godee.png'
 
   it('Meta tags has a correct image URL', () => {
-    cy.visit('/case-studies/godee/')
+    cy.visit('/clients/case-studies/godee/')
 
     cy.get('head meta[property="og:image"]').should('have.attr', 'content', `https://maddevs.io/${img}`)
     cy.get('head meta[property="twitter:image:src"]').should('have.attr', 'content', `https://maddevs.io/${img}`)
