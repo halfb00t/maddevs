@@ -138,14 +138,14 @@ export default {
   &__content {
     display: flex;
     align-items: flex-start;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1180px) {
       flex-direction: column-reverse;
     }
   }
 
   &__text {
     margin-right: 16px;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1180px) {
       margin-right: 0;
       margin-top: 20px;
     }
@@ -169,7 +169,7 @@ export default {
     width: 260px;
     height: auto;
     object-fit: cover;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1180px) {
       width: 100%;
       height: auto;
     }
@@ -182,12 +182,12 @@ export default {
     justify-content: space-between;
     max-width: 100%;
     overflow: hidden;
-    @media screen and (max-width: 1360px) {
+    @media screen and (max-width: 1180px) {
       flex-direction: column;
     }
     &-tag {
       margin-left: 20px;
-      @media screen and (max-width: 1360px) {
+      @media screen and (max-width: 1180px) {
         margin-left: 0;
         margin-top: 20px;
       }

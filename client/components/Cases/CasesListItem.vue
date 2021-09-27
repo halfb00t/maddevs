@@ -164,7 +164,6 @@ export default {
     padding: 40px;
     box-sizing: border-box;
     text-decoration: none;
-    background-color: transparent;
     border: 0;
     text-align: left;
 

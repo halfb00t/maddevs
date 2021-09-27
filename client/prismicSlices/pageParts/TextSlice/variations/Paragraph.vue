@@ -108,9 +108,14 @@ export default {
         line-height: 35px;
       }
 
+      &--28-px {
+        @include font('Inter', 28px, 400);
+        line-height: 40px;
+      }
+
       &--32-px {
         @include font('Inter', 32px, 400);
-        line-height: 44px;
+        line-height: 40px;
       }
 
       &--40-px {

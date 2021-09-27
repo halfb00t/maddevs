@@ -31,8 +31,12 @@ export default {
   max-width: 486px;
   margin-bottom: 72px;
 
+  @media screen and (max-width: 1070px) {
+    min-height: 300px;
+  }
   @media screen and (max-width: 1024px) {
     max-width: 100%;
+    min-height: auto;
   }
 
   &__title {
@@ -42,6 +46,7 @@ export default {
 
     @media screen and (max-width: 1024px) {
       @include font('Inter', 30px, 700);
+      margin-bottom: 16px;
     }
 
     @media screen and (max-width: 768px) {

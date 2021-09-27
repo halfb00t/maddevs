@@ -29,20 +29,22 @@
           :key="label"
           class="header-mobile-menu__route"
         >
-          <NuxtLink
-            v-if="!extractMenuLink(link).isExternalLink"
-            :to="extractMenuLink(link).url"
-            @click.native="goToPage"
-          >
-            {{ label }}
-          </NuxtLink>
-          <a
-            v-else
-            :href="extractMenuLink(link).url"
-            :target="extractMenuLink(link).target"
-          >
-            {{ label }}
-          </a>
+          <div v-if="label">
+            <NuxtLink
+              v-if="!extractMenuLink(link).isExternalLink"
+              :to="extractMenuLink(link).url"
+              @click.native="goToPage"
+            >
+              {{ label }}
+            </NuxtLink>
+            <a
+              v-else
+              :href="extractMenuLink(link).url"
+              :target="extractMenuLink(link).target"
+            >
+              {{ label }}
+            </a>
+          </div>
         </li>
       </ul>
     </transition>

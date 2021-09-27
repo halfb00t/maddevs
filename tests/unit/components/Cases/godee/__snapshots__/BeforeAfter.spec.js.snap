@@ -26,17 +26,17 @@ exports[`BeforeAfter component should render correctly 1`] = `
           >
             <img
               alt="Image for compare"
+              data-src="img.jpg"
               height="578.47"
               slot="first"
-              src="img.jpg"
               width="1000"
             />
              
             <img
               alt="Image for compare"
+              data-src="img.jpg"
               height="578.47"
               slot="second"
-              src="img.jpg"
               width="1000"
             />
           </img-comparison-slider>

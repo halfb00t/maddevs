@@ -67,9 +67,11 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
+
     @media screen and (max-width: 1260px) {
       grid-gap: 24px;
     }
+
     @media screen and (max-width: 1024px) {
       grid-template-columns: 1fr;
     }
@@ -79,16 +81,25 @@ export default {
 .card-item {
   display: block;
   box-sizing: border-box;
-  padding: 80px;
-  padding-bottom: 96px;
+  padding: 80px 100px 80px 80px;
   color: $text-color--white-primary;
   background-color: $bgcolor--black-pale;
+
   @media screen and (max-width: 1024px) {
-    padding: 32px;
+    padding-top: 60px;
+    padding-right: 83px;
+    padding-left: 60px;
+  }
+
+  @media screen and (max-width: 580px) {
+    padding-top: 32px;
+    padding-right: 36px;
+    padding-left: 32px;
   }
 
   &--full-width {
     grid-column: auto/span 2;
+
     @media screen and (max-width: 1024px) {
       grid-column: auto;
     }
@@ -103,12 +114,14 @@ export default {
   &--text-center {
     .card-item__title {
       text-align: center;
+
       @media screen and (max-width: 1024px) {
         text-align: left;
       }
     }
     /deep/ p {
       text-align: center;
+
       @media screen and (max-width: 1024px) {
         text-align: left;
       }
@@ -120,7 +133,8 @@ export default {
     line-height: 65px;
     letter-spacing: -0.04em;
     max-width: 1080px;
-    @media screen and (max-width: 1260px) {
+
+    @media screen and (max-width: 580px) {
       font-size: 30px;
       line-height: 37px;
     }
@@ -132,7 +146,13 @@ export default {
     letter-spacing: -0.013em;
     word-break: break-word;
     max-width: 1080px;
+
     @media screen and (max-width: 1260px) {
+      font-size: 24px;
+      line-height: 38px;
+    }
+
+    @media screen and (max-width: 580px) {
       font-size: 20px;
       line-height: 30px;
     }
@@ -144,6 +164,7 @@ export default {
     /deep/ li {
       font-weight: 400;
       margin-top: 7px;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -160,6 +181,7 @@ export default {
           background-color: $border-color--red;
           vertical-align: top;
           margin: 18px 12px 0 0;
+
           @media screen and (max-width: 1260px) {
             margin-top: 14px;
           }

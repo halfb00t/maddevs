@@ -25,6 +25,7 @@ $spaces: (
   '10': 10px,
   '12': 12px,
   '16': 16px,
+  '21': 21px,
   '24': 24px,
   '28': 28px,
   '32': 32px,
@@ -32,6 +33,7 @@ $spaces: (
   '38': 38px,
   '42': 42px,
   '48': 48px,
+  '50': 50px,
   '56': 56px,
   '60': 60px,
   '66': 66px,
@@ -89,12 +91,15 @@ $backgroundColors: (
   'blue-itc-darken': #132e50,
   'blue-darkened':#3a52d4,
   'blue-dark':#23338b,
+  'blue-grey':#08537e,
   'gray-lightened':#f3f3f3,
   'gray': #404143,
   'gray-light':#fbfbfb,
   'gray-darken': #eaeaea,
   'yellow': #ffd31b,
   'yellow-dark':#fec21f,
+  'white':rgba(255, 255, 255, 0.2),
+
 );
 
 // loop, to style Legends

@@ -11,9 +11,10 @@ exports[`CaseHeader component should render correctly 1`] = `
     picturefolder=""
     width="100"
   >
-    <div
+    <img
+      alt="case video fallback"
       class="case_main-video_fallback"
-      style="background-image: url();"
+      data-src=""
     />
      
     <video
