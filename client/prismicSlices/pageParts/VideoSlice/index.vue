@@ -301,7 +301,6 @@ export default {
       letter-spacing: -0.04em;
       font-weight: bold;
       line-height: 100%;
-      margin: 16px 0;
 
       @media screen and (max-width: 375px) {
         font-size: 32px;
