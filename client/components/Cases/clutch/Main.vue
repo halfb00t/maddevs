@@ -8,6 +8,7 @@
     <DataAndPasswords />
     <WidgetSpeed />
     <DataProcessed />
+    <DevOps />
   </section>
 </template>
 
@@ -21,10 +22,12 @@ import TechChallenges from '@/components/Cases/clutch/TechChallenges'
 import DataAndPasswords from '@/components/Cases/clutch/DataAndPasswords'
 import WidgetSpeed from '@/components/Cases/clutch/WidgetSpeed'
 import DataProcessed from '@/components/Cases/clutch/DataProcessed'
+import DevOps from '@/components/Cases/clutch/DevOps'
 
 export default {
   name: 'Main',
   components: {
+    DevOps,
     DataProcessed,
     WidgetSpeed,
     DataAndPasswords,
