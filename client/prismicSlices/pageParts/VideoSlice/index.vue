@@ -56,6 +56,9 @@
           <h2>
             {{ title }}
           </h2>
+          <p>
+            {{ description }}
+          </p>
           <NuxtLink :to="link">
             Explore
           </NuxtLink>
@@ -99,6 +102,7 @@ export default {
       alt: this.slice?.primary?.alt,
       colorTheme: this.slice?.primary?.colorTheme,
       animation: this.slice?.primary?.animation,
+      description: this.slice?.primary?.description,
     }
   },
 

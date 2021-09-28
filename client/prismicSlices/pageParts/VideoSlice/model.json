@@ -47,6 +47,13 @@
           },
           "type": "Text"
         },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
         "width": {
           "config": {
             "label": "Width",
