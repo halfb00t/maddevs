@@ -74,9 +74,12 @@
             </TextParagraph>
           </div>
           <div class="case_cards-item-button">
-            <TextParagraph class="case_cards-item-button-text">
+            <NuxtLink
+              to="/"
+              class="case_cards-item-button-text"
+            >
               Visit Website
-            </TextParagraph>
+            </NuxtLink>
           </div>
         </div>
         <div class="case_cards-item">

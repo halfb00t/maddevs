@@ -142,13 +142,14 @@ exports[`DevOps component should render correctly 1`] = `
           <div
             class="case_cards-item-button"
           >
-            <p
-              class="case_paragraph case_cards-item-button-text"
+            <nuxtlink
+              class="case_cards-item-button-text"
+              to="/"
             >
               
             Visit Website
           
-            </p>
+            </nuxtlink>
           </div>
         </div>
          

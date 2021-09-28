@@ -84,8 +84,8 @@ export default {
 
   head() {
     return buildHead({
-      ...getMetadata('citycam'),
-      image: 'https://maddevs.io/citycam.png',
+      ...getMetadata('clutch'),
+      image: 'https://maddevs.io/clutch.png',
     })
   },
 }

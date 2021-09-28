@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <blockquote
+      alt="Stan Misiurev"
+      class="case_blockquote-author m-auto case_text-align-center m-72_bottom p-48_top media-m-48_bottom"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom"
+    >
+      
+    The website's performance and reliability have improved as a result of the efforts. Mad Devs has integrated
+    smoothly with the partner's team and helps them build more tools. They maintain effective communication and
+    implement an efficient project management style.
+   
+      <div
+        class="case_blockquote-author__author-info m-24_top"
+      >
+        <div
+          class="case_blockquote-author__photo m-auto"
+        >
+          <picture-stub
+            alt="Stan Misiurev"
+            extension="png"
+            file="stan-misiurev"
+            folder="clutch"
+            height="71"
+            width="71"
+          />
+        </div>
+         
+        <p
+          class="case_paragraph case_blockquote-author__name"
+        >
+          
+      Stan Misiurev
+    
+        </p>
+         
+        <p
+          class="case_blockquote-author__position"
+        >
+          
+      Head of Technology Clutch
+    
+        </p>
+      </div>
+    </blockquote>
+  </section>
+</div>
+`;

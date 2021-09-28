@@ -61,7 +61,7 @@ import Picture from '@/components/Cases/shared/Picture'
 import Card from '@/components/Cases/shared/Card'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
-import { idTechChallenges, techChallenges } from '@/data/clutchCase'
+import { idTechChallenges, techChallenges } from '@/data/caseClutch'
 
 export default {
   name: 'TechChallenges',
