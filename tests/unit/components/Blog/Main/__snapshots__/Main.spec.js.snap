@@ -93,17 +93,7 @@ exports[`Main component should render correctly 1`] = `
       </div>
     </div>
      
-    <feature
-      flag="customerUniversitySection"
-    >
-      <customeruniversitysection-stub />
-    </feature>
-     
-    <feature
-      flag="newCustomerUniversitySection"
-    >
-      <newcustomeruniversitysection-stub />
-    </feature>
+    <newcustomeruniversitysection-stub />
      
     <div
       class="filtered-posts"
