@@ -8,4 +8,5 @@ export const config = {
   newCustomerUniversitySection: ['development', 'staging'],
   customerUniversitySection: ['production'],
   headerV2: ['development', 'staging'],
+  clutchCase: ['development', 'staging'],
 }

@@ -3,7 +3,7 @@
 exports[`StatisticsContainer component should render correctly 1`] = `
 <div>
   <div
-    class="case_statistics-container"
+    class="case_statistics-container case_statistics-container-3"
   >
     test
   </div>

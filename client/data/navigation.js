@@ -65,27 +65,27 @@ export const headerNavigation = [
   },
   {
     title: 'Case Studies',
-    link: '/case-studies/',
+    link: '/clients/case-studies/',
     names: [],
   },
   {
     title: 'Delivery models',
-    link: '/delivery-models/',
+    link: '/approach/delivery-models/',
     names: [],
   },
   {
     title: 'Open Source',
-    link: '/open-source/',
+    link: '/insights/open-source/',
     names: [],
   },
   {
     title: 'Careers',
-    link: '/careers/',
+    link: '/about/careers/',
     names: ['careers___ru', 'careers___en'],
   },
   {
     title: 'Blog',
-    link: '/blog/',
+    link: '/insights/blog/',
     names: [],
   },
 ]
@@ -101,7 +101,7 @@ export const footerNavigation = [
   },
   {
     title: 'Privacy Policy',
-    link: '/privacy/',
+    link: '/approach/privacy/',
   },
   {
     title: 'FAQ',

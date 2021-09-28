@@ -27,9 +27,10 @@
     <IssuesAndSolutionCards />
     <section class="container_full case_video-wrapper m-60_top media-m-24_top m-96_bottom media-m-48_bottom">
       <iframe
+        v-lazy-load
         width="1440"
         height="809"
-        src="https://www.youtube.com/embed/_XCRbXmTUwI"
+        data-src="https://www.youtube.com/embed/_XCRbXmTUwI"
         frameborder="0"
         allowfullscreen
       />
@@ -49,7 +50,7 @@
     <StableScalableSolution />
     <Team />
     <CaseFooter
-      link="/case-studies/namba-food/"
+      link="/clients/case-studies/namba-food/"
       class-name="namba-food"
     >
       <img

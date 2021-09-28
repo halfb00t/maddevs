@@ -8,10 +8,11 @@ exports[`ParallaxImage component should render correctly 1`] = `
     <div
       class="case_parallax-wrapper"
     >
-      <div
+      <img
+        alt="Issues and solution"
         class="case_parallax"
+        data-src="img.jpg"
         data-testid="test-case_parallax-image"
-        style="background-image: url(img.jpg);"
       />
     </div>
   </div>

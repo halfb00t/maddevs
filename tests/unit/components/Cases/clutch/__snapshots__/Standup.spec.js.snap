@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Standup component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container_regular"
+    >
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Automated daily standups
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      Comedian is a Slack bot that enables all stakeholders to track the developers’ daily progress on tasks. Every
+      day, Mad Devs team members provide written answers to the following basic questions:
+    
+      </p>
+       
+      <p
+        class="case_paragraph case_standup-question m-12_bottom"
+      >
+        
+      What did I do yesterday?
+    
+      </p>
+       
+      <p
+        class="case_paragraph case_standup-question m-12_bottom"
+      >
+        
+      What will I do today?
+    
+      </p>
+       
+      <p
+        class="case_paragraph case_standup-question m-24_bottom"
+      >
+        
+      What problems do I have?
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      This solution enables Clutch.co to clearly understand what each team member is doing and quickly solve emerging
+      problems.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_middle case_img-wrap m-48_bottom"
+    >
+      <picture-stub
+        alt="GoDee: Safari Browser Top Bar White."
+        background="true"
+        extension="jpg"
+        file="safari-top-bar-white"
+        folder="common"
+        height="16.45"
+        lazy="true"
+        width="1026"
+      />
+       
+      <picture-stub
+        alt="Standup"
+        extension="png"
+        file="standup"
+        folder="clutch"
+        height="554"
+        lazy="true"
+        width="1026"
+      />
+    </div>
+     
+    <div
+      class="container_regular"
+    >
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Objectives & Key Results
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-12_bottom"
+      >
+        
+      CObjectives & Key Results is a method that unites everyone and puts the focus on achieving the desired result.
+      Regularly, project managers broadcast OKRs during weekly meetings and within automatically scheduled Slack
+      notifications.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      OKRs show whether the team is achieving established goals on time and ensure frequent evaluations of progress.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full background-color-blue-grey p-56_top p-56_bottom media-p-32_top media-p-32_bottom m-48_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <h4
+          class="case_title m-21_bottom media-m-10_bottom"
+        >
+          
+        Clutch Go Layer
+      
+        </h4>
+         
+        <div
+          class="case_cards-body"
+        >
+          <div
+            class="case_card-body"
+          >
+            <div
+              class="case_card-body-header-1"
+            >
+              
+            OKR1: Correct stats of the data below production
+          
+            </div>
+             
+            <div>
+              
+            Status (Done / In Progress, %)
+          
+            </div>
+          </div>
+           
+          <div
+            class="case_card-body"
+          >
+            <div
+              class="case_card-body-1"
+            >
+              <span>
+                KR 1
+              </span>
+               First Contentful Paint less 1 sec
+          
+            </div>
+             
+            <div
+              class="case_card-body-2"
+            >
+              <span>
+                Done
+              </span>
+            </div>
+          </div>
+           
+          <div
+            class="case_card-body"
+          >
+            <div
+              class="case_card-body-1"
+            >
+              <span>
+                KR 2
+              </span>
+               Speed Index ~ 1 sec
+          
+            </div>
+             
+            <div
+              class="case_card-body-2"
+            >
+              <span>
+                Done
+              </span>
+            </div>
+          </div>
+           
+          <div
+            class="case_card-body"
+          >
+            <div
+              class="case_card-body-1"
+            >
+              <span>
+                KR 3
+              </span>
+               Last Painted Hero ~ 1sec
+          
+            </div>
+             
+            <div
+              class="case_card-body-2"
+            >
+              <span>
+                Done
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="container_regular m-96_bottom media-m-48_bottom"
+    >
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Reports
+    
+      </h3>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      Accurate reporting is a crucial element in the fostering of quality communication in the outstaffing model.
+      In the Clutch.co project, we provide sprint demos and monthly reports. The monthly report is essentially
+      a document with a detailed description of all tasks accomplished within a specified timeframe. It also describes
+      the roadmap. Sprint reports describe workload per person and their story points, velocity and sprint burnout,
+      number of tests, and the potential risks that might lower the team’s productivity levels.
+    
+      </p>
+    </div>
+  </section>
+</div>
+`;

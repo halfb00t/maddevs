@@ -16,7 +16,7 @@ exports[`UIFormCheckboxes should render correctly with id prop 1`] = `
       Mad Devs’
       
         <a
-          href="/privacy/"
+          href="/approach/privacy/"
           target="_blank"
         >
           Privacy Policy
@@ -80,7 +80,7 @@ exports[`UIFormCheckboxes should render correctly with slot 1`] = `
       Mad Devs’
       
         <a
-          href="/privacy/"
+          href="/approach/privacy/"
           target="_blank"
         >
           Privacy Policy

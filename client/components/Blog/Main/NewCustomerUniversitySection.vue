@@ -35,6 +35,7 @@
             :is-main="isFirstElement(idx)"
             :direction="calculateCardDirection(idx)"
             :size="calculateCardSize(idx)"
+            :width="calculateCardWidth(idx)"
           />
           <CustomerUniversityButton
             v-if="customerUniversityPost.redirectLink"
@@ -154,7 +155,8 @@ export default {
   methods: {
     ...mapActions(['getCustomerUniversitySectionPosts', 'getCustomerUniversityPosts']),
     filterPosts(postIdList, allPosts) {
-      return postIdList?.map(postIdListItem => allPosts?.filter(allPostsItem => allPostsItem.id === postIdListItem.post.id)).flat()
+      return postIdList?.map(postIdListItem => allPosts?.filter(allPostsItem => allPostsItem.id === postIdListItem.post.id))
+        .flat()
     },
 
     isFirstElement(idx) {
@@ -169,6 +171,11 @@ export default {
     calculateCardSize(idx) {
       if (idx === 0) return 'md'
       return 'sm'
+    },
+
+    calculateCardWidth(idx) {
+      if (idx === 0) return '90'
+      return '100'
     },
 
     redirectTo(url) {
@@ -211,18 +218,18 @@ export default {
   }
 
   &__text {
-    @include font('Inter', 32px, 400);
-    line-height: 137%;
+    @include font('Inter', 24px, 400);
+    line-height: 146%;
     letter-spacing: -0.013em;
     color: $text-color--white-primary;
-    max-width: 1028px;
+    max-width: 1070px;
 
     &--yellow {
       color: $text-color--yellow;
     }
 
     &--margin {
-      margin: 50px 0 96px 0;
+      margin: 32px 0 72px 0;
     }
   }
 
@@ -237,19 +244,20 @@ export default {
 
 .mad-community {
   &__posts-section {
-    margin-top: 128px;
+    margin-top: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 
-    .customer-university__featured-post {
+    .customer-university-card {
       &:first-child {
         margin-bottom: 48px;
         width: 100%;
       }
+
       width: 48.8%;
-      margin-bottom: 24px;
+      margin-bottom: 32px;
       @media screen and (max-width: 1024px) {
         width: 100%;
         margin-bottom: 48px;
@@ -272,15 +280,6 @@ export default {
       }
     }
 
-    &__text {
-      @include font('Inter', 28px, 400);
-      line-height: 157%;
-
-      &--margin {
-        margin: 50px 0 72px 0;
-      }
-    }
-
     &__title {
       font-size: 50px;
       line-height: 101%;
@@ -291,8 +290,9 @@ export default {
 
     &__hr {
       border: 1px solid #28282A;
+
       &--margin {
-        margin: 32px 0 72px 0;
+        margin: 72px 0;
       }
     }
   }
@@ -311,11 +311,11 @@ export default {
 @media screen and (max-width: 768px) {
   .customer-university {
     &__text {
-      @include font('Inter', 21px, 400);
+      @include font('Inter', 18px, 400);
       line-height: 143%;
 
       &--margin {
-        margin: 24px 0 72px 0;
+        margin: 32px 0;
       }
     }
   }

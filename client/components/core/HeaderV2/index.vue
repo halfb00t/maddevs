@@ -176,7 +176,7 @@ export default {
     return {
       navigation,
       activeNavigation: null,
-      showLogoText: true,
+      showLogoText: false,
       isActiveModalSearch: false,
       isActiveMobileMenu: false,
     }
@@ -217,6 +217,11 @@ export default {
   mounted() {
     this.addEventListeners()
     this.setStylesForHeader()
+
+    // Show logo text when only page loaded
+    this.$nextTick(() => {
+      this.showLogoText = true
+    })
   },
 
   beforeDestroy() {

@@ -8,8 +8,9 @@ exports[`AuthorSlice component should render correctly 1`] = `
     <div
       class="author-slice__info"
     >
-      <div
-        class="author-slice__image"
+      <nuxtlink-stub
+        class="author-slice__image author-slice__link"
+        to="/insights/blog/author/undefined/"
       >
         <img
           alt="Image"
@@ -17,24 +18,29 @@ exports[`AuthorSlice component should render correctly 1`] = `
           height="68"
           width="68"
         />
-      </div>
+      </nuxtlink-stub>
        
       <div>
-        <p
-          class="author-slice__name"
+        <nuxtlink-stub
+          class="author-slice__link"
+          to="/insights/blog/author/undefined/"
         >
-          
-        Maddevs
-      
-        </p>
-         
-        <span
-          class="author-slice__position"
-        >
+          <p
+            class="author-slice__name"
+          >
+            
+          Maddevs
+        
+          </p>
+           
+          <span
+            class="author-slice__position"
+          >
+            
           
         
-      
-        </span>
+          </span>
+        </nuxtlink-stub>
          
         <ul
           class="author-slice__social-list"

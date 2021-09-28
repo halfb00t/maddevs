@@ -54,15 +54,18 @@ export default {
 
     &--lg {
       height: 70px;
-      margin-top: 70px;
+      margin-top: 72px;
     }
 
     @media screen and (max-width: 1024px) {
+      &--md {
+        margin-bottom: 72px;
+      }
       &--lg {
         height: 48px;
+        margin-top: 32px;
       }
     }
   }
-
 }
 </style>

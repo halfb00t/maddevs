@@ -109,7 +109,7 @@ export default {
 
       &--40-px {
         @include font('Inter', 40px, 700);
-        line-height: 48px;
+        line-height: 49px;
       }
 
       &--60-px {
@@ -119,7 +119,7 @@ export default {
 
       &--80-px {
         @include font('Inter', 80px, 800);
-        line-height: 90px;
+        line-height: 84px;
       }
     }
   }

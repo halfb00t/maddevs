@@ -60,7 +60,7 @@ exports[`Footer component should render correctly 1`] = `
               <nuxtlink-stub
                 class="footer-navbar__nav-item"
                 target="_blank"
-                to="/privacy/"
+                to="/approach/privacy/"
               >
                 
       Privacy Policy
@@ -173,7 +173,7 @@ exports[`Footer component should render correctly 1`] = `
       Mad Devs’
       
                     <a
-                      href="/privacy/"
+                      href="/approach/privacy/"
                       target="_blank"
                     >
                       Privacy Policy
@@ -283,7 +283,7 @@ exports[`Footer component should render correctly 1`] = `
             <nuxtlink-stub
               class="footer-navbar-mobile__nav-link"
               target="_blank"
-              to="/privacy/"
+              to="/approach/privacy/"
             >
               
       Privacy Policy

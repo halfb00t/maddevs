@@ -8,13 +8,13 @@ const extractCustomPageData = page => {
   return {
     id: page.id,
     uid: page.uid,
-    routePrefix: getRoutePrefix(page.data.route_prefix),
-    released: page.data.released,
-    showFooter: page.data.show_footer,
-    slices: page.data.body,
-    metaTitle: page.data.meta_title,
-    metaDescription: page.data.meta_description,
-    schemaOrgSnippet: extractSchemaOrg(page.data.schema_org_snippets),
+    routePrefix: getRoutePrefix(page.data?.route_prefix),
+    released: page.data?.released,
+    showFooter: page.data?.show_footer,
+    slices: page.data?.body,
+    metaTitle: page.data?.meta_title,
+    metaDescription: page.data?.meta_description,
+    schemaOrgSnippet: extractSchemaOrg(page.data?.schema_org_snippets),
   }
 }
 

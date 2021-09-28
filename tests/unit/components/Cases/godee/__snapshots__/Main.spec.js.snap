@@ -336,9 +336,9 @@ exports[`Main component should render correctly 1`] = `
     >
       <iframe
         allowfullscreen="allowfullscreen"
+        data-src="https://www.youtube.com/embed/_XCRbXmTUwI"
         frameborder="0"
         height="809"
-        src="https://www.youtube.com/embed/_XCRbXmTUwI"
         width="1440"
       />
     </section>
@@ -471,17 +471,17 @@ exports[`Main component should render correctly 1`] = `
             >
               <img
                 alt="Image for compare"
+                data-src="/images/Cases/godee/png/application-before.png"
                 height="578.47"
                 slot="first"
-                src="/images/Cases/godee/png/application-before.png"
                 width="1000"
               />
                
               <img
                 alt="Image for compare"
+                data-src="/images/Cases/godee/png/application-after.png"
                 height="578.47"
                 slot="second"
-                src="/images/Cases/godee/png/application-after.png"
                 width="1000"
               />
             </img-comparison-slider>
@@ -710,7 +710,7 @@ exports[`Main component should render correctly 1`] = `
           <nuxtlink-stub
             class="case_real-time-eta-more-button"
             target="_blank"
-            to="/blog/how-to-make-three-paid-eta-services-one-free/"
+            to="/insights/blog/how-to-make-three-paid-eta-services-one-free/"
           >
             
         Find out more
@@ -2376,7 +2376,7 @@ exports[`Main component should render correctly 1`] = `
        
       <nuxtlink-stub
         class="case_next-project-button"
-        to="/case-studies/namba-food/"
+        to="/clients/case-studies/namba-food/"
       >
         
     Read next project

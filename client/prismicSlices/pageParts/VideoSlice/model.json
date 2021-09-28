@@ -1,0 +1,142 @@
+{
+  "id": "video_slice",
+  "type": "SharedSlice",
+  "name": "VideoSlice",
+  "description": "VideoSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "VideoSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-right",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-down",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "subtitle": {
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "width": {
+          "config": {
+            "label": "Width",
+            "placeholder": "",
+            "options": [
+              "full",
+              "big",
+              "middle",
+              "small"
+            ],
+            "default_value": "full"
+          },
+          "type": "Select"
+        },
+        "video": {
+          "config": {
+            "label": "Video file name",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "poster": {
+          "config": {
+            "label": "Poster",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "link": {
+          "config": {
+            "label": "Link",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "folder": {
+          "config": {
+            "label": "logoFolder",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "file": {
+          "config": {
+            "label": "logoFile",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "logoWidth": {
+          "config": {
+            "label": "logoWidth",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "logoHeight": {
+          "config": {
+            "label": "logoHeight",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "alt": {
+          "config": {
+            "label": "logoAlt",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "colorTheme",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

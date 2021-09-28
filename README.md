@@ -383,7 +383,7 @@ If you have some problems with SEO you will be notified about that in the consol
 ```bash
 ████████████████████████████████████████ 100% | ETA: 0s | 233/233
 
-File: dist/case-studies/namba-food/index.html
+File: dist/clients/case-studies/namba-food/index.html
 SEO defects found: 
 There are 1 <img> tag without alt attribute
 ```

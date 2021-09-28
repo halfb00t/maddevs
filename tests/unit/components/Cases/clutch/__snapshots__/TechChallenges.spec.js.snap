@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TechChallenges component should render correctly 1`] = `
+<div>
+  <section>
+    <section
+      class="container_regular"
+    >
+      <h2
+        class="case_title_h2 m-12_bottom media-m-24_bottom"
+      >
+        
+      Great technical challenges come 
+        <br />
+         with rapid growth
+    
+      </h2>
+       
+      <p
+        class="case_paragraph m-12_bottom"
+      >
+        
+      Clutch’s customer base and website traffic are doubling every year. With great growth come great technical
+      challenges. The stable solution that worked smoothly for a small user base was no longer enough to sustain the
+      website traffic of 800K unique users per month. The slow, monolithic architecture had become an obstacle to
+      growth.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      So, to continue improving the way that companies look for vendors, Clutch decided to bring changes to the current
+      technological stack and then build a faster, better platform with new software architecture.
+    
+      </p>
+    </section>
+     
+    <section
+      class="container_full background-color-blue-grey p-48_top p-48_bottom m-96_bottom media-m-48_bottom"
+    >
+      <div
+        class="container_regular m-24_bottom"
+      >
+        <div
+          class="case_cards-group"
+        >
+          <div
+            class="case_card case_card"
+            id="techClutch-card-0"
+          >
+            <h3
+              class="case_title_h4 case_card-title m-10_bottom media-m-8_bottom"
+            >
+              
+            Limited monolithic architecture on the content management framework
+          
+            </h3>
+             
+            <p
+              class="case_paragraph m-10_bottom"
+              style="color: rgb(255, 255, 255);"
+            >
+              
+            Non-scalable architecture slowed down new feature releases and was not sustainable due to the platform’s rapid growth.
+          
+            </p>
+             
+            <div
+              class="case_card-img"
+            >
+              <picture-stub
+                alt="challenge-phone"
+                extension="png"
+                file="challenge-phone"
+                folder="clutch"
+                height="200"
+                lazy="true"
+                width="396"
+              />
+            </div>
+          </div>
+          <div
+            class="case_card case_card"
+            id="techClutch-card-1"
+          >
+            <h3
+              class="case_title_h4 case_card-title m-10_bottom media-m-8_bottom"
+            >
+              
+            Low website speed negatively impacts search engine optimisation (SEO)
+          
+            </h3>
+             
+            <p
+              class="case_paragraph m-10_bottom"
+              style="color: rgb(255, 255, 255);"
+            >
+              
+            They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.
+          
+            </p>
+             
+            <div
+              class="case_card-img"
+            >
+              <!---->
+            </div>
+          </div>
+          <div
+            class="case_card case_card"
+            id="techClutch-card-2"
+          >
+            <h3
+              class="case_title_h4 case_card-title m-10_bottom media-m-8_bottom"
+            >
+              
+            Inconvenient platform maintenance
+          
+            </h3>
+             
+            <p
+              class="case_paragraph m-10_bottom"
+              style="color: rgb(255, 255, 255);"
+            >
+              
+            Releasing new features and maintaining the platform became inconvenient as it outgrew the content management framework’s capabilities.
+          
+            </p>
+             
+            <div
+              class="case_card-img"
+            >
+              <picture-stub
+                alt="challenge-tablet"
+                extension="png"
+                file="challenge-tablet"
+                folder="clutch"
+                height="200"
+                lazy="true"
+                width="396"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+`;

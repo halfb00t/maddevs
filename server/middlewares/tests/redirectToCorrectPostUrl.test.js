@@ -28,7 +28,7 @@ describe('redirectToCorrectPostUrl middleware', () => {
 
     redirectToCorrectPostUrl(req, res, next)
 
-    expect(res.redirect).toHaveBeenCalledWith(301, '/blog/post-custom-slug')
+    expect(res.redirect).toHaveBeenCalledWith(301, '/insights/blog/post-custom-slug')
     expect(next).not.toHaveBeenCalled()
   })
 
@@ -37,7 +37,7 @@ describe('redirectToCorrectPostUrl middleware', () => {
 
     redirectToCorrectPostUrl(req, res, next)
 
-    expect(res.redirect).toHaveBeenCalledWith(301, '/blog/post-custom-slug')
+    expect(res.redirect).toHaveBeenCalledWith(301, '/insights/blog/post-custom-slug')
     expect(next).not.toHaveBeenCalled()
   })
 

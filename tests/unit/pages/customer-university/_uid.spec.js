@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Vuelidate from 'vuelidate'
-import Post from '@/pages/customer-university/_uid.vue'
+import Post from '@/pages//customer-university/_uid.vue'
 import blogPost from '../../__mocks__/blogPost'
 
 const DESCRIPTION = 'test description'
@@ -87,7 +87,7 @@ describe('Post _uid component', () => {
     wrapper.vm.$options.beforeRouteEnter(callObject.to, callObject.from, callObject.next)
 
     expect(callObject.next).toHaveBeenCalledTimes(2)
-    expect(callObject.next).toHaveBeenLastCalledWith({ path: `/blog/${vm.post.uid}/` })
+    expect(callObject.next).toHaveBeenLastCalledWith({ path: `/insights/${vm.post.uid}/` })
   })
 
   it('should correctly work beforeRouteEnter method if from and to equals', () => {

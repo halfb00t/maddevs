@@ -6,7 +6,10 @@
       class="header-navigation__item"
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
     >
-      <span @mouseenter="setNavigation(name)">
+      <span
+        @click="goTo(name)"
+        @mouseenter="setNavigation(name)"
+      >
         {{ label }}
       </span>
       <HeaderSection
@@ -22,6 +25,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { isMobile } from 'mobile-device-detect'
 import HeaderSection from '@/components/core/HeaderV2/HeaderSection'
 
 export default {
@@ -53,6 +57,13 @@ export default {
 
     onChangePage() {
       this.$emit('changed-page')
+    },
+
+    goTo(name) {
+      if (isMobile) return
+      const path = this.headerContent[name]?.link
+      if (!path) return
+      this.$router.push({ path })
     },
 
     getIsHoverClass(navigationName) {

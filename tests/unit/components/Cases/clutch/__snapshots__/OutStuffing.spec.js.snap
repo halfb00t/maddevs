@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OutStuffing component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h3
+      class="case_title_h2 m-12_bottom"
+    >
+      
+    Outstaffing to multi-location teams
+  
+    </h3>
+     
+    <p
+      class="case_paragraph m-96_bottom media-m-48_bottom"
+    >
+      
+    The customer’s development team is fully distributed, with the head office in Washington, DC, and staff based in
+    Poland and Ukraine. Mad Devs stepped in as an outstaffing company to help Clutch.co reach its desired goals on
+    time. Our software and DevOps engineers, project managers, and other multi-location teams operate under the CTO’s
+    direct supervision.
+  
+    </p>
+     
+    <h3
+      class="case_title_h2 m-48_bottom media-m-24_bottom"
+    >
+      
+    Key results achieved by the Clutch.co and Mad Devs collaboration
+  
+    </h3>
+     
+    <div
+      class="case_cards-container m-96_bottom media-m-48_bottom"
+    >
+      <div
+        class="case_column"
+      >
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Graph icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Built service-oriented architecture
+  
+          </p>
+        </div>
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Person icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Integrated single sign-on (SSO)
+  
+          </p>
+        </div>
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Cost icon."
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Optimised Clutch.co’s infrastructure costs
+  
+          </p>
+        </div>
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Menu icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Implemented Matchmaking and Shortlist
+  
+          </p>
+        </div>
+      </div>
+       
+      <div
+        class="case_column"
+      >
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Settings icon."
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Developed the Statistics service for intelligent decision making
+  
+          </p>
+        </div>
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Box icon."
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Developed a repository for geographical data
+  
+          </p>
+        </div>
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Chip icon."
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Implemented a connector between Clutch and HubSpot
+  
+          </p>
+        </div>
+        <div
+          class="case_card card-content background-color-silver"
+        >
+          <img
+            alt="Speed icon."
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <p
+            class="case_paragraph"
+          >
+            
+    Improved website and widget performance
+  
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

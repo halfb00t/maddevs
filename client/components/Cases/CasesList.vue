@@ -20,7 +20,7 @@
       />
     </section>
     <NuxtLink
-      to="/case-studies/"
+      to="/clients/case-studies/"
       class="cases-list_see-more"
     >
       <span>See More</span>

@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pipelines component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container_regular"
+    >
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Pipelines and testing
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      Code of exceptional quality has been our primary goal in our work with Clutch.co. By meticulously testing each
+      code element with unit, acceptance, and screen compare tests and by applying present-day approaches to
+      development and deployment, we have provided exceptional flexibility in our delivery of a stable Clutch.co
+      solution. To avoid downtimes and issues caused by new deployments, testing and staging environments in
+      Kubernetes perfectly mimic production. Thus, all updates are made without any inconvenience to the end users.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full case_image-container background-color-blue-grey m-48_bottom"
+    >
+      <div
+        class="container_regular"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <lottie-stub
+          class="case_lottie"
+          id="workflow-dev"
+          options="[object Object]"
+        />
+      </div>
+    </div>
+     
+    <div
+      class="container_regular"
+    >
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Communication
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      A business always strives to effectively use their employees’ time and skills, even when they are 12 hours away.
+      On top of the typical Slack communication, due to the social isolation required by the global pandemic, the Mad
+      Devs team integrated online meetings to mimic a normal office setup.
+    
+      </p>
+       
+      <ul
+        class="case_list m-24_bottom"
+      >
+        <li
+          class="list-item_dot m-24_bottom media-m-12_bottom"
+        >
+          <span
+            class="case_list-item-bold"
+          >
+            Weekly video meetings with the CTO:
+          </span>
+           Three times a week, the project
+        managers and the frontend and backend
+        developers take part in open video meetings with the CTO. Here, they report on the work accomplished, raise
+        concerns, and share suggestions.
+      
+        </li>
+         
+        <li
+          class="list-item_dot m-24_bottom media-m-12_bottom"
+        >
+          <span
+            class="case_list-item-bold"
+          >
+            Weekly video meetings with multi-location teams:
+          </span>
+           Three times a week,
+        the project manager takes part in sync-up
+        calls where she reports on ongoing problems and brainstorms solutions.
+      
+        </li>
+         
+        <li
+          class="list-item_dot m-24_bottom media-m-12_bottom"
+        >
+          <span
+            class="case_list-item-bold"
+          >
+            Weekly sprint planning meetings with team members:
+          </span>
+           Due to the
+        continuously growing team size, weekly sprint
+        planning meetings were split into seven meetings of smaller teams to improve communication effectiveness.
+      
+        </li>
+      </ul>
+    </div>
+     
+    <div
+      class="container_middle case_img-wrap m-48_bottom"
+    >
+      <picture-stub
+        alt="Communication"
+        extension="png"
+        file="communication"
+        folder="clutch"
+        height="554"
+        lazy="true"
+        width="1026"
+      />
+    </div>
+  </section>
+</div>
+`;

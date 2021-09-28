@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DevOps component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container_regular m-96_bottom media-m-48_bottom"
+    >
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      DevOps engineers optimised Clutch.co’s infrastructure costs
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      Mad Devs effectively managed Clutch.co’s infrastructure costs by selecting cost-effective resources to fulfil
+      the solution’s technical needs.
+    
+      </p>
+       
+      <div
+        class="m-24_bottom"
+      >
+        <ol
+          class="case-list_numbered-plain"
+        >
+          <li
+            class="case_list_numbered-plain_item case_list-item"
+          >
+            <span />
+             
+          Mad Devs migrated Clutch.сo microservices to Kubernetes, an open-source container-orchestration system for
+          automating the deployment, scaling, and management of containerised applications. Essentially, this enables
+          Clutch.co to provide cost-effectiveness and high scalability, as Kubernetes takes less space and requires
+          fewer resources. Kubernetes autoscaling allows optimizing resource usage by reducing the number of unused
+          nodes, and the use of spot instances allows reducing costs to up to 90%.
+        
+          </li>
+           
+          <li
+            class="case_list_numbered-plain_item case_list-item"
+          >
+            <span />
+             
+          Mad Devs automated and optimized TeamCity agents. Now, TeamCity launches and stops agents automatically, or
+          deletes them after they’ve performed tasks. In the past, all non-performing work would continue, creating
+          additional expenses.
+        
+          </li>
+        </ol>
+      </div>
+       
+      <div
+        class="m-96_bottom media-m-48_bottom"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <lottie-stub
+          class="case_lottie"
+          id="devOps-clutch"
+          options="[object Object]"
+        />
+      </div>
+       
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Implemented CRM-connector
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-48_bottom media-m-24_bottom"
+      >
+        
+      CRM connector is a service that connects Clutch with HubSpot, a popular CRM. The service allows Clutch managers
+      to work in HubSpot with Clutch data to streamline such time-consuming tasks as data syncing and data sharing.
+      With it, Clutch managers get access to accurate records that can be easily shared within the platform.
+    
+      </p>
+       
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Implemented Ad Service
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      Our specialists implemented a service to use internal ads. The service uses a third-party API to sponsor
+      campaigns represented with adblocks.
+    
+      </p>
+       
+      <div
+        class="case_cards-group m-48_bottom media-m-24_bottom"
+      >
+        <div
+          class="case_cards-item"
+        >
+          <div
+            class="case_cards-item-logo"
+          >
+            <img
+              alt="MadDevs"
+              height="39px"
+              src="img.jpg"
+              width="39px"
+            />
+             
+            <p
+              class="case_paragraph case_cards-item-logo-text"
+            >
+              
+            Mad Devs
+          
+            </p>
+          </div>
+           
+          <div
+            class="case_cards-item-text m-21_top"
+          >
+            <p
+              class="case_paragraph case_cards-item-text"
+            >
+              
+            Engineering Your Growth
+          
+            </p>
+          </div>
+           
+          <div
+            class="case_cards-item-button"
+          >
+            <p
+              class="case_paragraph case_cards-item-button-text"
+            >
+              
+            Visit Website
+          
+            </p>
+          </div>
+        </div>
+         
+        <div
+          class="case_cards-item"
+        >
+          <img
+            alt="Rocket"
+            height="147px"
+            src="img.jpg"
+            width="155px"
+          />
+        </div>
+      </div>
+       
+      <h3
+        class="case_title_h3 m-12_bottom"
+      >
+        
+      Implemented Matchmaking and Shortlist
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-12_bottom"
+      >
+        
+      Mad Devs implemented Matchmaking and Shortlist to facilitate Clutch clients the selection of companies based on
+      their requirements. Matchmaking is a form to be filled by a client. In the form, the client provides the basic
+      information about the potential project to get the list of the companies that comply with the requirements.
+    
+      </p>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      Shortlist is a functionality that allows a client to choose the companies based on the client’s expectations and
+      requirements and to save the data in a list.
+    
+      </p>
+    </div>
+  </section>
+</div>
+`;
