@@ -147,20 +147,20 @@ export default {
 
       @media screen and (max-width: 580px) {
         font-size: 42px;
-        line-height: 48px;
+        line-height: 70px;
       }
     }
 
     /deep/ .small {
       @media screen and (max-width: 768px) {
         font-size: 42px;
-        line-height: 48px;
+        line-height: 25px;
         display: block;
       }
 
       @media screen and (max-width: 580px) {
         font-size: 32px;
-        line-height: 44px;
+        line-height: 36px;
       }
     }
   }
