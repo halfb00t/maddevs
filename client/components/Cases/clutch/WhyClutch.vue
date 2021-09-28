@@ -33,7 +33,7 @@ import ListNumberedBox from '@/components/Cases/shared/ListNumberedBox'
 import ListNumberedItemBox from '@/components/Cases/shared/ListNumberedItemBox'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
-import { idWhyClutch, whyClutch } from '@/data/clutchCase' // file will be updated to the one in MAR-2092 after merge.
+import { idWhyClutch, whyClutch } from '@/data/caseClutch'
 
 export default {
   name: 'WhyClutch',

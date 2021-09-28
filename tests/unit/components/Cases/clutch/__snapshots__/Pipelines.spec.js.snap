@@ -116,6 +116,17 @@ exports[`Pipelines component should render correctly 1`] = `
       class="container_middle case_img-wrap m-48_bottom"
     >
       <picture-stub
+        alt="Clutch: Safari Browser Top Bar white."
+        background="true"
+        extension="jpg"
+        file="safari-top-bar-white"
+        folder="common"
+        height="16.45"
+        lazy="true"
+        width="1026"
+      />
+       
+      <picture-stub
         alt="Communication"
         extension="png"
         file="communication"

@@ -114,6 +114,12 @@ export const meta = {
     url: 'https://maddevs.io/clients/case-studies/citycam/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
+  clutch: {
+    title: 'Mad Devs Case Study: Data-driven B2B platform smoothly adapt to increasing loads and numbers or users',
+    description: 'AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions',
+    url: 'https://maddevs.io/clients/case-studies/citcam/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Data-driven B2B platform smoothly adapt to increasing loads and numbers or users", "description": "AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
+  },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
     url: 'https://maddevs.io/insights/blog/',

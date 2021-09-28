@@ -119,7 +119,7 @@ export const casesList = [
     },
   },
   {
-    width: 'full',
+    width: 'big',
     id: 'citycam',
     link: '/clients/case-studies/citycam/',
     video: '/videos/citycam-banner.mp4#t=1',
@@ -133,6 +133,23 @@ export const casesList = [
       folder: 'citycam',
       file: 'citycam-logo',
       alt: 'citycam logo',
+    },
+  },
+  {
+    width: 'small',
+    id: 'clutch',
+    link: '/clients/case-studies/clutch/',
+    video: '/videos/clutch-banner.mp4#t=1',
+    subtitle: 'B2B rating and reviews',
+    title: 'The growth of Clutch.co',
+    desc: 'Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions',
+    poster: '/images/Cases/citycam/png/clutch-banner.png',
+    logo: {
+      width: 253,
+      height: 93,
+      folder: 'clutch',
+      file: 'clutch-logo',
+      alt: 'clutch logo',
     },
   },
 ]

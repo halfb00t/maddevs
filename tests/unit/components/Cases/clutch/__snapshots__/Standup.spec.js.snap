@@ -61,7 +61,7 @@ exports[`Standup component should render correctly 1`] = `
       class="container_middle case_img-wrap m-48_bottom"
     >
       <picture-stub
-        alt="GoDee: Safari Browser Top Bar White."
+        alt="Clutch: Safari Browser Top Bar White."
         background="true"
         extension="jpg"
         file="safari-top-bar-white"
@@ -136,13 +136,15 @@ exports[`Standup component should render correctly 1`] = `
               class="case_card-body-header-1"
             >
               
-            OKR1: Correct stats of the data below production
+            OKR1: Optimized performance of the CGL Directory pages
           
             </div>
              
             <div>
               
-            Status (Done / In Progress, %)
+            Status (Done / In 
+              <br />
+               Progress, %)
           
             </div>
           </div>
