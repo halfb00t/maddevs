@@ -4,8 +4,5 @@
  * Available environments - [development, staging, production]
  */
 export const config = {
-  blogComments: ['development', 'staging'],
-  newCustomerUniversitySection: ['development', 'staging'],
-  customerUniversitySection: ['production'],
   clutchCase: ['development', 'staging'],
 }
