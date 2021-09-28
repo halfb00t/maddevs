@@ -114,6 +114,7 @@ export default {
   &__content {
     text-align: center;
     z-index: 2;
+    width: 100%;
     max-width: 1113px;
   }
 
@@ -131,6 +132,8 @@ export default {
 
     @media screen and (max-width: 580px) {
       margin-bottom: 27px;
+      font-size: 42px;
+      line-height: 48px;
     }
 
     /deep/ .large {
