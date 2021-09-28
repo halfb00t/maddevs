@@ -1,44 +1,45 @@
 <template>
-  <main class="main">
-    <AboutBanner />
-    <WeCreateItProjectsFor />
-    <TechnologiesAndTools />
-    <CaseStudies type="index" />
-    <QuickProjectStart />
-    <CustomerTestimonials />
-    <CustomerRates />
-    <MeetOurExperts />
-  </main>
+  <SliceZone
+    type="page"
+    :slices="customPage.slices"
+  />
 </template>
 
 <script>
-import AboutBanner from '@/components/core/banners/AboutBanner'
-import WeCreateItProjectsFor from '@/components/About/WeCreateItProjectsFor'
-import TechnologiesAndTools from '@/components/About/TechnologiesAndTools'
-import CaseStudies from '@/components/core/CaseStudies'
-import QuickProjectStart from '@/components/About/QuickProjectStart'
-import CustomerTestimonials from '@/components/About/CustomerTestimonials'
-import CustomerRates from '@/components/About/CustomerRates'
-import MeetOurExperts from '@/components/About/MeetOurExperts'
-import { getMetadata, buildHead } from '@/data/seo'
+import { mapActions } from 'vuex'
+import SliceZone from 'vue-slicezone'
+import { buildHead } from '@/data/seo'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
-  name: 'About',
   components: {
-    AboutBanner,
-    WeCreateItProjectsFor,
-    TechnologiesAndTools,
-    CustomerTestimonials,
-    CaseStudies,
-    QuickProjectStart,
-    CustomerRates,
-    MeetOurExperts,
+    SliceZone,
   },
 
-  nuxtI18n: false,
+  mixins: [headerMixin('.start-screen-slice')],
+
+  async asyncData({ store }) {
+    await store.dispatch('getCustomPage', 'about')
+    const { customPage } = store?.getters
+
+    store.dispatch('showFooter', customPage.showFooter)
+    return {
+      customPage,
+      openGraphUrl: `${process.env.domain}/`,
+    }
+  },
 
   head() {
-    return buildHead(getMetadata('index'))
+    return buildHead({
+      url: this.openGraphUrl,
+      title: this.customPage.metaTitle || '',
+      description: this.customPage.metaDescription || '',
+      jsonLd: this.customPage.schemaOrgSnippet,
+    })
+  },
+
+  methods: {
+    ...mapActions(['showFooter']),
   },
 }
 </script>
