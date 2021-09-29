@@ -450,10 +450,25 @@
             "placeholder": "",
             "options": [
               "infrastructure-animation",
-              "-"
+              "qa-page",
+              "qa-page2"
             ]
           },
           "type": "Select"
+        },
+        "width": {
+          "config": {
+            "label": "width",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "height": {
+          "config": {
+            "label": "height",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       }
     }
