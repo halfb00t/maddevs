@@ -366,6 +366,22 @@ or in the component's code:
 }
 ```
 
+## BEM (Block, Element, Modifier)
+
+BEM (Block, Element, Modifier) is a component-based approach to web development.
+
+For BEM, I advise you to use the following:
+  1. "block" - for naming blocks
+  2. "block__element" - __ for naming elements
+  3. "block block - modifier" - --modifier for naming modifiers, while the main class of the block/element must be
+
+Let's not use:
+- "h2" or "> p" tag selectors
+- minimum nesting through "/deep/"
+- incorrect BEM naming conventions: "block_element" or "block_modifier"
+
+For a detailed study of BEM, visit the website: https://en.bem.info/
+
 ## 🔥 SEO-Analyzer
 
 Github action for checks for errors in the html DOM
