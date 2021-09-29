@@ -60,7 +60,8 @@ export default {
 
   &__docker,
   &__grpc,
-  &__backend-django {
+  &__backend-django,
+  &__allure{
     width: 70px;
   }
 
@@ -81,7 +82,8 @@ export default {
     width: 60px;
   }
 
-  &__st-microelectronics{
+  &__st-microelectronics,
+  &__html{
     width:50px;
   }
   &__texas-instruments{
@@ -108,7 +110,8 @@ export default {
     &__grpc,
     &__django,
     &__nginx-txt,
-    &__video-js {
+    &__video-js,
+    &__allure{
       width: 40px;
     }
 
@@ -135,6 +138,7 @@ export default {
     }
 
     &__plex,
+    &__html,
     &__altium-designer{
       width: 28px;
     }

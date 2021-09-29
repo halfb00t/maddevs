@@ -32,7 +32,7 @@
         folder="common"
         file="safari-top-bar-white"
         extension="jpg"
-        alt="GoDee: Safari Browser Top Bar White."
+        alt="Clutch: Safari Browser Top Bar White."
       />
       <Picture
         :width="1026"
@@ -67,10 +67,10 @@
         <div class="case_cards-body">
           <div class="case_card-body">
             <div class="case_card-body-header-1">
-              OKR1: Correct stats of the data below production
+              OKR1: Optimized performance of the CGL Directory pages
             </div>
             <div>
-              Status (Done / In Progress, %)
+              Status (Done / In <br> Progress, %)
             </div>
           </div>
           <div class="case_card-body">
@@ -131,7 +131,6 @@ export default {
 <style lang="scss" scoped>
 .case {
   &_title {
-    text-align: center;
     @include title($text-color--white, 24px, 166%);
     font-weight: 500;
   }
@@ -157,12 +156,13 @@ export default {
       background-color: rgba(48, 148, 171, 0.3);
       text-align: center;
       align-content: center;
-      height: 56px;
+      height: 90px;
       @include grid(repeat(3, 1fr), auto, 1px, 1px);
       @include title($text-color--white, 16px, 166%);
       font-weight: 600;
 
       @media screen and (max-width: 820px) {
+        height: 56px;
         font-size: 10px;
       }
 

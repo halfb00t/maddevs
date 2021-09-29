@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TechStack component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h2
+      class="case_title_h2 m-24_bottom media-m-12_bottom"
+    >
+      
+    Technology stack
+  
+    </h2>
+     
+    <ul
+      class="case_list-technologies m-96_bottom media-m-48_bottom"
+    >
+      <listtechnologiesitem-stub
+        alt="HTML"
+        class="case_tech-list-item"
+        imgalt="HTML"
+        name="html"
+      />
+      <listtechnologiesitem-stub
+        alt="CSS"
+        class="case_tech-list-item"
+        imgalt="CSS"
+        name="css"
+      />
+      <listtechnologiesitem-stub
+        alt="Webpack"
+        class="case_tech-list-item"
+        imgalt="Webpack"
+        name="webpack"
+      />
+      <listtechnologiesitem-stub
+        alt="Bootstrap"
+        class="case_tech-list-item"
+        imgalt="Bootstrap"
+        name="bootstrap"
+      />
+      <listtechnologiesitem-stub
+        alt="jQuery"
+        class="case_tech-list-item"
+        imgalt="jQuery"
+        name="jquery"
+      />
+      <listtechnologiesitem-stub
+        alt="JavaScript"
+        class="case_tech-list-item"
+        imgalt="JavaScript"
+        name="js"
+      />
+      <listtechnologiesitem-stub
+        alt="Go"
+        class="case_tech-list-item"
+        imgalt="Go"
+        name="go"
+      />
+      <listtechnologiesitem-stub
+        alt="Python"
+        class="case_tech-list-item"
+        imgalt="Python"
+        name="python"
+      />
+      <listtechnologiesitem-stub
+        alt="Django"
+        class="case_tech-list-item"
+        imgalt="Django"
+        name="django"
+      />
+      <listtechnologiesitem-stub
+        alt="gRPC"
+        class="case_tech-list-item"
+        imgalt="gRPC"
+        name="grpc"
+      />
+      <listtechnologiesitem-stub
+        alt="Pytest"
+        class="case_tech-list-item"
+        imgalt="Pytest"
+        name="pytest"
+      />
+      <listtechnologiesitem-stub
+        alt="Selenium"
+        class="case_tech-list-item"
+        imgalt="Selenium"
+        name="selenium"
+      />
+      <listtechnologiesitem-stub
+        alt="Allure"
+        class="case_tech-list-item"
+        imgalt="Allure"
+        name="allure"
+      />
+      <listtechnologiesitem-stub
+        alt="TeamCity"
+        class="case_tech-list-item"
+        imgalt="TeamCity"
+        name="teamcity"
+      />
+      <listtechnologiesitem-stub
+        alt="AirFlow"
+        class="case_tech-list-item"
+        imgalt="AirFlow"
+        name="airflow"
+      />
+      <listtechnologiesitem-stub
+        alt="PostgreSQL"
+        class="case_tech-list-item"
+        imgalt="PostgreSQL"
+        name="postgresql"
+      />
+      <listtechnologiesitem-stub
+        alt="Kibana APM"
+        class="case_tech-list-item"
+        imgalt="Kibana"
+        name="kibana"
+      />
+      <listtechnologiesitem-stub
+        alt="Sentry"
+        class="case_tech-list-item"
+        imgalt="Sentry"
+        name="sentry-black"
+      />
+      <listtechnologiesitem-stub
+        alt="Grafana"
+        class="case_tech-list-item"
+        imgalt="Grafana"
+        name="grafana"
+      />
+      <listtechnologiesitem-stub
+        alt="UptimeRobot"
+        class="case_tech-list-item"
+        imgalt="UptimeRobot"
+        name="uptimerobot"
+      />
+    </ul>
+  </section>
+</div>
+`;
