@@ -447,6 +447,38 @@
       "default-slice": {
         "primary": {}
       }
+    },
+    "ProgressSlice": {
+      "default-slice": {
+        "primary": {
+          "animation": {
+            "content": "none"
+          },
+          "background": {
+            "content": "black"
+          },
+          "colorTheme": {
+            "content": "white"
+          },
+          "title": {
+            "content": "Interdum et malesuada"
+          }
+        },
+        "items": {
+          "image": {
+            "content": "https://images.unsplash.com/photo-1585399000684-d2f72660f092"
+          },
+          "arrow": {
+            "content": true
+          },
+          "title": {
+            "content": "Duis non nulla ligula"
+          },
+          "content": {
+            "content": "Duis non nulla ligula. Donec molestie mollis sodales. Vestibulum eget ultrices libero. Duis eu malesuada arcu, vel commodo augue."
+          }
+        }
+      }
     }
   },
   "_cts": {
