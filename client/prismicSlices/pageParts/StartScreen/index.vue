@@ -142,7 +142,7 @@ export default {
 
       @media screen and (max-width: 768px) {
         font-size: 76px;
-        line-height: 72px;
+        line-height: 110px;
       }
 
       @media screen and (max-width: 580px) {
