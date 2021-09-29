@@ -366,6 +366,63 @@ or in the component's code:
 }
 ```
 
+## BEM (Block, Element, Modifier)
+
+BEM (Block, Element, Modifier) is a component-based approach to web development.
+
+For BEM, I advise you to use the following:
+1. "block" - for naming blocks (A functionally independent page component that can be reused. In HTML, blocks are represented by the class attribute.
+       Features:
+
+The block name describes its purpose ("What is it?" — menu or button), not its state ("What does it look like?" — red or big).
+
+Example
+```javascript
+<!-- Correct. The `error` block is semantically meaningful -->
+<div class="error"></div>
+
+<!-- Incorrect. It describes the appearance -->
+<div class="red-text"></div>
+```
+The block shouldn't influence its environment, meaning you shouldn't set the external geometry (margin) or positioning for the block.
+You also shouldn't use CSS tag or ID selectors when using BEM.
+
+2. "block__element" - __ for naming elements
+A composite part of a block that can't be used separately from it.
+
+Features:
+
+The element name describes its purpose ("What is this?" — item, text, etc.), not its state ("What type, or what does it look like?" — red, big, etc.).
+
+The structure of an element's full name is block-name__element-name. The element name is separated from the block name with a double underscore (__).
+
+Example
+```javascript
+<!-- `search-form` block -->
+<form class="search-form">
+    <!-- `input` element in the `search-form` block -->
+    <input class="search-form__input">
+
+    <!-- `button` element in the `search-form` block -->
+    <button class="search-form__button">Search</button>
+</form>
+```
+3. "block block - modifier" - --modifier for naming modifiers, while the main class of the block/element must be
+An entity that defines the appearance, state, or behavior of a block or element.
+
+Features:
+
+The modifier name describes its appearance ("What size?" or "Which theme?" and so on — size_s or theme_islands), its state ("How is it different from the others?" — disabled, focused, etc.) and its behavior ("How does it behave?" or "How does it respond to the user?" — such as directions_left-top).
+
+The modifier name is separated from the block or element name by a single underscore (_).
+
+Let's not use:
+- "h2" or "> p" tag selectors
+- minimum nesting through "/deep/"
+- incorrect BEM naming conventions: "block_element" or "block_modifier"
+
+For a detailed study of BEM, visit the website: https://en.bem.info/
+
 ## 🔥 SEO-Analyzer
 
 Github action for checks for errors in the html DOM
