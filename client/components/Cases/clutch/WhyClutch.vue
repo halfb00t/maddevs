@@ -12,11 +12,11 @@
       <div
         class="p-96_bottom media-p-48_bottom"
       >
-        <ListNumberedBox>
+        <ListNumberedBox class="case_whyclutch-item">
           <ListNumberedItemBox
             v-for="(solution, i) in whyClutch"
             :id="`whyClutch-item-${i}`"
-            :key="solution.text"
+            :key="`whyClutch-item-${i}`"
             :data-background="solution.background"
           >
             {{ solution.text }}
@@ -66,13 +66,16 @@ export default {
     }
   }
 
-  /deep/ &_list-numbered_item {
-    color: $text-color--white-primary;
-    background-color: $bgcolor--grey-cases;
-    transition: 1s;
-    @media screen and (max-width: 768px) {
+  &_whyclutch-item{
+    /deep/ .case_list-numbered_item {
+      color: $text-color--white;
       background-color: $bgcolor--grey-cases;
+      transition: 1s;
+      @media screen and (max-width: 768px) {
+        background-color: $bgcolor--grey-cases;
+      }
     }
   }
+
 }
 </style>
