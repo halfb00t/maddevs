@@ -1,3 +1,47 @@
+export const whyClutch = [
+  {
+    text: 'Clutch is a credible platform with data, case studies, and client testimonials that guide readers through the process of choosing a business service or solution.',
+    background: '#22B3E2',
+  },
+  {
+    text: 'Clutch provides a dedicated team that interviews real clients, collects data, and enables comparison against competitors to help users find suitable partners.',
+    background: '#1B85CE',
+  },
+  {
+    text: 'The clear indication of paid endorsements and sponsored posts on Clutch enables well-informed market research.',
+    background: '#043AB4',
+  },
+]
+
+export const idWhyClutch = [
+  'whyClutch-item-0',
+  'whyClutch-item-1',
+  'whyClutch-item-2',
+]
+
+export const techChallenges = [
+  {
+    title: 'Limited monolithic architecture on the content management framework',
+    description: 'Non-scalable architecture slowed down new feature releases and was not sustainable due to the platform’s rapid growth.',
+    img: 'challenge-phone',
+  },
+  {
+    title: 'Low website speed negatively impacts search engine optimisation (SEO)',
+    description: 'They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.',
+  },
+  {
+    title: 'Inconvenient platform maintenance',
+    description: 'Releasing new features and maintaining the platform became inconvenient as it outgrew the content management framework’s capabilities.',
+    img: 'challenge-tablet',
+  },
+]
+
+export const idTechChallenges = [
+  'techClutch-card-0',
+  'techClutch-card-1',
+  'techClutch-card-2',
+]
+
 export const clutchResults = [
   {
     icon: 'graph',
@@ -162,4 +206,107 @@ export const idDataRep = [
   'data-item-0',
   'data-item-1',
   'data-item-2',
+]
+
+export const techStackClutch = [
+  {
+    name: 'html',
+    alt: 'HTML',
+    imgAlt: 'HTML',
+  },
+  {
+    name: 'css',
+    alt: 'CSS',
+    imgAlt: 'CSS',
+  },
+  {
+    name: 'webpack',
+    alt: 'Webpack',
+    imgAlt: 'Webpack',
+  },
+  {
+    name: 'bootstrap',
+    alt: 'Bootstrap',
+    imgAlt: 'Bootstrap',
+  },
+  {
+    name: 'jquery',
+    alt: 'jQuery',
+    imgAlt: 'jQuery',
+  },
+  {
+    name: 'js',
+    alt: 'JavaScript',
+    imgAlt: 'JavaScript',
+  },
+  {
+    name: 'go',
+    alt: 'Go',
+    imgAlt: 'Go',
+  },
+  {
+    name: 'python',
+    alt: 'Python',
+    imgAlt: 'Python',
+  },
+  {
+    name: 'django',
+    alt: 'Django',
+    imgAlt: 'Django',
+  },
+  {
+    name: 'grpc',
+    alt: 'gRPC',
+    imgAlt: 'gRPC',
+  },
+  {
+    name: 'pytest',
+    alt: 'Pytest',
+    imgAlt: 'Pytest',
+  },
+  {
+    name: 'selenium',
+    alt: 'Selenium',
+    imgAlt: 'Selenium',
+  },
+  {
+    name: 'allure',
+    alt: 'Allure',
+    imgAlt: 'Allure',
+  },
+  {
+    name: 'teamcity',
+    alt: 'TeamCity',
+    imgAlt: 'TeamCity',
+  },
+  {
+    name: 'airflow',
+    alt: 'AirFlow',
+    imgAlt: 'AirFlow',
+  },
+  {
+    name: 'postgresql',
+    alt: 'PostgreSQL',
+    imgAlt: 'PostgreSQL',
+  },
+  {
+    name: 'kibana',
+    alt: 'Kibana APM',
+    imgAlt: 'Kibana',
+  },
+  {
+    name: 'sentry-black',
+    alt: 'Sentry',
+    imgAlt: 'Sentry',
+  },
+  {
+    name: 'grafana',
+    alt: 'Grafana',
+    imgAlt: 'Grafana',
+  },
+  {
+    name: 'uptimerobot',
+    alt: 'UptimeRobot',
+    imgAlt: 'UptimeRobot',
+  },
 ]
