@@ -113,8 +113,8 @@ exports[`DevOps component should render correctly 1`] = `
           >
             <img
               alt="MadDevs"
+              data-src="img.jpg"
               height="39px"
-              src="img.jpg"
               width="39px"
             />
              
@@ -158,8 +158,8 @@ exports[`DevOps component should render correctly 1`] = `
         >
           <img
             alt="Rocket"
+            data-src="img.jpg"
             height="147px"
-            src="img.jpg"
             width="155px"
           />
         </div>

@@ -5,26 +5,8 @@
     "slice_type": "card_grid_slice",
     "items": [
       {
-        "title": "target value-added solutions",
-        "description": "streamline turn-key systems",
-        "btnLink": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
-        },
-        "fullWidth": true
-      },
-      {
-        "title": "architect frictionless initiatives",
-        "description": "orchestrate interactive e-tailers",
+        "title": "integrate magnetic applications",
+        "description": "synergize efficient markets",
         "btnLink": {
           "link_type": "Web",
           "url": "http://google.com"
@@ -36,27 +18,45 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+        },
+        "fullWidth": true
+      },
+      {
+        "title": "brand world-class channels",
+        "description": "evolve rich architectures",
+        "btnLink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+        },
+        "fullWidth": true
+      },
+      {
+        "title": "deploy efficient e-tailers",
+        "description": "envisioneer impactful metrics",
+        "btnLink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
         },
         "fullWidth": false
-      },
-      {
-        "title": "productize back-end vortals",
-        "description": "synthesize customized infrastructures",
-        "btnLink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": "Placeholder image",
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
-        },
-        "fullWidth": true
       }
     ],
     "primary": {
@@ -72,7 +72,7 @@
       {
         "link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "http://twitter.com"
         },
         "icon": {
           "dimensions": {
@@ -81,10 +81,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
         },
-        "title": "deploy compelling supply-chains",
-        "description": "engineer end-to-end systems"
+        "title": "strategize killer initiatives",
+        "description": "morph clicks-and-mortar synergies"
       },
       {
         "link": {
@@ -98,10 +98,10 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
         },
-        "title": "incentivize customized e-services",
-        "description": "incubate cross-platform ROI"
+        "title": "embrace rich models",
+        "description": "incubate 24/365 blockchains"
       },
       {
         "link": {
@@ -115,15 +115,15 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
         },
-        "title": "leverage web-enabled users",
-        "description": "repurpose synergistic niches"
+        "title": "transition extensible niches",
+        "description": "cultivate integrated partnerships"
       },
       {
         "link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://slicemachine.dev"
         },
         "icon": {
           "dimensions": {
@@ -132,16 +132,16 @@
           },
           "alt": "Placeholder image",
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
+          "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
         },
-        "title": "synergize enterprise functionalities",
-        "description": "deploy proactive action-items"
+        "title": "drive granular synergies",
+        "description": "scale innovative experiences"
       }
     ],
     "primary": {
-      "displayButtons": false,
-      "background": "white",
-      "colorTheme": "white",
+      "displayButtons": true,
+      "background": "black",
+      "colorTheme": "black",
       "animation": "zoom-in-right"
     }
   },
@@ -151,39 +151,13 @@
     "slice_type": "card_grid_slice",
     "items": [
       {
-        "fullWidth": false,
-        "background": "#56edb5",
-        "title": "streamline one-to-one platforms",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Amet ad nulla commodo. Cillum non irure laboris occaecat ut occaecat incididunt reprehenderit ad. Minim labore cupidatat labore ullamco ipsum veniam ex.",
-            "spans": []
-          }
-        ],
-        "alignText": "center"
-      },
-      {
-        "fullWidth": false,
-        "background": "#a6fdab",
-        "title": "productize customized relationships",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Cillum qui amet id tempor nostrud. Laborum commodo amet commodo consequat consectetur amet id ipsum ea dolore aliquip exercitation minim. Voluptate enim tempor cillum nostrud ipsum magna cupidatat enim.",
-            "spans": []
-          }
-        ],
-        "alignText": "center"
-      },
-      {
         "fullWidth": true,
-        "background": "#5c1a36",
-        "title": "visualize front-end mindshare",
+        "background": "#b71c",
+        "title": "brand wireless technologies",
         "content": [
           {
             "type": "paragraph",
-            "text": "Commodo labore pariatur incididunt enim do sit ut ipsum quis minim nulla.",
+            "text": "Ut consectetur pariatur esse occaecat pariatur cillum Lorem labore pariatur sit et incididunt laboris ad eu. Nostrud ad aliqua incididunt id.",
             "spans": []
           }
         ],
@@ -191,12 +165,12 @@
       },
       {
         "fullWidth": true,
-        "background": "#faf95d",
-        "title": "iterate next-generation supply-chains",
+        "background": "#bcf4d4",
+        "title": "incentivize distributed eyeballs",
         "content": [
           {
             "type": "paragraph",
-            "text": "Ipsum irure sint laborum duis non ea nisi ad veniam tempor ea aute ipsum non.",
+            "text": "Non duis excepteur non est irure consectetur esse enim esse.",
             "spans": []
           }
         ],
@@ -204,20 +178,33 @@
       },
       {
         "fullWidth": true,
-        "background": "#4096fc",
-        "title": "innovate user-centric e-tailers",
+        "background": "#bb28a3",
+        "title": "maximize best-of-breed deliverables",
         "content": [
           {
             "type": "paragraph",
-            "text": "Cillum occaecat ea mollit proident. Minim ex laborum aute incididunt eiusmod duis. Fugiat dolor occaecat exercitation Lorem veniam ad in voluptate sint sit cupidatat culpa culpa.",
+            "text": "Officia ipsum anim elit cupidatat dolore occaecat voluptate et id excepteur consectetur labore ad occaecat. Cupidatat dolor irure cillum duis.",
             "spans": []
           }
         ],
         "alignText": "center"
+      },
+      {
+        "fullWidth": true,
+        "background": "#74d0d4",
+        "title": "aggregate world-class web-readiness",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Aliqua in duis ex occaecat cillum officia incididunt sunt nulla sint duis reprehenderit fugiat elit.",
+            "spans": []
+          }
+        ],
+        "alignText": "left"
       }
     ],
     "primary": {
-      "animation": "fade-left"
+      "animation": "zoom-in-up"
     }
   },
   {
@@ -226,88 +213,56 @@
     "slice_type": "card_grid_slice",
     "items": [
       {
-        "fullWidth": true,
-        "background": "#988d27",
-        "title": "streamline open-source deliverables",
+        "fullWidth": false,
+        "background": "#d6977d",
+        "title": "visualize viral systems",
         "content": [
           {
             "type": "paragraph",
-            "text": "Velit pariatur laboris cillum culpa non ut fugiat enim cupidatat cupidatat. Ipsum officia commodo id. Commodo officia incididunt labore duis id consectetur sunt veniam aute et ullamco.",
+            "text": "Nisi pariatur mollit deserunt excepteur sunt cupidatat incididunt in commodo sit exercitation ad voluptate officia officia. Non proident nostrud dolore consequat magna officia.",
             "spans": []
           }
         ],
         "alignText": "left",
-        "lottie-animations": "design-animation",
-        "width": "transform vertical platforms",
-        "height": "maximize magnetic e-business"
+        "lottie-animations": "active-development",
+        "width": "unleash integrated channels",
+        "height": "enable cutting-edge action-items"
       },
       {
-        "fullWidth": true,
-        "background": "#7387fc",
-        "title": "aggregate cross-media action-items",
+        "fullWidth": false,
+        "background": "#45838c",
+        "title": "matrix B2C users",
         "content": [
           {
             "type": "paragraph",
-            "text": "Qui mollit eu eu aliquip consectetur occaecat culpa culpa sit voluptate voluptate. In non laborum ipsum sint tempor consectetur ut consequat elit reprehenderit nulla. Qui reprehenderit elit nostrud ea fugiat Lorem excepteur dolor.",
+            "text": "Exercitation duis in adipisicing dolore voluptate labore eiusmod deserunt eu aute minim fugiat officia. Lorem ipsum voluptate nostrud exercitation officia culpa exercitation qui ea nulla nostrud sint amet.",
             "spans": []
           }
         ],
-        "alignText": "center",
-        "lottie-animations": "testing-stage",
-        "width": "benchmark rich architectures",
-        "height": "repurpose holistic markets"
+        "alignText": "left",
+        "lottie-animations": "active-development",
+        "width": "engage vertical metrics",
+        "height": "implement granular architectures"
       },
       {
-        "fullWidth": true,
-        "background": "#b0c51d",
-        "title": "scale magnetic initiatives",
+        "fullWidth": false,
+        "background": "#54b015",
+        "title": "architect vertical paradigms",
         "content": [
           {
             "type": "paragraph",
-            "text": "Proident aliquip adipisicing enim occaecat ullamco ipsum labore.",
+            "text": "Est est Lorem quis sit ipsum. Consequat nulla eu ullamco mollit elit eu aliqua ea ex do culpa duis in.",
             "spans": []
           }
         ],
-        "alignText": "center",
+        "alignText": "left",
         "lottie-animations": "stack-selection",
-        "width": "revolutionize seamless portals",
-        "height": "synthesize visionary paradigms"
-      },
-      {
-        "fullWidth": false,
-        "background": "#69adf",
-        "title": "scale e-business architectures",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Reprehenderit eu anim amet aute do veniam ex. Anim tempor amet officia.",
-            "spans": []
-          }
-        ],
-        "alignText": "left",
-        "lottie-animations": "active-development",
-        "width": "empower transparent users",
-        "height": "brand B2B solutions"
-      },
-      {
-        "fullWidth": false,
-        "background": "#897246",
-        "title": "benchmark impactful methodologies",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Ipsum laborum occaecat esse excepteur laboris pariatur amet enim cupidatat quis.",
-            "spans": []
-          }
-        ],
-        "alignText": "center",
-        "lottie-animations": "active-development",
-        "width": "integrate revolutionary metrics",
-        "height": "incubate rich e-tailers"
+        "width": "aggregate web-enabled synergies",
+        "height": "empower ubiquitous metrics"
       }
     ],
     "primary": {
-      "animation": "none"
+      "animation": "fade-left"
     }
   },
   {
@@ -317,49 +272,55 @@
     "items": [
       {
         "fullWidth": false,
-        "background": "#29f4ef",
-        "title": "syndicate open-source metrics",
+        "background": "#d94fb7",
+        "title": "transition cross-platform initiatives",
         "content": [
           {
             "type": "paragraph",
-            "text": "Ex proident in ut ex.",
+            "text": "Mollit cupidatat eu magna incididunt consequat adipisicing dolore labore non id ut.",
             "spans": []
           }
         ],
-        "alignText": "left",
-        "lottie-animations": "-"
+        "alignText": "center",
+        "lottie-animations": "devops-audit",
+        "width": "syndicate innovative initiatives",
+        "height": "whiteboard vertical paradigms"
       },
       {
         "fullWidth": true,
-        "background": "#ce38dc",
-        "title": "extend cross-platform e-tailers",
+        "background": "#1ea396",
+        "title": "expedite rich blockchains",
         "content": [
           {
             "type": "paragraph",
-            "text": "Duis enim non irure laboris reprehenderit. Nisi fugiat est velit voluptate sint mollit. Duis consectetur anim irure exercitation velit cupidatat exercitation ea laborum laboris.",
+            "text": "Cillum exercitation excepteur labore eiusmod amet sit qui incididunt veniam nostrud duis Lorem Lorem.",
             "spans": []
           }
         ],
         "alignText": "left",
-        "lottie-animations": "infrastructure-animation"
+        "lottie-animations": "qa-page2",
+        "width": "maximize 24/7 applications",
+        "height": "seize back-end applications"
       },
       {
-        "fullWidth": true,
-        "background": "#36ac0f",
-        "title": "incubate global channels",
+        "fullWidth": false,
+        "background": "#bbe284",
+        "title": "facilitate web-enabled partnerships",
         "content": [
           {
             "type": "paragraph",
-            "text": "Ad excepteur velit est sint eu elit occaecat dolor culpa cupidatat culpa nisi voluptate elit ut. Mollit consequat pariatur nisi proident cillum nulla. Ullamco labore enim reprehenderit magna nisi minim officia.",
+            "text": "Elit proident laboris dolor non occaecat anim incididunt. Fugiat ea cupidatat anim. Exercitation ut cillum laborum adipisicing non nulla minim eu ea et ad.",
             "spans": []
           }
         ],
         "alignText": "left",
-        "lottie-animations": "infrastructure-animation"
+        "lottie-animations": "infrastructure-animation",
+        "width": "aggregate magnetic markets",
+        "height": "synthesize ubiquitous niches"
       }
     ],
     "primary": {
-      "animation": "zoom-in-right"
+      "animation": "fade-up-left"
     }
   }
 ]

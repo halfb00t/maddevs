@@ -348,7 +348,9 @@
               "stack-selection",
               "development-stage",
               "design-animation",
-              "active-development"
+              "active-development",
+              "cloud-migration",
+              "infrastructure"
             ]
           },
           "type": "Select"
@@ -450,10 +452,26 @@
             "placeholder": "",
             "options": [
               "infrastructure-animation",
-              "-"
+              "qa-page",
+              "qa-page2",
+              "devops-audit"
             ]
           },
           "type": "Select"
+        },
+        "width": {
+          "config": {
+            "label": "width",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "height": {
+          "config": {
+            "label": "height",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       }
     }

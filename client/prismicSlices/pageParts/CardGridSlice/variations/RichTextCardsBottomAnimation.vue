@@ -21,7 +21,10 @@
             class="card-item__content"
             v-html="renderCardContent($prismic.asHtml(item.content))"
           />
-          <div class="card-item__lottie">
+          <div
+            class="card-item__lottie"
+            :style="{ 'maxWidth': `${item.width}px`, 'height': `${item.height}px` }"
+          >
             <CardAnimation
               :animation-name="item['lottie-animations']"
             />

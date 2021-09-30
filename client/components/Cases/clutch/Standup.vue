@@ -24,17 +24,6 @@
     </div>
     <div class="container_middle case_img-wrap m-48_bottom">
       <Picture
-        :shadow="false"
-        :radius="false"
-        :width="1026"
-        :height="16.45"
-        :background="true"
-        folder="common"
-        file="safari-top-bar-white"
-        extension="jpg"
-        alt="Clutch: Safari Browser Top Bar White."
-      />
-      <Picture
         :width="1026"
         :height="554"
         :lazy="true"
@@ -158,7 +147,7 @@ export default {
       align-content: center;
       height: 90px;
       @include grid(repeat(3, 1fr), auto, 1px, 1px);
-      @include title($text-color--white, 16px, 166%);
+      @include default-text($text-color--white, 16px, 166%, 0, 600);
       font-weight: 600;
 
       @media screen and (max-width: 820px) {

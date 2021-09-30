@@ -37,7 +37,7 @@ exports[`Pipelines component should render correctly 1`] = `
       >
         <lottie-stub
           class="case_lottie"
-          id="workflow-dev"
+          id="pipeline-animation"
           options="[object Object]"
         />
       </div>
@@ -116,10 +116,10 @@ exports[`Pipelines component should render correctly 1`] = `
       class="container_middle case_img-wrap m-48_bottom"
     >
       <picture-stub
-        alt="Clutch: Safari Browser Top Bar white."
+        alt="Clutch: Safari Browser Top Bar."
         background="true"
         extension="jpg"
-        file="safari-top-bar-white"
+        file="swiper-frame"
         folder="common"
         height="16.45"
         lazy="true"
