@@ -101,13 +101,12 @@ export default {
       }
     }
     &-wrapp {
-    min-width: 1200px;
-    max-width: 1200px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 
     @media screen and (max-width: 870px) {
+      width: 1200px;
       left: unset;
       top:-44px;
       right: 210px;

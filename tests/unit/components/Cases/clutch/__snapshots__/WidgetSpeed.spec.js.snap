@@ -28,10 +28,10 @@ exports[`WidgetSpeed component should render correctly 1`] = `
     </div>
      
     <div
-      class="container_full background-color-blue-grey p-50_bottom p-50_top media-p-24_top media-p-0_bottom"
+      class="container_full background-color-blue-grey p-80_bottom p-80_top media-p-24_top media-p-0_bottom"
     >
       <div
-        class="case_img-section m-50_bottom"
+        class="case_img-section"
       >
         <div>
           <div

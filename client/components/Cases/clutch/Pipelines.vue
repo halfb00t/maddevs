@@ -19,7 +19,7 @@
         data-aos-anchor-placement="bottom"
       >
         <Lottie
-          id="workflow-dev"
+          id="pipeline-animation"
           :options="options"
           class="case_lottie"
           @animCreated="handleAnimation"
@@ -62,9 +62,9 @@
         :height="16.45"
         :background="true"
         folder="common"
-        file="safari-top-bar-white"
+        file="swiper-frame"
         extension="jpg"
-        alt="Clutch: Safari Browser Top Bar white."
+        alt="Clutch: Safari Browser Top Bar."
       />
       <Picture
         :width="1026"
@@ -99,7 +99,7 @@ export default {
   },
 
   mixins: [
-    playLottieMixin('workflow-dev', {
+    playLottieMixin('pipeline-animation', {
       animationData,
       autoplay: false,
       loop: false,

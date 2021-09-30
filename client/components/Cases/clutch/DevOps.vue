@@ -61,7 +61,7 @@
               v-lazy-load
               width="39px"
               height="39px"
-              :src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-logo.svg`)"
+              :data-src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-logo.svg`)"
               alt="MadDevs"
             >
             <TextParagraph class="case_cards-item-logo-text">
@@ -87,7 +87,7 @@
             v-lazy-load
             width="155px"
             height="147px"
-            :src="$getMediaFromS3(`/images/Cases/clutch/svg/rocket.svg`)"
+            :data-src="$getMediaFromS3(`/images/Cases/clutch/svg/rocket.svg`)"
             alt="Rocket"
           >
         </div>
