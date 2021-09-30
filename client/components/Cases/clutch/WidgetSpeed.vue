@@ -10,8 +10,8 @@
         time and looks just right.
       </TextParagraph>
     </div>
-    <div class="container_full background-color-blue-grey p-50_bottom p-50_top media-p-24_top media-p-0_bottom">
-      <div class="case_img-section m-50_bottom">
+    <div class="container_full background-color-blue-grey p-80_bottom p-80_top media-p-24_top media-p-0_bottom">
+      <div class="case_img-section">
         <div v-prlx="animationSettingsImg">
           <div class="case_image-wrap">
             <Picture
@@ -91,15 +91,14 @@ export default {
 
   }
 
-  @media screen and (max-width: 990px) {
+  @media screen and (max-width: 768px) {
     &_image-wrap {
       left: unset;
-      right: 1050px;
+      right: 942px;
       transform: none;
     }
 
     &_img-section {
-      margin-bottom: 0;
       max-height: 276px;
       overflow: hidden;
     }

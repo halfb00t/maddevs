@@ -30,7 +30,7 @@ exports[`WhyClutch component should render correctly 1`] = `
         class="p-96_bottom media-p-48_bottom"
       >
         <ol
-          class="case-list_numbered"
+          class="case-list_numbered case_whyclutch-item"
         >
           <li
             class="case_list-numbered_item"
