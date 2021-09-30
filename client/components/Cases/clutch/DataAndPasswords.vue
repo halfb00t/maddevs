@@ -176,8 +176,7 @@ export default {
         position: relative;
         text-align: center;
         height: 46px;
-        @include title($text-color--white, 14px, 166%);
-        font-weight: 400;
+        @include default-text($text-color--white, 14px, 166%, 0, 400);
 
         & span {
           min-width: 180px;
@@ -201,8 +200,7 @@ export default {
       align-content: center;
       height: 56px;
       @include grid(repeat(6, 1fr), auto, 0, 0);
-      @include title($text-color--white, 12px, 166%);
-      font-weight: 400;
+      @include default-text($text-color--white, 12px, 166%, -0.035em, 400);
 
       &:last-child {
         margin-top: 12px;

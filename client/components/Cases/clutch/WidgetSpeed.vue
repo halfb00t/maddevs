@@ -84,7 +84,7 @@ export default {
     min-width: 4211px;
     max-width: 4211px;
     min-height: 540px;
-    max-height: 540px;
+    max-height: 595px;
     position: relative;
     left: 50%;
     transform: translateX(-30%);
