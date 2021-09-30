@@ -59,30 +59,27 @@ export default {
   data() {
     return {
       clutchResults,
-      animationSettingsImg: {
-        direction: 'x',
-        speed: 0.2,
-        fromBottom: true,
-        reverse: true,
-        mobileMaxWidth: 991,
-      },
-
       animationSettingsTitle: {
-        speed: 0.05,
+        direction: 'y',
+        speed: 0.1,
+        fromBottom: false,
         reverse: true,
         limit: {
-          min: -55,
-          max: 55,
+          min: -60,
+          max: 60,
         },
 
         mobileMaxWidth: 991,
       },
 
       animationSettingsCards: {
+        direction: 'y',
+        speed: 0.2,
+        fromBottom: false,
         reverse: true,
         limit: {
-          min: -55,
-          max: 55,
+          min: -82,
+          max: 82,
         },
 
         mobileMaxWidth: 991,
@@ -100,7 +97,12 @@ export default {
   }
 
   &_column {
-    @include grid(repeat(1, 1fr), repeat(3, max-content), 0, 24px);
+    @include grid(repeat(1, 1fr), repeat(4, minmax(min-content, max-content)), 0, 24px);
+    ::v-deep{
+      .card-content{
+        align-self: start;
+      }
+    }
   }
 
   @media screen and (max-width: 880px) {
