@@ -182,7 +182,7 @@ export default {
   &_close {
     position: absolute;
     padding: 25px 25px 12px;
-    top: 36px;
+    top: 25px;
     right: 60px;
     cursor: pointer;
     z-index: 1;
@@ -226,7 +226,7 @@ export default {
   }
 
   &_content {
-    max-height: 90vh;
+    max-height: calc(100vh - 150px);
     padding: 0 84px;
     box-sizing: border-box;
   }
