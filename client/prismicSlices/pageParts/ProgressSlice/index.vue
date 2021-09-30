@@ -26,7 +26,7 @@
           <div class="progress__icons">
             <img
               v-lazy-load
-              :src="step.image && step.image.url"
+              :data-src="step.image && step.image.url"
               :alt="step.image && step.image.alt || 'Image'"
               width="48"
               height="63"
