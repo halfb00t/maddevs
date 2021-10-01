@@ -32,6 +32,9 @@ describe('careersController', () => {
       body: {
         payload: '{ "huntflow": {}, "email": {} }',
       },
+      headers: {
+        host: 'maddevs.io',
+      },
     }
 
     res = {
@@ -70,10 +73,20 @@ describe('careersController', () => {
       file: {
         path: 'path',
       },
+      headers: {
+        host: 'maddevs.io',
+      },
     }
     await controller.index(req, res)
     expect(res.status).toHaveBeenCalledWith(500)
     expect(json).toHaveBeenCalledWith({ message: 'templateId key not found or incorrect', status: 500 })
+  })
+
+  it('should correctly call sendCVResponseMail with another host', async () => {
+    req.headers.host = ''
+
+    await controller.index(req, res)
+    expect(emailsService.sendCVResponseMail).toHaveBeenCalledTimes(1)
   })
 
   it('should correctly handle invalid variables in req body', async () => {
@@ -83,6 +96,9 @@ describe('careersController', () => {
       },
       file: {
         path: 'path',
+      },
+      headers: {
+        host: 'maddevs.io',
       },
     }
     await controller.index(req, res)
@@ -98,11 +114,14 @@ describe('careersController', () => {
       file: {
         path: 'path',
       },
+      headers: {
+        host: 'maddevs.io',
+      },
     }
     const data = await controller.index(req, res)
     expect(data).toEqual({ email: { data: 'data' }, userEmail: { data: 'data' } })
     expect(huntflowService.sendApplication).toHaveBeenCalledTimes(1)
     expect(emailsService.sendMailFromVariables).toHaveBeenCalledTimes(1)
-    expect(emailsService.sendCVResponseMail).toHaveBeenCalledTimes(1)
+    expect(emailsService.sendCVResponseMail).toHaveBeenCalledTimes(2)
   })
 })
