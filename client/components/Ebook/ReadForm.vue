@@ -91,7 +91,7 @@ export default {
             templateId: 348595, // Required
             variables: {
               subject: 'Your Pricing Strategies Ebook by Mad Devs',
-              emailTo: process.env.emailMarketing,
+              emailTo: this.email,
               pdfUrl,
             },
 
@@ -108,7 +108,8 @@ export default {
             variables: {
               subject: 'Request a PDF file from the Ebook page',
               senderName: this.name,
-              emailTo: this.email,
+              emailTo: process.env.emailMarketing,
+              fromSender: this.email,
               page: window.location.href,
             },
 
