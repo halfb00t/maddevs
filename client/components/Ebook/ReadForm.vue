@@ -109,6 +109,7 @@ export default {
               subject: 'Request a PDF file from the Ebook page',
               senderName: this.name,
               emailTo: process.env.emailMarketing,
+              fromSender: this.email,
               page: window.location.href,
             },
 
