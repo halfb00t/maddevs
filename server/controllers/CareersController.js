@@ -19,7 +19,7 @@ async function index(req, res) {
   const huntflowReq = buildRequest(parsedReq, 'huntflow')
   const emailReq = buildRequest(parsedReq, 'email')
 
-  if (req.headers.host === 'https://maddevs.io') {
+  if (req.headers.host === 'maddevs.io') {
     const huntflowValidation = validate(huntflowReq, 'huntflow')
     if (!huntflowValidation.isValid) return res.status(huntflowValidation.error.status).json(huntflowValidation.error)
 
