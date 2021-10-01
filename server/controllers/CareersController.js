@@ -19,17 +19,21 @@ async function index(req, res) {
   const huntflowReq = buildRequest(parsedReq, 'huntflow')
   const emailReq = buildRequest(parsedReq, 'email')
 
-  const huntflowValidation = validate(huntflowReq, 'huntflow')
-  if (!huntflowValidation.isValid) return res.status(huntflowValidation.error.status).json(huntflowValidation.error)
+  if (req.headers.host === 'https://maddevs.io') {
+    const huntflowValidation = validate(huntflowReq, 'huntflow')
+    if (!huntflowValidation.isValid) return res.status(huntflowValidation.error.status).json(huntflowValidation.error)
 
-  const emailValidation = validate(emailReq, 'email')
-  if (!emailValidation.isValid) return res.status(emailValidation.error.status).json(emailValidation.error)
+    const emailValidation = validate(emailReq, 'email')
+    if (!emailValidation.isValid) return res.status(emailValidation.error.status).json(emailValidation.error)
 
-  const huntflowResponse = await sendApplication(huntflowReq)
-  const hrEmailResponse = await sendMailFromVariables(emailReq.body)
+    const huntflowResponse = await sendApplication(huntflowReq)
+    const hrEmailResponse = await sendMailFromVariables(emailReq.body)
+    const userEmailResponse = await sendCVResponseMail(emailReq.body)
+
+    return res.json({ email: hrEmailResponse, userEmail: userEmailResponse, huntflow: huntflowResponse })
+  }
   const userEmailResponse = await sendCVResponseMail(emailReq.body)
-
-  return res.json({ email: hrEmailResponse, userEmail: userEmailResponse, huntflow: huntflowResponse })
+  return res.json({ userEmail: userEmailResponse })
 }
 
 module.exports = {

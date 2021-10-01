@@ -105,7 +105,7 @@
                   :placeholder="$t('careers.detailPage.form.skills.placeholderCV')"
                   @input="handleFileSelect"
                 />
-                <!-- Erros -->
+                <!-- Errors -->
                 <div v-if="$v.cvFile.$dirty">
                   <span
                     v-if="!$v.cvFile.required"
@@ -126,7 +126,7 @@
                     {{ $t('form.errors.uploadMax') }}
                   </span>
                 </div>
-                <!-- End Erros -->
+                <!-- End Errors -->
               </label>
             </li>
           </ul>
