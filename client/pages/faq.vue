@@ -15,7 +15,6 @@ export default {
   },
 
   nuxtI18n: false,
-
   head() {
     return buildHead(getMetadata('faq'))
   },
