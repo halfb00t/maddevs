@@ -28,20 +28,18 @@ exports[`Workflow component should render correctly 1`] = `
     <div
       class="container_full case_image-container background-color-blue-grey m-96_bottom media-m-48_bottom"
     >
-      <div>
-        <div
-          class="case_image-wrapp"
-        >
-          <picture-stub
-            alt="Workflow"
-            extension="png"
-            file="workflow"
-            folder="clutch"
-            height="335"
-            lazy="true"
-            width="1440"
-          />
-        </div>
+      <div
+        class="case_image-wrapp"
+      >
+        <picture-stub
+          alt="Workflow"
+          extension="png"
+          file="workflow"
+          folder="clutch"
+          height="335"
+          lazy="true"
+          width="1440"
+        />
       </div>
     </div>
      

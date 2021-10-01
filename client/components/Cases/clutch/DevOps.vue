@@ -54,43 +54,31 @@
         Our specialists implemented a service to use internal ads. The service uses a third-party API to sponsor
         campaigns represented with adblocks.
       </TextParagraph>
-      <div class="case_cards-group m-48_bottom media-m-24_bottom">
-        <div class="case_cards-item">
-          <div class="case_cards-item-logo">
-            <img
-              v-lazy-load
-              width="39px"
-              height="39px"
-              :data-src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-logo.svg`)"
-              alt="MadDevs"
-            >
-            <TextParagraph class="case_cards-item-logo-text">
-              Mad Devs
-            </TextParagraph>
-          </div>
-          <div class="case_cards-item-text m-21_top">
-            <TextParagraph class="case_cards-item-text">
-              Engineering Your Growth
-            </TextParagraph>
-          </div>
-          <div class="case_cards-item-button">
-            <NuxtLink
-              to="/"
-              class="case_cards-item-button-text"
-            >
-              Visit Website
-            </NuxtLink>
-          </div>
-        </div>
-        <div class="case_cards-item">
+
+      <div
+        class="case_banner background-color-silver m-60_bottom media-m-48_bottom"
+        :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/clutch/svg/cat.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/bigcloud.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/smallcloud.svg`)})` }"
+      >
+        <TextParagraph class="case_banner-text">
+          Mad Devs
+        </TextParagraph>
+        <TextParagraph class="case_banner-text m-28_bottom">
+          Engineering your growth
+        </TextParagraph>
+        <NuxtLink
+          to="/"
+          class="case_button"
+        >
+          <span class="case_button-text">Visit Website</span>
           <img
             v-lazy-load
-            width="155px"
-            height="147px"
-            :data-src="$getMediaFromS3(`/images/Cases/clutch/svg/rocket.svg`)"
+            width="47px"
+            height="43px"
+            :data-src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-icon.svg`)"
             alt="Rocket"
+            class="case_button-image"
           >
-        </div>
+        </NuxtLink>
       </div>
       <h3 class="case_title_h3 m-12_bottom">
         Implemented Matchmaking and Shortlist
@@ -147,68 +135,84 @@ export default {
     max-width: 813px;
   }
 
-  &_cards {
-    &-group {
-      padding: 18px 70px;
-      @include grid(repeat(2, 1fr), auto, 10px, 10px);
-      align-items: center;
-      background: linear-gradient(180deg, #FFFFFF 13.18%, rgba(254, 254, 254, 0.98194) 13.19%, rgba(238, 245, 247, 0.77) 44.33%, rgba(206, 226, 233, 0.43) 71.17%, rgba(204, 225, 232, 0.45918) 75.55%, rgba(202, 224, 231, 0.49) 91.12%);
-      @media screen and (max-width: 730px) {
-        padding: 10px 20px;
+  &_banner {
+    padding: 20px 36px 20px;
+    height: 151px;
+    background-position: right 10px top, right -2px top, top 20px right 290px;
+    background-size: 270px, 285px, 70px;
+    background-repeat: no-repeat;
+
+    &-text {
+      &:first-child {
+        color: $text-color--red;
+      }
+      @include font('Montserrat',30px, 800);
+      line-height: 36px;
+      color: $text-color--black;
+    }
+  }
+
+  &_button {
+    position: relative;
+    width: 220px;
+    height: 42px;
+    padding-right: 43px;
+    display: flex;
+    &-text{
+      flex-grow: 1;
+      background-color: $text-color--red;
+      @include font('Montserrat',14px, 800);
+      line-height: 40px;
+      text-align: center;
+      color: $text-color--white-primary;
+    }
+    &-image{
+      position: absolute;
+      top:0;
+      right: -3px;
+    }
+  }
+  @media screen and (max-width: 880px) {
+    &_banner {
+      height: 180px;
+      &-text {
+        width: 250px;
       }
     }
+  }
 
-    &-item {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-
-      &-logo {
-        align-self: flex-start;
-        display: flex;
-        align-content: center;
+    @media screen and (max-width: 769px) {
+      &_banner {
+        padding: 15px 15px 15px;
+        height: 155px;
+        background-position: right -20px top, right -40px top, top 20px right 146px;
+        background-size: 170px, 175px, 50px;
 
         &-text {
-          margin-top: 5px;
-          margin-left: 15px;
-          display: inline-block;
-          @include font('Roboto', 20px, 600);
+          width: 300px;
+          font-size: 24px;
+          line-height: 29px;
         }
       }
 
-      &-text {
-        flex-grow: 1;
-        align-self: flex-start;
-        @include font('Roboto', 18px, 400);
-      }
-
-      &-button {
-        align-self: flex-start;
-
-        &-text {
-          display: inline-block;
-          background-color: #FF3D2E;
-          padding: 7px 25px;
-          @include default-text($text-color--white, 14px, 166%, -0.035em, 500);
-        }
-      }
-
-      @media screen and (max-width: 650px) {
-        &-logo-text {
-          font-size: 14px;
-        }
-
-        &-text {
+      &_button {
+        width: 151px;
+        height: 30px;
+        padding-right: 33px;
+        &-text{
           font-size: 12px;
+          line-height: 30px;
         }
-
-        &-button-text {
-          padding: 5px 10px;
-          font-size: 10px;
+        &-image{
+         width: 33px;
+          height: 30px;
+          right: 1px;
         }
       }
+  }
+  @media screen and (max-width: 460px) {
+    &_banner-text{
+    width: 200px;
     }
   }
 }

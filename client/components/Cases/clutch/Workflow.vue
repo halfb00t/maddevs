@@ -11,17 +11,15 @@
       </TextParagraph>
     </div>
     <div class="container_full case_image-container background-color-blue-grey m-96_bottom media-m-48_bottom">
-      <div v-prlx="animationSettings">
-        <div class="case_image-wrapp">
-          <Picture
-            folder="clutch"
-            file="workflow"
-            extension="png"
-            alt="Workflow"
-            :width="1440"
-            :height="335"
-          />
-        </div>
+      <div class="case_image-wrapp">
+        <Picture
+          folder="clutch"
+          file="workflow"
+          extension="png"
+          alt="Workflow"
+          :width="1440"
+          :height="335"
+        />
       </div>
     </div>
     <div
@@ -70,20 +68,6 @@ export default {
     }),
   ],
 
-  data() {
-    return {
-      animationSettings: {
-        reverse: true,
-        limit: {
-          min: 0,
-          max: 0,
-        },
-
-        mobileMaxWidth: 961,
-        fromBottom: true,
-      },
-    }
-  },
 }
 </script>
 

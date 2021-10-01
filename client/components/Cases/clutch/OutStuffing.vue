@@ -19,7 +19,7 @@
     >
       Key results achieved by the Clutch.co and Mad Devs collaboration
     </h3>
-    <div class="case_cards-container m-96_bottom media-m-48_bottom">
+    <div class="case_cards-container m-12_bottom">
       <div class="case_column">
         <CardTechSolution
           v-for="result in clutchResults.slice(0, 4)"
@@ -69,7 +69,7 @@ export default {
           max: 60,
         },
 
-        mobileMaxWidth: 991,
+        mobileMaxWidth: 977,
       },
 
       animationSettingsCards: {
@@ -78,11 +78,11 @@ export default {
         fromBottom: false,
         reverse: true,
         limit: {
-          min: -82,
-          max: 82,
+          min: -84,
+          max: 84,
         },
 
-        mobileMaxWidth: 991,
+        mobileMaxWidth: 977,
       },
     }
   },
@@ -105,13 +105,19 @@ export default {
     }
   }
 
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 976px) {
     &_cards-container {
+      margin-bottom: 96px;
       @include grid(repeat(1, 1fr), auto, 0, 10px);
     }
 
     &_column {
       grid-row-gap: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &_cards-container {
+      margin-bottom: 48px;
     }
   }
 }

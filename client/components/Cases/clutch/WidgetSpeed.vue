@@ -33,7 +33,6 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Picture from '@/components/Cases/shared/Picture'
-import { resolvedIssues } from '@/data/caseITC'
 
 export default {
   name: 'WidgetSpeed',
@@ -44,33 +43,11 @@ export default {
 
   data() {
     return {
-      resolvedIssues,
       animationSettingsImg: {
         direction: 'x',
         speed: 0.2,
         fromBottom: true,
         reverse: true,
-        mobileMaxWidth: 991,
-      },
-
-      animationSettingsTitle: {
-        speed: 0.05,
-        reverse: true,
-        limit: {
-          min: -55,
-          max: 55,
-        },
-
-        mobileMaxWidth: 991,
-      },
-
-      animationSettingsCards: {
-        reverse: true,
-        limit: {
-          min: -55,
-          max: 55,
-        },
-
         mobileMaxWidth: 991,
       },
     }

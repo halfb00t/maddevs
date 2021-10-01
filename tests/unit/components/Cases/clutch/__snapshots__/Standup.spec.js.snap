@@ -129,7 +129,9 @@ exports[`Standup component should render correctly 1`] = `
           
             </div>
              
-            <div>
+            <div
+              class="case_card-body-header-2"
+            >
               
             Status (Done / In 
               <br />

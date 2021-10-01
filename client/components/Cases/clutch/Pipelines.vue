@@ -105,21 +105,6 @@ export default {
       loop: false,
     }),
   ],
-
-  data() {
-    return {
-      animationSettings: {
-        reverse: true,
-        limit: {
-          min: 0,
-          max: 0,
-        },
-
-        mobileMaxWidth: 961,
-        fromBottom: true,
-      },
-    }
-  },
 }
 </script>
 
