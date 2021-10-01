@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container_regular m-48_top media-m-24_top m-48_bottom media-m-24_bottom"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      Clutch.co is one of the leading platforms whose mission is to provide unbiased reviews and ratings for IT,
+      marketing, and business service providers. By providing reliable information, analysis data, and genuine
+      reviews, the platform assists companies and business owners in choosing the right partners for a specific
+      project or conducting their research and evaluation.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full background-color-silver p-72_bottom m-72_bottom media-m-48_bottom case_review-container"
+    >
+      <div
+        class="container_regular"
+      >
+        <h2
+          class="case_title_h2 case_title p-72_top media-p-41_top m-48_bottom media-m-24_bottom"
+        >
+          
+        Recognized as the Most Trusted Business Reviews Platform
+      
+        </h2>
+         
+        <div
+          class="m-72_bottom media-m-20_bottom"
+        >
+          <picture-stub
+            alt="map"
+            extension="png"
+            file="map"
+            folder="clutch"
+            height="278"
+            lazy="true"
+            width="698"
+          />
+        </div>
+         
+        <div
+          class="m-48_bottom case_statistics-container case_statistics-container-3"
+        >
+          <div
+            class="case_statistics-item"
+            id="about-item-0"
+          >
+            <!---->
+             
+            <img
+              alt="account"
+              class="m-21_bottom"
+              data-src="img.jpg"
+              data-testid="test-icon"
+              height="30px"
+              width="30px"
+            />
+             
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(4, 58, 180);"
+            >
+              <span
+                data-end-value="1"
+                data-start-value="1"
+                id="statistics-about-0"
+              >
+                
+      1
+    
+              </span>
+              
+    million
+  
+            </h3>
+             
+            <p
+              class="case_paragraph case_statistics-item_description"
+            >
+              
+    monthly buyers
+  
+            </p>
+          </div>
+          <div
+            class="case_statistics-item"
+            id="about-item-1"
+          >
+            <!---->
+             
+            <img
+              alt="analytics"
+              class="m-21_bottom"
+              data-src="img.jpg"
+              data-testid="test-icon"
+              height="30px"
+              width="30px"
+            />
+             
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(4, 58, 180);"
+            >
+              <span
+                data-end-value="225800"
+                data-start-value="225,800"
+                id="statistics-about-1"
+              >
+                
+      225,800
+    
+              </span>
+              
+    +
+  
+            </h3>
+             
+            <p
+              class="case_paragraph case_statistics-item_description"
+            >
+              
+    companies
+  
+            </p>
+          </div>
+          <div
+            class="case_statistics-item"
+            id="about-item-2"
+          >
+            <!---->
+             
+            <img
+              alt="bookmark"
+              class="m-21_bottom"
+              data-src="img.jpg"
+              data-testid="test-icon"
+              height="30px"
+              width="30px"
+            />
+             
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(4, 58, 180);"
+            >
+              <span
+                data-end-value="104300"
+                data-start-value="104,300"
+                id="statistics-about-2"
+              >
+                
+      104,300
+    
+              </span>
+              
+    +
+  
+            </h3>
+             
+            <p
+              class="case_paragraph case_statistics-item_description"
+            >
+              
+    client reviewes
+  
+            </p>
+          </div>
+        </div>
+         
+        <div
+          class="case_cards"
+        >
+          <div
+            class="case_cards-group"
+          >
+            <div
+              class="case_card background-color-white"
+              id="clutch-card-0"
+            >
+              <div
+                class="case_card-img"
+                style="width: 120px;"
+              >
+                <picture-stub
+                  alt="review-technologyFast"
+                  extension="webp"
+                  file="review-technologyFast"
+                  folder="clutch"
+                  height="120"
+                  lazy="true"
+                  width="120"
+                />
+              </div>
+               
+              <p
+                class="case_paragraph m-50_top"
+              >
+                
+              Deloitte’s Technology Fast 500
+            
+              </p>
+            </div>
+            <div
+              class="case_card background-color-white"
+              id="clutch-card-1"
+            >
+              <div
+                class="case_card-img"
+                style="width: 140px;"
+              >
+                <picture-stub
+                  alt="review-linkedIn"
+                  extension="webp"
+                  file="review-linkedIn"
+                  folder="clutch"
+                  height="120"
+                  lazy="true"
+                  width="140"
+                />
+              </div>
+               
+              <p
+                class="case_paragraph m-50_top"
+              >
+                
+              LinkedIn Top 50 Startups in the U.S.
+            
+              </p>
+            </div>
+            <div
+              class="case_card background-color-white"
+              id="clutch-card-2"
+            >
+              <div
+                class="case_card-img"
+                style="width: 120px;"
+              >
+                <picture-stub
+                  alt="inc-500"
+                  extension="webp"
+                  file="inc-500"
+                  folder="clutch"
+                  height="120"
+                  lazy="true"
+                  width="120"
+                />
+              </div>
+               
+              <p
+                class="case_paragraph m-50_top"
+              >
+                
+              Inc 500 America’s Fastest-Growing Private Companies
+            
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

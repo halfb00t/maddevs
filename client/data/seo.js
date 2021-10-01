@@ -117,7 +117,7 @@ export const meta = {
   clutch: {
     title: 'Mad Devs Case Study: Data-driven B2B platform of in-depth client reviews',
     description: 'AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions',
-    url: 'https://maddevs.io/clients/case-studies/citcam/',
+    url: 'https://maddevs.io/clients/case-studies/clutch/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Data-driven B2B platform smoothly adapt to increasing loads and numbers or users", "description": "AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   blog: {

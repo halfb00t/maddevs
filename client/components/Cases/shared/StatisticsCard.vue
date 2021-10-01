@@ -2,6 +2,7 @@
   <div class="case_statistics-item">
     <TextParagraph
       v-if="headerText"
+      data-testid="card-header-text"
       class="case_statistics-item_header"
       :color="headerTextColor"
     >
@@ -11,6 +12,7 @@
       v-if="icon"
       v-lazy-load
       class="m-21_bottom"
+      data-testid="test-icon"
       :data-src="$getMediaFromS3(`/images/Cases/${icon.folder}/${icon.type}/${icon.name}.${icon.type}`)"
       :alt="icon.name || 'Icon'"
       :width="icon.width || '30px'"

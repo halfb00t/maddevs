@@ -128,7 +128,7 @@ exports[`CasesList component should render correctly 1`] = `
         link="/clients/case-studies/clutch/"
         logo="[object Object]"
         posterlink="/images/Cases/citycam/png/clutch-banner.png"
-        subtitle="B2B rating and reviews"
+        subtitle="B2B"
         title="The growth of Clutch.co"
         titletag="h3"
         videofilename="/videos/clutch-banner.mp4#t=1"
