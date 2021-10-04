@@ -143,16 +143,6 @@ export default {
     &--normal:hover {
       background-color: lighten($bgcolor--red, 10%) !important;
     }
-
-    @media screen and (max-width: 768px) {
-      max-width: 393px;
-      margin: 0 auto;
-    }
-
-    @media screen and (max-width: 580px) {
-      max-width: 215px;
-      padding: 14px 0;
-    }
   }
 }
 </style>
