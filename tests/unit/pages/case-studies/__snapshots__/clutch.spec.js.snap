@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clutch _uid component should render correctly 1`] = `
+<div>
+  <feature
+    flag="clutchCase"
+  >
+    <main
+      class="case case--clutch"
+    >
+      <section
+        class="case_header case_header-clutch"
+        id="transparent-header-area"
+      >
+        <img
+          alt="case video fallback"
+          class="case_main-video_fallback"
+          data-src="img.jpg"
+        />
+         
+        <!---->
+         
+        <div
+          class="case_header-content"
+        >
+          <div
+            class="case_header-text"
+            style="opacity: 1;"
+          >
+            <div
+              class="case_case-study-item"
+            >
+              
+        Case Study
+      
+            </div>
+             
+            <h1
+              class="case_header-title"
+            >
+              
+        The growth 
+              <br />
+               of Clutch.co
+      
+            </h1>
+             
+            <p
+              class="case_header-description"
+            >
+              
+        Helping a successful data-driven B2B platform smoothly adapt to increasing 
+              <br />
+              
+        loads and numbers or users through cutting-edge technological solutions
+      
+            </p>
+             
+          </div>
+           
+          <img
+            alt="A platform of client reviews and content"
+            class="case_header-logo case_clutch-logo"
+            height="63"
+            src="img.jpg"
+            style="opacity: 1;"
+            width="218"
+          />
+        </div>
+      </section>
+       
+      <main-stub />
+       
+      <section
+        class="case_footer container_full"
+      >
+        <img
+          alt="Better cities with CityCam"
+          class="case_logotype-citycam"
+          data-src="[object Object]"
+          height="72"
+          width="195"
+        />
+         
+        <h2
+          class="case_title case_title_h2 case_title-citycam"
+        >
+          
+      Better cities with CityCam
+    
+        </h2>
+         
+        <nuxtlink-stub
+          class="case_next-project-button"
+          to="/clients/case-studies/citycam/"
+        >
+          
+    Read next project
+  
+        </nuxtlink-stub>
+      </section>
+    </main>
+  </feature>
+</div>
+`;

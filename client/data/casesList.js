@@ -140,7 +140,7 @@ export const casesList = [
     id: 'clutch',
     link: '/clients/case-studies/clutch/',
     video: '/videos/clutch-banner.mp4#t=1',
-    subtitle: 'B2B rating and reviews',
+    subtitle: 'B2B',
     title: 'The growth of Clutch.co',
     desc: 'Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions',
     poster: '/images/Cases/citycam/png/clutch-banner.png',

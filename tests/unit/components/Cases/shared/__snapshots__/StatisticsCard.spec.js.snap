@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatisticsCard component should render correctly 1`] = `
+<div>
+  <div
+    class="case_statistics-item"
+  >
+    <p
+      class="case_paragraph case_statistics-item_header"
+      data-testid="card-header-text"
+      style="color: rgb(255, 255, 255);"
+    >
+      
+    test
+  
+    </p>
+     
+    <img
+      alt="account"
+      class="m-21_bottom"
+      data-src="img.jpg"
+      data-testid="test-icon"
+      height="30px"
+      width="30px"
+    />
+     
+    <h3
+      class="case_statistics-item_number p-16_bottom"
+      style="color: rgb(50, 55, 255);"
+    >
+      <span
+        data-end-value="10"
+        data-start-value="10"
+        id="statistics-test-1"
+      >
+        
+      10
+    
+      </span>
+      
+    USD
+  
+    </h3>
+     
+    <p
+      class="case_paragraph case_statistics-item_description"
+      style="color: rgb(255, 255, 50);"
+    >
+      
+    test buyers
+  
+    </p>
+  </div>
+</div>
+`;
