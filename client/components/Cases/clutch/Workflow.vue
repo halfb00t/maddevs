@@ -30,7 +30,7 @@
       <h3 class="case_title_h3 m-12_bottom">
         DEV Workflow for Project DEV with UI test step
       </h3>
-      <Lottie
+      <LottieMad
         id="workflow-dev"
         :options="options"
         class="case_lottie"
@@ -46,17 +46,16 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/clutch/workflow.json'
 import playLottieMixin from '@/mixins/playLottieMixin'
+import animationData from '@/assets/lottie/clutch/workflow.json'
 import Picture from '@/components/Cases/shared/Picture'
 
 export default {
   name: 'Workflow',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad: () => import('@/components/shared/LottieMad'),
     Picture,
   },
 

@@ -51,7 +51,7 @@
         <h2 class="case_title_h2 case_subtitle p-48_top media-p-24_top m-24_bottom media-m-12_bottom">
           Board tracing
         </h2>
-        <Lottie
+        <LottieMad
           id="power-supply"
           class="case_lottie"
           :options="options"
@@ -63,7 +63,6 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuote from '@/components/Cases/shared/TextQuote'
 import ListNumbered from '@/components/Cases/shared/ListNumbered'
@@ -79,7 +78,7 @@ export default {
     ListNumbered,
     TextParagraph,
     TextQuote,
-    Lottie,
+    LottieMad: () => import('@/components/shared/LottieMad'),
   },
 
   mixins: [
