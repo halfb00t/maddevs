@@ -1,14 +1,18 @@
 <template>
   <section
-    id="read-online-anchor"
     class="ebook-read"
   >
     <div class="container">
-      <h2 class="ebook-read__title">
+      <h2
+        id="read-online-anchor"
+        class="ebook-read__title"
+      >
         Read articles online
       </h2>
 
-      <div class="ebook-read__cards">
+      <div
+        class="ebook-read__cards"
+      >
         <ReadCard
           v-for="(post, i) of posts"
           :key="`post-card_${i}`"
@@ -101,7 +105,6 @@ export default {
 
 <style lang="scss" scoped>
 .ebook-read {
-  padding: 96px 0 64px;
   background-color: #fff;
 
   &__form {
@@ -128,11 +131,8 @@ export default {
     }
 
     @media screen and (max-width: 540px) {
-      margin-bottom: 48px;
-    }
-
-    @media screen and (max-width: 540px) {
       padding: 32px 38px;
+      margin-bottom: 0;
     }
 
     @media screen and (max-width: 376px) {
@@ -192,11 +192,8 @@ export default {
     padding: 64px 0 56px;
   }
 
-  @media screen and (max-width: 540px) {
-    padding: 72px 0;
-  }
-
   &__title {
+    padding: 96px 0 64px;
     width: 100%;
     @include font('Inter', 42px, 600);
     line-height: 46px;
@@ -211,6 +208,8 @@ export default {
     @media screen and (max-width: 540px) {
       @include font('Inter', 28px, 600);
       line-height: 32px;
+      padding: 72px 0;
+      margin-bottom: 0;
     }
   }
 
