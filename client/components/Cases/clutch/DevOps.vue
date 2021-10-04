@@ -54,31 +54,34 @@
         Our specialists implemented a service to use internal ads. The service uses a third-party API to sponsor
         campaigns represented with adblocks.
       </TextParagraph>
-
-      <div
-        class="case_banner background-color-silver m-60_bottom media-m-48_bottom"
-        :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/clutch/svg/cat.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/bigcloud.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/smallcloud.svg`)})` }"
+      <NuxtLink
+        to="/"
       >
-        <TextParagraph class="case_banner-text">
-          Mad Devs
-        </TextParagraph>
-        <TextParagraph class="case_banner-text m-28_bottom">
-          Engineering your growth
-        </TextParagraph>
-        <NuxtLink
-          to="/"
-          class="case_button"
+        <div
+          class="case_banner background-color-silver m-60_bottom media-m-48_bottom"
+          :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/clutch/svg/cat.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/bigcloud.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/smallcloud.svg`)})` }"
         >
-          <span class="case_button-text">Visit Website</span>
-          <img
-            width="47px"
-            height="43px"
-            :src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-icon.svg`)"
-            alt="MadDevs logo"
-            class="case_button-image"
+          <TextParagraph class="case_banner-text">
+            Mad Devs
+          </TextParagraph>
+          <TextParagraph class="case_banner-text m-28_bottom">
+            Engineering your growth
+          </TextParagraph>
+          <NuxtLink
+            to="/"
+            class="case_button"
           >
-        </NuxtLink>
-      </div>
+            <span class="case_button-text">Visit Website</span>
+            <img
+              width="47px"
+              height="43px"
+              :src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-icon.svg`)"
+              alt="MadDevs logo"
+              class="case_button-image"
+            >
+          </NuxtLink>
+        </div>
+      </NuxtLink>
       <h3 class="case_title_h3 m-12_bottom">
         Implemented Matchmaking and Shortlist
       </h3>
