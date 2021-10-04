@@ -105,7 +105,7 @@
                   :placeholder="$t('careers.detailPage.form.skills.placeholderCV')"
                   @input="handleFileSelect"
                 />
-                <!-- Erros -->
+                <!-- Errors -->
                 <div v-if="$v.cvFile.$dirty">
                   <span
                     v-if="!$v.cvFile.required"
@@ -126,7 +126,7 @@
                     {{ $t('form.errors.uploadMax') }}
                   </span>
                 </div>
-                <!-- End Erros -->
+                <!-- End Errors -->
               </label>
             </li>
           </ul>
@@ -307,8 +307,10 @@ export default {
 
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
-      const applicantData = await this.buildApplicantData()
-      this.sendVacancy(applicantData)
+      if (process.env.FF_ENVIRONMENT === 'production') {
+        const applicantData = await this.buildApplicantData()
+        this.sendVacancy(applicantData)
+      }
       this.$refs.successModal.show()
       this.resetForm()
     },
