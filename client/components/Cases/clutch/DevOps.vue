@@ -71,11 +71,10 @@
         >
           <span class="case_button-text">Visit Website</span>
           <img
-            v-lazy-load
             width="47px"
             height="43px"
-            :data-src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-icon.svg`)"
-            alt="Rocket"
+            :src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-icon.svg`)"
+            alt="MadDevs logo"
             class="case_button-image"
           >
         </NuxtLink>
@@ -154,6 +153,7 @@ export default {
 
   &_button {
     position: relative;
+    overflow: hidden;
     width: 220px;
     height: 42px;
     padding-right: 43px;
@@ -169,7 +169,7 @@ export default {
     &-image{
       position: absolute;
       top:0;
-      right: -3px;
+      right: -2px;
     }
   }
   @media screen and (max-width: 880px) {
@@ -204,7 +204,7 @@ export default {
           line-height: 30px;
         }
         &-image{
-         width: 33px;
+         width: 34px;
           height: 30px;
           right: 1px;
         }
