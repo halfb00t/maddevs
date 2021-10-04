@@ -58,7 +58,7 @@
             <div class="case_card-body-header-1">
               OKR1: Optimized performance of the CGL Directory pages
             </div>
-            <div>
+            <div class="case_card-body-header-2">
               Status (Done / In <br> Progress, %)
             </div>
           </div>
@@ -170,6 +170,13 @@ export default {
       &-header-1 {
         grid-column-start: 1;
         grid-column-end: 3;
+      }
+
+      &-header-1,&-header-2{
+        padding: 29px 36px 16px;
+        @media screen and (max-width: 875px) {
+          padding: 7px 14px;
+        }
       }
 
       &-1 {

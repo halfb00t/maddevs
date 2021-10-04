@@ -103,66 +103,42 @@ exports[`DevOps component should render correctly 1`] = `
       </p>
        
       <div
-        class="case_cards-group m-48_bottom media-m-24_bottom"
+        class="case_banner background-color-silver m-60_bottom media-m-48_bottom"
       >
-        <div
-          class="case_cards-item"
+        <p
+          class="case_paragraph case_banner-text"
         >
-          <div
-            class="case_cards-item-logo"
-          >
-            <img
-              alt="MadDevs"
-              data-src="img.jpg"
-              height="39px"
-              width="39px"
-            />
-             
-            <p
-              class="case_paragraph case_cards-item-logo-text"
-            >
-              
-            Mad Devs
           
-            </p>
-          </div>
-           
-          <div
-            class="case_cards-item-text m-21_top"
-          >
-            <p
-              class="case_paragraph case_cards-item-text"
-            >
-              
-            Engineering Your Growth
-          
-            </p>
-          </div>
-           
-          <div
-            class="case_cards-item-button"
-          >
-            <nuxtlink
-              class="case_cards-item-button-text"
-              to="/"
-            >
-              
-            Visit Website
-          
-            </nuxtlink>
-          </div>
-        </div>
+        Mad Devs
+      
+        </p>
          
-        <div
-          class="case_cards-item"
+        <p
+          class="case_paragraph case_banner-text m-28_bottom"
         >
+          
+        Engineering your growth
+      
+        </p>
+         
+        <nuxtlink
+          class="case_button"
+          to="/"
+        >
+          <span
+            class="case_button-text"
+          >
+            Visit Website
+          </span>
+           
           <img
             alt="Rocket"
+            class="case_button-image"
             data-src="img.jpg"
-            height="147px"
-            width="155px"
+            height="43px"
+            width="47px"
           />
-        </div>
+        </nuxtlink>
       </div>
        
       <h3

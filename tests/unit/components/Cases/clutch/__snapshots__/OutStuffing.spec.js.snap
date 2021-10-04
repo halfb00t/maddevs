@@ -33,7 +33,7 @@ exports[`OutStuffing component should render correctly 1`] = `
     </h3>
      
     <div
-      class="case_cards-container m-96_bottom media-m-48_bottom"
+      class="case_cards-container m-12_bottom"
     >
       <div
         class="case_column"

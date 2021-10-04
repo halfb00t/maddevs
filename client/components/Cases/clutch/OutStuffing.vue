@@ -19,7 +19,7 @@
     >
       Key results achieved by the Clutch.co and Mad Devs collaboration
     </h3>
-    <div class="case_cards-container m-96_bottom media-m-48_bottom">
+    <div class="case_cards-container m-12_bottom">
       <div class="case_column">
         <CardTechSolution
           v-for="result in clutchResults.slice(0, 4)"
@@ -59,33 +59,30 @@ export default {
   data() {
     return {
       clutchResults,
-      animationSettingsImg: {
-        direction: 'x',
-        speed: 0.2,
-        fromBottom: true,
-        reverse: true,
-        mobileMaxWidth: 991,
-      },
-
       animationSettingsTitle: {
-        speed: 0.05,
+        direction: 'y',
+        speed: 0.1,
+        fromBottom: false,
         reverse: true,
         limit: {
-          min: -55,
-          max: 55,
+          min: -60,
+          max: 60,
         },
 
-        mobileMaxWidth: 991,
+        mobileMaxWidth: 977,
       },
 
       animationSettingsCards: {
+        direction: 'y',
+        speed: 0.2,
+        fromBottom: false,
         reverse: true,
         limit: {
-          min: -55,
-          max: 55,
+          min: -84,
+          max: 84,
         },
 
-        mobileMaxWidth: 991,
+        mobileMaxWidth: 977,
       },
     }
   },
@@ -100,16 +97,27 @@ export default {
   }
 
   &_column {
-    @include grid(repeat(1, 1fr), repeat(3, max-content), 0, 24px);
+    @include grid(repeat(1, 1fr), repeat(4, minmax(min-content, max-content)), 0, 24px);
+    ::v-deep{
+      .card-content{
+        align-self: start;
+      }
+    }
   }
 
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 976px) {
     &_cards-container {
+      margin-bottom: 96px;
       @include grid(repeat(1, 1fr), auto, 0, 10px);
     }
 
     &_column {
       grid-row-gap: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &_cards-container {
+      margin-bottom: 48px;
     }
   }
 }
