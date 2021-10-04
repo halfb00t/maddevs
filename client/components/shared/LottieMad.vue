@@ -11,13 +11,9 @@ import lottie from 'lottie-web'
 export default {
   name: 'LottieMad',
   props: {
-    options: {
-      type: Object,
-      required: true,
-    },
-
     height: Number,
     width: Number,
+    lottieLink: String,
   },
 
   data() {
@@ -32,15 +28,16 @@ export default {
   },
 
   mounted() {
+    console.log(this.lottieLink)
     this.anim = lottie.loadAnimation({
       container: this.$refs.lavContainer,
       renderer: 'svg',
-      loop: this.options.loop !== false,
-      autoplay: this.options.autoplay !== false,
-      animationData: this.options.animationData,
-      rendererSettings: this.options.rendererSettings,
+      loop: false,
+      autoplay: false,
+      path: this.lottieLink,
     })
     this.$emit('animCreated', this.anim)
   },
 }
+
 </script>

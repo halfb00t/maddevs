@@ -53,8 +53,9 @@
         </h2>
         <LottieMad
           id="power-supply"
+          v-lazy-load
           class="case_lottie"
-          :options="options"
+          :lottie-link="$getMediaFromS3(`/lottie/board-tracing.json`)"
           @animCreated="handleAnimation"
         />
       </div>
@@ -67,9 +68,9 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuote from '@/components/Cases/shared/TextQuote'
 import ListNumbered from '@/components/Cases/shared/ListNumbered'
 import ListNumberedItem from '@/components/Cases/shared/ListNumberedItem'
-import playLottieMixin from '@/mixins/playLottieMixin'
-import animationData from '@/assets/lottie/citycam/board-tracing.json'
 import { components } from '@/data/caseCityCam'
+import playLottie from '@/helpers/playLottie'
+import LottieMad from '@/components/shared/LottieMad'
 
 export default {
   name: 'PowerSupply',
@@ -78,21 +79,19 @@ export default {
     ListNumbered,
     TextParagraph,
     TextQuote,
-    LottieMad: () => import('@/components/shared/LottieMad'),
+    LottieMad,
   },
-
-  mixins: [
-    playLottieMixin('power-supply', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
-  ],
 
   data() {
     return {
       components,
     }
+  },
+
+  methods: {
+    handleAnimation(animation) {
+      playLottie(animation, 'power-supply')
+    },
   },
 }
 </script>
