@@ -102,44 +102,48 @@ exports[`DevOps component should render correctly 1`] = `
     
       </p>
        
-      <div
-        class="case_banner background-color-silver m-60_bottom media-m-48_bottom"
+      <nuxtlink
+        to="/"
       >
-        <p
-          class="case_paragraph case_banner-text"
+        <div
+          class="case_banner background-color-silver m-60_bottom media-m-48_bottom"
         >
-          
-        Mad Devs
-      
-        </p>
-         
-        <p
-          class="case_paragraph case_banner-text m-28_bottom"
-        >
-          
-        Engineering your growth
-      
-        </p>
-         
-        <nuxtlink
-          class="case_button"
-          to="/"
-        >
-          <span
-            class="case_button-text"
+          <p
+            class="case_paragraph case_banner-text"
           >
-            Visit Website
-          </span>
+            
+          Mad Devs
+        
+          </p>
            
-          <img
-            alt="Rocket"
-            class="case_button-image"
-            data-src="img.jpg"
-            height="43px"
-            width="47px"
-          />
-        </nuxtlink>
-      </div>
+          <p
+            class="case_paragraph case_banner-text m-28_bottom"
+          >
+            
+          Engineering your growth
+        
+          </p>
+           
+          <nuxtlink
+            class="case_button"
+            to="/"
+          >
+            <span
+              class="case_button-text"
+            >
+              Visit Website
+            </span>
+             
+            <img
+              alt="MadDevs logo"
+              class="case_button-image"
+              height="43px"
+              src="img.jpg"
+              width="47px"
+            />
+          </nuxtlink>
+        </div>
+      </nuxtlink>
        
       <h3
         class="case_title_h3 m-12_bottom"
