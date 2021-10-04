@@ -71,7 +71,7 @@ function runRadiator() {
     range: 'day',
     schedule: {
       period: 'day',
-      time: 13, // heroku works with UTC timezone, so we need to calculate diff between Bishkek(UTC+6)
+      time: 14, // heroku works with UTC timezone, so we need to calculate diff between Bishkek(UTC+6)
     },
     chart: {
       type: 'users',
