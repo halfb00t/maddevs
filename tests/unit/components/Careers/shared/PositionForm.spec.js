@@ -122,6 +122,7 @@ describe('PositionForm component', () => {
   })
 
   it('should work send form', async () => {
+    process.env.FF_ENVIRONMENT = 'production'
     mocks.$v.validationGroup.$invalid = false
     const wrapper = shallowMount(PositionForm, {
       localVue,
