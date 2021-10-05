@@ -17,7 +17,7 @@
         class="case_header-description"
       >
         Helping a successful data-driven B2B platform smoothly adapt to increasing <br>
-        loads and numbers or users through cutting-edge technological solutions
+        loads and numbers of users through cutting-edge technological solutions
       </p>
     </CaseHeader>
     <Main />

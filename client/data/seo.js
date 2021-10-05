@@ -115,10 +115,10 @@ export const meta = {
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   clutch: {
-    title: 'Mad Devs Case Study: Data-driven B2B platform of in-depth client reviews',
-    description: 'AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions',
+    title: 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
+    description: 'B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.',
     url: 'https://maddevs.io/clients/case-studies/clutch/',
-    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Data-driven B2B platform smoothly adapt to increasing loads and numbers or users", "description": "AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform", "description": "B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
@@ -132,7 +132,13 @@ export const meta = {
 export const getMetadata = key => meta[key] || {}
 
 export const buildHead = ({
-  lang = 'en', title, description, url, jsonLd, image = 'https://maddevs.io/Open-Graph.png', metaTitle,
+  lang = 'en',
+  title,
+  description,
+  url,
+  jsonLd,
+  image = 'https://maddevs.io/Open-Graph.png',
+  metaTitle,
 }, scripts = [], links = []) => ({
   htmlAttrs: {
     lang,
