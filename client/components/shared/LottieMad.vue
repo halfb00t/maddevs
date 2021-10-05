@@ -35,6 +35,7 @@ export default {
       loop: false,
       autoplay: false,
       path: this.lottieLink,
+      assetsPath: 'https://d6xkme6dcvajw.cloudfront.net/',
     })
     this.$emit('animCreated', this.anim)
   },

@@ -55,7 +55,7 @@
           id="power-supply"
           v-lazy-load
           class="case_lottie"
-          :lottie-link="$getMediaFromS3(`/lottie/board-tracing.json`)"
+          :lottie-link="$getMediaFromS3(`/images/board-tracing.json`)"
           @animCreated="handleAnimation"
         />
       </div>
