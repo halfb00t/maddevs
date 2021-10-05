@@ -86,15 +86,13 @@
           },
           "type": "Text"
         },
-        "lottie-position": {
+        "lottiePosition": {
           "config": {
             "label": "Lottie Position",
             "placeholder": "",
             "options": [
               "top",
-              "right",
-              "bottom",
-              "left"
+              "bottom"
             ],
             "default_value": "top"
           },

@@ -12,13 +12,14 @@
           :class="[
             item.fullWidth ? 'card-item--full-width' : null,
             item.alignText ? `card-item--text-${item.alignText}` : null,
+            `card-item-${item.lottiePosition}`
           ]"
           :style="{ backgroundColor: item.background || null }"
           class="card-item"
           data-testid="grid-lottie-animation-item"
         >
           <div
-            class="card-item__lottie"
+            :class="`card-item__lottie card-item__lottie-${item.lottiePosition}`"
             :style="{ 'maxWidth': `${item.width}px`, 'height': `${item.height}px` }"
           >
             <LottieCard
@@ -120,15 +121,24 @@ export default {
   color: $text-color--white-primary;
   background-color: $bgcolor--black-pale;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
+  grid-template-areas:"lottie"  "title"  "content";
+  &-bottom{
+    padding-bottom: 0;
+    grid-template-areas:"title" "content" "lottie";
+  }
 
   @media screen and (max-width: 1024px) {
     padding: 60px;
+    &-bottom{
+      padding-bottom: 0;
+    }
   }
 
   @media screen and (max-width: 580px) {
     padding: 32px;
+    &-bottom{
+      padding-bottom: 0;
+    }
   }
 
   &--full-width {
@@ -143,6 +153,17 @@ export default {
     max-width: 385px;
     height: 95px;
     margin-bottom: 60px;
+    grid-area: lottie;
+    &-bottom{
+      max-width: 689px;
+      height: auto;
+      margin: 40px auto 0;
+
+      @media screen and (max-width: 343px) {
+        width: 289px;
+        height: 117px;
+      }
+    }
   }
 
   &--text-center {
@@ -163,6 +184,7 @@ export default {
   }
 
   &__title {
+    grid-area: title;
     @include font('Inter', 56px, 800);
     line-height: 65px;
     letter-spacing: -0.04em;
@@ -175,6 +197,7 @@ export default {
   }
 
   &__content {
+    grid-area: content;
     @include font('Inter', 24px, 600);
     line-height: 38px;
     letter-spacing: -0.013em;
