@@ -37,14 +37,14 @@
             :size="calculateCardSize(idx)"
             :width="calculateCardWidth(idx)"
           />
+          <CustomerUniversityButton
+            v-if="customerUniversityPost.redirectLink"
+            label="See more"
+            size="md"
+            @click="redirectTo(customerUniversityPost.redirectLink)"
+          />
         </div>
       </div>
-      <CustomerUniversityButton
-        v-if="showButton"
-        label="See more"
-        size="lg"
-        @click="redirectTo(showButton)"
-      />
       <hr class="customer-university__hr customer-university__hr--margin">
       <CustomerUniversityTitle
         title="Mad"
@@ -116,15 +116,6 @@ export default {
 
   computed: {
     ...mapGetters(['customerUniversitySectionPosts', 'CUPosts', 'allAuthors', 'allPosts']),
-
-    showButton() {
-      for (const customerUniversityPost of this.customerUniversityPostsList) {
-        if (customerUniversityPost.redirectLink) {
-          return customerUniversityPost.redirectLink
-        }
-      }
-      return false
-    },
 
     customerUniversityPostsList() {
       const {
