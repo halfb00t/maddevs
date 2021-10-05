@@ -89,6 +89,7 @@ export default {
     line-height: 25px;
     letter-spacing: -0.1px;
     display: flex;
+
     &::before {
       content: '';
       display: block;
@@ -101,6 +102,7 @@ export default {
       background-color: $bgcolor--red;
       transition: all .15s ease-in;
     }
+
     &:hover {
       a {
         color: $text-color--red;
@@ -117,15 +119,9 @@ export default {
       color: $text-color--white-primary;
       transition: all .15s ease;
     }
-    &--active {
-      font-weight: 700;
-      a {
-        cursor: default;
-        color: $text-color--red !important;
-      }
-      &:hover::before  {
-        display: none;
-      }
+
+    a.nuxt-link-exact-active {
+      color: $text-color--red !important;
     }
   }
 }
