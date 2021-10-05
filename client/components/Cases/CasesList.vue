@@ -3,7 +3,7 @@
     <section class="cases-list">
       <!-- Card -->
       <CasesListItem
-        v-for="(item, i) of filteredCaseList.slice(0, limit)"
+        v-for="(item, i) of casesList.slice(0, limit)"
         :key="`case_list_item_${i}`"
         :video-file-name="item.video"
         :logo="item.logo"
@@ -32,7 +32,6 @@
 import mainMixins from '@/mixins/mainMixins'
 import CasesListItem from '@/components/Cases/CasesListItem'
 import { casesList } from '@/data/casesList'
-import featureFlag from '@/featureFlags/featureFlag'
 
 export default {
   name: 'CasesList',
@@ -67,14 +66,6 @@ export default {
         },
       ],
     }
-  },
-
-  computed: {
-    filteredCaseList() {
-      if (featureFlag('clutchCase')) return casesList
-
-      return casesList.filter(caseItem => caseItem.id !== 'clutch')
-    },
   },
 
   mounted() {
