@@ -7,27 +7,27 @@ import formBaseProps from '../../__mocks__/formBaseProps'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-const DESCRIPTION = 'AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions'
+const DESCRIPTION = 'B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.'
 
 const META_DATA = {
   description: DESCRIPTION,
-  title: 'Mad Devs Case Study: Data-driven B2B platform of in-depth client reviews',
+  title: 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
   'og:url': 'https://maddevs.io/clients/case-studies/clutch/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
-  'og:title': 'Mad Devs Case Study: Data-driven B2B platform of in-depth client reviews',
+  'og:title': 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
   'og:description': DESCRIPTION,
   'og:image': 'https://maddevs.io/clutch.png',
   'og:image:width': '1200',
   'og:image:height': '630',
   'twitter:card': 'summary_large_image',
-  'twitter:text:title': 'Mad Devs Case Study: Data-driven B2B platform of in-depth client reviews',
+  'twitter:text:title': 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/clutch.png',
   'twitter:url': 'https://maddevs.io/clients/case-studies/clutch/',
   metaTitle: '',
   url: '',
-  jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Data-driven B2B platform smoothly adapt to increasing loads and numbers or users", "description": "AdTech Case Study: Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers or users through cutting-edge technological solutions.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
+  jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform", "description": "B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   image: 'https://maddevs.io/blog.png',
 }
 
