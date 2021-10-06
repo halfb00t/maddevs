@@ -479,6 +479,26 @@
           }
         }
       }
+    },
+    "GridLottieSlice": {
+      "default-slice": {
+        "primary": {
+          "animation": {
+            "content": "fade-up"
+          }
+        },
+        "items": {
+          "fullWidth": {
+            "content": false
+          },
+          "lottie-animations": {
+            "content": "cloud-migration"
+          },
+          "lottie-animation": {
+            "content": "devops-audit"
+          }
+        }
+      }
     }
   },
   "_cts": {
