@@ -67,8 +67,7 @@
           <TextParagraph class="case_banner-text m-28_bottom">
             Engineering your growth
           </TextParagraph>
-          <NuxtLink
-            to="/"
+          <div
             class="case_button"
           >
             <span class="case_button-text">Visit Website</span>
@@ -79,7 +78,7 @@
               alt="MadDevs logo"
               class="case_button-image"
             >
-          </NuxtLink>
+          </div>
         </div>
       </NuxtLink>
       <h3 class="case_title_h3 m-12_bottom">
