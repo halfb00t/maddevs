@@ -24,6 +24,10 @@ function runRadiator() {
     slackChannelId: 'mad-marketing',
     websiteUrl: 'https://maddevs.io',
     analyticsViewId: '230523659',
+    pagePathsListForAnalytics: [
+      'customer-university',
+      'blog',
+    ],
     analyticsConversions: [
       {
         name: 'Leads',
@@ -71,7 +75,7 @@ function runRadiator() {
     range: 'day',
     schedule: {
       period: 'day',
-      time: 14, // heroku works with UTC timezone, so we need to calculate diff between Bishkek(UTC+6)
+      time: 9, // heroku works with UTC timezone, so we need to calculate diff between Bishkek(UTC+6)
     },
     chart: {
       type: 'users',
