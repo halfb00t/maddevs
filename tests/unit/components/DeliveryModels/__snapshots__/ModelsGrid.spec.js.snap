@@ -9,7 +9,7 @@ exports[`ModelsGrid component should render correctly 1`] = `
       class="models-grid"
     >
       <modelcard-stub
-        animationname="staff"
+        animationname="tolya"
         animationspeed="0.7"
         classname="staff-augmentation"
         optimalmodelfor="Organizations that need to add specialists to facilitate reaching time-to-market targets.,Companies that need to determine the best fit for the team and identify uncertainty in the scope of work.,Companies that cope with urgent tasks to meet release deadlines.,Organizations that want to avoid inefficient in-house hiring processes."
