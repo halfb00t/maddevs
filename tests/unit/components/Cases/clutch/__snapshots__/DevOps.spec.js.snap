@@ -124,9 +124,8 @@ exports[`DevOps component should render correctly 1`] = `
         
           </p>
            
-          <nuxtlink
+          <div
             class="case_button"
-            to="/"
           >
             <span
               class="case_button-text"
@@ -141,7 +140,7 @@ exports[`DevOps component should render correctly 1`] = `
               src="img.jpg"
               width="47px"
             />
-          </nuxtlink>
+          </div>
         </div>
       </nuxtlink>
        
