@@ -2,6 +2,8 @@ import { render, screen } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import GridLottieSlice from '@/prismicSlices/pageParts/GridLottieSlice'
 
+jest.mock('uuid')
+
 const mocks = {
   $prismic: {
     asHtml: jest.fn(),
