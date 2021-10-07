@@ -103,17 +103,21 @@ export default {
 <style lang="scss" scoped>
 .header-mobile-menu {
   border-bottom: 1px solid $border-color--grey-dark-transparent;
+
   &:first-of-type {
     border-top: 1px solid $border-color--grey-dark-transparent;
   }
+
   &--active .header-mobile-menu__button {
     &-label {
       color: $text-color--red;
     }
+
     &-icon {
       transform: rotate(0);
     }
   }
+
   &__button {
     cursor: pointer;
     font-family: "Inter", sans-serif;
@@ -126,13 +130,16 @@ export default {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
     &:hover {
       color: $text-color--red;
     }
+
     &-label,
     &-icon {
       transition: all .15s ease;
     }
+
     &-label {
       @include font('Inter', 33px, 600);
       text-align: left;
@@ -141,6 +148,7 @@ export default {
       line-height: 43px;
       color: $text-color--white;
     }
+
     &-icon {
       display: inline-block;
       margin-left: 20px;
@@ -160,15 +168,21 @@ export default {
     letter-spacing: -0.04em;
     color: $text-color--grey-opacity-20-percent;
     border-top: 1px solid $border-color--grey-dark-transparent;
+
     &:hover a {
       color: $text-color--red;
     }
+
     a {
       display: block;
       padding: 18px 0;
       color: $text-color--grey-opacity-20-percent;
       transition: all .15s ease;
     }
+  }
+
+  a.nuxt-link-exact-active {
+    color: $text-color--red !important;
   }
 }
 
