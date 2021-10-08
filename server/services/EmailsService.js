@@ -80,7 +80,7 @@ async function sendCVResponseMail({ variables }) {
     toEmail: variables.email,
   }
 
-  const email = buildEmail(emailParams)
+  const email = await buildEmail(emailParams)
   return send(email)
 }
 

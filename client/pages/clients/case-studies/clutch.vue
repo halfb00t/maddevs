@@ -1,44 +1,42 @@
 <template>
-  <Feature flag="clutchCase">
-    <main class="case case--clutch">
-      <CaseHeader
-        :logo="logo"
-        project="clutch"
-        video-name="/videos/clutch-banner.mp4"
-        video-fallback-path="/images/Cases/clutch/png/clutch-banner.png"
+  <main class="case case--clutch">
+    <CaseHeader
+      :logo="logo"
+      project="clutch"
+      video-name="/videos/clutch-banner.mp4"
+      video-fallback-path="/images/Cases/clutch/png/clutch-banner.png"
+    >
+      <h1
+        slot="title"
+        class="case_header-title"
       >
-        <h1
-          slot="title"
-          class="case_header-title"
-        >
-          The growth <br> of Clutch.co
-        </h1>
-        <p
-          slot="description"
-          class="case_header-description"
-        >
-          Helping a successful data-driven B2B platform smoothly adapt to increasing <br>
-          loads and numbers or users through cutting-edge technological solutions
-        </p>
-      </CaseHeader>
-      <Main />
-      <Footer
-        link="/clients/case-studies/citycam/"
-        class-name="citycam"
+        The growth <br> of Clutch.co
+      </h1>
+      <p
+        slot="description"
+        class="case_header-description"
       >
-        <img
-          slot="icon"
-          v-lazy-load
-          :data-src="require(`@/assets/img/Studies/svg/citycam-footer.svg`)"
-          width="195"
-          height="72"
-          alt="Better cities with CityCam"
-          class="case_logotype-citycam"
-        >
-        Better cities with CityCam
-      </Footer>
-    </main>
-  </Feature>
+        Helping a successful data-driven B2B platform smoothly adapt to increasing <br>
+        loads and numbers of users through cutting-edge technological solutions
+      </p>
+    </CaseHeader>
+    <Main />
+    <Footer
+      link="/clients/case-studies/citycam/"
+      class-name="citycam"
+    >
+      <img
+        slot="icon"
+        v-lazy-load
+        :data-src="require(`@/assets/img/Studies/svg/citycam-footer.svg`)"
+        width="195"
+        height="72"
+        alt="Better cities with CityCam"
+        class="case_logotype-citycam"
+      >
+      Better cities with CityCam
+    </Footer>
+  </main>
 </template>
 
 <script>

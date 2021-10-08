@@ -237,6 +237,7 @@ export default {
         text-align: left;
         @media screen and (max-width: 820px) {
           height: 69px;
+          padding: 0;
           font-size: 12px;
         }
       }

@@ -15,7 +15,10 @@
         :key="label"
         class="header-menu__item"
       >
-        <div v-if="label">
+        <div
+
+          v-if="label"
+        >
           <NuxtLink
             v-if="!extractMenuLink(link).isExternalLink"
             :to="extractMenuLink(link).url"
@@ -89,43 +92,46 @@ export default {
     line-height: 25px;
     letter-spacing: -0.1px;
     display: flex;
-    &::before {
-      content: '';
-      display: block;
-      opacity: 0;
-      transform: translate(-100%, 20px) scale(0.6);
-      margin-left: -18px;
-      margin-right: 8px;
-      width: 10px;
-      height: 3px;
-      background-color: $bgcolor--red;
-      transition: all .15s ease-in;
-    }
-    &:hover {
-      a {
-        color: $text-color--red;
-      }
-      &::before {
-        opacity: 1;
-        transform: translate(-100%, 20px) scale(1);
-      }
-    }
+
     a {
       padding: 8px 0;
       display: block;
       width: 100%;
       color: $text-color--white-primary;
       transition: all .15s ease;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%) scale(1);
+        width: 10px;
+        height: 3px;
+        background-color: $bgcolor--red;
+        transition: all .15s ease-in;
+      }
+
+      &:hover {
+        & {
+          color: $text-color--red;
+        }
+
+        &::before {
+          opacity: 1;
+        }
+      }
     }
-    &--active {
-      font-weight: 700;
-      a {
-        cursor: default;
-        color: $text-color--red !important;
-      }
-      &:hover::before  {
-        display: none;
-      }
+  }
+
+  a.nuxt-link-exact-active {
+    color: $text-color--red !important;
+
+    &::before {
+      opacity: 1;
     }
   }
 }
