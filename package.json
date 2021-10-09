@@ -64,7 +64,7 @@
     "request": "^2.88.2",
     "sendpulse-api": "^1.1.4",
     "simplebar-vue": "^1.6.2",
-    "slice-machine-ui": "0.1.0-beta.2",
+    "slice-machine-ui": "0.1.0",
     "snyk": "^1.563.0",
     "swiper": "^5.4.5",
     "uuid": "^8.3.2",
