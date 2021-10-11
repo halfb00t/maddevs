@@ -10,9 +10,7 @@
         Read articles online
       </h2>
 
-      <div
-        class="ebook-read__cards"
-      >
+      <div class="ebook-read__cards">
         <ReadCard
           v-for="(post, i) of posts"
           :key="`post-card_${i}`"
@@ -77,9 +75,10 @@ export default {
     posts() {
       if (!this.CUPosts.length) return []
       const posts = [...this.CUPosts]
+
       return posts
-        .sort(this.sortPosts)
         .filter(({ tags }) => tags && tags.includes('Pricing strategies'))
+        .sort(this.sortPosts)
     },
   },
 
