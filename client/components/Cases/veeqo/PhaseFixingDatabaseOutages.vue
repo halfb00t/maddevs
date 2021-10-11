@@ -29,11 +29,16 @@
     </div>
     <TextQuoteBox
       class="m-48_top m-96_bottom media-m-24_top media-m-72_bottom m-auto"
-      author="Andrew Sapozhnikov, Head of DevOps at Mad Devs"
+      author="Andrew Sapozhnikov, Head of DevOps"
     >
       “We needed better monitoring and metrics collection to detect the true reason for the outage. We don’t sweep these things under the rug. We go for root causes.”
     </TextQuoteBox>
-    <h3 class="case_title_h3 m-24_bottom media-m-12_bottom">
+    <h3
+      class="
+      case_title_h3
+      m-24_bottom
+      media-m-12_bottom"
+    >
       Solution
     </h3>
     <div class="case_solution-cards">
