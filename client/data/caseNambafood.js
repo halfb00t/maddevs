@@ -150,7 +150,7 @@ export const team = [
   },
   {
     name: 'Gulbustan Baudunova',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'gulbustan-baudunova',
     },
@@ -171,42 +171,42 @@ export const team = [
   },
   {
     name: 'Baurzhan Omuraliev',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'baurzhan-omuraliev',
     },
   },
   {
     name: 'Nakylai Taiirova',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'nakylai-taiirova',
     },
   },
   {
     name: 'Akylbek Djumaliev',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'akylbek-djumaliev',
     },
   },
   {
     name: 'Stanislav Shcherbinin',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'stanislav-shcherbinin',
     },
   },
   {
     name: 'Eldar Akkozov',
-    position: 'Mobile App Developer',
+    position: 'Android Developer',
     image: {
       file: 'eldar-akkozov',
     },
   },
   {
     name: 'Altynai Toktomuratova',
-    position: 'Mobile App Developer',
+    position: 'Android Developer',
     image: {
       file: 'altynai-toktomuratova',
     },
@@ -220,7 +220,7 @@ export const team = [
   },
   {
     name: 'Belek Abylov',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'belek-abylov',
     },

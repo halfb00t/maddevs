@@ -38,7 +38,7 @@
         Objectives & Key Results
       </h3>
       <TextParagraph class="m-12_bottom">
-        CObjectives & Key Results is a method that unites everyone and puts the focus on achieving the desired result.
+        Objectives & Key Results is a method that unites everyone and puts the focus on achieving the desired result.
         Regularly, project managers broadcast OKRs during weekly meetings and within automatically scheduled Slack
         notifications.
       </TextParagraph>

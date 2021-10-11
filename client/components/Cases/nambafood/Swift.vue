@@ -76,7 +76,7 @@
           href="https://github.com/maddevsio/ariadna"
           class="case_link"
           target="_blank"
-        >Ariadna</a> is an open-source
+        >Ariadna is an open-source</a>
         geocoder based on ElasticSearch with OpenStreetMap, in-house developed. The tool searches for coordinates by
         synonyms and names of places, looking for crossroads and addresses in a certain radius, and knows how to reverse
         geocoding and automatically update with new data from drivers.

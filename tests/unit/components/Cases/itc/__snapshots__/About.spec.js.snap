@@ -26,7 +26,7 @@ exports[`About component should render correctly 1`] = `
       class="m-auto m-96_top m-96_bottom media-m-48_top media-m-72_bottom"
     >
       
-    The web application improved reporting and coordination by giving the coaches a convenient tool to collect, process, and report data
+    The web application improved reporting and coordination by giving the coaches a convenient tool to collect, process, and report data.
   
     </textquote-stub>
   </section>

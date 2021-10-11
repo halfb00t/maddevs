@@ -63,22 +63,22 @@
       <div class="case_cards-container m-48_bottom media-m-24_bottom">
         <Card class="background-color-silver">
           <TextParagraph>
-            The backend structure allows for future modifications and augmentations, making the app scalable and adaptable
+            The backend structure allows for future modifications and augmentations, making the app scalable and adaptable.
           </TextParagraph>
         </Card>
         <Card class="background-color-silver">
           <TextParagraph>
-            Data processing can be flexibly optimised separately for the read side and the write side
+            Data processing can be flexibly optimised separately for the read side and the write side.
           </TextParagraph>
         </Card>
         <Card class="background-color-silver">
           <TextParagraph>
-            Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities
+            Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities.
           </TextParagraph>
         </Card>
         <Card class="background-color-silver">
           <TextParagraph>
-            The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles
+            The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles.
           </TextParagraph>
         </Card>
       </div>

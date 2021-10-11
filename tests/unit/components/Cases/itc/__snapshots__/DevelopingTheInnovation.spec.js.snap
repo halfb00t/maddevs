@@ -191,7 +191,7 @@ exports[`DevelopingTheInnovation component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-          The backend structure allows for future modifications and augmentations, making the app scalable and adaptable
+          The backend structure allows for future modifications and augmentations, making the app scalable and adaptable.
         
           </p>
         </div>
@@ -203,7 +203,7 @@ exports[`DevelopingTheInnovation component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-          Data processing can be flexibly optimised separately for the read side and the write side
+          Data processing can be flexibly optimised separately for the read side and the write side.
         
           </p>
         </div>
@@ -215,7 +215,7 @@ exports[`DevelopingTheInnovation component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-          Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities
+          Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities.
         
           </p>
         </div>
@@ -227,7 +227,7 @@ exports[`DevelopingTheInnovation component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-          The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles
+          The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles.
         
           </p>
         </div>

@@ -69,7 +69,6 @@
         Yourcast.tv by Mad Devs is used to create TV-like streams using YouTube video content. All you need is to create a
         list of YouTube videos that you want to stream. The streaming starts a few seconds after you save your list of
         videos.
-        <span class="case_blockquote-box_text-modificator"> Read more about Yourcast.TV. </span>
       </TextQuoteBox>
       <TextParagraph class="m-24_bottom media-m-12_bottom">
         The customer purchased access to several popular TV channels streamed online, and Mad Devs added additional code
