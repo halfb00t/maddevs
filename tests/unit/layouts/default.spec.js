@@ -32,6 +32,7 @@ const store = {
   getters: {
     headerTransparentArea: () => '',
     headerTransparent: () => true,
+    showFooter: () => true,
   },
 }
 const computed = {
