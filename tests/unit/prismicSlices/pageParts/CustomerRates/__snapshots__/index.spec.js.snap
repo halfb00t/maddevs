@@ -19,7 +19,7 @@ exports[`CustomerRates slice should render correctly 1`] = `
          
         <br />
         
-      customer   
+      customer 
         <span
           class="customer-rates-slice__title-icon"
         >
