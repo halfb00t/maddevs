@@ -82,5 +82,9 @@
   {
     "from": "/blog",
     "to": "https://maddevs.io/insights/blog/"
+  },
+  {
+    "from": "/about",
+    "to": "https://maddevs.io/"
   }
 ]
