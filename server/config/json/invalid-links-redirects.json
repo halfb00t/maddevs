@@ -4,6 +4,10 @@
     "to": "https://maddevs.io/blog/tag/software-development/"
   },
   {
+    "from": "/insights/blog/devops-engineers-in-mad-devs",
+    "to": "https://maddevs.io/blog/devops-engineers-at-mad-devs/"
+  },
+  {
     "from": "/blog/devops-engineers-in-mad-devs",
     "to": "https://maddevs.io/blog/devops-engineers-at-mad-devs/"
   },
@@ -24,8 +28,16 @@
     "to": "https://maddevs.io/insights/open-source/"
   },
   {
+    "from": "/#open-source",
+    "to": "https://maddevs.io/insights/open-source/"
+  },
+  {
     "from": "/profile/mad-devs",
     "to": "https://maddevs.io/"
+  },
+  {
+    "from": "/ru/careers/front-dev-react",
+    "to": "https://maddevs.io/ru/about/careers/"
   },
   {
     "from": "/careers",
@@ -34,6 +46,34 @@
   {
     "from": "/delivery-models",
     "to": "https://maddevs.io/approach/delivery-models/"
+  },
+  {
+    "from": "/delivery-models/dedicated-team",
+    "to": "https://maddevs.io/approach/delivery-models/dedicated-team/"
+  },
+  {
+    "from": "/delivery-models/staff-augmentation",
+    "to": "https://maddevs.io/approach/delivery-models/staff-augmentation/"
+  },
+  {
+    "from": "/delivery-models/temp-to-hire",
+    "to": "https://maddevs.io/approach/delivery-models/temp-to-hire/"
+  },
+  {
+    "from": "/delivery-models/transferring-projects",
+    "to": "https://maddevs.io/approach/delivery-models/transferring-projects/"
+  },
+  {
+    "from": "/delivery-models/technical-assessment",
+    "to": "https://maddevs.io/approach/delivery-models/technical-assessment/"
+  },
+  {
+    "from": "/delivery-models/team-supervision",
+    "to": "https://maddevs.io/approach/delivery-models/team-supervision/"
+  },
+  {
+    "from": "/services/devops-testing",
+    "to": "https://maddevs.io/services/"
   },
   {
     "from": "/privacy",
