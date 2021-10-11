@@ -7,9 +7,10 @@ const localVue = createLocalVue()
 localVue.use(Vuex)
 
 jest.mock('@/helpers/intercom', () => jest.fn())
+let push = jest.fn()
 
 const stubs = ['Header', 'Nuxt', 'Footer', 'ClientOnly']
-const mocks = {
+let mocks = {
   $nextTick: jest.fn(callback => {
     if (typeof callback === 'function') {
       callback()
@@ -17,6 +18,12 @@ const mocks = {
   }),
   $nuxt: {
     $on: jest.fn(),
+    $route: {
+      path: '/',
+    },
+  },
+  $router: {
+    push,
   },
 }
 const SCROLL_FN = jest.fn()
@@ -27,9 +34,18 @@ const store = {
     headerTransparent: () => true,
   },
 }
+const computed = {
+  getNotAllowedRoutes: () => ['/', '/services/'],
+}
 
 describe('Default layout', () => {
+  global.$nuxt = {
+    $route: {
+      path: '/',
+    },
+  }
   let wrapper
+
   const nextTick = jest.fn()
   mocks.$nextTick = nextTick
 
@@ -39,11 +55,13 @@ describe('Default layout', () => {
       stubs,
       mocks,
       store,
+      computed,
     })
   })
 
   it('renders correctly', () => {
-    expect(wrapper.element).toMatchSnapshot()
+    expect(wrapper.element)
+      .toMatchSnapshot()
   })
 
   it('should correctly work initHashLinks method if hash false', () => {
@@ -60,8 +78,10 @@ describe('Default layout', () => {
 
     wrapper.vm.$options.methods.initHashLinks.call(callObject)
 
-    expect(QUERY_SELECTOR).toHaveBeenCalledTimes(0)
-    expect(SCROLL_FN).toHaveBeenCalledTimes(0)
+    expect(QUERY_SELECTOR)
+      .toHaveBeenCalledTimes(0)
+    expect(SCROLL_FN)
+      .toHaveBeenCalledTimes(0)
   })
 
   it('should correctly work initHashLinks method if hash true but selection not found', () => {
@@ -76,8 +96,10 @@ describe('Default layout', () => {
 
     wrapper.vm.$options.methods.initHashLinks.call(callObject)
 
-    expect(QUERY_SELECTOR).toHaveBeenCalledTimes(1)
-    expect(SCROLL_FN).toHaveBeenCalledTimes(0)
+    expect(QUERY_SELECTOR)
+      .toHaveBeenCalledTimes(1)
+    expect(SCROLL_FN)
+      .toHaveBeenCalledTimes(0)
   })
 
   it('should correctly work initHashLinks method', () => {
@@ -93,8 +115,10 @@ describe('Default layout', () => {
     document.querySelector = QUERY_SELECTOR
 
     wrapper.vm.$options.methods.initHashLinks.call(callObject)
-    expect(QUERY_SELECTOR).toHaveBeenCalledTimes(1)
-    expect(SCROLL_FN).toHaveBeenCalledWith({ block: 'start' })
+    expect(QUERY_SELECTOR)
+      .toHaveBeenCalledTimes(1)
+    expect(SCROLL_FN)
+      .toHaveBeenCalledWith({ block: 'start' })
   })
 
   it('should correctly work loadIntercomScript method', () => {
@@ -105,6 +129,36 @@ describe('Default layout', () => {
     window.addEventListener = EVENT_LISTENER
     wrapper.vm.$options.methods.loadIntercomScript()
 
-    expect(EVENT_LISTENER).toHaveBeenCalledTimes(1)
+    expect(EVENT_LISTENER)
+      .toHaveBeenCalledTimes(1)
+  })
+  it('should be redirected to 404 if the route is Not allowed', () => {
+    expect(push).toHaveBeenCalledWith('/404/')
+  })
+  it('should be Not redirected to 404 if the route is allowed', () => {
+    push = jest.fn()
+
+    mocks = {
+      $nuxt: {
+        $on: jest.fn(),
+        $route: {
+          path: '/',
+        },
+      },
+      $router: {
+        push,
+      },
+    }
+
+    wrapper = shallowMount(Default, {
+      localVue,
+      stubs,
+      mocks,
+      store,
+      computed: {
+        getNotAllowedRoutes: () => [],
+      },
+    })
+    expect(push).not.toHaveBeenCalled()
   })
 })
