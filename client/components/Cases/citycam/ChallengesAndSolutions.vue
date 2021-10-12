@@ -18,7 +18,7 @@
         <LottieMad
           id="challenges-solutions"
           class="case_lottie"
-          height="570"
+          height="570px"
           :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/challenges-solutions.json`)"
           @animCreated="handleAnimation"
         />

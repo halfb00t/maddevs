@@ -19,7 +19,7 @@
           <LottieMad
             id="prototype"
             class="case_lottie"
-            height="395"
+            height="395px"
             :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/prototype-citycam.json`)"
             @animCreated="handleAnimation"
           />

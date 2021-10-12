@@ -54,7 +54,7 @@
         <LottieMad
           id="power-supply"
           class="case_lottie"
-          height="670"
+          height="670px"
           :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/board-tracing.json`)"
           @animCreated="handleAnimation"
         />
