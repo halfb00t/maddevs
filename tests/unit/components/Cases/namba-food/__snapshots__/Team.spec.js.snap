@@ -55,7 +55,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Team Lead
+      CQO
     
           </p>
         </div>
@@ -89,7 +89,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Backend Developer
+      Full-stack Developer
     
           </p>
         </div>
@@ -191,7 +191,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Backend Developer
+      Back-end Developer
     
           </p>
         </div>
@@ -225,7 +225,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Backend Developer
+      Full-stack Developer
     
           </p>
         </div>
@@ -259,7 +259,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Backend Developer
+      Back-end Developer
     
           </p>
         </div>
@@ -293,7 +293,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Backend Developer
+      Back-end Developer
     
           </p>
         </div>
@@ -327,7 +327,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Android Developer
+      Mobile App Developer
     
           </p>
         </div>
@@ -361,7 +361,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Android Developer
+      Mobile App Developer
     
           </p>
         </div>
@@ -429,7 +429,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Backend Developer
+      Full-stack Developer
     
           </p>
         </div>

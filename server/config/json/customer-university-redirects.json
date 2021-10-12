@@ -62,5 +62,29 @@
   {
     "from": "/blog/tag/pricing-strategies",
     "to": "https://maddevs.io/"
+  },
+  {
+    "from": "/blog/mad-devs-corporate-culture",
+    "to": "https://maddevs.io/customer-university/mad-devs-corporate-culture-overview/"
+  },
+  {
+    "from": "/blog/who-are-mad-developers",
+    "to": "https://maddevs.io/customer-university/who-are-mad-developers/"
+  },
+  {
+    "from": "/blog/remote-first-approach-to-work-in-it",
+    "to": "https://maddevs.io/customer-university/remote-first-approach-to-work-in-it/"
+  },
+  {
+    "from": "/blog/product-based-vs-service-based-companies",
+    "to": "https://maddevs.io/customer-university/product-based-vs-service-based-companies/"
+  },
+  {
+    "from": "/blog/growth-opportunities",
+    "to": "https://maddevs.io/customer-university/growth-opportunities/"
+  },
+  {
+    "from": "/blog/senior-developers-in-mad-devs",
+    "to": "https://maddevs.io/customer-university/senior-developers-in-mad-devs/"
   }
 ]
