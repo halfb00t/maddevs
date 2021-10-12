@@ -8,11 +8,4 @@
     production: false,
   },
  */
-export const routerConfig = [
-  {
-    path: '/approach/privacy/',
-    development: false,
-    staging: false,
-    production: true,
-  },
-]
+export const routerConfig = []
