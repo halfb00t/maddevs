@@ -42,6 +42,7 @@ export default {
 .ebook-delivery {
   background-color: #fff;
   padding-bottom: 50px;
+  margin: -1px 0 0;
 
   .ui-button {
     display: flex;
