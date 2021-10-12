@@ -90,8 +90,10 @@ export default {
     ...mapActions(['getCustomerUniversityPosts']),
 
     sortPosts(a, b) {
-      return (Number(a.data.title[0].text.match(/(\d+)/g)[0])
-        - Number((b.data.title[0].text.match(/(\d+)/g)[0])))
+      const numA = a.data.title[0].text.match(/(\d+)/g)
+      const numB = b.data.title[0].text.match(/(\d+)/g)
+
+      return (numA ? Number(numA[0]) : 0) - (numB ? Number(numB[0]) : 0)
     },
 
     handleSendedForm(payload) {
