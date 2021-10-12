@@ -40,7 +40,7 @@ const extractHeaderSection = async (prismic, headerContent = {}, navSection) => 
 
 export const state = () => ({
   headerContent: {},
-  headerTransparent: false,
+  headerTransparent: true,
   headerTransparentArea: null,
 })
 

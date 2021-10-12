@@ -88,13 +88,16 @@ exports[`PhaseFixingDatabaseOutages component should render correctly 1`] = `
         class="case_quote-author"
       >
         
-    Andrew Sapozhnikov, Head of DevOps at Mad Devs
+    Andrew Sapozhnikov, Head of DevOps
   
       </p>
     </div>
      
     <h3
-      class="case_title_h3 m-24_bottom media-m-12_bottom"
+      class="
+    case_title_h3
+    m-24_bottom
+    media-m-12_bottom"
     >
       
     Solution

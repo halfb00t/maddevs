@@ -23,7 +23,7 @@
     </div>
     <TextQuoteBox
       class="m-48_top m-96_bottom media-m-24_top media-m-72_bottom m-auto"
-      author="Andrew Sapozhnikov, Head of DevOps at Mad Devs"
+      author="Andrew Sapozhnikov, Head of DevOps"
     >
       The developers didn’t trust their CI system. CI wasn’t helping them; it was hindering their work instead. It’s just bad DevOps.
     </TextQuoteBox>
@@ -68,7 +68,7 @@
     </List>
     <TextQuote
       class="m-auto m-96_top m-96_bottom media-m-48_top media-m-72_bottom"
-      author="Maxim Glotov, DevOps Engineer at Mad Devs"
+      author="Maxim Glotov, DevOps Engineer"
     >
       Everything down to the last comma is now written in the form of code. Even if we took Jenkins down completely and had to build it from scratch again, it’d take us no more than 10 minutes.
     </TextQuote>

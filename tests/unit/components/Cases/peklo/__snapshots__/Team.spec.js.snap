@@ -45,7 +45,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Software Engineer
+      Backend Developer
     
           </p>
         </div>
@@ -327,7 +327,7 @@ exports[`Team component should render correctly 1`] = `
           class="case_blockquote-author__position"
         >
           
-      Founder Peklo Studio & Peklo Tool
+      Founder of Peklo Studio & Peklo Tool
     
         </p>
       </div>
