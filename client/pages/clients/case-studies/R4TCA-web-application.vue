@@ -16,7 +16,7 @@
         slot="description"
         class="case_header-description"
       >
-        A web app customized for the delivery of export management coaching <br> missions that contributes to the development of <span class="case_nowrap">intra-regional</span> <br> and international trade in Central Asia
+        A web app customized for the delivery of export management coaching <br> missions that contributes to the development of <span class="case_nowrap">intra-regional</span> <br> and international trade in Central Asia.
       </p>
     </CaseHeader>
     <Main />

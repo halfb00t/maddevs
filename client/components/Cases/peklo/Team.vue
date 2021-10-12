@@ -13,7 +13,7 @@
     <TextQuoteAuthor
       class="case_text-align-center m-72_bottom p-48_top media-m-48_bottom"
       author="Roman Leonov"
-      position="Founder Peklo Studio & Peklo Tool"
+      position="Founder of Peklo Studio & Peklo Tool"
       file="roman-leonov"
       extension="png"
       alt="Roman Leonov"

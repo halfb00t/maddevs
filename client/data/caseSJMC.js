@@ -180,14 +180,14 @@ export const team = [
   },
   {
     name: 'Kirill Avdeev',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'avdeev',
     },
   },
   {
     name: 'Stanislav Shcherbinin',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'stanislav-shcherbinin',
     },
@@ -208,14 +208,14 @@ export const team = [
   },
   {
     name: 'Pavel Pushkarev',
-    position: 'Mobile App Developer',
+    position: 'iOS Developer',
     image: {
       file: 'pushkarev',
     },
   },
   {
     name: 'Rustom Kulbatyrov',
-    position: 'Mobile App Developer',
+    position: 'Android Developer',
     image: {
       file: 'kulbatyrov',
     },

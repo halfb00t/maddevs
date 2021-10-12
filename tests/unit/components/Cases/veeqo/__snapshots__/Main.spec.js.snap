@@ -243,7 +243,7 @@ exports[`Main component should render correctly 1`] = `
           class="case_quote-author"
         >
           
-    Andrew Sapozhnikov, Head of DevOps at Mad Devs
+    Andrew Sapozhnikov, Head of DevOps
   
         </p>
       </div>
@@ -348,7 +348,7 @@ exports[`Main component should render correctly 1`] = `
       </ul>
        
       <textquote-stub
-        author="Maxim Glotov, DevOps Engineer at Mad Devs"
+        author="Maxim Glotov, DevOps Engineer"
         class="m-auto m-96_top m-96_bottom media-m-48_top media-m-72_bottom"
       >
         
@@ -601,7 +601,7 @@ exports[`Main component should render correctly 1`] = `
           class="case_quote-author"
         >
           
-    Andrew Sapozhnikov, Head of DevOps at Mad Devs
+    Andrew Sapozhnikov, Head of DevOps
   
         </p>
       </div>
