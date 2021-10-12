@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { getNotAllowedRoutes } from './getNotAllowedRoutes'
 
 const EXCLUDE_ROUTES = {
   '/': 1,
@@ -87,6 +88,14 @@ const getRoutePrefix = routePrefix => {
   return prefix
 }
 
+const filterNotAllowedRoutes = routes => {
+  const notAllowedRoutesList = getNotAllowedRoutes()
+  if (notAllowedRoutesList?.length) {
+    return routes.filter(route => !notAllowedRoutesList.includes(route))
+  }
+  return routes
+}
+
 const getRoutes = async () => {
   // Getting data from prismic
   const prismicData = await axios.get(process.env.NODE_PRISMIC_API)
@@ -142,8 +151,7 @@ const getRoutes = async () => {
     ...tagPageRoutes,
     ...customPageRoutes,
   ]
-
-  return routes
+  return filterNotAllowedRoutes(routes)
 }
 
 export default getRoutes
@@ -161,7 +169,8 @@ const generateRoute = name => {
     priority,
     url: `${name}/`,
     changefreq: 'daily',
-    lastmod: new Date().toISOString().split('T')[0],
+    lastmod: new Date().toISOString()
+      .split('T')[0],
   }
 }
 
