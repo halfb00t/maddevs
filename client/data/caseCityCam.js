@@ -236,21 +236,21 @@ export const team = [
   },
   {
     name: 'Vlad Andreev',
-    position: 'Delivery Manager',
+    position: 'CQO',
     image: {
       file: 'vlad-andreev',
     },
   },
   {
     name: 'Kirill Avdeev',
-    position: 'Hardware Engineer',
+    position: 'Backend Developer',
     image: {
       file: 'avdeev',
     },
   },
   {
     name: 'Aleksandr Edakin',
-    position: 'Software Developer',
+    position: 'Backend Developer',
     image: {
       file: 'aleksandr-edakin',
     },
@@ -271,7 +271,7 @@ export const team = [
   },
   {
     name: 'Oleg Katkov',
-    position: 'Tech Lead',
+    position: 'Backend Developer',
     image: {
       file: 'oleg-katkov',
     },
@@ -285,14 +285,14 @@ export const team = [
   },
   {
     name: 'Anton Kozlov',
-    position: 'Hardware Engineer',
+    position: 'System Developer',
     image: {
       file: 'anton-kozlov',
     },
   },
   {
     name: 'Andrew Sapozhnikov',
-    position: 'Head of DevOps',
+    position: 'CIO',
     image: {
       file: 'andrew-sapozhnikov',
     },
