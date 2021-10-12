@@ -7,7 +7,7 @@
     >
       <h2 class="customer-rates-slice__title">
         <span>Fantastic</span> <br>
-        customer&nbsp;&nbsp;&nbsp;<span class="customer-rates-slice__title-icon">rates:</span>
+        customer <span class="customer-rates-slice__title-icon">rates:</span>
       </h2>
       <div class="customer-rates-slice__grid">
         <div
@@ -115,7 +115,7 @@ export default {
           width: 103px;
           height: 50px;
           top: -2px;
-          right: 43px;
+          right: 26px;
         }
       }
     }
