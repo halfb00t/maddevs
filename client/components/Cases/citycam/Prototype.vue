@@ -16,10 +16,11 @@
           data-aos="fade-up"
           data-aos-anchor-placement="bottom"
         >
-          <Lottie
+          <LottieMad
             id="prototype"
-            :options="options"
             class="case_lottie"
+            height="395"
+            :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/prototype-citycam.json`)"
             @animCreated="handleAnimation"
           />
         </div>
@@ -36,25 +37,22 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/citycam/prototype-citycam.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
+import LottieMad from '@/components/shared/LottieMad'
+import playLottie from '@/helpers/playLottie'
 
 export default {
   name: 'Prototype',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
   },
 
-  mixins: [
-    playLottieMixin('prototype', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
-  ],
+  methods: {
+    handleAnimation(animation) {
+      playLottie(animation, 'prototype')
+    },
+  },
 }
 </script>
 

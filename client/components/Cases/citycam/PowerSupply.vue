@@ -53,9 +53,9 @@
         </h2>
         <LottieMad
           id="power-supply"
-          v-lazy-load
           class="case_lottie"
-          :lottie-link="$getMediaFromS3(`/images/board-tracing.json`)"
+          height="670"
+          :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/board-tracing.json`)"
           @animCreated="handleAnimation"
         />
       </div>
@@ -85,6 +85,7 @@ export default {
   data() {
     return {
       components,
+      showLottie: false,
     }
   },
 

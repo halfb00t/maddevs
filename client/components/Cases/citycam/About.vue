@@ -11,9 +11,11 @@
       </TextParagraph>
     </section>
     <section class="container_regular m-72_bottom media-m-48_bottom">
-      <Lottie
+      <LottieMad
         id="about-citycam"
-        :options="options"
+        class="case_lottie"
+        height="395"
+        :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/about-citycam.json`)"
         @animCreated="handleAnimation"
       />
     </section>
@@ -21,22 +23,21 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
-import playLottieMixin from '@/mixins/playLottieMixin'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/citycam/about-citycam.json'
+import LottieMad from '@/components/shared/LottieMad'
+import playLottie from '@/helpers/playLottie'
 
 export default {
   name: 'About',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
   },
 
-  mixins: [playLottieMixin('about-citycam', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
+  methods: {
+    handleAnimation(animation) {
+      playLottie(animation, 'about-citycam')
+    },
+  },
 }
 </script>

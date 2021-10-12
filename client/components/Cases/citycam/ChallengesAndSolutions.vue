@@ -15,10 +15,11 @@
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
-        <Lottie
+        <LottieMad
           id="challenges-solutions"
-          :options="options"
           class="case_lottie"
+          height="570"
+          :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/challenges-solutions.json`)"
           @animCreated="handleAnimation"
         />
       </div>
@@ -41,31 +42,25 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import ListNumberedBox from '@/components/Cases/shared/ListNumberedBox'
 import ListNumberedItemBox from '@/components/Cases/shared/ListNumberedItemBox'
-import animationData from '@/assets/lottie/citycam/challenges-solutions.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
 import { challengesAndSolutions, idSolutionsList } from '@/data/caseCityCam'
+import LottieMad from '@/components/shared/LottieMad'
+import playLottie from '@/helpers/playLottie'
 
 export default {
   name: 'ChallengesAndSolutions',
   components: {
     TextParagraph,
-    Lottie,
     ListNumberedBox,
     ListNumberedItemBox,
+    LottieMad,
   },
 
   mixins: [
-    playLottieMixin('challenges-solutions', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
     IntersectionObserverMixin(
       idSolutionsList,
       setBackground,
@@ -76,6 +71,12 @@ export default {
     return {
       challengesAndSolutions,
     }
+  },
+
+  methods: {
+    handleAnimation(animation) {
+      playLottie(animation, 'challenges-solutions')
+    },
   },
 }
 </script>
