@@ -76,7 +76,6 @@ export default {
       this.$emit('changed-page')
     },
   },
-
 }
 </script>
 

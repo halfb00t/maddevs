@@ -35,6 +35,7 @@ exports[`CardGoDeePreview component should render correctly 1`] = `
         file="some-filename"
         folder=""
         height="50"
+        lazy="true"
         width="50"
       />
        
@@ -45,6 +46,7 @@ exports[`CardGoDeePreview component should render correctly 1`] = `
         file="mobile-image"
         folder=""
         height="160"
+        lazy="true"
         width="307"
       />
     </div>

@@ -10,9 +10,7 @@
         Read articles online
       </h2>
 
-      <div
-        class="ebook-read__cards"
-      >
+      <div class="ebook-read__cards">
         <ReadCard
           v-for="(post, i) of posts"
           :key="`post-card_${i}`"
@@ -77,9 +75,10 @@ export default {
     posts() {
       if (!this.CUPosts.length) return []
       const posts = [...this.CUPosts]
+
       return posts
-        .sort(this.sortPosts)
         .filter(({ tags }) => tags && tags.includes('Pricing strategies'))
+        .sort(this.sortPosts)
     },
   },
 
@@ -91,8 +90,10 @@ export default {
     ...mapActions(['getCustomerUniversityPosts']),
 
     sortPosts(a, b) {
-      return (Number(a.data.title[0].text.match(/(\d+)/g)[0])
-        - Number((b.data.title[0].text.match(/(\d+)/g)[0])))
+      const numA = a.data.title[0].text.match(/(\d+)/g)
+      const numB = b.data.title[0].text.match(/(\d+)/g)
+
+      return (numA ? Number(numA[0]) : 0) - (numB ? Number(numB[0]) : 0)
     },
 
     handleSendedForm(payload) {

@@ -7,7 +7,7 @@
       The goal of the partnership was to improve the implementation of the Export Management Coaching Initiative (EMCI), a programme where expert coaches in the field of export management train the owners of local small and medium-sized enterprises (SMEs) on how to best optimise business processes and expand trade capacity.
     </TextParagraph>
     <TextQuote class="m-auto m-96_top m-96_bottom media-m-48_top media-m-72_bottom">
-      The web application improved reporting and coordination by giving the coaches a convenient tool to collect, process, and report data
+      The web application improved reporting and coordination by giving the coaches a convenient tool to collect, process, and report data.
     </TextQuote>
   </section>
 </template>

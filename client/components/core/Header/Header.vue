@@ -27,11 +27,10 @@
             </NuxtLink>
             <nav class="header__header-routes_links">
               <NuxtLink
-                v-for="{ title, link, exact, names } in navigation"
+                v-for="{ title, link, exact } in navigation"
                 :key="link"
                 :exact="exact"
                 class="header__navigation-link"
-                :class="{ 'nuxt-link-exact-active nuxt-link-active': checkActiveLink(names) }"
                 data-testid="test-navigation-link"
                 :to="link"
                 @click.native="goToTopPage"
@@ -39,7 +38,7 @@
                 {{ title }}
               </NuxtLink>
             </nav>
-            <!-- Burget btn -->
+            <!-- Burger btn -->
             <div
               class="header__burger"
               data-testid="test-burger"
@@ -81,7 +80,7 @@
                 />
               </svg>
             </div>
-            <!-- END Burget btn -->
+            <!-- END Burger btn -->
           </div>
           <div class="header__right-content">
             <button
@@ -223,12 +222,6 @@ export default {
     onChangePage() {
       this.isActiveMobileMenu = false
       this.enableScrollOnBody()
-    },
-
-    checkActiveLink(names) {
-      const { name: routeName } = this.$nuxt.$route
-      if (names.includes(routeName)) return true
-      return false
     },
 
     handleLogo(scrollTop) {
@@ -417,7 +410,7 @@ export default {
     }
   }
 
-  .nuxt-link-active {
+  a.nuxt-link-active {
     color: $text-color--red;
 
     &::after {

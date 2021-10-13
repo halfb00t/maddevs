@@ -176,7 +176,7 @@ Not required in dev mode
 | RADIATOR_TELEGRAM_TOKEN  	              | Telegram token    |
 
 ## ✍️ Code review
-We're have a special "Code Review Regulation" document that help us to review our code more better and professional. 
+We're have a special "Code Review Regulation" document that help us to review our code more better and professional.
 Before start working with our team you need to read the document.
 
 * ["Code review regulation"- english version](docs/CodeReviewRegulation_en.md)
@@ -366,13 +366,31 @@ or in the component's code:
 }
 ```
 
+## 🏳️ Feature flags for pages
+
+### Create flag
+
+For create a new feature flag for pages, you need to open `router.config.js` file and add your flag into config with the following syntax:
+
+```javascript
+export const routerConfig = [
+  {
+    path: '/',
+    development: true,
+    staging: true,
+    production: false,
+  },
+]
+```
+Then, if a page is unavailable in one of the environments, the page will be removed from the sitemap and a redirect to page 404 will be configured for it.
+
 ## BEM (Block, Element, Modifier)
 
 BEM (Block, Element, Modifier) is a component-based approach to web development.
 
 For BEM, I advise you to use the following:
 1. "block" - for naming blocks (A functionally independent page component that can be reused. In HTML, blocks are represented by the class attribute.
-       Features:
+   Features:
 
 The block name describes its purpose ("What is it?" — menu or button), not its state ("What does it look like?" — red or big).
 
@@ -388,7 +406,7 @@ The block shouldn't influence its environment, meaning you shouldn't set the ext
 You also shouldn't use CSS tag or ID selectors when using BEM.
 
 2. "block__element" - __ for naming elements
-A composite part of a block that can't be used separately from it.
+   A composite part of a block that can't be used separately from it.
 
 Features:
 
@@ -408,7 +426,7 @@ Example
 </form>
 ```
 3. "block block - modifier" - --modifier for naming modifiers, while the main class of the block/element must be
-An entity that defines the appearance, state, or behavior of a block or element.
+   An entity that defines the appearance, state, or behavior of a block or element.
 
 Features:
 

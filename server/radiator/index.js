@@ -24,9 +24,9 @@ function runRadiator() {
     slackChannelId: 'mad-marketing',
     websiteUrl: 'https://maddevs.io',
     analyticsViewId: '230523659',
-    pagePathsListForAnalytics: [
-      'customer-university',
-      'blog',
+    pagesPathForViewsAnalytics: [
+      '/customer-university/',
+      '/insights/blog/',
     ],
     analyticsConversions: [
       {

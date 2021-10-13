@@ -65,7 +65,7 @@
       </TextParagraph>
       <TextQuoteBox
         class="m-48_top m-48_bottom media-m-24_top media-m-24_bottom m-auto"
-        author="Oleg Katkov, Software engineer at Mad Devs"
+        author="Oleg Katkov, Software engineer"
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >

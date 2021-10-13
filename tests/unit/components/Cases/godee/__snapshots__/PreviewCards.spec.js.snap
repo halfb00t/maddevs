@@ -50,6 +50,7 @@ exports[`PreviewCards component should render correctly 1`] = `
                   file="application-for-passengers-card"
                   folder="godee"
                   height="211"
+                  lazy="true"
                   width="334"
                 />
                  
@@ -94,6 +95,7 @@ exports[`PreviewCards component should render correctly 1`] = `
                   file="application-for-drivers-card"
                   folder="godee"
                   height="280"
+                  lazy="true"
                   width="313"
                 />
                  
@@ -134,23 +136,16 @@ exports[`PreviewCards component should render correctly 1`] = `
             >
               <picture-stub
                 alt="GoDee: Bus App Management System."
-                class="card-content_desktop-image"
+                class=""
                 extension="png"
                 file="godee-admin-panel-card"
                 folder="godee"
                 height="219"
+                lazy="true"
                 width="695"
               />
                
-              <picture-stub
-                alt="GoDee: bus app management control panel"
-                class="card-content_mobile-image"
-                extension="png"
-                file="godee-admin-panel-card-mobile"
-                folder="godee"
-                height="160"
-                width="307"
-              />
+              <!---->
             </div>
           </div>
         </div>
