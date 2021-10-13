@@ -35,7 +35,7 @@ exports[`InternationalTradeCenter root component should render correctly 1`] = `
         </span>
          
         <br />
-         and international trade in Central Asia
+         and international trade in Central Asia.
     
       </p>
     </caseheader-stub>

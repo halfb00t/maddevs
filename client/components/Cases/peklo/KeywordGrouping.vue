@@ -56,7 +56,7 @@
     </div>
     <TextQuote
       class="m-auto m-96_top m-96_bottom media-m-48_top media-m-48_bottom"
-      author="Oleg Katkov, Software engineer at Mad Devs"
+      author="Oleg Katkov, Software engineer"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
