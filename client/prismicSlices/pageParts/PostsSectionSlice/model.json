@@ -35,7 +35,75 @@
           "type": "Select"
         }
       },
-      "items": {}
+      "items": {
+        "theme": {
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "light",
+              "dark"
+            ],
+            "default_value": "light"
+          },
+          "type": "Select"
+        },
+        "uid": {
+          "config": {
+            "label": "uid",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "type": {
+          "config": {
+            "label": "Type",
+            "placeholder": "",
+            "options": [
+              "blog_home",
+              "post",
+              "author",
+              "tag"
+            ]
+          },
+          "type": "Select"
+        },
+        "url": {
+          "config": {
+            "label": "FeaturedImageUrl",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "dimensionWidth": {
+          "config": {
+            "label": "DimensionWidth",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "dimensionHeight": {
+          "config": {
+            "label": "DimensionHeight",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "alt": {
+          "config": {
+            "label": "FeaturedImageAlt",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "date": {
+          "config": {
+            "label": "Date",
+            "placeholder": ""
+          },
+          "type": "Date"
+        }
+      }
     }
   ]
 }

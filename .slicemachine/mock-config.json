@@ -502,7 +502,8 @@
     },
     "PostsSectionSlice": {
       "default-slice": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     }
   },
