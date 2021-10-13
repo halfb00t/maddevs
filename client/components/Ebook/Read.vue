@@ -107,6 +107,7 @@ export default {
 <style lang="scss" scoped>
 .ebook-read {
   background-color: #fff;
+  padding-bottom: 40px;
 
   &__form {
     width: 440px;
