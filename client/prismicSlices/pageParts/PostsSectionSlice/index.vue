@@ -2,17 +2,16 @@
   <div class="tag-posts">
     <div class="container">
       <div class="tag-posts__list">
-        <template v-if="tagPostsLoaded">
+        <template v-if="slice.items">
           <section
             v-for="post in slice.items"
-            :key="post.id"
+            :key="post"
             :post="post"
             class="tag-posts__list-item"
           >
             <PostCard
               :post="post"
               :tag="blogTag"
-              :author="findAuthor(post.data.post_author.id, allAuthors)"
               :disable-tag-link="true"
             />
           </section>
@@ -49,6 +48,16 @@ export default {
       default() {
         return {}
       },
+    },
+  },
+
+  mounted() {
+    this.showData()
+  },
+
+  methods: {
+    showData() {
+      console.log(this.slice)
     },
   },
 }

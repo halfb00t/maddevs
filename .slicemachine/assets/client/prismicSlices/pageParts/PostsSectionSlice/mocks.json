@@ -8,40 +8,19 @@
         "theme": "light",
         "data": {
           "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
           "url": "http://twitter.com"
-        }
-      },
-      {
-        "theme": "light",
-        "data": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "theme": "light",
-        "data": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "theme": "dark",
-        "data": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "theme": "light",
-        "data": {
-          "link_type": "Web",
-          "url": "http://google.com"
         }
       }
     ],
     "primary": {
-      "animation": "fade-up"
+      "animation": "zoom-in"
     }
   }
 ]

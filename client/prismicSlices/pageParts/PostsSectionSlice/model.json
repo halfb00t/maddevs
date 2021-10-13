@@ -50,12 +50,11 @@
         },
         "data": {
           "config": {
-            "label": "LinkToAnArticle",
+            "label": "LinkToArticle",
             "select": "document",
             "customtypes": [
               "post",
-              "author",
-              "cu_master"
+              "customer_university"
             ]
           },
           "type": "Link"
