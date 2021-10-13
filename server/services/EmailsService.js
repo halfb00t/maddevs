@@ -69,6 +69,29 @@ async function sendMailFromVariables({ variables, templateId, attachment }) {
   return send(email)
 }
 
+async function verifyEmailDelivery(id) {
+  return new Promise(resolve => {
+    sendpulse.smtpGetEmailInfoById(data => {
+      resolve(data)
+    }, id)
+  })
+}
+
+async function sendEmailToRequest({ variables }) {
+  const emailParams = {
+    templateId: 672221, // Required
+    variables,
+    subject: variables.subject,
+    fromName: 'Mad Devs Team',
+    fromEmail: DEFAULT_FROM_EMAIL,
+    toName: variables.fullName,
+    toEmail: variables.email,
+  }
+
+  const email = buildEmail(emailParams)
+  return send(email)
+}
+
 async function sendCVResponseMail({ variables }) {
   const emailParams = {
     templateId: 638666,
@@ -80,11 +103,13 @@ async function sendCVResponseMail({ variables }) {
     toEmail: variables.email,
   }
 
-  const email = await buildEmail(emailParams)
+  const email = buildEmail(emailParams)
   return send(email)
 }
 
 module.exports = {
   sendMailFromVariables,
+  sendEmailToRequest,
   sendCVResponseMail,
+  verifyEmailDelivery,
 }
