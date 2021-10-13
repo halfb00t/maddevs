@@ -24,7 +24,7 @@ export default {
 
     lottieLink: {
       type: String,
-      default: 'https://d6xkme6dcvajw.cloudfront.net/',
+      default: '',
     },
 
     loop: {
@@ -50,6 +50,17 @@ export default {
   mounted() {
     const observerCallback = (entries, observer) => entries.forEach(({ isIntersecting, target }) => {
       if (!isIntersecting) return
+      this.createLottie()
+      observer.unobserve(target)
+    })
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(observerCallback, { threshold: 0.1 })
+      observer.observe(this.$refs.lavContainer)
+    }
+  },
+
+  methods: {
+    createLottie() {
       this.anim = lottie.loadAnimation({
         container: this.$refs.lavContainer,
         renderer: 'svg',
@@ -59,12 +70,7 @@ export default {
         assetsPath: 'https://d6xkme6dcvajw.cloudfront.net/',
       })
       this.$emit('animCreated', this.anim)
-      observer.unobserve(target)
-    })
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(observerCallback, { threshold: 0.1 })
-      observer.observe(this.$refs.lavContainer)
-    }
+    },
   },
 }
 </script>
