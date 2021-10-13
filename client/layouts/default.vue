@@ -15,6 +15,7 @@ import HeaderV2 from '@/components/core/HeaderV2'
 import Footer from '@/components/core/Footer/Footer'
 import initIntercom from '@/helpers/intercom'
 import CookieNotice from '@/components/core/CookieNotice'
+import { getNotAllowedRoutes } from '../../utils/getNotAllowedRoutes'
 
 export default {
   name: 'Default',
@@ -28,7 +29,11 @@ export default {
    * This middleware is needed to update the masterRef prismic parameter if it has expired
    * More about this issue - https://community.prismic.io/t/expired-token-access-token-403-error-on-some-page-visits-safari/4369/23
    */
-  async middleware({ route = { name: '' }, $axios, $prismic }) {
+  async middleware({
+    route = { name: '' },
+    $axios,
+    $prismic,
+  }) {
     const pagesWithPrismic = ['careers', 'blog', 'ebooks', 'customer-university']
     if (pagesWithPrismic.some(page => route.name.includes(page))) {
       const prismicData = await $axios.get(process.env.prismicApi)
@@ -40,6 +45,17 @@ export default {
 
   computed: {
     ...mapGetters(['showFooter']),
+    getNotAllowedRoutes,
+  },
+
+  watch: {
+    $route() {
+      this.checkNotAllowedRoute()
+    },
+  },
+
+  beforeMount() {
+    this.checkNotAllowedRoute()
   },
 
   mounted() {
@@ -70,11 +86,17 @@ export default {
       }
       window.addEventListener('scroll', scriptLoader)
     },
+
+    checkNotAllowedRoute() {
+      if (this.getNotAllowedRoutes.find(route => route === $nuxt.$route.path)) {
+        this.$router.push('/404/')
+      }
+    },
   },
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .default-layout {
   background-color: $bgcolor--black;
 }

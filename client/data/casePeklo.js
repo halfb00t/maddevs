@@ -115,7 +115,7 @@ export const technologies = [
 export const team = [
   {
     name: 'Oleg Katkov',
-    position: 'Software Engineer',
+    position: 'Backend Developer',
     image: {
       file: 'oleg-katkov',
     },

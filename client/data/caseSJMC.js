@@ -145,7 +145,7 @@ export const team = [
   },
   {
     name: 'Vlad Andreev',
-    position: 'DevOps Engineer',
+    position: 'CQO',
     image: {
       file: 'vlad-andreev',
     },
@@ -166,7 +166,7 @@ export const team = [
   },
   {
     name: 'Andrew Minkin',
-    position: 'Back-end Developer',
+    position: 'CTO',
     image: {
       file: 'andrew-minkin',
     },
@@ -180,42 +180,42 @@ export const team = [
   },
   {
     name: 'Kirill Avdeev',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'avdeev',
     },
   },
   {
     name: 'Stanislav Shcherbinin',
-    position: 'Back-end Developer',
+    position: 'Backend Developer',
     image: {
       file: 'stanislav-shcherbinin',
     },
   },
   {
     name: 'Aleksandr Astashov',
-    position: 'Back-end Developer',
+    position: 'Full-stack Developer',
     image: {
       file: 'astashov',
     },
   },
   {
     name: 'Ruslan Kasymov',
-    position: 'Logistics Manager',
+    position: 'QA Engineer and PM',
     image: {
       file: 'kasymov',
     },
   },
   {
     name: 'Pavel Pushkarev',
-    position: 'Mobile App Developer',
+    position: 'iOS Developer',
     image: {
       file: 'pushkarev',
     },
   },
   {
     name: 'Rustom Kulbatyrov',
-    position: 'Mobile App Developer',
+    position: 'Android Developer',
     image: {
       file: 'kulbatyrov',
     },

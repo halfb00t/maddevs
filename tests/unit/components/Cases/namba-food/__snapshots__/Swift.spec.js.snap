@@ -286,9 +286,9 @@ exports[`Swift component should render correctly 1`] = `
           href="https://github.com/maddevsio/ariadna"
           target="_blank"
         >
-          Ariadna
+          Ariadna is an open-source
         </a>
-         is an open-source
+        
       geocoder based on ElasticSearch with OpenStreetMap, in-house developed. The tool searches for coordinates by
       synonyms and names of places, looking for crossroads and addresses in a certain radius, and knows how to reverse
       geocoding and automatically update with new data from drivers.

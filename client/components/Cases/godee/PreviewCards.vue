@@ -38,7 +38,7 @@
         </div>
         <Card class="background-color-godee-black-card">
           <CardGoDeePreview
-            :mobile-image="true"
+            :mobile-image="false"
             :width="695"
             :height="219"
             class-name="godee-admin-panel"
@@ -47,7 +47,7 @@
             picture-folder="godee"
             file-name="godee-admin-panel-card"
             file-extension="png"
-            mobile-image-name="godee-admin-panel-card-mobile"
+            mobile-image-name=""
             alt="GoDee: Bus App Management System."
           />
         </Card>

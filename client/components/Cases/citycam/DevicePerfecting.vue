@@ -43,7 +43,7 @@
       </TextParagraph>
       <TextQuote
         class="m-auto m-96_bottom media-m-48_bottom"
-        author="Alexander Edakin, backend developer"
+        author="Alexander Edakin, Backend Developer"
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >

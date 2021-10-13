@@ -1,7 +1,7 @@
 export const team = [
   {
     name: 'Oleg Puzanov',
-    position: 'CTO',
+    position: 'CSO',
     image: {
       file: 'oleg-puzanov',
     },
@@ -15,7 +15,7 @@ export const team = [
   },
   {
     name: 'Rustom Kulbatyrov',
-    position: 'Android Developer',
+    position: 'Mobile Developer',
     image: {
       file: 'kulbatyrov',
     },
@@ -29,7 +29,7 @@ export const team = [
   },
   {
     name: 'Belek Abylov',
-    position: 'Backend Developer',
+    position: 'Full-stack Developer',
     image: {
       file: 'belek-abylov',
     },
@@ -43,14 +43,14 @@ export const team = [
   },
   {
     name: 'Gennady Karev',
-    position: 'Backend Developer',
+    position: 'Full-stack Developer',
     image: {
       file: 'gennady-karev',
     },
   },
   {
     name: 'Aleksandr Krivov',
-    position: 'UX/UI Specialist',
+    position: 'Lead Designer',
     image: {
       file: 'aleksandr-krivov',
     },
@@ -78,7 +78,7 @@ export const team = [
   },
   {
     name: 'Pavel Pushkarev',
-    position: 'iOS Developer',
+    position: 'Mobile Developer',
     image: {
       file: 'pushkarev',
     },
