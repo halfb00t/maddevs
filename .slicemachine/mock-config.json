@@ -499,6 +499,11 @@
           }
         }
       }
+    },
+    "PostsSectionSlice": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

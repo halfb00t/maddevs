@@ -89,6 +89,7 @@ export default {
 
     tagPostsToShow() {
       if (this.tagPosts && !this.tagPosts.length) return []
+      console.log(this.tagPosts)
       return this.tagPosts.slice(0, this.pageSize * this.tagPostsPage)
     },
 
