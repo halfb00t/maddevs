@@ -48,60 +48,17 @@
           },
           "type": "Select"
         },
-        "uid": {
+        "data": {
           "config": {
-            "label": "uid",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "type": {
-          "config": {
-            "label": "Type",
-            "placeholder": "",
-            "options": [
-              "blog_home",
+            "label": "LinkToAnArticle",
+            "select": "document",
+            "customtypes": [
               "post",
               "author",
-              "tag"
+              "cu_master"
             ]
           },
-          "type": "Select"
-        },
-        "url": {
-          "config": {
-            "label": "FeaturedImageUrl",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "dimensionWidth": {
-          "config": {
-            "label": "DimensionWidth",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "dimensionHeight": {
-          "config": {
-            "label": "DimensionHeight",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "alt": {
-          "config": {
-            "label": "FeaturedImageAlt",
-            "placeholder": ""
-          },
-          "type": "Text"
-        },
-        "date": {
-          "config": {
-            "label": "Date",
-            "placeholder": ""
-          },
-          "type": "Date"
+          "type": "Link"
         }
       }
     }

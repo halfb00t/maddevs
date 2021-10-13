@@ -6,33 +6,38 @@
     "items": [
       {
         "theme": "light",
-        "uid": "utilize ubiquitous web-readiness",
-        "type": "post",
-        "url": "repurpose best-of-breed ROI",
-        "dimensionWidth": "maximize next-generation markets",
-        "dimensionHeight": "integrate collaborative e-business",
-        "alt": "extend web-enabled mindshare",
-        "date": "2013-10-14"
+        "data": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
       },
       {
         "theme": "light",
-        "uid": "repurpose B2C e-business",
-        "type": "tag",
-        "url": "scale e-business partnerships",
-        "dimensionWidth": "deploy customized synergies",
-        "dimensionHeight": "brand frictionless convergence",
-        "alt": "aggregate cross-media niches",
-        "date": "2017-05-19"
+        "data": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
       },
       {
         "theme": "dark",
-        "uid": "seize synergistic blockchains",
-        "type": "tag",
-        "url": "unleash vertical technologies",
-        "dimensionWidth": "optimize customized partnerships",
-        "dimensionHeight": "strategize scalable relationships",
-        "alt": "seize bleeding-edge bandwidth",
-        "date": "2018-10-13"
+        "data": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
       }
     ],
     "primary": {
