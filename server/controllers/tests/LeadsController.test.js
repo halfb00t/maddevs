@@ -4,6 +4,8 @@ import * as emailsService from '../../services/EmailsService'
 import * as leadsService from '../../services/LeadsService'
 
 jest.mock('../../services/EmailsService', () => ({
+  sendEmailToRequest: jest.fn(),
+  verifyEmailDelivery: jest.fn(),
   sendMailFromVariables: jest.fn(),
 }))
 
@@ -12,9 +14,12 @@ jest.mock('../../services/LeadsService', () => ({
 }))
 
 // mocks
-const sendEmail = jest.fn()
+const sendEmail = jest.fn(() => Promise.resolve({ id: '1' }))
+const getDelivery = jest.fn(() => Promise.resolve({ smtp_answer_code: 200 }))
 const createLead = jest.fn(() => Promise.resolve({ data: 'data' }))
 
+emailsService.sendEmailToRequest.mockImplementation(sendEmail)
+emailsService.verifyEmailDelivery.mockImplementation(getDelivery)
 emailsService.sendMailFromVariables.mockImplementation(sendEmail)
 leadsService.createLead.mockImplementation(createLead)
 
@@ -53,9 +58,11 @@ describe('leadsController', () => {
 
   it('should correctly call sendEmail and createLead methods', async () => {
     req.body.templateId = 123
-    req.body.variables = {}
+    req.body.variables = { phoneNumber: '' }
     const data = await controller.create(req, res)
     expect(data).toEqual({ data: 'data' })
+    expect(emailsService.sendEmailToRequest).toHaveBeenCalledTimes(1)
+    expect(emailsService.verifyEmailDelivery).toHaveBeenCalledTimes(1)
     expect(emailsService.sendMailFromVariables).toHaveBeenCalledTimes(1)
     expect(leadsService.createLead).toHaveBeenCalledTimes(1)
   })

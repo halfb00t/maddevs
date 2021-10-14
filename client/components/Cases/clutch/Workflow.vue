@@ -48,8 +48,8 @@
 <script>
 import Lottie from 'vue-lottie/src/lottie.vue'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/clutch/workflow.json'
 import playLottieMixin from '@/mixins/playLottieMixin'
+import animationData from '@/assets/lottie/clutch/workflow.json'
 import Picture from '@/components/Cases/shared/Picture'
 
 export default {
