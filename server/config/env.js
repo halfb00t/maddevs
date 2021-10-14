@@ -30,6 +30,10 @@ const { NODE_ENV } = process.env
 const S3_ACCESS_KEY_ID = process.env.NODE_S3_ACCESS_KEY_ID
 const S3_SECRET_ACCESS_KEY = process.env.NODE_S3_SECRET_ACCESS_KEY
 
+// IP
+const IP_INFO_TOKEN = process.env.NODE_IP_INFO_TOKEN
+const IP_BAN_LIST = process.env.NODE_IP_BAN_LIST
+
 module.exports = {
   ATLASSIAN_TOKEN,
   ATLASSIAN_EMAIL,
@@ -47,4 +51,6 @@ module.exports = {
   NODE_ENV,
   S3_ACCESS_KEY_ID,
   S3_SECRET_ACCESS_KEY,
+  IP_INFO_TOKEN,
+  IP_BAN_LIST,
 }
