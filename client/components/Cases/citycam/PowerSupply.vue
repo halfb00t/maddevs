@@ -51,10 +51,11 @@
         <h2 class="case_title_h2 case_subtitle p-48_top media-p-24_top m-24_bottom media-m-12_bottom">
           Board tracing
         </h2>
-        <Lottie
+        <LottieMad
           id="power-supply"
           class="case_lottie"
-          :options="options"
+          height="670px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/board-tracing.json`)"
           @animCreated="handleAnimation"
         />
       </div>
@@ -63,14 +64,13 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuote from '@/components/Cases/shared/TextQuote'
 import ListNumbered from '@/components/Cases/shared/ListNumbered'
 import ListNumberedItem from '@/components/Cases/shared/ListNumberedItem'
-import playLottieMixin from '@/mixins/playLottieMixin'
-import animationData from '@/assets/lottie/citycam/board-tracing.json'
 import { components } from '@/data/caseCityCam'
+import playLottie from '@/helpers/playLottie'
+import LottieMad from '@/components/shared/LottieMad'
 
 export default {
   name: 'PowerSupply',
@@ -79,21 +79,20 @@ export default {
     ListNumbered,
     TextParagraph,
     TextQuote,
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [
-    playLottieMixin('power-supply', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
-  ],
 
   data() {
     return {
       components,
+      showLottie: false,
     }
+  },
+
+  methods: {
+    handleAnimation(animation) {
+      playLottie(animation, 'power-supply')
+    },
   },
 }
 </script>
