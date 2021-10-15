@@ -28,6 +28,7 @@
         v-lazy-load
         muted="true"
         loop="true"
+        playsinline
         class="cases-list_item-video"
       >
         <source
