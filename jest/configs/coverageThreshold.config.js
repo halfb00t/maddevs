@@ -4,7 +4,7 @@ module.exports = {
       lines: 87,
       statements: 87,
       branches: 75,
-      functions: 79,
+      functions: 78,
     },
   },
 }

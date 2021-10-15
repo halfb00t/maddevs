@@ -30,10 +30,10 @@ exports[`ChallengesAndSolutions component should render correctly 1`] = `
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
-        <lottie-stub
-          class="case_lottie"
+        <div
+          class="lottie-container case_lottie"
           id="challenges-solutions"
-          options="[object Object]"
+          style="--height: 570px; --width: 100%;"
         />
       </div>
        

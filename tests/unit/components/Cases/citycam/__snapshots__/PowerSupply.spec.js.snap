@@ -169,10 +169,10 @@ exports[`PowerSupply component should render correctly 1`] = `
       
         </h2>
          
-        <lottie-stub
-          class="case_lottie"
+        <div
+          class="lottie-container case_lottie"
           id="power-supply"
-          options="[object Object]"
+          style="--height: 670px; --width: 100%;"
         />
       </div>
     </div>
