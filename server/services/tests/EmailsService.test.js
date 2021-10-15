@@ -36,7 +36,7 @@ describe('EmailsService', () => {
       },
       to: [
         {
-          name: 'Mad Devs team',
+          name: 'Mad Devs Team',
           email: req.body.variables.emailTo,
         },
       ],

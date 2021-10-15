@@ -5,13 +5,14 @@
         <template v-if="slice.items">
           <section
             v-for="post in slice.items"
-            :key="post"
+            :key="post.data.id"
             :post="post"
             class="tag-posts__list-item"
           >
             <PostCard
               :post="post"
               :tag="blogTag"
+              :author="findAuthor(post.data.id, allAuthors)"
               :disable-tag-link="true"
             />
           </section>
@@ -57,7 +58,7 @@ export default {
 
   methods: {
     showData() {
-      console.log(this.slice)
+      console.log(this.slice.items[0].data.id)
     },
   },
 }
