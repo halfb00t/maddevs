@@ -8,7 +8,12 @@ async function getIpInfo(ip) {
 }
 
 function getIPByRequest(req) {
-  return req.headers['x-forwarded-for'] || req.connection.remoteAddress
+  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+  /**
+   * In several cases ip can be an array of ips separated with comma('92.38.148.60, 172.68.132.29')
+   * To resolve this behavior we need to split an ip and get only the first element
+   */
+  return ip.split(',')[0]
 }
 
 async function getLocationByIP(ip) {
