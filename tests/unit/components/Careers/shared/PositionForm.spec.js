@@ -4,16 +4,6 @@ import { render } from '@testing-library/vue'
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import PositionForm from '@/components/Careers/shared/PositionForm'
 
-jest.mock('@/api/ipInfo', () => (
-  {
-    getIPInfo: () => ({
-      ip: 'ip',
-      country: 'country',
-      city: 'city',
-    }),
-  }
-))
-
 jest.mock('bowser', () => ({
   parse: () => ({
     browser: {
@@ -209,8 +199,6 @@ describe('PositionForm component', () => {
             subject: `Job Candidate Application for ${wrapper.vm.$props.position}`,
             modalTitle: 'Mad Devs Website Careers Form',
             pageUrl: 'pageUrl',
-            ip: 'ip',
-            geoIp: 'Country: country, City: city',
             userBrowser: 'Name: Chrome, Version: 91.0.4472.114',
             userOS: 'Name: macOS, Version: 10.15.7, VersionName: Catalina',
             userPlatform: 'Type: desktop, Vendor: Apple',
