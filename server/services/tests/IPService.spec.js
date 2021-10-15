@@ -59,4 +59,13 @@ describe('IPService', () => {
         country: '-',
       })
   })
+
+  it('should correctly throw Error', async () => {
+    const error = new Error('API error')
+    fetch.default.mockImplementation(() => Promise.reject(error))
+
+    await expect(IPService.getLocationByIP())
+      .rejects
+      .toThrow(error)
+  })
 })
