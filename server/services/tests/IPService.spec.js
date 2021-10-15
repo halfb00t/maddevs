@@ -17,7 +17,7 @@ const getLocationData = locationData => Promise.resolve({
 })
 
 describe('IPService', () => {
-  it('should correctly return IP by request', async () => {
+  it('should correctly return IP by request if ip is not an array', async () => {
     const requestData = {
       headers: {
         'x-forwarded-for': '212.42.107.138',
@@ -25,7 +25,18 @@ describe('IPService', () => {
     }
     const userIP = IPService.getIPByRequest(requestData)
     expect(userIP)
-      .toBe(requestData.headers['x-forwarded-for'])
+      .toBe('212.42.107.138')
+  })
+
+  it('should correctly return IP by request if ip is an array', async () => {
+    const requestData = {
+      headers: {
+        'x-forwarded-for': '1.1.1.1, 212.42.107.138',
+      },
+    }
+    const userIP = IPService.getIPByRequest(requestData)
+    expect(userIP)
+      .toBe('1.1.1.1')
   })
 
   it('should correctly return True if user blocked', async () => {
