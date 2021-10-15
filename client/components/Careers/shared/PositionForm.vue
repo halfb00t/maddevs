@@ -158,7 +158,6 @@ import ModalSuccess from '@/components/core/modals/ModalSuccess'
 
 import { fileSizeValidation, fileExt } from '@/helpers/validators'
 import parseUserAgentForLeads from '@/helpers/parseUserAgentForLeads'
-import { getIPInfo } from '@/api/ipInfo'
 
 export default {
   name: 'PositionForm',
@@ -244,7 +243,6 @@ export default {
       const splitedName = this.name.split(' ')
       const base64File = await this.toBase64(this.cvFile)
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
-      const { ip = 'Unknown', country = 'Unknown', city = 'Unknown' } = await getIPInfo()
 
       return {
         body: {
@@ -271,8 +269,6 @@ export default {
               subject: `Job Candidate Application for ${this.position}`,
               modalTitle: 'Mad Devs Website Careers Form',
               pageUrl: (window && window.location.href) || 'Unknown',
-              ip,
-              geoIp: `Country: ${country}, City: ${city}`,
               userBrowser,
               userOS,
               userPlatform,
