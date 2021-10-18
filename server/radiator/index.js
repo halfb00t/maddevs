@@ -1,4 +1,5 @@
-require('dotenv').config()
+require('dotenv')
+  .config()
 const { Radiator } = require('@maddevs/mad-radiator')
 
 function runRadiator() {
@@ -17,6 +18,7 @@ function runRadiator() {
       slackWebhookUrl: process.env.RADIATOR_WEBHOOK_URL,
       googleapisKey: process.env.RADIATOR_GOOGLEAPIS_KEY,
       telegramToken: process.env.RADIATOR_TELEGRAM_TOKEN,
+      sentryDSN: process.env.sentryDSN,
     },
     slack: true,
     telegram: false,
@@ -85,7 +87,10 @@ function runRadiator() {
 
   const weekly = new Radiator(weeklyConfig)
   const daily = new Radiator(dailyConfig)
-  return { weekly, daily }
+  return {
+    weekly,
+    daily,
+  }
 }
 
 module.exports = runRadiator
