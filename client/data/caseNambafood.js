@@ -199,14 +199,14 @@ export const team = [
   },
   {
     name: 'Eldar Akkozov',
-    position: 'Mobile App Developer',
+    position: 'Mobile Developer',
     image: {
       file: 'eldar-akkozov',
     },
   },
   {
     name: 'Altynai Toktomuratova',
-    position: 'Mobile App Developer',
+    position: 'Mobile Developer',
     image: {
       file: 'altynai-toktomuratova',
     },
