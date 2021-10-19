@@ -61,7 +61,7 @@
         class="mad-community__posts-section"
       >
         <CustomerUniversityCard
-          v-for="(madCommunityPost,idx) in madCommunityPostToShow"
+          v-for="(madCommunityPost, idx) in madCommunityPostToShow"
           :key="madCommunityPost.id"
           v-bind="madCommunityPost.data"
           :author="findAuthor(madCommunityPostToShow[0].data.post_author.id, allAuthors)"
@@ -109,11 +109,6 @@ export default {
     }
   },
 
-  created() {
-    this.getCustomerUniversitySectionPosts()
-    this.getCustomerUniversityPosts()
-  },
-
   computed: {
     ...mapGetters(['customerUniversitySectionPosts', 'CUPosts', 'allAuthors', 'allPosts']),
 
@@ -150,6 +145,11 @@ export default {
     madCommunityPostToShow() {
       return this.isShowAllMadCommunityPosts ? this.madCommunityPost : this.madCommunityPost.slice(0, 3)
     },
+  },
+
+  created() {
+    this.getCustomerUniversitySectionPosts()
+    this.getCustomerUniversityPosts()
   },
 
   methods: {
