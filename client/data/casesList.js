@@ -7,7 +7,7 @@ export const casesList = [
     subtitle: 'B2B',
     title: 'The growth of Clutch.co',
     desc: 'Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers of users through cutting-edge technological solutions',
-    poster: '/images/Cases/citycam/png/clutch-banner.png',
+    poster: '/images/Cases/clutch/png/clutch-banner.png',
     logo: {
       width: 253,
       height: 93,
