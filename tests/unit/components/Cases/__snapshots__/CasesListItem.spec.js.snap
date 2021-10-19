@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CasesListItem component should render correctly 1`] = `
+<div>
+  <div
+    class="cases-list_item cases-list_item--full"
+  >
+    <nuxtlink-stub
+      class="cases-list_item-link"
+      disabled=""
+      tag="a"
+      to="/"
+    >
+      <div
+        class="cases-list_item-video_poster"
+        lazy-background="/test"
+      />
+       
+      <!---->
+       
+      <video
+        class="cases-list_item-video"
+        data-testid="test-video"
+        loop="loop"
+        muted="muted"
+        playsinline=""
+      >
+        <source
+          data-src="test"
+          type="video/mp4"
+        />
+        
+      Your browser does not support the video tag.
+    
+      </video>
+       
+      <div
+        class="cases-list_item-info"
+      >
+        <img
+          alt="Image"
+          class="cases-list_item-info-logo cases-list_item-info-"
+          data-src="/images/Cases//svg/.svg"
+          height="80"
+          width="260"
+        />
+         
+        <span>
+          Test test
+        </span>
+         
+        <h3>
+          
+        test
+      
+        </h3>
+         
+        <p>
+          test test
+        </p>
+         
+        <nuxtlink-stub
+          to="/"
+        >
+          
+        Explore
+      
+        </nuxtlink-stub>
+      </div>
+    </nuxtlink-stub>
+  </div>
+</div>
+`;

@@ -23,9 +23,21 @@
         :lazy-background="$getMediaFromS3(posterLink)"
       />
       <!-- Video BG -->
+      <!-- Image placeholder fallback for Video -->
+      <img
+        v-if="isIphone && loaded"
+        v-lazy-load
+        data-testid="test-fallback-image"
+        class="cases-list_item-video_fallback"
+        :data-src="$getMediaFromS3(posterLink)"
+        alt="case video fallback"
+      >
+      <!-- End Image placeholder fallback for Video -->
       <video
+        v-if="!isIphone && loaded"
         ref="video"
         v-lazy-load
+        data-testid="test-video"
         muted="true"
         loop="true"
         playsinline
@@ -127,7 +139,20 @@ export default {
   data() {
     return {
       isMobile,
+      isIphone: false,
+      loaded: false,
     }
+  },
+
+  mounted() {
+    if (navigator.userAgent.match(/(iPhone)/i)) {
+      this.isIphone = true
+    } else {
+      this.isIphone = false
+    }
+    this.$nextTick(() => {
+      this.loaded = true
+    })
   },
 
   methods: {
@@ -230,6 +255,16 @@ export default {
       background-position: center;
       z-index: -1;
       margin: -1px;
+    }
+
+    &_fallback {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
   }
 
