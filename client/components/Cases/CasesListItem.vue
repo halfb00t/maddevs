@@ -24,12 +24,15 @@
       />
       <!-- Video BG -->
       <video
+        v-if="loaded"
         ref="video"
         v-lazy-load
         muted="true"
         loop="true"
         playsinline
+        :controls="false"
         class="cases-list_item-video"
+        :data-poster="$getMediaFromS3(posterLink)"
       >
         <source
           :data-src="$getMediaFromS3(videoFileName)"
@@ -127,7 +130,14 @@ export default {
   data() {
     return {
       isMobile,
+      loaded: false,
     }
+  },
+
+  mounted() {
+    this.$nextTick(() => {
+      this.loaded = true
+    })
   },
 
   methods: {
