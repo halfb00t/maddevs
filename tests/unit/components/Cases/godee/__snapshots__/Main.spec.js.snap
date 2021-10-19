@@ -1951,7 +1951,7 @@ exports[`Main component should render correctly 1`] = `
               class="case_team-item__position"
             >
               
-      QA Engineer and PM
+      QA Engineer
     
             </p>
           </div>
@@ -2087,7 +2087,7 @@ exports[`Main component should render correctly 1`] = `
               class="case_team-item__position"
             >
               
-      iOS Developer
+      Mobile Developer
     
             </p>
           </div>
@@ -2189,7 +2189,7 @@ exports[`Main component should render correctly 1`] = `
               class="case_team-item__position"
             >
               
-      UX/UI Specialist
+      Designer
     
             </p>
           </div>
@@ -2257,7 +2257,7 @@ exports[`Main component should render correctly 1`] = `
               class="case_team-item__position"
             >
               
-      Android Developer
+      Mobile Developer
     
             </p>
           </div>
