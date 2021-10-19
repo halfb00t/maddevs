@@ -27,6 +27,7 @@
       <img
         v-if="isIphone && loaded"
         v-lazy-load
+        data-testid="test-fallback-image"
         class="cases-list_item-video_fallback"
         :data-src="$getMediaFromS3(posterLink)"
         alt="case video fallback"
@@ -36,6 +37,7 @@
         v-if="!isIphone && loaded"
         ref="video"
         v-lazy-load
+        data-testid="test-video"
         muted="true"
         loop="true"
         playsinline
