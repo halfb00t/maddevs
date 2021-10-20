@@ -327,7 +327,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Mobile App Developer
+      Mobile Developer
     
           </p>
         </div>
@@ -361,7 +361,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Mobile App Developer
+      Mobile Developer
     
           </p>
         </div>
