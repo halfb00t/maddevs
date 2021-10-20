@@ -3,8 +3,8 @@
     <div class="hr-contact__image">
       <img
         v-lazy-load
-        :data-src="$getMediaFromS3(`/images/Careers/jpg/dianaHR.jpeg`)"
-        alt="Diana"
+        :data-src="$getMediaFromS3(`/images/Careers/jpg/EkaterinaHr.jpg`)"
+        alt="Ekaterina"
       >
     </div>
     <div class="hr-contact__info">

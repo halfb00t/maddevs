@@ -9,7 +9,7 @@ exports[`HRContactCard is a Vue instance 1`] = `
       class="hr-contact__image"
     >
       <img
-        alt="Diana"
+        alt="Ekaterina"
         data-src="img.jpg"
       />
     </div>
