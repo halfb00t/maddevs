@@ -9,17 +9,32 @@
         :data-aos="animation"
       >
         <div
-          v-for="expert in slice.items"
+          v-for="expert in experts"
           :key="expert.name"
           class="meet-our-experts__expert-item"
+          @mouseenter.stop="(expert.hoverImage.url && expert.isHover) ? toggleImageHanlde() : {}"
+          @mouseleave.stop="(expert.hoverImage.url && expert.isHover) ? toggleImageHanlde() : {}"
         >
-          <img
-            :src="expert.image.url"
-            :alt="expert.image.alt || 'Image'"
-            width="295"
-            height="401"
-            class="meet-our-experts__expert-item-img"
+          <div
+            v-if="expert.hoverImage.url && expert.isHover"
           >
+            <img
+              :src="toggleImage ? expert.image.url : expert.hoverImage.url"
+              :alt="expert.image.alt || 'Image'"
+              width="295"
+              height="401"
+              class="meet-our-experts__expert-item-img"
+            >
+          </div>
+          <div v-else>
+            <img
+              :src="expert.image.url"
+              :alt="expert.image.alt || 'Image'"
+              width="295"
+              height="401"
+              class="meet-our-experts__expert-item-img"
+            >
+          </div>
           <div class="meet-our-experts__expert-bottom_content">
             <div class="meet-our-experts__expert-info">
               <div class="meet-our-experts__expert-name">
@@ -75,7 +90,19 @@ export default {
   data() {
     return {
       animation: this.slice.primary.animation,
+      experts: this.slice.items,
+      hoverCount: 0,
+      toggleImage: true,
     }
+  },
+
+  methods: {
+    toggleImageHanlde() {
+      this.hoverCount += 1
+      if (this.hoverCount >= 4) {
+        this.toggleImage = !this.toggleImage
+      }
+    },
   },
 }
 </script>
