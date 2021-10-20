@@ -115,7 +115,7 @@ export default {
           width: 103px;
           height: 50px;
           top: -2px;
-          right: 26px;
+          right: 7px;
         }
       }
     }
