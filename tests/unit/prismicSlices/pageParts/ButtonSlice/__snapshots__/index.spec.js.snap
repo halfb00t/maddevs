@@ -16,7 +16,7 @@ exports[`Button slice should correctly render UIButton 1`] = `
         data-testid="button-ui"
         href="url"
         style="position: relative; overflow: hidden;"
-        target="_blank"
+        target="_self"
       >
         
       
@@ -45,7 +45,7 @@ exports[`Button slice should correctly render UILinkButton 1`] = `
         class="ui-link-button ui-link-button--grey button-slice__button button-slice__button--link"
         data-testid="button-link"
         href="url"
-        target="_blank"
+        target="_self"
       >
         
       
@@ -71,7 +71,7 @@ exports[`Button slice should correctly render UIOutlinedButton 1`] = `
         class="ui-outlined-button ui-outlined-button--grey button-slice__button button-slice__button--outlined"
         data-testid="button-outline"
         href="url"
-        target="_blank"
+        target="_self"
         type="button"
       >
         
