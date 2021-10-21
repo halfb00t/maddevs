@@ -419,7 +419,7 @@ Example
 <!-- `search-form` block -->
 <form class="search-form">
     <!-- `input` element in the `search-form` block -->
-    <input class="search-form__input">
+    <input class="search-form__input"/>
 
     <!-- `button` element in the `search-form` block -->
     <button class="search-form__button">Search</button>
@@ -491,7 +491,7 @@ prismic login
 
 After login you need to run the slices builder dashboard: [localhost:9999](http://localhost:9999/)
 ```bash
-prismic sm --develop
+npm run slicemachine
 ```
 
 Also you need to run the storybook dashboard in other terminal: [localhost:3003](http://localhost:3003/)
