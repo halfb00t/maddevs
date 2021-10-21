@@ -49,4 +49,18 @@ describe('TeamCards slice', () => {
     expect(screen.queryAllByText('Uncle Bob')).not.toBeNull()
     expect(screen.queryAllByText('Alice')).not.toBeNull()
   })
+
+  it('should render correctly with hover image data', () => {
+    props.slice.items[0].isHover = true
+    props.slice.items[0].hoverImage = {
+      url: 'https://yandex.ru/',
+      alt: 'Text Alt',
+    }
+
+    const { container } = render(TeamCards, {
+      props,
+    })
+    console.log(props)
+    expect(container).toMatchSnapshot()
+  })
 })

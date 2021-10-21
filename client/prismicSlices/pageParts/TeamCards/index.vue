@@ -13,7 +13,7 @@
           :key="expert.name"
           class="meet-our-experts__expert-item"
           @mouseenter.stop="(expert.hoverImage.url && expert.isHover) ? toggleImageHanlde() : {}"
-          @mouseleave.stop="(expert.hoverImage.url && expert.isHover) ? toggleImageHanlde() : {}"
+          @mouseleave.stop="(expert.hoverImage.url && expert.isHover && hoverCount >= 3) ? toggleImageHanlde() : {}"
         >
           <div
             v-if="expert.hoverImage.url && expert.isHover"
@@ -46,6 +46,7 @@
             </div>
           </div>
           <img
+            v-if="expert.linkedin.url"
             :src="require(`@/assets/img/Home/svg/team/linkedin.svg`)"
             width="24"
             height="24"
@@ -89,7 +90,7 @@ export default {
 
   data() {
     return {
-      animation: this.slice.primary.animation,
+      animation: this.slice.primary?.animation,
       experts: this.slice.items,
       hoverCount: 0,
       toggleImage: true,
@@ -99,7 +100,7 @@ export default {
   methods: {
     toggleImageHanlde() {
       this.hoverCount += 1
-      if (this.hoverCount >= 4) {
+      if (this.hoverCount >= 3) {
         this.toggleImage = !this.toggleImage
       }
     },
