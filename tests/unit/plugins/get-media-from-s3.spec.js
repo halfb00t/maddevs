@@ -53,7 +53,7 @@ describe('get-media-form-s3 function', () => {
     } catch (e) {
       result = e.message
     } finally {
-      expect(result).toMatch('Cannot read property \'s3PublicUrl\' of null')
+      expect(result).toMatch('TypeError: Cannot read properties of null (reading \'s3PublicUrl\')')
       expect(inject).toHaveBeenCalledTimes(1)
     }
   })
