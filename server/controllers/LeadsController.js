@@ -27,6 +27,7 @@ async function create(req, res) {
   const { testIP, testEmail } = isTestIP(ip)
   if (testIP) {
     body.variables.emailTo = testEmail
+    if (testEmail === '') return res.json({ error: 'Test email is absent' })
     await sendMailFromVariables(body)
     return res.json({ message: 'Request sent to test email' })
   }
