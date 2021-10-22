@@ -1,7 +1,9 @@
 const { sendMailFromVariables, sendEmailToRequest, verifyEmailDelivery } = require('../services/EmailsService')
 const { createLead } = require('../services/LeadsService')
 const { validate } = require('../utils/validation')
-const { getIPByRequest, getLocationByIP, isBlockedIP } = require('../services/IPService')
+const {
+  getIPByRequest, getLocationByIP, isBlockedIP, isTestIP,
+} = require('../services/IPService')
 
 const ADDRESS_NOT_FOUND_ERROR = 550
 
@@ -20,6 +22,13 @@ async function create(req, res) {
       ip,
       geoIp: `Country: ${country}, City: ${city}`,
     },
+  }
+
+  const { testIP, testEmail } = isTestIP(ip)
+  if (testIP) {
+    body.variables.emailTo = testEmail
+    await sendMailFromVariables(body)
+    return res.json({ message: 'Request sent to test email' })
   }
 
   const delivery = await sendEmailToRequest(body)
