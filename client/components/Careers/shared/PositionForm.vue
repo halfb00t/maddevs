@@ -131,6 +131,7 @@
             </li>
           </ul>
         </p>
+        <recaptcha />
       </div>
       <UIButton
         type="submit"
@@ -227,6 +228,18 @@ export default {
     },
   },
 
+  async mounted() {
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.error(e)
+    }
+  },
+
+  beforeDestroy() {
+    this.$recaptcha.destroy()
+  },
+
   methods: {
     ...mapActions(['sendVacancy']),
 
@@ -303,6 +316,20 @@ export default {
 
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
+
+      if (process.env.FF_ENVIRONMENT === 'production') {
+        try {
+          const token = await this.$recaptcha.getResponse()
+          console.log('ReCaptcha token:', token)
+          const applicantData = await this.buildApplicantData()
+          this.sendVacancy(applicantData)
+          await this.$recaptcha.reset()
+          this.$refs.successModal.show()
+          this.resetForm()
+        } catch (error) {
+          console.log('Login error:', error)
+        }
+      }
 
       const applicantData = await this.buildApplicantData()
       this.sendVacancy(applicantData)

@@ -118,10 +118,12 @@ module.exports = {
     '@nuxtjs/sitemap',
     '@nuxtjs/gtm',
     '@nuxtjs/style-resources',
+    '@nuxtjs/recaptcha',
     ['nuxt-lazy-load', {
       defaultImage: '/DoNotRemove/nuxt-lazy-load-fallback.svg',
       directiveOnly: true,
-    }],
+    },
+    ],
     [
       'nuxt-i18n',
       {
@@ -140,6 +142,13 @@ module.exports = {
     }],
     ['nuxt-sm'],
   ],
+  recaptcha: {
+    hideBadge: false,
+    siteKey: process.env.RECAPTCHA_SITE_KEY,
+    version: 2,
+    size: 'normal',
+    theme: 'dark',
+  },
   sitemap: {
     hostname: 'https://maddevs.io',
     gzip: false,
