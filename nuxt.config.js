@@ -146,7 +146,7 @@ module.exports = {
     siteKey: process.env.RECAPTCHA_SITE_KEY,
     version: 2,
     size: 'normal',
-    theme: 'dark',
+    theme: 'blackglass',
   },
   sitemap: {
     hostname: 'https://maddevs.io',

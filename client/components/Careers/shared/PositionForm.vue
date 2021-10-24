@@ -131,7 +131,9 @@
             </li>
           </ul>
         </p>
-        <recaptcha />
+        <div class="position-form__recaptcha">
+          <recaptcha />
+        </div>
       </div>
       <UIButton
         type="submit"
@@ -220,10 +222,22 @@ export default {
   computed: {
     grades() {
       return [
-        { value: 'senior', label: this.$t('careers.detailPage.form.position.role1') },
-        { value: 'middle', label: this.$t('careers.detailPage.form.position.role2') },
-        { value: 'junior', label: this.$t('careers.detailPage.form.position.role3') },
-        { value: 'intern', label: this.$t('careers.detailPage.form.position.role4') },
+        {
+          value: 'senior',
+          label: this.$t('careers.detailPage.form.position.role1'),
+        },
+        {
+          value: 'middle',
+          label: this.$t('careers.detailPage.form.position.role2'),
+        },
+        {
+          value: 'junior',
+          label: this.$t('careers.detailPage.form.position.role3'),
+        },
+        {
+          value: 'intern',
+          label: this.$t('careers.detailPage.form.position.role4'),
+        },
       ]
     },
   },
@@ -263,7 +277,9 @@ export default {
             vacancyId: this.huntflowVacancyId,
             firstName: splitedName[0],
             middleName: splitedName.length > 2 ? splitedName[1] : '',
-            lastName: splitedName.length > 1 ? splitedName[splitedName.length - 1] : '',
+            lastName:
+              splitedName.length > 1 ? splitedName[splitedName.length - 1] : '',
+
             email: this.email,
             positionTitle: this.position,
             positionValue: this.grade.value,
@@ -285,7 +301,8 @@ export default {
               userBrowser,
               userOS,
               userPlatform,
-              formLocation: '\'I want to work for Mad Devs\' button, vacancy page',
+              formLocation:
+                '\'I want to work for Mad Devs\' button, vacancy page',
             },
 
             attachment: {
@@ -359,6 +376,10 @@ export default {
     @media screen and (max-width: 400px) {
       display: block;
     }
+  }
+
+  &__recaptcha {
+    margin-top: 32px;
   }
 
   &__field-positions {
