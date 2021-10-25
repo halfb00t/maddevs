@@ -1,66 +1,69 @@
 import { render, screen } from '@testing-library/vue'
 import TeamCards from '@/prismicSlices/pageParts/TeamCards'
 
-const props = {
+const apiData = {
+  animation: 'fade-up',
+  items: [
+    {
+      isHover: true,
+      hoverImage: {
+        url: 'https://yandex.ru/',
+        alt: 'Text Alt',
+      },
+      name: 'Uncle Bob',
+      image: {
+        url: 'https://google.com/',
+        alt: 'Alt text',
+      },
+      position: 'Senior',
+      linkedin: {
+        url: 'https://linkedin.com/bob/',
+      },
+    },
+    {
+      name: 'Alice',
+      image: {
+        url: 'https://yandex.ru/',
+        alt: 'Text Alt',
+      },
+      position: 'Team Lead',
+      linkedin: {
+        url: 'https://linkedin.com/alice/',
+      },
+    },
+  ],
+}
+
+const getProps = params => ({
   slice: {
     primary: {
-      animation: 'fade-up',
+      ...params,
     },
-    items: [
-      {
-        name: 'Uncle Bob',
-        image: {
-          url: 'https://google.com/',
-          alt: 'Alt text',
-        },
-        position: 'Senior',
-        linkedin: {
-          url: 'https://linkedin.com/bob/',
-        },
-      },
-      {
-        name: 'Alice',
-        image: {
-          url: 'https://yandex.ru/',
-          alt: 'Text Alt',
-        },
-        position: 'Team Lead',
-        linkedin: {
-          url: 'https://linkedin.com/alice/',
-        },
-      },
-    ],
+    items: [...params?.items],
   },
-}
+})
 
 describe('TeamCards slice', () => {
   it('should render correctly', () => {
     const { container } = render(TeamCards, {
-      props,
+      propsData: getProps({
+        ...apiData,
+        background: 'white',
+      }),
     })
-    expect(container).toMatchSnapshot()
-  })
-
-  it('should render correctly with data', () => {
-    render(TeamCards, {
-      props,
-    })
-
     expect(screen.queryAllByText('Uncle Bob')).not.toBeNull()
     expect(screen.queryAllByText('Alice')).not.toBeNull()
+    expect(container).toMatchSnapshot()
   })
 
-  it('should render correctly with hover image data', () => {
-    props.slice.items[0].isHover = true
-    props.slice.items[0].hoverImage = {
-      url: 'https://yandex.ru/',
-      alt: 'Text Alt',
-    }
-
-    const { container } = render(TeamCards, {
-      props,
+  it('should render correctly with data', async () => {
+    render(TeamCards, {
+      propsData: getProps({
+        ...apiData,
+        background: 'white',
+      }),
     })
-    console.log(props)
-    expect(container).toMatchSnapshot()
+    const img = screen.getAllByTestId('item-img').at(0)
+    expect(img.getAttribute('src')).toEqual('https://google.com/')
   })
 })

@@ -12,11 +12,11 @@
           v-for="expert in experts"
           :key="expert.name"
           class="meet-our-experts__expert-item"
-          @mouseenter.stop="(expert.hoverImage.url && expert.isHover) ? toggleImageHanlde() : {}"
-          @mouseleave.stop="(expert.hoverImage.url && expert.isHover && hoverCount >= 3) ? toggleImageHanlde() : {}"
+          @mouseenter.stop="( expert.isHover) ? toggleImageHanlde() : {}"
+          @mouseleave.stop="( expert.isHover && hoverCount >= 3) ? toggleImageHanlde() : {}"
         >
           <div
-            v-if="expert.hoverImage.url && expert.isHover"
+            v-if="expert.isHover"
           >
             <img
               :src="toggleImage ? expert.image.url : expert.hoverImage.url"
@@ -24,6 +24,7 @@
               width="295"
               height="401"
               class="meet-our-experts__expert-item-img"
+              data-testid="item-img"
             >
           </div>
           <div v-else>
@@ -33,6 +34,7 @@
               width="295"
               height="401"
               class="meet-our-experts__expert-item-img"
+              data-testid="item-img"
             >
           </div>
           <div class="meet-our-experts__expert-bottom_content">
@@ -119,22 +121,29 @@ export default {
   }
 
   &__experts-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 14px;
-
-    @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   &__expert-item {
     position: relative;
     border: 1px solid;
+    flex: 0 0 calc(19.66% - 14px);
+    margin: 7px;
     border-color: transparent;
     transition: all .2s ease;
     background-color: #F5F7F9;
+    @media screen and (max-width: 1300px) {
+      flex: 0 0 calc(24.66% - 14px);
+    }
+    @media screen and (max-width: 1140px) {
+      flex: 0 0 calc(33% - 14px);
+    }
+    @media screen and (max-width: 780px) {
+      flex: 0 0 calc(49% - 14px);
+    }
 
     &:hover {
       border-color: $border-color--red;
@@ -206,61 +215,30 @@ export default {
     @include font('Inter', 14px, 400);
   }
 
-  @media only screen and (max-width: 1180px) {
-    &__expert-name,
-    &__expert-position {
-      padding: 3px 4px;
-    }
-
+  @media only screen and (max-width: 890px) {
     &__expert-name {
-      font-size: 13px;
+      font-size: 15px;
     }
 
     &__expert-position {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     &__expert-info {
       margin-left: 12px;
     }
-
-    &__expert-linkedin-link {
-      width: 16px;
-      height: 16px;
-    }
   }
-
-  @media only screen and (max-width: 1024px) {
-    &__expert-name,
-    &__expert-position {
-      padding: 2px 3px;
-    }
-
-    &__expert-name {
-      font-size: 10px;
-    }
-
-    &__expert-position {
-      font-size: 9px;
-    }
-
-    &__expert-info {
-      margin-left: 8px;
-    }
-
-    &__expert-linkedin-link {
-      top: 8px;
-      right: 20px;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 780px) {
     &__expert-name {
       font-size: 13px;
     }
 
     &__expert-position {
       font-size: 11px;
+    }
+    &__expert-linkedin-link {
+      top: 8px;
+      right: 20px;
     }
   }
 

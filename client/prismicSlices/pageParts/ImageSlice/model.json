@@ -1,16 +1,27 @@
 {
-  "id": "customer_logo_slice",
+  "id": "image_slice",
   "type": "SharedSlice",
-  "name": "CustomerLogoSlice",
-  "description": "Customer Logo Slice",
+  "name": "ImageSlice",
+  "description": "ImageSlice",
   "variations": [
     {
-      "id": "default",
-      "name": "Default Slice",
+      "id": "default-slice",
+      "name": "Default slice",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Customer Logo Slice",
+      "description": "ImageSlice",
       "primary": {
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 1240,
+              "height": 607
+            },
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
         "colorTheme": {
           "config": {
             "label": "Background",
@@ -46,24 +57,7 @@
           "type": "Select"
         }
       },
-      "items": {
-        "logo": {
-          "type": "Image",
-          "config": {
-            "label": "Image logo",
-            "thumbnails": [],
-            "constraint": {}
-          }
-        },
-        "link": {
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "allowTargetBlank": true
-          },
-          "type": "Link"
-        }
-      }
+      "items": {}
     }
   ]
 }

@@ -3,6 +3,6 @@
 exports[`Spacer slice renders correctly 1`] = `
 <section
   class="spacer-slice"
-  style="height: 80px; background-color: rgb(255, 255, 255);"
+  style="height: 80px;"
 />
 `;

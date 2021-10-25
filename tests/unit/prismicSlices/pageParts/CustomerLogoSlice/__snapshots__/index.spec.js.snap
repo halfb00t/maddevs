@@ -4,6 +4,7 @@ exports[`Custom logo slice should render correctly with data 1`] = `
 <div>
   <section
     class="customer-logo-slice customer-logo-slice--white-theme"
+    style="background-color: rgb(255, 255, 255);"
   >
     <div
       class="container"
@@ -19,9 +20,7 @@ exports[`Custom logo slice should render correctly with data 1`] = `
         >
           <img
             alt="first customer logo"
-            height="64"
             src="https://maddevs.io/Open-Graph.png"
-            width="143"
           />
         </div>
         <div
@@ -30,9 +29,7 @@ exports[`Custom logo slice should render correctly with data 1`] = `
         >
           <img
             alt="second customer logo"
-            height="64"
             src="https://maddevs.io/Open-Graph.png"
-            width="143"
           />
         </div>
       </div>
@@ -44,7 +41,7 @@ exports[`Custom logo slice should render correctly with data 1`] = `
 exports[`Custom logo slice should render correctly without data 1`] = `
 <div>
   <section
-    class="customer-logo-slice customer-logo-slice--black-theme"
+    class="customer-logo-slice customer-logo-slice--white-theme"
   >
     <div
       class="container"
