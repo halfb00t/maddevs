@@ -30,7 +30,8 @@ export default {
   computed: {
     backgroundColor() {
       if (this.slice.primary.background === 'black') return '#111213'
-      return '#fff'
+      if (this.slice.primary.background === 'silver') return '#F4F4F4'
+      return '#ffffff'
     },
   },
 
@@ -47,23 +48,26 @@ export default {
     onResize() {
       if (window.innerWidth <= 375) {
         this.height = this.slice.primary['height-sm']
-        || this.slice.primary['height-md']
-        || this.slice.primary['height-lg']
-        || this.slice.primary['height-xl']
-        || this.slice.primary.height
-      } if (window.innerWidth > 375 && window.innerWidth <= 768) {
+          || this.slice.primary['height-md']
+          || this.slice.primary['height-lg']
+          || this.slice.primary['height-xl']
+          || this.slice.primary.height
+      }
+      if (window.innerWidth > 375 && window.innerWidth <= 768) {
         this.height = this.slice.primary['height-md']
-        || this.slice.primary['height-lg']
-        || this.slice.primary['height-xl']
-        || this.slice.primary.height
-      } if (window.innerWidth > 768 && window.innerWidth <= 1024) {
+          || this.slice.primary['height-lg']
+          || this.slice.primary['height-xl']
+          || this.slice.primary.height
+      }
+      if (window.innerWidth > 768 && window.innerWidth <= 1024) {
         this.height = this.slice.primary['height-lg']
-        || this.slice.primary['height-xl']
-        || this.slice.primary.height
-      } if (window.innerWidth > 1024 && window.innerWidth <= 1440) {
-        this.height = this.slice.primary['height-xl']
-        || this.slice.primary.height
-      } if (window.innerWidth > 1440) {
+          || this.slice.primary['height-xl']
+          || this.slice.primary.height
+      }
+      if (window.innerWidth > 1024 && window.innerWidth <= 1440) {
+        this.height = this.slice.primary['height-xl'] || this.slice.primary.height
+      }
+      if (window.innerWidth > 1440) {
         this.height = this.slice.primary.height
       }
     },
