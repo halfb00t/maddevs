@@ -271,6 +271,7 @@ export default {
       const base64File = await this.toBase64(this.cvFile)
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
       const token = await this.$recaptcha.getResponse()
+
       return {
         body: {
           huntflow: {
@@ -335,15 +336,12 @@ export default {
 
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
-      try {
-        const applicantData = await this.buildApplicantData()
-        this.sendVacancy(applicantData)
-        await this.$recaptcha.reset()
-        this.$refs.successModal.show()
-        this.resetForm()
-      } catch (error) {
-        console.log('Login error:', error)
-      }
+
+      const applicantData = await this.buildApplicantData()
+      this.sendVacancy(applicantData)
+      await this.$recaptcha.reset()
+      this.$refs.successModal.show()
+      this.resetForm()
     },
 
   },
