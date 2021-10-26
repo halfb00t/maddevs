@@ -2,6 +2,7 @@
   <section
     class="customer-logo-slice"
     :class="colorThemeClass"
+    :style="{ backgroundColor: sliceBackground }"
   >
     <div
       class="container"
@@ -18,8 +19,6 @@
           data-testid="customer-logo-slice-item"
         >
           <img
-            width="143"
-            height="64"
             :src="customer.logo.url"
             :alt="customer.logo.alt || 'Image'"
           >
@@ -68,8 +67,15 @@ export default {
 
   computed: {
     colorThemeClass() {
-      if (this.slice?.primary?.colorTheme === 'white') return 'customer-logo-slice--white-theme'
-      return 'customer-logo-slice--black-theme'
+      if (this.slice?.primary?.colorTheme === 'black') return 'customer-logo-slice--black-theme'
+      return 'customer-logo-slice--white-theme'
+    },
+
+    sliceBackground() {
+      if (this.slice?.primary?.colorTheme === 'white') return '#ffffff'
+      if (this.slice?.primary?.colorTheme === 'grey') return '#f5f7f9'
+      if (this.slice?.primary?.colorTheme === 'black') return '#111213'
+      return null
     },
   },
 }
@@ -166,19 +172,14 @@ export default {
 
   // ---- Themes ---- //
   &--white-theme {
-    background-color: $bgcolor--white-primary;
     /deep/ .customer-logo-slice {
       &_title,
       &_description {
         color: $text-color--black-oil;
       }
-      &_logo {
-        background-color: #fff;
-      }
     }
   }
   &--black-theme {
-    background-color: $bgcolor--black;
     /deep/ .customer-logo-slice {
       &_title {
         color: $text-color--white-primary;

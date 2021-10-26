@@ -2,7 +2,7 @@
 
 exports[`Spacer slice renders correctly 1`] = `
 <section
-  class="text-slice text-slice--black-theme"
+  class="text-slice text-slice--white-theme"
 >
   <div
     class="container"

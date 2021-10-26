@@ -29,8 +29,10 @@ export default {
 
   computed: {
     backgroundColor() {
-      if (this.slice.primary.background === 'black') return '#111213'
-      return '#fff'
+      if (this.slice?.primary?.background === 'white') return '#ffffff'
+      if (this.slice?.primary?.background === 'silver') return '#f5f7f9'
+      if (this.slice?.primary?.background === 'black') return '#111213'
+      return null
     },
   },
 

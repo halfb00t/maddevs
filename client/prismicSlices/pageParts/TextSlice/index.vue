@@ -2,6 +2,7 @@
   <section
     class="text-slice"
     :class="colorThemeClass"
+    :style="{ backgroundColor: sliceBackground }"
   >
     <div class="container">
       <transition name="fade">
@@ -82,8 +83,15 @@ export default {
 
   computed: {
     colorThemeClass() {
-      if (this.slice?.primary?.colorTheme === 'white') return 'text-slice--white-theme'
-      return 'text-slice--black-theme'
+      if (this.slice?.primary?.colorTheme === 'black') return 'text-slice--black-theme'
+      return 'text-slice--white-theme'
+    },
+
+    sliceBackground() {
+      if (this.slice?.primary?.colorTheme === 'white') return '#ffffff'
+      if (this.slice?.primary?.colorTheme === 'silver') return '#f5f7f9'
+      if (this.slice?.primary?.colorTheme === 'black') return '#111213'
+      return null
     },
   },
 
@@ -129,11 +137,9 @@ export default {
   word-break: break-word;
 
   &--white-theme {
-    background-color: $bgcolor--white-primary;
     color: $text-color--black-lighter;
   }
   &--black-theme {
-    background-color: $bgcolor--black;
     color: $text-color--white;
   }
 }
