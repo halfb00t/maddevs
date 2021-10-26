@@ -270,7 +270,7 @@ export default {
       const splitedName = this.name.split(' ')
       const base64File = await this.toBase64(this.cvFile)
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
-
+      const token = await this.$recaptcha.getResponse()
       return {
         body: {
           huntflow: {
@@ -285,6 +285,8 @@ export default {
             positionValue: this.grade.value,
             linkedinProfile: this.linkedin,
           },
+
+          token,
 
           email: {
             templateId: 305491, // Required
@@ -333,21 +335,17 @@ export default {
 
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
-
-      if (process.env.FF_ENVIRONMENT === 'production') {
-        try {
-          const token = await this.$recaptcha.getResponse()
-          console.log('ReCaptcha token:', token)
-          const applicantData = await this.buildApplicantData()
-          this.sendVacancy(applicantData)
-          await this.$recaptcha.reset()
-          this.$refs.successModal.show()
-          this.resetForm()
-        } catch (error) {
-          console.log('Login error:', error)
-        }
+      try {
+        const applicantData = await this.buildApplicantData()
+        this.sendVacancy(applicantData)
+        await this.$recaptcha.reset()
+        this.$refs.successModal.show()
+        this.resetForm()
+      } catch (error) {
+        console.log('Login error:', error)
       }
     },
+
   },
 }
 </script>
