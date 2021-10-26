@@ -3,7 +3,7 @@ import * as controller from '../CareersController'
 import * as huntflowService from '../../services/HuntflowService'
 import * as emailsService from '../../services/EmailsService'
 import * as IPService from '../../services/IPService'
-import reCaptchaVerification from '../../services/reCaptchaVerification'
+import * as reCaptcha from '../../services/reCaptchaVerification'
 
 jest.mock('../../services/EmailsService', () => ({
   sendMailFromVariables: jest.fn(),
@@ -42,7 +42,7 @@ huntflowService.sendApplication.mockImplementation(sendApplication)
 IPService.getIPByRequest.mockImplementation(getIPByRequest)
 IPService.getLocationByIP.mockImplementation(getLocationByIP)
 IPService.isBlockedIP.mockImplementation(isBlockedIP)
-reCaptchaVerification.mockImplementation(verification)
+reCaptcha.reCaptchaVerification.mockImplementation(verification)
 
 describe('careersController', () => {
   let json
@@ -67,6 +67,7 @@ describe('careersController', () => {
   })
 
   it('should correctly handle invalid firstName in req.body', async () => {
+    req.body.payload = '{ "huntflow": { }, "email": {} ,"token": "test"}'
     await controller.index(req, res)
     expect(res.status)
       .toHaveBeenCalledWith(500)
@@ -78,7 +79,7 @@ describe('careersController', () => {
   })
 
   it('should correctly handle invalid lastName in req.body', async () => {
-    req.body.payload = '{ "huntflow": { "firstName": "first" }, "email": {} }'
+    req.body.payload = '{ "huntflow": { "firstName": "first" }, "email": {} ,"token": "test"}'
     await controller.index(req, res)
     expect(res.status)
       .toHaveBeenCalledWith(500)

@@ -2,7 +2,7 @@ const { sendMailFromVariables, sendCVResponseMail } = require('../services/Email
 const { sendApplication } = require('../services/HuntflowService')
 const { validate } = require('../utils/validation')
 const { getIPByRequest, getLocationByIP, isBlockedIP } = require('../services/IPService')
-const reCaptchaVerification = require('../services/reCaptchaVerification')
+const { reCaptchaVerification } = require('../services/reCaptchaVerification')
 
 const parseRequest = req => ({
   ...req,

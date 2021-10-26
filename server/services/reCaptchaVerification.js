@@ -10,4 +10,4 @@ async function reCaptchaVerification(token) {
   }
 }
 
-module.exports = reCaptchaVerification
+module.exports = { reCaptchaVerification }
