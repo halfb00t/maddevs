@@ -34,6 +34,9 @@ const S3_SECRET_ACCESS_KEY = process.env.NODE_S3_SECRET_ACCESS_KEY
 const IP_INFO_TOKEN = process.env.NODE_IP_INFO_TOKEN
 const IP_BAN_LIST = process.env.NODE_IP_BAN_LIST
 
+// reCaptcha key
+const RECAPTCHA_KEY = process.env.RECAPTCHA_SECRET_KEY
+
 module.exports = {
   ATLASSIAN_TOKEN,
   ATLASSIAN_EMAIL,
@@ -53,4 +56,5 @@ module.exports = {
   S3_SECRET_ACCESS_KEY,
   IP_INFO_TOKEN,
   IP_BAN_LIST,
+  RECAPTCHA_KEY,
 }
