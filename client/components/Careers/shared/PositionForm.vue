@@ -131,7 +131,9 @@
             </li>
           </ul>
         </p>
-        <recaptcha />
+        <div class="position-form__recaptcha">
+          <recaptcha />
+        </div>
       </div>
       <UIButton
         type="submit"
@@ -220,10 +222,22 @@ export default {
   computed: {
     grades() {
       return [
-        { value: 'senior', label: this.$t('careers.detailPage.form.position.role1') },
-        { value: 'middle', label: this.$t('careers.detailPage.form.position.role2') },
-        { value: 'junior', label: this.$t('careers.detailPage.form.position.role3') },
-        { value: 'intern', label: this.$t('careers.detailPage.form.position.role4') },
+        {
+          value: 'senior',
+          label: this.$t('careers.detailPage.form.position.role1'),
+        },
+        {
+          value: 'middle',
+          label: this.$t('careers.detailPage.form.position.role2'),
+        },
+        {
+          value: 'junior',
+          label: this.$t('careers.detailPage.form.position.role3'),
+        },
+        {
+          value: 'intern',
+          label: this.$t('careers.detailPage.form.position.role4'),
+        },
       ]
     },
   },
@@ -256,6 +270,7 @@ export default {
       const splitedName = this.name.split(' ')
       const base64File = await this.toBase64(this.cvFile)
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
+      const token = await this.$recaptcha.getResponse()
 
       return {
         body: {
@@ -263,12 +278,16 @@ export default {
             vacancyId: this.huntflowVacancyId,
             firstName: splitedName[0],
             middleName: splitedName.length > 2 ? splitedName[1] : '',
-            lastName: splitedName.length > 1 ? splitedName[splitedName.length - 1] : '',
+            lastName:
+              splitedName.length > 1 ? splitedName[splitedName.length - 1] : '',
+
             email: this.email,
             positionTitle: this.position,
             positionValue: this.grade.value,
             linkedinProfile: this.linkedin,
           },
+
+          token,
 
           email: {
             templateId: 305491, // Required
@@ -285,7 +304,8 @@ export default {
               userBrowser,
               userOS,
               userPlatform,
-              formLocation: '\'I want to work for Mad Devs\' button, vacancy page',
+              formLocation:
+                '\'I want to work for Mad Devs\' button, vacancy page',
             },
 
             attachment: {
@@ -317,25 +337,13 @@ export default {
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
 
-      if (process.env.FF_ENVIRONMENT === 'production') {
-        try {
-          const token = await this.$recaptcha.getResponse()
-          console.log('ReCaptcha token:', token)
-          const applicantData = await this.buildApplicantData()
-          this.sendVacancy(applicantData)
-          await this.$recaptcha.reset()
-          this.$refs.successModal.show()
-          this.resetForm()
-        } catch (error) {
-          console.log('Login error:', error)
-        }
-      }
-
       const applicantData = await this.buildApplicantData()
       this.sendVacancy(applicantData)
+      await this.$recaptcha.reset()
       this.$refs.successModal.show()
       this.resetForm()
     },
+
   },
 }
 </script>
@@ -364,6 +372,10 @@ export default {
     @media screen and (max-width: 400px) {
       display: block;
     }
+  }
+
+  &__recaptcha {
+    margin-top: 32px;
   }
 
   &__field-positions {
