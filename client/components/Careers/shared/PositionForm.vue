@@ -303,10 +303,9 @@ export default {
 
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
-      if (process.env.FF_ENVIRONMENT === 'production') {
-        const applicantData = await this.buildApplicantData()
-        this.sendVacancy(applicantData)
-      }
+
+      const applicantData = await this.buildApplicantData()
+      this.sendVacancy(applicantData)
       this.$refs.successModal.show()
       this.resetForm()
     },
