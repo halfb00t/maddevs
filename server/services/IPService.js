@@ -1,6 +1,8 @@
 const { lookup } = require('geoip-lite')
 const fetch = require('node-fetch')
-const { IP_INFO_TOKEN, IP_BAN_LIST } = require('../config/env')
+const {
+  IP_INFO_TOKEN, IP_BAN_LIST, IP_TEST_LIST, TEST_EMAIL,
+} = require('../config/env')
 
 async function getIpInfo(ip) {
   const info = await fetch.default(`https://ipinfo.io/${ip}?token=${IP_INFO_TOKEN}`)
@@ -31,8 +33,14 @@ function isBlockedIP(ip) {
   return banList.includes(ip)
 }
 
+function isTestIP(ip) {
+  const banList = (IP_TEST_LIST || '').split(',')
+  return { testIP: banList.includes(ip), testEmail: TEST_EMAIL || '' }
+}
+
 module.exports = {
   getIPByRequest,
   getLocationByIP,
   isBlockedIP,
+  isTestIP,
 }

@@ -10,6 +10,8 @@ jest.mock('node-fetch', () => (
 
 jest.mock('../../config/env', () => ({
   IP_BAN_LIST: '212.42.107.138, 212.42.107.133',
+  IP_TEST_LIST: '91.247.56.247',
+  TEST_EMAIL: 'test@test.com',
 }))
 
 const getLocationData = locationData => Promise.resolve({
@@ -45,6 +47,16 @@ describe('IPService', () => {
     const isBlocked = IPService.isBlockedIP(IP)
     expect(isBlocked)
       .toBeTruthy()
+  })
+
+  it('should correctly return True if id is testId', async () => {
+    const IP = '91.247.56.247'
+
+    const testIP = IPService.isTestIP(IP)
+    expect(testIP.testIP)
+      .toBeTruthy()
+    expect(testIP.testEmail)
+      .toBe('test@test.com')
   })
 
   it('should correctly return Location by IP', async () => {
