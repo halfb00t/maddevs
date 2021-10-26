@@ -498,6 +498,13 @@
             "content": "devops-audit"
           }
         }
+      },
+      "gridLottieLink": {
+        "items": {
+          "lottie-animation": {
+            "content": "devops-audit"
+          }
+        }
       }
     },
     "PostsSectionSlice": {

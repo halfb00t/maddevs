@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RichTextCardsBottomAnimation RichTextCardsBottomAnimation with items should render correctly with data 1`] = `
+<div>
+  <div
+    class="rich-text-cards"
+  >
+    <div
+      class="container"
+    >
+      <ul
+        class="rich-text-cards__grid"
+      >
+        <li
+          class="card-item"
+          data-testid="rich-text-animation-item"
+          style="background-color: rgb(255, 255, 255);"
+        >
+          <h3
+            class="card-item__title"
+          >
+            First item title
+          </h3>
+           
+          <div
+            class="card-item__content"
+          />
+           
+          <div
+            class="card-item__lottie"
+            style="max-width: undefinedpx;"
+          >
+            <cardanimation-stub
+              animationname=""
+            />
+          </div>
+        </li>
+        <li
+          class="card-item"
+          data-testid="rich-text-animation-item"
+          style="background-color: rgb(255, 255, 255);"
+        >
+          <h3
+            class="card-item__title"
+          >
+            second item title
+          </h3>
+           
+          <div
+            class="card-item__content"
+          />
+           
+          <div
+            class="card-item__lottie"
+            style="max-width: undefinedpx;"
+          >
+            <cardanimation-stub
+              animationname=""
+            />
+          </div>
+        </li>
+        <li
+          class="card-item"
+          data-testid="rich-text-animation-item"
+          style="background-color: rgb(0, 0, 0);"
+        >
+          <h3
+            class="card-item__title"
+          >
+            third item title
+          </h3>
+           
+          <div
+            class="card-item__content"
+          />
+           
+          <div
+            class="card-item__lottie"
+            style="max-width: undefinedpx;"
+          >
+            <cardanimation-stub
+              animationname=""
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
