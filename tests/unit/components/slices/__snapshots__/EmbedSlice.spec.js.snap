@@ -5,7 +5,7 @@ exports[`EmbedSlice component should render correctly with embed link 1`] = `
   <a
     class="embed__link"
     href="url"
-    target="_blank"
+    target="_self"
   >
     <prismicembed-stub
       class="embed__link-content"

@@ -52,7 +52,7 @@ export default {
       if (this.item?.embed?.type === 'link') {
         return {
           is: 'a',
-          target: '_blank',
+          target: '_self',
           href: this.item?.embed?.url,
           class: `embed__${this.item?.embed?.type}`,
         }

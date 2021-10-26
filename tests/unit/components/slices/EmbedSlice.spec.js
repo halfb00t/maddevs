@@ -72,7 +72,7 @@ describe('EmbedSlice component', () => {
 
       const expectedData = {
         is: 'a',
-        target: '_blank',
+        target: '_self',
         href: apiData.embed.url,
         class: 'embed__link',
       }
