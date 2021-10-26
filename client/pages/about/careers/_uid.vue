@@ -67,7 +67,7 @@ export default {
     PositionForm,
   },
 
-  async asyncData({ store, params, error }) {
+  async asyncData({ store, params, redirect }) {
     const { uid } = params
     const openGraphUrl = `${process.env.domain}/ru/about/careers/${uid}/`
 
@@ -78,7 +78,7 @@ export default {
       }
     } catch (e) {
       // Returns error page
-      return error({ statusCode: 404, message: 'Page not found' })
+      return redirect(303, '/about/careers/')
     }
   },
 
@@ -87,6 +87,10 @@ export default {
       openGraphUrl: '',
       benefits,
     }
+  },
+
+  nuxtI18n: {
+    locales: ['ru'],
   },
 
   head() {
