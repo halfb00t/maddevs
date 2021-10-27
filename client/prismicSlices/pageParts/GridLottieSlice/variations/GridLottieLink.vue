@@ -6,7 +6,7 @@
         v-for="item in items"
         :key="item['lottie-animation']"
         :href="item.link && item.link.url ? item.link.url : null"
-        :target="item.link && item.link.url ? '_blank' : null"
+        :target="item.link && item.link.url ? '_self' : null"
         :class=" [item.alignText ? `card-item--text-${item.alignText}` : null,
                   `card-item-${item.lottiePosition}`,
                   item.fullWidth ? 'card-item-full-width' : null]"
