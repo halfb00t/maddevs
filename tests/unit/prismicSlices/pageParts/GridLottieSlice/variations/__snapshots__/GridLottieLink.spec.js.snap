@@ -13,7 +13,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         data-testid="grid-lottie-animation-item"
         href="https://maddevs.io/"
         style="background-color: rgb(255, 255, 255);"
-        target="_blank"
+        target="_self"
       >
         <div
           class="card-item__lottie card-item__lottie-bottom"
@@ -48,7 +48,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         data-testid="grid-lottie-animation-item"
         href="https://maddevs.io/"
         style="background-color: rgb(255, 255, 255);"
-        target="_blank"
+        target="_self"
       >
         <div
           class="card-item__lottie card-item__lottie-bottom"
@@ -83,7 +83,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         data-testid="grid-lottie-animation-item"
         href="https://maddevs.io/"
         style="background-color: rgb(0, 0, 0);"
-        target="_blank"
+        target="_self"
       >
         <div
           class="card-item__lottie card-item__lottie-bottom"
