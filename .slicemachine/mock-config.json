@@ -531,6 +531,15 @@
           }
         }
       }
+    },
+    "CaseListSlice": {
+      "default-slice": {
+        "items": {
+          "link": {
+            "content": "/clients/case-studies/veeqo/"
+          }
+        }
+      }
     }
   },
   "_cts": {

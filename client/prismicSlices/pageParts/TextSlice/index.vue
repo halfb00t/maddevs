@@ -33,6 +33,12 @@
           :size="size"
           :data-aos="slice.primary.animation"
         />
+        <FlexibleParagraph
+          v-else-if="slice.variation === 'flexibleParagraph'"
+          v-bind="slice.primary"
+          :size="size"
+          :data-aos="slice.primary.animation"
+        />
       </transition>
     </div>
   </section>
@@ -44,6 +50,7 @@ import SimpleText from './variations/SimpleText'
 import TitleText from './variations/TitleText'
 import TitleTextButton from './variations/TitleTextButton'
 import Paragraph from './variations/Paragraph'
+import FlexibleParagraph from './variations/FlexibleParagraph'
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
@@ -55,6 +62,7 @@ export default {
     TitleText,
     TitleTextButton,
     Paragraph,
+    FlexibleParagraph,
   },
 
   mixins: [animateOnScrollMixin({
@@ -147,27 +155,24 @@ export default {
 /deep/ h1,
 /deep/ h2,
 /deep/ h3 {
-  @include font('Inter', 80px, 700);
-  line-height: 67px;
+  @include font('Inter', 60px, 700);
+  line-height: 60px;
   letter-spacing: -0.013em;
   @media screen and (max-width: 1024px) {
-    font-size: 60px;
+    font-size: 40px;
+    line-height: 48px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 40px;
   }
 }
 
 /deep/ p {
-  @include font('Inter', 32px, 400);
-  line-height: 44px;
+  @include font('Inter', 24px, 600);
+  line-height: 35px;
   letter-spacing: -0.013em;
   @media screen and (max-width: 1024px) {
-    font-size: 24px;
-    line-height: 35px;
-  }
-  @media screen and (max-width: 768px) {
     font-size: 21px;
     line-height: 30px;
   }
