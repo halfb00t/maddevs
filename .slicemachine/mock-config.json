@@ -521,6 +521,16 @@
           }
         }
       }
+    },
+    "DescriptionSliceWithIcon": {
+      "default-slice": {
+        "items": {},
+        "primary": {
+          "maxWidth": {
+            "content": "816px"
+          }
+        }
+      }
     }
   },
   "_cts": {
