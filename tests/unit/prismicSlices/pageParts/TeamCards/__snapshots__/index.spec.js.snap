@@ -16,16 +16,14 @@ exports[`TeamCards slice should render correctly 1`] = `
         <div
           class="meet-our-experts__expert-item"
         >
-          <div>
-            <img
-              alt="Alt text"
-              class="meet-our-experts__expert-item-img"
-              data-testid="item-img"
-              height="401"
-              src="https://google.com/"
-              width="295"
-            />
-          </div>
+          <img
+            alt="Alt text"
+            class="meet-our-experts__expert-item-img"
+            data-testid="item-img"
+            height="401"
+            src="https://google.com/"
+            width="295"
+          />
            
           <div
             class="meet-our-experts__expert-bottom_content"
@@ -70,16 +68,14 @@ exports[`TeamCards slice should render correctly 1`] = `
         <div
           class="meet-our-experts__expert-item"
         >
-          <div>
-            <img
-              alt="Text Alt"
-              class="meet-our-experts__expert-item-img"
-              data-testid="item-img"
-              height="401"
-              src="https://yandex.ru/"
-              width="295"
-            />
-          </div>
+          <img
+            alt="Text Alt"
+            class="meet-our-experts__expert-item-img"
+            data-testid="item-img"
+            height="401"
+            src="https://yandex.ru/"
+            width="295"
+          />
            
           <div
             class="meet-our-experts__expert-bottom_content"
