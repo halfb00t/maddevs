@@ -12,31 +12,17 @@
           v-for="expert in experts"
           :key="expert.name"
           class="meet-our-experts__expert-item"
-          @mouseenter.stop="( expert.isHover) ? toggleImageHanlde() : {}"
-          @mouseleave.stop="( expert.isHover && hoverCount >= 3) ? toggleImageHanlde() : {}"
+          @mouseenter="expert.isHover ? toggleImageHanlde() : {}"
+          @mouseleave="(expert.isHover && hoverCount >= 3) ? toggleImageHanlde() : {}"
         >
-          <div
-            v-if="expert.isHover"
+          <img
+            :src="expert.isHover && !toggleImage ? expert.hoverImage.url : expert.image.url"
+            :alt="expert.image.alt || 'Image'"
+            width="295"
+            height="401"
+            class="meet-our-experts__expert-item-img"
+            data-testid="item-img"
           >
-            <img
-              :src="toggleImage ? expert.image.url : expert.hoverImage.url"
-              :alt="expert.image.alt || 'Image'"
-              width="295"
-              height="401"
-              class="meet-our-experts__expert-item-img"
-              data-testid="item-img"
-            >
-          </div>
-          <div v-else>
-            <img
-              :src="expert.image.url"
-              :alt="expert.image.alt || 'Image'"
-              width="295"
-              height="401"
-              class="meet-our-experts__expert-item-img"
-              data-testid="item-img"
-            >
-          </div>
           <div class="meet-our-experts__expert-bottom_content">
             <div class="meet-our-experts__expert-info">
               <div class="meet-our-experts__expert-name">
