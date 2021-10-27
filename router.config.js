@@ -8,11 +8,4 @@
     production: false,
   },
  */
-export const routerConfig = [
-  {
-    path: '/about/team/',
-    development: true,
-    staging: true,
-    production: false,
-  },
-]
+export const routerConfig = []
