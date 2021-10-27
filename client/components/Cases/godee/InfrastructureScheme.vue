@@ -7,11 +7,12 @@
         <h2 class="case_title_h2 m-24_bottom case_text-align-center">
           Infrastructure scheme
         </h2>
-        <Lottie
+        <LottieMad
           id="infrastructure-scheme"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="570px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/godee/lottie/infrastructure-scheme.json`)"
+          :autoplay="true"
         />
       </section>
     </section>
@@ -34,23 +35,15 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import playLottieMixin from '@/mixins/playLottieMixin'
-import animationData from '@/assets/lottie/godee/infrastructure-scheme.json'
 
 export default {
   name: 'InfrastructureScheme',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [playLottieMixin('infrastructure-scheme', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
 }
 </script>
 

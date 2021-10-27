@@ -1,10 +1,10 @@
 <template>
   <div class="tag-posts">
-    <div
-      :data-aos="animation"
-      class="container"
-    >
-      <div class="tag-posts__list">
+    <div class="container">
+      <div
+        class="tag-posts__list"
+        :data-aos="animation"
+      >
         <template v-if="posts">
           <section
             v-for="post in posts"
@@ -61,7 +61,7 @@ export default {
 
   data() {
     return {
-      animation: this.slice.primary.animation,
+      animation: this.slice.primary?.animation,
       posts: [],
       authors: [],
     }
