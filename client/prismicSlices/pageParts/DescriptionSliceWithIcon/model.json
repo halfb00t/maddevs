@@ -1,0 +1,95 @@
+{
+  "id": "description_slice_with_icon",
+  "type": "SharedSlice",
+  "name": "DescriptionSliceWithIcon",
+  "description": "DescriptionSliceWithIcon",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "DescriptionSliceWithIcon",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "Color theme",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black"
+            ],
+            "default_value": "white"
+          },
+          "type": "Select"
+        },
+        "maxWidth": {
+          "config": {
+            "label": "Max width (px,% or vw)",
+            "placeholder": "1028px"
+          },
+          "type": "Text"
+        }
+      },
+      "items": {
+        "image": {
+          "config": {
+            "label": "Icon",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "content": {
+          "config": {
+            "label": "Content",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

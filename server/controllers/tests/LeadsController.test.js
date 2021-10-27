@@ -18,6 +18,7 @@ jest.mock('../../services/IPService', () => ({
   getIPByRequest: jest.fn(),
   getLocationByIP: jest.fn(),
   isBlockedIP: jest.fn(),
+  isTestIP: jest.fn(),
 }))
 // mocks
 const sendEmail = jest.fn(() => Promise.resolve({ id: '1' }))
@@ -81,6 +82,7 @@ describe('leadsController', () => {
 
   it('should correctly call sendEmail and createLead methods', async () => {
     IPService.isBlockedIP.mockImplementation(jest.fn(() => false))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: false, testEmail: '' })))
     req.body.templateId = 123
     req.body.variables = { phoneNumber: '' }
     const data = await controller.create(req, res)
@@ -97,11 +99,30 @@ describe('leadsController', () => {
   })
   it('should correctly return error if user blocked', async () => {
     IPService.isBlockedIP.mockImplementation(jest.fn(() => true))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: false, testEmail: '' })))
     const data = await controller.create(req, res)
     expect(data)
       .toEqual({
         message: 'templateId key not found or incorrect',
         status: 500,
       })
+  })
+  it('should correctly send email to testEmail only if ip is a test ip', async () => {
+    IPService.isBlockedIP.mockImplementation(jest.fn(() => false))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: true, testEmail: 'test@test.test' })))
+    req.body.templateId = 123
+    req.body.variables = { phoneNumber: '' }
+    const data = await controller.create(req, res)
+    expect(data)
+      .toEqual({ message: 'Request sent to test email' })
+  })
+  it('should correctly return error if ip is a test ip and no test email present', async () => {
+    IPService.isBlockedIP.mockImplementation(jest.fn(() => false))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: true, testEmail: '' })))
+    req.body.templateId = 123
+    req.body.variables = { phoneNumber: '' }
+    const data = await controller.create(req, res)
+    expect(data)
+      .toEqual({ error: 'Test email is absent' })
   })
 })

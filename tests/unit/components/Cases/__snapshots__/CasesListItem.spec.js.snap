@@ -7,7 +7,6 @@ exports[`CasesListItem component should render correctly 1`] = `
   >
     <nuxtlink-stub
       class="cases-list_item-link"
-      disabled=""
       tag="a"
       to="/"
     >
@@ -16,14 +15,14 @@ exports[`CasesListItem component should render correctly 1`] = `
         lazy-background="/test"
       />
        
-      <!---->
-       
       <video
+        autoplay="autoplay"
         class="cases-list_item-video"
-        data-testid="test-video"
+        height="100%"
         loop="loop"
         muted="muted"
         playsinline=""
+        width="100%"
       >
         <source
           data-src="test"

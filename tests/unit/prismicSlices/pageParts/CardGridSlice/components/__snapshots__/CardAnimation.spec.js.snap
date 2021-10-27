@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LottieCard LottieCard with items should render correctly with data 1`] = `
+<div>
+  <div
+    animationdata="android-app"
+    id="-undefined"
+    style="width: 100%; height: 100%; overflow: hidden; margin: 0px auto;"
+  >
+    <svg
+      height="undefined"
+      preserveAspectRatio="xMidYMid meet"
+      style="width: 100%; height: 100%; transform: translate3d(0,0,0);"
+      viewBox="0 0 undefined undefined"
+      width="undefined"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <clippath
+          id="__lottie_element_2"
+        >
+          <rect
+            height="undefined"
+            width="undefined"
+            x="0"
+            y="0"
+          />
+        </clippath>
+      </defs>
+      <g
+        clip-path="url(#__lottie_element_2)"
+      />
+    </svg>
+  </div>
+</div>
+`;

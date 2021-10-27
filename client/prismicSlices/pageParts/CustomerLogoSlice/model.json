@@ -17,7 +17,8 @@
             "placeholder": "",
             "options": [
               "white",
-              "black"
+              "black",
+              "grey"
             ]
           },
           "type": "Select"

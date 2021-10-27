@@ -54,7 +54,6 @@ function runRadiator() {
       worstCount: 3,
     },
   }
-
   const weeklyConfig = {
     ...baseConfig,
     range: 'week',
@@ -63,7 +62,7 @@ function runRadiator() {
     telegramChannelId: -1001428775098,
     schedule: {
       period: 'week',
-      time: 15 - 6, // heroku works with UTC timezone, so we need to calculate diff between Bishkek(UTC+6)
+      time: process.env.RADIATOR_WEEKLY_DISPATCH_TIME || 9,
       weekDay: 5,
     },
     chart: {
@@ -77,7 +76,7 @@ function runRadiator() {
     range: 'day',
     schedule: {
       period: 'day',
-      time: 9, // heroku works with UTC timezone, so we need to calculate diff between Bishkek(UTC+6)
+      time: process.env.RADIATOR_DAILY_DISPATCH_TIME || 9,
     },
     chart: {
       type: 'users',

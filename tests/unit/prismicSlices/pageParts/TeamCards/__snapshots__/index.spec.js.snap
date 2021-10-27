@@ -19,6 +19,7 @@ exports[`TeamCards slice should render correctly 1`] = `
           <img
             alt="Alt text"
             class="meet-our-experts__expert-item-img"
+            data-testid="item-img"
             height="401"
             src="https://google.com/"
             width="295"
@@ -70,6 +71,7 @@ exports[`TeamCards slice should render correctly 1`] = `
           <img
             alt="Text Alt"
             class="meet-our-experts__expert-item-img"
+            data-testid="item-img"
             height="401"
             src="https://yandex.ru/"
             width="295"

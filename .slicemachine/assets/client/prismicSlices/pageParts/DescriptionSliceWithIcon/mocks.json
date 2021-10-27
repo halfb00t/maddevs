@@ -1,0 +1,41 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "description_slice_with_icon",
+    "items": [
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+        },
+        "title": "visualize visionary platforms",
+        "content": "iterate clicks-and-mortar convergence"
+      },
+      {
+        "image": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": "Placeholder image",
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+        },
+        "title": "embrace cutting-edge ROI",
+        "content": "incubate one-to-one content"
+      }
+    ],
+    "primary": {
+      "animation": "fade-up-left",
+      "background": "black",
+      "colorTheme": "black",
+      "maxWidth": "816px"
+    }
+  }
+]

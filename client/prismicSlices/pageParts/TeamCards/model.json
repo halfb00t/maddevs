@@ -65,6 +65,23 @@
             "thumbnails": []
           },
           "type": "Image"
+        },
+        "isHover": {
+          "config": {
+            "label": "Hover effect",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
+        "hoverImage": {
+          "config": {
+            "label": "Hover image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
         }
       }
     }
