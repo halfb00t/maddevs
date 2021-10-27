@@ -83,12 +83,13 @@ function runRadiator() {
 
   const weeklySlackConfig = {
     slackWebhookUrl: process.env.RADIATOR_WEBHOOK_URL,
-    slackChannelId: 'mad-marketing',
+    slackChannelId: 'general',
+
   }
 
   const dailySlackConfig = {
     slackWebhookUrl: process.env.RADIATOR_WEBHOOK_URL,
-    slackChannelId: 'general',
+    slackChannelId: 'mad-marketing',
   }
 
   const weeklyScheduleConfig = {
