@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import CasesListItem from '@/components/Cases/CasesListItem.vue'
 import '../../__mocks__/intersectionObserverMock'
 
@@ -9,8 +9,7 @@ const mocks = {
 }
 
 const data = () => ({
-  loaded: true,
-  isIphone: false,
+  isMobile: false,
 })
 
 const directives = {
@@ -34,24 +33,7 @@ describe('CasesListItem component', () => {
       directives,
       props,
     })
-    expect(screen.queryAllByTestId('test-video')).toHaveLength(1)
-    expect(screen.queryAllByTestId('test-fallback-image')).toHaveLength(0)
+
     expect(container).toMatchSnapshot()
-  })
-
-  it('should render correctly on Iphone', () => {
-    render(CasesListItem, {
-      stubs,
-      mocks,
-      data: () => ({
-        loaded: true,
-        isIphone: true,
-      }),
-      directives,
-      props,
-    })
-
-    expect(screen.queryAllByTestId('test-video')).toHaveLength(0)
-    expect(screen.queryAllByTestId('test-fallback-image')).toHaveLength(1)
   })
 })
