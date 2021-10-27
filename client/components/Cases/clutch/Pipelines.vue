@@ -56,6 +56,17 @@
     </div>
     <div class="container_middle case_img-wrap m-48_bottom">
       <Picture
+        :shadow="false"
+        :radius="false"
+        :width="1026"
+        :height="16.45"
+        :background="true"
+        folder="common"
+        file="swiper-frame"
+        extension="jpg"
+        alt="Clutch: Safari Browser Top Bar."
+      />
+      <Picture
         :width="1026"
         :height="554"
         :lazy="true"
