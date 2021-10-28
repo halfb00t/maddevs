@@ -16,7 +16,6 @@ exports[`CasesListItem component should render correctly 1`] = `
       />
        
       <video
-        autoplay="autoplay"
         class="cases-list_item-video"
         height="100%"
         loop="loop"
