@@ -1,5 +1,6 @@
 import 'regenerator-runtime'
 import { shallowMount } from '@vue/test-utils'
+import { render, screen } from '@testing-library/vue'
 import TextSlice from '@/prismicSlices/pageParts/TextSlice'
 
 const resizeWindow = width => {
@@ -13,6 +14,7 @@ const apiData = {
   md: '70px',
   sm: '60px',
   xs: '50px',
+  colorTheme: 'silver',
 }
 
 const getProps = params => ({
@@ -23,6 +25,7 @@ const getProps = params => ({
       'size-md': params?.md,
       'size-sm': params?.sm,
       'size-xs': params?.xs,
+      colorTheme: params?.colorTheme,
     },
   },
 })
@@ -91,6 +94,146 @@ describe('Spacer slice', () => {
         }),
       })
       expect(wrapper.vm.size).toBe('80px')
+    })
+  })
+})
+
+describe('TextSlice slice', () => {
+  it('should correctly render SimpleText component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'default-slice'
+    const { container } = render(TextSlice, {
+      props,
+    })
+
+    expect(screen.queryByTestId('text-slice-default')).not.toBeNull()
+    expect(screen.queryByTestId('text-slice-title')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleText')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleTextButton')).toBeNull()
+    expect(screen.queryByTestId('text-slice-paragraph')).toBeNull()
+    expect(screen.queryByTestId('text-slice-flexibleParagraph')).toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should correctly render Title component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'title'
+    const { container } = render(TextSlice, {
+      props,
+    })
+
+    expect(screen.queryByTestId('text-slice-default')).toBeNull()
+    expect(screen.queryByTestId('text-slice-title')).not.toBeNull()
+    expect(screen.queryByTestId('text-slice-titleText')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleTextButton')).toBeNull()
+    expect(screen.queryByTestId('text-slice-paragraph')).toBeNull()
+    expect(screen.queryByTestId('text-slice-flexibleParagraph')).toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+  it('should correctly render TitleText component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'titleText'
+    const { container } = render(TextSlice, {
+      props,
+    })
+
+    expect(screen.queryByTestId('text-slice-default')).toBeNull()
+    expect(screen.queryByTestId('text-slice-title')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleText')).not.toBeNull()
+    expect(screen.queryByTestId('text-slice-titleTextButton')).toBeNull()
+    expect(screen.queryByTestId('text-slice-paragraph')).toBeNull()
+    expect(screen.queryByTestId('text-slice-flexibleParagraph')).toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+  it('should correctly render titleTextButton component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'titleTextButton'
+    const { container } = render(TextSlice, {
+      props,
+    })
+
+    expect(screen.queryByTestId('text-slice-default')).toBeNull()
+    expect(screen.queryByTestId('text-slice-title')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleText')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleTextButton')).not.toBeNull()
+    expect(screen.queryByTestId('text-slice-paragraph')).toBeNull()
+    expect(screen.queryByTestId('text-slice-flexibleParagraph')).toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+  it('should correctly render paragraph component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'paragraph'
+    const { container } = render(TextSlice, {
+      props,
+    })
+
+    expect(screen.queryByTestId('text-slice-default')).toBeNull()
+    expect(screen.queryByTestId('text-slice-title')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleText')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleTextButton')).toBeNull()
+    expect(screen.queryByTestId('text-slice-paragraph')).not.toBeNull()
+    expect(screen.queryByTestId('text-slice-flexibleParagraph')).toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+  it('should correctly render flexibleParagraph component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'flexibleParagraph'
+    const { container } = render(TextSlice, {
+      props,
+    })
+
+    expect(screen.queryByTestId('text-slice-default')).toBeNull()
+    expect(screen.queryByTestId('text-slice-title')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleText')).toBeNull()
+    expect(screen.queryByTestId('text-slice-titleTextButton')).toBeNull()
+    expect(screen.queryByTestId('text-slice-paragraph')).toBeNull()
+    expect(screen.queryByTestId('text-slice-flexibleParagraph')).not.toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+
+  describe('sliceBackground computed method', () => {
+    it('should return white hex', () => {
+      const wrapper = shallowMount(TextSlice, {
+        propsData: getProps({
+          ...apiData,
+          colorTheme: 'white',
+        }),
+      })
+
+      expect(wrapper.vm.sliceBackground).toBe('#ffffff')
+    })
+
+    it('should return grey hex', () => {
+      const wrapper = shallowMount(TextSlice, {
+        propsData: getProps({
+          ...apiData,
+          colorTheme: 'silver',
+        }),
+      })
+
+      expect(wrapper.vm.sliceBackground).toBe('#f5f7f9')
+    })
+
+    it('should return black hex', () => {
+      const wrapper = shallowMount(TextSlice, {
+        propsData: getProps({
+          ...apiData,
+          colorTheme: 'black',
+        }),
+      })
+
+      expect(wrapper.vm.sliceBackground).toBe('#111213')
+    })
+
+    it('should return null', () => {
+      const wrapper = shallowMount(TextSlice, {
+        propsData: getProps({
+          ...apiData,
+          colorTheme: 'unknown',
+        }),
+      })
+
+      expect(wrapper.vm.sliceBackground).toBeNull()
     })
   })
 })

@@ -9,34 +9,40 @@
         <SimpleText
           v-if="slice.variation === 'default-slice'"
           v-bind="slice.primary"
+          data-testid="text-slice-default"
           :data-aos="slice.primary.animation"
         />
         <Title
           v-else-if="slice.variation === 'title'"
           v-bind="slice.primary"
           :size="size"
+          data-testid="text-slice-title"
           :data-aos="slice.primary.animation"
         />
         <TitleText
           v-else-if="slice.variation === 'titleText'"
           v-bind="slice.primary"
+          data-testid="text-slice-titleText"
           :data-aos="slice.primary.animation"
         />
         <TitleTextButton
           v-else-if="slice.variation === 'titleTextButton'"
           v-bind="slice.primary"
+          data-testid="text-slice-titleTextButton"
           :data-aos="slice.primary.animation"
         />
         <Paragraph
           v-else-if="slice.variation === 'paragraph'"
           v-bind="slice.primary"
           :size="size"
+          data-testid="text-slice-paragraph"
           :data-aos="slice.primary.animation"
         />
         <FlexibleParagraph
           v-else-if="slice.variation === 'flexibleParagraph'"
           v-bind="slice.primary"
           :size="size"
+          data-testid="text-slice-flexibleParagraph"
           :data-aos="slice.primary.animation"
         />
       </transition>
