@@ -201,6 +201,7 @@ describe('TextSlice slice', () => {
       })
 
       expect(wrapper.vm.sliceBackground).toBe('#ffffff')
+      expect(wrapper.vm.colorThemeClass).toBe('text-slice--white-theme')
     })
 
     it('should return grey hex', () => {
@@ -212,6 +213,7 @@ describe('TextSlice slice', () => {
       })
 
       expect(wrapper.vm.sliceBackground).toBe('#f5f7f9')
+      expect(wrapper.vm.colorThemeClass).toBe('text-slice--white-theme')
     })
 
     it('should return black hex', () => {
@@ -223,6 +225,7 @@ describe('TextSlice slice', () => {
       })
 
       expect(wrapper.vm.sliceBackground).toBe('#111213')
+      expect(wrapper.vm.colorThemeClass).toBe('text-slice--black-theme')
     })
 
     it('should return null', () => {
@@ -234,6 +237,7 @@ describe('TextSlice slice', () => {
       })
 
       expect(wrapper.vm.sliceBackground).toBeNull()
+      expect(wrapper.vm.colorThemeClass).toBe('text-slice--white-theme')
     })
   })
 })
