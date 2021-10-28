@@ -30,13 +30,13 @@ exports[`DescriptionSliceWithIcon slice should render correctly with data 1`] = 
         <div
           class="description__text"
         >
-          <h3
+          <h2
             class="description__title"
           >
             
           transition web-enabled platforms
         
-          </h3>
+          </h2>
            
           <p
             class="description__description"
@@ -66,13 +66,13 @@ exports[`DescriptionSliceWithIcon slice should render correctly with data 1`] = 
         <div
           class="description__text"
         >
-          <h3
+          <h2
             class="description__title"
           >
             
           transition world-class initiatives
         
-          </h3>
+          </h2>
            
           <p
             class="description__description"
