@@ -20,7 +20,7 @@
           class="case_lottie"
           height="570px"
           :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/challenges-solutions.json`)"
-          @animCreated="handleAnimation"
+          :autoplay="true"
         />
       </div>
       <div
@@ -49,7 +49,6 @@ import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
 import { challengesAndSolutions, idSolutionsList } from '@/data/caseCityCam'
 import LottieMad from '@/components/shared/LottieMad'
-import playLottie from '@/helpers/playLottie'
 
 export default {
   name: 'ChallengesAndSolutions',
@@ -71,12 +70,6 @@ export default {
     return {
       challengesAndSolutions,
     }
-  },
-
-  methods: {
-    handleAnimation(animation) {
-      playLottie(animation, 'challenges-solutions')
-    },
   },
 }
 </script>

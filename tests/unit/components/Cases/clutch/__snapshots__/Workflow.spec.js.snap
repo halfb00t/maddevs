@@ -56,10 +56,10 @@ exports[`Workflow component should render correctly 1`] = `
     
       </h3>
        
-      <lottie-stub
-        class="case_lottie"
+      <div
+        class="lottie-container case_lottie"
         id="workflow-dev"
-        options="[object Object]"
+        style="--height: 480px; --width: 100%;"
       />
        
       <p

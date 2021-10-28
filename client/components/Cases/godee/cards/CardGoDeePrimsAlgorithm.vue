@@ -12,39 +12,24 @@
       </TextParagraph>
     </div>
     <div class="card-content_right-item">
-      <Lottie
-        :options="lottieOptions"
-        @animCreated="handleAnimation"
+      <LottieMad
+        height="900px"
+        :lottie-link="$getMediaFromS3(`/images/Cases/godee/lottie/prim-algorithm.json`)"
+        :autoplay="true"
       />
     </div>
   </div>
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/godee/prim-algorithm.json'
 
 export default {
   name: 'CardGoDeePrimsAlgorithm',
   components: {
     TextParagraph,
-    Lottie,
-  },
-
-  data() {
-    return {
-      animation: null,
-      lottieOptions: {
-        animationData,
-      },
-    }
-  },
-
-  methods: {
-    handleAnimation(animation) {
-      this.animation = animation
-    },
+    LottieMad,
   },
 }
 </script>
