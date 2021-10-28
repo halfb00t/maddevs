@@ -28,9 +28,9 @@
           >
         </div>
         <div class="description__text">
-          <h3 class="description__title">
+          <h2 class="description__title">
             {{ step.title }}
-          </h3>
+          </h2>
           <p class="description__description">
             {{ step.content }}
           </p>
