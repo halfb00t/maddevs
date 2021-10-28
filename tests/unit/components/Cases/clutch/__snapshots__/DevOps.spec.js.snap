@@ -63,7 +63,7 @@ exports[`DevOps component should render correctly 1`] = `
         <div
           class="lottie-container case_lottie"
           id="devOps-clutch"
-          style="--height: 100%; --width: 100%;"
+          style="--height: 380px; --width: 100%;"
         />
       </div>
        

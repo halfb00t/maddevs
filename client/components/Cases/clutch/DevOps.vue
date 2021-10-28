@@ -34,6 +34,7 @@
       >
         <LottieMad
           id="devOps-clutch"
+          height="380px"
           class="case_lottie"
           :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/devOps.json`)"
           :autoplay="true"

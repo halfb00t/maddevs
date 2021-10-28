@@ -21,7 +21,7 @@
             class="case_lottie"
             height="395px"
             :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/prototype-citycam.json`)"
-            @animCreated="handleAnimation"
+            :autoplay="true"
           />
         </div>
         <TextParagraph class="p-96_bottom media-p-48_bottom case_section-paragraph-grey">
@@ -39,19 +39,12 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import LottieMad from '@/components/shared/LottieMad'
-import playLottie from '@/helpers/playLottie'
 
 export default {
   name: 'Prototype',
   components: {
     TextParagraph,
     LottieMad,
-  },
-
-  methods: {
-    handleAnimation(animation) {
-      playLottie(animation, 'prototype')
-    },
   },
 }
 </script>

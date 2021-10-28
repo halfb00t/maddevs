@@ -15,8 +15,8 @@
         id="about-citycam"
         class="case_lottie"
         height="395px"
-        :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/about-citycam.json`)"
-        @animCreated="handleAnimation"
+        :lottie-link="$getMediaFromS3(`/images/Cases/citycam/lottie/about-citycam.json`)"
+        :autoplay="true"
       />
     </section>
   </section>
@@ -25,19 +25,12 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import LottieMad from '@/components/shared/LottieMad'
-import playLottie from '@/helpers/playLottie'
 
 export default {
   name: 'About',
   components: {
     TextParagraph,
     LottieMad,
-  },
-
-  methods: {
-    handleAnimation(animation) {
-      playLottie(animation, 'about-citycam')
-    },
   },
 }
 </script>

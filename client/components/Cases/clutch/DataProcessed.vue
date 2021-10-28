@@ -29,6 +29,7 @@
       >
         <LottieMad
           id="data-processed"
+          height="580px"
           class="case_lottie"
           :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/data-processed.json`)"
           :autoplay="true"

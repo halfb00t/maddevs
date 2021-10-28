@@ -30,11 +30,12 @@
       <h3 class="case_title_h3 m-12_bottom">
         DEV Workflow for Project DEV with UI test step
       </h3>
-      <Lottie
+      <LottieMad
         id="workflow-dev"
-        :options="options"
+        height="480px"
         class="case_lottie"
-        @animCreated="handleAnimation"
+        :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/workflow.json`)"
+        :autoplay="true"
       />
       <TextParagraph class="m-48_top media-m-24_top m-48_bottom media-m-24_bottom">
         At Mad Devs, the use of the agile method is a standard way to maintain transparency throughout all company
@@ -46,28 +47,17 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import playLottieMixin from '@/mixins/playLottieMixin'
-import animationData from '@/assets/lottie/clutch/workflow.json'
 import Picture from '@/components/Cases/shared/Picture'
 
 export default {
   name: 'Workflow',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
     Picture,
   },
-
-  mixins: [
-    playLottieMixin('workflow-dev', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
-  ],
-
 }
 </script>
 

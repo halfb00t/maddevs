@@ -62,7 +62,7 @@ exports[`DataProcessed component should render correctly 1`] = `
         <div
           class="lottie-container case_lottie"
           id="data-processed"
-          style="--height: 100%; --width: 100%;"
+          style="--height: 580px; --width: 100%;"
         />
       </div>
     </div>

@@ -138,7 +138,7 @@ exports[`IntellegentManagementPanel component should render correctly 1`] = `
         >
           <div
             class="lottie-container"
-            style="--height: 100%; --width: 100%;"
+            style="--height: 900px; --width: 100%;"
           />
         </div>
       </div>

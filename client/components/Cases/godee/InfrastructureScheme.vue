@@ -10,7 +10,7 @@
         <LottieMad
           id="infrastructure-scheme"
           class="case_lottie"
-          height="570px"
+          height="774px"
           :lottie-link="$getMediaFromS3(`/images/Cases/godee/lottie/infrastructure-scheme.json`)"
           :autoplay="true"
         />

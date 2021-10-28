@@ -746,7 +746,7 @@ exports[`Main component should render correctly 1`] = `
           <div
             class="lottie-container case_lottie"
             id="infrastructure-scheme"
-            style="--height: 570px; --width: 100%;"
+            style="--height: 774px; --width: 100%;"
           />
         </section>
       </section>

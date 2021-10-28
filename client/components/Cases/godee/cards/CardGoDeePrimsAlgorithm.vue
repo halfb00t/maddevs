@@ -13,6 +13,7 @@
     </div>
     <div class="card-content_right-item">
       <LottieMad
+        height="900px"
         :lottie-link="$getMediaFromS3(`/images/Cases/godee/lottie/prim-algorithm.json`)"
         :autoplay="true"
       />
