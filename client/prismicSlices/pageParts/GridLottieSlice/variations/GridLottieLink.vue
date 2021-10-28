@@ -15,6 +15,7 @@
         :style="{ backgroundColor: item.background || null }"
       >
         <div
+          v-if="item['lottie-animation']"
           :class="`card-item__lottie card-item__lottie-${item.lottiePosition}`"
           :style="{ 'maxWidth': `${item.width}px`, 'height': `${item.height}px` }"
         >
@@ -30,7 +31,6 @@
           v-html="renderCardContent($prismic.asHtml(item.content))"
         />
         <UIArrowButton
-          v-if="displayButtons"
           class="card-item__button"
         />
       </Component>
@@ -54,11 +54,6 @@ export default {
     items: {
       type: Array,
       default: () => ([]),
-    },
-
-    displayButtons: {
-      type: Boolean,
-      default: true,
     },
   },
 
