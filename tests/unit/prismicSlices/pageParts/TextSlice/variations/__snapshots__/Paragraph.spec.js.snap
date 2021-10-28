@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph with data should render correctly with data 1`] = `
+<div>
+  <section
+    class="paragraph-slice paragraph-slice-text--center"
+  >
+    <p
+      class="paragraph-slice-text paragraph-slice-text----16-px paragraph-slice-text--default"
+      style="max-width: 100%;"
+    >
+      test
+    </p>
+  </section>
+</div>
+`;
