@@ -130,7 +130,7 @@ describe('Build blog post mixin', () => {
     jest.clearAllMocks()
   })
 
-  it('should call getBlogPost with \'post\' type', async () => {
+  it('asyncData method should call getBlogPost with \'post\' type', async () => {
     const callObject = {
       $prismic: mocks.$prismic,
       store: mocks.$store,
@@ -143,7 +143,7 @@ describe('Build blog post mixin', () => {
     expect(callObject.store.dispatch).toHaveBeenNthCalledWith(2, 'getBlogAuthor', blogPost.data.post_author.uid)
   })
 
-  it('should call getBlogPost with \'customer_university\' type', async () => {
+  it('asyncData method should call getBlogPost with \'customer_university\' type', async () => {
     const localWrapper = shallowMount(Post, {
       store,
       mocks,
@@ -163,7 +163,7 @@ describe('Build blog post mixin', () => {
     expect(callObject.store.dispatch).toHaveBeenNthCalledWith(2, 'getBlogAuthor', blogPost.data.post_author.uid)
   })
 
-  it('should not call getBlogAuthor', async () => {
+  it('asyncData method should not call getBlogAuthor', async () => {
     const callObject = {
       $prismic: mocks.$prismic,
       store: {
@@ -184,7 +184,7 @@ describe('Build blog post mixin', () => {
     expect(callObject.store.dispatch).not.toHaveBeenCalledTimes(2)
   })
 
-  it('should return correct data', async () => {
+  it('asyncData method should return correct data', async () => {
     const callObject = {
       $prismic: mocks.$prismic,
       store: mocks.$store,
@@ -198,7 +198,7 @@ describe('Build blog post mixin', () => {
     expect(result.openGraphUrl).toContain(`/insights/blog/${callObject.params.uid}/`)
   })
 
-  it('should get 404 error', async () => {
+  it('asyncData method should get 404 error', async () => {
     const callObject = {
       params: {
         uid: '1',
@@ -208,5 +208,51 @@ describe('Build blog post mixin', () => {
 
     await wrapper.vm.$options.asyncData.call(store, callObject)
     expect(callObject.error).toHaveBeenCalledTimes(1)
+  })
+
+  it('imageWithoutCrop computed method should return correct path to image', async () => {
+    const callObject = {
+      $prismic: mocks.$prismic,
+      store: mocks.$store,
+      params: { uid: '1' },
+      error: jest.fn(),
+    }
+    const data = await wrapper.vm.$options.asyncData.call(store, callObject)
+    expect(wrapper.vm.$options.computed.imageWithoutCrop.call(data)).toBe('url')
+  })
+
+  it('head method should return correct values', async () => {
+    const callObject = {
+      $prismic: mocks.$prismic,
+      store: mocks.$store,
+      params: { uid: '1' },
+      error: jest.fn(),
+    }
+    const data = await wrapper.vm.$options.asyncData.call(store, callObject)
+    const imageWithoutCrop = wrapper.vm.$options.computed.imageWithoutCrop.call(data)
+    const metaData = wrapper.vm.$options.head.call({
+      ...data,
+      imageWithoutCrop,
+    })
+
+    expect(metaData.title).toBe(data.post.metaTitle)
+    expect(metaData.meta.find(({ property }) => property === 'og:title').content).toBe(data.post.metaTitle)
+    expect(metaData.meta.find(({ property }) => property === 'og:description').content).toBe(data.post.metaDescription)
+    expect(metaData.meta.find(({ property }) => property === 'og:image').content).toBe(imageWithoutCrop)
+    expect(metaData.meta.find(({ property }) => property === 'og:url').content).toBe(data.openGraphUrl)
+  })
+
+  it('head method should return default values', async () => {
+    const metaData = wrapper.vm.$options.head.call({
+      post: {},
+      openGraphUrl: '',
+      schemaOrgSnippet: '',
+    })
+
+    expect(metaData.title).toBe('')
+    expect(metaData.meta.find(({ property }) => property === 'og:title').content).toBe('')
+    expect(metaData.meta.find(({ property }) => property === 'og:description').content).toBe('')
+    expect(metaData.meta.find(({ property }) => property === 'og:image').content).toBe('/favicon.ico')
+    expect(metaData.meta.find(({ property }) => property === 'og:url').content).toBe('')
   })
 })
