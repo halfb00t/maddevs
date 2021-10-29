@@ -49,7 +49,7 @@ const buildBlogPostMixin = (postType = 'post') => ({
 
   data() {
     return {
-      data: {},
+      post: {},
       openGraphUrl: '',
       schemaOrgSnippet: '',
     }
