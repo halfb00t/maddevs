@@ -540,6 +540,18 @@
           }
         }
       }
+    },
+    "NavLinkSlice": {
+      "default-slice": {
+        "primary": {
+          "animation": {
+            "content": "fade-down"
+          },
+          "background": {
+            "content": "white"
+          }
+        }
+      }
     }
   },
   "_cts": {
