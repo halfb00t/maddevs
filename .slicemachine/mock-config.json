@@ -541,6 +541,7 @@
         }
       }
     },
+    "BenefitSlice": {},
     "NavLinkSlice": {
       "default-slice": {
         "primary": {
