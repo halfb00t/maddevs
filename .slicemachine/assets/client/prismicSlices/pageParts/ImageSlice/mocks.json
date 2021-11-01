@@ -7,15 +7,15 @@
     "primary": {
       "image": {
         "dimensions": {
-          "width": 1240,
-          "height": 607
+          "width": null,
+          "height": null
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=1240&h=607&fit=crop"
+        "url": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=null&h=null&fit=crop"
       },
-      "colorTheme": "grey",
-      "animation": "fade-down-left"
+      "colorTheme": "black",
+      "animation": "zoom-in"
     }
   }
 ]
