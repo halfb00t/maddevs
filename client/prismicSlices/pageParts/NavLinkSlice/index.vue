@@ -14,7 +14,7 @@
         ]"
       >
         <Component
-          :is="disabledLink==='previous-page' || disabledLink==='both'?'p':'a'"
+          :is="disabledLink === 'previous-page' || disabledLink === 'both'? 'p' : 'a'"
           :href="prevLink.url "
           target="_self"
           class="nav-link-slice__link"
@@ -22,7 +22,7 @@
           v-html="prevLinkText"
         />
         <Component
-          :is="disabledLink==='next-page' || disabledLink==='both'?'p':'a'"
+          :is="disabledLink === 'next-page' || disabledLink === 'both'? 'p' : 'a'"
           :href="nextLink.url"
           target="_self"
           class="nav-link-slice__link"
