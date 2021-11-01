@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BenefitSlice slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="benefit-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="benefit-slice__container container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="benefit-animation-test"
+    >
+      <h2
+        class="benefit-slice__title"
+      >
+        Title
+      </h2>
+       
+      <div
+        class="benefit-slice__cards"
+      >
+        <div
+          class="benefit-slice__card"
+          data-testid="benefit-test"
+        >
+          <img
+            alt="Image"
+            class="benefit-slice__icon"
+          />
+           
+          <p
+            class="benefit-slice__description"
+          >
+            deploy magnetic mindshare
+          </p>
+        </div>
+        <div
+          class="benefit-slice__card"
+          data-testid="benefit-test"
+        >
+          <img
+            alt="Image"
+            class="benefit-slice__icon"
+          />
+           
+          <p
+            class="benefit-slice__description"
+          >
+            deploy magnetic mindshare 2
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
