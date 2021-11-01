@@ -80,8 +80,7 @@ export default {
     sliceBackground() {
       if (this.slice?.primary?.background === 'white') return '#ffffff'
       if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
+      return '#111213'
     },
   },
 }
