@@ -7,9 +7,11 @@
     >
       <div class="case_sound-icon-wrap">
         <div class="case_lottie">
-          <Lottie
+          <LottieMad
             id="sound-icon"
-            :options="options"
+            class="case_lottie"
+            height="20px"
+            :lottie-link="$getMediaFromS3(`/images/Cases/sjmc/lottie/sound-icon.json`)"
             @animCreated="animCreatedHandler"
           />
         </div>
@@ -45,9 +47,8 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
-import animationData from '@/assets/lottie/sjmc/sound-icon.json'
 import playVideo from '@/helpers/playVideo'
 
 const observerOptions = {
@@ -57,7 +58,7 @@ const observerOptions = {
 export default {
   name: 'HardwareVideo',
   components: {
-    Lottie,
+    LottieMad,
   },
 
   mixins: [
@@ -72,15 +73,6 @@ export default {
     return {
       animation: null,
       loaded: false,
-      options: {
-        renderer: 'svg',
-        animationData,
-        autoplay: false,
-        loop: false,
-        rendererSettings: {
-          progressiveLoad: true,
-        },
-      },
     }
   },
 
@@ -100,9 +92,9 @@ export default {
       this.$refs.video.muted = !this.$refs.video.muted
 
       if (this.$refs.video.muted) {
-        this.animation.playSegments([10, 28], true)
+        this.animation?.playSegments([10, 28], true)
       } else {
-        this.animation.playSegments([0, 10], true)
+        this.animation?.playSegments([0, 10], true)
       }
     },
   },
