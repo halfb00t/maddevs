@@ -60,12 +60,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.image-slice{
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.image-slice {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__image{
     width: 100%;
     height: auto;

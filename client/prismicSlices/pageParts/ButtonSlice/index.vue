@@ -124,6 +124,7 @@ export default {
 <style lang="scss" scoped>
 .button-slice {
   display: block;
+  margin-top: -1px;
 
   &__content {
     &--align {

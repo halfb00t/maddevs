@@ -132,6 +132,7 @@ module.exports = {
           { code: 'ru', iso: 'ru-RU', file: 'ru.json' },
           { code: 'en', iso: 'en-EN', file: 'en.json' },
         ],
+        detectBrowserLanguage: false,
       },
     ],
     ['@nuxtjs/prismic', {

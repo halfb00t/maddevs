@@ -18,11 +18,12 @@
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
-        <Lottie
+        <LottieMad
           id="pipeline-animation"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="389px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/pipelines.json`)"
+          :autoplay="true"
         />
       </div>
     </div>
@@ -80,10 +81,8 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/clutch/pipelines.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 import List from '@/components/Cases/shared/List'
 import ListItemDot from '@/components/Cases/shared/ListItemDot'
 import Picture from '@/components/Cases/shared/Picture'
@@ -92,19 +91,11 @@ export default {
   name: 'Pipelines',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
     List,
     ListItemDot,
     Picture,
   },
-
-  mixins: [
-    playLottieMixin('pipeline-animation', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
-  ],
 }
 </script>
 

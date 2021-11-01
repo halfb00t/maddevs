@@ -9,28 +9,40 @@
         <SimpleText
           v-if="slice.variation === 'default-slice'"
           v-bind="slice.primary"
+          data-testid="text-slice-default"
           :data-aos="slice.primary.animation"
         />
         <Title
           v-else-if="slice.variation === 'title'"
           v-bind="slice.primary"
           :size="size"
+          data-testid="text-slice-title"
           :data-aos="slice.primary.animation"
         />
         <TitleText
           v-else-if="slice.variation === 'titleText'"
           v-bind="slice.primary"
+          data-testid="text-slice-titleText"
           :data-aos="slice.primary.animation"
         />
         <TitleTextButton
           v-else-if="slice.variation === 'titleTextButton'"
           v-bind="slice.primary"
+          data-testid="text-slice-titleTextButton"
           :data-aos="slice.primary.animation"
         />
         <Paragraph
           v-else-if="slice.variation === 'paragraph'"
           v-bind="slice.primary"
           :size="size"
+          data-testid="text-slice-paragraph"
+          :data-aos="slice.primary.animation"
+        />
+        <FlexibleParagraph
+          v-else-if="slice.variation === 'flexibleParagraph'"
+          v-bind="slice.primary"
+          :size="size"
+          data-testid="text-slice-flexibleParagraph"
           :data-aos="slice.primary.animation"
         />
       </transition>
@@ -44,6 +56,7 @@ import SimpleText from './variations/SimpleText'
 import TitleText from './variations/TitleText'
 import TitleTextButton from './variations/TitleTextButton'
 import Paragraph from './variations/Paragraph'
+import FlexibleParagraph from './variations/FlexibleParagraph'
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
@@ -55,6 +68,7 @@ export default {
     TitleText,
     TitleTextButton,
     Paragraph,
+    FlexibleParagraph,
   },
 
   mixins: [animateOnScrollMixin({
@@ -147,27 +161,24 @@ export default {
 /deep/ h1,
 /deep/ h2,
 /deep/ h3 {
-  @include font('Inter', 80px, 700);
-  line-height: 67px;
+  @include font('Inter', 60px, 700);
+  line-height: 60px;
   letter-spacing: -0.013em;
   @media screen and (max-width: 1024px) {
-    font-size: 60px;
+    font-size: 40px;
+    line-height: 48px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 40px;
   }
 }
 
 /deep/ p {
-  @include font('Inter', 32px, 400);
-  line-height: 44px;
+  @include font('Inter', 24px, 600);
+  line-height: 35px;
   letter-spacing: -0.013em;
   @media screen and (max-width: 1024px) {
-    font-size: 24px;
-    line-height: 35px;
-  }
-  @media screen and (max-width: 768px) {
     font-size: 21px;
     line-height: 30px;
   }

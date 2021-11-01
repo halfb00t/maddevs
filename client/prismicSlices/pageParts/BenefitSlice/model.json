@@ -1,0 +1,90 @@
+{
+  "id": "benefit_slice",
+  "type": "SharedSlice",
+  "name": "BenefitSlice",
+  "description": "BenefitSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BenefitSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice Background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": "Benefits..."
+          },
+          "type": "Text"
+        },
+        "tag": {
+          "config": {
+            "label": "Header tag",
+            "placeholder": "h2, h3..., p",
+            "options": [
+              "h2",
+              "h3",
+              "h4",
+              "h5",
+              "h6",
+              "p"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "icon": {
+          "config": {
+            "label": "Icon",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "description": {
+          "config": {
+            "label": "description",
+            "placeholder": "Flexible hours"
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

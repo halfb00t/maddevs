@@ -522,6 +522,207 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "flexibleParagraph",
+      "name": "FlexibleParagraph",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "colorTheme": {
+          "config": {
+            "label": "Theme color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black"
+            ]
+          },
+          "type": "Select"
+        },
+        "type": {
+          "config": {
+            "label": "Paragraph type",
+            "placeholder": "",
+            "options": [
+              "default",
+              "list"
+            ]
+          },
+          "type": "Select"
+        },
+        "tag": {
+          "config": {
+            "label": "Header tag",
+            "placeholder": "p",
+            "options": [
+              "h1",
+              "h2",
+              "h3",
+              "h4",
+              "h5",
+              "h6",
+              "p"
+            ]
+          },
+          "type": "Select"
+        },
+        "position": {
+          "config": {
+            "label": "Text position",
+            "placeholder": "left, center, right",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "type": "Select"
+        },
+        "text": {
+          "config": {
+            "label": "Paragraph text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "textAlign": {
+          "config": {
+            "label": "Text alignment",
+            "placeholder": "left, center, right",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "type": "Select"
+        },
+        "fontWeight": {
+          "config": {
+            "label": "Font weight",
+            "placeholder": "400, 600, 700 ...",
+            "options": [
+              100,
+              200,
+              300,
+              400,
+              500,
+              600,
+              700,
+              800
+            ]
+          },
+          "type": "Select"
+        },
+        "maxWidth": {
+          "config": {
+            "label": "Max width",
+            "placeholder": "Example: 100px or 10% or 100vh"
+          },
+          "type": "Text"
+        },
+        "size-xl": {
+          "config": {
+            "label": "1440px - 1920px",
+            "placeholder": "",
+            "options": [
+              "16-px",
+              "21-px",
+              "24-px",
+              "32-px",
+              "40-px",
+              "60-px"
+            ]
+          },
+          "type": "Select"
+        },
+        "size-lg": {
+          "config": {
+            "label": "1200px - 1440px",
+            "placeholder": "",
+            "options": [
+              "16-px",
+              "21-px",
+              "24-px",
+              "32-px",
+              "40-px",
+              "60-px"
+            ]
+          },
+          "type": "Select"
+        },
+        "size-md": {
+          "config": {
+            "label": "1024px - 1200px",
+            "placeholder": "",
+            "options": [
+              "16-px",
+              "21-px",
+              "24-px",
+              "32-px",
+              "40-px",
+              "60-px"
+            ]
+          },
+          "type": "Select"
+        },
+        "size-sm": {
+          "config": {
+            "label": "768px - 1024px",
+            "placeholder": "",
+            "options": [
+              "16-px",
+              "21-px",
+              "24-px",
+              "32-px",
+              "40-px",
+              "60-px"
+            ]
+          },
+          "type": "Select"
+        },
+        "size-xs": {
+          "config": {
+            "label": "320px - 768px",
+            "placeholder": "",
+            "options": [
+              "16-px",
+              "21-px",
+              "24-px",
+              "28-px",
+              "32-px",
+              "40-px",
+              "60-px"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
     }
   ]
 }

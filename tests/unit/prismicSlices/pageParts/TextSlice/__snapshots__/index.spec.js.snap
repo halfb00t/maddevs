@@ -3,6 +3,7 @@
 exports[`Spacer slice renders correctly 1`] = `
 <section
   class="text-slice text-slice--white-theme"
+  style="background-color: rgb(245, 247, 249);"
 >
   <div
     class="container"
@@ -14,4 +15,219 @@ exports[`Spacer slice renders correctly 1`] = `
     </transition-stub>
   </div>
 </section>
+`;
+
+exports[`TextSlice slice should correctly render SimpleText component 1`] = `
+<div>
+  <section
+    class="text-slice text-slice--white-theme"
+    style="background-color: rgb(245, 247, 249);"
+  >
+    <div
+      class="container"
+    >
+      <transition-stub
+        name="fade"
+      >
+        <p
+          class="text-slice__content"
+          colortheme="silver"
+          data-testid="text-slice-default"
+          size-lg="80px"
+          size-md="70px"
+          size-sm="60px"
+          size-xl="90px"
+          size-xs="50px"
+        >
+          
+  
+
+        </p>
+      </transition-stub>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`TextSlice slice should correctly render Title component 1`] = `
+<div>
+  <section
+    class="text-slice text-slice--white-theme"
+    style="background-color: rgb(245, 247, 249);"
+  >
+    <div
+      class="container"
+    >
+      <transition-stub
+        name="fade"
+      >
+        <section
+          class="title-slice title-slice-text--left"
+          colortheme="silver"
+          data-testid="text-slice-title"
+          size-lg="80px"
+          size-md="70px"
+          size-sm="60px"
+          size-xl="90px"
+          size-xs="50px"
+        >
+          <h2
+            class="title-slice-text title-slice-text--size-md"
+            style="max-width: 100%;"
+          />
+        </section>
+      </transition-stub>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`TextSlice slice should correctly render TitleText component 1`] = `
+<div>
+  <section
+    class="text-slice text-slice--white-theme"
+    style="background-color: rgb(245, 247, 249);"
+  >
+    <div
+      class="container"
+    >
+      <transition-stub
+        name="fade"
+      >
+        <div
+          class="text-slice__content"
+          data-testid="text-slice-titleText"
+          size-lg="80px"
+          size-md="70px"
+          size-sm="60px"
+          size-xl="90px"
+          size-xs="50px"
+        >
+          <h2>
+            
+          </h2>
+           
+          <p>
+            
+          </p>
+        </div>
+      </transition-stub>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`TextSlice slice should correctly render flexibleParagraph component 1`] = `
+<div>
+  <section
+    class="text-slice text-slice--white-theme"
+    style="background-color: rgb(245, 247, 249);"
+  >
+    <div
+      class="container"
+    >
+      <transition-stub
+        name="fade"
+      >
+        <section
+          class="paragraph-slice paragraph-slice--left"
+          colortheme="silver"
+          data-testid="text-slice-flexibleParagraph"
+          size-lg="80px"
+          size-md="70px"
+          size-sm="60px"
+          size-xl="90px"
+          size-xs="50px"
+        >
+          <p
+            class="paragraph-slice-text paragraph-slice-text--size-md paragraph-slice-text--default"
+            style="--font-weight: 400; --text-align: left; --max-width: 100%;"
+          />
+        </section>
+      </transition-stub>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`TextSlice slice should correctly render paragraph component 1`] = `
+<div>
+  <section
+    class="text-slice text-slice--white-theme"
+    style="background-color: rgb(245, 247, 249);"
+  >
+    <div
+      class="container"
+    >
+      <transition-stub
+        name="fade"
+      >
+        <section
+          class="paragraph-slice paragraph-slice-text--left"
+          colortheme="silver"
+          data-testid="text-slice-paragraph"
+          size-lg="80px"
+          size-md="70px"
+          size-sm="60px"
+          size-xl="90px"
+          size-xs="50px"
+        >
+          <p
+            class="paragraph-slice-text paragraph-slice-text--size-md paragraph-slice-text--default"
+            style="max-width: 100%;"
+          />
+        </section>
+      </transition-stub>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`TextSlice slice should correctly render titleTextButton component 1`] = `
+<div>
+  <section
+    class="text-slice text-slice--white-theme"
+    style="background-color: rgb(245, 247, 249);"
+  >
+    <div
+      class="container"
+    >
+      <transition-stub
+        name="fade"
+      >
+        <div
+          class="text-slice__content"
+          data-testid="text-slice-titleTextButton"
+          size-lg="80px"
+          size-md="70px"
+          size-sm="60px"
+          size-xl="90px"
+          size-xs="50px"
+        >
+          <h2>
+            
+          </h2>
+           
+          <p>
+            
+          </p>
+           
+          <a
+            target="_blank"
+          >
+            <button
+              class="ui-button"
+              style="position: relative; overflow: hidden;"
+            >
+              
+              <div
+                class="wave"
+              />
+            </button>
+          </a>
+        </div>
+      </transition-stub>
+    </div>
+  </section>
+</div>
 `;

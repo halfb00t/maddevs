@@ -7,7 +7,6 @@
 
 <script>
 import PostView from '@/components/Blog/Post/Post'
-
 import buildBlogPostMixin from '@/mixins/buildBlogPostMixin'
 
 export default {

@@ -12,7 +12,7 @@ const data = () => ({
 })
 
 const directives = {
-  'lazy-load': () => {},
+  'lazy-load': () => { },
 }
 
 describe('HardwareVideo component', () => {

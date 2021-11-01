@@ -18,7 +18,6 @@
 </template>
 
 <script>
-
 import About from '@/components/Cases/clutch/About'
 import OutStuffing from '@/components/Cases/clutch/OutStuffing'
 import WhyClutch from '@/components/Cases/clutch/WhyClutch'
