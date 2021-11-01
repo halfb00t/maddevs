@@ -3,7 +3,7 @@ require('dotenv')
 const { Radiator } = require('@maddevs/mad-radiator')
 
 function runRadiator() {
-  const authConfig = {
+  const baseConfig = {
     authType: process.env.RADIATOR_AUTH_TYPE,
     analyticsProjectId: process.env.RADIATOR_PROJECT_ID,
     analyticsPrivateKeyId: process.env.RADIATOR_PRIVATE_KEY_ID,
@@ -15,8 +15,16 @@ function runRadiator() {
     analyticsProviderCertUrl: process.env.RADIATOR_PROVIDER_CERT_URL,
     analyticsClientCertUrl: process.env.RADIATOR_CLIENT_CERT_URL,
     googleapisKey: process.env.RADIATOR_GOOGLEAPIS_KEY,
-    range: 'day',
     websiteUrl: 'https://maddevs.io',
+  }
+
+  const dailyConfig = {
+    ...baseConfig,
+    range: 'day',
+  }
+  const weeklyConfig = {
+    ...baseConfig,
+    range: 'week',
   }
 
   const sentryConfig = {
@@ -103,7 +111,7 @@ function runRadiator() {
     time: process.env.RADIATOR_DAILY_DISPATCH_TIME || 9,
   }
 
-  const weeklyRadiator = new Radiator(authConfig)
+  const weeklyRadiator = new Radiator(weeklyConfig)
   weeklyRadiator.useSentry(sentryConfig)
   weeklyRadiator.useAnalytics(weeklyAnalyticsConfig)
   weeklyRadiator.useLighthouse(lighthouseConfig)
@@ -111,7 +119,7 @@ function runRadiator() {
   weeklyRadiator.useTelegram(telegramConfig)
   weeklyRadiator.scheduleJob(weeklyScheduleConfig)
 
-  const dailyRadiator = new Radiator(authConfig)
+  const dailyRadiator = new Radiator(dailyConfig)
   dailyRadiator.useSentry(sentryConfig)
   dailyRadiator.useAnalytics(dailyAnalyticsConfig)
   dailyRadiator.useLighthouse(lighthouseConfig)
