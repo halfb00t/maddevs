@@ -540,7 +540,8 @@
           }
         }
       }
-    }
+    },
+    "BenefitSlice": {}
   },
   "_cts": {
     "singleimage": {},
