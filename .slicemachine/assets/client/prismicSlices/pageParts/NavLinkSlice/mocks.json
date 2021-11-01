@@ -1,0 +1,25 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "nav_link_slice",
+    "items": [],
+    "primary": {
+      "animation": "fade-down",
+      "background": "white",
+      "prevLink": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "prevLinkText": "Prev",
+      "nextLink": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "nextLinkText": "next",
+      "disabledLink": "both",
+      "position": "left",
+      "maxWidth": "strategize bleeding-edge schemas"
+    }
+  }
+]

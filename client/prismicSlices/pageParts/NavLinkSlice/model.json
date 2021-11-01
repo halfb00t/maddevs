@@ -1,0 +1,110 @@
+{
+  "id": "nav_link_slice",
+  "type": "SharedSlice",
+  "name": "NavLinkSlice",
+  "description": "NavLinkSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "NavLinkSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "prevLink": {
+          "config": {
+            "label": "Previous page link",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "prevLinkText": {
+          "config": {
+            "label": "Previous page text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "nextLink": {
+          "config": {
+            "label": "Next page link",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "nextLinkText": {
+          "config": {
+            "label": "Next page text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "disabledLink": {
+          "config": {
+            "label": "choose to disable a link",
+            "placeholder": "Select aos animation",
+            "options": [
+              "previous-page",
+              "next-page",
+              "both",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "position": {
+          "config": {
+            "label": "Navigation position",
+            "placeholder": "left, center, right",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

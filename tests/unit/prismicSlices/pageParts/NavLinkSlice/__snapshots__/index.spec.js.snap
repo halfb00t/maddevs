@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavLinkSlice slice should render correctly with data 1`] = `
+<div>
+  <section
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-down"
+      data-testid="nav-link__container"
+    >
+      <div
+        class="nav-link-slice__links nav-link-slice__links-center"
+      >
+        <p
+          class="nav-link-slice__link nav-link-slice__link-black"
+          href="https://slicemachine.dev"
+          target="_self"
+        >
+          Prev
+        </p>
+         
+        <a
+          class="nav-link-slice__link nav-link-slice__link-black"
+          href="http://twitter.com"
+          target="_self"
+        >
+          Next
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;
