@@ -32,7 +32,7 @@
 * [👐 Additional docs](#-additional-docs)
 
 ## ⚡️ Quick development start
-To start the project you need to do the following steps:
+To start the project you need to do the following steps: 
 
 1. Install dependencies
  ``` bash
