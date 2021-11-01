@@ -151,6 +151,22 @@ export default {
       }
     }
 
+    /deep/ .medium {
+      @include font('Inter', 100px, 700);
+      line-height: 105px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 76px;
+        line-height: 72px;
+      }
+
+      @media screen and (max-width: 580px) {
+        margin-bottom: 10px;
+        font-size: 42px;
+        line-height: 48px;
+      }
+    }
+
     /deep/ .small {
       @media screen and (max-width: 768px) {
         font-size: 42px;
