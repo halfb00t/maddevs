@@ -1,8 +1,8 @@
 module.exports = {
   check: {
     global: {
-      lines: 86.65,
-      statements: 86.30,
+      lines: 86.6,
+      statements: 86.2,
       branches: 75,
       functions: 78,
     },
