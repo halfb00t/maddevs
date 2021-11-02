@@ -69,6 +69,7 @@
     "prismjs": "^1.24.1",
     "request": "^2.88.2",
     "sendpulse-api": "^1.1.4",
+    "shelljs": "^0.8.4",
     "simplebar-vue": "^1.6.2",
     "slice-machine-ui": "0.1.0",
     "snyk": "^1.717.0",
