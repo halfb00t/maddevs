@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleDesc component should render correctly 1`] = `
+<section class="title-desc title-desc--white-text">
+  <h2>Test title</h2>
+  <p>Test description</p>
+</section>
+`;
