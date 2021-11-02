@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderSection component should render correctly 1`] = `
+<div>
+  <div
+    class="header-section header-section-test"
+    title="test"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="header-section__content"
+      >
+        <div
+          class="header-section__menus"
+        >
+          <headermenu-stub
+            menuname="test menu"
+            menuroutes=""
+          />
+        </div>
+         
+        <hr
+          class="header-section__divider"
+        />
+         
+        <div
+          class="header-section__post"
+        >
+          <headerpost-stub
+            date=""
+            featuredimage="[object Object]"
+            postauthor="[object Object]"
+            posttype=""
+            slices=""
+            tags=""
+            title=""
+            uid=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
