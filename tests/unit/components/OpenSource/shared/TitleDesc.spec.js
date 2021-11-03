@@ -29,5 +29,6 @@ describe('TitleDesc component', () => {
 
     expect(sectionClassName).toBe('title-desc--black-text')
     expect(title).toBe('')
+    expect(wrapper).toMatchSnapshot()
   })
 })
