@@ -50,29 +50,20 @@ export default {
   }
 
   /deep/ .cta-banner {
-    min-height: 543px;
-    &__man {
-      top: 170px;
-    }
-    @media screen and (max-width: 1180px) {
-      min-height: 490px;
-      &__man {
-        top: 190px;
-      }
-    }
     @media screen and (max-width: 992px) {
-      min-height: 450px;
-      &__man {
-        top: 170px;
-      }
+      min-height: 425px;
     }
-    @media screen and (max-width: 900px) {
-      &__man {
-        top: auto;
-        right: 7px;
-        br {
-          display: none;
-        }
+    &__image {
+      @media screen and (max-width: 960px) {
+        right: 40px;
+      }
+      @media screen and (max-width: 860px) {
+        right: -55px;
+      }
+      @media screen and (max-width: 768px) {
+        right: 0;
+        margin-top: 20px;
+        margin-right: -40px;
       }
     }
   }
