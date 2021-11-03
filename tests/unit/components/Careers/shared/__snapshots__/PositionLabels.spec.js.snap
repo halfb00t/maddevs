@@ -17,3 +17,9 @@ exports[`PositionLabels component should render correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`PositionLabels component should render correctly without data 1`] = `
+<div>
+  <!---->
+</div>
+`;
