@@ -17,6 +17,7 @@ describe('VacancyText slice component', () => {
       ],
       primary: {},
     },
+    htmlSerializer: () => {},
   }
 
   it('is a Vue instance', () => {

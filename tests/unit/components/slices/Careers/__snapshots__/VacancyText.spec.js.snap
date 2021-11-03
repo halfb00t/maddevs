@@ -24,12 +24,7 @@ exports[`VacancyText slice component is a Vue instance 1`] = `
       <prismicrichtext
         class="vacancy-text-slice__content"
         field="Content"
-        html-serializer="function _default() {
-          /* istanbul ignore next */
-          cov_2hdz459yb().f[1]++;
-          cov_2hdz459yb().s[4]++;
-          return null;
-        }"
+        html-serializer="function htmlSerializer() {}"
       />
     </div>
   </div>
