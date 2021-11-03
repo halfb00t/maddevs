@@ -4,10 +4,10 @@
       <UIBanner
         title="Let’s build or scale up your development team?"
         text="Book a call with us and we’ll guide you through a structured process to assess the right solution for your business. You'll be talking to technical experts, not account managers."
-        :image="$getMediaFromS3(`/images/CTABanner/Chuk.png`)"
-        image-alt-text="Chuk"
-        man-name="Andrew “Chuck” Minkin"
-        man-position="CTO, Co-Founder"
+        :image="$getMediaFromS3(`/images/CTABanner/Anatoliy.png`)"
+        image-alt-text="Anatoliy"
+        man-name="Anatoliy Fedorenko"
+        man-position="Delivery Manager"
       >
         <UIButton
           class="build-dev-team__button"
@@ -53,9 +53,20 @@ export default {
     background-color: #fff;
     padding-bottom: 100px;
     margin-top: -1px;
-
     @media screen and (max-width: 768px) {
       padding-bottom: 44px;
+    }
+
+    /deep/ .cta-banner__image {
+      right: 0;
+      @media screen and (max-width: 900px) {
+        right: -55px;
+      }
+      @media screen and (max-width: 768px) {
+        right: 0;
+        margin-top: 20px;
+        margin-right: -40px;
+      }
     }
   }
   &__button {
