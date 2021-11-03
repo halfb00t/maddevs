@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMenu component should render correctly 1`] = `
+<div>
+  <div
+    class="header-menu"
+  >
+    <p
+      class="header-menu__name"
+    >
+      
+    test
+  
+    </p>
+     
+    <ul
+      class="header-menu__list"
+    >
+      <li
+        class="header-menu__item"
+      >
+        <div>
+          <nuxtlink-stub
+            data-testid="menu-item-internal-link"
+            to="/"
+          >
+            
+          internal link
+        
+          </nuxtlink-stub>
+        </div>
+      </li>
+      <li
+        class="header-menu__item"
+      >
+        <div>
+          <a
+            data-testid="menu-item-external-link"
+            href="http://twitter.com"
+            target="_blank"
+          >
+            
+          external link
+        
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -4,10 +4,12 @@
       v-for="{name, label} in navigation"
       :key="name"
       class="header-navigation__item"
+      data-testid="navigation__item"
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
     >
       <span
         @click="goTo(name)"
+        data-testid="test-navigation-link"
         @mouseenter="setNavigation(name)"
       >
         {{ label }}

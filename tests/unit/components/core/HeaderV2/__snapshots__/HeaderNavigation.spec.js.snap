@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderNavigation component should render correctly 1`] = `
+<div>
+  <ul
+    class="header-navigation"
+  >
+    <li
+      class="header-navigation__item header-navigation__item-company"
+      data-testid="navigation__item"
+    >
+      <span
+        data-testid="test-navigation-link"
+      >
+        
+      Company
+    
+      </span>
+       
+      <!---->
+    </li>
+    <li
+      class="header-navigation__item header-navigation__item-services"
+      data-testid="navigation__item"
+    >
+      <span
+        data-testid="test-navigation-link"
+      >
+        
+      Services
+    
+      </span>
+       
+      <!---->
+    </li>
+  </ul>
+</div>
+`;

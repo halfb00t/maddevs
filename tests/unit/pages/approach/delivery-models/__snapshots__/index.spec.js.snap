@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delivery component should render correcly 1`] = `
+<main class="main">
+  <main-stub></main-stub>
+</main>
+`;

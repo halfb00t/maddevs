@@ -3,6 +3,7 @@
     <NuxtLink
       :to="getPostPath(postType, uid)"
       class="header-post__content"
+      data-testid="post-link"
       @click.native="goToPage"
     >
       <div class="header-post__text">

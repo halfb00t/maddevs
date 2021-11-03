@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderPost component should render correctly 1`] = `
+<div>
+  <div
+    class="header-post"
+  >
+    <nuxtlink-stub
+      class="header-post__content"
+      data-testid="post-link"
+      to="/insights/blog/1/"
+    >
+      <div
+        class="header-post__text"
+      >
+        <p
+          class="header-post__text-title"
+        >
+          
+        test
+      
+        </p>
+         
+        <p
+          class="header-post__text-paragraph"
+        >
+          
+        
+      
+        </p>
+      </div>
+       
+      <img
+        class="header-post__image"
+        height="161"
+        src="https://images.prismic.io/superpupertest/255624bf-6a97-48ff-a3b6-337434ba4d33_2_orMuDx-7_VWwpnRL1Q1rxw.jpeg?auto=compress,format"
+        width="260"
+      />
+    </nuxtlink-stub>
+     
+    <div
+      class="header-post__meta"
+    >
+      <postauthor-stub
+        class="header-post__meta-author"
+        date="01.01.01"
+        image="[object Object]"
+        name="John Smith"
+        position=""
+        theme="dark"
+        uid=""
+      />
+       
+      <!---->
+    </div>
+     
+    <nuxtlink-stub
+      class="header-post__more-btn"
+      to="/insights/blog/"
+    >
+      
+    More articles
+  
+    </nuxtlink-stub>
+  </div>
+</div>
+`;

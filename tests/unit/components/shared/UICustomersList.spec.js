@@ -8,7 +8,8 @@ const props = {
 }
 
 const directives = {
-  'lazy-load': () => {},
+  'lazy-load': () => {
+  },
 }
 
 describe('UICustomersList', () => {
@@ -19,7 +20,28 @@ describe('UICustomersList', () => {
     })
     const iconWrapper = screen.getByTestId('icon-wrapper')
 
-    expect(iconWrapper.style.backgroundColor).toBe(props.iconBackground)
+    expect(iconWrapper.style.backgroundColor)
+      .toBe('rgb(255, 255, 255)')
+    expect(container)
+      .toMatchSnapshot()
+  })
+
+  it('backgroundColor should be transparent', () => {
+    const { container } = render(UICustomersList, {
+      props: {
+        customers: ['topica'],
+      },
+      directives,
+    })
+    const iconWrapper = screen.getByTestId('icon-wrapper')
+    expect(iconWrapper.style.backgroundColor).toBe('transparent')
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should correctly render without data', () => {
+    const { container } = render(UICustomersList, {
+      directives,
+    })
     expect(container).toMatchSnapshot()
   })
 })
