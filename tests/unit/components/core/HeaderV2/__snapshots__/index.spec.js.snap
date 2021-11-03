@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render correctly 1`] = `
+<div>
+  <div
+    class="header-wrapper"
+    data-testid="test-header-wrapper"
+    id="header"
+  >
+    <header
+      class="header"
+    >
+      <div
+        class="header__container container"
+        id="header-container"
+      >
+        <div
+          class="header__content"
+        >
+          <div
+            class="header__content-left"
+          >
+            <nuxtlink
+              class="header__logo"
+              to="/"
+            >
+              <svg
+                viewBox="0 0 256 446"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <transition-stub
+                    name="fade"
+                  >
+                    <!---->
+                  </transition-stub>
+                   
+                  <path
+                    d="M237.23 1.34l-109.48 50-109.48-50C10.59-2.83 0 3.16 0 13.87v208.77c0 8 4.79 14.52 11.29 14.72a3.6 3.6 0 0 0 .9 0h.65l71.75-7.45L71 210.54c-5.94-8.29 1.26-15.49 8.88-12.69 1.53.56 3.19-.18 4.68.21l-18-60.72c-.07-.21-.13-.42-.19-.63l-.14-.46v-.14a10.39 10.39 0 0 1 19.47-6.7v.09c.17.34 20.65 50.87 20.65 50.87a10.95 10.95 0 0 1 21.62.57 11 11 0 0 1 11.03-9.52c5.35 0 9.5 4.73 10.43 9.83l12.17-34.3a10.44 10.44 0 0 1 20.24 3.52v.32L171 229.84l71.67 7.45h.65a3.6 3.6 0 0 0 .9 0c6.5-.2 10.93-6.68 10.93-14.69V13.82c-.01-10.7-10.24-16.65-17.92-12.48z"
+                    fill="#CA2228"
+                  />
+                </g>
+              </svg>
+            </nuxtlink>
+             
+            <nav
+              class="header__navigation"
+            >
+              <ul
+                class="header-navigation"
+              >
+                <li
+                  class="header-navigation__item header-navigation__item-company"
+                  data-testid="navigation__item"
+                >
+                  <span
+                    data-testid="test-navigation-link"
+                  >
+                    
+      Company
+    
+                  </span>
+                   
+                  <div
+                    class="header-section header-section-company"
+                    link="https://maddevs.io/"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <div
+                        class="header-section__content"
+                      >
+                        <div
+                          class="header-section__menus"
+                        >
+                          <!---->
+                        </div>
+                         
+                        <hr
+                          class="header-section__divider"
+                        />
+                         
+                        <div
+                          class="header-section__post"
+                        >
+                          <headerpost-stub
+                            date="01.01.01"
+                            featuredimage="[object Object]"
+                            post-author="[object Object]"
+                            tags=""
+                            title="test"
+                            uid="1"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="header-navigation__item header-navigation__item-services"
+                  data-testid="navigation__item"
+                >
+                  <span
+                    data-testid="test-navigation-link"
+                  >
+                    
+      Services
+    
+                  </span>
+                   
+                  <div
+                    class="header-section header-section-services"
+                    link="https://maddevs.io/"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <div
+                        class="header-section__content"
+                      >
+                        <div
+                          class="header-section__menus"
+                        >
+                          <!---->
+                        </div>
+                         
+                        <hr
+                          class="header-section__divider"
+                        />
+                         
+                        <div
+                          class="header-section__post"
+                        >
+                          <headerpost-stub
+                            date="01.01.01"
+                            featuredimage="[object Object]"
+                            post-author="[object Object]"
+                            tags=""
+                            title="test"
+                            uid="1"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="header-navigation__item header-navigation__item-clients"
+                  data-testid="navigation__item"
+                >
+                  <span
+                    data-testid="test-navigation-link"
+                  >
+                    
+      Clients
+    
+                  </span>
+                   
+                  <div
+                    class="header-section header-section-clients"
+                    link="https://maddevs.io/"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <div
+                        class="header-section__content"
+                      >
+                        <div
+                          class="header-section__menus"
+                        >
+                          <!---->
+                        </div>
+                         
+                        <hr
+                          class="header-section__divider"
+                        />
+                         
+                        <div
+                          class="header-section__post"
+                        >
+                          <headerpost-stub
+                            date="01.01.01"
+                            featuredimage="[object Object]"
+                            post-author="[object Object]"
+                            tags=""
+                            title="test"
+                            uid="1"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="header-navigation__item header-navigation__item-insights"
+                  data-testid="navigation__item"
+                >
+                  <span
+                    data-testid="test-navigation-link"
+                  >
+                    
+      Insights
+    
+                  </span>
+                   
+                  <div
+                    class="header-section header-section-insights"
+                    link="https://maddevs.io/"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <div
+                        class="header-section__content"
+                      >
+                        <div
+                          class="header-section__menus"
+                        >
+                          <!---->
+                        </div>
+                         
+                        <hr
+                          class="header-section__divider"
+                        />
+                         
+                        <div
+                          class="header-section__post"
+                        >
+                          <headerpost-stub
+                            date="01.01.01"
+                            featuredimage="[object Object]"
+                            post-author="[object Object]"
+                            tags=""
+                            title="test"
+                            uid="1"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+           
+          <div
+            class="header__content-right"
+          >
+            <!---->
+             
+            <a
+              class="header__phone"
+              href="tel:+442039848555"
+            >
+              <img
+                alt="United Kingdom"
+                height="14"
+                src="@/assets/img/Home/flags/uk.svg"
+                width="18"
+              />
+               
+              <span>
+                +44 20 3984 8555
+              </span>
+            </a>
+             
+            <button
+              class="header__contact-btn"
+              type="button"
+            >
+              
+            Contact me
+          
+            </button>
+             
+            <button
+              class="header__burger-btn"
+              data-testid="test-burger"
+              type="button"
+            >
+              <svg
+                class="header__burger--open"
+                fill="none"
+                height="10"
+                viewBox="0 0 30 10"
+                width="30"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0H30V1H0V0Z"
+                  fill="#F5F7F9"
+                />
+                 
+                <path
+                  d="M0 9H30V10H0V9Z"
+                  fill="#F5F7F9"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+     
+    <!---->
+     
+    <transition-stub
+      name="slide-fade"
+    >
+      <!---->
+    </transition-stub>
+     
+    <modalcontactme-stub
+      id="contact-me-modal"
+      location="'Contact me' button, header component"
+    />
+  </div>
+</div>
+`;
