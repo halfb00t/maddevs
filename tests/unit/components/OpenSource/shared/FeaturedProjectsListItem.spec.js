@@ -27,7 +27,13 @@ describe('FeaturedProjectsListItem component', () => {
       props,
       directives,
     })
-
+    expect(container).toMatchSnapshot()
+  })
+  it('should render correctly without data', () => {
+    const { container } = render(FeaturedProjectsListItem, {
+      mocks,
+      directives,
+    })
     expect(container).toMatchSnapshot()
   })
 })
