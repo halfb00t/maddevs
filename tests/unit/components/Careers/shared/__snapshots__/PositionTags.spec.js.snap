@@ -22,3 +22,9 @@ exports[`PositionTags component should render correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`PositionTags component should render correctly without data 1`] = `
+<div>
+  <!---->
+</div>
+`;

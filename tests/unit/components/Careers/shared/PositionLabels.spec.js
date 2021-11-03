@@ -14,4 +14,8 @@ describe('PositionLabels component', () => {
 
     expect(container).toMatchSnapshot()
   })
+  it('should render correctly without data', () => {
+    const { container } = render(PositionLabels)
+    expect(container).toMatchSnapshot()
+  })
 })
