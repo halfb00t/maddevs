@@ -59,7 +59,6 @@ function runRadiator() {
 
   const weeklyAnalyticsConfig = {
     ...analyticsConfig,
-    range: 'week',
     chart: {
       type: 'users',
       period: 30 * 6, // 6 month
@@ -68,7 +67,6 @@ function runRadiator() {
 
   const dailyAnalyticsConfig = {
     ...analyticsConfig,
-    range: 'day',
     chart: {
       type: 'users',
       period: 30 * 2, // 2 month
