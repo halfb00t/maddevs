@@ -22,14 +22,16 @@
           class="benefit-slice__card"
           data-testid="benefit-test"
         >
-          <img
-            v-lazy-load
-            :data-src="benefit.icon && benefit.icon.url"
-            :alt="benefit.icon && benefit.icon.alt || 'Image'"
-            :width="benefit.icon && benefit.icon.dimensions && benefit.icon.dimensions.width"
-            :height="benefit.icon && benefit.icon.dimensions && benefit.icon.dimensions.height"
-            class="benefit-slice__icon"
-          >
+          <div class="benefit-slice__icon-container">
+            <img
+              v-lazy-load
+              :data-src="benefit.icon && benefit.icon.url"
+              :alt="benefit.icon && benefit.icon.alt || 'Image'"
+              :width="benefit.icon && benefit.icon.dimensions && benefit.icon.dimensions.width"
+              :height="benefit.icon && benefit.icon.dimensions && benefit.icon.dimensions.height"
+              class="benefit-slice__icon"
+            >
+          </div>
           <p
             class="benefit-slice__description"
             v-html="benefit.description"
@@ -109,10 +111,16 @@ export default {
   }
 
   &__card {
-    padding: 0 26px 70px;
+    padding: 28px 26px 70px;
     background-color: $bgcolor--silver;
     border-radius: 4px;
   }
+  &__icon-container{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 17px;
+  }
+
   &__icon {
     display: block;
   }
@@ -153,7 +161,7 @@ export default {
       grid-template-columns: repeat(2, 1fr);
     }
     &__card {
-      padding: 0 16px 16px;
+      padding: 16px 16px;
     }
   }
 
