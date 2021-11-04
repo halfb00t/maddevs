@@ -24,10 +24,14 @@ exports[`BenefitSlice slice should render correctly with data 1`] = `
           class="benefit-slice__card"
           data-testid="benefit-test"
         >
-          <img
-            alt="Image"
-            class="benefit-slice__icon"
-          />
+          <div
+            class="benefit-slice__icon-container"
+          >
+            <img
+              alt="Image"
+              class="benefit-slice__icon"
+            />
+          </div>
            
           <p
             class="benefit-slice__description"
@@ -39,10 +43,14 @@ exports[`BenefitSlice slice should render correctly with data 1`] = `
           class="benefit-slice__card"
           data-testid="benefit-test"
         >
-          <img
-            alt="Image"
-            class="benefit-slice__icon"
-          />
+          <div
+            class="benefit-slice__icon-container"
+          >
+            <img
+              alt="Image"
+              class="benefit-slice__icon"
+            />
+          </div>
            
           <p
             class="benefit-slice__description"
