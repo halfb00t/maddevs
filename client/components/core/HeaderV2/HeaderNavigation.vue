@@ -8,8 +8,8 @@
       :class="[ `header-navigation__item-${name}`, getIsHoverClass(name) ]"
     >
       <span
-        @click="goTo(name)"
         data-testid="test-navigation-link"
+        @click="goTo(name)"
         @mouseenter="setNavigation(name)"
       >
         {{ label }}
