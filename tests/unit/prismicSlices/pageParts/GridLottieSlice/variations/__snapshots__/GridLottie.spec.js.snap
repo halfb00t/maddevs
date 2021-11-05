@@ -15,7 +15,6 @@ exports[`GridLottieSlice GridLottieSlice with items should render correctly with
       >
         <div
           class="card-item__lottie card-item__lottie-top"
-          style="max-width: undefinedpx;"
         >
           <lottie-stub
             id="devops-audit-undefined"
@@ -40,7 +39,6 @@ exports[`GridLottieSlice GridLottieSlice with items should render correctly with
       >
         <div
           class="card-item__lottie card-item__lottie-top"
-          style="max-width: undefinedpx;"
         >
           <lottie-stub
             id="devops-audit-undefined"
@@ -65,7 +63,6 @@ exports[`GridLottieSlice GridLottieSlice with items should render correctly with
       >
         <div
           class="card-item__lottie card-item__lottie-bottom"
-          style="max-width: undefinedpx;"
         >
           <lottie-stub
             id="devops-audit-undefined"
