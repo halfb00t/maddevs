@@ -74,12 +74,9 @@ function runRadiator() {
   }
 
   const lighthouseConfig = {
-    lighthouse: {
-      // regular expression for skip blog and CU pages
-      urlTestRegexp: '(\\/blog\\/)|(\\/customer-university\\/)[a-zA-Z0-9]{1}',
-      topCount: 3,
-      worstCount: 3,
-    },
+    urlTestRegexp: '(\\/blog\\/)|(\\/customer-university\\/)[a-zA-Z0-9]{1}',
+    topCount: 3,
+    worstCount: 3,
   }
 
   const telegramConfig = {
