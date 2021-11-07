@@ -13,6 +13,15 @@
         :required="fullnameRequired"
         :validation="$v.fullName"
       />
+      <RadioButtons
+        v-if="useInterestRadioInput"
+        :id="id"
+        v-model="interestChoice"
+        name="projectRadioButton"
+        :label="interestRadioLabel "
+        :required="defaultInterestRadioInput"
+        :radio-input-labels="interestRadioChoices"
+      />
       <BaseInput
         v-if="useCompany"
         v-model="company"
@@ -76,6 +85,8 @@
 import { required, email, maxLength } from 'vuelidate/lib/validators'
 import { phone } from '@/helpers/validators'
 import BaseInput from '@/components/core/forms/BaseInput'
+import RadioButtons from '@/components/core/forms/RadioButtons'
+
 import UIFormCheckboxes from '@/components/shared/UIFormCheckboxes'
 import UIButton from '@/components/shared/UIButton'
 import phoneHandlerMixin from '@/mixins/phoneHandlerMixin'
@@ -86,6 +97,7 @@ export default {
     BaseInput,
     UIFormCheckboxes,
     UIButton,
+    RadioButtons,
   },
 
   mixins: [phoneHandlerMixin],
@@ -173,6 +185,11 @@ export default {
       default: false,
     },
 
+    useInterestRadioInput: {
+      type: Boolean,
+      default: false,
+    },
+
     useLabels: {
       type: Boolean,
       default: true,
@@ -212,12 +229,28 @@ export default {
       type: String,
       default: 'Describe your project...',
     },
+
+    defaultInterestRadioInput: {
+      type: Boolean,
+      default: true,
+    },
+
+    interestRadioLabel: {
+      type: String,
+      default: 'I\'m interested in ...',
+    },
+
+    interestRadioChoices: {
+      type: Array,
+      default: () => ['Software development with <div>Mad Devs</div>', 'Partnership with <div>Mad Devs</div>', 'Employment at <div>Mad Devs</div>'],
+    },
   },
 
   data() {
     return {
       // phoneNumber from mixin
       fullName: '',
+      interestChoice: this.defaultChoice(),
       email: '',
       description: '',
       company: '',
@@ -234,6 +267,10 @@ export default {
   },
 
   methods: {
+    defaultChoice() {
+      return this.defaultInterestRadioInput ? this.interestRadioChoices[0] : null
+    },
+
     handleCheckboxesChange({ privacy, discountOffers }) {
       this.agreeWithPrivacyPolicy = privacy
       this.agreeToGetMadDevsDiscountOffers = discountOffers
@@ -245,6 +282,7 @@ export default {
 
       const formData = {
         fullName: this.fullName || '',
+        interest: this.interestChoice || '',
         email: this.email || '',
         agreeWithPrivacyPolicy: this.agreeWithPrivacyPolicy,
         agreeToGetMadDevsDiscountOffers: this.agreeToGetMadDevsDiscountOffers,
@@ -261,6 +299,7 @@ export default {
       this.$refs.checkboxes.reset()
       this.$v.$reset()
       this.fullName = ''
+      this.interestChoice = this.defaultChoice()
       this.email = ''
       this.phoneNumber = ''
       this.description = ''

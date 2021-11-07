@@ -5,6 +5,7 @@
     button-label="Сontact Me"
     button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
     :use-company="true"
+    :use-interest-radio-input="true"
     @submit="handleSubmit"
   />
 </template>
@@ -19,7 +20,7 @@ export default {
     BaseForm,
   },
 
-  mixins: [createLeadMixin(303792, 'Contact Me')],
+  mixins: [createLeadMixin(686633, 'Contact Me')],
 
   props: {
     formLocation: {

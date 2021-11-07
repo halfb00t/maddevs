@@ -3,6 +3,7 @@
   <Modal
     :id="id"
     ref="modalContactMe"
+    modal-background="white"
   >
     <ContactMeForm :form-location="location" />
   </Modal>
