@@ -14,8 +14,8 @@
       />
       <div class="testimonials__testimonials-list">
         <div
-          v-for="(testimonial, i) in testimonials"
-          :key="i"
+          v-for="testimonial in testimonials"
+          :key="testimonial.text"
           class="testimonials__testimonials-item"
         >
           <blockquote class="testimonials__testimonials-text paragraph-md">
@@ -64,6 +64,16 @@ export default {
     return {
       testimonials,
     }
+  },
+
+  mounted() {
+    this.showProps()
+  },
+
+  methods: {
+    showProps() {
+      console.log(this.testimonials)
+    },
   },
 }
 </script>
