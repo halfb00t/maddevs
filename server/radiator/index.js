@@ -59,7 +59,6 @@ function runRadiator() {
 
   const weeklyAnalyticsConfig = {
     ...analyticsConfig,
-    range: 'week',
     chart: {
       type: 'users',
       period: 30 * 6, // 6 month
@@ -68,7 +67,6 @@ function runRadiator() {
 
   const dailyAnalyticsConfig = {
     ...analyticsConfig,
-    range: 'day',
     chart: {
       type: 'users',
       period: 30 * 2, // 2 month
@@ -76,12 +74,9 @@ function runRadiator() {
   }
 
   const lighthouseConfig = {
-    lighthouse: {
-      // regular expression for skip blog and CU pages
-      urlTestRegexp: '(\\/blog\\/)|(\\/customer-university\\/)[a-zA-Z0-9]{1}',
-      topCount: 3,
-      worstCount: 3,
-    },
+    urlTestRegexp: '(\\/blog\\/)|(\\/customer-university\\/)[a-zA-Z0-9]{1}',
+    topCount: 3,
+    worstCount: 3,
   }
 
   const telegramConfig = {
