@@ -39,6 +39,7 @@ exports[`ContactMeForm component should render correctly 1`] = `
       >
         <p
           class="radio-button-list__field-name field-name required"
+          data-testid="test-radio-label"
         >
           
     I'm interested in ...
@@ -48,12 +49,14 @@ exports[`ContactMeForm component should render correctly 1`] = `
         <div
           class="radio-button-list__container"
         >
-          <div>
+          <div
+            data-testid="test-radio-buttons"
+          >
             <label
               class="radio-button-list__form-checkbox-label form-checkbox-label"
             >
               <div
-                class="radio-button-list__label-text chosen"
+                class="radio-button-list__label-text checked"
               >
                 Software development with 
                 <div>
@@ -73,7 +76,9 @@ exports[`ContactMeForm component should render correctly 1`] = `
               />
             </label>
           </div>
-          <div>
+          <div
+            data-testid="test-radio-buttons"
+          >
             <label
               class="radio-button-list__form-checkbox-label form-checkbox-label"
             >
@@ -98,7 +103,9 @@ exports[`ContactMeForm component should render correctly 1`] = `
               />
             </label>
           </div>
-          <div>
+          <div
+            data-testid="test-radio-buttons"
+          >
             <label
               class="radio-button-list__form-checkbox-label form-checkbox-label"
             >

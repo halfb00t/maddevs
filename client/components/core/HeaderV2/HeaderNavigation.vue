@@ -9,6 +9,7 @@
     >
       <span
         @click="goTo(name)"
+        data-testid="test-navigation-link"
         @mouseenter="setNavigation(name)"
       >
         {{ label }}
