@@ -65,16 +65,6 @@ export default {
       testimonials,
     }
   },
-
-  mounted() {
-    this.showProps()
-  },
-
-  methods: {
-    showProps() {
-      console.log(this.testimonials)
-    },
-  },
 }
 </script>
 
