@@ -16,6 +16,7 @@ exports[`CTABanner component should render correctly 1`] = `
      
     <modal-stub
       id="contact-me-dm"
+      modalbackground="white"
       modaltitle=""
     >
       <contactmeform-stub

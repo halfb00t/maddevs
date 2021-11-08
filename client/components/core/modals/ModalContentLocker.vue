@@ -3,6 +3,7 @@
   <Modal
     :id="id"
     ref="modalContentLocker"
+    modal-background="black"
     :class="{ 'modal-content-locker': !formSended }"
   >
     <div
