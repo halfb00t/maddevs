@@ -1,18 +1,33 @@
 <template>
-  <CustomerTestimonials
-    :title="title"
-    :aos="animation"
-  />
+  <section
+    class="customer-testimonials-main"
+  >
+    <CustomerTestimonialsSlice
+      v-if="slice.variation === 'default-slice'"
+      :title="title"
+      :data-aos="animation"
+      data-testid="first-variation"
+    />
+    <Testimonials
+      v-else-if="slice.variation === 'testimonialsSecondVariation'"
+      :title="title"
+      :data-aos="animation"
+      data-testid="second-variation"
+    />
+  </section>
 </template>
 
 <script>
-import CustomerTestimonials from '@/components/About/CustomerTestimonials'
+import CustomerTestimonialsSlice from './variations/CustomerTestimonialsSlice'
+import Testimonials from './variations/Testimonials'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
-  name: 'CustomerTestimonialsSlice',
+  name: 'CustomerTestimonials',
+
   components: {
-    CustomerTestimonials,
+    CustomerTestimonialsSlice,
+    Testimonials,
   },
 
   mixins: [animateOnScrollMixin({
@@ -41,3 +56,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+  .customer-testimonials-main {
+    background-color: #f5f7f9;
+  }
+</style>

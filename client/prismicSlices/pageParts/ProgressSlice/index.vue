@@ -10,9 +10,10 @@
       :data-aos="animation"
       data-testid="progress-slice__container"
     >
-      <h2 class="progress-slice__title">
-        {{ title || 'Progress' }}
-      </h2>
+      <h2
+        class="progress-slice__title"
+        v-html="title || 'Progress'"
+      />
       <div
         class="progress-slice__list"
         :style="cssVars"

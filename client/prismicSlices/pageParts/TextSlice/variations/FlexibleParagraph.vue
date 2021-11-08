@@ -96,7 +96,7 @@ export default {
   }
 
   &-text {
-    width: auto;
+    width: 100%;
     display: block;
     color: inherit;
     letter-spacing: -0.013em;

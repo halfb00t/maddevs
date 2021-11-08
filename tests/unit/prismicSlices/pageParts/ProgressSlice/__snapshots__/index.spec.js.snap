@@ -14,9 +14,7 @@ exports[`ProgressSlice slice should render correctly with data 1`] = `
       <h2
         class="progress-slice__title"
       >
-        
-      Title
-    
+        Title
       </h2>
        
       <div
