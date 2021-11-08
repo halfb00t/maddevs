@@ -10,7 +10,7 @@ const localVue = createLocalVue()
 localVue.use(Vuex)
 
 const directives = {
-  'lazy-load': () => {},
+  'lazy-load': () => { },
 }
 
 const store = {
@@ -39,7 +39,7 @@ describe('ContentLocker component', () => {
       mocks: {
         $v: {
           name: '',
-          $reset: () => {},
+          $reset: () => { },
           validationGroup: {
             $invalid: false,
           },
@@ -52,7 +52,7 @@ describe('ContentLocker component', () => {
     await fireEvent.scroll(document, { target: { scrollY: 100 } })
 
     await waitFor(() => {
-      const modal = screen.getByTestId('content-locker-modal-content')
+      const modal = screen.getByTestId('content-locker')
       expect(modal).toBeTruthy()
     })
   })

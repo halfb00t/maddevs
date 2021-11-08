@@ -1,10 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CustomerTestimonials slice should render correctly with data 1`] = `
+exports[`CustomerTestimonials slice should render correctly with CustomerTestimonialsSlice component 1`] = `
 <div>
-  <customertestimonials-stub
-    aos="fade-up"
-    title="Customer testimonials title"
-  />
+  <section
+    class="customer-testimonials-main"
+  >
+    <customertestimonialsslice-stub
+      class="aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="first-variation"
+      title="Customer Testimonials"
+    />
+  </section>
+</div>
+`;
+
+exports[`CustomerTestimonials slice should render correctly with Testimonials component 1`] = `
+<div>
+  <section
+    class="customer-testimonials-main"
+  >
+    <testimonials-stub
+      class="aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="second-variation"
+      title="Testimonials"
+    />
+  </section>
 </div>
 `;
