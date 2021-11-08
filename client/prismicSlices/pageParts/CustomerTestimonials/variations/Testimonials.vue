@@ -70,8 +70,6 @@ export default {
 
 <style lang="scss" scoped>
 .testimonials {
-  background-color: #f5f7f9;
-
   &__title {
     @include h2-title;
   }
