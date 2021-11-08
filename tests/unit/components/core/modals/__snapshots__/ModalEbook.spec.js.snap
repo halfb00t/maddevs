@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ModalEbook component should render correctly with no data 1`] = `
-<modal-stub id="" modaltitle="" modalbackground="white" class="modal-ebook">
+<modal-stub id="" modaltitle="" modalbackground="black" class="modal-ebook">
   <div class="modal-content"><img width="110" height="155" data-src="@/assets/img/Ebook/book.svg" alt="Pricing strategies" class="modal-content__img">
     <h2 class="modal-content__title">
       Get your copy of “Custom Software Development: Pricing Strategies”

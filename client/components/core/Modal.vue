@@ -19,7 +19,7 @@
         <div
           v-if="contentLoaded"
           class="modal_container"
-          :style="{ backgroundColor: background }"
+          :class="[`modal_container-${background}-theme`]"
         >
           <div class="modal_head">
             <p class="modal_title">
@@ -113,9 +113,9 @@ export default {
 
   computed: {
     background() {
-      if (this.isSuccess) return '#121212'
-      if (this.modalBackground === 'white') return '#ffffff'
-      return '#121212'
+      if (this.isSuccess) return 'black'
+      if (this.modalBackground === 'white') return 'white'
+      return 'black'
     },
   },
 
@@ -233,9 +233,14 @@ export default {
     box-sizing: border-box;
     transition: top 0.4s ease;
     overflow: hidden;
-    background-color: $modal-bg-color;
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.45);
     border-radius: 3px;
+    &-black-theme{
+      background-color: $modal-bg-color;
+    }
+    &-white-theme{
+      background-color: $modal-bg-color-white;
+    }
   }
 
   &_content {

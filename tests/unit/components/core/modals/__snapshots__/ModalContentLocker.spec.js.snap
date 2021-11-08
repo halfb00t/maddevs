@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ModalContentLocker component should correctly called handle sended form 1`] = `<div id="" class="modal-content-locker"></div>`;
+exports[`ModalContentLocker component should correctly called handle sended form 1`] = `<div id="" modal-background="black" class="modal-content-locker"></div>`;
 
 exports[`ModalContentLocker component should correctly render 1`] = `
 <div>
