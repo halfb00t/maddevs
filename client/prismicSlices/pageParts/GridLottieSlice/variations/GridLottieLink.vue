@@ -7,9 +7,11 @@
         :key="item['lottie-animation']"
         :href="item.link && item.link.url ? item.link.url : null"
         :target="item.link && item.link.url ? '_self' : null"
-        :class=" [item.alignText ? `card-item--text-${item.alignText}` : null,
-                  `card-item-${item.lottiePosition}`,
-                  item.fullWidth ? 'card-item-full-width' : null]"
+        :class="[
+          item.alignText ? `card-item--text-${item.alignText}` : null,
+          `card-item-${item.lottiePosition}`,
+          item.fullWidth ? 'card-item-full-width' : null
+        ]"
         class="card-item"
         data-testid="grid-lottie-animation-item"
         :style="{ backgroundColor: item.background || null }"
@@ -17,7 +19,10 @@
         <div
           v-if="item['lottie-animation']"
           :class="`card-item__lottie card-item__lottie-${item.lottiePosition}`"
-          :style="{ 'maxWidth': `${item.width}px`, 'height': `${item.height}px` }"
+          :style="{
+            'maxWidth': item.width ? `${item.width}px` : null,
+            'height': item.height ? `${item.height}px` : null
+          }"
         >
           <LottieMad
             :id="item['lottie-animation']"
@@ -30,9 +35,7 @@
           :class="`card-item__content card-item__content-${item.lottiePosition}`"
           v-html="renderCardContent($prismic.asHtml(item.content))"
         />
-        <UIArrowButton
-          class="card-item__button"
-        />
+        <UIArrowButton class="card-item__button" />
       </Component>
     </div>
   </div>

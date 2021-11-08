@@ -1,8 +1,6 @@
 <template>
   <section
-    :class="['description-slice',
-             `description-slice--${colorTheme}-theme`,
-    ]"
+    :class="['description-slice', `description-slice--${colorTheme}-theme`]"
     :style="{ backgroundColor: sliceBackground }"
   >
     <div
@@ -11,7 +9,7 @@
       data-testid="description-slice__container"
     >
       <div
-        v-for="(step) in steps"
+        v-for="step in steps"
         :key="step.title"
         class="description"
         data-testid="description"
@@ -21,7 +19,7 @@
           <img
             v-lazy-load
             :data-src="step.image && step.image.url"
-            :alt="step.image && step.image.alt || 'Image'"
+            :alt="(step.image && step.image.alt) || 'Image'"
             width="32"
             height="32"
             class="description__main-icon"
@@ -40,19 +38,20 @@
   </section>
 </template>
 <script>
-
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'DescriptionSlice',
 
-  mixins: [animateOnScrollMixin({
-    offset: 200,
-    delay: 50,
-    anchorPlacement: 'top-center',
-    duration: 1000,
-    once: true,
-  })],
+  mixins: [
+    animateOnScrollMixin({
+      offset: 200,
+      delay: 50,
+      anchorPlacement: 'top-center',
+      duration: 1000,
+      once: true,
+    }),
+  ],
 
   props: {
     slice: {
@@ -102,7 +101,7 @@ export default {
       color: $text-color--black-lighter;
     }
   }
-  &__container{
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,19 +112,17 @@ export default {
   display: flex;
   text-align: left;
   padding: 60px 0;
-  border-bottom:1px solid #CFCFD0;
-  border-top:1px solid #CFCFD0;
+  border-bottom: 1px solid $border-color--grey-20-percent;
   &:first-child {
-    border-top:none;
     padding-top: 0;
+  }
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0px;
   }
 
   @media screen and (max-width: 960px) {
     padding: 48px 0;
-    &:first-child {
-      border-top:none;
-      padding-top: 0;
-    }
   }
 
   &__main-icon {
@@ -141,10 +138,10 @@ export default {
   }
 
   &__title {
-    @include font('Inter', 24px, 600);
+    @include font("Inter", 24px, 600);
     line-height: 29px;
     letter-spacing: -1.3%;
-    margin:0 40px 24px 0;
+    margin: 0 40px 24px 0;
     flex: 0 0 200px;
     @media screen and (max-width: 960px) {
       flex: none;
@@ -152,7 +149,7 @@ export default {
   }
 
   &__description {
-    @include font('Inter', 17px, 400);
+    @include font("Inter", 17px, 400);
     line-height: 28px;
     letter-spacing: -1.3%;
     @media screen and (max-width: 960px) {

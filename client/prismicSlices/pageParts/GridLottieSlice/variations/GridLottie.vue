@@ -15,11 +15,12 @@
       >
         <div
           :class="`card-item__lottie card-item__lottie-${item.lottiePosition}`"
-          :style="{ 'maxWidth': `${item.width}px`, 'height': `${item.height}px` }"
+          :style="{
+            'maxWidth': item.width ? `${item.width}px` : null,
+            'height': item.height ? `${item.height}px` : null
+          }"
         >
-          <LottieCard
-            :animation-name="item['lottie-animation']"
-          />
+          <LottieCard :animation-name="item['lottie-animation']" />
         </div>
         <h2
           class="card-item__title"

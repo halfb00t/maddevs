@@ -17,7 +17,6 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
       >
         <div
           class="card-item__lottie card-item__lottie-bottom"
-          style="max-width: undefinedpx;"
         >
           <div
             class="lottie-container"
@@ -52,7 +51,6 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
       >
         <div
           class="card-item__lottie card-item__lottie-bottom"
-          style="max-width: undefinedpx;"
         >
           <div
             class="lottie-container"
@@ -87,7 +85,6 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
       >
         <div
           class="card-item__lottie card-item__lottie-bottom"
-          style="max-width: undefinedpx;"
         >
           <div
             class="lottie-container"
