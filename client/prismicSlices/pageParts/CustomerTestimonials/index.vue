@@ -56,3 +56,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+  .customer-testimonials-main {
+    background-color: #f5f7f9;
+  }
+</style>
