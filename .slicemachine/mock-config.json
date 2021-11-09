@@ -553,6 +553,12 @@
           }
         }
       }
+    },
+    "AwardsSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
