@@ -1,9 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HeaderMobileNavigation component should render correctly with props data 1`] = `
+exports[`HeaderMobileNavigation component should render correctly 1`] = `
 <div>
   <ul
     class="header-mobile-navigation"
-  />
+  >
+    <li
+      class="header-mobile-navigation__item"
+      data-testid="navigation__item"
+    >
+      <button
+        class="header-mobile-navigation__item-button"
+        type="button"
+      >
+        <span
+          class="header-mobile-navigation__item-label"
+        >
+          Company
+        </span>
+         
+        <span
+          class="header-mobile-navigation__item-icon"
+        >
+          ↓
+        </span>
+      </button>
+       
+      <!---->
+    </li>
+    <li
+      class="header-mobile-navigation__item"
+      data-testid="navigation__item"
+    >
+      <button
+        class="header-mobile-navigation__item-button"
+        type="button"
+      >
+        <span
+          class="header-mobile-navigation__item-label"
+        >
+          Services
+        </span>
+         
+        <span
+          class="header-mobile-navigation__item-icon"
+        >
+          ↓
+        </span>
+      </button>
+       
+      <!---->
+    </li>
+  </ul>
 </div>
 `;

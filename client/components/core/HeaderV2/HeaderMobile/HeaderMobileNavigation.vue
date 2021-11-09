@@ -4,6 +4,7 @@
       v-for="{ name, label } in navigation"
       :key="name"
       class="header-mobile-navigation__item"
+      data-testid="navigation__item"
     >
       <button
         type="button"
