@@ -132,12 +132,14 @@
           </ul>
         </p>
         <div class="position-form__recaptcha">
-          <recaptcha />
+          <recaptcha
+            @success="onSuccess"
+          />
         </div>
       </div>
       <UIButton
         type="submit"
-        :disabled="$v.validationGroup.$invalid"
+        :disabled="$v.validationGroup.$invalid || recaptchaError"
       >
         {{ $t('careers.detailPage.form.btn') }}
       </UIButton>
@@ -216,6 +218,7 @@ export default {
       cvFile: null,
       linkedin: null,
       form: '',
+      recaptchaError: true,
     }
   },
 
@@ -242,20 +245,12 @@ export default {
     },
   },
 
-  async mounted() {
-    try {
-      await this.$recaptcha.init()
-    } catch (e) {
-      console.error(e)
-    }
-  },
-
-  beforeDestroy() {
-    this.$recaptcha.destroy()
-  },
-
   methods: {
     ...mapActions(['sendVacancy']),
+
+    onSuccess() {
+      this.recaptchaError = false
+    },
 
     toBase64(file) {
       return new Promise((resolve, reject) => {
@@ -332,6 +327,7 @@ export default {
       this.email = null
       this.cvFile = null
       this.linkedin = null
+      this.recaptchaError = true
     },
 
     async submitForm() {

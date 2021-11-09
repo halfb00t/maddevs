@@ -39,6 +39,9 @@ const TEST_EMAIL = process.env.NODE_TEST_EMAIL
 // Prismic
 const PRISMIC_API = process.env.NODE_PRISMIC_API
 
+// reCaptcha key
+const RECAPTCHA_KEY = process.env.RECAPTCHA_SECRET_KEY
+
 module.exports = {
   ATLASSIAN_TOKEN,
   ATLASSIAN_EMAIL,
@@ -61,4 +64,5 @@ module.exports = {
   IP_TEST_LIST,
   TEST_EMAIL,
   PRISMIC_API,
+  RECAPTCHA_KEY,
 }
