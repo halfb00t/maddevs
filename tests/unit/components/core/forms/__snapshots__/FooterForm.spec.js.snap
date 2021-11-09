@@ -9,7 +9,6 @@ exports[`FooterForm should render correctly 1`] = `
       buttonlabel="Order a project now"
       classname="footer-form"
       companyplaceholder="My Awesome Company, Inc."
-      defaultinterestradioinput="true"
       descriptionplaceholder="Describe your project..."
       emailplaceholder="your@mail.com"
       emailrequired="true"

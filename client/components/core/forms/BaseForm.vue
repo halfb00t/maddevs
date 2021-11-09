@@ -19,7 +19,8 @@
         v-model="interestChoice"
         name="projectRadioButton"
         :label="interestRadioLabel "
-        :required="defaultInterestRadioInput"
+        :required="interestRadioInputRequired"
+        :default-choice="defaultInterestRadioInput"
         :radio-input-labels="interestRadioChoices"
       />
       <BaseInput
@@ -230,9 +231,14 @@ export default {
       default: 'Describe your project...',
     },
 
+    interestRadioInputRequired: {
+      type: Boolean,
+      default: false,
+    },
+
     defaultInterestRadioInput: {
       type: Boolean,
-      default: true,
+      default: false,
     },
 
     interestRadioLabel: {
@@ -262,13 +268,14 @@ export default {
 
   computed: {
     isValid() {
+      if (this.interestRadioInputRequired) return !this.$v.validationGroup.$invalid && this.agreeWithPrivacyPolicy && this.additionalValid && !!this.interestChoice
       return !this.$v.validationGroup.$invalid && this.agreeWithPrivacyPolicy && this.additionalValid
     },
   },
 
   methods: {
     defaultChoice() {
-      return this.defaultInterestRadioInput ? this.interestRadioChoices[0] : null
+      return this.defaultInterestRadioInput ? this.interestRadioChoices[0] : ''
     },
 
     handleCheckboxesChange({ privacy, discountOffers }) {
