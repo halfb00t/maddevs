@@ -15,9 +15,10 @@ exports[`RadioButtons should render correctly with prop 1`] = `
       >
         <label
           class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-0"
         >
           <div
-            class="radio-button-list__label-text checked"
+            class="radio-button-list__label-text"
           >
             Label One
           </div>
@@ -39,6 +40,7 @@ exports[`RadioButtons should render correctly with prop 1`] = `
       >
         <label
           class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-1"
         >
           <div
             class="radio-button-list__label-text"
@@ -63,6 +65,7 @@ exports[`RadioButtons should render correctly with prop 1`] = `
       >
         <label
           class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-2"
         >
           <div
             class="radio-button-list__label-text"
@@ -109,9 +112,10 @@ exports[`RadioButtons should render correctly without prop 1`] = `
       >
         <label
           class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-0"
         >
           <div
-            class="radio-button-list__label-text checked"
+            class="radio-button-list__label-text"
           >
             Label One
           </div>
@@ -133,6 +137,7 @@ exports[`RadioButtons should render correctly without prop 1`] = `
       >
         <label
           class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-1"
         >
           <div
             class="radio-button-list__label-text"

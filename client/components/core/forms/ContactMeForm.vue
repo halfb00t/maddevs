@@ -6,6 +6,7 @@
     button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
     :use-company="true"
     :use-interest-radio-input="true"
+    :interest-radio-input-required="true"
     @submit="handleSubmit"
   />
 </template>
