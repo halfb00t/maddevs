@@ -14,6 +14,8 @@ exports[`FooterForm should render correctly 1`] = `
       emailrequired="true"
       fullnameplaceholder="John Smith"
       id="footer-form"
+      interestradiochoices="Software development with <div>Mad Devs</div>,Partnership with <div>Mad Devs</div>,Employment at <div>Mad Devs</div>"
+      interestradiolabel="I'm interested in ..."
       phoneplaceholder="Phone number"
       usedescription="true"
     />

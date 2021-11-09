@@ -3,6 +3,7 @@
   <Modal
     :id="id"
     ref="modalEbook"
+    modal-background="black"
     :class="{ 'modal-ebook': !formSended }"
   >
     <div

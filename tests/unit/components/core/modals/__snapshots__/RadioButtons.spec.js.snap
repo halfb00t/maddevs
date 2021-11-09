@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButtons should render correctly with prop 1`] = `
+<div>
+  <div
+    class="radio-button-list"
+  >
+    <!---->
+     
+    <div
+      class="radio-button-list__container"
+    >
+      <div
+        data-testid="test-radio-buttons"
+      >
+        <label
+          class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-0"
+        >
+          <div
+            class="radio-button-list__label-text"
+          >
+            Label One
+          </div>
+           
+          <input
+            class="form-checkbox-input"
+            name="radioBtn"
+            type="radio"
+            value="Label One"
+          />
+           
+          <div
+            class="checkmark"
+          />
+        </label>
+      </div>
+      <div
+        data-testid="test-radio-buttons"
+      >
+        <label
+          class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-1"
+        >
+          <div
+            class="radio-button-list__label-text"
+          >
+            Label Two
+          </div>
+           
+          <input
+            class="form-checkbox-input"
+            name="radioBtn"
+            type="radio"
+            value="Label Two"
+          />
+           
+          <div
+            class="checkmark"
+          />
+        </label>
+      </div>
+      <div
+        data-testid="test-radio-buttons"
+      >
+        <label
+          class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-2"
+        >
+          <div
+            class="radio-button-list__label-text"
+          >
+            Label Two
+          </div>
+           
+          <input
+            class="form-checkbox-input"
+            name="radioBtn"
+            type="radio"
+            value="Label Two"
+          />
+           
+          <div
+            class="checkmark"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons should render correctly without prop 1`] = `
+<div>
+  <div
+    class="radio-button-list"
+  >
+    <p
+      class="radio-button-list__field-name field-name required"
+      data-testid="test-radio-label"
+    >
+      
+    Label
+  
+    </p>
+     
+    <div
+      class="radio-button-list__container"
+    >
+      <div
+        data-testid="test-radio-buttons"
+      >
+        <label
+          class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-0"
+        >
+          <div
+            class="radio-button-list__label-text"
+          >
+            Label One
+          </div>
+           
+          <input
+            class="form-checkbox-input"
+            name="radioBtn"
+            type="radio"
+            value="Label One"
+          />
+           
+          <div
+            class="checkmark"
+          />
+        </label>
+      </div>
+      <div
+        data-testid="test-radio-buttons"
+      >
+        <label
+          class="radio-button-list__form-checkbox-label form-checkbox-label"
+          data-testid="test-radio-label-1"
+        >
+          <div
+            class="radio-button-list__label-text"
+          >
+            Label Two
+          </div>
+           
+          <input
+            class="form-checkbox-input"
+            name="radioBtn"
+            type="radio"
+            value="Label Two"
+          />
+           
+          <div
+            class="checkmark"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
