@@ -131,15 +131,10 @@
             </li>
           </ul>
         </p>
-        <div class="position-form__recaptcha">
-          <recaptcha
-            @success="onSuccess"
-          />
-        </div>
       </div>
       <UIButton
         type="submit"
-        :disabled="$v.validationGroup.$invalid || recaptchaError"
+        :disabled="$v.validationGroup.$invalid"
       >
         {{ $t('careers.detailPage.form.btn') }}
       </UIButton>
@@ -218,7 +213,6 @@ export default {
       cvFile: null,
       linkedin: null,
       form: '',
-      recaptchaError: true,
     }
   },
 
@@ -248,10 +242,6 @@ export default {
   methods: {
     ...mapActions(['sendVacancy']),
 
-    onSuccess() {
-      this.recaptchaError = false
-    },
-
     toBase64(file) {
       return new Promise((resolve, reject) => {
         const reader = new FileReader()
@@ -265,7 +255,6 @@ export default {
       const splitedName = this.name.split(' ')
       const base64File = await this.toBase64(this.cvFile)
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
-      const token = await this.$recaptcha.getResponse()
 
       return {
         body: {
@@ -281,8 +270,6 @@ export default {
             positionValue: this.grade.value,
             linkedinProfile: this.linkedin,
           },
-
-          token,
 
           email: {
             templateId: 305491, // Required
@@ -327,7 +314,6 @@ export default {
       this.email = null
       this.cvFile = null
       this.linkedin = null
-      this.recaptchaError = true
     },
 
     async submitForm() {
@@ -335,7 +321,6 @@ export default {
 
       const applicantData = await this.buildApplicantData()
       this.sendVacancy(applicantData)
-      await this.$recaptcha.reset()
       this.$refs.successModal.show()
       this.resetForm()
     },
@@ -368,10 +353,6 @@ export default {
     @media screen and (max-width: 400px) {
       display: block;
     }
-  }
-
-  &__recaptcha {
-    margin-top: 32px;
   }
 
   &__field-positions {

@@ -143,10 +143,9 @@ module.exports = {
     ['nuxt-sm'],
   ],
   recaptcha: {
-    hideBadge: false,
+    hideBadge: true,
     siteKey: process.env.RECAPTCHA_SITE_KEY,
-    version: 2,
-    size: 'normal',
+    version: 3,
   },
   sitemap: {
     hostname: 'https://maddevs.io',

@@ -71,12 +71,6 @@
       @change="handleCheckboxesChange"
     />
 
-    <div class="position-form__recaptcha">
-      <recaptcha
-        @success="onSuccess"
-      />
-    </div>
-
     <UIButton
       :disabled="!isValid || isSubmitted"
       :loading="isSubmitted"
@@ -264,7 +258,6 @@ export default {
       agreeWithPrivacyPolicy: false,
       agreeToGetMadDevsDiscountOffers: false,
       isSubmitted: false,
-      recaptchaError: true,
     }
   },
 
@@ -279,25 +272,19 @@ export default {
       return this.defaultInterestRadioInput ? this.interestRadioChoices[0] : null
     },
 
-    onSuccess() {
-      this.recaptchaError = false
-    },
-
     handleCheckboxesChange({ privacy, discountOffers }) {
       this.agreeWithPrivacyPolicy = privacy
       this.agreeToGetMadDevsDiscountOffers = discountOffers
     },
 
-    async handleSubmit() {
+    handleSubmit() {
       if (!this.isValid) return
       this.isSubmitted = true
-      const token = await this.$recaptcha.getResponse()
 
       const formData = {
         fullName: this.fullName || '',
         interest: this.interestChoice || '',
         email: this.email || '',
-        token,
         agreeWithPrivacyPolicy: this.agreeWithPrivacyPolicy,
         agreeToGetMadDevsDiscountOffers: this.agreeToGetMadDevsDiscountOffers,
       }
@@ -305,7 +292,6 @@ export default {
       if (this.usePhone) formData.phoneNumber = this.phoneNumber
       if (this.useDescription) formData.description = this.description
       if (this.useCompany) formData.company = this.company
-      await this.$recaptcha.reset()
 
       this.$emit('submit', formData)
     },
@@ -322,7 +308,6 @@ export default {
       this.agreeWithPrivacyPolicy = false
       this.agreeToGetMadDevsDiscountOffers = false
       this.isSubmitted = false
-      this.recaptchaError = false
     },
   },
 }
