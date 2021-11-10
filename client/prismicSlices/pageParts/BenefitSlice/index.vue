@@ -124,7 +124,7 @@ export default {
 
   &__icon-container {
     width: 32px;
-    height: 45px;
+    height: 38px;
     margin-bottom: 17px;
   }
 
