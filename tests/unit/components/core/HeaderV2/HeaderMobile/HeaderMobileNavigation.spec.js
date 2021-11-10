@@ -1,19 +1,7 @@
 import { render, screen } from '@testing-library/vue'
+import HeaderMobileNavigation from '@/components/core/HeaderV2/HeaderMobile/HeaderMobileNavigation'
 
-import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
-
-const stubs = ['HeaderSection']
-
-const store = {
-  getters: {
-    headerContent: () => (
-      {
-        name: 'text',
-        link: 'https://maddevs.io/',
-      }),
-  },
-}
-
+const stubs = ['HeaderMobileSection']
 const props = {
   navigation: [
     {
@@ -26,10 +14,19 @@ const props = {
     },
   ],
 }
+const store = {
+  getters: {
+    headerContent: () => (
+      {
+        name: 'text',
+        link: 'https://maddevs.io/',
+      }),
+  },
+}
 
-describe('HeaderNavigation component', () => {
+describe('HeaderMobileNavigation component', () => {
   it('should render correctly', () => {
-    const { container } = render(HeaderNavigation, {
+    const { container } = render(HeaderMobileNavigation, {
       stubs, props, store,
     })
 
@@ -39,11 +36,11 @@ describe('HeaderNavigation component', () => {
   })
 
   it('should correctly change class if avtive', () => {
-    render(HeaderNavigation, {
+    render(HeaderMobileNavigation, {
       stubs, props: { ...props, activeNavigation: 'services' }, store,
     })
 
-    expect(screen.getAllByTestId('navigation__item')[1].className).toBe('header-navigation__item header-navigation__item-services header-navigation__item--is-hover')
+    expect(screen.getAllByTestId('navigation__item')[1].className).toBe('header-mobile-navigation__item')
     expect(screen.getAllByText('Company')).not.toBeNull()
     expect(screen.getAllByText('Services')).not.toBeNull()
   })

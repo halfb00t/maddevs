@@ -1,7 +1,5 @@
 <template>
-  <section
-    :style="{ backgroundColor: sliceBackground }"
-  >
+  <section :style="{ backgroundColor: sliceBackground }">
     <div
       :data-aos="animation"
       data-testid="nav-link__container"
@@ -14,15 +12,15 @@
         ]"
       >
         <Component
-          :is="disabledLink === 'previous-page' || disabledLink === 'both'? 'p' : 'a'"
-          :href="prevLink.url "
+          :is="disabledLink === 'previous-page' || disabledLink === 'both' ? 'p' : 'a'"
+          :href="prevLink.url"
           target="_self"
           class="nav-link-slice__link"
           :class="colorThemeClass"
           v-html="prevLinkText"
         />
         <Component
-          :is="disabledLink === 'next-page' || disabledLink === 'both'? 'p' : 'a'"
+          :is="disabledLink === 'next-page' || disabledLink === 'both' ? 'p' : 'a'"
           :href="nextLink.url"
           target="_self"
           class="nav-link-slice__link"
@@ -35,19 +33,20 @@
 </template>
 
 <script>
-
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'TextSlice',
 
-  mixins: [animateOnScrollMixin({
-    offset: 200,
-    delay: 50,
-    anchorPlacement: 'top-center',
-    duration: 1000,
-    once: true,
-  })],
+  mixins: [
+    animateOnScrollMixin({
+      offset: 200,
+      delay: 50,
+      anchorPlacement: 'top-center',
+      duration: 1000,
+      once: true,
+    }),
+  ],
 
   props: {
     slice: {
@@ -61,12 +60,30 @@ export default {
 
   data() {
     return {
-      prevLink: this.slice.primary.prevLink ? this.slice.primary.prevLink : { url: 'https://maddevs.io/' },
-      prevLinkText: this.slice.primary.prevLinkText ? this.slice.primary.prevLinkText : 'Previous',
-      nextLinkText: this.slice.primary.nextLinkText ? this.slice.primary.nextLinkText : 'Next',
-      nextLink: this.slice.primary.nextLink ? this.slice.primary.nextLink : { url: 'https://maddevs.io/' },
-      position: this.slice.primary.position ? this.slice.primary.position : 'center',
-      disabledLink: this.slice.primary.disabledLink ? this.slice.primary.disabledLink : 'none',
+      prevLink: this.slice.primary.prevLink
+        ? this.slice.primary.prevLink
+        : { url: 'https://maddevs.io/' },
+
+      prevLinkText: this.slice.primary.prevLinkText
+        ? this.slice.primary.prevLinkText
+        : 'Previous',
+
+      nextLinkText: this.slice.primary.nextLinkText
+        ? this.slice.primary.nextLinkText
+        : 'Next',
+
+      nextLink: this.slice.primary.nextLink
+        ? this.slice.primary.nextLink
+        : { url: 'https://maddevs.io/' },
+
+      position: this.slice.primary.position
+        ? this.slice.primary.position
+        : 'center',
+
+      disabledLink: this.slice.primary.disabledLink
+        ? this.slice.primary.disabledLink
+        : 'none',
+
       animation: this.slice.primary.animation,
     }
   },
@@ -89,7 +106,7 @@ export default {
 
 <style lang="scss" scoped>
 .nav-link-slice {
-  &__links{
+  &__links {
     display: flex;
     justify-content: center;
 
@@ -106,32 +123,37 @@ export default {
       justify-content: flex-end;
     }
 
-    p{
+    p {
+      cursor: default;
       color: $text-color--grey-opacity-20-percent;
     }
-    a:hover{
-      color:$text-color--red;
+
+    a {
+      transition: all .15s ease;
+      &:hover {
+        color: $text-color--red;
+      }
     }
   }
 
-  &__link{
-    @include font('Inter', 16px, 500);
+  &__link {
+    @include font("Inter", 16px, 500);
     line-height: 24px;
     text-align: center;
     position: relative;
     &-white {
       color: $text-color--black-lighter;
-      &:first-child{
+      &:first-child {
         border-right: 1px solid $text-color--black-lighter;
       }
     }
     &-black {
       color: $text-color--white;
-      &:first-child{
-        border-right: 1px solid  $text-color--white;
+      &:first-child {
+        border-right: 1px solid $text-color--white;
       }
     }
-    &:before{
+    &:before {
       content: "";
       position: absolute;
       top: 8px;
@@ -140,7 +162,7 @@ export default {
       border-width: 0 0 1px 1px;
       border-style: solid;
     }
-    &:after{
+    &:after {
       content: "";
       position: absolute;
       top: 12px;
@@ -149,38 +171,38 @@ export default {
       box-shadow: inset 0 0 0 32px;
       transform-origin: right top;
     }
-    &:first-child{
+    &:first-child {
       padding: 0 40px 0 30px;
-      &:before{
+      &:before {
         left: 0;
         transform: rotate(45deg);
       }
-      &:after{
+      &:after {
         left: -1px;
       }
     }
-    &:last-child{
+    &:last-child {
       padding: 0 30px 0 40px;
-      &:before{
+      &:before {
         right: 0;
         transform: rotate(230deg);
       }
-      &:after{
+      &:after {
         right: -1px;
       }
     }
   }
 
   @media screen and (max-width: 450px) {
-    &__links{
+    &__links {
       justify-content: space-between;
     }
-    &__link{
-      &:first-child{
+    &__link {
+      &:first-child {
         padding: 0 10px 0 30px;
         border: none;
       }
-      &:last-child{
+      &:last-child {
         padding: 0 30px 0 10px;
       }
     }

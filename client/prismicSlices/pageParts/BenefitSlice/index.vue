@@ -13,9 +13,7 @@
         class="benefit-slice__title"
         v-html="title"
       />
-      <div
-        class="benefit-slice__cards"
-      >
+      <div class="benefit-slice__cards">
         <div
           v-for="(benefit, i) in benefits"
           :key="`benefit-${i}`"
@@ -26,9 +24,17 @@
             <img
               v-lazy-load
               :data-src="benefit.icon && benefit.icon.url"
-              :alt="benefit.icon && benefit.icon.alt || 'Image'"
-              :width="benefit.icon && benefit.icon.dimensions && benefit.icon.dimensions.width"
-              :height="benefit.icon && benefit.icon.dimensions && benefit.icon.dimensions.height"
+              :alt="(benefit.icon && benefit.icon.alt) || 'Image'"
+              :width="
+                benefit.icon &&
+                  benefit.icon.dimensions &&
+                  benefit.icon.dimensions.width
+              "
+              :height="
+                benefit.icon &&
+                  benefit.icon.dimensions &&
+                  benefit.icon.dimensions.height
+              "
               class="benefit-slice__icon"
             >
           </div>
@@ -104,7 +110,7 @@ export default {
 
   &__title {
     letter-spacing: -1.3px;
-    @include font('Inter', 42px, 700);
+    @include font("Inter", 42px, 700);
     line-height: 46px;
     color: $text-color--red;
     max-width: 350px;
@@ -115,15 +121,19 @@ export default {
     background-color: $bgcolor--silver;
     border-radius: 4px;
   }
-  &__icon-container{
-    width: 35px;
-    height: 35px;
+
+  &__icon-container {
+    width: 32px;
+    height: 38px;
     margin-bottom: 17px;
   }
 
   &__icon {
     display: block;
+    max-width: 100%;
+    height: auto;
   }
+
   &__description {
     line-height: 24px;
     letter-spacing: -0.013em;
@@ -134,12 +144,12 @@ export default {
       font-size: 38px;
     }
     &__card {
-     padding-bottom: 50px;
+      padding-bottom: 50px;
     }
   }
 
   @media screen and (max-width: 980px) {
-    &__container{
+    &__container {
       grid-template-columns: 1fr;
     }
 
@@ -157,7 +167,7 @@ export default {
       padding: 0;
       text-align: left;
     }
-    &__cards{
+    &__cards {
       grid-template-columns: repeat(2, 1fr);
     }
     &__card {
@@ -166,7 +176,7 @@ export default {
   }
 
   @media screen and (max-width: 350px) {
-    &__cards{
+    &__cards {
       grid-template-columns: repeat(1, 1fr);
     }
   }
