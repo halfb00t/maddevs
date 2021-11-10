@@ -16,9 +16,7 @@
           Book a free consultation
         </UIButton>
       </UIBanner>
-      <!-- this id should be unique, because it used for google analytics -->
       <ModalContactMe
-        id="contact-me-cs"
         ref="modalContactMe"
         :location="'\'Book a free consultation\' button, case studies page'"
       />
