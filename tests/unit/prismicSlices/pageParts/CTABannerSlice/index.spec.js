@@ -21,18 +21,18 @@ describe('CtaBannerSlice component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('if call method "show" and ref modalContactMe is undefined, "show" method in ref modalContactMe not call', () => {
+  it('if call method "showModal" and ref CTAModalRef is undefined, "show" method in ref CTAModalRef not call', () => {
     wrapper = shallowMount(CtaBannerSlice, {
       props,
     })
-    wrapper.vm.show()
+    wrapper.vm.showModal()
     expect(mockShow).not.toHaveBeenCalled()
   })
 
-  it('if call method "show" and ref modalContactMe exist, "show" method in ref modalContactMe call', () => {
+  it('if call method "showModal" and ref CTAModalRef exist, "show" method in ref CTAModalRef call', () => {
     wrapper = shallowMount(CtaBannerSlice, {
       stubs: {
-        ModalContactMe: {
+        CTAModal: {
           render(h) { return h('div') },
           methods: {
             show: mockShow,
@@ -41,7 +41,7 @@ describe('CtaBannerSlice component', () => {
       },
       props,
     })
-    wrapper.vm.show()
+    wrapper.vm.showModal()
     expect(mockShow).toHaveBeenCalledTimes(1)
   })
 })
