@@ -5,7 +5,10 @@
     ref="modalContactMe"
     modal-background="white"
   >
-    <ContactMeForm :form-location="location" />
+    <ContactMeForm
+      :id="id"
+      :form-location="location"
+    />
   </Modal>
 </template>
 

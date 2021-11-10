@@ -71,8 +71,10 @@
       @change="handleCheckboxesChange"
     />
 
+    <slot name="reCaptcha" />
+
     <UIButton
-      :disabled="!isValid || isSubmitted"
+      :disabled="!isValid || isSubmitted || recaptchaError"
       :loading="isSubmitted"
       :class="buttonClassName"
       @click="handleSubmit"
@@ -194,6 +196,11 @@ export default {
     useLabels: {
       type: Boolean,
       default: true,
+    },
+
+    recaptchaError: {
+      type: Boolean,
+      default: false,
     },
 
     fullnameRequired: {

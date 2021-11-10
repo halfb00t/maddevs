@@ -145,7 +145,8 @@ module.exports = {
   recaptcha: {
     hideBadge: true,
     siteKey: process.env.RECAPTCHA_SITE_KEY,
-    version: 3,
+    version: 2,
+    size: 'normal',
   },
   sitemap: {
     hostname: 'https://maddevs.io',

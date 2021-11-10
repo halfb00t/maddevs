@@ -6,8 +6,15 @@
     button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
     :use-company="true"
     :use-interest-radio-input="true"
+    :recaptcha-error="recaptchaError"
     @submit="handleSubmit"
-  />
+  >
+    <template #reCaptcha>
+      <div class="recaptcha">
+        <recaptcha @success="onSuccess" />
+      </div>
+    </template>
+  </BaseForm>
 </template>
 
 <script>
@@ -27,27 +34,44 @@ export default {
       type: String,
       default: 'Unknown',
     },
+
+    id: {
+      type: String,
+      default: 'UnknownModal',
+    },
   },
 
-  async mounted() {
-    await this.$recaptcha.init()
+  data() {
+    return {
+      recaptchaError: true,
+      token: null,
+    }
   },
 
   beforeDestroy() {
-    this.$recaptcha.destroy()
+    const modalWithReCapthca = document.getElementById(this.id)
+    if (modalWithReCapthca) {
+      modalWithReCapthca.nextSibling.remove()
+    }
   },
 
   methods: {
+    onSuccess(token) {
+      this.recaptchaError = false
+      this.token = token
+    },
+
     async handleSubmit(formData) {
-      const token = await this.$recaptcha.execute('contactMe')
       const variables = {
         ...formData,
         formLocation: this.formLocation,
-        token,
+        token: this.token,
+        fromId: this.id,
       }
 
       // from mixin
       this.submitLead(variables)
+      await this.$recaptcha.reset()
     },
 
     reset() {
@@ -56,3 +80,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.recaptcha {
+  padding-bottom: 30px;
+}
+</style>

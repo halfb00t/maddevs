@@ -30,6 +30,12 @@ describe('ContactMeForm component', () => {
     render(ContactMeForm, {
       mocks,
       store,
+      data() {
+        return {
+          recaptchaError: false,
+          token: 'token',
+        }
+      },
     })
 
     await fireEvent.update(screen.getByTestId('test-base-form-phoneNumber'), '+3 4546-657-9098-7875645342245')
