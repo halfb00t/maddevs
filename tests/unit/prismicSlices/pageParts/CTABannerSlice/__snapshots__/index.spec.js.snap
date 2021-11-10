@@ -64,7 +64,11 @@ exports[`CtaBannerSlice component should render correctly 1`] = `
       </div>
     </div>
      
-    <!---->
+    <div
+      class="cta-banner-slice__modal"
+    >
+      <!---->
+    </div>
   </section>
 </div>
 `;
