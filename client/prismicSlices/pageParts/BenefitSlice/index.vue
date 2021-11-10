@@ -123,8 +123,8 @@ export default {
   }
 
   &__icon-container {
-    width: 35px;
-    height: 45px;
+    width: 32px;
+    height: 38px;
     margin-bottom: 17px;
   }
 

@@ -43,14 +43,6 @@
           },
           "type": "Image"
         },
-        "btnLink": {
-          "config": {
-            "label": "Button link",
-            "placeholder": "",
-            "allowTargetBlank": true
-          },
-          "type": "Link"
-        },
         "title": {
           "config": {
             "label": "Main Title",
@@ -85,6 +77,26 @@
             "placeholder": ""
           },
           "type": "Text"
+        },
+        "btnLink": {
+          "config": {
+            "label": "Button link (optional)",
+            "placeholder": "Button will be a link instead of a modal window",
+            "allowTargetBlank": true
+          },
+          "type": "Link"
+        },
+        "modal": {
+          "config": {
+            "label": "Modal window (optional)",
+            "placeholder": "Select modal window that will open",
+            "options": [
+              "contact-me",
+              "order-project"
+            ],
+            "default_value": "contact-me"
+          },
+          "type": "Select"
         }
       },
       "items": {}
