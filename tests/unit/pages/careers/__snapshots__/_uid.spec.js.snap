@@ -342,12 +342,6 @@ exports[`Careers _uid component should render correctly 1`] = `
                       </li>
                     </ul>
                   </p>
-                   
-                  <div
-                    class="position-form__recaptcha"
-                  >
-                    <recaptcha />
-                  </div>
                 </div>
                  
                 <button

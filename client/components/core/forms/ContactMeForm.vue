@@ -29,11 +29,21 @@ export default {
     },
   },
 
+  async mounted() {
+    await this.$recaptcha.init()
+  },
+
+  beforeDestroy() {
+    this.$recaptcha.destroy()
+  },
+
   methods: {
-    handleSubmit(formData) {
+    async handleSubmit(formData) {
+      const token = await this.$recaptcha.execute('contactMe')
       const variables = {
         ...formData,
         formLocation: this.formLocation,
+        token,
       }
 
       // from mixin
