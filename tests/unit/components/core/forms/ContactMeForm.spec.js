@@ -42,7 +42,7 @@ describe('ContactMeForm component', () => {
     await fireEvent.update(screen.getByTestId('test-base-form-email'), 'someemail@maddevs.io')
     await fireEvent.update(screen.getByTestId('test-base-form-company'), 'Maddevs.io')
     await fireEvent.update(screen.getByTestId('test-base-form-fullName'), 'John Johnson')
-
+    await fireEvent.click(screen.queryByTestId('test-radio-label-1'))
     await fireEvent.click(screen.queryByTestId('test-privacy-policy-checkbox-input'))
     await fireEvent.click(screen.getByText('Сontact Me'))
 

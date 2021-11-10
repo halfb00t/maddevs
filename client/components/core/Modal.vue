@@ -245,7 +245,7 @@ export default {
   }
 
   &_content {
-    max-height: calc(100vh - 150px);
+    max-height: calc(80vh - 150px);
     padding: 0 84px;
     box-sizing: border-box;
   }

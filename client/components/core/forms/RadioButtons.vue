@@ -16,6 +16,7 @@
       >
         <label
           class="radio-button-list__form-checkbox-label form-checkbox-label"
+          :data-testid="`test-radio-label-${i}`"
         >
           <div
             class="radio-button-list__label-text"
@@ -66,6 +67,11 @@ export default {
       default: () => ['Label One', 'Label Two'],
     },
 
+    defaultChoice: {
+      type: Boolean,
+      default: false,
+    },
+
     required: {
       type: Boolean,
       default: true,
@@ -88,7 +94,7 @@ export default {
 
   methods: {
     defaultPick() {
-      return this.required ? this.radioInputLabels[0] : null
+      return this.defaultChoice ? this.radioInputLabels[0] : null
     },
   },
 }
