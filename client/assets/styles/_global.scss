@@ -138,11 +138,11 @@
 
   &:focus {
     border-color: $border-color--grey-selected;
+
     &::placeholder {
       color: $input-color--grey;
     }
   }
-
 }
 
 .required {
