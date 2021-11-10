@@ -123,7 +123,7 @@ export default {
   }
 
   &__icon-container {
-    width: 35px;
+    width: 32px;
     height: 45px;
     margin-bottom: 17px;
   }
