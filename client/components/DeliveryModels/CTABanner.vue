@@ -12,9 +12,7 @@
         Estimate your project
       </UIButton>
     </UIBanner>
-    <!-- this id should be unique, because it used for google analytics -->
     <ModalContactMe
-      id="contact-me-dm"
       ref="modalContactMe"
       :location="'\'Estimate your project\' button, delivery models page'"
     />
@@ -53,6 +51,7 @@ export default {
     @media screen and (max-width: 992px) {
       min-height: 425px;
     }
+
     &__image {
       @media screen and (max-width: 960px) {
         right: 40px;
