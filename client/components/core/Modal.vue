@@ -5,6 +5,7 @@
   >
     <div
       v-if="isVisible"
+      :id="id"
       v-append-to-body
       class="modal"
     >

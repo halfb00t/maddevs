@@ -26,4 +26,8 @@ export default {
   $store: {
     dispatch: jest.fn(),
   },
+
+  $recaptcha: {
+    reset: jest.fn(),
+  },
 }

@@ -7,8 +7,15 @@
     :use-company="true"
     :use-interest-radio-input="true"
     :interest-radio-input-required="true"
+    :recaptcha-error="recaptchaError"
     @submit="handleSubmit"
-  />
+  >
+    <template #reCaptcha>
+      <div class="recaptcha">
+        <recaptcha @success="onSuccess" />
+      </div>
+    </template>
+  </BaseForm>
 </template>
 
 <script>
@@ -28,17 +35,44 @@ export default {
       type: String,
       default: 'Unknown',
     },
+
+    id: {
+      type: String,
+      default: 'UnknownModal',
+    },
+  },
+
+  data() {
+    return {
+      recaptchaError: true,
+      token: null,
+    }
+  },
+
+  beforeDestroy() {
+    const modalWithReCapthca = document.getElementById(this.id)
+    if (modalWithReCapthca) {
+      modalWithReCapthca.nextSibling.remove()
+    }
   },
 
   methods: {
-    handleSubmit(formData) {
+    onSuccess(token) {
+      this.recaptchaError = false
+      this.token = token
+    },
+
+    async handleSubmit(formData) {
       const variables = {
         ...formData,
         formLocation: this.formLocation,
+        token: this.token,
+        fromId: this.id,
       }
 
       // from mixin
       this.submitLead(variables)
+      await this.$recaptcha.reset()
     },
 
     reset() {
@@ -47,3 +81,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.recaptcha {
+  padding-bottom: 30px;
+}
+</style>
