@@ -5,12 +5,11 @@ const {
   getIPByRequest, getLocationByIP, isBlockedIP, isTestIP,
 } = require('../services/IPService')
 const { reCaptchaVerification } = require('../services/reCaptchaVerification')
-const { checkFormForReCaptcha } = require('../services/checkFormForReCaptcha')
 
 const ADDRESS_NOT_FOUND_ERROR = 550
 
 async function create(req, res) {
-  if (checkFormForReCaptcha(req.body.variables.fromId)) {
+  if (req.body.variables.fromId === 'contact-me-modal') {
     if (!req.body.variables.token) return res.json({ success: false, message: 'Invalid token' })
     const { data } = await reCaptchaVerification(req.body.variables.token)
     if (!data?.success) return res.json({ success: data.success, message: data['error-codes'] })

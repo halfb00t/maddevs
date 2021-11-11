@@ -6,7 +6,7 @@
     modal-background="white"
   >
     <ContactMeForm
-      :id="id"
+      id="contact-me-modal"
       :form-location="location"
     />
   </Modal>
