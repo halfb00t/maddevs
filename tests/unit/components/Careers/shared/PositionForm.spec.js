@@ -75,7 +75,7 @@ describe('PositionForm component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('should work touch handler without file', () => {
+  it('should work touch handler without a file', () => {
     const wrapper = shallowMount(PositionForm, {
       localVue,
       mocks,
@@ -112,7 +112,6 @@ describe('PositionForm component', () => {
   })
 
   it('should work send form', async () => {
-    process.env.FF_ENVIRONMENT = 'production'
     mocks.$v.validationGroup.$invalid = false
     const wrapper = shallowMount(PositionForm, {
       localVue,
@@ -161,7 +160,7 @@ describe('PositionForm component', () => {
       localVue,
       mocks,
       props: {
-        huntflowVacancyId: 123,
+        huntflowVacancyId: '123',
         position: 'Frontend',
       },
       data: () => ({
