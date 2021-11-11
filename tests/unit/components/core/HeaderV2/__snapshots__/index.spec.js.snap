@@ -315,7 +315,6 @@ exports[`Header component should render correctly 1`] = `
     </transition-stub>
      
     <modalcontactme-stub
-      id="contact-me-modal"
       location="'Contact me' button, header component"
     />
   </div>

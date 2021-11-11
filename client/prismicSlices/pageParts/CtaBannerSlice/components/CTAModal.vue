@@ -8,7 +8,6 @@
     />
     <ModalContactMe
       v-else
-      id="contact-me-cta-slice"
       ref="modalVariantRef"
       :location="location"
     />
