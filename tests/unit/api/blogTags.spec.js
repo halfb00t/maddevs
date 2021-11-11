@@ -3,9 +3,9 @@ import * as api from '@/api/blogTags'
 import { getBlogPosts } from '@/api/blog'
 
 jest.mock('@/api/blog', () => ({ getBlogPosts: jest.fn() }))
+const tags = ['tag1', 'tag2']
 
 describe('getBlogTags', () => {
-  const tags = ['tag1', 'tag2']
   const response = [{ tags }]
   getBlogPosts.mockImplementation(() => Promise.resolve(response))
   const prismic = jest.fn()
@@ -19,6 +19,29 @@ describe('getBlogTags', () => {
     const error = new Error('Test error')
     getBlogPosts.mockImplementation(() => Promise.reject(error))
     const result = await api.getBlogTags(prismic)
+    expect(result).toBe(error)
+  })
+})
+
+describe('getBlogTag', () => {
+  const payload = 'tag1'
+  const prismic = jest.fn()
+  beforeEach(() => {
+    jest.spyOn(api, 'getBlogTags').mockImplementation(() => Promise.resolve(tags))
+  })
+
+  it('success', async () => {
+    const result = await api.getBlogTag(prismic, payload)
+
+    expect(result).toBe(payload)
+  })
+
+  it('failure', async () => {
+    const error = new Error('Test error')
+    jest.spyOn(api, 'getBlogTags').mockImplementation(() => Promise.reject(error))
+
+    const result = await api.getBlogTag(prismic, payload)
+
     expect(result).toBe(error)
   })
 })
