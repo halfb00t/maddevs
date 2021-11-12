@@ -39,7 +39,7 @@
   }
 
   .banner-main_title {
-    @include font("Poppins", 120px, 700);
+    @include font('Poppins', 120px, 700);
     font-style: normal;
     line-height: 96%;
     letter-spacing: -0.04em;
@@ -64,12 +64,12 @@
 }
 
 .title-md {
-  @include font("Poppins", 40px, 700);
+  @include font('Poppins', 40px, 700);
   letter-spacing: -1px;
 }
 
 .paragraph {
-  @include font("Inter", 21px, 400);
+  @include font('Inter', 21px, 400);
   line-height: 129%;
   letter-spacing: -0.02em;
 }
@@ -80,15 +80,15 @@
 }
 
 .paragraph-md {
-  @include font("Inter", 16px, 400);
+  @include font('Inter', 16px, 400);
 }
 
 .paragraph-sm {
-  @include font("Inter", 14px, 400);
+  @include font('Inter', 14px, 400);
 }
 
 .inline-code {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
   font-weight: 400;
   background: $bgcolor--grey-light;
@@ -110,7 +110,7 @@
 }
 
 .field-name {
-  @include font("Inter", 14px, 400);
+  @include font('Inter', 14px, 400);
   width: max-content;
   margin-bottom: 2px;
   color: $input-color--grey;
@@ -119,7 +119,7 @@
 }
 
 .entry-field {
-  @include font("Inter", 16px, 400);
+  @include font('Inter', 16px, 400);
   width: 100%;
   padding: 17px 19px;
   border-radius: 4px;
@@ -146,7 +146,7 @@
 
 .required {
   &::after {
-    content: "*";
+    content: '*';
     padding-left: 4px;
     color: $text-color--red;
     position: absolute;
@@ -161,7 +161,7 @@
 }
 
 .form-checkbox-label {
-  @include font("Inter", 15px, 400);
+  @include font('Inter', 15px, 400);
   position: relative;
   padding-left: 30px;
   line-height: 22px;
@@ -176,7 +176,7 @@
   }
 
   input:checked ~ .checkmark {
-    background: url("../img/common/checkmark.svg") no-repeat center;
+    background: url('../img/common/checkmark.svg') no-repeat center;
     background-color: $input-bgcolor--grey-light;
   }
 
@@ -207,7 +207,7 @@
 
 // ----------- Modal window ----------- //
 .error-text {
-  @include font("Inter", 14px, 400);
+  @include font('Inter', 14px, 400);
   display: block;
   margin-top: 3px;
   color: $text-color--red;
@@ -485,7 +485,7 @@
       line-height: 18px;
       color: #101113;
       transition: all 0.1s ease;
-      @include font("Inter", 12px, 400);
+      @include font('Inter', 12px, 400);
     }
 
     &:hover {
@@ -499,25 +499,5 @@
     .anchor_copy-link button {
       display: block;
     }
-  }
-}
-
-.customer-university-title {
-  @include font("Poppins", 80px, 700);
-  font-style: normal;
-  line-height: 101%;
-  letter-spacing: -0.04em;
-  color: $bgcolor--silver;
-  margin-bottom: 32px;
-
-  span {
-    -webkit-text-stroke: 1.13333px $bgcolor--white;
-    color: $text-color--black-oil;
-  }
-
-  @media screen and (max-width: 768px) {
-    @include font("Poppins", 50px, 700);
-    line-height: 104%;
-    margin: 42px 0 16px 0;
   }
 }
