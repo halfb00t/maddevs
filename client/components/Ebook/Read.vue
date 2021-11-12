@@ -97,8 +97,8 @@ export default {
       return (numA ? Number(numA[0]) : 0) - (numB ? Number(numB[0]) : 0)
     },
 
-    handleSendedForm() {
-      this.successMessage = 'Please download the PDF file from the opened tab.'
+    handleSendedForm(payload) {
+      this.successMessage = `The letter with the PDF file was successfully sent to mail ${payload.email}. <br><br> Please check your email.`
       this.$refs.modalEbook.show()
     },
   },
