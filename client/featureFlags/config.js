@@ -4,4 +4,5 @@
  * Available environments - [development, staging, production]
  */
 export const config = {
+  nambaTaxiCase: ['development', 'staging'],
 }
