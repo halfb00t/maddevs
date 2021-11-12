@@ -22,11 +22,11 @@
         :class="{ 'read-form__button--active': isValid, 'read-form__button--always-fullsized': fullsizeButton }"
         @click="submit"
       >
-        Download the ebook
+        Send me the ebook
       </button>
     </div>
     <p class="read-form__caption">
-      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – just some more useful resources in the future.
+      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for downloading the ebook and some more useful resources in the future.
     </p>
   </div>
 </template>
@@ -34,7 +34,7 @@
 <script>
 import { email, maxLength, required } from 'vuelidate/lib/validators'
 import BaseInput from '@/components/core/forms/BaseInput'
-import { sendEbookInfoToSlack } from '@/api/ebookSlackWebhook'
+import { sendEmail } from '@/api/email'
 import { getLinkWithLifeTime } from '@/api/s3'
 
 export default {
@@ -85,45 +85,42 @@ export default {
         expiresIn: 86400, // sec -> 24h
       }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
-      await sendEbookInfoToSlack(this.$axios, { email: this.email, name: this.name })
-      window.open(pdfUrl, '_blank').focus()
+      const requestSender = {
+        body: {
+          email: {
+            templateId: 348595, // Required
+            variables: {
+              subject: 'Your Pricing Strategies Ebook by Mad Devs',
+              emailTo: this.email,
+              pdfUrl,
+            },
 
-      // const requestSender = {
-      //   body: {
-      //     email: {
-      //       templateId: 348595, // Required
-      //       variables: {
-      //         subject: 'Your Pricing Strategies Ebook by Mad Devs',
-      //         emailTo: this.email,
-      //         pdfUrl,
-      //       },
-      //
-      //       attachment: null,
-      //     },
-      //   },
-      //
-      //   base64: null,
-      // }
-      // const requestMarketing = {
-      //   body: {
-      //     email: {
-      //       templateId: 624246, // Required
-      //       variables: {
-      //         subject: 'Request a PDF file from the Ebook page',
-      //         senderName: this.name,
-      //         emailTo: process.env.emailMarketing,
-      //         fromSender: this.email,
-      //         page: window.location.href,
-      //       },
-      //
-      //       attachment: null,
-      //     },
-      //   },
-      //
-      //   base64: '',
-      // }
-      // sendEmail(this.$axios, requestSender) // Send email to sender
-      // sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
+            attachment: null,
+          },
+        },
+
+        base64: null,
+      }
+      const requestMarketing = {
+        body: {
+          email: {
+            templateId: 624246, // Required
+            variables: {
+              subject: 'Request a PDF file from the Ebook page',
+              senderName: this.name,
+              emailTo: process.env.emailMarketing,
+              fromSender: this.email,
+              page: window.location.href,
+            },
+
+            attachment: null,
+          },
+        },
+
+        base64: '',
+      }
+      sendEmail(this.$axios, requestSender) // Send email to sender
+      sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.resetForm()
     },
