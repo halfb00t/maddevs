@@ -84,7 +84,7 @@ export default {
         file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
         expiresIn: 86400, // sec -> 24h
       }
-      const { data: pdfUrl = 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/custom-software-development-pricing-strategies-ebook.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2UJ5KA5COB5GSCF4%2F20211112%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20211112T142101Z&X-Amz-Expires=86400&X-Amz-Signature=b5bd236dc8f831a0ad55e15680677bdb3f689add630a547b4f5a2bd596c78813&X-Amz-SignedHeaders=host&x-id=GetObject' } = await getLinkWithLifeTime(this.$axios, params)
+      const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
       await sendEbookInfoToSlack(this.$axios, { email: this.email, name: this.name })
       window.open(pdfUrl, '_blank').focus()
 
