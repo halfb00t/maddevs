@@ -52,7 +52,10 @@ export default {
   beforeDestroy() {
     const modalWithReCapthca = document.getElementById(this.id)
     if (modalWithReCapthca) {
-      modalWithReCapthca.nextSibling.remove()
+      const reCapthcaTask = modalWithReCapthca.nextSibling
+      if (reCapthcaTask) {
+        reCapthcaTask.remove()
+      }
     }
   },
 
