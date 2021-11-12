@@ -192,6 +192,7 @@ module.exports = {
     ffEnvironment: process.env.FF_ENVIRONMENT,
     prismicApi: process.env.NODE_PRISMIC_API,
     ipInfoToken: process.env.NODE_IP_INFO_TOKEN,
+    ebookWebhookUrl: process.env.SLACK_EBOOK_WEBHOOK_URL,
   },
   router: {
     trailingSlash: true,
