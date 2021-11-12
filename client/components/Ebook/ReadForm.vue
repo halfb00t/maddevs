@@ -78,15 +78,15 @@ export default {
   methods: {
     async submit() {
       if (!this.isValid) return
-      // const params = {
-      //   region: 'eu-west-1',
-      //   bucket: 'maddevsio',
-      //   file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
-      //   expiresIn: 86400, // sec -> 24h
-      // }
+      const params = {
+        region: 'eu-west-1',
+        bucket: 'maddevsio',
+        file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
+        expiresIn: 86400, // sec -> 24h
+      }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
       await sendEbookInfoToSlack(this.$axios, { email: this.email, name: this.name })
-      this.openFileInNewTab(pdfUrl)
+      window.open(pdfUrl, '_blank').focus()
 
       // const requestSender = {
       //   body: {
@@ -126,16 +126,6 @@ export default {
       // sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.resetForm()
-    },
-
-    openFileInNewTab(url) {
-      const linkFile = document.createElement('a')
-      linkFile.setAttribute('href', url)
-      linkFile.setAttribute('target', '_blank')
-      // linkFile.style.visibility = 'hidden'
-      document.body.appendChild(linkFile)
-      linkFile.click()
-      document.body.removeChild(linkFile)
     },
 
     resetForm() {
