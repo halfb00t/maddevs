@@ -144,6 +144,7 @@ module.exports = {
   ],
   recaptcha: {
     hideBadge: true,
+    language: 'english',
     siteKey: process.env.RECAPTCHA_SITE_KEY,
     version: 2,
     size: 'normal',
