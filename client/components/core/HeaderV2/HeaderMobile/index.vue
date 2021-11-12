@@ -28,7 +28,6 @@
 </template>
 
 <script>
-
 import UIModalTriggerButton from '@/components/shared/UIModalTriggerButton'
 import HeaderMobileNavigation from '@/components/core/HeaderV2/HeaderMobile/HeaderMobileNavigation'
 import HeaderMobileContacts from '@/components/core/HeaderV2/HeaderMobile/HeaderMobileContacts'

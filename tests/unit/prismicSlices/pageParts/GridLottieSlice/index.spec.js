@@ -1,16 +1,6 @@
 import { render, screen } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
-import GridLottieSlice from '@/prismicSlices/pageParts/GridLottieSlice'
-
-jest.mock('uuid')
-
-const mocks = {
-  $prismic: {
-    asHtml: jest.fn(),
-  },
-}
-
-const stubs = ['Lottie']
+import GridLottieMain from '@/prismicSlices/pageParts/GridLottieSlice'
 
 const backgrounds = {
   white: '#ffffff',
@@ -21,30 +11,6 @@ const backgrounds = {
 const apiData = {
   background: 'black',
   animation: 'fade-up',
-  items: [
-    {
-      title: 'First item title',
-      content: '<p>First item content</p>',
-      background: '#FFFFFF',
-      'lottie-animation': 'devops-audit',
-      lottiePosition: 'top',
-    },
-    {
-      title: 'second item title',
-      content: '<p>second item content</p>',
-      background: '#FFFFFF',
-      'lottie-animation': 'devops-audit',
-      lottiePosition: 'top',
-    },
-    {
-      title: 'third item title',
-      content: '<p>third item content</p>',
-      background: '#000000',
-      animationData: 'test',
-      'lottie-animation': 'devops-audit',
-      lottiePosition: 'bottom',
-    },
-  ],
 }
 
 const getProps = params => ({
@@ -52,79 +18,77 @@ const getProps = params => ({
     primary: {
       ...params,
     },
-    items: [...params?.items],
   },
 })
 
-describe('GridLottieSlice', () => {
+describe('Card Grid slice', () => {
+  it('should correctly render CardGrid component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'default-slice'
+    const { container } = render(GridLottieMain, {
+      props,
+    })
+
+    expect(screen.queryByTestId('card-lottie')).not.toBeNull()
+    expect(screen.queryByTestId('card-lottie-link')).toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should correctly render CardGridWithIcon component', () => {
+    const props = getProps(apiData)
+    props.slice.variation = 'gridLottieLink'
+    const { container } = render(GridLottieMain, {
+      props,
+    })
+
+    expect(screen.queryByTestId('card-lottie')).toBeNull()
+    expect(screen.queryByTestId('card-lottie-link')).not.toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+
   describe('sliceBackground computed method', () => {
     it('should return white hex', () => {
-      const wrapper = shallowMount(GridLottieSlice, {
+      const wrapper = shallowMount(GridLottieMain, {
         propsData: getProps({
           ...apiData,
           background: 'white',
         }),
-        stubs,
-        mocks,
       })
 
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.white)
     })
 
     it('should return grey hex', () => {
-      const wrapper = shallowMount(GridLottieSlice, {
+      const wrapper = shallowMount(GridLottieMain, {
         propsData: getProps({
           ...apiData,
           background: 'grey',
         }),
-        stubs,
-        mocks,
       })
 
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.grey)
     })
 
     it('should return black hex', () => {
-      const wrapper = shallowMount(GridLottieSlice, {
+      const wrapper = shallowMount(GridLottieMain, {
         propsData: getProps({
           ...apiData,
           background: 'black',
         }),
-        stubs,
-        mocks,
       })
 
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.black)
     })
 
     it('should return null', () => {
-      const wrapper = shallowMount(GridLottieSlice, {
+      const wrapper = shallowMount(GridLottieMain, {
         propsData: getProps({
           ...apiData,
           background: 'unknown',
         }),
-        stubs,
-        mocks,
       })
 
       expect(wrapper.vm.sliceBackground).toBeNull()
-    })
-  })
-  describe('GridLottieSlice with items', () => {
-    it('should render correctly with data', () => {
-      const { container } = render(GridLottieSlice, {
-        propsData: getProps({
-          ...apiData,
-          background: 'unknown',
-        }),
-        stubs,
-        mocks,
-      })
-      expect(screen.getByText('First item title')).not.toBeNull()
-      expect(screen.getByText('second item title')).not.toBeNull()
-      expect(screen.getByText('third item title')).not.toBeNull()
-      expect(screen.getAllByTestId('grid-lottie-animation-item')).toHaveLength(apiData.items.length)
-      expect(container).toMatchSnapshot()
     })
   })
 })

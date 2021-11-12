@@ -339,7 +339,6 @@ export default {
 
       const applicantData = await this.buildApplicantData()
       this.sendVacancy(applicantData)
-      await this.$recaptcha.reset()
       this.$refs.successModal.show()
       this.resetForm()
     },

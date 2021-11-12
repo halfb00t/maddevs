@@ -17,6 +17,8 @@ const redirectToCorrectPostUrl = require('./middlewares/redirectToCorrectPostUrl
 const redirectHrTags = require('./middlewares/redirectHrTags')
 const redirectInvalidLinks = require('./middlewares/redirectInvalidLinks')
 const redirectToCorrectCareersUrl = require('./middlewares/redirectToCorrectCareersUrl')
+const redirectToRuCareerPostUrl = require('./middlewares/redirectToRuCareerPostUrl')
+const redirectPrismicData = require('./middlewares/redirectPrismicData')
 
 // config
 const config = require('./config')
@@ -50,6 +52,8 @@ function bootstrap() {
   app.use(redirectHrTags)
   app.use(redirectInvalidLinks)
   app.use(redirectToCorrectCareersUrl)
+  app.use(redirectToRuCareerPostUrl)
+  app.use(redirectPrismicData) // the list of redirects is generated automatically by PrismicRedirects service
 
   // Routers
   app.use(webRouter)

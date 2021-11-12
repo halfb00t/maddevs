@@ -498,12 +498,60 @@
             "content": "devops-audit"
           }
         }
+      },
+      "gridLottieLink": {
+        "items": {
+          "lottie-animation": {
+            "content": "devops-audit"
+          }
+        }
       }
     },
     "PostsSectionSlice": {
       "default-slice": {
         "primary": {},
         "items": {}
+      }
+    },
+    "ImageSlice": {
+      "default-slice": {
+        "primary": {
+          "image": {
+            "content": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f"
+          }
+        }
+      }
+    },
+    "DescriptionSliceWithIcon": {
+      "default-slice": {
+        "items": {},
+        "primary": {
+          "maxWidth": {
+            "content": "816px"
+          }
+        }
+      }
+    },
+    "CaseListSlice": {
+      "default-slice": {
+        "items": {
+          "link": {
+            "content": "/clients/case-studies/veeqo/"
+          }
+        }
+      }
+    },
+    "BenefitSlice": {},
+    "NavLinkSlice": {
+      "default-slice": {
+        "primary": {
+          "animation": {
+            "content": "fade-down"
+          },
+          "background": {
+            "content": "white"
+          }
+        }
       }
     }
   },

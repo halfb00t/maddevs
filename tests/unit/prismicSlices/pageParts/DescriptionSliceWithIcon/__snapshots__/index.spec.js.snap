@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DescriptionSliceWithIcon slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="description-slice description-slice--white-theme"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container description-slice__container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="description-slice__container"
+    >
+      <div
+        class="description"
+        data-testid="description"
+      >
+        <div
+          class="description__icons"
+        >
+          <img
+            alt="Placeholder image"
+            class="description__main-icon"
+            data-src="https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+            height="32"
+            width="32"
+          />
+        </div>
+         
+        <div
+          class="description__text"
+        >
+          <h2
+            class="description__title"
+          >
+            
+          transition web-enabled platforms
+        
+          </h2>
+           
+          <p
+            class="description__description"
+          >
+            
+          deploy magnetic mindshare
+        
+          </p>
+        </div>
+      </div>
+      <div
+        class="description"
+        data-testid="description"
+      >
+        <div
+          class="description__icons"
+        >
+          <img
+            alt="Placeholder image"
+            class="description__main-icon"
+            data-src="https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+            height="32"
+            width="32"
+          />
+        </div>
+         
+        <div
+          class="description__text"
+        >
+          <h2
+            class="description__title"
+          >
+            
+          transition world-class initiatives
+        
+          </h2>
+           
+          <p
+            class="description__description"
+          >
+            
+          recontextualize enterprise deliverables
+        
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

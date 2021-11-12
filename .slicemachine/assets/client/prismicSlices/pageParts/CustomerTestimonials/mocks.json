@@ -8,5 +8,15 @@
       "animation": "none",
       "title": "Customer Testimonials"
     }
+  },
+  {
+    "variation": "testimonialsSecondVariation",
+    "name": "testimonialsSecondVariation",
+    "slice_type": "customer_testimonials",
+    "items": [],
+    "primary": {
+      "animation": "fade-up-right",
+      "title": "transition holistic eyeballs"
+    }
   }
 ]

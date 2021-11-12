@@ -35,6 +35,8 @@ exports[`TeamsForm component should render correctly 1`] = `
        
       <!---->
        
+      <!---->
+       
       <div
         class="modal-field-item field-item"
       >
@@ -252,7 +254,7 @@ exports[`TeamsForm component should render correctly 1`] = `
         />
       </label>
     </div>
-     
+      
     <button
       class="ui-button ui-button--disabled ui-button--transparent-bgc ui-button_submit-button-footer"
       disabled="disabled"

@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerTestimonials slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="testimonials"
+    id="testimonials"
+  >
+    <div
+      class="container"
+      data-testid="testimonials-container"
+    >
+      <h2
+        class="testimonials__title"
+      >
+        Testimonials
+      </h2>
+       
+      <div
+        class="testimonials__testimonials-list"
+      >
+        <div
+          class="testimonials__testimonials-item"
+        >
+          <blockquote
+            class="testimonials__testimonials-text paragraph-md"
+          >
+            
+          Mad Devs have extensive experience in various industries, which allows them to solve issues quickly and efficiently.
+        
+          </blockquote>
+           
+          <div
+            class="testimonials__customer-info"
+          >
+            <div
+              class="testimonials__profile"
+            >
+              <img
+                alt="Image"
+                class="testimonials__customer-image"
+                data-src="[object Object]"
+                height="42"
+                width="42"
+              />
+               
+              <span
+                class="testimonials__customer-name paragraph-sm"
+              >
+                
+              Wade Bartlett 
+                <span>
+                  Technical Consultant, Sir John Monash Centre
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="testimonials__testimonials-item"
+        >
+          <blockquote
+            class="testimonials__testimonials-text paragraph-md"
+          >
+            
+          They fully disclose what they’re doing and why they’re doing it.
+        
+          </blockquote>
+           
+          <div
+            class="testimonials__customer-info"
+          >
+            <div
+              class="testimonials__profile"
+            >
+              <img
+                alt="Image"
+                class="testimonials__customer-image"
+                data-src="[object Object]"
+                height="42"
+                width="42"
+              />
+               
+              <span
+                class="testimonials__customer-name paragraph-sm"
+              >
+                
+              Duc Nguyen 
+                <span>
+                  Former CEO, Topica Group
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="testimonials__testimonials-item"
+        >
+          <blockquote
+            class="testimonials__testimonials-text paragraph-md"
+          >
+            
+          They work as if their own money and success are on the line.
+        
+          </blockquote>
+           
+          <div
+            class="testimonials__customer-info"
+          >
+            <div
+              class="testimonials__profile"
+            >
+              <img
+                alt="Image"
+                class="testimonials__customer-image"
+                data-src="[object Object]"
+                height="42"
+                width="42"
+              />
+               
+              <span
+                class="testimonials__customer-name paragraph-sm"
+              >
+                
+              Ruslan Karabukaev 
+                <span>
+                  Co-Founder, Namba Taxi
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="testimonials__testimonials-item"
+        >
+          <blockquote
+            class="testimonials__testimonials-text paragraph-md"
+          >
+            
+          Our infrastructure is much more resilient and secure.
+        
+          </blockquote>
+           
+          <div
+            class="testimonials__customer-info"
+          >
+            <div
+              class="testimonials__profile"
+            >
+              <img
+                alt="Image"
+                class="testimonials__customer-image"
+                data-src="[object Object]"
+                height="42"
+                width="42"
+              />
+               
+              <span
+                class="testimonials__customer-name paragraph-sm"
+              >
+                
+              Daniel Vartanov 
+                <span>
+                  CTO, Veeqo.com
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="testimonials__testimonials-item"
+        >
+          <blockquote
+            class="testimonials__testimonials-text paragraph-md"
+          >
+            
+          I’m most impressed with their technical capacities.
+        
+          </blockquote>
+           
+          <div
+            class="testimonials__customer-info"
+          >
+            <div
+              class="testimonials__profile"
+            >
+              <img
+                alt="Image"
+                class="testimonials__customer-image"
+                data-src="[object Object]"
+                height="42"
+                width="42"
+              />
+               
+              <span
+                class="testimonials__customer-name paragraph-sm"
+              >
+                
+              Moktar Alqaderi 
+                <span>
+                  CEO, Progressay
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

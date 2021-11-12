@@ -3,6 +3,7 @@ import * as controller from '../LeadsController'
 import * as emailsService from '../../services/EmailsService'
 import * as leadsService from '../../services/LeadsService'
 import * as IPService from '../../services/IPService'
+import * as reCaptcha from '../../services/reCaptchaVerification'
 
 jest.mock('../../services/EmailsService', () => ({
   sendEmailToRequest: jest.fn(),
@@ -14,10 +15,15 @@ jest.mock('../../services/LeadsService', () => ({
   createLead: jest.fn(),
 }))
 
+jest.mock('../../services/reCaptchaVerification', () => ({
+  reCaptchaVerification: jest.fn(),
+}))
+
 jest.mock('../../services/IPService', () => ({
   getIPByRequest: jest.fn(),
   getLocationByIP: jest.fn(),
   isBlockedIP: jest.fn(),
+  isTestIP: jest.fn(),
 }))
 // mocks
 const sendEmail = jest.fn(() => Promise.resolve({ id: '1' }))
@@ -29,12 +35,15 @@ const getLocationByIP = jest.fn(() => Promise.resolve({
   city: 'Bishkek',
 }))
 
+const verification = jest.fn(() => Promise.resolve({ data: { success: true, message: 'test' } }))
+
 emailsService.sendEmailToRequest.mockImplementation(sendEmail)
 emailsService.verifyEmailDelivery.mockImplementation(getDelivery)
 emailsService.sendMailFromVariables.mockImplementation(sendEmail)
 leadsService.createLead.mockImplementation(createLead)
 IPService.getIPByRequest.mockImplementation(getIPByRequest)
 IPService.getLocationByIP.mockImplementation(getLocationByIP)
+reCaptcha.reCaptchaVerification.mockImplementation(verification)
 
 describe('leadsController', () => {
   let json
@@ -45,7 +54,7 @@ describe('leadsController', () => {
     json = jest.fn(data => data)
 
     req = {
-      body: {},
+      body: { variables: { token: 'test' } },
     }
 
     res = {
@@ -67,22 +76,11 @@ describe('leadsController', () => {
       })
   })
 
-  it('should correctly handle invalid variables in req.body', async () => {
-    req.body.templateId = 123
-    await controller.create(req, res)
-    expect(res.status)
-      .toHaveBeenCalledWith(500)
-    expect(json)
-      .toHaveBeenCalledWith({
-        message: 'variables key not found',
-        status: 500,
-      })
-  })
-
   it('should correctly call sendEmail and createLead methods', async () => {
     IPService.isBlockedIP.mockImplementation(jest.fn(() => false))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: false, testEmail: '' })))
     req.body.templateId = 123
-    req.body.variables = { phoneNumber: '' }
+    req.body.variables = { phoneNumber: '', token: 'test' }
     const data = await controller.create(req, res)
     expect(data)
       .toEqual({ data: 'data' })
@@ -97,11 +95,30 @@ describe('leadsController', () => {
   })
   it('should correctly return error if user blocked', async () => {
     IPService.isBlockedIP.mockImplementation(jest.fn(() => true))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: false, testEmail: '' })))
     const data = await controller.create(req, res)
     expect(data)
       .toEqual({
         message: 'templateId key not found or incorrect',
         status: 500,
       })
+  })
+  it('should correctly send email to testEmail only if ip is a test ip', async () => {
+    IPService.isBlockedIP.mockImplementation(jest.fn(() => false))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: true, testEmail: 'test@test.test' })))
+    req.body.templateId = 123
+    req.body.variables = { phoneNumber: '', token: 'test' }
+    const data = await controller.create(req, res)
+    expect(data)
+      .toEqual({ message: 'Request sent to test email' })
+  })
+  it('should correctly return error if ip is a test ip and no test email present', async () => {
+    IPService.isBlockedIP.mockImplementation(jest.fn(() => false))
+    IPService.isTestIP.mockImplementation(jest.fn(() => ({ testIP: true, testEmail: '' })))
+    req.body.templateId = 123
+    req.body.variables = { phoneNumber: '', token: 'test' }
+    const data = await controller.create(req, res)
+    expect(data)
+      .toEqual({ error: 'Test email is absent' })
   })
 })

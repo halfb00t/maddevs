@@ -34,6 +34,109 @@ exports[`ContactMeForm component should render correctly 1`] = `
       </div>
        
       <div
+        class="radio-button-list"
+        value=""
+      >
+        <p
+          class="radio-button-list__field-name field-name required"
+          data-testid="test-radio-label"
+        >
+          
+    I'm interested in ...
+  
+        </p>
+         
+        <div
+          class="radio-button-list__container"
+        >
+          <div
+            data-testid="test-radio-buttons"
+          >
+            <label
+              class="radio-button-list__form-checkbox-label form-checkbox-label"
+              data-testid="test-radio-label-0"
+            >
+              <div
+                class="radio-button-list__label-text"
+              >
+                Software development with 
+                <div>
+                  Mad Devs
+                </div>
+              </div>
+               
+              <input
+                class="form-checkbox-input"
+                name="radioBtn"
+                type="radio"
+                value="Software development with <div>Mad Devs</div>"
+              />
+               
+              <div
+                class="checkmark"
+              />
+            </label>
+          </div>
+          <div
+            data-testid="test-radio-buttons"
+          >
+            <label
+              class="radio-button-list__form-checkbox-label form-checkbox-label"
+              data-testid="test-radio-label-1"
+            >
+              <div
+                class="radio-button-list__label-text"
+              >
+                Partnership with 
+                <div>
+                  Mad Devs
+                </div>
+              </div>
+               
+              <input
+                class="form-checkbox-input"
+                name="radioBtn"
+                type="radio"
+                value="Partnership with <div>Mad Devs</div>"
+              />
+               
+              <div
+                class="checkmark"
+              />
+            </label>
+          </div>
+          <div
+            data-testid="test-radio-buttons"
+          >
+            <label
+              class="radio-button-list__form-checkbox-label form-checkbox-label"
+              data-testid="test-radio-label-2"
+            >
+              <div
+                class="radio-button-list__label-text"
+              >
+                Employment at 
+                <div>
+                  Mad Devs
+                </div>
+              </div>
+               
+              <input
+                class="form-checkbox-input"
+                name="radioBtn"
+                type="radio"
+                value="Employment at <div>Mad Devs</div>"
+              />
+               
+              <div
+                class="checkmark"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+       
+      <div
         class="modal-field-item field-item"
       >
         <p
@@ -170,6 +273,12 @@ exports[`ContactMeForm component should render correctly 1`] = `
           class="checkmark"
         />
       </label>
+    </div>
+     
+    <div
+      class="recaptcha"
+    >
+      <recaptcha />
     </div>
      
     <button

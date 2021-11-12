@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMobileSocials component should render correctly 1`] = `
+<ul class="header-mobile-socials">
+  <li class="header-mobile-socials__item"><a href="https://github.com/maddevsio" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="Github" width="42" height="42"></a></li>
+  <li class="header-mobile-socials__item"><a href="https://www.facebook.com/maddevsllc" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="Facebook" width="42" height="42"></a></li>
+  <li class="header-mobile-socials__item"><a href="https://twitter.com/MadDevsIO" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="Twitter" width="42" height="42"></a></li>
+  <li class="header-mobile-socials__item"><a href="https://www.linkedin.com/company/mad-devs" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="Linkedin" width="42" height="42"></a></li>
+  <li class="header-mobile-socials__item"><a href="https://www.instagram.com/maddevsio" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="Instagram" width="42" height="42"></a></li>
+  <li class="header-mobile-socials__item"><a href="https://medium.com/maddevs-io" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="Medium" width="42" height="42"></a></li>
+  <li class="header-mobile-socials__item"><a href="https://www.behance.net/maddevs" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="Behance" width="42" height="42"></a></li>
+  <li class="header-mobile-socials__item"><a href="https://dev.to/maddevs" target="_blank" class="header-mobile-socials__item-link"><img data-src="[object Object]" alt="DEV" width="42" height="42"></a></li>
+</ul>
+`;

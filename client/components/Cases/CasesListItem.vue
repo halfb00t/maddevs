@@ -23,24 +23,15 @@
         :lazy-background="$getMediaFromS3(posterLink)"
       />
       <!-- Video BG -->
-      <!-- Image placeholder fallback for Video -->
-      <img
-        v-if="isIphone && loaded"
-        v-lazy-load
-        data-testid="test-fallback-image"
-        class="cases-list_item-video_fallback"
-        :data-src="$getMediaFromS3(posterLink)"
-        alt="case video fallback"
-      >
-      <!-- End Image placeholder fallback for Video -->
       <video
-        v-if="!isIphone && loaded"
         ref="video"
         v-lazy-load
-        data-testid="test-video"
-        muted="true"
-        loop="true"
+        :controls="false"
+        muted
+        loop
         playsinline
+        width="100%"
+        height="100%"
         class="cases-list_item-video"
       >
         <source
@@ -62,9 +53,7 @@
           class="cases-list_item-info-logo"
         >
         <span>{{ subtitle }}</span>
-        <Component
-          :is="titleTag"
-        >
+        <Component :is="titleTag">
           {{ title }}
         </Component>
         <p>{{ desc }}</p>
@@ -139,20 +128,7 @@ export default {
   data() {
     return {
       isMobile,
-      isIphone: false,
-      loaded: false,
     }
-  },
-
-  mounted() {
-    if (navigator.userAgent.match(/(iPhone)/i)) {
-      this.isIphone = true
-    } else {
-      this.isIphone = false
-    }
-    this.$nextTick(() => {
-      this.loaded = true
-    })
   },
 
   methods: {
@@ -161,9 +137,7 @@ export default {
     },
 
     pause() {
-      if (this.$refs.video) {
-        this.$refs.video.pause()
-      }
+      if (this.$refs.video) this.$refs.video.pause()
     },
   },
 }
@@ -179,7 +153,6 @@ export default {
   border-radius: 2px;
   overflow: hidden;
   text-decoration: none;
-
   &-link {
     width: 100%;
     height: 100%;
@@ -192,48 +165,39 @@ export default {
     text-decoration: none;
     border: 0;
     text-align: left;
-
+    background-color: transparent;
+    outline: none;
     @media screen and (max-width: 375px) {
       padding: 24px;
     }
   }
-
   &--full {
     grid-column: auto / span 3;
-
     @media screen and (max-width: 1140px) {
       grid-column: auto / span 4;
     }
   }
-
   &--big {
     grid-column: auto / span 2;
-
     @media screen and (max-width: 992px) {
       grid-column: auto / span 4;
     }
   }
-
   &--middle {
     grid-column: auto / span 1;
   }
-
   &--small {
     grid-column: auto / span 1;
-
     @media screen and (max-width: 1140px) {
       grid-column: auto / span 2;
     }
-
     @media screen and (max-width: 992px) {
       grid-column: auto / span 4;
     }
   }
-
   @media screen and (max-width: 375px) {
     grid-column: auto / span 4 !important;
   }
-
   &-video {
     position: absolute;
     top: 0;
@@ -244,7 +208,6 @@ export default {
     object-fit: cover;
     background-position: center;
     background-size: cover;
-
     &_poster {
       width: calc(100% + 2px);
       height: calc(100% + 2px);
@@ -256,18 +219,7 @@ export default {
       z-index: -1;
       margin: -1px;
     }
-
-    &_fallback {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
   }
-
   &::before {
     content: '';
     width: 100%;
@@ -280,7 +232,6 @@ export default {
     user-select: none;
     pointer-events: none;
   }
-
   &-info {
     width: 100%;
     height: 100%;
@@ -291,22 +242,18 @@ export default {
     position: relative;
     z-index: 1;
     color: #F4F4F4;
-
     * {
       @include font('Inter', 16px, 400);
       color: inherit;
     }
-
     &-logo {
       max-width: 105px;
       height: auto;
       margin-bottom: auto;
     }
-
     &-peklo-logo {
       max-width: 80px;
     }
-
     > span {
       text-transform: uppercase;
       letter-spacing: 0.28em;
@@ -315,19 +262,16 @@ export default {
       line-height: 140%;
       margin-bottom: 16px;
     }
-
     h2, h3 {
       max-width: 350px;
       font-size: 40px;
       letter-spacing: -0.04em;
       font-weight: bold;
       line-height: 100%;
-
       @media screen and (max-width: 375px) {
         font-size: 32px;
       }
     }
-
     p {
       max-width: 500px;
       height: 0;
@@ -338,12 +282,10 @@ export default {
       overflow: hidden;
       transition: all 0.4s ease;
       transform: translateY(50px);
-
       @media screen and (max-width: 768px) {
         display: none;
       }
     }
-
     > a {
       height: 0;
       font-size: 16px;
@@ -356,11 +298,9 @@ export default {
       overflow: hidden;
       transition: all 0.4s ease;
       transform: translateY(100px);
-
       &:hover {
         opacity: 0.8;
       }
-
       @media screen and (max-width: 768px) {
         height: auto;
         transform: none;
@@ -368,13 +308,11 @@ export default {
         padding: 8px;
         margin-top: 20px;
       }
-
       @media screen and (max-width: 375px) {
         font-size: 14px;
       }
     }
   }
-
   &:hover {
     .cases-list_item-info {
       p {
@@ -382,7 +320,6 @@ export default {
         margin: 16px 0;
         transform: none;
       }
-
       > a {
         height: auto;
         padding: 8px;
@@ -391,13 +328,11 @@ export default {
     }
   }
 }
-
 .is-mobile {
   .cases-list_item-info {
     p {
       display: none;
     }
-
     > a {
       height: auto;
       transform: none;

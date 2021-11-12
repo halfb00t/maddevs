@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlexibleParagraph with data should render correctly with data 1`] = `
+<div>
+  <section
+    class="paragraph-slice paragraph-slice--center"
+  >
+    <h1
+      class="paragraph-slice-text paragraph-slice-text----16-px paragraph-slice-text--default"
+      style="--font-weight: 700; --text-align: left; --max-width: 500px;"
+    >
+      test
+    </h1>
+  </section>
+</div>
+`;

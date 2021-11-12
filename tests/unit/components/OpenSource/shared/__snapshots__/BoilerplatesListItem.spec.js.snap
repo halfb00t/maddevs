@@ -42,3 +42,40 @@ exports[`BoilerplatesListItem component should render correctly 1`] = `
   </li>
 </div>
 `;
+
+exports[`BoilerplatesListItem component should render correctly without data 1`] = `
+<div>
+  <li
+    class="boilerplates-list__item"
+  >
+    <a
+      class="boilerplates-list__item-link"
+      href=""
+      target="_blank"
+    >
+      <div
+        class="boilerplates-list__item-info"
+      >
+        <h3 />
+         
+        <p />
+         
+        <button
+          class="ui-arrow-button boilerplates-list__item-button ui-arrow-button--black"
+          type="button"
+        >
+          <span>
+            ↓
+          </span>
+        </button>
+      </div>
+       
+      <img
+        alt="Image"
+        class="boilerplates-list__item-logo"
+        data-src="img.jpg"
+      />
+    </a>
+  </li>
+</div>
+`;

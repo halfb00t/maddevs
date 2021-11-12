@@ -10,5 +10,6 @@ export default doc => {
   if (doc.type === 'post') return `/insights/blog/${doc.uid}/`
   if (doc.type === 'author') return `/insights/blog/author/${doc.uid}/`
   if (doc.type === 'tag') return `/insights/blog/tag/${doc.uid}/`
+  if (doc.type === 'customer_university') return `/customer-university/${doc.uid}/`
   return notFoundPage
 }

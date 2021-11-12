@@ -2,6 +2,7 @@
   <div
     id="header"
     class="header-wrapper"
+    data-testid="test-header-wrapper"
   >
     <header
       ref="header"
@@ -65,6 +66,7 @@
             </button>
             <button
               type="button"
+              data-testid="test-burger"
               class="header__burger-btn"
               @click="toggleMobileMenu"
             >
@@ -123,9 +125,7 @@
       />
     </transition>
 
-    <!-- this id should be unique, because it used for google analytics -->
     <ModalContactMe
-      id="contact-me-modal"
       ref="modalContactMe"
       :location="'\'Contact me\' button, header component'"
     />

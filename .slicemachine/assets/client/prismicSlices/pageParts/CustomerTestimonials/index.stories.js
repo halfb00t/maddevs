@@ -24,3 +24,22 @@ export const _DefaultSlice = () => ({
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
 _DefaultSlice.storyName = 'Default slice'
+
+export const _TestimonialsSecondVariation = () => ({
+  components: {
+    MyComponent,
+    SliceZone
+  },
+  methods: {
+    resolve() {
+      return MyComponent
+    }
+  },
+  data() {
+    return {
+      mock: {"variation":"testimonialsSecondVariation","name":"testimonialsSecondVariation","slice_type":"customer_testimonials","items":[],"primary":{"animation":"fade-up-right","title":"transition holistic eyeballs"},"id":"_TestimonialsSecondVariation"}
+    }
+  },
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_TestimonialsSecondVariation.storyName = 'testimonialsSecondVariation'

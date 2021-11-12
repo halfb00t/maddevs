@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridLottieLink - CardGridWithIcon variation should render correctly with data 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="grid-lottie__grid"
+    >
+      <a
+        class="card-item card-item--text-center card-item-bottom"
+        data-testid="grid-lottie-animation-item"
+        href="https://maddevs.io/"
+        style="background-color: rgb(255, 255, 255);"
+        target="_self"
+      >
+        <div
+          class="card-item__lottie card-item__lottie-bottom"
+        >
+          <div
+            class="lottie-container"
+            id="about-consulting"
+            style="--height: 100px; --width: 100%;"
+          />
+        </div>
+         
+        <div
+          class="card-item__content card-item__content-bottom"
+        >
+          <p>
+            First item content
+          </p>
+        </div>
+         
+        <button
+          class="ui-arrow-button card-item__button ui-arrow-button--white"
+          type="button"
+        >
+          <span>
+            ↓
+          </span>
+        </button>
+      </a>
+      <a
+        class="card-item card-item--text-center card-item-bottom"
+        data-testid="grid-lottie-animation-item"
+        href="https://maddevs.io/"
+        style="background-color: rgb(255, 255, 255);"
+        target="_self"
+      >
+        <div
+          class="card-item__lottie card-item__lottie-bottom"
+        >
+          <div
+            class="lottie-container"
+            id="about-consulting"
+            style="--height: 100px; --width: 100%;"
+          />
+        </div>
+         
+        <div
+          class="card-item__content card-item__content-bottom"
+        >
+          <p>
+            second item content
+          </p>
+        </div>
+         
+        <button
+          class="ui-arrow-button card-item__button ui-arrow-button--white"
+          type="button"
+        >
+          <span>
+            ↓
+          </span>
+        </button>
+      </a>
+      <a
+        class="card-item card-item--text-center card-item-bottom"
+        data-testid="grid-lottie-animation-item"
+        href="https://maddevs.io/"
+        style="background-color: rgb(0, 0, 0);"
+        target="_self"
+      >
+        <div
+          class="card-item__lottie card-item__lottie-bottom"
+        >
+          <div
+            class="lottie-container"
+            id="about-consulting"
+            style="--height: 100px; --width: 100%;"
+          />
+        </div>
+         
+        <div
+          class="card-item__content card-item__content-bottom"
+        >
+          <p>
+            third item content
+          </p>
+        </div>
+         
+        <button
+          class="ui-arrow-button card-item__button ui-arrow-button--white"
+          type="button"
+        >
+          <span>
+            ↓
+          </span>
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`GridLottieLink - CardGridWithIcon variation should render correctly without data 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="grid-lottie__grid"
+    />
+  </div>
+</div>
+`;

@@ -1,10 +1,14 @@
 <template>
   <!-- id is needed for google analytics, don't remove it -->
   <Modal
-    :id="id"
+    id="contact-me-modal"
     ref="modalContactMe"
+    modal-background="white"
   >
-    <ContactMeForm :form-location="location" />
+    <ContactMeForm
+      id="contact-me-modal"
+      :form-location="location"
+    />
   </Modal>
 </template>
 
@@ -20,11 +24,6 @@ export default {
   },
 
   props: {
-    id: {
-      type: String,
-      default: '',
-    },
-
     location: {
       type: String,
       default: '',

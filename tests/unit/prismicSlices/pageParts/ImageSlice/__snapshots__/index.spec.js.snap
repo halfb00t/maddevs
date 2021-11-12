@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageSlice component should render correctly 1`] = `
+<div>
+  <section
+    class="image-slice"
+  >
+    <div
+      class="container"
+    >
+      <img
+        alt="image"
+        class="image-slice__image"
+        data-testid="test-picture-img"
+        src="../../../../client/assets/img/Home/jpg/experts/Alice.jpg"
+      />
+    </div>
+  </section>
+</div>
+`;

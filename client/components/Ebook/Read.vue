@@ -38,6 +38,7 @@
     <Modal
       id="read-success-modal"
       ref="modalEbook"
+      modal-background="black"
     >
       <SuccessMessage
         title="Thank you!"

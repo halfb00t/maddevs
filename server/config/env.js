@@ -33,6 +33,11 @@ const S3_SECRET_ACCESS_KEY = process.env.NODE_S3_SECRET_ACCESS_KEY
 // IP
 const IP_INFO_TOKEN = process.env.NODE_IP_INFO_TOKEN
 const IP_BAN_LIST = process.env.NODE_IP_BAN_LIST
+const IP_TEST_LIST = process.env.NODE_IP_TEST_LIST
+const TEST_EMAIL = process.env.NODE_TEST_EMAIL
+
+// Prismic
+const PRISMIC_API = process.env.NODE_PRISMIC_API
 
 // reCaptcha key
 const RECAPTCHA_KEY = process.env.RECAPTCHA_SECRET_KEY
@@ -56,5 +61,8 @@ module.exports = {
   S3_SECRET_ACCESS_KEY,
   IP_INFO_TOKEN,
   IP_BAN_LIST,
+  IP_TEST_LIST,
+  TEST_EMAIL,
+  PRISMIC_API,
   RECAPTCHA_KEY,
 }

@@ -29,7 +29,7 @@
           </UIButton>
           <UIButton
             v-else
-            @click="show"
+            @click="showModal"
           >
             {{ button.text }}
           </UIButton>
@@ -51,15 +51,16 @@
         </div>
       </div>
     </div>
-    <ModalContactMe
-      id="contact-me-cta-slice"
-      ref="modalContactMe"
+    <CTAModal
+      ref="CTAModalRef"
+      :variant="modal"
       :location="`\'${button.text}\' button, cta banner slice`"
     />
   </section>
 </template>
 
 <script>
+import CTAModal from './components/CTAModal'
 import UIButton from '@/components/shared/UIButton'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
@@ -67,7 +68,7 @@ export default {
   name: 'CtaBannerSlice',
   components: {
     UIButton,
-    ModalContactMe: () => import('@/components/core/modals/ModalContactMe'),
+    CTAModal,
   },
 
   mixins: [animateOnScrollMixin({
@@ -90,6 +91,7 @@ export default {
 
   data() {
     return {
+      modal: this.slice?.primary?.modal,
       animation: this.slice?.primary?.animation,
       title: this.slice?.primary?.title,
       image: this.slice?.primary?.image,
@@ -104,9 +106,9 @@ export default {
   },
 
   methods: {
-    show() {
-      if (!this.$refs?.modalContactMe?.show) return
-      this.$refs.modalContactMe.show()
+    showModal() {
+      if (!this.$refs?.CTAModalRef?.show) return
+      this.$refs.CTAModalRef.show()
     },
   },
 }

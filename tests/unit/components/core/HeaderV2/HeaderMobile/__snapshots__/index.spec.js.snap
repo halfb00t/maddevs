@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMobile component should render correctly with props and stubs 1`] = `
+<div class="header-mobile">
+  <div class="header-mobile__scroll safary-only container">
+    <div class="header-mobile__content-wrapper">
+      <div class="header-mobile__content">
+        <nav class="header-mobile__navigation">
+          <headermobilenavigation-stub navigation="[object Object],[object Object]"></headermobilenavigation-stub>
+        </nav>
+        <div class="header-mobile__contacts">
+          <headermobilecontacts-stub></headermobilecontacts-stub>
+        </div>
+        <uimodaltriggerbutton-stub label="Order a project now" color="red" class="header-mobile__contact-btn"></uimodaltriggerbutton-stub>
+      </div>
+      <div class="header-mobile__socials">
+        <headermobilesocials-stub></headermobilesocials-stub>
+      </div>
+    </div>
+  </div>
+</div>
+`;

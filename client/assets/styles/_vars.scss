@@ -58,7 +58,7 @@ $text-color--green: #0A8F37;
 $text-color--green-light: #00C05B;
 $text-color--green-pale: #14c94d;
 $text-color--red-opacity: rgba(236, 28, 36, 0.5);
-$text-color--grey-form-placeholder: #6E6E73;
+$text-color--grey-form-placeholder: #6e6e73;
 $text-color--grey-opacity-40-percent: #a0a0a1;
 $text-color--tech-label-black: #232323;
 $text-color--grey-img-description: #a4a8b4;
@@ -80,7 +80,7 @@ $border-color--white: #fff;
 $border-color--grey-light: #e8e8e8;
 $border-color--red: #ec1c24;
 $border-color--blue: #5159F6;
-$border-color--green: #0A8F37;
+$border-color--green: #0a8f37;
 $border-color--red-opacity: rgba(236, 28, 36, 0.5);
 $border-color--grey-dark-transparent: rgba(150, 150, 156, 0.2);
 $border-color--grey-light: #f2f2f2;
@@ -109,9 +109,11 @@ $white-02: rgba(255, 255, 255, 0.2);
 
 // ---------- Input ------------ //
 $input-bgcolor--grey-dark: #121212;
+$input-bgcolor--white: #ffffff;
 $input-bgcolor--grey-light: rgba(150, 150, 156, 0.2);
 $input-invalid--bg: rgba(236, 28, 36, 0.2);
 $input-placeholder-text--grey-dark: rgba(150, 150, 156, 0.5);
+$input-color--grey:#404143;
 $input-checkmark-bg: #1e1e1f;
 
 // ---------- Project page hover colors ------------ //
@@ -144,6 +146,7 @@ $header-grey-border-color: rgba(164, 168, 180, 0.4);
 // ---------- Modal ------------ //
 $modal-overlay-bg-color: #0d0d0dc7;
 $modal-bg-color: #121212;
+$modal-bg-color-white: #ffffff;
 $modal-entry-field-bg: #403838;
 
 // ---------- Other ------------ //

@@ -2,6 +2,7 @@
   <ModalContentLocker
     id="content-locker"
     ref="modalContentLocker"
+    data-testid="content-locker"
   />
 </template>
 

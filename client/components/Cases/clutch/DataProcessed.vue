@@ -27,11 +27,12 @@
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
-        <Lottie
+        <LottieMad
           id="data-processed"
-          :options="options"
+          height="580px"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/data-processed.json`)"
+          :autoplay="true"
         />
       </div>
     </div>
@@ -79,12 +80,10 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import ListNumberedBox from '@/components/Cases/shared/ListNumberedBox'
 import ListNumberedItemBox from '@/components/Cases/shared/ListNumberedItemBox'
-import animationData from '@/assets/lottie/clutch/data-processed.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
 import { dataRep, idDataRep } from '@/data/caseClutch'
@@ -93,17 +92,12 @@ export default {
   name: 'DataProcessed',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
     ListNumberedBox,
     ListNumberedItemBox,
   },
 
   mixins: [
-    playLottieMixin('data-processed', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
     IntersectionObserverMixin(
       idDataRep,
       setBackground,

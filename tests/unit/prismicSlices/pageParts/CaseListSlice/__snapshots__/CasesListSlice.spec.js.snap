@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseListSlice component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="test-case-container"
+    >
+      <div
+        class="case-list-slice"
+      >
+        <caseslistitem-stub
+          data-testid="test-case-card"
+          desc="benchmark granular relationships"
+          link="/clients/case-studies/veeqo/"
+          logo="[object Object]"
+          posterlink="/images/Cases/veeqo/svg/veeqo-banner-bg.svg"
+          subtitle="syndicate B2C action-items"
+          title="grow e-business bandwidth"
+          titletag="h3"
+          videofilename="/videos/veeqo-banner.mp4#t=1"
+          width="big"
+        />
+        <caseslistitem-stub
+          data-testid="test-case-card"
+          desc="benchmark granular relationships"
+          link="/clients/case-studies/veeqo/"
+          logo="[object Object]"
+          posterlink="/images/Cases/veeqo/svg/veeqo-banner-bg.svg"
+          subtitle="syndicate B2C action-items"
+          title="grow e-business bandwidth"
+          titletag="h3"
+          videofilename="/videos/veeqo-banner.mp4#t=1"
+          width="big"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

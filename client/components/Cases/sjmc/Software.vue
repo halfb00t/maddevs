@@ -17,11 +17,12 @@
     </section>
     <section class="container_full background-color-silver">
       <div class="container_regular">
-        <Lottie
+        <LottieMad
           id="multimedia-management"
           class="case_lottie"
-          :options="options"
-          @animCreated="handleAnimation"
+          height="635px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/sjmc/lottie/multimedia-management.json`)"
+          :autoplay="true"
         />
       </div>
     </section>
@@ -64,13 +65,11 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuote from '@/components/Cases/shared/TextQuote'
 import List from '@/components/Cases/shared/List'
 import ListItemDot from '@/components/Cases/shared/ListItemDot'
-import playLottieMixin from '@/mixins/playLottieMixin'
-import animationData from '@/assets/lottie/sjmc/multimedia-management.json'
 
 export default {
   name: 'Software',
@@ -79,14 +78,8 @@ export default {
     TextQuote,
     List,
     ListItemDot,
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [playLottieMixin('multimedia-management', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
 }
 </script>
 

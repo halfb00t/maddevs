@@ -134,6 +134,7 @@ module.exports = {
           { code: 'ru', iso: 'ru-RU', file: 'ru.json' },
           { code: 'en', iso: 'en-EN', file: 'en.json' },
         ],
+        detectBrowserLanguage: false,
       },
     ],
     ['@nuxtjs/prismic', {
@@ -142,11 +143,11 @@ module.exports = {
     ['nuxt-sm'],
   ],
   recaptcha: {
-    hideBadge: false,
+    hideBadge: true,
+    language: 'english',
     siteKey: process.env.RECAPTCHA_SITE_KEY,
     version: 2,
     size: 'normal',
-    theme: 'blackglass',
   },
   sitemap: {
     hostname: 'https://maddevs.io',

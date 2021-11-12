@@ -33,4 +33,11 @@ describe('BoilerplatesListItem component', () => {
 
     expect(container).toMatchSnapshot()
   })
+  it('should render correctly without data', () => {
+    const { container } = render(BoilerplatesListItem, {
+      mocks,
+      directives,
+    })
+    expect(container).toMatchSnapshot()
+  })
 })

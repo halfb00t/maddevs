@@ -8,7 +8,6 @@ describe('BoilerplatesList component', () => {
     const { container } = render(BoilerplatesList, {
       stubs,
     })
-
     expect(container).toMatchSnapshot()
   })
 })

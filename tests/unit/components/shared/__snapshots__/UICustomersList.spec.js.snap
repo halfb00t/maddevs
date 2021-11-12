@@ -1,5 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UICustomersList backgroundColor should be transparent 1`] = `
+<div>
+  <div
+    class="customers__customers-list"
+  >
+    <div
+      class="icon-wrapper"
+      data-testid="icon-wrapper"
+      style="background-color: transparent;"
+    >
+      <img
+        alt="topica"
+        class="icon-wrapper__icon"
+        data-src="[object Object]"
+        data-testid="customer-icon"
+        height="64"
+        width="143"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UICustomersList should correctly render without data 1`] = `
+<div>
+  <div
+    class="customers__customers-list"
+  />
+</div>
+`;
+
 exports[`UICustomersList should render correctly 1`] = `
 <div>
   <div

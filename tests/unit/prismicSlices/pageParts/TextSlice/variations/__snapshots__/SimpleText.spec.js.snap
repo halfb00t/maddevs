@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleText with data should render correctly with data 1`] = `
+<div>
+  <p
+    class="text-slice__content"
+  >
+    
+  test
+
+  </p>
+</div>
+`;

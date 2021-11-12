@@ -32,11 +32,12 @@
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
-        <Lottie
+        <LottieMad
           id="devOps-clutch"
-          :options="options"
+          height="380px"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          :lottie-link="$getMediaFromS3(`/images/Cases/clutch/lottie/devOps.json`)"
+          :autoplay="true"
         />
       </div>
       <h3 class="case_title_h3 m-12_bottom">
@@ -98,29 +99,19 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import ListNumbered from '@/components/Cases/shared/ListNumbered'
 import ListNumberedItem from '@/components/Cases/shared/ListNumberedItem'
-import animationData from '@/assets/lottie/clutch/devOps.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 
 export default {
   name: 'DevOps',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
     ListNumbered,
     ListNumberedItem,
   },
-
-  mixins: [
-    playLottieMixin('devOps-clutch', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
-  ],
 }
 </script>
 

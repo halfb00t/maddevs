@@ -14,7 +14,7 @@
         :full-width="fullWidth"
         is-link
         :to="link.url"
-        target="_blank"
+        target="_self"
         data-testid="button-ui"
         :class="[
           'button-slice__button',
@@ -30,7 +30,7 @@
         :color="color"
         is-link
         :to="link.url"
-        target="_blank"
+        target="_self"
         data-testid="button-outline"
         :class="[
           'button-slice__button',
@@ -46,7 +46,7 @@
         :color="color"
         is-link
         :to="link.url"
-        target="_blank"
+        target="_self"
         data-testid="button-link"
         :class="[
           'button-slice__button',
@@ -124,6 +124,7 @@ export default {
 <style lang="scss" scoped>
 .button-slice {
   display: block;
+  margin-top: -1px;
 
   &__content {
     &--align {
