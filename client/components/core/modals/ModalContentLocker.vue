@@ -87,10 +87,9 @@ export default {
       this.title = this.titles[randomIndex]
     },
 
-    handleSendedForm(payload) {
+    handleSendedForm() {
       this.successMessage = `
-        The letter with the PDF file was successfully sent to mail ${payload.email}.
-        <br><br> Please check your email.
+        Please download the PDF file from the opened tab.
       `
       this.formSended = true
     },

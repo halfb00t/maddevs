@@ -22,11 +22,11 @@
         :class="{ 'read-form__button--active': isValid, 'read-form__button--always-fullsized': fullsizeButton }"
         @click="submit"
       >
-        Send me the ebook
+        Download the ebook
       </button>
     </div>
     <p class="read-form__caption">
-      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for downloading the ebook and some more useful resources in the future.
+      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – just some more useful resources in the future.
     </p>
   </div>
 </template>
@@ -34,7 +34,7 @@
 <script>
 import { email, maxLength, required } from 'vuelidate/lib/validators'
 import BaseInput from '@/components/core/forms/BaseInput'
-import { sendEmail } from '@/api/email'
+import { sendEbookInfoToSlack } from '@/api/ebookSlackWebhook'
 import { getLinkWithLifeTime } from '@/api/s3'
 
 export default {
@@ -84,43 +84,46 @@ export default {
         file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
         expiresIn: 86400, // sec -> 24h
       }
-      const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
-      const requestSender = {
-        body: {
-          email: {
-            templateId: 348595, // Required
-            variables: {
-              subject: 'Your Pricing Strategies Ebook by Mad Devs',
-              emailTo: this.email,
-              pdfUrl,
-            },
+      const { data: pdfUrl = 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/custom-software-development-pricing-strategies-ebook.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA2UJ5KA5COB5GSCF4%2F20211112%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20211112T142101Z&X-Amz-Expires=86400&X-Amz-Signature=b5bd236dc8f831a0ad55e15680677bdb3f689add630a547b4f5a2bd596c78813&X-Amz-SignedHeaders=host&x-id=GetObject' } = await getLinkWithLifeTime(this.$axios, params)
+      await sendEbookInfoToSlack(this.$axios, { email: this.email, name: this.name })
+      window.open(pdfUrl, '_blank').focus()
 
-            attachment: null,
-          },
-        },
-
-        base64: null,
-      }
-      const requestMarketing = {
-        body: {
-          email: {
-            templateId: 624246, // Required
-            variables: {
-              subject: 'Request a PDF file from the Ebook page',
-              senderName: this.name,
-              emailTo: process.env.emailMarketing,
-              fromSender: this.email,
-              page: window.location.href,
-            },
-
-            attachment: null,
-          },
-        },
-
-        base64: '',
-      }
-      sendEmail(this.$axios, requestSender) // Send email to sender
-      sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
+      // const requestSender = {
+      //   body: {
+      //     email: {
+      //       templateId: 348595, // Required
+      //       variables: {
+      //         subject: 'Your Pricing Strategies Ebook by Mad Devs',
+      //         emailTo: this.email,
+      //         pdfUrl,
+      //       },
+      //
+      //       attachment: null,
+      //     },
+      //   },
+      //
+      //   base64: null,
+      // }
+      // const requestMarketing = {
+      //   body: {
+      //     email: {
+      //       templateId: 624246, // Required
+      //       variables: {
+      //         subject: 'Request a PDF file from the Ebook page',
+      //         senderName: this.name,
+      //         emailTo: process.env.emailMarketing,
+      //         fromSender: this.email,
+      //         page: window.location.href,
+      //       },
+      //
+      //       attachment: null,
+      //     },
+      //   },
+      //
+      //   base64: '',
+      // }
+      // sendEmail(this.$axios, requestSender) // Send email to sender
+      // sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.resetForm()
     },
