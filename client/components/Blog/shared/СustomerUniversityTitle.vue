@@ -41,10 +41,13 @@
   </h2>
 </template>
 <script>
-import copyToClipboard from '@/helpers/copyToClipboard'
+import { copyAnchorLinkMixin } from '@/mixins/copyAnchorLinkMixin'
 
 export default {
   name: 'CustomerUniversityTitle',
+
+  mixins: [copyAnchorLinkMixin],
+
   props: {
     title: {
       type: String,
@@ -59,22 +62,6 @@ export default {
     anchorLink: {
       type: String,
       default: '',
-    },
-  },
-
-  methods: {
-    copyAnchorLink(event) {
-      const copyText = event.target.getAttribute('data-id')
-      if (!copyText) return null
-      const tooltip = event.target.nextElementSibling
-      if (tooltip) {
-        tooltip.innerText = 'Copied!'
-        setTimeout(() => {
-          tooltip.innerText = 'Copy link'
-        }, 3000)
-      }
-      copyToClipboard(this.anchorLink)
-      return this.anchorLink
     },
   },
 }
