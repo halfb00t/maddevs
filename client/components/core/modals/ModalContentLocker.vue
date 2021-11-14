@@ -162,9 +162,13 @@ export default {
 .modal-content-locker {
   /deep/ .modal {
     &_container,
-    &_content,
     &_head {
       padding: 0;
+    }
+
+    &_content {
+      padding: 0;
+      max-height: 80vh;
     }
 
     &_head {
