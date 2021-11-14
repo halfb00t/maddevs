@@ -1,11 +1,11 @@
 <template>
   <section>
     <div class="container_regular">
-      <h3
+      <h2
         class="case_title_h2 m-24_bottom media-m-12_bottom"
       >
         Building a fault-tolerant architecture
-      </h3>
+      </h2>
       <TextParagraph
         class="m-24_bottom"
       >

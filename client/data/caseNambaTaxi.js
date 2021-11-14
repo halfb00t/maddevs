@@ -152,42 +152,7 @@ export const applicationStatistics = [
   },
 ]
 
-export const techStackClutch = [
-  {
-    name: 'html',
-    alt: 'HTML',
-    imgAlt: 'HTML',
-  },
-  {
-    name: 'css',
-    alt: 'CSS',
-    imgAlt: 'CSS',
-  },
-  {
-    name: 'webpack',
-    alt: 'Webpack',
-    imgAlt: 'Webpack',
-  },
-  {
-    name: 'bootstrap',
-    alt: 'Bootstrap',
-    imgAlt: 'Bootstrap',
-  },
-  {
-    name: 'jquery',
-    alt: 'jQuery',
-    imgAlt: 'jQuery',
-  },
-  {
-    name: 'js',
-    alt: 'JavaScript',
-    imgAlt: 'JavaScript',
-  },
-  {
-    name: 'go',
-    alt: 'Go',
-    imgAlt: 'Go',
-  },
+export const techStackNambaTaxi = [
   {
     name: 'python',
     alt: 'Python',
@@ -199,48 +164,63 @@ export const techStackClutch = [
     imgAlt: 'Django',
   },
   {
-    name: 'grpc',
-    alt: 'gRPC',
-    imgAlt: 'gRPC',
+    name: 'django-rest',
+    alt: 'Django REST',
+    imgAlt: 'Django REST',
   },
   {
-    name: 'pytest',
-    alt: 'Pytest',
-    imgAlt: 'Pytest',
+    name: 'celery',
+    alt: 'Celery',
+    imgAlt: 'Celery',
   },
   {
-    name: 'selenium',
-    alt: 'Selenium',
-    imgAlt: 'Selenium',
+    name: 'go',
+    alt: 'Go',
+    imgAlt: 'Go',
   },
   {
-    name: 'allure',
-    alt: 'Allure',
-    imgAlt: 'Allure',
+    name: 'jinja',
+    alt: 'Jinja',
+    imgAlt: 'Jinja',
   },
   {
-    name: 'teamcity',
-    alt: 'TeamCity',
-    imgAlt: 'TeamCity',
+    name: 'uwsgi',
+    alt: 'uWSGI',
+    imgAlt: 'uWSGI',
   },
   {
-    name: 'airflow',
-    alt: 'AirFlow',
-    imgAlt: 'AirFlow',
+    name: 'nginx',
+    alt: 'Nginx',
+    imgAlt: 'Nginx',
   },
   {
-    name: 'postgresql',
-    alt: 'PostgreSQL',
-    imgAlt: 'PostgreSQL',
+    name: 'haproxy',
+    alt: 'HAProxy',
+    imgAlt: 'HAProxy',
   },
   {
-    name: 'kibana',
-    alt: 'Kibana APM',
-    imgAlt: 'Kibana',
+    name: 'docker',
+    alt: 'Docker',
+    imgAlt: 'Docker',
   },
   {
-    name: 'sentry-black',
+    name: 'docker-compose',
+    alt: 'Docker Compose',
+    imgAlt: 'Docker Compose',
+  },
+  {
+    name: 'gitlab',
+    alt: 'GitLab CI/CD',
+    imgAlt: 'GitLab CI/CD',
+  },
+  {
+    alt: 'Jenkins',
+    name: 'jenkins',
+    imgAlt: 'Jenkins',
+  },
+  {
     alt: 'Sentry',
+    name: 'sentry',
     imgAlt: 'Sentry',
   },
   {
@@ -249,8 +229,227 @@ export const techStackClutch = [
     imgAlt: 'Grafana',
   },
   {
-    name: 'uptimerobot',
-    alt: 'UptimeRobot',
-    imgAlt: 'UptimeRobot',
+    name: 'graylog',
+    alt: 'Graylog',
+    imgAlt: 'Graylog',
+  },
+  {
+    name: 'kibana',
+    alt: 'Kibana',
+    imgAlt: 'Kibana',
+  },
+  {
+    name: 'mysql',
+    alt: 'MySQL',
+    imgAlt: 'MySQL',
+  },
+  {
+    name: 'redis',
+    alt: 'Redis',
+    imgAlt: 'Redis',
+  },
+  {
+    name: 'elastic',
+    alt: 'Elasticsearch',
+    imgAlt: 'Elasticsearch',
+  },
+  {
+    name: 'minio',
+    alt: 'MinIO',
+    imgAlt: 'MinIO',
+  },
+  {
+    name: 'open-street-map',
+    alt: 'OpenStreetMap',
+    imgAlt: 'OpenStreetMap',
+  },
+  {
+    name: 'osrm',
+    alt: 'OSRM',
+    imgAlt: 'OSRM',
+  },
+  {
+    name: 'grpc',
+    alt: 'gRPC',
+    imgAlt: 'gRPC',
+  },
+  {
+    imgAlt: 'Node.js',
+    alt: 'Node.js',
+    name: 'node',
+  },
+  {
+    name: 'twisted',
+    alt: 'Twisted',
+    imgAlt: 'Twisted',
+  },
+  {
+    name: 'ruby',
+    alt: 'Ruby',
+    imgAlt: 'Ruby',
+  },
+  {
+    name: 'webrtc',
+    alt: 'WebRTC',
+    imgAlt: 'WebRTC',
+  },
+  {
+    name: 'html',
+    alt: 'HTML',
+    imgAlt: 'HTML',
+  },
+  {
+    name: 'css',
+    alt: 'CSS',
+    imgAlt: 'CSS',
+  },
+  {
+    name: 'jquery',
+    alt: 'jQuery',
+    imgAlt: 'jQuery',
+  },
+  {
+    name: 'bootstrap',
+    alt: 'Bootstrap',
+    imgAlt: 'Bootstrap',
+  },
+  {
+    name: 'js',
+    alt: 'JavaScript',
+    imgAlt: 'JavaScript',
+  },
+  {
+    alt: 'React',
+    name: 'react',
+    imgAlt: 'React',
+  },
+]
+
+export const teamNamba = [
+  {
+    name: 'Vlad Andreev',
+    position: 'Project Manager',
+    image: {
+      file: 'vlad-andreev',
+    },
+  },
+  {
+    name: 'Alla Klimenko',
+    position: 'Project Manager',
+    image: {
+      file: 'alla-klimenko',
+    },
+  },
+  {
+    name: 'Alice Jang',
+    position: 'Project Manager',
+    image: {
+      file: 'alice-jang',
+    },
+  },
+  {
+    name: 'Arthur Elizavetenkov',
+    position: 'Project Manager',
+    image: {
+      file: 'arthur-elizavetenkov',
+    },
+  },
+  {
+    name: 'Andrew Minkin',
+    position: 'Backend Developer, Team Lead',
+    image: {
+      file: 'andrew-minkin',
+    },
+  },
+  {
+    name: 'Alexander Astashov',
+    position: 'Backend Developer',
+    image: {
+      file: 'astashov',
+    },
+  },
+  {
+    name: 'Alexander Edakin',
+    position: 'Backend Developer',
+    image: {
+      file: 'aleksandr-edakin',
+    },
+  },
+  {
+    name: 'Aziz Sadykov',
+    position: 'DevOps Engineer',
+    image: {
+      file: 'aziz-sadykov',
+    },
+  },
+  {
+    name: 'Alexander Vishnyakov',
+    position: 'Frontend Developer',
+    image: {
+      file: 'alexander-vishnyakov',
+    },
+  },
+  {
+    name: 'Aleksey Medvedev',
+    position: 'Frontend Developer',
+    image: {
+      file: 'aleksey-medvedev',
+    },
+  },
+  {
+    name: 'Belek Eraliev ',
+    position: 'DevOps Engineer',
+    image: {
+      file: 'belek-eraliev',
+    },
+  },
+  {
+    name: 'Belek Abylov',
+    position: 'Backend Developer',
+    image: {
+      file: 'belek-abylov',
+    },
+  },
+  {
+    name: 'Gennady Karev',
+    position: 'Backend Developer',
+    image: {
+      file: 'gennady-karev',
+    },
+  },
+  {
+    name: 'Dastan Mamyrov',
+    position: 'Full-Stack Developer',
+    image: {
+      file: 'dastan-mamyrov',
+    },
+  },
+  {
+    name: 'Rustom Kulbatyrov',
+    position: 'Android Developer',
+    image: {
+      file: 'kulbatyrov',
+    },
+  },
+  {
+    name: 'Pavel Pushkarev',
+    position: 'iOS Developer',
+    image: {
+      file: 'pushkarev',
+    },
+  },
+  {
+    name: 'Aibek Nogoev',
+    position: 'iOS Developer',
+    image: {
+      file: 'aibek-nogoev',
+    },
+  },
+  {
+    name: 'Aisalkyn Tashmatova',
+    position: 'Android Developer',
+    image: {
+      file: 'aisalkyn-tashmatova',
+    },
   },
 ]

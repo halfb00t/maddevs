@@ -2,11 +2,11 @@
   <section
     class="container_regular"
   >
-    <h3
+    <h2
       class="case_title_h2 m-12_bottom "
     >
       Why the city needed a better taxi service
-    </h3>
+    </h2>
     <TextParagraph class="m-12_bottom">
       Automation of the driver-passenger interactions is what Namba Taxi decided to pursue. Mad Devs’ mission is to
       automate as many interactions as possible: we want to let machines do everything that they can do better than

@@ -1,11 +1,11 @@
 <template>
   <section class="container_regular">
-    <h2 class="case_title_h2 m-24_bottom media-m-12_bottom">
-      Technology stack
+    <h2 class="case_title_h2 m-24_bottom media-m-12_bottom case_technology-title">
+      Technologies we used
     </h2>
     <ListTechnologies class="m-96_bottom media-m-48_bottom">
       <ListTechnologiesItem
-        v-for="technology in techStackClutch"
+        v-for="technology in techStackNambaTaxi"
         :key="technology.name"
         class="case_tech-list-item"
         v-bind="technology"
@@ -17,10 +17,10 @@
 <script>
 import ListTechnologies from '@/components/Cases/shared/ListTechnologies'
 import ListTechnologiesItem from '@/components/Cases/shared/ListTechnologiesItem'
-import { techStackClutch } from '@/data/caseClutch'
+import { techStackNambaTaxi } from '@/data/caseNambaTaxi'
 
 export default {
-  name: 'TechStack',
+  name: 'TechStackNamba',
   components: {
     ListTechnologies,
     ListTechnologiesItem,
@@ -28,7 +28,7 @@ export default {
 
   data() {
     return {
-      techStackClutch,
+      techStackNambaTaxi,
     }
   },
 }
@@ -36,16 +36,22 @@ export default {
 
 <style lang="scss" scoped>
 .case {
+  &_technology-title{
+    text-align: center;
+  }
   &_tech-list-item::v-deep {
     .django {
       width: 57px;
+    }
+    .osrm, .django-rest{
+      width: 63px;
     }
 
     @media screen and (max-width: 768px) {
       p {
         font-size: 8px;
       }
-      .django {
+      .django, .osrm {
         width: 30px;
       }
     }

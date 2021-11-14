@@ -2,12 +2,12 @@
   <section
     class="container_regular"
   >
-    <h3
+    <h2
       v-prlx="animationRequirementsText"
       class="case_title_h2 m-24_bottom media-m-12_bottom"
     >
       How we did it: Requirements and limitations
-    </h3>
+    </h2>
     <TextParagraph
       v-prlx="animationRequirementsText"
       class="m-24_bottom"

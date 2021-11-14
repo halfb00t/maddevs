@@ -24,6 +24,7 @@
             :id="`about-item-${i}`"
             :key="about.description"
             v-bind="about"
+            tag="p"
             section="about"
             :index="i"
           />

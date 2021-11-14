@@ -18,7 +18,8 @@
       :width="icon.width || '30px'"
       :height="icon.height || '30px'"
     >
-    <h3
+    <component
+      :is="tag"
       class="case_statistics-item_number p-16_bottom"
       :style="colorNumber"
     >
@@ -30,7 +31,7 @@
         {{ numberText }}
       </span>
       {{ name ? name : '' }}
-    </h3>
+    </component>
     <TextParagraph
       v-if="description"
       class="case_statistics-item_description"
@@ -83,6 +84,11 @@ export default {
 
     description: {
       type: String,
+    },
+
+    tag: {
+      type: String,
+      default: 'h3',
     },
 
     descriptionColor: {
