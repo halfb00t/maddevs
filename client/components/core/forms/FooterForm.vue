@@ -10,8 +10,15 @@
       :fullname-required="false"
       button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
       class-name="footer-form"
+      :recaptcha-error="recaptchaError"
       @submit="handleSubmit"
-    />
+    >
+      <template #reCaptcha>
+        <div class="recaptcha">
+          <recaptcha @success="onSuccess" />
+        </div>
+      </template>
+    </BaseForm>
     <!-- this id should be unique, because it used for google analytics -->
     <ModalSuccess
       id="footer-modal"
@@ -35,11 +42,35 @@ export default {
 
   mixins: [createLeadMixin(305480, 'Contact Me'), scrollOnBody],
 
+  data() {
+    return {
+      recaptchaError: true,
+    }
+  },
+
+  async mounted() {
+    try {
+      await this.$recaptcha.init()
+    } catch (e) {
+      console.error(e)
+    }
+  },
+
+  beforeDestroy() {
+    this.$recaptcha.destroy()
+  },
+
   methods: {
-    handleSubmit(formData) {
+    onSuccess(token) {
+      this.recaptchaError = false
+      this.token = token
+    },
+
+    async handleSubmit(formData) {
       const variables = {
         ...formData,
         formLocation: 'Footer component',
+        token: this.token,
       }
 
       // from mixin
@@ -47,6 +78,8 @@ export default {
 
       this.disableScrollOnBody()
       this.$refs.successModal.show()
+      await this.$recaptcha.reset()
+      this.recaptchaError = true
     },
 
     reset() {
@@ -151,6 +184,10 @@ export default {
 .freeze {
   pointer-events: none;
   user-select: none;
+}
+
+.recaptcha {
+  padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 1320px) {
