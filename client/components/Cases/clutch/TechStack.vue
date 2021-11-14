@@ -37,6 +37,10 @@ export default {
 <style lang="scss" scoped>
 .case {
   &_tech-list-item::v-deep {
+    p {
+      font-size: 12px;
+    }
+
     .django {
       width: 57px;
     }
