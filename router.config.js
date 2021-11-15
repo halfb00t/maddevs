@@ -8,4 +8,9 @@
     production: false,
   },
  */
-export const routerConfig = []
+export const routerConfig = [{
+  path: '/clients/case-studies/namba-taxi/',
+  development: true,
+  staging: true,
+  production: false,
+}]
