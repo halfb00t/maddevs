@@ -275,6 +275,12 @@ exports[`ContactMeForm component should render correctly 1`] = `
       </label>
     </div>
      
+    <div
+      class="recaptcha"
+    >
+      <recaptcha />
+    </div>
+     
     <button
       class="ui-button ui-button--disabled ui-button--transparent-bgc ui-button_submit-button-footer"
       disabled="disabled"
