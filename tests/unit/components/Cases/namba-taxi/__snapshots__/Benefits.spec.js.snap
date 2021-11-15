@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Benefits component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h2
+      class="case_title_h2 m-12_bottom "
+    >
+      
+    Why the city needed a better taxi service
+  
+    </h2>
+     
+    <p
+      class="case_paragraph m-12_bottom"
+    >
+      
+    Automation of the driver-passenger interactions is what Namba Taxi decided to pursue. Mad Devs’ mission is to
+    automate as many interactions as possible: we want to let machines do everything that they can do better than
+    humans. Namba Taxi wanted an automated, next-generation, Uber-like transportation solution. We undertook the
+    challenge of developing this software. We undertook the challenge of developing this software and started in 2013.
+  
+    </p>
+     
+    <p
+      class="case_paragraph m-96_bottom media-m-48_bottom"
+    >
+      
+    Automation of the driver-passenger interactions is what Namba Taxi decided to pursue. Mad Devs’ mission is to
+    automate as many interactions as possible: we want to let machines do everything that they can do better than
+    humans. Namba Taxi wanted an automated, next-generation, Uber-like transportation solution. We undertook the
+    challenge of developing this software. We undertook the challenge of developing this software and started in 2013.
+  
+    </p>
+     
+    <h3
+      class="case_title_h2 m-24_bottom media-m-12_bottom"
+    >
+      
+    Benefits of Namba Taxi
+  
+    </h3>
+     
+    <div
+      class="case_cards-container"
+    >
+      <div
+        class="case_column"
+      >
+        <cardtechsolution-stub
+          alt="Sharing economy"
+          description="Namba Taxi was one of the first companies in Central Asia to join the sharing economy. If calling a cab is simple enough, people will prefer it to owning a car. This creates a city with fewer cars and a more efficient distribution of resources, making urban development more sustainable."
+          folder="nambataxi"
+          icon="economy"
+          title="Sharing economy"
+        />
+        <cardtechsolution-stub
+          alt="Transparency"
+          description="Operators and passengers can track cab rides in real time. The mobile applications we developed for this project enable convenient communication and feedback. Riders can order a taxi with just a few taps, and both riders and drivers can see the progress of a ride."
+          folder="nambataxi"
+          icon="transparency"
+          title="Transparency"
+        />
+      </div>
+       
+      <div
+        class="case_column"
+      >
+        <cardtechsolution-stub
+          alt="Quick service"
+          description="A Namba Taxi cab arrives within 7 minutes. A smart itinerary planning system drastically reduced waiting time by eliminating much  of the manual work done by dispatchers. The system’s scalable, failproof architecture can handle up to 700 drivers on the line, 6,000 queries per second, and 10,000 orders a day."
+          folder="nambataxi"
+          icon="service"
+          title="Quick service"
+        />
+        <cardtechsolution-stub
+          alt="Mobile transformation"
+          description="With Namba Taxi, drivers and passengers can do everything on their mobile devices. When development started in 2013, passengers had to make a phone call to order a cab, effectively turning taxi services into call centres. Namba Taxi changed this paradigm."
+          folder="nambataxi"
+          icon="mobile"
+          title="Mobile transformation"
+        />
+        <cardtechsolution-stub
+          alt="Quality control"
+          description="With an automated ordering system, Namba Taxi can focus on improving the passenger experience. The company monitors a multitude of performance indicators, including each car’s technical condition and even drivers’ health, to ensure more enjoyable cab rides."
+          folder="nambataxi"
+          icon="quality"
+          title="Quality control"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

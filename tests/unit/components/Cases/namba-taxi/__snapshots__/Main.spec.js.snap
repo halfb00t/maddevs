@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component should render correctly 1`] = `
+<div>
+  <section>
+    <about-stub />
+     
+    <benefits-stub />
+     
+    <requirements-stub />
+     
+    <faulttolerance-stub />
+     
+    <mobileapplications-stub />
+     
+    <techstacknamba-stub />
+     
+    <teamnambataxi-stub />
+  </section>
+</div>
+`;
