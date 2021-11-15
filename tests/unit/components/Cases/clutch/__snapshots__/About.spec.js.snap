@@ -57,7 +57,7 @@ exports[`About component should render correctly 1`] = `
              
             <img
               alt="account"
-              class="m-21_bottom"
+              class="case_statistics-item_icon m-21_bottom"
               data-src="img.jpg"
               data-testid="test-icon"
               height="30px"
@@ -98,7 +98,7 @@ exports[`About component should render correctly 1`] = `
              
             <img
               alt="analytics"
-              class="m-21_bottom"
+              class="case_statistics-item_icon m-21_bottom"
               data-src="img.jpg"
               data-testid="test-icon"
               height="30px"
@@ -139,7 +139,7 @@ exports[`About component should render correctly 1`] = `
              
             <img
               alt="bookmark"
-              class="m-21_bottom"
+              class="case_statistics-item_icon m-21_bottom"
               data-src="img.jpg"
               data-testid="test-icon"
               height="30px"

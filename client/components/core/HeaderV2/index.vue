@@ -125,9 +125,7 @@
       />
     </transition>
 
-    <!-- this id should be unique, because it used for google analytics -->
     <ModalContactMe
-      id="contact-me-modal"
       ref="modalContactMe"
       :location="'\'Contact me\' button, header component'"
     />

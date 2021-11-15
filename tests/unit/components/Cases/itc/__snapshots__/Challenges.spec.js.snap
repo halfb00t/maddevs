@@ -43,18 +43,21 @@ exports[`Challenges component should render correctly 1`] = `
             description="Extensive use of paper (minimum 2 reams of paper per SME)"
             folder="itc"
             icon="files"
+            title=""
           />
           <cardtechsolution-stub
             alt="Search book icon"
             description="Challenges with manually tracking coaching mission statuses, outputs, and outcomes"
             folder="itc"
             icon="search-book"
+            title=""
           />
           <cardtechsolution-stub
             alt="Info icon."
             description="Lack of readily available mission critical information"
             folder="itc"
             icon="info"
+            title=""
           />
         </div>
          
@@ -66,18 +69,21 @@ exports[`Challenges component should render correctly 1`] = `
             description="ITC had to manually calculate any mission statistics"
             folder="itc"
             icon="connection"
+            title=""
           />
           <cardtechsolution-stub
             alt="Folder icon."
             description="Coaching reports presented challenges with storing, extracting, compiling, and using data derived from coaching"
             folder="itc"
             icon="folder"
+            title=""
           />
           <cardtechsolution-stub
             alt="Lock file icon."
             description="Challenges of information accessibility to the Institutional Partners in each country, the ITC, EU, and other stakeholders"
             folder="itc"
             icon="lock-file"
+            title=""
           />
         </div>
       </div>

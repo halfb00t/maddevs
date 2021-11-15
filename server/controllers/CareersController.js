@@ -16,11 +16,11 @@ const buildRequest = (req, key) => ({
 })
 
 async function index(req, res) {
+  const parsedReq = parseRequest(req)
   const ip = getIPByRequest(req)
   const { city, country } = await getLocationByIP(ip)
   if (isBlockedIP(ip)) return res.json({ error: 'Your ip is in a blacklist' })
 
-  const parsedReq = parseRequest(req)
   const huntflowReq = buildRequest(parsedReq, 'huntflow')
   const emailReq = {
     ...buildRequest(parsedReq, 'email'),
