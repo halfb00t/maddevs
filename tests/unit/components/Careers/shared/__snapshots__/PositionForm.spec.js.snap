@@ -222,16 +222,13 @@ exports[`PositionForm component should render correctly 1`] = `
       </div>
        
       <button
-        class="ui-button"
-        style="position: relative; overflow: hidden;"
+        class="ui-button ui-button--disabled"
+        disabled="disabled"
         type="submit"
       >
         
       translated
     
-        <div
-          class="wave"
-        />
       </button>
     </form>
      

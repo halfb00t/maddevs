@@ -15,7 +15,9 @@
     >
       <template #reCaptcha>
         <div class="recaptcha">
-          <recaptcha @success="onSuccess" />
+          <recaptcha
+            @success="onSuccess"
+          />
         </div>
       </template>
     </BaseForm>
@@ -44,15 +46,8 @@ export default {
 
   data() {
     return {
+      token: null,
       recaptchaError: true,
-    }
-  },
-
-  async mounted() {
-    try {
-      await this.$recaptcha.init()
-    } catch (e) {
-      console.error(e)
     }
   },
 
@@ -78,7 +73,7 @@ export default {
 
       this.disableScrollOnBody()
       this.$refs.successModal.show()
-      await this.$recaptcha.reset()
+      this.$recaptcha.reset()
       this.recaptchaError = true
     },
 
