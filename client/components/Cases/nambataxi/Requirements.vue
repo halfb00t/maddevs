@@ -81,8 +81,8 @@ export default {
         fromBottom: false,
         reverse: true,
         limit: {
-          min: -25,
-          max: 25,
+          min: -56,
+          max: 56,
         },
 
         mobileMaxWidth: 977,
@@ -94,8 +94,8 @@ export default {
         fromBottom: false,
         reverse: true,
         limit: {
-          min: -28,
-          max: 25,
+          min: -56,
+          max: 56,
         },
 
         mobileMaxWidth: 977,
@@ -113,7 +113,7 @@ export default {
   }
 
   &_column {
-    @include grid(repeat(1, 1fr), repeat(2, minmax(min-content, max-content)), 0, 24px);
+    @include grid(repeat(1, 1fr), repeat(4, minmax(min-content, max-content)), 0, 24px);
 
     ::v-deep {
       .card-content {

@@ -21,7 +21,7 @@
     </TextParagraph>
     <h3
       v-prlx="animationSettingsTitle"
-      class="case_title_h2 m-24_bottom media-m-12_bottom"
+      class="case_title_h2 m-50_bottom media-m-12_bottom"
     >
       Benefits of Namba Taxi
     </h3>
@@ -71,7 +71,7 @@ export default {
         fromBottom: false,
         reverse: true,
         limit: {
-          min: -150,
+          min: -200,
           max: 60,
         },
 
@@ -84,7 +84,7 @@ export default {
         fromBottom: false,
         reverse: true,
         limit: {
-          min: -410,
+          min: -408,
           max: 84,
         },
 
