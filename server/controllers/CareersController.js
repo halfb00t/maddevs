@@ -17,26 +17,34 @@ const buildRequest = (req, key) => ({
 
 async function index(req, res) {
   const parsedReq = parseRequest(req)
-  const ip = getIPByRequest(req)
+  const ip = await getIPByRequest(req)
   const { city, country } = await getLocationByIP(ip)
   if (isBlockedIP(ip)) return res.json({ error: 'Your ip is in a blacklist' })
 
   const huntflowReq = buildRequest(parsedReq, 'huntflow')
-  const emailReq = {
-    ...buildRequest(parsedReq, 'email'),
-    ip,
-    geoIp: `Country: ${country}, City: ${city}`,
+  const rawBodyReq = buildRequest(parsedReq, 'email')
+
+  const bodyReq = {
+    ...rawBodyReq,
+    body: {
+      ...rawBodyReq.body,
+      variables: {
+        ...rawBodyReq.body.variables,
+        ip,
+        geoIp: `Country: ${country}, City: ${city}`,
+      },
+    },
   }
 
   const huntflowValidation = validate(huntflowReq, 'huntflow')
   if (!huntflowValidation.isValid) return res.status(huntflowValidation.error.status).json(huntflowValidation.error)
 
-  const emailValidation = validate(emailReq, 'email')
+  const emailValidation = validate(bodyReq, 'email')
   if (!emailValidation.isValid) return res.status(emailValidation.error.status).json(emailValidation.error)
 
   const huntflowResponse = await sendApplication(huntflowReq)
-  const hrEmailResponse = await sendMailFromVariables(emailReq.body)
-  const userEmailResponse = await sendCVResponseMail(emailReq.body)
+  const hrEmailResponse = await sendMailFromVariables(bodyReq.body)
+  const userEmailResponse = await sendCVResponseMail(bodyReq.body)
 
   return res.json({ email: hrEmailResponse, userEmail: userEmailResponse, huntflow: huntflowResponse })
 }
