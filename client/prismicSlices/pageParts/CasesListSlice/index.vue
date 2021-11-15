@@ -10,13 +10,14 @@
           v-for="(item, i) of caseList"
           :key="`case-list-slice_item_${i}`"
           :video-file-name="item.video"
-          :logo="{folder: item.folder, file: item.file, alt: item.alt, width: item.logoWidth, height: item.logoHeight}"
+          :logo="item.logo"
           :subtitle="item.subtitle"
           :title="item.title"
-          :desc="item.description"
+          :desc="item.desc"
           :width="item.width"
           :link="item.link"
           :poster-link="item.poster"
+          :item="item"
           data-testid="test-case-card"
         />
       </div>
