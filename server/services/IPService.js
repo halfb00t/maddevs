@@ -6,6 +6,7 @@ const {
 
 async function getIpInfo(ip) {
   const info = await fetch.default(`https://ipinfo.io/${ip}?token=${IP_INFO_TOKEN}`)
+
   return info.json()
 }
 

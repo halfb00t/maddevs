@@ -16,6 +16,7 @@ function runRadiator() {
     analyticsClientCertUrl: process.env.RADIATOR_CLIENT_CERT_URL,
     googleapisKey: process.env.RADIATOR_GOOGLEAPIS_KEY,
     websiteUrl: 'https://maddevs.io',
+    retryAttempts: 2,
   }
 
   const dailyConfig = {

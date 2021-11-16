@@ -9,6 +9,12 @@
       height="51.94"
       class="card-content_icon"
     >
+    <h3
+      v-if="title"
+      class="case_title_h4 m-10-bottom"
+    >
+      {{ title }}
+    </h3>
     <TextParagraph>
       {{ description }}
     </TextParagraph>
@@ -35,6 +41,11 @@ export default {
     folder: {
       type: String,
       default: null,
+    },
+
+    title: {
+      type: String,
+      default: '',
     },
 
     description: {

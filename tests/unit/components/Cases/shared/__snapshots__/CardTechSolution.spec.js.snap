@@ -13,6 +13,8 @@ exports[`CardTechSolution component should render correctly 1`] = `
       width="51.94"
     />
      
+    <!---->
+     
     <p
       class="case_paragraph"
     >
