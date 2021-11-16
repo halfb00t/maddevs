@@ -1,44 +1,42 @@
 <template>
-  <Feature flag="nambaTaxiCase">
-    <main class="case case--nambaTaxi">
-      <CaseHeader
-        :logo="logo"
-        project="namba-taxi"
-        video-name="/videos/namba-taxi-banner.mp4"
-        video-fallback-path="/images/Cases/nambataxi/png/nambataxi-banner.png"
+  <main class="case case--nambaTaxi">
+    <CaseHeader
+      :logo="logo"
+      project="namba-taxi"
+      video-name="/videos/namba-taxi-banner.mp4"
+      video-fallback-path="/images/Cases/nambataxi/png/nambataxi-banner.png"
+    >
+      <h1
+        slot="title"
+        class="case_header-title"
       >
-        <h1
-          slot="title"
-          class="case_header-title"
-        >
-          Namba Taxi: <br> Modernising transport
-        </h1>
-        <p
-          slot="description"
-          class="case_header-description"
-        >
-          The system that took urban transport in Bishkek, Kyrgyzstan to the <br> next level in 2013 by making taxi ordering
-          fast, efficient and <br> convenient and continues to function today.
-        </p>
-      </CaseHeader>
-      <Main />
-      <Footer
-        link="/clients/case-studies/clutch/"
-        class-name="clutch"
+        Namba Taxi: <br> Modernising transport
+      </h1>
+      <p
+        slot="description"
+        class="case_header-description"
       >
-        <img
-          slot="icon"
-          v-lazy-load
-          :data-src="require(`@/assets/img/Studies/svg/clutch-footer.svg`)"
-          width="312"
-          height="138"
-          alt="Clutch"
-          class="case_logotype-clutch"
-        >
-        The growth of Clutch.co
-      </Footer>
-    </main>
-  </Feature>
+        The system that took urban transport in Bishkek, Kyrgyzstan to the <br> next level in 2013 by making taxi ordering
+        fast, efficient and <br> convenient and continues to function today.
+      </p>
+    </CaseHeader>
+    <Main />
+    <Footer
+      link="/clients/case-studies/clutch/"
+      class-name="clutch"
+    >
+      <img
+        slot="icon"
+        v-lazy-load
+        :data-src="require(`@/assets/img/Studies/svg/clutch-footer.svg`)"
+        width="312"
+        height="138"
+        alt="Clutch"
+        class="case_logotype-clutch"
+      >
+      The growth of Clutch.co
+    </Footer>
+  </main>
 </template>
 
 <script>
@@ -84,8 +82,8 @@ export default {
 
   head() {
     return buildHead({
-      ...getMetadata('godee'),
-      image: 'https://maddevs.io/godee.png',
+      ...getMetadata('nambataxi'),
+      image: 'https://maddevs.io/namba-taxi.png',
     })
   },
 }
