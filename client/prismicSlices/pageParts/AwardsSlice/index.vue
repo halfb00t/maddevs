@@ -1,6 +1,6 @@
 <template>
   <section
-    class="awards-slide"
+    class="awards-slice"
     :style="{ backgroundColor: sliceBackground }"
   >
     <div
@@ -71,3 +71,69 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.awards-slice {
+  &__cards {
+    box-sizing: border-box;
+    width: calc(100% + 20px);
+    margin-left: -20px;
+    margin-top: -20px;
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    @media screen and (max-width: 1210px) {
+      padding: 0 76px;
+    }
+    @media screen and (max-width: 1062px) {
+      width: calc(100% + 10px);
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+    @media screen and (max-width: 952px) {
+      padding: 0 62px;
+    }
+    @media screen and (max-width: 925px) {
+      padding: 0;
+    }
+  }
+}
+
+.award-card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  padding: 19px 32px;
+  background-color: $bgcolor--white;
+  margin-left: 20px;
+  margin-top: 20px;
+  @media screen and (max-width: 1420px) {
+    width: 150px;
+  }
+  @media screen and (max-width: 1350px) {
+    width: 140px;
+  }
+  @media screen and (max-width: 1280px) {
+    width: 130px;
+  }
+  @media screen and (max-width: 1062px) {
+    width: 116px;
+    padding: 12px 24px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 102px;
+    padding: 10px 20px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+  }
+}
+</style>
