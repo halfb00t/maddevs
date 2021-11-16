@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Requirements component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h2
+      class="case_title_h2 m-24_bottom media-m-12_bottom"
+    >
+      
+    How we did it: Requirements and limitations
+  
+    </h2>
+     
+    <p
+      class="case_paragraph m-24_bottom"
+    >
+      
+    Software requirements were prepared in close collaboration with the customer and with emphasis on business goals.
+    Our rule is to prioritise end users’ experience: we focus on how our product will be helpful instead of focusing
+    on how convenient it will be for us to develop it. Discussions and analysis helped identify eight main
+    requirements.
+  
+    </p>
+     
+    <div
+      class="case_cards-container"
+    >
+      <div
+        class="case_column"
+      >
+        <cardtechsolution-stub
+          alt="Workflow"
+          description="Minimal alterations to the workflow: Switching to a new software system should be smooth and painless for the company and the drivers."
+          folder="nambataxi"
+          icon="requirement-1"
+          title=""
+        />
+        <cardtechsolution-stub
+          alt="Scalability"
+          description="Scalability: To allow the system to grow in the future, we planned to implement an architecture that can be modified and expanded.
+"
+          folder="nambataxi"
+          icon="requirement-2"
+          title=""
+        />
+        <cardtechsolution-stub
+          alt="Support"
+          description="Support for Android devices: We needed to promote the transition to more convenient, modern technologies.
+"
+          folder="nambataxi"
+          icon="requirement-3"
+          title=""
+        />
+        <cardtechsolution-stub
+          alt="Real-time updates"
+          description="Real-time updates: We focused on reducing waiting times as this parameter is crucial to the passenger experience."
+          folder="nambataxi"
+          icon="requirement-4"
+          title=""
+        />
+      </div>
+       
+      <div
+        class="case_column"
+      >
+        <cardtechsolution-stub
+          alt="Tolerance"
+          description="High fault tolerance: Demand for taxi services can have dramatic ups and downs (e.g., when it starts to rain), so the system should have failover capability."
+          folder="nambataxi"
+          icon="requirement-5"
+          title=""
+        />
+        <cardtechsolution-stub
+          alt="Agile"
+          description="Agile development: If the customer’s requirements change during development, we can introduce new technologies as needed."
+          folder="nambataxi"
+          icon="requirement-6"
+          title=""
+        />
+        <cardtechsolution-stub
+          alt="Compatibility"
+          description="Compatibility with navigators: Not everyone had switched to mobile apps when the project started, so we had to ensure integration with drivers’ devices
+"
+          folder="nambataxi"
+          icon="requirement-7"
+          title=""
+        />
+        <cardtechsolution-stub
+          alt="Safe transition"
+          description="Safe transition: Moving from old software to new software must not paralyse the business’s continuous operation or reduce the quality of service.
+"
+          folder="nambataxi"
+          icon="requirement-8"
+          title=""
+        />
+      </div>
+    </div>
+     
+    <p
+      class="case_paragraph m-96_bottom media-m-48_bottom"
+    >
+      
+    Identifying limitations was the next step. Internet service was expensive in 2013, so we needed a highly efficient
+    system that delivers proper performance with as little mobile traffic as possible. The goal was to reduce the
+    costs for the drivers and the passengers who use the mobile app. We also kept in mind the customer’s business
+    costs: server resources, for instance, were limited.
+  
+    </p>
+     
+    <textquote-stub
+      author="Oleg Puzanov, CSO at Mad Devs"
+      class="m-auto m-96_bottom media-m-48_bottom"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom"
+    >
+      
+    We chose the iterative approach that delivers a complete, functional product for a specific business process after
+    each iteration.
+  
+    </textquote-stub>
+  </section>
+</div>
+`;

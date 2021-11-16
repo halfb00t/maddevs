@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container_regular m-48_top media-m-24_top m-48_bottom media-m-24_bottom"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      Namba Taxi (now BiTaxi) is a leading ride-hailing service in Bishkek, Kyrgyz Republic. Mad Devs developed
+      software for the service from scratch to revolutionise the way people move around in a modern city. The project
+      was doubly challenging: we needed to develop complex technological solutions and create user experiences
+      engaging enough to make people change their behaviours. It was Mad Devs’ longest-running project so far as we
+      worked with Namba Taxi from 2013 to mid-2020. Together, Mad Devs and Namba Taxi achieved the ultimate goal: let
+      the residents of Bishkek quickly get around the city with convenience.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full background-color-silver p-66_top p-42_bottom m-96_bottom media-p-65_bottom media-m-48_bottom case_review-container"
+    >
+      <div
+        class="container_regular case_review"
+      >
+        <div
+          class="m-24_bottom case_statistics-container case_statistics-container-4"
+        >
+          <statisticcard-stub
+            description="from 2013 to mid-2020"
+            icon="[object Object]"
+            id="about-item-0"
+            index="0"
+            number="7"
+            numbercolor="#008fc5"
+            numbertext="7"
+            section="about"
+            tag="p"
+          />
+          <statisticcard-stub
+            description="team members "
+            icon="[object Object]"
+            id="about-item-1"
+            index="1"
+            number="19"
+            numbercolor="#008fc5"
+            numbertext="19"
+            section="about"
+            tag="p"
+          />
+          <statisticcard-stub
+            description="drivers"
+            icon="[object Object]"
+            id="about-item-2"
+            index="2"
+            number="700"
+            numbercolor="#008fc5"
+            numbertext="700"
+            section="about"
+            tag="p"
+          />
+          <statisticcard-stub
+            description="trips per day"
+            icon="[object Object]"
+            id="about-item-3"
+            index="3"
+            number="10000"
+            numbercolor="#008fc5"
+            numbertext="10,000"
+            section="about"
+            tag="p"
+          />
+        </div>
+         
+        <div
+          class="case_map-container"
+        >
+          <img
+            alt="map"
+            class="case_image-map"
+            data-src="img.jpg"
+            height="306"
+            width="616"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
