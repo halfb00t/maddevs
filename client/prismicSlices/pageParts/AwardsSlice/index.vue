@@ -5,14 +5,15 @@
   >
     <div
       class="awards-slice__container container"
-      data-testid="awards-animation-test"
+      data-testid="awards-container-test"
       :data-aos="animation"
     >
       <div class="awards-slice__cards">
         <div
-          v-for="award in awards"
-          :key="award.image && award.image.url"
+          v-for="(award, idx) in awards"
+          :key="`${award.image && award.image.url}${idx}`"
           class="award-card"
+          data-testid="award-card-test"
         >
           <img
             v-lazy-load
@@ -56,7 +57,7 @@ export default {
 
   data() {
     return {
-      awards: this.slice.items,
+      awards: this.slice?.items || [],
       animation: this.slice?.primary?.animation,
     }
   },
