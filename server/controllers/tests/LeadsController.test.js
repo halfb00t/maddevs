@@ -6,8 +6,6 @@ import * as IPService from '../../services/IPService'
 import * as reCaptcha from '../../services/reCaptchaVerification'
 
 jest.mock('../../services/EmailsService', () => ({
-  sendEmailToRequest: jest.fn(),
-  verifyEmailDelivery: jest.fn(),
   sendMailFromVariables: jest.fn(),
 }))
 
@@ -27,7 +25,6 @@ jest.mock('../../services/IPService', () => ({
 }))
 // mocks
 const sendEmail = jest.fn(() => Promise.resolve({ id: '1' }))
-const getDelivery = jest.fn(() => Promise.resolve({ smtp_answer_code: 200 }))
 const createLead = jest.fn(() => Promise.resolve({ data: 'data' }))
 const getIPByRequest = jest.fn(() => Promise.resolve('212.42.107.134'))
 const getLocationByIP = jest.fn(() => Promise.resolve({
@@ -37,8 +34,6 @@ const getLocationByIP = jest.fn(() => Promise.resolve({
 
 const verification = jest.fn(() => Promise.resolve({ data: { success: true, message: 'test' } }))
 
-emailsService.sendEmailToRequest.mockImplementation(sendEmail)
-emailsService.verifyEmailDelivery.mockImplementation(getDelivery)
 emailsService.sendMailFromVariables.mockImplementation(sendEmail)
 leadsService.createLead.mockImplementation(createLead)
 IPService.getIPByRequest.mockImplementation(getIPByRequest)
