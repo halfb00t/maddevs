@@ -363,7 +363,7 @@ export const teamNamba = [
   },
   {
     name: 'Alexander Astashov',
-    position: 'Full-stack Developer',
+    position: 'Backend Developer',
     image: {
       file: 'astashov',
     },
@@ -391,7 +391,7 @@ export const teamNamba = [
   },
   {
     name: 'Aleksey Medvedev',
-    position: 'Full-stack Developer',
+    position: 'Frontend Developer',
     image: {
       file: 'aleksey-medvedev',
     },
@@ -412,42 +412,42 @@ export const teamNamba = [
   },
   {
     name: 'Gennady Karev',
-    position: 'Full-stack Developer',
+    position: 'Backend Developer',
     image: {
       file: 'gennady-karev',
     },
   },
   {
     name: 'Dastan Mamyrov',
-    position: 'Mobile Developer',
+    position: 'Android Developer',
     image: {
       file: 'dastan-mamyrov',
     },
   },
   {
     name: 'Rustom Kulbatyrov',
-    position: 'Mobile Developer',
+    position: 'Android Developer',
     image: {
       file: 'kulbatyrov',
     },
   },
   {
     name: 'Pavel Pushkarev',
-    position: 'Mobile Developer',
+    position: 'iOS Developer',
     image: {
       file: 'pushkarev',
     },
   },
   {
     name: 'Aibek Nogoev',
-    position: 'Mobile Developer',
+    position: 'iOS Developer',
     image: {
       file: 'aibek-nogoev',
     },
   },
   {
     name: 'Aisalkyn Tashmatova',
-    position: 'Mobile Developer',
+    position: 'Android Developer',
     image: {
       file: 'aisalkyn-tashmatova',
     },

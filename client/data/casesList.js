@@ -152,4 +152,21 @@ export const casesList = [
       alt: 'citycam logo',
     },
   },
+  {
+    width: 'full',
+    id: 'nambataxi',
+    link: '/clients/case-studies/namba-taxi/',
+    video: '/videos/namba-taxi-banner.mp4#t=1',
+    subtitle: 'Transportation',
+    title: 'Namba Taxi: Modernising transport',
+    desc: 'The system that took urban transport in Bishkek, Kyrgyzstan to the next level in 2013 by making taxi ordering fast, efficient and convenient and continues to function today.',
+    poster: '/images/Cases/nambataxi/png/nambataxi-banner.png',
+    logo: {
+      width: 310,
+      height: 45,
+      folder: 'nambataxi',
+      file: 'nambataxi',
+      alt: 'nambataxi logo',
+    },
+  },
 ]

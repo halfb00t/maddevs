@@ -120,6 +120,13 @@ export const meta = {
     url: 'https://maddevs.io/clients/case-studies/clutch/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform", "description": "B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
+  nambataxi: {
+    title: 'Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek',
+    description:
+      'Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.',
+    url: 'https://maddevs.io/clients/case-studies/namba-taxi/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > Transportation Solutions", "name": "Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek", "description": "Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
+  },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
     url: 'https://maddevs.io/insights/blog/',
