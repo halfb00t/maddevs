@@ -201,7 +201,7 @@ export default {
 
     recaptchaError: {
       type: Boolean,
-      default: false,
+      default: true,
     },
 
     fullnameRequired: {

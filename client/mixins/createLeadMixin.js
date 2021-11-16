@@ -31,6 +31,7 @@ const createLeadMixin = (templateId, title = 'Individuals', subject = 'Marketing
           ...exceptKeys(variables, ['agreeToGetMadDevsDiscountOffers', 'agreeWithPrivacyPolicy', 'description']),
         },
       }
+
       this.sendLead(payload)
       await delay(500)
       this.reset()

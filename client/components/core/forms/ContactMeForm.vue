@@ -12,7 +12,11 @@
   >
     <template #reCaptcha>
       <div class="recaptcha">
-        <recaptcha @success="onSuccess" />
+        <recaptcha
+          id="v2-modal"
+          :site-key="recaptchaSiteKey"
+          @success="onSuccess"
+        />
       </div>
     </template>
   </BaseForm>
@@ -46,7 +50,22 @@ export default {
     return {
       recaptchaError: true,
       token: null,
+      widgetModalId: 0,
     }
+  },
+
+  computed: {
+    recaptchaSiteKey() {
+      return `${process.env.reCaptchaSiteKey}`
+    },
+  },
+
+  async mounted() {
+    await this.$recaptcha.init()
+
+    this.widgetModalId = this.$recaptcha.render('v2-modal', {
+      sitekey: process.env.reCaptchaSiteKey,
+    })
   },
 
   beforeDestroy() {
@@ -57,15 +76,21 @@ export default {
         reCapthcaTask.remove()
       }
     }
+
+    this.$recaptcha.destroy()
   },
 
   methods: {
-    onSuccess(token) {
+    onSuccess() {
       this.recaptchaError = false
-      this.token = token
     },
 
     async handleSubmit(formData) {
+      try {
+        this.token = await this.$recaptcha.getResponse(this.widgetModalId)
+      } catch (e) {
+        console.log(e)
+      }
       const variables = {
         ...formData,
         formLocation: this.formLocation,
@@ -75,7 +100,8 @@ export default {
 
       // from mixin
       this.submitLead(variables)
-      await this.$recaptcha.reset()
+      await this.$recaptcha.reset(this.widgetModalId)
+      this.recaptchaError = true
     },
 
     reset() {

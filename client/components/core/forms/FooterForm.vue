@@ -16,6 +16,8 @@
       <template #reCaptcha>
         <div class="recaptcha">
           <recaptcha
+            id="v2-footer"
+            :site-key="recaptchaSiteKey"
             @success="onSuccess"
           />
         </div>
@@ -48,7 +50,22 @@ export default {
     return {
       token: null,
       recaptchaError: true,
+      widgetFooterId: 0,
     }
+  },
+
+  computed: {
+    recaptchaSiteKey() {
+      return `${process.env.reCaptchaSiteKey}`
+    },
+  },
+
+  async mounted() {
+    await this.$recaptcha.init()
+
+    this.widgetFooterId = this.$recaptcha.render('v2-footer', {
+      sitekey: process.env.reCaptchaSiteKey,
+    })
   },
 
   beforeDestroy() {
@@ -56,12 +73,16 @@ export default {
   },
 
   methods: {
-    onSuccess(token) {
+    onSuccess() {
       this.recaptchaError = false
-      this.token = token
     },
 
     async handleSubmit(formData) {
+      try {
+        this.token = await this.$recaptcha.getResponse(this.widgetFooterId)
+      } catch (e) {
+        console.log(e)
+      }
       const variables = {
         ...formData,
         formLocation: 'Footer component',
@@ -73,7 +94,7 @@ export default {
 
       this.disableScrollOnBody()
       this.$refs.successModal.show()
-      this.$recaptcha.reset()
+      await this.$recaptcha.reset(this.widgetFooterId)
       this.recaptchaError = true
     },
 
