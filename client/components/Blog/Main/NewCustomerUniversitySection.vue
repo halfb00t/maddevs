@@ -49,6 +49,7 @@
       <CustomerUniversityTitle
         title="Mad"
         subtitle="Community"
+        anchor-link="https://maddevs.io/insights/blog/#mad-community"
       />
       <p class="customer-university__text">
         Are you considering Mad Devs as a company to work on your next project,

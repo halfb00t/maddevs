@@ -1,0 +1,33 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "cases_list_slice",
+    "items": [
+      {
+        "width": "full",
+        "caseId": "citycam"
+      },
+      {
+        "width": "full",
+        "caseId": "citycam"
+      },
+      {
+        "width": "full",
+        "caseId": "veeqo"
+      },
+      {
+        "width": "full",
+        "caseId": "nambafood"
+      },
+      {
+        "width": "full",
+        "caseId": "itc"
+      }
+    ],
+    "primary": {
+      "animation": "none",
+      "background": "black"
+    }
+  }
+]

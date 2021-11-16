@@ -39,7 +39,7 @@
       </TextParagraph>
       <TextQuoteBox
         class="m-48_bottom"
-        author="Alexander Edakin, backend developer"
+        author="Alexander Edakin, Backend Developer"
       >
         One of the most challenging things in the project was to enable human-friendly search on the map. Ariadna was a
         unique solution that handled the task.
@@ -54,15 +54,17 @@
         Manager, and Corporate Client), and here’s how interactions among apps and third-party software go:
       </TextParagraph>
     </div>
-    <div class="container_middle background-color-silver p-48_top p-48_bottom media-p-16_top media-p-16_bottom m-96_bottom media-m-48_bottom">
-      <img
-        v-lazy-load
-        :width="969"
-        :height="713"
-        :data-src="$getMediaFromS3(`/images/Cases/nambataxi/svg/schema.svg`)"
-        alt="Internal Schema"
-        class="case_image-schema"
-      >
+    <div class="container_middle background-color-silver m-96_bottom media-m-48_bottom">
+      <div class="p-48_top p-48_bottom media-p-16_top media-p-16_bottom">
+        <img
+          v-lazy-load
+          :width="969"
+          :height="713"
+          :data-src="$getMediaFromS3(`/images/Cases/nambataxi/svg/schema.svg`)"
+          alt="Internal Schema"
+          class="case_image-schema"
+        >
+      </div>
     </div>
   </section>
 </template>

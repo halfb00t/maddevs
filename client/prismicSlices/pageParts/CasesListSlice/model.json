@@ -1,0 +1,86 @@
+{
+  "id": "cases_list_slice",
+  "type": "SharedSlice",
+  "name": "CasesListSlice",
+  "description": "CasesListSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CasesListSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "width": {
+          "config": {
+            "label": "Width",
+            "placeholder": "",
+            "options": [
+              "full",
+              "big",
+              "middle",
+              "small"
+            ],
+            "default_value": "full"
+          },
+          "type": "Select"
+        },
+        "caseId": {
+          "config": {
+            "label": "Current cases (id):",
+            "placeholder": "Choose case id",
+            "options": [
+              "clutch",
+              "sjmc",
+              "peklo",
+              "veeqo",
+              "yourcast",
+              "nambafood",
+              "itc",
+              "godee",
+              "citycam"
+            ]
+          },
+          "type": "Select"
+        }
+      }
+    }
+  ]
+}
