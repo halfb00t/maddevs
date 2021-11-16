@@ -7,7 +7,7 @@
     >
       <div class="case-list-slice">
         <CasesListItem
-          v-for="(item, i) of caseList"
+          v-for="(item, i) of caseListFiltered"
           :key="`case-list-slice_item_${i}`"
           :video-file-name="item.video"
           :logo="item.logo"
@@ -67,7 +67,7 @@ export default {
       return null
     },
 
-    caseList() {
+    caseListFiltered() {
       return this.items.map(item => ({ ...this.casesList.find(({ id }) => id === item.caseId), width: item.width }))
     },
 
