@@ -1,7 +1,7 @@
 <template>
   <div
-    v-if="anchorLink"
-    id="anchorLink"
+    v-if="id"
+    :id="id"
     class="anchor_title"
   >
     <h2 class="customer-university-title">
@@ -13,7 +13,7 @@
     </h2>
     <div class="anchor_copy-link">
       <button
-        data-id="anchor-link"
+        :data-id="id"
         class="copy-link"
         @click="copyAnchorLink"
       >
@@ -59,7 +59,7 @@ export default {
       default: '',
     },
 
-    anchorLink: {
+    id: {
       type: String,
       default: '',
     },

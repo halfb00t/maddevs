@@ -6,7 +6,7 @@ export const copyAnchorLinkMixin = {
       const copyText = event.target.getAttribute('data-id')
       if (!copyText) return null
       const tooltip = event.target.nextElementSibling
-      const link = this.anchorLink || `${window.location.origin}${this.$router.currentRoute.path}#${copyText}`
+      const link = `${window.location.origin}${this.$router.currentRoute.path}#${copyText}`
 
       if (tooltip) {
         tooltip.innerText = 'Copied!'
