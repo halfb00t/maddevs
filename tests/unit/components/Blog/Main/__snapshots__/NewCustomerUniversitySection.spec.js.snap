@@ -3,7 +3,7 @@
 exports[`NewCustomerUniversitySection component should render correctly with no data 1`] = `
 <section class="customer-university">
   <div class="container">
-    <customeruniversitytitle-stub title="Customer" subtitle="University" anchorlink=""></customeruniversitytitle-stub>
+    <customeruniversitytitle-stub title="Customer" subtitle="University" id=""></customeruniversitytitle-stub>
     <p class="customer-university__text">
       Many businesses still hesitate to hire an IT company to develop a technical solution or
       enhance an existing product because they aren’t aware of many processes and have more
@@ -25,7 +25,7 @@ exports[`NewCustomerUniversitySection component should render correctly with no 
       </div>
     </div>
     <hr class="customer-university__hr customer-university__hr--margin">
-    <customeruniversitytitle-stub title="Mad" subtitle="Community" anchorlink="https://maddevs.io/insights/blog/#mad-community"></customeruniversitytitle-stub>
+    <customeruniversitytitle-stub title="Mad" subtitle="Community" id="mad-community"></customeruniversitytitle-stub>
     <p class="customer-university__text">
       Are you considering Mad Devs as a company to work on your next project,
       or are you interested in building a career with us? This section is for
