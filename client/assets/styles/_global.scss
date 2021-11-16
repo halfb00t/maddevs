@@ -3,8 +3,7 @@
 .container {
   max-width: 1240px;
   padding: 0 90px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -133,7 +132,7 @@
   outline: none;
 
   &::placeholder {
-   color: $text-color--grey-opacity-40-percent;
+    color: $text-color--grey-opacity-40-percent;
   }
 
   &:focus {
@@ -395,7 +394,7 @@
   height: 10px;
   transform: scale(1);
   border-radius: 100rem;
-  animation: waves .5s linear;
+  animation: waves 0.5s linear;
 }
 
 // Drift button
@@ -445,5 +444,60 @@
 
   to {
     transform: scale(30);
+  }
+}
+
+//------------- Anchor link styles ------------- //
+.anchor_title {
+  position: relative;
+
+  .anchor_copy-link {
+    button {
+      display: none;
+      position: absolute;
+      left: -36px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 12px;
+      cursor: pointer;
+      border: 0;
+      background-color: transparent;
+
+      img {
+        width: 16px;
+        height: 16px;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+
+    &-tooltip {
+      display: none;
+      position: absolute;
+      left: -102px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #f4f4f4;
+      padding: 4px 8px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 0;
+      line-height: 18px;
+      color: #101113;
+      transition: all 0.1s ease;
+      @include font('Inter', 12px, 400);
+    }
+
+    &:hover {
+      .anchor_copy-link-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    .anchor_copy-link button {
+      display: block;
+    }
   }
 }

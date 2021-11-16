@@ -131,7 +131,7 @@ import CustomerUniversityHeader from '@/components/Blog/header/CustomerUniversit
 import CustomerUniversityNavigation from '@/components/Blog/Post/CustomerUniversityNavigation'
 import PostCard from '@/components/Blog/shared/PostCard'
 import ContentLocker from '@/components/Blog/Post/ContentLocker'
-import copyToClipboard from '@/helpers/copyToClipboard'
+import { copyAnchorLinkMixin } from '@/mixins/copyAnchorLinkMixin'
 
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 
@@ -148,7 +148,7 @@ export default {
     Disqus,
   },
 
-  mixins: [findPostAuthorMixin],
+  mixins: [findPostAuthorMixin, copyAnchorLinkMixin],
 
   props: {
     type: {
@@ -296,21 +296,6 @@ export default {
   },
 
   methods: {
-    copyAnchorLink(event) {
-      const copyText = event.target.getAttribute('data-id')
-      if (!copyText) return null
-      const tooltip = event.target.nextElementSibling
-      const link = `${window.location.origin}${this.$router.currentRoute.path}#${copyText}`
-      if (tooltip) {
-        tooltip.innerText = 'Copied!'
-        setTimeout(() => {
-          tooltip.innerText = 'Copy link'
-        }, 3000)
-      }
-      copyToClipboard(link)
-      return link
-    },
-
     scrollToTop() {
       window.scrollTo({
         top: 0,

@@ -538,6 +538,11 @@
           "link": {
             "content": "/clients/case-studies/veeqo/"
           }
+        },
+        "primary": {
+          "background": {
+            "content": "black"
+          }
         }
       }
     },
@@ -553,7 +558,17 @@
           }
         }
       }
-    }
+    },
+    "CasesListSlice": {
+      "default-slice": {
+        "primary": {
+          "background": {
+            "content": "black"
+          }
+        }
+      }
+    },
+    "AwardsSlice": {}
   },
   "_cts": {
     "singleimage": {},
