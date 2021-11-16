@@ -80,7 +80,7 @@ exports[`MobileApplications component should render correctly 1`] = `
           class="case_quote-author"
         >
           
-    Alexander Edakin, backend developer
+    Alexander Edakin, Backend Developer
   
         </p>
       </div>
@@ -104,15 +104,19 @@ exports[`MobileApplications component should render correctly 1`] = `
     </div>
      
     <div
-      class="container_middle background-color-silver p-48_top p-48_bottom media-p-16_top media-p-16_bottom m-96_bottom media-m-48_bottom"
+      class="container_middle background-color-silver m-96_bottom media-m-48_bottom"
     >
-      <img
-        alt="Internal Schema"
-        class="case_image-schema"
-        data-src="img.jpg"
-        height="713"
-        width="969"
-      />
+      <div
+        class="p-48_top p-48_bottom media-p-16_top media-p-16_bottom"
+      >
+        <img
+          alt="Internal Schema"
+          class="case_image-schema"
+          data-src="img.jpg"
+          height="713"
+          width="969"
+        />
+      </div>
     </div>
   </section>
 </div>
