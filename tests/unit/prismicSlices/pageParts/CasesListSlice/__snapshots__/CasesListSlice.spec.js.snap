@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CaseListSlice component should render correctly 1`] = `
+<div>
+  <section>
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="test-case-container"
+    >
+      <div
+        class="case-list-slice"
+      >
+        <caseslistitem-stub
+          data-testid="test-case-card"
+          link="/"
+          logo="[object Object]"
+          titletag="h3"
+          width="full"
+        />
+        <caseslistitem-stub
+          data-testid="test-case-card"
+          link="/"
+          logo="[object Object]"
+          titletag="h3"
+          width="big"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

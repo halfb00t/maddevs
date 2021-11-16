@@ -17,15 +17,23 @@ const buildRequest = (req, key) => ({
 
 async function index(req, res) {
   const parsedReq = parseRequest(req)
-  const ip = getIPByRequest(req)
+  const ip = await getIPByRequest(req)
   const { city, country } = await getLocationByIP(ip)
   if (isBlockedIP(ip)) return res.json({ error: 'Your ip is in a blacklist' })
 
   const huntflowReq = buildRequest(parsedReq, 'huntflow')
+  const rawBodyReq = buildRequest(parsedReq, 'email')
+
   const emailReq = {
-    ...buildRequest(parsedReq, 'email'),
-    ip,
-    geoIp: `Country: ${country}, City: ${city}`,
+    ...rawBodyReq,
+    body: {
+      ...rawBodyReq.body,
+      variables: {
+        ...rawBodyReq.body.variables,
+        ip,
+        geoIp: `Country: ${country}, City: ${city}`,
+      },
+    },
   }
 
   const huntflowValidation = validate(huntflowReq, 'huntflow')

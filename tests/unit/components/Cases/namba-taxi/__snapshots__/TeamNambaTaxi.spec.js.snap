@@ -1,0 +1,634 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamNambaTaxi component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h3
+      class="case_title_h3 m-24_bottom case_team-title"
+    >
+      
+    Meet the team
+  
+    </h3>
+     
+    <ul
+      class="case_list-team m-72_bottom media-m-41_bottom"
+    >
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Vlad Andreev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="vlad-andreev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Vlad Andreev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Project Manager
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Alla Klimenko"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="alla-klimenko"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Alla Klimenko
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Project Manager
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Alice Jang"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="alice-jang"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Alice Jang
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Project Manager
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Arthur Elizavetenkov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="arthur-elizavetenkov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Arthur Elizavetenkov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Project Manager
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Andrew Minkin"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="andrew-minkin"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Andrew Minkin
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Backend Developer, Team Lead
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Alexander Astashov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="astashov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Alexander Astashov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Full-stack Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Alexander Edakin"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="aleksandr-edakin"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Alexander Edakin
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Backend Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Aziz Sadykov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="aziz-sadykov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Aziz Sadykov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      DevOps Engineer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Alexander Vishnyakov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="alexander-vishnyakov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Alexander Vishnyakov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Frontend Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Aleksey Medvedev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="aleksey-medvedev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Aleksey Medvedev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Full-stack Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Belek Eraliev "
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="belek-eraliev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Belek Eraliev 
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      DevOps Engineer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Belek Abylov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="belek-abylov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Belek Abylov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Backend Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Gennady Karev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="gennady-karev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Gennady Karev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Full-stack Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Dastan Mamyrov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="dastan-mamyrov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Dastan Mamyrov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Mobile Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Rustom Kulbatyrov"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="kulbatyrov"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Rustom Kulbatyrov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Mobile Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Pavel Pushkarev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="pushkarev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Pavel Pushkarev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Mobile Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Aibek Nogoev"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="aibek-nogoev"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Aibek Nogoev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Mobile Developer
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture-stub
+          alt="Aisalkyn Tashmatova"
+          background="true"
+          class="case_team-item__image"
+          extension="png"
+          file="aisalkyn-tashmatova"
+          folder="common"
+          height="50"
+          width="50"
+        />
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Aisalkyn Tashmatova
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Mobile Developer
+    
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+`;

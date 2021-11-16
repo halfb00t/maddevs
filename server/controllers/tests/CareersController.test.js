@@ -121,25 +121,6 @@ describe('careersController', () => {
       })
   })
 
-  it('should correctly handle invalid variables in req body', async () => {
-    req = {
-      body: {
-        payload: '{ "huntflow": { "firstName": "first", "lastName": "last" }, "email": { "templateId": 123 } ,"token": "test"}',
-      },
-      file: {
-        path: 'path',
-      },
-    }
-    await controller.index(req, res)
-    expect(res.status)
-      .toHaveBeenCalledWith(500)
-    expect(json)
-      .toHaveBeenCalledWith({
-        message: 'variables key not found',
-        status: 500,
-      })
-  })
-
   it('should correctly call sendEmail and createLead methods', async () => {
     req = {
       body: {
