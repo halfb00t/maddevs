@@ -83,7 +83,7 @@ export default {
 
 .card-item {
   box-sizing: border-box;
-  padding: 80px;
+  padding: 80px 70px;
   color: $text-color--white-primary;
   background-color: $bgcolor--black-pale;
   display: grid;

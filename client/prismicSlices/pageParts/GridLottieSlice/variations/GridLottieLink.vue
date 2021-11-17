@@ -93,7 +93,7 @@ export default {
   box-sizing: border-box;
   color: $text-color--white-primary;
   background-color: $bgcolor--black-pale;
-  padding: 80px;
+  padding: 80px 70px;
   display: grid;
   grid-template-areas:"lottie" "content" "button";
 
