@@ -1,12 +1,10 @@
-const { sendMailFromVariables, sendEmailToRequest, verifyEmailDelivery } = require('../services/EmailsService')
+const { sendMailFromVariables } = require('../services/EmailsService')
 const { createLead } = require('../services/LeadsService')
 const { validate } = require('../utils/validation')
 const {
   getIPByRequest, getLocationByIP, isBlockedIP, isTestIP,
 } = require('../services/IPService')
 const { reCaptchaVerification } = require('../services/reCaptchaVerification')
-
-const ADDRESS_NOT_FOUND_ERROR = 550
 
 async function create(req, res) {
   if (req.body.variables.fromId === 'contact-me-modal') {
@@ -36,12 +34,6 @@ async function create(req, res) {
     if (testEmail === '') return res.json({ error: 'Test email is absent' })
     await sendMailFromVariables(body)
     return res.json({ message: 'Request sent to test email' })
-  }
-
-  const delivery = await sendEmailToRequest(body)
-  const deliveryReport = await verifyEmailDelivery(delivery.id)
-  if (deliveryReport.smtp_answer_code === ADDRESS_NOT_FOUND_ERROR && !body.variables.phoneNumber) {
-    return res.json({ error: deliveryReport?.smtp_answer_code })
   }
 
   await sendMailFromVariables(body)

@@ -2,7 +2,6 @@ const sendpulse = require('sendpulse-api')
 const config = require('../config')
 
 const DEFAULT_FROM_EMAIL = 'marketing@maddevs.io'
-const DEFAULT_FROM_EMAIL_TEAM = 'team@maddevs.io'
 const DEFAULT_TO_NAME = 'Mad Devs Team'
 
 async function initSendpulse(userId, apiKey, tokenStorage) {
@@ -70,29 +69,6 @@ async function sendMailFromVariables({ variables, templateId, attachment }) {
   return send(email)
 }
 
-async function verifyEmailDelivery(id) {
-  return new Promise(resolve => {
-    sendpulse.smtpGetEmailInfoById(data => {
-      resolve(data)
-    }, id)
-  })
-}
-
-async function sendEmailToRequest({ variables }) {
-  const emailParams = {
-    templateId: 672221, // Required
-    variables,
-    subject: variables.subject,
-    fromName: DEFAULT_TO_NAME,
-    fromEmail: DEFAULT_FROM_EMAIL_TEAM,
-    toName: variables.fullName,
-    toEmail: variables.email,
-  }
-
-  const email = buildEmail(emailParams)
-  return send(email)
-}
-
 async function sendCVResponseMail({ variables }) {
   const emailParams = {
     templateId: 638666,
@@ -110,7 +86,5 @@ async function sendCVResponseMail({ variables }) {
 
 module.exports = {
   sendMailFromVariables,
-  sendEmailToRequest,
   sendCVResponseMail,
-  verifyEmailDelivery,
 }
