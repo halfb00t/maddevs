@@ -134,6 +134,20 @@ exports[`CasesList component should render correctly 1`] = `
         videofilename="/videos/citycam-banner.mp4#t=1"
         width="small"
       />
+      <caseslistitem-stub
+        class="cases-list_nambataxi"
+        data-testid="test-case-card"
+        desc="The system that took urban transport in Bishkek, Kyrgyzstan to the next level in 2013 by making taxi ordering fast, efficient and convenient and continues to function today."
+        item="[object Object]"
+        link="/clients/case-studies/namba-taxi/"
+        logo="[object Object]"
+        posterlink="/images/Cases/nambataxi/png/nambataxi-banner.png"
+        subtitle="Transportation"
+        title="Namba Taxi: Modernising transport"
+        titletag="h3"
+        videofilename="/videos/namba-taxi-banner.mp4#t=1"
+        width="full"
+      />
     </section>
      
     <nuxtlink-stub

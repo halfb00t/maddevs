@@ -72,9 +72,7 @@ export default {
     const modalWithReCapthca = document.getElementById(this.id)
     if (modalWithReCapthca) {
       const reCapthcaTask = modalWithReCapthca.nextSibling
-      if (reCapthcaTask) {
-        reCapthcaTask.remove()
-      }
+      if (reCapthcaTask) reCapthcaTask.remove()
     }
 
     this.$recaptcha.destroy()

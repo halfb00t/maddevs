@@ -47,9 +47,9 @@
       </div>
       <hr class="customer-university__hr customer-university__hr--margin">
       <CustomerUniversityTitle
+        id="mad-community"
         title="Mad"
         subtitle="Community"
-        anchor-link="https://maddevs.io/insights/blog/#mad-community"
       />
       <p class="customer-university__text">
         Are you considering Mad Devs as a company to work on your next project,

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AwardsSlice slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="awards-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="awards-slice__container container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="awards-container-test"
+    >
+      <div
+        class="awards-slice__cards"
+      >
+        <div
+          class="award-card"
+          data-testid="award-card-test"
+        >
+          <img
+            alt="alt text"
+            class="award-card__image"
+            data-src="https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+            height="200"
+            width="200"
+          />
+        </div>
+        <div
+          class="award-card"
+          data-testid="award-card-test"
+        >
+          <img
+            alt="alt text"
+            class="award-card__image"
+            data-src="https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+            height="200"
+            width="200"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`AwardsSlice slice should render correctly without data 1`] = `
+<div>
+  <section
+    class="awards-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="awards-slice__container container aos-init aos-animate"
+      data-aos="fade-up"
+      data-testid="awards-container-test"
+    >
+      <div
+        class="awards-slice__cards"
+      />
+    </div>
+  </section>
+</div>
+`;

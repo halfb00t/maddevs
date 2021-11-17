@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nambataxi _uid component should render correctly 1`] = `
+<div>
+  <main
+    class="case case--nambaTaxi"
+  >
+    <section
+      class="case_header case_header-namba-taxi"
+      id="transparent-header-area"
+    >
+      <img
+        alt="case video fallback"
+        class="case_main-video_fallback"
+        data-src="img.jpg"
+      />
+       
+      <!---->
+       
+      <div
+        class="case_header-content"
+      >
+        <div
+          class="case_header-text"
+          style="opacity: 1;"
+        >
+          <div
+            class="case_case-study-item"
+          >
+            
+        Case Study
+      
+          </div>
+           
+          <h1
+            class="case_header-title"
+          >
+            
+      Namba Taxi: 
+            <br />
+             Modernising transport
+    
+          </h1>
+           
+          <p
+            class="case_header-description"
+          >
+            
+      The system that took urban transport in Bishkek, Kyrgyzstan to the 
+            <br />
+             next level in 2013 by making taxi ordering
+      fast, efficient and 
+            <br />
+             convenient and continues to function today.
+    
+          </p>
+           
+        </div>
+         
+        <img
+          alt="Namba Taxi"
+          class="case_header-logo case_nambataxi"
+          height="63"
+          src="img.jpg"
+          style="opacity: 1;"
+          width="218"
+        />
+      </div>
+    </section>
+     
+    <main-stub />
+     
+    <section
+      class="case_footer container_full"
+    >
+      <img
+        alt="Clutch"
+        class="case_logotype-clutch"
+        data-src="[object Object]"
+        height="138"
+        width="312"
+      />
+       
+      <h2
+        class="case_title case_title_h2 case_title-clutch"
+      >
+        
+    The growth of Clutch.co
+  
+      </h2>
+       
+      <nuxtlink-stub
+        class="case_next-project-button"
+        to="/clients/case-studies/clutch/"
+      >
+        
+    Read next project
+  
+      </nuxtlink-stub>
+    </section>
+  </main>
+</div>
+`;
