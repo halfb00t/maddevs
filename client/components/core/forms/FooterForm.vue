@@ -10,15 +10,14 @@
       :fullname-required="false"
       button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
       class-name="footer-form"
-      :recaptcha-error="recaptchaError"
       @submit="handleSubmit"
     >
       <template #reCaptcha>
         <div class="recaptcha">
           <recaptcha
-            id="v2-footer"
-            :site-key="recaptchaSiteKey"
+            @error="onError"
             @success="onSuccess"
+            @expired="onExpired"
           />
         </div>
       </template>
@@ -48,41 +47,26 @@ export default {
 
   data() {
     return {
+      ecaptchaError: true,
       token: null,
-      recaptchaError: true,
-      widgetFooterId: 0,
     }
   },
 
-  computed: {
-    recaptchaSiteKey() {
-      return `${process.env.reCaptchaSiteKey}`
-    },
-  },
-
-  async mounted() {
-    await this.$recaptcha.init()
-
-    this.widgetFooterId = this.$recaptcha.render('v2-footer', {
-      sitekey: process.env.reCaptchaSiteKey,
-    })
-  },
-
-  beforeDestroy() {
-    this.$recaptcha.destroy()
-  },
-
   methods: {
+    onError(error) {
+      console.log('Error happened:', error)
+    },
+
     onSuccess() {
       this.recaptchaError = false
     },
 
+    onExpired() {
+      console.log('Expired')
+    },
+
     async handleSubmit(formData) {
-      try {
-        this.token = await this.$recaptcha.getResponse(this.widgetFooterId)
-      } catch (e) {
-        console.log(e)
-      }
+      this.token = await this.$recaptcha.getResponse()
       const variables = {
         ...formData,
         formLocation: 'Footer component',
@@ -91,11 +75,10 @@ export default {
 
       // from mixin
       this.submitLead(variables)
-
+      await this.$recaptcha.reset()
+      this.recaptchaError = true
       this.disableScrollOnBody()
       this.$refs.successModal.show()
-      await this.$recaptcha.reset(this.widgetFooterId)
-      this.recaptchaError = true
     },
 
     reset() {

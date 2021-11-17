@@ -13,9 +13,9 @@
     <template #reCaptcha>
       <div class="recaptcha">
         <recaptcha
-          id="v2-modal"
-          :site-key="recaptchaSiteKey"
+          @error="onError"
           @success="onSuccess"
+          @expired="onExpired"
         />
       </div>
     </template>
@@ -50,22 +50,7 @@ export default {
     return {
       recaptchaError: true,
       token: null,
-      widgetModalId: 0,
     }
-  },
-
-  computed: {
-    recaptchaSiteKey() {
-      return `${process.env.reCaptchaSiteKey}`
-    },
-  },
-
-  async mounted() {
-    await this.$recaptcha.init()
-
-    this.widgetModalId = this.$recaptcha.render('v2-modal', {
-      sitekey: process.env.reCaptchaSiteKey,
-    })
   },
 
   beforeDestroy() {
@@ -74,21 +59,23 @@ export default {
       const reCapthcaTask = modalWithReCapthca.nextSibling
       if (reCapthcaTask) reCapthcaTask.remove()
     }
-
-    this.$recaptcha.destroy()
   },
 
   methods: {
+    onError(error) {
+      console.log('Error happened:', error)
+    },
+
     onSuccess() {
       this.recaptchaError = false
     },
 
+    onExpired() {
+      console.log('Expired')
+    },
+
     async handleSubmit(formData) {
-      try {
-        this.token = await this.$recaptcha.getResponse(this.widgetModalId)
-      } catch (e) {
-        console.log(e)
-      }
+      this.token = await this.$recaptcha.getResponse()
       const variables = {
         ...formData,
         formLocation: this.formLocation,
@@ -98,7 +85,7 @@ export default {
 
       // from mixin
       this.submitLead(variables)
-      await this.$recaptcha.reset(this.widgetModalId)
+      await this.$recaptcha.reset()
       this.recaptchaError = true
     },
 

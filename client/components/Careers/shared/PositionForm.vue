@@ -131,17 +131,10 @@
             </li>
           </ul>
         </p>
-        <div class="position-form__recaptcha">
-          <recaptcha
-            id="v2-position"
-            :site-key="recaptchaSiteKey"
-            @success="onSuccess"
-          />
-        </div>
       </div>
       <UIButton
         type="submit"
-        :disabled="$v.validationGroup.$invalid || recaptchaError"
+        :disabled="$v.validationGroup.$invalid"
       >
         {{ $t('careers.detailPage.form.btn') }}
       </UIButton>
@@ -220,9 +213,6 @@ export default {
       cvFile: null,
       linkedin: null,
       form: '',
-      recaptchaError: true,
-      widgetPositionId: 0,
-      token: null,
     }
   },
 
@@ -247,30 +237,10 @@ export default {
         },
       ]
     },
-
-    recaptchaSiteKey() {
-      return `${process.env.reCaptchaSiteKey}`
-    },
-  },
-
-  async mounted() {
-    await this.$recaptcha.init()
-
-    this.widgetPositionId = this.$recaptcha.render('v2-position', {
-      sitekey: process.env.reCaptchaSiteKey,
-    })
-  },
-
-  beforeDestroy() {
-    this.$recaptcha.destroy()
   },
 
   methods: {
     ...mapActions(['sendVacancy']),
-
-    onSuccess() {
-      this.recaptchaError = false
-    },
 
     toBase64(file) {
       return new Promise((resolve, reject) => {
@@ -285,7 +255,6 @@ export default {
       const splitedName = this.name.split(' ')
       const base64File = await this.toBase64(this.cvFile)
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
-      this.token = await this.$recaptcha.getResponse(this.widgetPositionId)
 
       return {
         body: {
@@ -301,8 +270,6 @@ export default {
             positionValue: this.grade.value,
             linkedinProfile: this.linkedin,
           },
-
-          token: this.token,
 
           email: {
             templateId: 305491, // Required
@@ -356,8 +323,6 @@ export default {
       this.sendVacancy(applicantData)
       this.$refs.successModal.show()
       this.resetForm()
-      await this.$recaptcha.reset(this.widgetPositionId)
-      this.recaptchaError = true
     },
 
   },
@@ -388,10 +353,6 @@ export default {
     @media screen and (max-width: 400px) {
       display: block;
     }
-  }
-
-  &__recaptcha {
-    margin-top: 32px;
   }
 
   &__field-positions {
