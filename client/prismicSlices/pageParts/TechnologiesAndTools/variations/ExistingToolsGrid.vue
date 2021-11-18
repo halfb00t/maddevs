@@ -5,6 +5,7 @@
   >
     <div
       class="container"
+      :class="{ 'aos-animate': alreadyAnimated }"
       :data-aos="animation"
       data-testid="tools-slice-container"
     >
@@ -50,6 +51,7 @@ export default {
   data() {
     return {
       activeCategory: null,
+      alreadyAnimated: false, // needed to prevent the aos animation repeating on DOM changes
     }
   },
 
@@ -67,6 +69,7 @@ export default {
 
   methods: {
     onSelectCategory(value) {
+      this.alreadyAnimated = true
       if (this.activeCategory === value) {
         this.activeCategory = null
         return null
