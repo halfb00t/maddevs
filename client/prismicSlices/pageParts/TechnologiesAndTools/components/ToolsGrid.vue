@@ -13,7 +13,7 @@
     >
       <img
         v-lazy-load
-        :data-src="$getMediaFromS3(`/images/toolsGrid/${tool.icon}.svg`)"
+        :data-src="$getMediaFromS3(`/images/tech-stack/${tool.icon}.svg`)"
         width="26"
         height="26"
         alt="Icon"
