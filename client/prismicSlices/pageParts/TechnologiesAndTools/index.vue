@@ -18,7 +18,7 @@
     <ExistingToolsGrid
       v-if="slice.variation === 'existingToolsGrid'"
       v-bind="slice.primary"
-      data-testid="tools-grid-variation"
+      data-testid="existing-grid-variation"
     />
   </section>
 </template>
