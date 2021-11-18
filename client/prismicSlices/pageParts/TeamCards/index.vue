@@ -6,6 +6,7 @@
     <div class="container">
       <div
         class="meet-our-experts__experts-list"
+        :class="{ 'aos-animate': alreadyAnimated }"
         :data-aos="animation"
       >
         <div
@@ -82,11 +83,13 @@ export default {
       experts: this.slice.items,
       hoverCount: 0,
       toggleImage: true,
+      alreadyAnimated: false,
     }
   },
 
   methods: {
     toggleImageHanlde() {
+      this.alreadyAnimated = true
       this.hoverCount += 1
       if (this.hoverCount >= 3) {
         this.toggleImage = !this.toggleImage
