@@ -64,6 +64,7 @@ export default {
     background: transparent;
     padding: 0;
     color: #938f95;
+    font-size: 14px;
     line-height: 22px;
     letter-spacing: -0.02em;
     margin-right: 31px;
