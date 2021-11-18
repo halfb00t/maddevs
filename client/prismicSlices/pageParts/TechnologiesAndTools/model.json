@@ -33,6 +33,19 @@
           },
           "type": "Select"
         },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
         "title": {
           "config": {
             "label": "Title",
@@ -71,6 +84,19 @@
             ]
           },
           "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
         }
       },
       "items": {
@@ -93,6 +119,63 @@
           "type": "Text"
         }
       }
+    },
+    {
+      "id": "existingToolsGrid",
+      "name": "ExistingToolsGrid",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TechnologiesAndTools",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        },
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        },
+        "selectedTools": {
+          "config": {
+            "label": "Tools grid",
+            "placeholder": "Need to select tools grid from list",
+            "options": [
+              "frontend",
+              "backend"
+            ],
+            "default_value": "frontend"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
     }
   ]
 }

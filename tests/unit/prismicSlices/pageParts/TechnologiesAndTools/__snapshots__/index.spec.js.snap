@@ -12,7 +12,7 @@ exports[`Technologies and Tools Grid slice should correctly render CardGridWithI
       class="tools-slice"
       data-testid="tools-grid-variation"
       primary="[object Object]"
-      variation="not-default-slice"
+      variation="toolsGrid"
     >
       <div
         class="container aos-init aos-animate"
@@ -24,6 +24,8 @@ exports[`Technologies and Tools Grid slice should correctly render CardGridWithI
         />
       </div>
     </section>
+     
+    <!---->
   </section>
 </div>
 `;
@@ -1209,6 +1211,8 @@ exports[`Technologies and Tools Grid slice should correctly render TechnologiesA
         </div>
       </div>
     </section>
+     
+    <!---->
      
     <!---->
   </section>

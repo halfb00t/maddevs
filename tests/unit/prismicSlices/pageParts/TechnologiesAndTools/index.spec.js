@@ -25,11 +25,12 @@ describe('Technologies and Tools Grid slice', () => {
 
     expect(screen.queryByTestId('technologies-grid-variation')).not.toBeNull()
     expect(screen.queryByTestId('tools-grid-variation')).toBeNull()
+    expect(screen.queryByTestId('existing-grid-variation')).toBeNull()
     expect(container).toMatchSnapshot()
   })
 
   it('should correctly render CardGridWithIcon component', () => {
-    const variation = 'not-default-slice'
+    const variation = 'toolsGrid'
     const props = getFakePropsByParams(apiData, { variation })
 
     const { container } = render(TechnologiesAndTools, {
