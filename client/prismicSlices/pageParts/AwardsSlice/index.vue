@@ -83,6 +83,31 @@ export default {
     display: flex;
     flex-flow: row wrap-reverse;
     justify-content: center;
+    @media screen and (max-width: 1420px) {
+      width: calc(100% + 10px);
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+    @media screen and (max-width: 1220px) {
+      padding: 0 75px;
+    }
+    @media screen and (max-width: 1068px) {
+      padding: 0;
+    }
+    @media screen and (max-width: 662px) {
+      display: grid;
+      grid-gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0;
+    }
+    @media screen and (max-width: 560px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 400px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -96,6 +121,27 @@ export default {
   background-color: $bgcolor--white;
   margin-left: 20px;
   margin-top: 20px;
+  @media screen and (max-width: 1420px) {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  @media screen and (max-width: 1360px) {
+    width: 150px;
+  }
+  @media screen and (max-width: 1290px) {
+    width: 140px;
+  }
+  @media screen and (max-width: 920px) {
+    padding: 7px 20px;
+    width: 116px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 102px;
+  }
+  @media screen and (max-width: 662px) {
+    width: 100%;
+    margin: 0;
+  }
   img {
     display: block;
     width: 100%;
