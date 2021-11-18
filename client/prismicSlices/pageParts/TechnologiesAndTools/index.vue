@@ -9,11 +9,15 @@
       :data-aos="slice.primary.animation"
       data-testid="technologies-grid-variation"
     />
-
     <ToolsGrid
-      v-if="slice.variation !== 'default-slice'"
+      v-if="slice.variation === 'toolsGrid'"
       v-bind="slice"
       :slice="slice"
+      data-testid="tools-grid-variation"
+    />
+    <ExistingToolsGrid
+      v-if="slice.variation === 'existingToolsGrid'"
+      v-bind="slice.primary"
       data-testid="tools-grid-variation"
     />
   </section>
@@ -22,6 +26,7 @@
 <script>
 import TechnologiesAndTools from './variations/TechnologiesAndTools'
 import ToolsGrid from './variations/ToolsGrid'
+import ExistingToolsGrid from './variations/ExistingToolsGrid'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
@@ -29,6 +34,7 @@ export default {
   components: {
     TechnologiesAndTools,
     ToolsGrid,
+    ExistingToolsGrid,
   },
 
   mixins: [
