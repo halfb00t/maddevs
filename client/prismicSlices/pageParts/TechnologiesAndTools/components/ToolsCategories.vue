@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-if="categories && categories.length"
-    class="tools-categories"
-  >
+  <div class="tools-categories">
     <button
       v-for="category in categories"
       :key="category.value"
