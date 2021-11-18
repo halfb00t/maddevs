@@ -57,13 +57,13 @@ export const toolsData = {
         color: frontendColors.stack,
       },
       {
-        icon: 'next',
+        icon: 'nextjs',
         label: 'Next.js',
         category: 'stack',
         color: frontendColors.stack,
       },
       {
-        icon: 'nuxt',
+        icon: 'nuxtjs',
         label: 'Nuxt.js',
         category: 'stack',
         color: frontendColors.stack,
@@ -231,7 +231,7 @@ export const toolsData = {
         color: frontendColors.integrations,
       },
       {
-        icon: 'OSRM',
+        icon: 'osrm',
         label: 'OSRM',
         category: 'integrations',
         color: frontendColors.integrations,
