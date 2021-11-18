@@ -54,8 +54,8 @@ export default {
   align-items: center;
   justify-content: center;
   margin-bottom: 43px;
-  @media screen and (max-width: 976px) {
-    margin-bottom: 10px;
+  @media screen and (max-width: 768px) {
+    justify-content: flex-start;
   }
 
   &__checkbox {
@@ -63,27 +63,17 @@ export default {
     outline: none;
     background: transparent;
     padding: 0;
-    margin-right: 31px;
     color: #938f95;
-    font-size: 14px;
     line-height: 22px;
     letter-spacing: -0.02em;
+    margin-right: 31px;
     display: flex;
     align-items: center;
     cursor: pointer;
-    @media screen and (max-width: 976px) {
-      margin-right: 9px;
-      margin-left: 9px;
+    @media screen and (max-width: 768px) {
       font-size: 12px;
-      line-height: 18px;
-      margin-bottom: 14px;
-    }
-    @media screen and (max-width: 390px) {
-      margin-right: 0;
-      margin-left: 7px;
-    }
-    @media screen and (max-width: 330px) {
-      font-size: 10px;
+      line-height: 16px;
+      margin-right: 18px;
     }
 
     &:last-child {
@@ -104,6 +94,10 @@ export default {
       height: 16px;
       border-radius: 2px;
       margin-right: 8px;
+      @media screen and (max-width: 768px) {
+        margin-right: 4px;
+      }
+
       &::after {
         content: '';
         display: inline-block;

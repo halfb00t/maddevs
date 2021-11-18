@@ -53,6 +53,10 @@ export default {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   &__item {
     display: flex;
@@ -62,6 +66,10 @@ export default {
     width: 102px;
     height: 90px;
     transition: opacity 0.2s linear;
+    @media screen and (max-width: 768px) {
+      width: 51px;
+      height: 54px;
+    }
     &,
     &--active {
       opacity: 1;
@@ -74,6 +82,11 @@ export default {
       width: 26px;
       min-width: 26px;
       height: 26px;
+      @media screen and (max-width: 768px) {
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+      }
     }
     &-label {
       @include font('Inter', 12px, 400);
@@ -86,6 +99,9 @@ export default {
       text-overflow: ellipsis;
       overflow: hidden;
       text-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 8px;
+      }
     }
   }
 }

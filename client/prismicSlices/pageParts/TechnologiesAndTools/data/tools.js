@@ -12,7 +12,7 @@ export const toolsData = {
       {
         label: 'Frontend Stack',
         value: 'stack',
-        color: frontendColors.technologies,
+        color: frontendColors.stack,
       },
       {
         label: 'Instruments',
