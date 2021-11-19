@@ -1,5 +1,12 @@
 <template>
-  <div :class="`customer-university-card customer-university-card--${direction} customer-university-card--${size} customer-university-card--w-${width}`">
+  <div
+    :class="[
+      'customer-university-card',
+      `customer-university-card--${size}`,
+      `customer-university-card--w-${width}`,
+      `customer-university-card customer-university-card--${direction}`,
+    ]"
+  >
     <NuxtLink
       :to="postLink"
       class="customer-university-card__image"
@@ -13,18 +20,17 @@
       >
     </NuxtLink>
     <NuxtLink
-      :to="`/customer-university/${postId}/`"
+      :to="postLink"
       class="customer-university-card__info"
     >
       <span
         v-if="isMain"
         class="customer-university-card__date"
-      >{{ date }}</span>
+      >
+        {{ date }}
+      </span>
       <h2 class="customer-university-card__title">
-        {{
-          $prismic.asText(title)
-            .replace(/^[0-9]*\. /, '')
-        }}
+        {{ $prismic.asText(title).replace(/^[0-9]*\. /, '') }}
       </h2>
       <p class="customer-university-card__text">
         {{ firstParagraph }}
@@ -55,12 +61,12 @@ export default {
 
     title: {
       type: Array,
-      default: () => ([]),
+      default: () => [],
     },
 
     body: {
       type: Array,
-      default: () => ([]),
+      default: () => [],
     },
 
     date: {
@@ -307,7 +313,8 @@ export default {
       flex-wrap: wrap;
 
       .customer-university-card {
-        &__image, &__info {
+        &__image,
+        &__info {
           width: 100%;
         }
 
@@ -318,5 +325,4 @@ export default {
     }
   }
 }
-
 </style>
