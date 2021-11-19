@@ -83,7 +83,7 @@ export default {
       experts: this.slice.items,
       hoverCount: 0,
       toggleImage: true,
-      alreadyAnimated: false,
+      alreadyAnimated: false, // needed to prevent the aos animation repeating on DOM changes
     }
   },
 
