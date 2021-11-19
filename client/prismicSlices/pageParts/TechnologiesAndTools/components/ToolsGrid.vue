@@ -49,6 +49,9 @@ export default {
 
 <style lang="scss" scoped>
 .tools-grid {
+  width: calc(100% + 1px);
+  margin-left: -1px;
+  margin-top: -1px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -59,6 +62,8 @@ export default {
   }
 
   &__item {
+    margin-left: 1px;
+    margin-top: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
