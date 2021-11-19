@@ -3,6 +3,7 @@
     <div
       v-for="tool in tools"
       :key="tool.label"
+      :title="tool.label"
       class="tools-grid__item"
       :class="[
         `${tool.category}`,
@@ -19,10 +20,7 @@
         alt="Icon"
         class="tools-grid__item-icon"
       >
-      <span
-        class="tools-grid__item-label"
-        :title="tool.label"
-      >
+      <span class="tools-grid__item-label">
         {{ tool.label }}
       </span>
     </div>
@@ -49,6 +47,9 @@ export default {
 
 <style lang="scss" scoped>
 .tools-grid {
+  width: calc(100% + 1px);
+  margin-left: -1px;
+  margin-top: -1px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -59,6 +60,8 @@ export default {
   }
 
   &__item {
+    margin-left: 1px;
+    margin-top: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -5,9 +5,7 @@
       :key="category.value"
       type="button"
       class="tools-categories__checkbox"
-      :class="{
-        'tools-categories__checkbox--active': activeCategory === category.value
-      }"
+      :class="{ 'tools-categories__checkbox--active': activeCategory === category.value }"
       @click="setActiveCategory(category.value)"
     >
       <div
@@ -56,14 +54,14 @@ export default {
   }
 
   &__checkbox {
+    @include font('Inter', 14px, 400);
+    line-height: 22px;
+    letter-spacing: -0.02em;
     border: 0px;
     outline: none;
     background: transparent;
     padding: 0;
     color: #938f95;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: -0.02em;
     margin-right: 31px;
     display: flex;
     align-items: center;
