@@ -3,6 +3,7 @@
     <div
       v-for="tool in tools"
       :key="tool.label"
+      :title="tool.label"
       class="tools-grid__item"
       :class="[
         `${tool.category}`,
@@ -19,10 +20,7 @@
         alt="Icon"
         class="tools-grid__item-icon"
       >
-      <span
-        class="tools-grid__item-label"
-        :title="tool.label"
-      >
+      <span class="tools-grid__item-label">
         {{ tool.label }}
       </span>
     </div>
