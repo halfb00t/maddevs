@@ -5,15 +5,18 @@
   >
     <div
       class="container"
+      :class="{ 'aos-animate': alreadyAnimated }"
       :data-aos="animation"
       data-testid="tools-slice-container"
     >
       <ToolsCategories
+        v-if="categories && categories.length"
         :categories="categories"
         :active-category="activeCategory"
         @selectCategory="onSelectCategory"
       />
       <ToolsGrid
+        v-if="tools && tools.length"
         :tools="tools"
         :active-category="activeCategory"
       />
@@ -48,29 +51,25 @@ export default {
   data() {
     return {
       activeCategory: null,
+      alreadyAnimated: false, // needed to prevent the aos animation repeating on DOM changes
     }
   },
 
   computed: {
     categories() {
-      if (
-        !toolsData[this.selectedTools]
-        && !toolsData[this.selectedTools].categories
-      ) return []
+      if (!toolsData[this.selectedTools]) return []
       return toolsData[this.selectedTools].categories
     },
 
     tools() {
-      if (
-        !toolsData[this.selectedTools]
-        && !toolsData[this.selectedTools].tools
-      ) return []
+      if (!toolsData[this.selectedTools]) return []
       return toolsData[this.selectedTools].tools
     },
   },
 
   methods: {
     onSelectCategory(value) {
+      this.alreadyAnimated = true
       if (this.activeCategory === value) {
         this.activeCategory = null
         return null

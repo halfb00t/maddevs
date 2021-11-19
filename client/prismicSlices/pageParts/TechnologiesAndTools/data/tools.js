@@ -2,7 +2,7 @@
 const frontendColors = {
   stack: 'rgba(40, 29, 29, 1)',
   instruments: 'rgba(33, 33, 33, 1)',
-  integrations: 'rgba(33, 33, 33, 1)',
+  integrations: 'rgba(31, 30, 40, 1)',
 }
 
 // Data
