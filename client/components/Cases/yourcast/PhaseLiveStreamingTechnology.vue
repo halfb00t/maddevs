@@ -85,11 +85,12 @@
       class="container_full background-color-silver m-96_bottom media-m-48_bottom"
     >
       <div class="container_regular">
-        <Lottie
+        <LottieMad
           id="streaming-technology"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="448px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/yourcast/lottie/streaming-technology.json`)"
+          :autoplay="true"
         />
       </div>
     </div>
@@ -97,13 +98,11 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import Picture from '@/components/Cases/shared/Picture'
-import animationData from '@/assets/lottie/yourcast/streaming-technology.json'
 import isIphoneMixin from '@/mixins/isIphoneMixin'
-import playLottieMixin from '@/mixins/playLottieMixin'
 import { posters } from '@/data/caseYourcast'
 
 export default {
@@ -111,15 +110,11 @@ export default {
   components: {
     TextParagraph,
     TextQuoteBox,
-    Lottie,
+    LottieMad,
     Picture,
   },
 
-  mixins: [isIphoneMixin, playLottieMixin('streaming-technology', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
+  mixins: [isIphoneMixin],
 
   data() {
     return {
