@@ -1,6 +1,6 @@
 <template>
   <section
-    id="success-message"
+    :id="id"
     class="success-message"
   >
     <div class="success-message__conten-wrapper">
@@ -29,6 +29,11 @@ export default {
     title: {
       type: String,
       default: 'Thanks for your <br> interest in Mad Devs',
+    },
+
+    id: {
+      type: String,
+      default: '',
     },
 
     message: {
