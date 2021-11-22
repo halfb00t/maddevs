@@ -18,6 +18,7 @@ const redirectHrTags = require('./middlewares/redirectHrTags')
 const redirectInvalidLinks = require('./middlewares/redirectInvalidLinks')
 const redirectToCorrectCareersUrl = require('./middlewares/redirectToCorrectCareersUrl')
 const redirectToRuCareerPostUrl = require('./middlewares/redirectToRuCareerPostUrl')
+const redirectToPrismicUrl = require('./middlewares/redirectToPrismicUrl')
 
 // config
 const config = require('./config')
@@ -52,6 +53,7 @@ function bootstrap() {
   app.use(redirectInvalidLinks)
   app.use(redirectToCorrectCareersUrl)
   app.use(redirectToRuCareerPostUrl)
+  app.use(redirectToPrismicUrl)
 
   // Routers
   app.use(webRouter)
