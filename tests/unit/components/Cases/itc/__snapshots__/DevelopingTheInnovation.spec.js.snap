@@ -236,10 +236,10 @@ exports[`DevelopingTheInnovation component should render correctly 1`] = `
       <div
         class="m-96_bottom media-m-48_bottom"
       >
-        <lottie-stub
-          class="case_lottie"
+        <div
+          class="lottie-container case_lottie"
           id="benefits-of-cqrs"
-          options="[object Object]"
+          style="--height: 528px; --width: 100%;"
         />
       </div>
        
