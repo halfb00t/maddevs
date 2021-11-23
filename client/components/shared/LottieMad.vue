@@ -81,6 +81,7 @@ export default {
   width: var(--width);
   overflow: hidden;
   margin: 0 auto;
+
   @media screen and (max-width: 990px) {
     width: 100%;
     min-height:20vw;
