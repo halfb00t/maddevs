@@ -17,7 +17,6 @@ const { create: createLead } = require('../controllers/LeadsController')
 const { s3GetLinkWithLifeTime } = require('../controllers/S3Controller')
 const { index: sendVacancyApplication } = require('../controllers/CareersController')
 const { send } = require('../controllers/SendEmailController')
-const { updateRedirects: updatePrismicRedirects } = require('../controllers/PrismicRedirectsController')
 
 const router = express.Router()
 
@@ -25,8 +24,5 @@ router.post('/leads', createLead)
 router.post('/get-link-with-life-time', s3GetLinkWithLifeTime)
 router.post('/careers', multer({ storage }).single('cvFile'), sendVacancyApplication)
 router.post('/send-email', multer({ storage, limits: { fieldSize: 25 * 1024 * 1024 } }).single('base64'), send)
-
-// prismic webhooks
-router.post('/update-prismic-redirects', updatePrismicRedirects)
 
 module.exports = router
