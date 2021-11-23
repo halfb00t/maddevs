@@ -18,11 +18,12 @@
     </div>
     <div class="container_full background-color-silver">
       <div class="container_regular">
-        <Lottie
+        <LottieMad
           id="redesign-and-optimisations"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="570px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/yourcast/lottie/phase-redesign-and-optimisations.json`)"
+          :autoplay="true"
         />
       </div>
     </div>
@@ -33,23 +34,15 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/yourcast/phase-redesign-and-optimisations.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 
 export default {
   name: 'PhaseRedesignAndOptimisations',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [playLottieMixin('redesign-and-optimisations', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
 }
 </script>
 
