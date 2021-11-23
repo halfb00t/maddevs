@@ -256,7 +256,7 @@ export default {
 
     interestRadioChoices: {
       type: Array,
-      default: () => ['Software development with <div>Mad Devs</div>', 'Partnership with <div>Mad Devs</div>', 'Employment at <div>Mad Devs</div>'],
+      default: () => ['Software development', 'Partnership', 'Employment'],
     },
   },
 
