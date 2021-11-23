@@ -4,7 +4,7 @@ exports[`SuccessMessage component should render correctly 1`] = `
 <div>
   <section
     class="success-message"
-    id="success-message"
+    id=""
   >
     <div
       class="success-message__conten-wrapper"
