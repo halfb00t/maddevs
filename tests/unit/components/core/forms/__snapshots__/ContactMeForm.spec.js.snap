@@ -35,7 +35,7 @@ exports[`ContactMeForm component should render correctly 1`] = `
        
       <div
         class="radio-button-list"
-        value=""
+        value="Software development"
       >
         <p
           class="radio-button-list__field-name field-name required"
@@ -57,7 +57,7 @@ exports[`ContactMeForm component should render correctly 1`] = `
               data-testid="test-radio-label-0"
             >
               <div
-                class="radio-button-list__label-text"
+                class="radio-button-list__label-text checked"
               >
                 Software development
               </div>
