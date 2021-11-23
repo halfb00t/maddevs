@@ -1,7 +1,5 @@
 <template>
-  <!-- id is needed for google analytics, don't remove it -->
   <Modal
-    :id="id"
     ref="modalContentLocker"
     modal-background="black"
     :class="{ 'modal-content-locker': !formSended }"
@@ -30,8 +28,10 @@
         @form-sended="handleSendedForm"
       />
     </div>
+    <!-- id is needed for google analytics, don't remove it -->
     <SuccessMessage
       v-else
+      :id="id"
       title="Thank you!"
       :message="successMessage"
     />

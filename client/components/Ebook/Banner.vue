@@ -38,7 +38,7 @@
     </div>
     <!-- this id should be unique, because it used for google analytics -->
     <ModalEbook
-      id="ebook-modal"
+      id="sent-ebook"
       ref="modalEbook"
     />
   </section>

@@ -23,6 +23,6 @@ exports[`Banner component should render correctly with no data 1`] = `
     </div>
     <div class="ebook-banner_book"><img width="392" height="555" src="@/assets/img/Ebook/book.svg" alt="Ebook"></div>
   </div>
-  <modalebook-stub id="ebook-modal" location=""></modalebook-stub>
+  <modalebook-stub id="sent-ebook" location=""></modalebook-stub>
 </section>
 `;

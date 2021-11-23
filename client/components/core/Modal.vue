@@ -5,7 +5,6 @@
   >
     <div
       v-if="isVisible"
-      :id="id"
       v-append-to-body
       class="modal"
     >
@@ -41,13 +40,12 @@
             class="modal_content safari-only"
             @success="makeSuccess"
           >
-            <!-- id is needed for google analytics, don't remove it -->
             <div
               v-if="isSuccess"
-              :id="id"
               class="success-modal"
             >
-              <SuccessMessage />
+              <!-- id is needed for google analytics, don't remove it -->
+              <SuccessMessage :id="id" />
             </div>
             <slot v-else />
           </Simplebar>
