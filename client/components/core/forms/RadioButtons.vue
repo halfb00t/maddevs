@@ -102,23 +102,28 @@ export default {
 
 <style lang="scss" scoped>
 .radio-button-list {
-  margin-bottom: 23px;
+  margin-bottom: 13px;
 
   &__container {
-    display: grid;
-    @include grid(repeat(2, 1fr), auto, 20px, 10px);
-    @media screen and (max-width: 640px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  &__form-checkbox-label{
-    font-size: 16px;
-    &:first-child {
-      margin-bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    & > div {
+      margin-bottom: 10px;
+      margin-right: 20px;
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 
-  &__label-text{
+  &__form-checkbox-label {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  &__label-text {
     white-space: normal;
   }
 
@@ -126,8 +131,9 @@ export default {
     margin-bottom: 10px;
   }
 }
-.checked{
+.checked {
   color: $input-color--grey !important;
+
   div {
     color: $input-color--grey !important;
   }

@@ -35,7 +35,7 @@ exports[`ContactMeForm component should render correctly 1`] = `
        
       <div
         class="radio-button-list"
-        value=""
+        value="Software development"
       >
         <p
           class="radio-button-list__field-name field-name required"
@@ -57,19 +57,16 @@ exports[`ContactMeForm component should render correctly 1`] = `
               data-testid="test-radio-label-0"
             >
               <div
-                class="radio-button-list__label-text"
+                class="radio-button-list__label-text checked"
               >
-                Software development with 
-                <div>
-                  Mad Devs
-                </div>
+                Software development
               </div>
                
               <input
                 class="form-checkbox-input"
                 name="radioBtn"
                 type="radio"
-                value="Software development with <div>Mad Devs</div>"
+                value="Software development"
               />
                
               <div
@@ -87,17 +84,14 @@ exports[`ContactMeForm component should render correctly 1`] = `
               <div
                 class="radio-button-list__label-text"
               >
-                Partnership with 
-                <div>
-                  Mad Devs
-                </div>
+                Partnership
               </div>
                
               <input
                 class="form-checkbox-input"
                 name="radioBtn"
                 type="radio"
-                value="Partnership with <div>Mad Devs</div>"
+                value="Partnership"
               />
                
               <div
@@ -115,17 +109,14 @@ exports[`ContactMeForm component should render correctly 1`] = `
               <div
                 class="radio-button-list__label-text"
               >
-                Employment at 
-                <div>
-                  Mad Devs
-                </div>
+                Employment
               </div>
                
               <input
                 class="form-checkbox-input"
                 name="radioBtn"
                 type="radio"
-                value="Employment at <div>Mad Devs</div>"
+                value="Employment"
               />
                
               <div
