@@ -316,6 +316,13 @@ export default {
         agreeWithPrivacyPolicy: this.agreeWithPrivacyPolicy,
         agreeToGetMadDevsDiscountOffers: this.agreeToGetMadDevsDiscountOffers,
       }
+      if (
+        this.useCompany
+        && this.useInterestRadioInput
+        && this.interestChoice !== 'Software development'
+      ) {
+        formData.company = 'Field was hidden'
+      }
 
       if (this.usePhone) formData.phoneNumber = this.phoneNumber
       if (this.useDescription) formData.description = this.description
