@@ -436,6 +436,10 @@
       "toolsGrid": {
         "primary": {},
         "items": {}
+      },
+      "existingToolsGrid": {
+        "items": {},
+        "primary": {}
       }
     },
     "SingleImage": {

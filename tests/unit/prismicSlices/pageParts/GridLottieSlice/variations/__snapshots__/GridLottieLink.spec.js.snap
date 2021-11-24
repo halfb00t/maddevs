@@ -9,14 +9,14 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
       class="grid-lottie__grid"
     >
       <a
-        class="card-item card-item--text-center card-item-bottom"
+        class="card-item card-item--lottie-bottom card-item--text-center"
         data-testid="grid-lottie-animation-item"
         href="https://maddevs.io/"
         style="background-color: rgb(255, 255, 255);"
         target="_self"
       >
         <div
-          class="card-item__lottie card-item__lottie-bottom"
+          class="card-item__lottie"
         >
           <div
             class="lottie-container"
@@ -26,7 +26,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         </div>
          
         <div
-          class="card-item__content card-item__content-bottom"
+          class="card-item__content"
         >
           <p>
             First item content
@@ -43,14 +43,14 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         </button>
       </a>
       <a
-        class="card-item card-item--text-center card-item-bottom"
+        class="card-item card-item--lottie-bottom card-item--text-center"
         data-testid="grid-lottie-animation-item"
         href="https://maddevs.io/"
         style="background-color: rgb(255, 255, 255);"
         target="_self"
       >
         <div
-          class="card-item__lottie card-item__lottie-bottom"
+          class="card-item__lottie"
         >
           <div
             class="lottie-container"
@@ -60,7 +60,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         </div>
          
         <div
-          class="card-item__content card-item__content-bottom"
+          class="card-item__content"
         >
           <p>
             second item content
@@ -77,14 +77,14 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         </button>
       </a>
       <a
-        class="card-item card-item--text-center card-item-bottom"
+        class="card-item card-item--lottie-bottom card-item--text-center"
         data-testid="grid-lottie-animation-item"
         href="https://maddevs.io/"
         style="background-color: rgb(0, 0, 0);"
         target="_self"
       >
         <div
-          class="card-item__lottie card-item__lottie-bottom"
+          class="card-item__lottie"
         >
           <div
             class="lottie-container"
@@ -94,7 +94,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         </div>
          
         <div
-          class="card-item__content card-item__content-bottom"
+          class="card-item__content"
         >
           <p>
             third item content

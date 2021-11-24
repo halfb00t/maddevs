@@ -7,6 +7,7 @@
     :use-company="true"
     :use-interest-radio-input="true"
     :interest-radio-input-required="true"
+    :default-interest-radio-input="true"
     :recaptcha-error="recaptchaError"
     @submit="handleSubmit"
   >
