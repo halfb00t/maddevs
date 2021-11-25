@@ -1,7 +1,7 @@
 <template>
   <PostView
     v-bind="post"
-    :open-grapht-url="openGraphUrl"
+    :open-graph-url="openGraphUrl"
   />
 </template>
 
