@@ -7,7 +7,6 @@ exports[`Post _uid component should render correctly 1`] = `
     date=""
     id=""
     metatitle=""
-    open-grapht-url=""
     opengraphurl=""
     recommendedposts=""
     slices=""
