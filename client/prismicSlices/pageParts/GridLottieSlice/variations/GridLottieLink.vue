@@ -35,7 +35,10 @@
           class="card-item__content"
           v-html="renderCardContent($prismic.asHtml(item.content))"
         />
-        <UIArrowButton class="card-item__button" />
+        <UIArrowButton
+          v-if="item.link && item.link.url"
+          class="card-item__button"
+        />
       </Component>
     </div>
   </div>
