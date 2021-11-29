@@ -27,6 +27,7 @@
     </div>
     <SuccessMessage
       v-else
+      :id="id"
       title="Thank you!"
       :message="successMessage"
     />

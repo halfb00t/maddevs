@@ -18,13 +18,13 @@
         :id="id"
         v-model="interestChoice"
         name="projectRadioButton"
-        :label="interestRadioLabel "
+        :label="interestRadioLabel"
         :required="interestRadioInputRequired"
         :default-choice="defaultInterestRadioInput"
         :radio-input-labels="interestRadioChoices"
       />
       <BaseInput
-        v-if="useCompany"
+        v-if="useCompanyField"
         v-model="company"
         name="company"
         :show-label="useLabels"
@@ -137,7 +137,7 @@ export default {
       defaultFields.validationGroup.push('description')
     }
 
-    if (this.useCompany) {
+    if (this.useCompanyField) {
       defaultFields.company = {
         required,
         maxLength: maxLength(256),
@@ -256,7 +256,7 @@ export default {
 
     interestRadioChoices: {
       type: Array,
-      default: () => ['Software development with <div>Mad Devs</div>', 'Partnership with <div>Mad Devs</div>', 'Employment at <div>Mad Devs</div>'],
+      default: () => ['Software development', 'Partnership', 'Employment'],
     },
   },
 
@@ -275,8 +275,22 @@ export default {
   },
 
   computed: {
+    useCompanyField() {
+      return (
+        (this.useCompany && this.interestChoice === 'Software development')
+        || (this.useCompany && !this.useInterestRadioInput)
+      )
+    },
+
     isValid() {
-      if (this.interestRadioInputRequired) return !this.$v.validationGroup.$invalid && this.agreeWithPrivacyPolicy && this.additionalValid && !!this.interestChoice
+      if (this.interestRadioInputRequired) {
+        return (
+          !this.$v.validationGroup.$invalid
+          && this.agreeWithPrivacyPolicy
+          && this.additionalValid
+          && !!this.interestChoice
+        )
+      }
       return !this.$v.validationGroup.$invalid && this.agreeWithPrivacyPolicy && this.additionalValid
     },
   },
@@ -302,10 +316,17 @@ export default {
         agreeWithPrivacyPolicy: this.agreeWithPrivacyPolicy,
         agreeToGetMadDevsDiscountOffers: this.agreeToGetMadDevsDiscountOffers,
       }
+      if (
+        this.useCompany
+        && this.useInterestRadioInput
+        && this.interestChoice !== 'Software development'
+      ) {
+        formData.company = 'Field was hidden'
+      }
 
       if (this.usePhone) formData.phoneNumber = this.phoneNumber
       if (this.useDescription) formData.description = this.description
-      if (this.useCompany) formData.company = this.company
+      if (this.useCompanyField) formData.company = this.company
 
       this.$emit('submit', formData)
     },
