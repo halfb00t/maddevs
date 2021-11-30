@@ -19,7 +19,7 @@ export const getBlogTags = async prismic => {
 
 export const getBlogTag = async (prismic, payload) => {
   try {
-    const blogTags = await getBlogTags(prismic)
+    const blogTags = await exports.getBlogTags(prismic)
     return blogTags.find(tag => convertStringToSlug(tag) === payload)
   } catch (error) {
     return error
