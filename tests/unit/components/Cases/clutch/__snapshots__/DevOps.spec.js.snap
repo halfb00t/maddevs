@@ -60,10 +60,13 @@ exports[`DevOps component should render correctly 1`] = `
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
-        <div
-          class="lottie-container case_lottie"
+        <lottiemad-stub
+          autoplay="true"
+          class="case_lottie"
+          height="380px"
           id="devOps-clutch"
-          style="--height: 380px; --width: 100%;"
+          lottielink="img.jpg"
+          width="100%"
         />
       </div>
        

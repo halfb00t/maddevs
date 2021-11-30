@@ -236,10 +236,13 @@ exports[`DevelopingTheInnovation component should render correctly 1`] = `
       <div
         class="m-96_bottom media-m-48_bottom"
       >
-        <lottie-stub
+        <lottiemad-stub
+          autoplay="true"
           class="case_lottie"
+          height="528px"
           id="benefits-of-cqrs"
-          options="[object Object]"
+          lottielink="img.jpg"
+          width="100%"
         />
       </div>
        

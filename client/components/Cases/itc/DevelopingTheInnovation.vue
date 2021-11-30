@@ -83,11 +83,12 @@
         </Card>
       </div>
       <div class="m-96_bottom media-m-48_bottom">
-        <Lottie
+        <LottieMad
           id="benefits-of-cqrs"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="528px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/itc/lottie/benefits-of-cqrs.json`)"
+          :autoplay="true"
         />
       </div>
       <h3 class="case_title_h3 m-12_bottom media-m-24_bottom">
@@ -121,15 +122,13 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Card from '@/components/Cases/shared/Card'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import ListNumberedBox from '@/components/Cases/shared/ListNumberedBox'
 import ListNumberedItemBox from '@/components/Cases/shared/ListNumberedItemBox'
 import Picture from '@/components/Cases/shared/Picture'
-import animationData from '@/assets/lottie/itc/benefits-of-cqrs.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 import { developingInnovation, idList } from '@/data/caseITC'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
@@ -140,18 +139,13 @@ export default {
     TextParagraph,
     Card,
     TextQuoteBox,
-    Lottie,
+    LottieMad,
     ListNumberedBox,
     ListNumberedItemBox,
     Picture,
   },
 
   mixins: [
-    playLottieMixin('benefits-of-cqrs', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
     IntersectionObserverMixin(
       idList,
       setBackground,
