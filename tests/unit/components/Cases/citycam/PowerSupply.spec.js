@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import PowerSupply from '@/components/Cases/citycam/PowerSupply'
 
-const stubs = ['Lottie']
+const stubs = ['LottieMad']
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
