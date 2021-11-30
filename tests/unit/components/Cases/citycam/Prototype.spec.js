@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import Prototype from '@/components/Cases/citycam/Prototype'
 
-const stubs = ['Lottie']
+const stubs = ['LottieMad']
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',

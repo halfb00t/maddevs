@@ -1,13 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/vue'
 import CardProjectMilestone from '@/components/Cases/yourcast/CardProjectMilestone'
 
-describe('CardProjectMilestone component', () => {
-  const props = {
-    title: '2016',
-    description: 'description',
-    background: 'background',
-  }
+const props = {
+  title: '2016',
+  description: 'description',
+  background: 'background',
+}
 
+describe('CardProjectMilestone component', () => {
   it('should render correctly', async () => {
     const { container } = render(CardProjectMilestone, {
       props,

@@ -3,12 +3,17 @@ import Error from '@/layouts/error.vue'
 
 const stubs = ['NuxtLink']
 
+const mocks = {
+  $getMediaFromS3: image => image,
+}
+
 describe('Error layout', () => {
   let wrapper
 
   beforeEach(() => {
     wrapper = shallowMount(Error, {
       stubs,
+      mocks,
     })
   })
 

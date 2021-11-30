@@ -13,11 +13,12 @@
     </section>
     <section class="container_full background-color-silver">
       <div class="container_regular">
-        <Lottie
+        <LottieMad
           id="high-level-system-overview"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="671px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/nambafood/lottie/high-level-system-overview.json`)"
+          :autoplay="true"
         />
       </div>
     </section>
@@ -25,23 +26,15 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import playLottieMixin from '@/mixins/playLottieMixin'
-import animationData from '@/assets/lottie/nambafood/high-level-system-overview.json'
 
 export default {
   name: 'SystemOverview',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [playLottieMixin('high-level-system-overview', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
 }
 </script>
 

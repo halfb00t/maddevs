@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue'
 import FaultTolerance from '@/components/Cases/nambataxi/FaultTolerance'
 import '../../../__mocks__/intersectionObserverMock'
 
-const stubs = ['Lottie', 'Picture', 'StatisticCard', 'LottieMad', 'StatisticCard']
+const stubs = ['LottieMad', 'Picture', 'StatisticCard', 'LottieMad', 'StatisticCard']
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
