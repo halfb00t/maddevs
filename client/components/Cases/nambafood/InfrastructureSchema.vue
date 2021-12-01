@@ -7,11 +7,12 @@
     </section>
     <section class="container_full background-color-silver">
       <div class="container_regular">
-        <Lottie
+        <LottieMad
           id="website-and-mobile-apps"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="496px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/nambafood/lottie/about-citycam.json`)"
+          :autoplay="true"
         />
       </div>
     </section>
@@ -31,23 +32,15 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import playLottieMixin from '@/mixins/playLottieMixin'
-import animationData from '@/assets/lottie/nambafood/website-and-mobile-apps.json'
 
 export default {
   name: 'InfrastructureSchema',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [playLottieMixin('website-and-mobile-apps', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
 }
 </script>
 

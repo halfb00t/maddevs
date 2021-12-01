@@ -23,6 +23,7 @@
         v-show="isActive"
         ref="mobileMenuList"
         class="header-mobile-menu__list"
+        data-testid="mobile-menu-list"
       >
         <li
           v-for="{ label, link } in menuRoutes"
@@ -33,6 +34,7 @@
             <NuxtLink
               v-if="!extractMenuLink(link).isExternalLink"
               :to="extractMenuLink(link).url"
+              data-testid="menu-item-internal-link"
               @click.native="goToPage"
             >
               {{ label }}
@@ -41,6 +43,7 @@
               v-else
               :href="extractMenuLink(link).url"
               :target="extractMenuLink(link).target"
+              data-testid="menu-item-external-link"
             >
               {{ label }}
             </a>

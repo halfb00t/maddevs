@@ -10,6 +10,10 @@ const props = {
   animationData: 'android-app',
 }
 
+const mocks = {
+  $getMediaFromS3: image => image,
+}
+
 const computed = {
   lottieOptions: () => ({
     animationData: 'test',
@@ -25,6 +29,7 @@ describe('LottieCard', () => {
         props,
         stubs,
         computed,
+        mocks,
       })
       expect(container).toMatchSnapshot()
     })

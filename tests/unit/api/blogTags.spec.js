@@ -23,29 +23,6 @@ describe('getBlogTags', () => {
   })
 })
 
-describe('getBlogTag', () => {
-  const payload = 'tag1'
-  const prismic = jest.fn()
-  beforeEach(() => {
-    jest.spyOn(api, 'getBlogTags').mockImplementation(() => Promise.resolve(tags))
-  })
-
-  it('success', async () => {
-    const result = await api.getBlogTag(prismic, payload)
-
-    expect(result).toBe(payload)
-  })
-
-  it('failure', async () => {
-    const error = new Error('Test error')
-    jest.spyOn(api, 'getBlogTags').mockImplementation(() => Promise.reject(error))
-
-    const result = await api.getBlogTag(prismic, payload)
-
-    expect(result).toBe(error)
-  })
-})
-
 describe('getPostsByTag', () => {
   const results = [{
     data: {

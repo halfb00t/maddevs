@@ -14,11 +14,12 @@
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
       >
-        <Lottie
+        <LottieMad
           id="clusterisation-algorithm"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="416px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/peklo/lottie/clusterisation-algorithm.json`)"
+          :autoplay="true"
         />
       </div>
     </div>
@@ -141,10 +142,8 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/peklo/clusterisation-algorithm.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 import List from '@/components/Cases/shared/List'
 import ListItemDot from '@/components/Cases/shared/ListItemDot'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
@@ -157,7 +156,7 @@ export default {
   name: 'ClusterisationAlgorithm',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
     List,
     ListItemDot,
     TextQuoteBox,
@@ -165,14 +164,6 @@ export default {
     Picture,
     Card,
   },
-
-  mixins: [
-    playLottieMixin('clusterisation-algorithm', {
-      animationData,
-      autoplay: false,
-      loop: false,
-    }),
-  ],
 
   data() {
     return {

@@ -7,9 +7,11 @@ const mocks = {
   $prismic: {
     asHtml: jest.fn(),
   },
+
+  $getMediaFromS3: () => 'img.jpg',
 }
 
-const stubs = ['Lottie']
+const stubs = ['LottieCard']
 
 const props = {
   items: [

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import DevOps from '@/components/Cases/clutch/DevOps'
 
-const stubs = ['Lottie', 'Picture']
+const stubs = ['LottieMad', 'Picture']
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',

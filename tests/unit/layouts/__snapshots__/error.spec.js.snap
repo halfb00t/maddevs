@@ -4,10 +4,13 @@ exports[`Error layout renders correctly 1`] = `
 <div
   class="error-page container"
 >
-  <lottie-stub
-    class="error-page_lottie"
+  <lottiemad-stub
+    autoplay="true"
+    class="case_lottie"
+    height="170px"
     id="404-code"
-    options="[object Object]"
+    lottielink="/images/Cases/error/lottie/404.json"
+    width="100%"
   />
    
   <h1

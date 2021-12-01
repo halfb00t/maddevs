@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMobileSection component should render correctly 1`] = `
+<div>
+  <transition-stub
+    name="fade"
+    title="test"
+  >
+    <div
+      class="header-mobile-section header-mobile-section-test"
+    >
+      <div
+        class="header-mobile-section__scroll safary-only container"
+      >
+        <div
+          class="header-mobile-section__content"
+        >
+          <button
+            class="header-mobile-section__back-btn"
+            type="button"
+          >
+            
+          Back
+        
+          </button>
+           
+          <div
+            class="header-mobile-section__menu"
+          >
+            <!---->
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition-stub>
+</div>
+`;

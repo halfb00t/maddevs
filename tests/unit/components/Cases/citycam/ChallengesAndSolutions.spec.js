@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue'
 import ChallengesAndSolutions from '@/components/Cases/citycam/ChallengesAndSolutions'
 import '../../../__mocks__/intersectionObserverMock'
 
-const stubs = ['Lottie', 'Picture']
+const stubs = ['LottieMad', 'Picture']
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
