@@ -17,6 +17,7 @@ export const meta = {
     description:
       'FAQs. Have a question? Find answers on our Frequently asked questions page. Discover more about Mad Devs\' team, expertise, pricing, and more.',
     url: 'https://maddevs.io/faq/',
+    jsonLd: '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How‌ ‌many‌ ‌people‌ ‌work‌ ‌at‌ ‌your‌ ‌company?","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#how-many-people-work-at-your-company?\'>Mad Devs currently is a 120+ person strong team of rock stars who are on a mission to deliver value to long-term projects.</a>"}},{"@type":"Question","name":"What time zone does your team operate in?","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#what-time-zone-does-your-team-operate-in?\'>We generally work in +6 and +3 UTC from 9 AM to 6 PM, but we have early birds and night owls allowing us to adjust to customers from the US, the UK, South East Asia, and Oceania. Our development workflows are devised around asynchronous communication, leveraging automatic reporting drilled down to every task instance or team member. Daily standups, work logs, and all-hands meetings or video calls keep everybody on the same page. </a>"}},{"@type":"Question","name":"What types of projects you do NOT work on?","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#what-types-of-projects-you-do-not-work-on?\'>Mad Devs workflow is dedicated to the creation and maintenance of high-quality, scalable systems intended for heavy workloads. We can’t help with requests for landing pages and ultra-fast MVPs.</a>"}},{"@type":"Question","name":"Where can I find the project portfolio of your company? ","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#where-can-i-find-the-project-portfolio-of-your-company?\'>Since 2016, our team has delivered to customers 50+ projects in FinTech, Transportation, HealthTech, AdTech, EdTech, and E-commerce industries. The Mad Devs team has worked with Clutch.co, Teacherly, Guardrails, GoDee, Sir John Monash Centre, Eatigo, Alfabank, Admitad, Triggermesh, and many other companies ensuring that hundreds of thousands of people enjoy apps and services they use on a daily basis. We cannot disclose details for ~40% of our customers as we need to comply with the terms of NDAs.</a>"}},{"@type":"Question","name":"What details do you need from me to discuss my project & start work? ","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#what-details-do-you-need-from-me-to-discuss-my-project-&-start-work?\'>Simply submit your project idea to us via our contact form. We will contact you to clarify further requirements and prepare the project time & cost estimates. For more details, you can get in touch with our head of delivery management Tamara Mun: tamaramun@maddevs.io, or schedule a meeting at calendly/mun_tamara.</a> "}},{"@type":"Question","name":"How much does software development cost? How do you charge? ","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#how-much-does-software-development-cost?-how-do-you-charge?\'>Our pricing has always been transparent. We charge our customers on a ‘Time & Material’ basis which makes the costs predictable as there are known rates for each specialist, from developer to PM. This ensures great control over budget and provides the required level of flexibility as the projects’ scope can be easily corrected on the go. Thus, in the end, together we deliver a product that truly solves end-customers’ needs.</a> "}},{"@type":"Question","name":"How can I control my project budget? ","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#how-can-i-control-my-project-budget?\'>You will have full control over your budget with our detailed monthly invoice. Weekly and daily reports cover the team’s contribution to your project in addition to individual performance reports that tell you what each of the specialists you hired has accomplished. Thus, with all information in your hands, the right adjustments in priorities of cost control factors can be implemented.</a>  "}},{"@type":"Question","name":"How do you ensure security for confidential information? Do you work under NDA?","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#how-do-you-ensure-security-for-confidential-information?-do-you-work-under-nda?\'>Mad Devs always works under the NDA of our own, however, if you have a non-disclosure agreement on your side, we can consider your contract, too. Please read more about work under NDA in the corresponding section of our website: https://maddevs.io/nda/</a>"}},{"@type":"Question","name":"How do you mitigate the risks related to intellectual property ownership?","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#how-do-you-mitigate-the-risks-related-to-intellectual-property-ownership?\'>Intellectual Property is wholly owned by you and your company.  After you sign a contract with us, you will become the owner of the repository, the project environment, Slack, hosting, and etc. The team only manages this and adjusts the processes in accordance with the regulations of the company. You have these accesses from the very beginning of the project, but it is important to remember that according to the contract you become a full owner only after paying for all the hours worked by the team.</a> "}},{"@type":"Question","name":"What if my question is not answered on this page? ","acceptedAnswer":{"@type":"Answer","text":"<a href=\'https://maddevs.io/faq/#what-if-my-question-is-not-answered-on-this-page?\'>Please don’t hesitate to contact us directly with any questions you may have. You have a number of options to use: Live chat Direct mail to our Head of Delivery Management Tamara Mun via tamaramun@maddevs.io. Contact form. Phone Call via +44 20 3984 8555. Text message via Facebook Messenger, Telegram, Whatsapp, or WeChat.</a>"}}]}',
   },
   gdpr: {
     title: 'Mad Devs GDPR Compliance',
@@ -43,39 +44,46 @@ export const meta = {
     title: 'Mad Devs Custom Software Development Company',
     description: 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
     url: 'https://maddevs.io/clients/case-studies/',
+    jsonLd: '{"@context": "http://www.schema.org", "@type": "WebPage", "name": "Mad Devs Custom Software Development Company", "url": "https://maddevs.io", "logo": "https://maddevs.io/Open-Graph.png", "foundingDate": "2016", "email": "team@maddevs.io", "description": "Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.", "address": {"@type": "PostalAddress", "streetAddress": "27 Old Gloucester Street", "addressLocality": "London", "addressRegion": "UK", "postalCode": "WC1N3AX"}, "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+442039848555"}, "sameAs": ["https://www.facebook.com/maddevsllc", "http://www.linkedin.com/company/mad-devs", "https://blog.maddevs.io", "https://clutch.co/profile/mad-devs", "https://www.glassdoor.com/Overview/Working-at-Mad-Devs-EI_IE2507466.11,19.htm", "https://twitter.com/MadDevsIO", "https://www.instagram.com/maddevsio", "https://www.crunchbase.com/organization/mad-devs", "https://github.com/maddevsio", "https://www.behance.net/maddevs"]}',
   },
   godee: {
     title: 'Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service',
     description:
       'Case Study Shuttle Bus Service. Read GoDee’s story on building a public transportation app for passengers and drivers and a monitoring system for admins in Vietnam.',
     url: 'https://maddevs.io/clients/case-studies/godee/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > Transportation Solutions", "name": "Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service", "description": "Case Study Shuttle Bus Service. Read GoDee’s story on building a public transportation app for passengers and drivers and a monitoring system for admins in Vietnam.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   nambafood: {
     title: 'Mad Devs Case Study: Namba Food Top Delivery Service',
     description:
       'FoodTech Case Study. How to make a delivery app from scratch? Read Namba Food’s story of developing a custom software top delivery service in Central Asia.',
     url: 'https://maddevs.io/clients/case-studies/namba-food/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > FoodTech Solutions", "name": "Mad Devs Case Study: Namba Food Top Delivery Service", "description": "FoodTech Case Study. How to make a delivery app from scratch? Read Namba Food’s story of developing a custom software top delivery service in Central Asia.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   sjmc: {
     title: 'Mad Devs Case Study: Sir John Monash Centre',
     description:
       'BYOD Case Study. Read how Mad Devs enhanced and developed new features for the Sir John Monash Centre’s software, mobile applications, and technological debt.',
     url: 'https://maddevs.io/clients/case-studies/sir-john-monash-centre/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > BYOD Solutions", "name": "Mad Devs Case Study: Sir John Monash Centre", "description": "BYOD Case Study. Read how Mad Devs enhanced and developed new features for the Sir John Monash Centre’s software, mobile applications, and technological debt.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   yourcast: {
     title: 'Mad Devs Case Study: YourcastTV - online video streaming platform',
     description: 'OTT-like streaming platform case study. Read how Mad Devs developed an online video streaming service for isolated groups of people feeling homesick.',
     url: 'https://maddevs.io/clients/case-studies/yourcast/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: YourcastTV - online video streaming platform", "description": "OTT-like streaming platform case study. Read how Mad Devs developed an online video streaming service for isolated groups of people feeling homesick.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   veeqo: {
     title: 'Mad Devs Case Study: Veeqo an inventory management platform for e-commerce',
     description: 'Infrastructure Case Study: How to optimize and reduce infrastructure costs? Read Veeqo’s story of optimizing the costs along with improving the system’s performance.',
     url: 'https://maddevs.io/clients/case-studies/veeqo/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Veeqo an Inventory Management Platform for E-commerce", "description": "Infrastructure Case Study: How to optimize and reduce infrastructure costs? Read Veeqo’s story of optimizing the costs along with improving the system’s performance.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   itc: {
     title: 'Mad Devs Case Study: the International Trade Centre (ITC)',
     description: 'Digital Transformation Case Study: How to implement digital transformation? Read an ITC\'s story of improving the reports and the coaches\' coordination with a convenient web app.',
     url: 'https://maddevs.io/clients/case-studies/R4TCA-web-application/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: the International Trade Centre (ITC)", "description": "Digital Transformation Case Study: How to implement digital transformation? Read an ITC\'s story of improving the reports and the coaches\' coordination with a convenient web app.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   openSource: {
     title: 'Open Source Projects | Mad Devs',
@@ -91,22 +99,26 @@ export const meta = {
     title: 'Mad Devs Case Study: Peklo Tool Keyword Grouping Software',
     description: 'AdTech Case Study: How to build a keyword grouping tool? Read Peklo Tool\'s story of preparing keywords groups to launch effective ads in Google and Yandex.',
     url: 'https://maddevs.io/clients/case-studies/peklo/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Peklo Tool Keyword Grouping Software", "description": "AdTech Case Study: How to build a keyword grouping tool? Read Peklo Tool\'s story of preparing keywords groups to launch effective ads in Google and Yandex.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   citycam: {
     title: 'Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities',
     description: 'IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.',
     url: 'https://maddevs.io/clients/case-studies/citycam/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   clutch: {
     title: 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
     description: 'B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.',
     url: 'https://maddevs.io/clients/case-studies/clutch/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform", "description": "B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   nambataxi: {
     title: 'Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek',
     description:
       'Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.',
     url: 'https://maddevs.io/clients/case-studies/namba-taxi/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > Transportation Solutions", "name": "Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek", "description": "Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
