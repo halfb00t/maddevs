@@ -12,11 +12,12 @@
     </div>
     <div class="container_full background-color-silver m-96_bottom media-m-48_bottom">
       <div class="container_regular">
-        <Lottie
+        <LottieMad
           id="video-on-demand"
-          :options="options"
           class="case_lottie"
-          @animCreated="handleAnimation"
+          height="448px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/yourcast/lottie/phase-video-on-demand.json`)"
+          :autoplay="true"
         />
       </div>
     </div>
@@ -24,23 +25,15 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import animationData from '@/assets/lottie/yourcast/phase-video-on-demand.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
 
 export default {
   name: 'PhaseVideoOnDemand',
   components: {
     TextParagraph,
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [playLottieMixin('video-on-demand', {
-    animationData,
-    autoplay: false,
-    loop: false,
-  })],
 }
 </script>
 

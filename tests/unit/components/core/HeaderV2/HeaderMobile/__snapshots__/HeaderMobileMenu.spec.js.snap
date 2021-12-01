@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderMobileMenu component should render correctly 1`] = `
+<div>
+  <div
+    class="header-mobile-menu"
+  >
+    <button
+      class="header-mobile-menu__button"
+      type="button"
+    >
+      <span
+        class="header-mobile-menu__button-label"
+      >
+        test
+      </span>
+       
+      <span
+        class="header-mobile-menu__button-icon"
+      >
+        ↓
+      </span>
+    </button>
+     
+    <transition-stub
+      name="collapse"
+    >
+      <ul
+        class="header-mobile-menu__list"
+        data-testid="mobile-menu-list"
+        style="display: none;"
+      >
+        <li
+          class="header-mobile-menu__route"
+        >
+          <div>
+            <nuxtlink-stub
+              data-testid="menu-item-internal-link"
+              to="/"
+            >
+              
+            internal link
+          
+            </nuxtlink-stub>
+          </div>
+        </li>
+        <li
+          class="header-mobile-menu__route"
+        >
+          <div>
+            <a
+              data-testid="menu-item-external-link"
+              href="http://twitter.com"
+              target="_blank"
+            >
+              
+            external link
+          
+            </a>
+          </div>
+        </li>
+      </ul>
+    </transition-stub>
+  </div>
+</div>
+`;

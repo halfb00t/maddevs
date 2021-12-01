@@ -1,10 +1,11 @@
 <template>
   <div class="error-page container">
-    <Lottie
+    <LottieMad
       id="404-code"
-      class="error-page_lottie"
-      :options="options"
-      @animCreated="handleAnimation"
+      class="case_lottie"
+      height="170px"
+      :lottie-link="$getMediaFromS3(`/images/Cases/error/lottie/404.json`)"
+      :autoplay="true"
     />
     <h1 class="error-page_title">
       The page you were looking for doesn’t exist.
@@ -19,19 +20,12 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
-import animationData from '@/assets/lottie/error/404.json'
-import playLottieMixin from '@/mixins/playLottieMixin'
+import LottieMad from '@/components/shared/LottieMad'
 
 export default {
   components: {
-    Lottie,
+    LottieMad,
   },
-
-  mixins: [playLottieMixin('404-code', {
-    animationData,
-    autoplay: true,
-  })],
 
   layout: 'error-layout',
 }

@@ -1,5 +1,4 @@
 import { render } from '@testing-library/vue'
-
 import HeaderSection from '@/components/core/HeaderV2/HeaderSection'
 
 const stubs = ['HeaderMenu', 'HeaderPost']

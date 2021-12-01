@@ -2,6 +2,10 @@ import { render } from '@testing-library/vue'
 import LottieCard from '@/prismicSlices/pageParts/GridLottieSlice/components/LottieCard'
 import '../../../../__mocks__/intersectionObserverMock'
 
+const mocks = {
+  $getMediaFromS3: () => 'img.jpg',
+}
+
 jest.mock('uuid')
 
 const stubs = ['lottieOptions']
@@ -25,6 +29,7 @@ describe('LottieCard', () => {
         props,
         stubs,
         computed,
+        mocks,
       })
       expect(container).toMatchSnapshot()
     })
