@@ -27,6 +27,7 @@ exports[`HeaderMobileMenu component should render correctly 1`] = `
     >
       <ul
         class="header-mobile-menu__list"
+        data-testid="mobile-menu-list"
         style="display: none;"
       >
         <li

@@ -23,6 +23,7 @@
         v-show="isActive"
         ref="mobileMenuList"
         class="header-mobile-menu__list"
+        data-testid="mobile-menu-list"
       >
         <li
           v-for="{ label, link } in menuRoutes"
