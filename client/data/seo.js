@@ -169,11 +169,11 @@ export const buildHead = ({
     ...links,
   ],
   __dangerouslyDisableSanitizers: ['script'],
-  script: [
+  script: jsonLd ? [
     {
       type: 'application/ld+json',
       innerHTML: jsonLd || meta.blog.jsonLd,
     },
     ...scripts,
-  ],
+  ] : [...scripts],
 })
