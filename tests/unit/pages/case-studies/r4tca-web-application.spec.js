@@ -32,7 +32,6 @@ const META_DATA = {
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/itc-case.jpg',
   'twitter:url': 'https://maddevs.io/clients/case-studies/R4TCA-web-application/',
-  jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: the International Trade Centre (ITC)", "description": "Digital Transformation Case Study: How to implement digital transformation? Read an ITC\'s story of improving the reports and the coaches\' coordination with a convenient web app.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
 }
 
 const directives = {
