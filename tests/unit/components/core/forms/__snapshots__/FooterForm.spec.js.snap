@@ -17,7 +17,6 @@ exports[`FooterForm should render correctly 1`] = `
       interestradiochoices="Software development,Partnership,Employment"
       interestradiolabel="I'm interested in ..."
       phoneplaceholder="Phone number"
-      recaptchaerror="true"
       usedescription="true"
     />
      

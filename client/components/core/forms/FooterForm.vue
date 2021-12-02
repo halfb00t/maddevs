@@ -11,17 +11,7 @@
       button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
       class-name="footer-form"
       @submit="handleSubmit"
-    >
-      <template #reCaptcha>
-        <div class="recaptcha">
-          <recaptcha
-            @error="onError"
-            @success="onSuccess"
-            @expired="onExpired"
-          />
-        </div>
-      </template>
-    </BaseForm>
+    />
     <!-- this id should be unique, because it used for google analytics -->
     <ModalSuccess
       id="footer-modal"
@@ -45,38 +35,21 @@ export default {
 
   mixins: [createLeadMixin(305480, 'Contact Me'), scrollOnBody],
 
-  data() {
-    return {
-      ecaptchaError: true,
-      token: null,
-    }
-  },
-
   methods: {
-    onError(error) {
-      console.log('Error happened:', error)
-    },
-
-    onSuccess() {
-      this.recaptchaError = false
-    },
-
-    onExpired() {
-      console.log('Expired')
-    },
-
     async handleSubmit(formData) {
-      this.token = await this.$recaptcha.getResponse()
-      const variables = {
-        ...formData,
-        formLocation: 'Footer component',
-        token: this.token,
-      }
-
+      const recaptcha = window.grecaptcha
       // from mixin
-      this.submitLead(variables)
-      await this.$recaptcha.reset()
-      this.recaptchaError = true
+      recaptcha.ready(() => {
+        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(token => {
+          const variables = {
+            fromId: 'footer-form',
+            token,
+            ...formData,
+            formLocation: 'Footer component',
+          }
+          this.submitLead(variables)
+        })
+      })
       this.disableScrollOnBody()
       this.$refs.successModal.show()
     },
