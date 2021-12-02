@@ -13,9 +13,6 @@ export const saveState = (state, name) => {
 export const loadState = name => {
   try {
     const jsonState = window.localStorage.getItem(name)
-    if (!jsonState) {
-      return undefined
-    }
     return JSON.parse(jsonState)
   } catch (e) {
     return undefined
