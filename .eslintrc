@@ -118,7 +118,8 @@
         "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",
         "import/no-dynamic-require": "off",
-        "import/prefer-default-export": 0
+        "import/prefer-default-export": 0,
+        "no-proto": "off"
       }
     }
   ]
