@@ -136,7 +136,7 @@ export default {
 
     &--60-px {
       @include font('Inter', 60px, var(--font-weight));
-      line-height: 60px;
+      line-height: 68px;
     }
 
     // Types

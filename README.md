@@ -151,9 +151,9 @@ A list of environment variables that needed to start the project(required)
 | NODE_HUNTFLOW_RESERVE_VACANCY_ID  	    | Huntflow auth reserve vacancy  	  	          	      |
 | NODE_CYPRESS_BASE_URL  	                | Cypress url  	  	          	          	          	|
 | NODE_AWS_URL  	                        | AWS url  	  	          	          	          	    |
-| NODE_S3_PUBLIC_URL  	                    | S3 url  	  	          	          	          	    |
-| RECAPTCHA_SITE_KEY 	                    | ReCaptcha site key 	          	      	          	    |
-| RECAPTCHA_SECRET_KEY  	                | ReCaptcha secret key      	          	          	    |
+| NODE_S3_PUBLIC_URL  	                  | S3 url  	  	          	          	          	    |
+| RECAPTCHA_SITE_KEY 	                    | ReCaptcha site key 	          	      	          	  |
+| RECAPTCHA_SECRET_KEY  	                | ReCaptcha secret key      	          	          	  |
 
 All of these variables must be added to the Heroku hosting
 
