@@ -63,6 +63,11 @@
   }
 }
 
+// gRecaptcha style
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
 .title-md {
   @include font('Poppins', 40px, 700);
   letter-spacing: -1px;
