@@ -54,7 +54,7 @@ describe('careersController', () => {
 
     req = {
       body: {
-        payload: '{ "huntflow": {}, "email": {}, "token": "test" }',
+        payload: '{ "variables": { "token": "token" }, "huntflow": {}, "email": {} }',
       },
     }
 
@@ -67,7 +67,6 @@ describe('careersController', () => {
   })
 
   it('should correctly handle invalid firstName in req.body', async () => {
-    req.body.payload = '{ "huntflow": { }, "email": {} ,"token": "test"}'
     await controller.index(req, res)
     expect(res.status)
       .toHaveBeenCalledWith(500)
@@ -79,7 +78,7 @@ describe('careersController', () => {
   })
 
   it('should correctly handle invalid lastName in req.body', async () => {
-    req.body.payload = '{ "huntflow": { "firstName": "first" }, "email": {} ,"token": "test"}'
+    req.body.payload = '{ "variables": { "token": "token" }, "huntflow": { "firstName": "first" }, "email": {} }'
     await controller.index(req, res)
     expect(res.status)
       .toHaveBeenCalledWith(500)
@@ -91,7 +90,7 @@ describe('careersController', () => {
   })
 
   it('should correctly handle invalid file in req', async () => {
-    req.body.payload = '{ "huntflow": { "firstName": "first", "lastName": "last" }, "email": {}, "token": "test"  }'
+    req.body.payload = '{ "variables": { "token": "token" }, "huntflow": { "firstName": "first", "lastName": "last" }, "email": {} }'
     await controller.index(req, res)
     expect(res.status)
       .toHaveBeenCalledWith(500)
@@ -105,7 +104,7 @@ describe('careersController', () => {
   it('should correctly handle invalid templateId in req body', async () => {
     req = {
       body: {
-        payload: '{ "huntflow": { "firstName": "first", "lastName": "last" }, "email": {}, "token": "test"}',
+        payload: '{ "variables": { "token": "token" }, "huntflow": { "firstName": "first", "lastName": "last" }, "email": {} }',
       },
       file: {
         path: 'path',
@@ -124,7 +123,7 @@ describe('careersController', () => {
   it('should correctly call sendEmail and createLead methods', async () => {
     req = {
       body: {
-        payload: '{ "huntflow": { "firstName": "first", "lastName": "last" }, "email": { "templateId": 123, "variables": {} } ,"token": "test"}',
+        payload: '{ "variables": { "token": "token" }, "huntflow": { "firstName": "first", "lastName": "last" }, "email": {"templateId": 123, "variables": {}} }',
       },
       file: {
         path: 'path',

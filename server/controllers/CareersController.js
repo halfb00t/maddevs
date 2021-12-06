@@ -2,6 +2,7 @@ const { sendMailFromVariables, sendCVResponseMail } = require('../services/Email
 const { sendApplication } = require('../services/HuntflowService')
 const { validate } = require('../utils/validation')
 const { getIPByRequest, getLocationByIP, isBlockedIP } = require('../services/IPService')
+const { reCaptchaVerification } = require('../services/reCaptchaVerification')
 
 const parseRequest = req => ({
   ...req,
@@ -17,6 +18,10 @@ const buildRequest = (req, key) => ({
 
 async function index(req, res) {
   const parsedReq = parseRequest(req)
+  if (!parsedReq.body.variables.token) return res.json({ success: false, message: 'Invalid token' })
+  const { data } = await reCaptchaVerification(parsedReq.body.variables.token)
+  if (!data?.success) return res.json({ success: data.success, message: data['error-codes'] })
+
   const ip = await getIPByRequest(req)
   const { city, country } = await getLocationByIP(ip)
   if (isBlockedIP(ip)) return res.json({ error: 'Your ip is in a blacklist' })
