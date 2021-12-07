@@ -8,14 +8,14 @@ export const team = [
   },
   {
     name: 'Ruslan Kasymov',
-    position: 'QA Engineer',
+    position: 'Project Manager / QA Engineer',
     image: {
       file: 'kasymov',
     },
   },
   {
     name: 'Rustom Kulbatyrov',
-    position: 'Mobile Developer',
+    position: 'Android Developer',
     image: {
       file: 'kulbatyrov',
     },
@@ -36,7 +36,7 @@ export const team = [
   },
   {
     name: 'Bakhtiyar Ganyev',
-    position: 'Mobile Developer',
+    position: 'iOS Developer',
     image: {
       file: 'bakhtiyar-ganyev',
     },
@@ -71,14 +71,14 @@ export const team = [
   },
   {
     name: 'Myrzabek Kylychev',
-    position: 'Mobile Developer',
+    position: 'Android Developer',
     image: {
       file: 'myrzabek-kylychev',
     },
   },
   {
     name: 'Pavel Pushkarev',
-    position: 'Mobile Developer',
+    position: 'iOS Developer',
     image: {
       file: 'pushkarev',
     },
