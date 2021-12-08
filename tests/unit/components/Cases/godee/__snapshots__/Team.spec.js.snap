@@ -79,7 +79,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      QA Engineer
+      Project Manager / QA Engineer
     
           </p>
         </div>
@@ -113,7 +113,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Mobile Developer
+      Android Developer
     
           </p>
         </div>
@@ -215,7 +215,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Mobile Developer
+      iOS Developer
     
           </p>
         </div>
@@ -385,7 +385,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Mobile Developer
+      Android Developer
     
           </p>
         </div>
@@ -419,7 +419,7 @@ exports[`Team component should render correctly 1`] = `
             class="case_team-item__position"
           >
             
-      Mobile Developer
+      iOS Developer
     
           </p>
         </div>

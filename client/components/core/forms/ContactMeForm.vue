@@ -8,15 +8,8 @@
     :use-interest-radio-input="true"
     :interest-radio-input-required="true"
     :default-interest-radio-input="true"
-    :recaptcha-error="recaptchaError"
     @submit="handleSubmit"
-  >
-    <template #reCaptcha>
-      <div class="recaptcha">
-        <recaptcha @success="onSuccess" />
-      </div>
-    </template>
-  </BaseForm>
+  />
 </template>
 
 <script>
@@ -43,38 +36,23 @@ export default {
     },
   },
 
-  data() {
-    return {
-      recaptchaError: true,
-      token: null,
-    }
-  },
-
-  beforeDestroy() {
-    const modalWithReCapthca = document.getElementById(this.id)
-    if (modalWithReCapthca) {
-      const reCapthcaTask = modalWithReCapthca.nextSibling
-      if (reCapthcaTask) reCapthcaTask.remove()
-    }
-  },
-
   methods: {
-    onSuccess(token) {
-      this.recaptchaError = false
-      this.token = token
-    },
-
     async handleSubmit(formData) {
-      const variables = {
-        ...formData,
-        formLocation: this.formLocation,
-        token: this.token,
-        fromId: this.id,
-      }
+      const recaptcha = window.grecaptcha
 
-      // from mixin
-      this.submitLead(variables)
-      await this.$recaptcha.reset()
+      recaptcha.ready(() => {
+        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(token => {
+          const variables = {
+            token,
+            ...formData,
+            formLocation: this.formLocation,
+            fromId: this.id,
+          }
+
+          // from mixin
+          this.submitLead(variables)
+        })
+      })
     },
 
     reset() {
@@ -83,9 +61,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.recaptcha {
-  padding-bottom: 30px;
-}
-</style>

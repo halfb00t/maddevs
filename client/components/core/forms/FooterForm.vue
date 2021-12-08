@@ -36,15 +36,20 @@ export default {
   mixins: [createLeadMixin(305480, 'Contact Me'), scrollOnBody],
 
   methods: {
-    handleSubmit(formData) {
-      const variables = {
-        ...formData,
-        formLocation: 'Footer component',
-      }
-
+    async handleSubmit(formData) {
+      const recaptcha = window.grecaptcha
       // from mixin
-      this.submitLead(variables)
-
+      recaptcha.ready(() => {
+        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(token => {
+          const variables = {
+            fromId: 'footer-form',
+            token,
+            ...formData,
+            formLocation: 'Footer component',
+          }
+          this.submitLead(variables)
+        })
+      })
       this.disableScrollOnBody()
       this.$refs.successModal.show()
     },
@@ -151,6 +156,10 @@ export default {
 .freeze {
   pointer-events: none;
   user-select: none;
+}
+
+.recaptcha {
+  padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 1320px) {

@@ -258,6 +258,10 @@ export default {
 
       return {
         body: {
+          variables: {
+            token: '',
+          },
+
           huntflow: {
             vacancyId: this.huntflowVacancyId,
             firstName: splitedName[0],
@@ -318,10 +322,16 @@ export default {
 
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
-
+      const recaptcha = window.grecaptcha
       const applicantData = await this.buildApplicantData()
-      this.sendVacancy(applicantData)
-      this.$refs.successModal.show()
+
+      recaptcha.ready(() => {
+        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(async token => {
+          applicantData.body.variables.token = token
+          this.sendVacancy(applicantData)
+          this.$refs.successModal.show()
+        })
+      })
       this.resetForm()
     },
 

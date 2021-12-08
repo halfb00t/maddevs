@@ -111,21 +111,6 @@ describe('PositionForm component', () => {
     expect(mocks.sendVacancy).toHaveBeenCalledTimes(0)
   })
 
-  it('should work send form', async () => {
-    mocks.$v.validationGroup.$invalid = false
-    const wrapper = shallowMount(PositionForm, {
-      localVue,
-      mocks,
-    })
-
-    wrapper.vm.$options.methods.submitForm.call(mocks)
-
-    await expect(mocks.buildApplicantData).toHaveBeenCalledTimes(1)
-    expect(mocks.resetForm).toHaveBeenCalledTimes(1)
-    expect(mocks.sendVacancy).toHaveBeenCalledTimes(1)
-    expect(mocks.$refs.successModal.show).toHaveBeenCalledTimes(1)
-  })
-
   it('should work reset form', () => {
     const wrapper = shallowMount(PositionForm, {
       localVue,
@@ -185,7 +170,9 @@ describe('PositionForm component', () => {
           positionValue: callObject.grade.value,
           linkedinProfile: callObject.linkedin,
         },
-
+        variables: {
+          token: '',
+        },
         email: {
           templateId: 305491,
           variables: {
