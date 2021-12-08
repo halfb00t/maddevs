@@ -73,6 +73,7 @@
     />
 
     <UIButton
+      :id="isValid ? buttonIdName : ''"
       :disabled="!isValid || isSubmitted"
       :loading="isSubmitted"
       :class="buttonClassName"
@@ -155,6 +156,11 @@ export default {
     buttonClassName: {
       type: String,
       default: 'modal-button',
+    },
+
+    buttonIdName: {
+      type: String,
+      default: '',
     },
 
     additionalValid: {

@@ -4,6 +4,7 @@
     ref="baseForm"
     button-label="Сontact Me"
     button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
+    button-id-name="contact_me_button"
     :use-company="true"
     :use-interest-radio-input="true"
     :interest-radio-input-required="true"
