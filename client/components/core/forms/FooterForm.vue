@@ -9,6 +9,7 @@
       :use-labels="false"
       :fullname-required="false"
       button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
+      button-id-name="order_project_button"
       class-name="footer-form"
       @submit="handleSubmit"
     />

@@ -6,6 +6,7 @@ exports[`FooterForm should render correctly 1`] = `
     <baseform-stub
       additionalvalid="true"
       buttonclassname="ui-button--transparent-bgc ui-button_submit-button-footer"
+      buttonidname="order_project_button"
       buttonlabel="Order a project now"
       classname="footer-form"
       companyplaceholder="My Awesome Company, Inc."
