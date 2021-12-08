@@ -17,7 +17,9 @@
         :required="true"
         :validation="$v.email"
       />
+      {{ isValid }}
       <button
+        :id="isValid ? 'sent_ebook_button': ''"
         class="read-form__button"
         :class="{ 'read-form__button--active': isValid, 'read-form__button--always-fullsized': fullsizeButton }"
         @click="submit"
