@@ -512,8 +512,6 @@ After login you need to run the slices builder dashboard: [localhost:9999](http:
 
 ```bash
 npm run slicemachine
-or
-prismic sm --develop
 ```
 
 Also you need to run the storybook dashboard in other terminal: [localhost:3003](http://localhost:3003/)
