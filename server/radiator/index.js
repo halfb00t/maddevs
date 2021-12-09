@@ -30,7 +30,7 @@ function runRadiator() {
 
   const sentryConfig = {
     sentryDSN: process.env.sentryDSN,
-    tracesSampleRate: 1.0,
+    tracesSampleRate: 0.25,
   }
 
   const analyticsConfig = {
