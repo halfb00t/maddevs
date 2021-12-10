@@ -105,6 +105,7 @@ module.exports = {
     '~/plugins/header-handler.js',
     '~/plugins/feature-flags.js',
     '~/plugins/vue-prlx.js',
+    '~/plugins/google-tag-manager-debug.js',
     { src: '~/plugins/sentry.js', mode: 'client' },
     { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
     { src: '~/plugins/vue-parallax', mode: 'client' },
@@ -174,6 +175,14 @@ module.exports = {
   gtm: {
     enabled: true,
     id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
+    // crossOrigin: true,
+    scriptDefer: true,
+    pageTracking: true,
+  },
+  publicRuntimeConfig: {
+    gtm: {
+      id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
+    },
   },
   storybook: {
     stories: [...getStoriesPaths(), '~/prismicSlices/**/*.stories.js', '~/assets/styles/storybook.css'],
