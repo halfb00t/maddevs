@@ -17,7 +17,6 @@
         :required="true"
         :validation="$v.email"
       />
-      {{ isValid }}
       <button
         :id="isValid ? 'sent_ebook_button': ''"
         class="read-form__button"
