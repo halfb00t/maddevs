@@ -36,6 +36,9 @@ main {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  &.ebook-page{
+    overflow: initial;  // for correct working "sticky position" property
+  }
 }
 
 * {

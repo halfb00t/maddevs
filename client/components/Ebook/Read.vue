@@ -121,12 +121,17 @@ export default {
     border-radius: 4px;
     box-sizing: border-box;
     align-self: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 159px; // 96px from header to form
+    margin-bottom: 55px;
 
     @media only screen and (min-width: 1024px) and (max-width: 1094px) {
       width: 364px;
     }
 
     @media screen and (max-width: 992px) {
+      position: inherit;
       width: 100%;
       max-width: 100%;
       margin-bottom: 96px;
