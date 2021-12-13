@@ -17,7 +17,7 @@ const mongoConfig = {
 
 const sentryConfig = {
   dsn: envs.SENTRY_DSN,
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 0.25,
   environment: envs.NODE_ENV,
 }
 
