@@ -36,8 +36,9 @@ main {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  &.ebook-page{
-    overflow: initial;  // for correct working "sticky position" property
+
+  &.ebook-page {
+    overflow: initial; // for correct working "sticky position" property
   }
 }
 
@@ -63,6 +64,7 @@ main {
 .isLoaded {
   opacity: 1;
 }
+
 // ------------ END Styles for Lazy Load ------------- //
 
 // ---------- BASE COLORS ------------- //
