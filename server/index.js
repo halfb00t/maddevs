@@ -63,7 +63,7 @@ function bootstrap() {
   app.use(Sentry.Handlers.errorHandler())
 
   // radiator running
-  if (process.env.FF_ENVIRONMENT === 'staging') runRadiator()
+  runRadiator()
 
   return app
 }
