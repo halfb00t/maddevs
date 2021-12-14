@@ -4,9 +4,7 @@ exports[`ReadForm component should render correctly with no data 1`] = `
 <div class="read-form">
   <div class="read-form__fields">
     <div name="name" required="required" placeholder="Your name" validation="" value=""></div>
-    <div name="email" placeholder="Email" required="required" value=""></div>
-    true
-    <button id="sent_ebook_button" class="read-form__button read-form__button--active">
+    <div name="email" placeholder="Email" required="required" value=""></div> <button id="sent_ebook_button" class="read-form__button read-form__button--active">
       Send me the ebook
     </button>
   </div>
