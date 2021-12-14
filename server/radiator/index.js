@@ -78,18 +78,18 @@ function runRadiator() {
 
   const telegramConfig = {
     telegramToken: process.env.RADIATOR_TELEGRAM_TOKEN,
-    telegramChannelId: -1001428775098,
+    telegramChannelId: process.env.RADIATOR_TELEGRAM_CHANNEL_ID,
   }
 
   const weeklySlackConfig = {
     slackWebhookUrl: process.env.RADIATOR_WEBHOOK_URL,
-    slackChannelId: 'general',
+    slackChannelId: process.env.RADIATOR_WEEKLY_SLACK_CHANNEL_ID,
 
   }
 
   const dailySlackConfig = {
     slackWebhookUrl: process.env.RADIATOR_WEBHOOK_URL,
-    slackChannelId: 'mad-marketing',
+    slackChannelId: process.env.RADIATOR_DAILY_SLACK_CHANNEL_ID,
   }
 
   const weeklyScheduleConfig = {
@@ -100,7 +100,7 @@ function runRadiator() {
 
   const dailyScheduleConfig = {
     period: 'day',
-    time: process.env.RADIATOR_DAILY_DISPATCH_TIME || 9,
+    time: process.env.RADIATOR_DAILY_DISPATCH_TIME || 10,
   }
 
   const weeklyRadiator = new Radiator(weeklyConfig)
