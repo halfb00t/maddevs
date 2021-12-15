@@ -181,7 +181,7 @@ export default {
     line-height: 30px;
     letter-spacing: -0.013em;
     margin-bottom: 40px;
-    max-width: 420px;
+    max-width: 440px;
     @media screen and (max-width: 1280px) {
       font-size: 18px;
     }
