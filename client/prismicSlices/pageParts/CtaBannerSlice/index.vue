@@ -188,9 +188,6 @@ export default {
     @media screen and (max-width: 992px) {
       max-width: 350px;
     }
-    @media screen and (max-width: 900px) {
-      max-width: 320px;
-    }
     @media screen and (max-width: 768px) {
       max-width: 100%;
       font-size: 17px;
