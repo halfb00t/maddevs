@@ -125,8 +125,9 @@ const getRoutes = async () => {
   const tagPageRoutes = prismicTags
     .map(tag => `/insights/blog/tag/${convertToSlug(tag)}`)
 
+  /* Custom pages from production */
   const customPageRoutes = prismicPosts
-    .filter(post => post.type === 'custom_page')
+    .filter(post => post.type === 'custom_page' && post.data.released === true)
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
   const routes = [
