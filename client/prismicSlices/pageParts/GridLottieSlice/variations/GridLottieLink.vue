@@ -143,11 +143,11 @@ export default {
     /deep/ .card-item {
       &__content {
         order: 1;
-        font-size: 56px;
-        line-height: 67px;
+        font-size: 40px;
+        line-height: 51px;
         @media screen and (max-width: 1260px) {
-          font-size: 40px;
-          line-height: 51px;
+          font-size: 35px;
+          line-height: 45px;
         }
         @media screen and (max-width: 1024px) {
           font-size: 30px;
