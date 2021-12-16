@@ -44,9 +44,6 @@ export default {
     UIButton,
   },
 
-  data() {
-  },
-
   methods: {
     goToCareersPage() {
       this.$router.push('/about/careers/')
