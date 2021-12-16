@@ -1,32 +1,31 @@
 <template>
   <div
     class="mad-community-banner"
-    :style="{backgroundImage: `url(${$getMediaFromS3(`/images/Blog/svg/flame.svg`)})`}"
+    :lazy-background="$getMediaFromS3(`/images/Blog/svg/flame.svg`)"
   >
     <div class="mad-community-banner__content">
       <div class="text-content_wrapper">
         <div class="main-title-wrapper">
           <h2
             class="banner-main-title banner-main-title--red"
-            :style="{backgroundImage: `url(${$getMediaFromS3(`/images/Blog/svg/flame-small.svg`)})`}"
+            :lazy-background="$getMediaFromS3(`/images/Blog/svg/flame-small.svg`)"
           >
             Build your career with us
           </h2>
           <h3 class="banner-sub-title banner-sub-title--white">
             We are always open to talented professionals.
-            <br>
             Check if there is a suitable vacancy for you.
           </h3>
         </div>
         <div
           class="mad-community-banner__button-wrapper"
           :style="{backgroundImage: `url(${$getMediaFromS3(`/images/Blog/svg/mad-logo.svg`)})`}"
+          @click="goToCareersPage"
         >
           <UIButton
             type="button"
             class="mad-community-banner__button"
           >
-            <!-- @click="" //todo add method to this action-->
             Learn more
           </UIButton>
         </div>
@@ -40,11 +39,18 @@ import UIButton from '@/components/shared/UIButton'
 
 export default {
   name: 'MadCommunityBanner',
+
   components: {
     UIButton,
   },
 
   data() {
+  },
+
+  methods: {
+    goToCareersPage() {
+      this.$router.push('/about/careers/')
+    },
   },
 }
 </script>
@@ -52,40 +58,47 @@ export default {
 <style lang="scss" scoped>
 .mad-community-banner {
   padding: 20px 0 40px 52px;
-  margin: 52px 0 0;
+  margin: 32px 0 0;
   font-weight: 800;
-  line-height: 67px;
-
   background-repeat: no-repeat;
   background-position: right -140px bottom -270px;
+
+  @media (max-width: 1320px) {
+    background-size: 450px;
+    background-position: right -170px bottom -270px;
+    padding: 20px 0 40px;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    background-image: none !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    margin: 0 0 72px 0;
+  }
+
+  @media screen and (max-width: 580px) {
+    line-height: inherit;
+    margin: 0 0 12px 0;
+  }
+
   &__button-wrapper {
     padding: 0 42px 0 0;
     margin-top: 15px;
     background-repeat: no-repeat;
-    background-position: right 1px bottom 12px;
+    background-position: right -2px bottom -1px;
     display: inline-block;
-    background-size: 44px;
+    background-size: 45px;
+    cursor: pointer;
   }
+
   &__button {
     @include font('Poppins', 14px, 800);
-    padding: 7px 40px;
+    padding: 7px 52px;
     letter-spacing: 0.04em;
     border-radius: 0;
-    background-position: right -140px center 0;
-  }
-
-}
-
-.banner-main-title {
-  @include font('Poppins', 55px, 800);
-  padding-top: 30px;
-  margin-bottom: 24px;
-  font-style: normal;
-  background-repeat: no-repeat;
-  background-position: right 50px bottom 40px;
-
-  &--red {
-    color: $text-color--red;
   }
 }
 
@@ -93,9 +106,48 @@ export default {
   max-width: 772px;
 }
 
+.banner-main-title {
+  @include font('Poppins', 55px, 800);
+  padding-top: 30px;
+  margin-bottom: 20px;
+  font-style: normal;
+  background-repeat: no-repeat;
+  background-position: right 50px bottom 40px;
+
+  &--red {
+    color: $text-color--red;
+  }
+
+  @media screen and (max-width: 1024px) {
+    background-image: none !important;
+    font-size: 40px;
+    padding-top: 0;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    padding-top: 0;
+    margin-bottom: 24px;
+  }
+}
+
 .banner-sub-title {
   @include font('Poppins', 28px, 800);
   line-height: 34px;
+  margin-bottom: 10px;
+  @media (max-width: 1350px) {
+    max-width: 500px;
+  }
+  @media screen and (max-width: 1024px) {
+    max-width: 650px;
+    font-size: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    max-width: 500px;
+  }
+  @media screen and (max-width: 580px) {
+    margin-top: 30px;
+  }
 
   &--white {
     color: $text-color--white;
