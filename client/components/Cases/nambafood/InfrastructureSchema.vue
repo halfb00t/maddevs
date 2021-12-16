@@ -11,7 +11,7 @@
           id="website-and-mobile-apps"
           class="case_lottie"
           height="496px"
-          :lottie-link="$getMediaFromS3(`/images/Cases/nambafood/lottie/about-citycam.json`)"
+          :lottie-link="$getMediaFromS3(`/images/Cases/nambafood/lottie/website-and-mobile-apps.json`)"
           :autoplay="true"
         />
       </div>
