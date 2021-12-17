@@ -73,6 +73,7 @@
           :size="calculateCardSize(idx)"
         />
       </div>
+      <MadCommunityBanner v-if="isShowAllMadCommunityPosts" />
       <CustomerUniversityButton
         v-if="madCommunityPost.length > 3 && !isShowAllMadCommunityPosts"
         label="All articles"
@@ -87,6 +88,7 @@
 import { mapActions, mapGetters } from 'vuex'
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import initializeLazyLoad from '@/helpers/lazyLoad'
+import MadCommunityBanner from '@/components/core/banners/MadCommunityBanner'
 import CustomerUniversityTitle from '@/components/Blog/shared/СustomerUniversityTitle'
 import CustomerUniversityTextCard from '@/components/Blog/shared/CustomerUniversityTextCard'
 import CustomerUniversityCard from '@/components/Blog/shared/CustomerUniversityCard'
@@ -100,6 +102,7 @@ export default {
     CustomerUniversityTextCard,
     CustomerUniversityCard,
     CustomerUniversityButton,
+    MadCommunityBanner,
   },
 
   mixins: [findPostAuthorMixin],
