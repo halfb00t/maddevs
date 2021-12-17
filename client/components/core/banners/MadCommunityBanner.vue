@@ -92,7 +92,6 @@ export default {
   }
 
   &__button {
-    @include font('Poppins', 14px, 800);
     padding: 7px 52px;
     letter-spacing: 0.04em;
     border-radius: 0;
