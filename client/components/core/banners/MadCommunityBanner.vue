@@ -19,15 +19,14 @@
         </div>
         <div
           class="mad-community-banner__button-wrapper"
-          :style="{backgroundImage: `url(${$getMediaFromS3(`/images/Blog/svg/mad-logo.svg`)})`}"
+          :style="{backgroundImage: `url(${$getMediaFromS3(`/images/Blog/svg/mad-button.svg`)})`}"
           @click="goToCareersPage"
         >
-          <UIButton
-            type="button"
+          <div
             class="mad-community-banner__button"
           >
             Learn more
-          </UIButton>
+          </div>
         </div>
       </div>
     </div>
@@ -35,14 +34,9 @@
 </template>
 
 <script>
-import UIButton from '@/components/shared/UIButton'
 
 export default {
   name: 'MadCommunityBanner',
-
-  components: {
-    UIButton,
-  },
 
   methods: {
     goToCareersPage() {
@@ -85,14 +79,13 @@ export default {
     padding: 0 42px 0 0;
     margin-top: 15px;
     background-repeat: no-repeat;
-    background-position: right -2px bottom -1px;
     display: inline-block;
-    background-size: 45px;
     cursor: pointer;
   }
 
   &__button {
-    padding: 7px 52px;
+    color: $text-color--white;
+    padding: 9px 86px 10px 53px;
     letter-spacing: 0.04em;
     border-radius: 0;
   }
