@@ -32,6 +32,6 @@ describe('redirectInvalidLinks', () => {
   it('match urls', () => {
     req.url = '/projects'
     redirectInvalidLinks(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/clients/case-studies/')
+    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/clients/case-studies')
   })
 })

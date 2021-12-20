@@ -24,7 +24,7 @@ describe('redirectToCorrectBlogUrl', () => {
     redirectToCustomerUrl(req, res, next)
     expect(res.redirect).toHaveBeenCalledWith(
       301,
-      'https://maddevs.io/customer-university/why-it-projects-are-late-and-exceed-budgets/',
+      'https://maddevs.io/customer-university/why-it-projects-are-late-and-exceed-budgets',
     )
   })
 })
