@@ -5,12 +5,13 @@ describe('redirectToValidLink', () => {
   let res = null
   let next = null
 
+  // TODO remove .co for production
   beforeEach(() => {
     req = {
       secure: true,
       method: 'GET',
       headers: {
-        host: 'maddevs.io',
+        host: 'maddevs.co',
       },
       url: '/123/',
     }
@@ -31,12 +32,6 @@ describe('redirectToValidLink', () => {
     expect(next).toHaveBeenCalledTimes(1)
   })
 
-  it('without trailing slash and secure', () => {
-    req.url = '/123'
-    redirectToValidLink(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, `https://${req.headers.host}${req.url}/`)
-  })
-
   it('with trailing slash but not secure', () => {
     req.secure = false
     redirectToValidLink(req, res, next)
@@ -47,6 +42,6 @@ describe('redirectToValidLink', () => {
     req.secure = false
     req.url = '/123'
     redirectToValidLink(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, `https://${req.headers.host}${req.url}/`)
+    expect(res.redirect).toHaveBeenCalledWith(301, `https://${req.headers.host}${req.url}`)
   })
 })
