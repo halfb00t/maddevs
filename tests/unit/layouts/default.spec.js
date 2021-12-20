@@ -6,7 +6,6 @@ import Default from '@/layouts/default.vue'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-jest.mock('@/helpers/intercom', () => jest.fn())
 let push = jest.fn()
 
 const stubs = ['Header', 'Nuxt', 'Footer', 'ClientOnly']
@@ -122,17 +121,6 @@ describe('Default layout', () => {
       .toHaveBeenCalledWith({ block: 'start' })
   })
 
-  it('should correctly work loadIntercomScript method', () => {
-    const EVENT_LISTENER = jest.fn((listenerType, callback) => {
-      callback()
-    })
-
-    window.addEventListener = EVENT_LISTENER
-    wrapper.vm.$options.methods.loadIntercomScript()
-
-    expect(EVENT_LISTENER)
-      .toHaveBeenCalledTimes(1)
-  })
   it('should be redirected to 404 if the route is Not allowed', () => {
     expect(push).toHaveBeenCalledWith('/404/')
   })

@@ -29,9 +29,6 @@ if (process.env.environment !== 'development') {
       'AbortError: The play() request was interrupted by a call to pause().',
     ],
     denyUrls: [
-      // Intercom,
-      /js\.intercomcdn\.com/i,
-      /widget\.intercom\.io/i,
       // Prismic
       /SuperPuperTest\.cdn\.prismic\.io/i,
       // Facebook flakiness
