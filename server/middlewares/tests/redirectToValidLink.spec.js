@@ -5,13 +5,12 @@ describe('redirectToValidLink', () => {
   let res = null
   let next = null
 
-  // TODO remove .co for production
   beforeEach(() => {
     req = {
       secure: true,
       method: 'GET',
       headers: {
-        host: 'maddevs.co',
+        host: 'maddevs.io',
       },
       url: '/123/',
     }

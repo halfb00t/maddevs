@@ -5,11 +5,10 @@ describe('redirectInvalidLinks', () => {
   let res = null
   let next = null
 
-  // TODO remove .co for production
   beforeEach(() => {
     req = {
       headers: {
-        host: 'maddevs.co',
+        host: 'maddevs.io',
       },
       url: '/',
     }
@@ -30,10 +29,9 @@ describe('redirectInvalidLinks', () => {
     expect(next).toHaveBeenCalledTimes(1)
   })
 
-  // TODO remove .co for production
   it('match urls', () => {
     req.url = '/projects'
     redirectInvalidLinks(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.co/clients/case-studies')
+    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/clients/case-studies')
   })
 })
