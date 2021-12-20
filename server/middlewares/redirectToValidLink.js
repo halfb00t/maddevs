@@ -6,12 +6,6 @@ function redirectToValidLink(req, res, next) {
     if (!req.secure) link = `https://${req.headers.host}${req.url}`
   }
 
-  // Add trailing slash to the URL if it's missing
-  if (req.url.substr(-1) !== '/'
-    && req.method === 'GET'
-    && req.url !== '/sitemap.xml'
-  ) link = `https://${req.headers.host}${req.url}/`
-
   if (link) res.redirect(301, link)
   else next()
 }
