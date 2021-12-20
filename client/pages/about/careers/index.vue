@@ -18,7 +18,6 @@ export default {
   mixins: [headerMixin('.careers-banner')],
 
   head() {
-    console.log('this.$route.path', this.$route.path)
     return {
       ...buildHead(
         {
