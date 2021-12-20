@@ -13,7 +13,6 @@
 import { mapGetters } from 'vuex'
 import HeaderV2 from '@/components/core/HeaderV2'
 import Footer from '@/components/core/Footer/Footer'
-import initIntercom from '@/helpers/intercom'
 import CookieNotice from '@/components/core/CookieNotice'
 import { getNotAllowedRoutes } from '../../utils/getNotAllowedRoutes'
 
@@ -60,7 +59,6 @@ export default {
 
   mounted() {
     this.initHashLinks()
-    this.loadIntercomScript()
   },
 
   methods: {
@@ -77,14 +75,6 @@ export default {
         }
         return false
       })
-    },
-
-    loadIntercomScript() {
-      const scriptLoader = () => {
-        initIntercom()
-        window.removeEventListener('scroll', scriptLoader)
-      }
-      window.addEventListener('scroll', scriptLoader)
     },
 
     checkNotAllowedRoute() {
