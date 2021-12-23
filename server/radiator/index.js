@@ -4,18 +4,15 @@ const { Radiator } = require('@maddevs/mad-radiator')
 
 function runRadiator() {
   const baseConfig = {
-    authType: process.env.RADIATOR_AUTH_TYPE,
-    analyticsProjectId: process.env.RADIATOR_PROJECT_ID,
-    analyticsPrivateKeyId: process.env.RADIATOR_PRIVATE_KEY_ID,
-    analyticsPrivateKey: process.env.RADIATOR_PRIVATE_KEY,
-    analyticsClientEmail: process.env.RADIATOR_CLIENT_EMAIL,
-    analyticsClientId: process.env.RADIATOR_CLIENT_ID,
-    analyticsAuthUrl: process.env.RADIATOR_AUTH_URI,
-    analyticsTokenUri: process.env.RADIATOR_TOKEN_URI,
-    analyticsProviderCertUrl: process.env.RADIATOR_PROVIDER_CERT_URL,
-    analyticsClientCertUrl: process.env.RADIATOR_CLIENT_CERT_URL,
+    clientId: process.env.RADIATOR_CLIENT_ID,
+    clientSecret: process.env.RADIATOR_CLIENT_SECRET,
+    redirectUri: process.env.RADIATOR_REDIRECT_URI,
+    accessToken: process.env.RADIATOR_ACCESS_TOKEN,
+    refreshToken: process.env.RADIATOR_REFRESH_TOKEN,
     googleapisKey: process.env.RADIATOR_GOOGLEAPIS_KEY,
+    timeZone: process.env.TZ,
     websiteUrl: 'https://maddevs.io',
+    range: 'day',
     retryAttempts: 2,
   }
 
@@ -78,18 +75,18 @@ function runRadiator() {
 
   const telegramConfig = {
     telegramToken: process.env.RADIATOR_TELEGRAM_TOKEN,
-    telegramChannelId: process.env.RADIATOR_TELEGRAM_CHANNEL_ID,
+    telegramChannelId: -1001428775098,
   }
 
   const weeklySlackConfig = {
     slackWebhookUrl: process.env.RADIATOR_WEBHOOK_URL,
-    slackChannelId: process.env.RADIATOR_WEEKLY_SLACK_CHANNEL_ID,
+    slackChannelId: 'general',
 
   }
 
   const dailySlackConfig = {
     slackWebhookUrl: process.env.RADIATOR_WEBHOOK_URL,
-    slackChannelId: process.env.RADIATOR_DAILY_SLACK_CHANNEL_ID,
+    slackChannelId: 'mad-marketing',
   }
 
   const weeklyScheduleConfig = {
@@ -100,7 +97,7 @@ function runRadiator() {
 
   const dailyScheduleConfig = {
     period: 'day',
-    time: process.env.RADIATOR_DAILY_DISPATCH_TIME || 10,
+    time: process.env.RADIATOR_DAILY_DISPATCH_TIME || 9,
   }
 
   const weeklyRadiator = new Radiator(weeklyConfig)
