@@ -4,18 +4,15 @@ const { Radiator } = require('@maddevs/mad-radiator')
 
 function runRadiator() {
   const baseConfig = {
-    authType: process.env.RADIATOR_AUTH_TYPE,
-    analyticsProjectId: process.env.RADIATOR_PROJECT_ID,
-    analyticsPrivateKeyId: process.env.RADIATOR_PRIVATE_KEY_ID,
-    analyticsPrivateKey: process.env.RADIATOR_PRIVATE_KEY,
-    analyticsClientEmail: process.env.RADIATOR_CLIENT_EMAIL,
-    analyticsClientId: process.env.RADIATOR_CLIENT_ID,
-    analyticsAuthUrl: process.env.RADIATOR_AUTH_URI,
-    analyticsTokenUri: process.env.RADIATOR_TOKEN_URI,
-    analyticsProviderCertUrl: process.env.RADIATOR_PROVIDER_CERT_URL,
-    analyticsClientCertUrl: process.env.RADIATOR_CLIENT_CERT_URL,
+    clientId: process.env.RADIATOR_CLIENT_ID,
+    clientSecret: process.env.RADIATOR_CLIENT_SECRET,
+    redirectUri: process.env.RADIATOR_REDIRECT_URI,
+    accessToken: process.env.RADIATOR_ACCESS_TOKEN,
+    refreshToken: process.env.RADIATOR_REFRESH_TOKEN,
     googleapisKey: process.env.RADIATOR_GOOGLEAPIS_KEY,
+    timeZone: process.env.TZ,
     websiteUrl: 'https://maddevs.io',
+    range: 'day',
     retryAttempts: 2,
   }
 
