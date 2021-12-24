@@ -15,6 +15,7 @@ function runRadiator() {
     range: 'day',
     retryAttempts: 2,
   }
+
   const dailyConfig = {
     ...baseConfig,
     range: 'day',
@@ -60,6 +61,10 @@ function runRadiator() {
 
   const dailyAnalyticsConfig = {
     ...analyticsConfig,
+    chart: {
+      type: 'users',
+      period: 30 * 2, // 2 month
+    },
   }
 
   const lighthouseConfig = {
