@@ -1,0 +1,39 @@
+{
+  "id": "embed_slice",
+  "type": "SharedSlice",
+  "name": "EmbedSlice",
+  "description": "EmbedSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "EmbedSlice",
+      "primary": {},
+      "items": {
+        "embed": {
+          "config": {
+            "label": "Embed",
+            "placeholder": ""
+          },
+          "type": "Embed"
+        },
+        "embedTitle": {
+          "config": {
+            "label": "Embed title",
+            "placeholder": ""
+          },
+          "type": "Embed"
+        },
+        "embedDescription": {
+          "config": {
+            "label": "Embeddescription",
+            "placeholder": ""
+          },
+          "type": "Embed"
+        }
+      }
+    }
+  ]
+}

@@ -572,7 +572,13 @@
         }
       }
     },
-    "AwardsSlice": {}
+    "AwardsSlice": {},
+    "EmbedSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    }
   },
   "_cts": {
     "singleimage": {},
