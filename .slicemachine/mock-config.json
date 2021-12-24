@@ -578,6 +578,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "ImageWithCaption": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

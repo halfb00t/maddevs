@@ -11,7 +11,7 @@
           :data-src="img.url"
           :alt="img.alt || 'Image'"
           width="632"
-          height="170"
+          height="auto"
           @click="openModal"
         >
         <SimpleModal

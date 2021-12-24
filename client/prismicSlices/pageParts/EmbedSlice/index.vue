@@ -33,6 +33,7 @@ export default {
   &__container {
     max-width: 816px;
     margin: 0 auto;
+    padding: 0px 24px;
   }
 
   /deep/ &__title {
