@@ -29,4 +29,10 @@ export default {
 .container {
   max-width: 816px;
 }
+
+/deep/ img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 </style>
