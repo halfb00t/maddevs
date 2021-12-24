@@ -19,14 +19,14 @@
           },
           "type": "Embed"
         },
-        "embedTitle": {
+        "embedtitle": {
           "config": {
             "label": "Embed title",
             "placeholder": ""
           },
           "type": "Embed"
         },
-        "embedDescription": {
+        "embeddescription": {
           "config": {
             "label": "Embeddescription",
             "placeholder": ""

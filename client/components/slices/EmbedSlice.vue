@@ -87,8 +87,8 @@ export default {
         html: rawHtml,
         type: embedType,
       },
-      embed_title: embedTitle,
-      embed_description: embedDescription,
+      embedtitle,
+      embeddescription,
     } = this.item
 
     if (rawHtml) {
@@ -96,8 +96,8 @@ export default {
       const description = matchDescription ? matchDescription[1] || '' : ''
 
       const html = `
-        <div class="${this.customTitle ? 'embed__custom-title' : 'embed__title'}">${embedTitle || rawTitle.split(' | ')[0]}</div>
-        <p class="${this.customTitle ? 'embed__custom-description' : 'embed__description'}">${embedDescription || description}</p>
+        <div class="${this.customTitle ? 'embed__custom-title' : 'embed__title'}">${embedtitle || rawTitle.split(' | ')[0]}</div>
+        <p class="${this.customTitle ? 'embed__custom-description' : 'embed__description'}">${embeddescription || description}</p>
       `
 
       this.embedFieldData = {

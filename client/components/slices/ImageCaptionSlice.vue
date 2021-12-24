@@ -58,7 +58,7 @@ export default {
 
   computed: {
     zoomEnabled() {
-      return this.slice.primary.enable_zoom === 'enable'
+      return this.slice.primary.enablezoom === 'enable'
     },
   },
 
@@ -70,7 +70,7 @@ export default {
 
   methods: {
     openModal() {
-      if (this.slice && this.slice.primary.enable_zoom === 'enable') {
+      if (this.slice && this.slice.primary.enablezoom === 'enable') {
         this.$refs.zoom.show()
       }
     },
