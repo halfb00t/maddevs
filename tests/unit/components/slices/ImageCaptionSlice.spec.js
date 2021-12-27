@@ -33,7 +33,7 @@ const mocks = {
 const callObject = {
   slice: {
     primary: {
-      enable_zoom: 'enable',
+      enablezoom: 'enable',
     },
   },
   $refs: {
@@ -70,7 +70,7 @@ describe('ImageCaptionSlice component', () => {
   })
 
   it('render class with enabled props', async () => {
-    props.slice.primary.enable_zoom = 'enable'
+    props.slice.primary.enablezoom = 'enable'
     const { html } = render(ImageCaptionSlice, {
       props,
       stubs,
@@ -84,7 +84,7 @@ describe('ImageCaptionSlice component', () => {
   })
 
   it('should work correct click handler', () => {
-    props.slice.primary.enable_zoom = 'enabled'
+    props.slice.primary.enablezoom = 'enable'
     const wrapper = shallowMount(ImageCaptionSlice, {
       propsData: props,
       stubs,
@@ -99,8 +99,8 @@ describe('ImageCaptionSlice component', () => {
     expect(callObject.$refs.zoom.show).toHaveBeenCalledTimes(1)
   })
 
-  it('should work correct click handler if zoom not enabled', () => {
-    callObject.slice.primary.enable_zoom = null
+  it('should work correct click handler if zoom not enable', () => {
+    props.slice.primary.enablezoom = 'disable'
     const wrapper = shallowMount(ImageCaptionSlice, {
       propsData: props,
       stubs,
@@ -112,6 +112,6 @@ describe('ImageCaptionSlice component', () => {
 
     wrapper.vm.$options.methods.openModal.call(callObject)
 
-    expect(callObject.$refs.zoom.show).toHaveBeenCalledTimes(1)
+    expect(callObject.$refs.zoom.show).toHaveBeenCalledTimes(2)
   })
 })
