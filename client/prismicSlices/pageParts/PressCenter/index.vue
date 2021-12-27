@@ -73,7 +73,7 @@
                 <div
                   class="ps-sub-card__description"
                 >
-                  {{ shortDescription(item.description) }}
+                  {{ shortDescriptionForSubPosts(item.description) }}
                 </div>
                 <div class="ps-sub-card__footer">
                   <span class="ps-sub-card__date">{{ formattedDate(item.date) }}</span>
@@ -133,6 +133,11 @@ export default {
   methods: {
     shortDescription(text) {
       const limit = 150
+      return textEllipsis(text, { limit })
+    },
+
+    shortDescriptionForSubPosts(text) {
+      const limit = 90
       return textEllipsis(text, { limit })
     },
 
@@ -278,7 +283,7 @@ export default {
       background-color: $bgcolor--white;
       box-sizing: border-box;
       width: 50%;
-      padding: 40px 60px 35px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
     }
@@ -296,6 +301,30 @@ export default {
     bottom: 20px;
     height: 20px;
     width: auto;
+  }
+
+  &__title{
+    @include font('Poppins', 18px, 700);
+    line-height: 24px;
+    text-transform: lowercase; //todo delete this line
+    color: $text-color--black;
+    margin-bottom: 10px;
+  }
+  &__description {
+    @include font('Poppins', 12px, 400);
+    color: $text-color--grey-pale;
+    line-height: 18px;
+    margin-bottom: 18px;
+  }
+  &__date{
+    @include font('Poppins', 12px, 400);
+    color: $text-color--grey;
+  }
+  &__link-label{
+    @include font('Poppins', 16px, 600);
+    &:hover{
+      color: $text-color--red;
+    }
   }
 }
 
