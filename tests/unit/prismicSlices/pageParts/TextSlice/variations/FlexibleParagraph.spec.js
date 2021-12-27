@@ -18,7 +18,7 @@ describe('FlexibleParagraph with data', () => {
       props,
     })
     expect(screen.getByText('test')).not.toBeNull()
-    expect(screen.getByText('test').getAttribute('style')).toEqual('--font-weight: 700; --text-align: left; --max-width: 500px; font-family: Poppins;')
+    expect(screen.getByText('test').getAttribute('style')).toEqual('--font-weight: 700; --text-align: left; --max-width: 500px; font-family: Inter;')
     expect(container).toMatchSnapshot()
   })
 })
