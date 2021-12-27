@@ -720,6 +720,18 @@
             ]
           },
           "type": "Select"
+        },
+        "fontFamily": {
+          "config": {
+            "label": "Font family",
+            "placeholder": "",
+            "options": [
+              "Inter",
+              "Poppins"
+            ],
+            "default_value": "Inter"
+          },
+          "type": "Select"
         }
       },
       "items": {}

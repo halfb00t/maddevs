@@ -1,6 +1,8 @@
 <template>
-  <section class="container">
-    <ImageCaptionSlice :slice="slice" />
+  <section class="wrapper">
+    <section class="container">
+      <ImageCaptionSlice :slice="slice" />
+    </section>
   </section>
 </template>
 
@@ -26,12 +28,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  background: #ffffff;
+  display: block;
+  width: 100%;
+}
+
 .container {
   max-width: 816px;
 }
 
 /deep/ img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   vertical-align: middle;
 }

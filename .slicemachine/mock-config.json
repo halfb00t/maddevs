@@ -242,6 +242,9 @@
             "content": "24-px"
           }
         }
+      },
+      "flexibleParagraph": {
+        "primary": {}
       }
     },
     "StartScreen": {

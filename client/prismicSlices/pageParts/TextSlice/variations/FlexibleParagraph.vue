@@ -62,6 +62,11 @@ export default {
       type: String,
       default: 'default',
     },
+
+    fontFamily: {
+      type: String,
+      default: 'Inter',
+    },
   },
 
   computed: {

@@ -143,7 +143,7 @@ export default {
 
   &__link,
   &__video {
-    margin: 25px 0;
+    padding: 25px 0;
   }
 
   &__link {

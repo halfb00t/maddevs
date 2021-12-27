@@ -24,14 +24,14 @@
             "label": "Embed title",
             "placeholder": ""
           },
-          "type": "Embed"
+          "type": "Text"
         },
         "embeddescription": {
           "config": {
-            "label": "Embeddescription",
+            "label": "Embed description",
             "placeholder": ""
           },
-          "type": "Embed"
+          "type": "Text"
         }
       }
     }

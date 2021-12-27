@@ -1,10 +1,8 @@
 <template>
-  <section class="slize-zone-wrapper">
-    <SliceZone
-      type="page"
-      :slices="customPage.slices"
-    />
-  </section>
+  <SliceZone
+    type="page"
+    :slices="customPage.slices"
+  />
 </template>
 
 <script>
@@ -78,10 +76,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.slize-zone-wrapper {
-  background-color: #ffffff;
-  width: 100%;
-}
-</style>

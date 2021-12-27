@@ -1,9 +1,11 @@
 <template>
-  <section class="embed-slice__container">
-    <EmbedSlice
-      :slice="slice"
-      :custom-title="true"
-    />
+  <section class="embed-slice">
+    <section class="embed-slice__container">
+      <EmbedSlice
+        :slice="slice"
+        :custom-title="true"
+      />
+    </section>
   </section>
 </template>
 
@@ -30,6 +32,9 @@ export default {
 
 <style lang="scss" scoped>
 .embed-slice {
+  background: $bgcolor--white-primary;
+  width: 100%;
+
   &__container {
     max-width: 816px;
     margin: 0 auto;

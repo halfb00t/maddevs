@@ -80,7 +80,7 @@ export default {
 
 <style lang="scss" scoped>
 .block-img {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   text-align: center;
   &-zoom {
     cursor: pointer;
@@ -94,6 +94,6 @@ export default {
   line-height: 129%;
   letter-spacing: -0.02em;
   color: $text-color--grey;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 </style>
