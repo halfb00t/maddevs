@@ -17,12 +17,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-right",
+      "animation": "fade-down-left",
       "colorTheme": "white",
       "position": "center",
       "title": "Featured projects",
       "maxWidth": "1028px",
-      "tag": "h4",
+      "tag": "h5",
       "size-xl": "80-px",
       "size-lg": "40-px",
       "size-md": "33-px",
@@ -36,7 +36,7 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-left",
+      "animation": "zoom-in-left",
       "colorTheme": "white",
       "title": "Featured projects",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.",
@@ -67,12 +67,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-up-right",
+      "animation": "fade-left",
       "colorTheme": "black",
       "type": "default",
-      "position": "right",
-      "text": "streamline integrated web services",
-      "maxWidth": "harness rich synergies",
+      "position": "center",
+      "text": "unleash frictionless convergence",
+      "maxWidth": "orchestrate integrated mindshare",
       "size-xl": "40-px",
       "size-lg": "24-px",
       "size-md": "21-px",
@@ -81,15 +81,26 @@
     }
   },
   {
-    "variation": "flexibaleParagraph",
-    "name": "FlexibaleParagraph",
+    "variation": "flexibleParagraph",
+    "name": "FlexibleParagraph",
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-right",
+      "animation": "zoom-in-left",
       "colorTheme": "black",
-      "maxWidth": "envisioneer cross-platform synergies",
-      "text": "target out-of-the-box models"
+      "type": "default",
+      "tag": "h6",
+      "position": "center",
+      "text": "reintermediate open-source applications",
+      "textAlign": "center",
+      "fontWeight": 400,
+      "maxWidth": "extend dot-com portals",
+      "size-xl": "24-px",
+      "size-lg": "60-px",
+      "size-md": "32-px",
+      "size-sm": "16-px",
+      "size-xs": "16-px",
+      "fontFamily": "Poppins"
     }
   }
 ]

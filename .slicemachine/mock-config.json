@@ -242,6 +242,9 @@
             "content": "24-px"
           }
         }
+      },
+      "flexibleParagraph": {
+        "primary": {}
       }
     },
     "StartScreen": {
@@ -572,7 +575,18 @@
         }
       }
     },
-    "AwardsSlice": {}
+    "AwardsSlice": {},
+    "EmbedSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "ImageWithCaption": {
+      "default-slice": {
+        "primary": {}
+      }
+    }
   },
   "_cts": {
     "singleimage": {},

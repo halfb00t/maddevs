@@ -58,7 +58,7 @@ export default {
 
   computed: {
     zoomEnabled() {
-      return this.slice.primary.enable_zoom === 'enable'
+      return this.slice.primary.enablezoom === 'enable'
     },
   },
 
@@ -70,7 +70,7 @@ export default {
 
   methods: {
     openModal() {
-      if (this.slice && this.slice.primary.enable_zoom === 'enable') {
+      if (this.slice && this.slice.primary.enablezoom === 'enable') {
         this.$refs.zoom.show()
       }
     },
@@ -80,7 +80,7 @@ export default {
 
 <style lang="scss" scoped>
 .block-img {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
   text-align: center;
   &-zoom {
     cursor: pointer;
@@ -94,6 +94,6 @@ export default {
   line-height: 129%;
   letter-spacing: -0.02em;
   color: $text-color--grey;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 </style>

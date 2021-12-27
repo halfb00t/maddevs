@@ -37,7 +37,7 @@ export const _Title = () => ({
   },
   data() {
     return {
-      mock: {"variation":"title","name":"Title","slice_type":"text_slice","items":[],"primary":{"animation":"fade-right","colorTheme":"white","position":"center","title":"Featured projects","maxWidth":"1028px","tag":"h4","size-xl":"80-px","size-lg":"40-px","size-md":"33-px","size-sm":"16-px","size-xs":"60-px"},"id":"_Title"}
+      mock: {"variation":"title","name":"Title","slice_type":"text_slice","items":[],"primary":{"animation":"fade-down-left","colorTheme":"white","position":"center","title":"Featured projects","maxWidth":"1028px","tag":"h5","size-xl":"80-px","size-lg":"40-px","size-md":"33-px","size-sm":"16-px","size-xs":"60-px"},"id":"_Title"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -56,7 +56,7 @@ export const _TitleText = () => ({
   },
   data() {
     return {
-      mock: {"variation":"titleText","name":"Title + Text","slice_type":"text_slice","items":[],"primary":{"animation":"fade-left","colorTheme":"white","title":"Featured projects","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.","maxWidth":"1028px"},"id":"_TitleText"}
+      mock: {"variation":"titleText","name":"Title + Text","slice_type":"text_slice","items":[],"primary":{"animation":"zoom-in-left","colorTheme":"white","title":"Featured projects","text":"A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.","maxWidth":"1028px"},"id":"_TitleText"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -94,14 +94,14 @@ export const _Paragraph = () => ({
   },
   data() {
     return {
-      mock: {"variation":"paragraph","name":"Paragraph","slice_type":"text_slice","items":[],"primary":{"animation":"fade-up-right","colorTheme":"black","type":"default","position":"right","text":"streamline integrated web services","maxWidth":"harness rich synergies","size-xl":"40-px","size-lg":"24-px","size-md":"21-px","size-sm":"16-px","size-xs":"32-px"},"id":"_Paragraph"}
+      mock: {"variation":"paragraph","name":"Paragraph","slice_type":"text_slice","items":[],"primary":{"animation":"fade-left","colorTheme":"black","type":"default","position":"center","text":"unleash frictionless convergence","maxWidth":"orchestrate integrated mindshare","size-xl":"40-px","size-lg":"24-px","size-md":"21-px","size-sm":"16-px","size-xs":"32-px"},"id":"_Paragraph"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
 _Paragraph.storyName = 'Paragraph'
 
-export const _FlexibaleParagraph = () => ({
+export const _FlexibleParagraph = () => ({
   components: {
     MyComponent,
     SliceZone
@@ -113,9 +113,9 @@ export const _FlexibaleParagraph = () => ({
   },
   data() {
     return {
-      mock: {"variation":"flexibaleParagraph","name":"FlexibaleParagraph","slice_type":"text_slice","items":[],"primary":{"animation":"fade-right","colorTheme":"black","maxWidth":"envisioneer cross-platform synergies","text":"target out-of-the-box models"},"id":"_FlexibaleParagraph"}
+      mock: {"variation":"flexibleParagraph","name":"FlexibleParagraph","slice_type":"text_slice","items":[],"primary":{"animation":"zoom-in-left","colorTheme":"black","type":"default","tag":"h6","position":"center","text":"reintermediate open-source applications","textAlign":"center","fontWeight":400,"maxWidth":"extend dot-com portals","size-xl":"24-px","size-lg":"60-px","size-md":"32-px","size-sm":"16-px","size-xs":"16-px","fontFamily":"Poppins"},"id":"_FlexibleParagraph"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
-_FlexibaleParagraph.storyName = 'FlexibaleParagraph'
+_FlexibleParagraph.storyName = 'FlexibleParagraph'
