@@ -15,9 +15,9 @@
               {{ shortDescription(description) }}
             </div>
             <div class="ps-main-card__footer">
-              <span>{{ date }}</span>
+              <span class="ps-main-card__date">{{ formattedDate(date) }}</span>
               <a
-                :href="link"
+                :href="link.url"
                 class="ps-main-card__link"
               >
                 <span class="ps-main-card__link-label">
@@ -76,9 +76,9 @@
                   {{ shortDescription(item.description) }}
                 </div>
                 <div class="ps-sub-card__footer">
-                  <span>{{ item.date }}</span>
+                  <span class="ps-sub-card__date">{{ formattedDate(item.date) }}</span>
                   <a
-                    :href="item.link"
+                    :href="item.link.url"
                     class="ps-sub-card__link"
                   >
                     <span class="ps-sub-card__link-label">
@@ -99,6 +99,7 @@
 
 <script>
 import textEllipsis from '@/helpers/textEllipsis'
+import formatDate from '@/helpers/formatDate'
 
 export default {
   name: 'PressCenter',
@@ -106,7 +107,7 @@ export default {
   props: {
     slice: {
       type: Object,
-      required: true,
+
       default() {
         return {}
       },
@@ -115,21 +116,28 @@ export default {
 
   data() {
     return {
-      title: this.slice.primary.title,
-      description: this.slice.primary.description,
-      date: this.slice.primary.date,
-      link: this.slice.primary.link,
-      linkLabel: this.slice.primary.linkLabel,
-      image: this.slice.primary.image,
-      linkedCompanyLogo: this.slice.primary.linkedCompanyLogo,
-      subPosts: this.slice.items,
+      title: this.slice?.primary?.title,
+      description: this.slice?.primary?.description,
+      date: this.slice?.primary?.date,
+      link: this.slice?.primary?.link,
+      linkLabel: this.slice?.primary?.linkLabel,
+      image: this.slice?.primary?.image,
+      linkedCompanyLogo: this.slice?.primary?.linkedCompanyLogo,
+      subPosts: this.slice?.items,
     }
+  },
+
+  mounted() {
   },
 
   methods: {
     shortDescription(text) {
-      const limit = 204
+      const limit = 150
       return textEllipsis(text, { limit })
+    },
+
+    formattedDate(date) {
+      return formatDate(date)
     },
 
   },
@@ -167,6 +175,7 @@ export default {
       padding: 40px 60px 35px;
       display: flex;
       flex-direction: column;
+      max-height: 285px;
     }
 
     &--right {
@@ -174,6 +183,32 @@ export default {
       width: 50%;
       overflow: hidden;
       position: relative;
+      max-height: 285px;
+    }
+  }
+
+  &__title{
+    @include font('Poppins', 26px, 700);
+    line-height: 32px;
+    text-transform: lowercase; //todo delete this line
+    color: $text-color--black;
+    margin-bottom: 15px;
+  }
+  &__description {
+    @include font('Poppins', 14px, 400);
+    color: $text-color--grey-pale;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+
+  }
+  &__date{
+    @include font('Poppins', 12px, 400);
+    color: $text-color--grey;
+  }
+  &__link-label{
+    @include font('Poppins', 16px, 600);
+    &:hover{
+      color: $text-color--red;
     }
   }
 
@@ -186,7 +221,7 @@ export default {
     position: absolute;
     right: 30px;
     bottom: 25px;
-    height: 35px;
+    height: 30px;
     width: auto;
   }
 }
@@ -214,7 +249,6 @@ export default {
     width: 50%;
     box-sizing: border-box;
     margin-bottom: 24px;
-    //margin-right: 20px;
     &:nth-child(odd){
       padding-right: 24px;
     }
@@ -258,9 +292,9 @@ export default {
 
   &__linked-logo{
     position: absolute;
-    right: 30px;
-    bottom: 25px;
-    height: 35px;
+    right: 20px;
+    bottom: 20px;
+    height: 20px;
     width: auto;
   }
 }
