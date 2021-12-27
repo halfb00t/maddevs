@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section press-center-section">
     <div class="container">
       <div class="press-center">
         <!--  primary zone  -->
@@ -152,7 +152,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.press-center {
+.press-center-section {
   background-color: $bgcolor--white-primary;
 }
 
@@ -162,57 +162,102 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  &__footer{
+
+  &__footer {
     margin-top: auto;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
-  &__link{
+
+  &__link {
     color: $text-color--black;
   }
+
   &-section {
     max-width: 50%;
+    max-height: 285px;
+    @media screen and (max-width: 1200px) {
+      max-height: 330px;
+    }
+    @media screen and (min-width: 540px) and (max-width: 767px) {
+      max-height: 285px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: unset;
+    }
 
     &--left {
       background-color: $bgcolor--white;
       box-sizing: border-box;
-      width: 50%;
+      //width: 50%;
       padding: 40px 60px 35px;
       display: flex;
       flex-direction: column;
       max-height: 285px;
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        padding: 20px 30px;
+      }
+      @media screen and (max-width: 767px) {
+        padding: 18px;
+        order: 2;
+        height: 300px;
+      }
     }
 
     &--right {
       box-sizing: border-box;
-      width: 50%;
+      //width: 50%;
       overflow: hidden;
       position: relative;
-      max-height: 285px;
+      @media screen and (max-width: 767px) {
+        order: 1;
+        max-height: 200px;
+      }
     }
   }
 
-  &__title{
+  &__title {
     @include font('Poppins', 26px, 700);
     line-height: 32px;
-    text-transform: lowercase; //todo delete this line
     color: $text-color--black;
     margin-bottom: 15px;
+    @media screen and (max-width: 991px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
+
   &__description {
     @include font('Poppins', 14px, 400);
     color: $text-color--grey-pale;
     line-height: 20px;
     letter-spacing: -0.4px;
-
+    margin-bottom: 10px;
+    @media screen and (max-width: 991px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 23px;
+    }
   }
-  &__date{
+
+  &__date {
     @include font('Poppins', 12px, 400);
     color: $text-color--grey;
   }
-  &__link-label{
+
+  &__link-label {
     @include font('Poppins', 16px, 600);
-    &:hover{
+
+    &:hover {
       color: $text-color--red;
     }
   }
@@ -222,12 +267,21 @@ export default {
     height: 100%;
     object-fit: cover;
   }
-  &__linked-logo{
+
+  &__linked-logo {
     position: absolute;
     right: 30px;
     bottom: 25px;
     height: 30px;
     width: auto;
+    @media screen and (max-width: 1200px) {
+      height: 20px;
+      right: 10px;
+      bottom: 10px;
+    }
+    @media screen and (max-width: 767px) {
+      height: 25px;
+    }
   }
 }
 //primary section styles end
@@ -250,42 +304,58 @@ export default {
   width: 100%;
   height: 100%;
 
-  &-wrapper{
+  &-wrapper {
     width: 50%;
     box-sizing: border-box;
     margin-bottom: 24px;
-    &:nth-child(odd){
-      padding-right: 24px;
+    @media screen and (min-width: 992px) {
+      &:nth-child(odd) {
+        padding-right: 24px;
+      }
     }
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+
   }
-  &__footer{
+
+  &__footer {
     margin-top: auto;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 
-  &__link{
+  &__link {
     color: $text-color--black;
   }
 
   &-section {
     max-width: 50%;
+    max-height: 285px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: unset;
+    }
 
     &--left {
       box-sizing: border-box;
-      width: 50%;
+      //width: 50%;
       overflow: hidden;
-      max-height: 285px;
       position: relative;
     }
 
     &--right {
       background-color: $bgcolor--white;
       box-sizing: border-box;
-      width: 50%;
+      //width: 50%;
       padding: 18px;
       display: flex;
       flex-direction: column;
+      @media screen and (max-width: 767px) {
+        height: 300px;
+        padding: 15px 14px 14px 14px;
+      }
     }
   }
 
@@ -295,34 +365,61 @@ export default {
     object-fit: cover;
   }
 
-  &__linked-logo{
+  &__linked-logo {
     position: absolute;
     right: 20px;
     bottom: 20px;
     height: 20px;
     width: auto;
+    @media screen and (max-width: 1200px) {
+      height: 20px;
+      right: 10px;
+      bottom: 10px;
+    }
+    @media screen and (max-width: 767px) {
+      height: 25px;
+    }
   }
 
-  &__title{
+  &__title {
     @include font('Poppins', 18px, 700);
     line-height: 24px;
-    text-transform: lowercase; //todo delete this line
     color: $text-color--black;
     margin-bottom: 10px;
+    @media screen and (max-width: 991px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    @media screen and (max-width: 767px) {
+      @include font('Poppins', 18px, 600);
+      font-size: 23px;
+      line-height: 30px;
+    }
   }
+
   &__description {
     @include font('Poppins', 12px, 400);
     color: $text-color--grey-pale;
     line-height: 18px;
     margin-bottom: 18px;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 23px;
+    }
   }
-  &__date{
+
+  &__date {
     @include font('Poppins', 12px, 400);
     color: $text-color--grey;
   }
-  &__link-label{
+
+  &__link-label {
     @include font('Poppins', 16px, 600);
-    &:hover{
+
+    &:hover {
       color: $text-color--red;
     }
   }
