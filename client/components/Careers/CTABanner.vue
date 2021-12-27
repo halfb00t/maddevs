@@ -8,7 +8,7 @@
       :image="$getMediaFromS3(`/images/CTABanner/Daria.png`)"
       image-alt-text="Daria"
       :man-name="$t('careers.section-9.hr')"
-      man-position="Head of HR Departament"
+      man-position="Head of HR Department"
     >
       <a :href="mailTo">
         {{ $t('careers.section-9.btn') }}
@@ -64,6 +64,7 @@ export default {
 .careers-cta-banner {
   &_container {
     padding-bottom: 100px;
+
     /deep/ .ui-button {
       width: 193px;
       height: 52px;
@@ -71,19 +72,24 @@ export default {
       font-size: 18px;
       line-height: 18px;
       letter-spacing: -0.02em;
+
       img {
         transform: translateY(2.5px);
       }
+
       @media screen and (max-width: 900px) {
         font-size: 16px;
       }
     }
   }
+
   &__links {
     margin-top: 24.5px;
     display: flex;
+
     li {
       margin-right: 11.5px;
+
       a {
         letter-spacing: -0.013em;
         font-size: 14px;
@@ -91,6 +97,7 @@ export default {
         color: $text-color--black-oil;
         text-decoration: underline;
       }
+
       &:last-child {
         margin-right: 0;
       }
@@ -101,6 +108,17 @@ export default {
     &_container {
       padding-bottom: 44px;
     }
+  }
+}
+
+/deep/ .cta-banner__info > p {
+  max-width: 440px;
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    max-width: 320px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
   }
 }
 
