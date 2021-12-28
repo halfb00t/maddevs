@@ -576,6 +576,12 @@
       }
     },
     "AwardsSlice": {},
+    "PressCenter": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    },
     "EmbedSlice": {
       "default-slice": {
         "primary": {},

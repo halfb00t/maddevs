@@ -1,0 +1,125 @@
+{
+  "id": "press_center",
+  "type": "SharedSlice",
+  "name": "PressCenter",
+  "description": "PressCenter",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PressCenter",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "date": {
+          "config": {
+            "label": "Date",
+            "placeholder": ""
+          },
+          "type": "Date"
+        },
+        "link": {
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "linkLabel": {
+          "config": {
+            "label": "LinkLabel",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "linkedCompanyLogo": {
+          "config": {
+            "label": "LinkedCompanyLogo",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {
+        "image": {
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "link": {
+          "config": {
+            "label": "link",
+            "placeholder": "",
+            "select": "web",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "date": {
+          "config": {
+            "label": "date",
+            "placeholder": ""
+          },
+          "type": "Date"
+        },
+        "linkLabel": {
+          "config": {
+            "label": "linkLabel",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "linkedCompanyLogo": {
+          "config": {
+            "label": "linkedCompanyLogo",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      }
+    }
+  ]
+}
