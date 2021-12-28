@@ -28,11 +28,13 @@
           </div>
           <div class="ps-main-card-section ps-main-card-section--right">
             <img
+              v-lazy-load
               :src="image.url"
               :alt="image.alt"
               class="ps-main-card__image"
             >
             <img
+              v-lazy-load
               :src="linkedCompanyLogo.url"
               :alt="linkedCompanyLogo.alt"
               class="ps-main-card__linked-logo"
@@ -56,11 +58,13 @@
             >
               <div class="ps-sub-card-section ps-sub-card-section--left">
                 <img
+                  v-lazy-load
                   :src="item.image.url"
                   :alt="item.image.alt"
                   class="ps-sub-card__image"
                 >
                 <img
+                  v-lazy-load
                   :src="item.linkedCompanyLogo.url"
                   :alt="item.linkedCompanyLogo.alt"
                   class="ps-sub-card__linked-logo"
@@ -191,7 +195,6 @@ export default {
     &--left {
       background-color: $bgcolor--white;
       box-sizing: border-box;
-      //width: 50%;
       padding: 40px 60px 35px;
       display: flex;
       flex-direction: column;
@@ -208,7 +211,6 @@ export default {
 
     &--right {
       box-sizing: border-box;
-      //width: 50%;
       overflow: hidden;
       position: relative;
       @media screen and (max-width: 767px) {
@@ -284,6 +286,7 @@ export default {
     }
   }
 }
+
 //primary section styles end
 // -------------------------
 //repeatable section styles
@@ -316,7 +319,6 @@ export default {
     @media screen and (max-width: 992px) {
       width: 100%;
     }
-
   }
 
   &__footer {
@@ -340,7 +342,6 @@ export default {
 
     &--left {
       box-sizing: border-box;
-      //width: 50%;
       overflow: hidden;
       position: relative;
     }
@@ -348,7 +349,6 @@ export default {
     &--right {
       background-color: $bgcolor--white;
       box-sizing: border-box;
-      //width: 50%;
       padding: 18px;
       display: flex;
       flex-direction: column;
