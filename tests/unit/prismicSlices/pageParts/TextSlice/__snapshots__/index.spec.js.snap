@@ -141,7 +141,7 @@ exports[`TextSlice slice should correctly render flexibleParagraph component 1`]
         >
           <p
             class="paragraph-slice-text paragraph-slice-text--size-md paragraph-slice-text--default"
-            style="--font-weight: 400; --text-align: left; --max-width: 100%; font-family: Inter;"
+            style="--font-weight: 400; --text-align: left; --max-width: 100%;"
           />
         </section>
       </transition-stub>
