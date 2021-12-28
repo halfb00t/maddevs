@@ -32,6 +32,11 @@ export default {
       type: Object,
       default: () => ({}),
     },
+
+    customTitle: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
@@ -82,8 +87,8 @@ export default {
         html: rawHtml,
         type: embedType,
       },
-      embed_title: embedTitle,
-      embed_description: embedDescription,
+      embedtitle,
+      embeddescription,
     } = this.item
 
     if (rawHtml) {
@@ -91,8 +96,8 @@ export default {
       const description = matchDescription ? matchDescription[1] || '' : ''
 
       const html = `
-        <div class="embed__title">${embedTitle || rawTitle.split(' | ')[0]}</div>
-        <p class="embed__description">${embedDescription || description}</p>
+        <div class="${this.customTitle ? 'embed__custom-title' : 'embed__title'}">${embedtitle || rawTitle.split(' | ')[0]}</div>
+        <p class="${this.customTitle ? 'embed__custom-description' : 'embed__description'}">${embeddescription || description}</p>
       `
 
       this.embedFieldData = {
@@ -138,7 +143,7 @@ export default {
 
   &__link,
   &__video {
-    margin: 25px 0;
+    padding: 25px 0;
   }
 
   &__link {
@@ -169,18 +174,38 @@ export default {
     line-height: 129%;
   }
 
-  /deep/ &__title {
+  /deep/ &__title,
+  /deep/ &__custom-title {
     @include font('Poppins', 21px, 700);
-    line-height: 27.34px;
+    line-height: 27px;
     color: $text-color--black-oil;
     margin: 0;
     margin-bottom: 6px;
   }
 
-  /deep/ &__description {
+  /deep/ &__custom-title {
+    @include font('Poppins', 25px, 700);
+    line-height: 30px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 21px;
+      line-height: 27px;
+    }
+  }
+
+  /deep/ &__description,
+  /deep/ &__custom-description {
     @include font('Inter', 13px, 400);
     color: $text-color--grey-pale;
-    margin: 0;
+    margin: 0px;
+  }
+
+  /deep/ &__custom-description {
+    @include font('Inter', 15px, 400);
+
+    @media screen and (max-width: 576px) {
+      font-size: 13px;
+    }
   }
 
   /deep/ &__image {

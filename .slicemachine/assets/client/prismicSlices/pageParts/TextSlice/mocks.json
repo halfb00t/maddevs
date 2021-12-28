@@ -5,7 +5,7 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-up-right",
+      "animation": "zoom-in-up",
       "colorTheme": "white",
       "maxWidth": "1028px",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies."
@@ -17,12 +17,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-right",
+      "animation": "zoom-in-up",
       "colorTheme": "white",
       "position": "center",
       "title": "Featured projects",
       "maxWidth": "1028px",
-      "tag": "h4",
+      "tag": "h6",
       "size-xl": "80-px",
       "size-lg": "40-px",
       "size-md": "33-px",
@@ -36,7 +36,7 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-left",
+      "animation": "zoom-in-left",
       "colorTheme": "white",
       "title": "Featured projects",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.",
@@ -49,7 +49,7 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "zoom-in-up",
+      "animation": "fade-right",
       "colorTheme": "white",
       "title": "Featured projects",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.",
@@ -67,12 +67,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-up-right",
-      "colorTheme": "black",
+      "animation": "zoom-in-right",
+      "colorTheme": "white",
       "type": "default",
       "position": "right",
-      "text": "streamline integrated web services",
-      "maxWidth": "harness rich synergies",
+      "text": "enhance sexy infomediaries",
+      "maxWidth": "evolve collaborative deliverables",
       "size-xl": "40-px",
       "size-lg": "24-px",
       "size-md": "21-px",
@@ -81,15 +81,25 @@
     }
   },
   {
-    "variation": "flexibaleParagraph",
-    "name": "FlexibaleParagraph",
+    "variation": "flexibleParagraph",
+    "name": "FlexibleParagraph",
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-right",
+      "animation": "fade-down-righ",
       "colorTheme": "black",
-      "maxWidth": "envisioneer cross-platform synergies",
-      "text": "target out-of-the-box models"
+      "type": "default",
+      "tag": "h2",
+      "position": "center",
+      "text": "implement value-added ROI",
+      "textAlign": "left",
+      "fontWeight": 600,
+      "maxWidth": "synergize transparent ROI",
+      "size-xl": "32-px",
+      "size-lg": "24-px",
+      "size-md": "32-px",
+      "size-sm": "40-px",
+      "size-xs": "60-px"
     }
   }
 ]
