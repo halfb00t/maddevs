@@ -62,11 +62,6 @@ export default {
       type: String,
       default: 'default',
     },
-
-    fontFamily: {
-      type: String,
-      default: 'Inter',
-    },
   },
 
   computed: {
@@ -75,7 +70,6 @@ export default {
         '--font-weight': this.fontWeight,
         '--text-align': this.textAlign,
         '--max-width': this.maxWidth,
-        'font-family': this.fontFamily,
       }
     },
   },
