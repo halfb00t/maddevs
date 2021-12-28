@@ -19,6 +19,7 @@
 
 <script>
 import convertTagsToText from '@/helpers/convertTagsToText'
+import linkResolver from '@/plugins/link-resolver.js'
 
 export default {
   name: 'TitleAndParagraphSlice',
