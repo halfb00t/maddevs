@@ -1,0 +1,25 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "title_and_paragraph_slice",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Occaecat labore amet amet. Excepteur cupidatat exercitation nulla irure adipisicing tempor. Irure consequat exercitation consectetur enim.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Laboris laboris officia dolor veniam minim. Adipisicing adipisicing qui pariatur dolore nisi dolor incididunt do laboris.",
+          "spans": []
+        }
+      ],
+      "maxWidth": "productize dynamic mindshare"
+    }
+  }
+]
