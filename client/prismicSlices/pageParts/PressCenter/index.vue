@@ -19,6 +19,7 @@
               <a
                 :href="link.url"
                 class="ps-main-card__link"
+                target="_blank"
               >
                 <span class="ps-main-card__link-label">
                   {{ linkLabel }}
@@ -84,6 +85,7 @@
                   <a
                     :href="item.link.url"
                     class="ps-sub-card__link"
+                    target="_blank"
                   >
                     <span class="ps-sub-card__link-label">
                       {{ item.linkLabel }}
@@ -179,7 +181,7 @@ export default {
   }
 
   &-section {
-    max-width: 50%;
+    width: 50%;
     max-height: 285px;
     @media screen and (max-width: 1200px) {
       max-height: 330px;
@@ -333,7 +335,7 @@ export default {
   }
 
   &-section {
-    max-width: 50%;
+    width: 50%;
     max-height: 285px;
     @media screen and (max-width: 767px) {
       width: 100%;
