@@ -197,6 +197,7 @@ module.exports = {
     reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
   },
   router: {
+    trailingSlash: true,
     extendRoutes: routes => {
       routes.push(...CUSTOM_PAGE_ROUTES)
       return routes
