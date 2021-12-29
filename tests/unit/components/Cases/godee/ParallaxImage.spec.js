@@ -13,6 +13,7 @@ describe('ParallaxImage component', () => {
         parallax: {
           inserted: () => {},
         },
+        'lazy-load': () => {},
       },
     })
 
@@ -26,6 +27,7 @@ describe('ParallaxImage component', () => {
         parallax: {
           inserted: () => {},
         },
+        'lazy-load': () => {},
       },
     })
 

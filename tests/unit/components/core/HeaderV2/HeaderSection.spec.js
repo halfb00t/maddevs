@@ -8,7 +8,7 @@ const props = {
   name: 'test',
 
   title: 'test',
-  menus: [{ name: 'test menu', routes: '' }],
+  menus: [{ name: 'test menu', routes: [] }],
   post: {},
   postAuthor: {},
 }
