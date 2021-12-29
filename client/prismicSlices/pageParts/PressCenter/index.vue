@@ -1,7 +1,10 @@
 <template>
   <section class="section press-center-section">
     <div class="container">
-      <div class="press-center">
+      <div
+        :data-aos="animation"
+        class="press-center"
+      >
         <!--  primary zone  -->
         <!--   \/  \/  \/   -->
         <div class="press-center-main ps-main-card">
@@ -29,13 +32,11 @@
           </div>
           <div class="ps-main-card-section ps-main-card-section--right">
             <img
-              v-lazy-load
               :src="image.url"
               :alt="image.alt"
               class="ps-main-card__image"
             >
             <img
-              v-lazy-load
               :src="linkedCompanyLogo.url"
               :alt="linkedCompanyLogo.alt"
               class="ps-main-card__linked-logo"
@@ -59,13 +60,11 @@
             >
               <div class="ps-sub-card-section ps-sub-card-section--left">
                 <img
-                  v-lazy-load
                   :src="item.image.url"
                   :alt="item.image.alt"
                   class="ps-sub-card__image"
                 >
                 <img
-                  v-lazy-load
                   :src="item.linkedCompanyLogo.url"
                   :alt="item.linkedCompanyLogo.alt"
                   class="ps-sub-card__linked-logo"
@@ -130,6 +129,7 @@ export default {
       image: this.slice?.primary?.image,
       linkedCompanyLogo: this.slice?.primary?.linkedCompanyLogo,
       subPosts: this.slice?.items,
+      animation: this.slice?.primary?.animation,
     }
   },
 
