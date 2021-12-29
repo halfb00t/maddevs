@@ -126,6 +126,7 @@ export default {
   width: 100%;
   margin: 0 auto;
   background: $bgcolor--white-primary;
+  margin-top: -1px;
 }
 
 /deep/ h1,
