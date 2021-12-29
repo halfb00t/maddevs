@@ -41,6 +41,6 @@ describe('redirectToValidLink', () => {
     req.secure = false
     req.url = '/123'
     redirectToValidLink(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, `https://${req.headers.host}${req.url}`)
+    expect(res.redirect).toHaveBeenCalledWith(301, `https://${req.headers.host}${req.url}/`)
   })
 })
