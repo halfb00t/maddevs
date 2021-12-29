@@ -31,11 +31,16 @@ const mocks = {
   $getMediaFromS3: () => 'img.jpg',
 }
 
+const directives = {
+  'lazy-load': () => {},
+}
+
 describe('StatisticsCard component', () => {
   it('should render correctly', () => {
     const { container } = render(StatisticsCard, {
       props,
       mocks,
+      directives,
     })
     expect(container).toMatchSnapshot()
   })
@@ -44,6 +49,7 @@ describe('StatisticsCard component', () => {
     render(StatisticsCard, {
       props: { ...props, icon: null },
       mocks,
+      directives,
     })
 
     const headerText = screen.queryByText(props.headerText)
@@ -63,6 +69,7 @@ describe('StatisticsCard component', () => {
     render(StatisticsCard, {
       props: { ...props, icon: null },
       mocks,
+      directives,
     })
     expect(screen.queryAllByTestId('test-icon')).toHaveLength(0)
     expect(screen.queryAllByTestId('card-header-text')).toHaveLength(1)

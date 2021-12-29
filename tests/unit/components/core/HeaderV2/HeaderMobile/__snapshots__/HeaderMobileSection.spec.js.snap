@@ -4,7 +4,6 @@ exports[`HeaderMobileSection component should render correctly 1`] = `
 <div>
   <transition-stub
     name="fade"
-    title="test"
   >
     <div
       class="header-mobile-section header-mobile-section-test"
