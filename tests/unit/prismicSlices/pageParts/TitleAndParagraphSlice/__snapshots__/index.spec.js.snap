@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleAndParagraphSlice component should render correctly with data 1`] = `
+<div class="content">
+  <section class="container">
+    <div style="max-width: 500px; margin: 0px auto;">
+      <prismicrichtext-stub field="[object Object]" class="content__title"></prismicrichtext-stub>
+      <prismicrichtext-stub field="[object Object]" class="content__description"></prismicrichtext-stub>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`TitleAndParagraphSlice component should render correctly without data 1`] = `
+<div class="content">
+  <section class="container">
+    <div style="max-width: 500px; margin: 0px auto;">
+      <prismicrichtext-stub field="[object Object]" class="content__title"></prismicrichtext-stub>
+      <prismicrichtext-stub field="[object Object]" class="content__description"></prismicrichtext-stub>
+    </div>
+  </section>
+</div>
+`;

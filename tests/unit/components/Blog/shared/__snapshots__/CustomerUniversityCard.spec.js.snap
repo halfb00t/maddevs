@@ -5,7 +5,7 @@ exports[`СustomerUniversityCard component should render correctly with data 1`]
   <div
     class="customer-university-card customer-university-card--md customer-university-card--w-100 customer-university-card customer-university-card--column"
   >
-    <nuxtlink
+    <nuxtlink-stub
       class="customer-university-card__image"
       to="/insights/blog//"
     >
@@ -13,9 +13,9 @@ exports[`СustomerUniversityCard component should render correctly with data 1`]
         height="311"
         width="560"
       />
-    </nuxtlink>
+    </nuxtlink-stub>
      
-    <nuxtlink
+    <nuxtlink-stub
       class="customer-university-card__info"
       to="/insights/blog//"
     >
@@ -38,7 +38,7 @@ exports[`СustomerUniversityCard component should render correctly with data 1`]
       </p>
        
       <!---->
-    </nuxtlink>
+    </nuxtlink-stub>
   </div>
 </div>
 `;

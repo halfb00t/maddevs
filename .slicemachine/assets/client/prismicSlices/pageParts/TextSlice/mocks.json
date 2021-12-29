@@ -5,7 +5,7 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-up-right",
+      "animation": "zoom-in-up",
       "colorTheme": "white",
       "maxWidth": "1028px",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies."
@@ -17,12 +17,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-down-left",
+      "animation": "zoom-in-up",
       "colorTheme": "white",
       "position": "center",
       "title": "Featured projects",
       "maxWidth": "1028px",
-      "tag": "h5",
+      "tag": "h6",
       "size-xl": "80-px",
       "size-lg": "40-px",
       "size-md": "33-px",
@@ -49,7 +49,7 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "zoom-in-up",
+      "animation": "fade-right",
       "colorTheme": "white",
       "title": "Featured projects",
       "text": "A few listed projects to show the diversity of our community participant roster and some of the promising concepts that are emerging in development technologies.",
@@ -67,12 +67,12 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "fade-left",
-      "colorTheme": "black",
+      "animation": "zoom-in-right",
+      "colorTheme": "white",
       "type": "default",
-      "position": "center",
-      "text": "unleash frictionless convergence",
-      "maxWidth": "orchestrate integrated mindshare",
+      "position": "right",
+      "text": "enhance sexy infomediaries",
+      "maxWidth": "evolve collaborative deliverables",
       "size-xl": "40-px",
       "size-lg": "24-px",
       "size-md": "21-px",
@@ -86,21 +86,20 @@
     "slice_type": "text_slice",
     "items": [],
     "primary": {
-      "animation": "zoom-in-left",
+      "animation": "fade-down-righ",
       "colorTheme": "black",
       "type": "default",
-      "tag": "h6",
+      "tag": "h2",
       "position": "center",
-      "text": "reintermediate open-source applications",
-      "textAlign": "center",
-      "fontWeight": 400,
-      "maxWidth": "extend dot-com portals",
-      "size-xl": "24-px",
-      "size-lg": "60-px",
+      "text": "implement value-added ROI",
+      "textAlign": "left",
+      "fontWeight": 600,
+      "maxWidth": "synergize transparent ROI",
+      "size-xl": "32-px",
+      "size-lg": "24-px",
       "size-md": "32-px",
-      "size-sm": "16-px",
-      "size-xs": "16-px",
-      "fontFamily": "Poppins"
+      "size-sm": "40-px",
+      "size-xs": "60-px"
     }
   }
 ]

@@ -6,7 +6,6 @@ const stubs = ['PrismicRichText']
 
 describe('VacancyText slice component', () => {
   const props = {
-    stubs,
     slice: {
       items: [
         {
@@ -23,6 +22,7 @@ describe('VacancyText slice component', () => {
   it('is a Vue instance', () => {
     const { container } = render(VacancyText, {
       props,
+      stubs,
     })
 
     expect(container).toMatchSnapshot()
@@ -33,6 +33,7 @@ describe('VacancyText slice component', () => {
       propsData: {
         slice: {},
       },
+      stubs,
     })
     expect(wrapper.vm.htmlSerializer()).toBeNull()
   })

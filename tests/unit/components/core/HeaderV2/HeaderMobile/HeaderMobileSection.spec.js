@@ -6,8 +6,7 @@ const stubs = ['HeaderMobileSection']
 const props = {
   isActive: true,
   name: 'test',
-  title: 'test',
-  menus: [{ name: 'test menu', routes: '' }],
+  menus: [{ name: 'test menu', routes: [] }],
 }
 
 describe('HeaderMobileSection component', () => {

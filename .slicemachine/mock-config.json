@@ -576,6 +576,12 @@
       }
     },
     "AwardsSlice": {},
+    "PressCenter": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    },
     "EmbedSlice": {
       "default-slice": {
         "primary": {},
@@ -585,6 +591,24 @@
     "ImageWithCaption": {
       "default-slice": {
         "primary": {}
+      }
+    },
+    "TitleAndParagraphSlice": {
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   },

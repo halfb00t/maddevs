@@ -14,6 +14,7 @@ describe('OutStuffing component', () => {
       mocks,
       directives: {
         prlx: () => {},
+        'lazy-load': () => {},
       },
     })
 

@@ -99,31 +99,6 @@ exports[`ContactMeForm component should render correctly 1`] = `
               />
             </label>
           </div>
-          <div
-            data-testid="test-radio-buttons"
-          >
-            <label
-              class="radio-button-list__form-checkbox-label form-checkbox-label"
-              data-testid="test-radio-label-2"
-            >
-              <div
-                class="radio-button-list__label-text"
-              >
-                Employment
-              </div>
-               
-              <input
-                class="form-checkbox-input"
-                name="radioBtn"
-                type="radio"
-                value="Employment"
-              />
-               
-              <div
-                class="checkmark"
-              />
-            </label>
-          </div>
         </div>
       </div>
        
