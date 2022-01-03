@@ -16,7 +16,7 @@
     "lint-es": "eslint -c .eslintrc --ext .js,.vue --ignore-path .gitignore .",
     "lint-vue-scss": "sass-lint-vue components",
     "lint-scss": "sass-lint client/assets/styles/*.scss --verbose",
-    "precommit": "npm run lint && npm run seo-analyze",
+    "precommit": "npm run lint",
     "heroku-postbuild": "npm run build",
     "heroku-cleanup": "cd ./client; ls | grep -v static | xargs rm -rfv",
     "snyk-protect": "snyk protect",
@@ -128,7 +128,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit"
+      "pre-commit": "npm run precommit",
+      "pre-push" : "npm run seo-analyze"
     }
   },
   "snyk": true
