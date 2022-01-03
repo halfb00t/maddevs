@@ -32,7 +32,7 @@ exports[`Footer component should render correctly 1`] = `
               class="footer-navbar__company-name"
             >
               
-    © Mad Devs - 2021
+    © Mad Devs - 2022
   
             </p>
              
@@ -258,7 +258,7 @@ exports[`Footer component should render correctly 1`] = `
             class="footer-navbar-mobile__company-name"
           >
             
-    © Mad Devs - 2021
+    © Mad Devs - 2022
   
           </p>
            
