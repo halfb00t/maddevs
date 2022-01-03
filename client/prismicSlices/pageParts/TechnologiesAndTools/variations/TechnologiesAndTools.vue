@@ -3,6 +3,7 @@
     <div
       class="container"
       data-testid="technologies-slice-container"
+      :class="{ 'aos-animate': alreadyAnimated }"
       :data-aos="animation"
     >
       <h2
@@ -90,6 +91,7 @@ export default {
       technologies,
       title: this.slice?.primary?.title,
       animation: this.slice?.primary?.animation,
+      alreadyAnimated: false, // needed to prevent the aos animation repeating on DOM changes
     }
   },
 
@@ -97,6 +99,7 @@ export default {
     refreshLazyImages,
 
     setActiveCategory(category) {
+      this.alreadyAnimated = true
       this.activeCategory = category === this.activeCategory ? '' : category
       this.$nextTick(() => this.refreshLazyImages())
     },
