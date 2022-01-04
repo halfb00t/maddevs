@@ -22,8 +22,6 @@ new SeoAnalyzer()
       'twitter:url',
     ],
   })
-  .addRule('hTagsRule')
-  .addRule('noMoreThanOneH1TagRule')
-  .addRule('imgTagWithAltAttritubeRule')
+  .addRule('imgTagWithAltAttributeRule')
   .addRule('canonicalLinkRule')
   .outputConsole()
