@@ -50,7 +50,7 @@
     <StableScalableSolution />
     <Team />
     <CaseFooter
-      link="/clients/case-studies/namba-food/"
+      link="/case-studies/namba-food/"
       class-name="namba-food"
     >
       <img

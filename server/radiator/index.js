@@ -37,7 +37,7 @@ function runRadiator() {
     analyticsViewId: '230523659',
     pagesPathForViewsAnalytics: [
       '/customer-university/',
-      '/insights/blog/',
+      '/blog/',
     ],
     analyticsConversions: [
       {

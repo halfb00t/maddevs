@@ -91,7 +91,7 @@ exports[`Nambataxi _uid component should render correctly 1`] = `
        
       <nuxtlink-stub
         class="case_next-project-button"
-        to="/clients/case-studies/clutch/"
+        to="/case-studies/clutch/"
       >
         
     Read next project

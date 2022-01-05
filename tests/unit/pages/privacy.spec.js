@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
-import MainPrivacy from '@/pages/approach/privacy'
+import MainPrivacy from '@/pages/privacy'
 
 const META_DATA = {
   description: 'Mad Devs Privacy Policy: Website Acceptable Use Terms. We respect your privacy and are committed to protecting your personal information.',

@@ -168,8 +168,8 @@ describe('ModalSearch component', () => {
     expect(wrapper.vm.searchPosts[1].data.id).toBe(1)
   })
 
-  it('if set to args Frontend Development, tagLink will return /insights/blog/tag/frontend-development/', () => {
-    expect(wrapper.vm.tagLink('Frontend Development')).toEqual('/insights/blog/tag/frontend-development/')
+  it('if set to args Frontend Development, tagLink will return /blog/tag/frontend-development/', () => {
+    expect(wrapper.vm.tagLink('Frontend Development')).toEqual('/blog/tag/frontend-development/')
   })
 
   it('if set to 2 arg position, getAuthor will return Senior', () => {
@@ -308,7 +308,7 @@ describe('ModalSearch component', () => {
   })
 
   it('should call push method with searchBy params if this.value is not empty', () => {
-    const args = { path: '/insights/blog/search-result/', query: { searchBy: 'test' } }
+    const args = { path: '/blog/search-result/', query: { searchBy: 'test' } }
     const spyPush = jest.spyOn(mocks.$router, 'push')
 
     wrapper = shallowMount(ModalSearch, {
@@ -327,7 +327,7 @@ describe('ModalSearch component', () => {
   })
 
   it('should push to blog page if this.value is empty', () => {
-    const args = '/insights/blog/'
+    const args = '/blog/'
     const spyPush = jest.spyOn(mocks.$router, 'push')
 
     wrapper.vm.updateUrl()
@@ -362,6 +362,6 @@ describe('ModalSearch component', () => {
 
     const value = wrapper.vm.link(post)
 
-    expect(value).toBe('/insights/blog/post-uid/')
+    expect(value).toBe('/blog/post-uid/')
   })
 })

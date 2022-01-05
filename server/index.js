@@ -11,14 +11,9 @@ const runRadiator = require('./radiator')
 // custom middlewares
 const applyXFrame = require('./middlewares/applyXFrame')
 const redirectToValidLink = require('./middlewares/redirectToValidLink')
-const redirectToCorrectBlogUrl = require('./middlewares/redirectToCorrectBlogUrl')
-const redirectToCustomerUrl = require('./middlewares/redirectToCustomerUrl')
-const redirectToCorrectPostUrl = require('./middlewares/redirectToCorrectPostUrl')
-const redirectHrTags = require('./middlewares/redirectHrTags')
-const redirectInvalidLinks = require('./middlewares/redirectInvalidLinks')
-const redirectToCorrectCareersUrl = require('./middlewares/redirectToCorrectCareersUrl')
 const redirectToRuCareerPostUrl = require('./middlewares/redirectToRuCareerPostUrl')
 const redirectToPrismicUrl = require('./middlewares/redirectToPrismicUrl')
+const redirectToCorrectUrl = require('./middlewares/redirectToCorrectUrl')
 
 // config
 const config = require('./config')
@@ -46,12 +41,7 @@ function bootstrap() {
   // Custom middlewares
   app.use(applyXFrame)
   app.use(redirectToValidLink)
-  app.use(redirectToCorrectBlogUrl)
-  app.use(redirectToCustomerUrl)
-  app.use(redirectToCorrectPostUrl)
-  app.use(redirectHrTags)
-  app.use(redirectInvalidLinks)
-  app.use(redirectToCorrectCareersUrl)
+  app.use(redirectToCorrectUrl)
   app.use(redirectToRuCareerPostUrl)
   app.use(redirectToPrismicUrl)
 

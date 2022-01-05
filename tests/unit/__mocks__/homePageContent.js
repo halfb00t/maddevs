@@ -13,7 +13,7 @@ export default {
   },
   bannerLink: {
     link_type: 'Web',
-    url: 'https://maddevs.io/clients/case-studies/sir-john-monash-centre?utm_source=blog&utm_medium=home-page',
+    url: 'https://maddevs.io/case-studies/sir-john-monash-centre?utm_source=blog&utm_medium=home-page',
     target: '_blank',
   },
   categories: [

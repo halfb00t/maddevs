@@ -99,7 +99,7 @@ export default {
 
     link: {
       type: String,
-      default: '/clients/case-studies/godee/',
+      default: '/case-studies/godee/',
     },
 
     isBlank: {

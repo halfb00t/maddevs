@@ -63,7 +63,7 @@ exports[`InternationalTradeCenter root component should render correctly 1`] = `
        
       <nuxtlink-stub
         class="case_next-project-button"
-        to="/clients/case-studies/veeqo/"
+        to="/case-studies/veeqo/"
       >
         
     Read next project

@@ -850,7 +850,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/clients/case-studies/namba-food/',
+                      url: 'https://maddevs.io/case-studies/namba-food/',
                     },
                   },
                 ],
@@ -1816,7 +1816,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/clients/case-studies/sir-john-monash-centre/',
+                      url: 'https://maddevs.io/case-studies/sir-john-monash-centre/',
                     },
                   },
                 ],

@@ -89,7 +89,7 @@ exports[`Clutch _uid component should render correctly 1`] = `
        
       <nuxtlink-stub
         class="case_next-project-button"
-        to="/clients/case-studies/citycam/"
+        to="/case-studies/citycam/"
       >
         
     Read next project
