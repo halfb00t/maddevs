@@ -7,7 +7,7 @@ exports[`PositionsGridItem component should render correctly 1`] = `
   >
     <router-link-stub
       class="positions-grid__item-link"
-      to="/ru/about/careers//"
+      to="/ru/careers//"
     >
       <div
         class="positions-grid__item-labels"
