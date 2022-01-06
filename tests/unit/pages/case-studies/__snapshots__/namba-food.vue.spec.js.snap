@@ -67,7 +67,7 @@ exports[`NambaFood _uid component should render correctly 1`] = `
        
       <nuxtlink-stub
         class="case_next-project-button"
-        to="/clients/case-studies/sir-john-monash-centre/"
+        to="/case-studies/sir-john-monash-centre/"
       >
         
     Read next project

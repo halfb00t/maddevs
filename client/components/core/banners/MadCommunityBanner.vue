@@ -40,7 +40,7 @@ export default {
 
   methods: {
     goToCareersPage() {
-      this.$router.push('/about/careers/')
+      this.$router.push('/careers/')
     },
   },
 }

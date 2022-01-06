@@ -1,0 +1,3904 @@
+[
+  {
+    "from": "/test-redirects",
+    "to": "https://maddevs.io/test-redirects/success"
+  },
+  {
+    "pageType": "Главная",
+    "from": "/about",
+    "to": "https://maddevs.io/"
+  },
+  {
+    "pageType": "из старых редиректов",
+    "from": "/profile/mad-devs",
+    "to": "https://maddevs.io/"
+  },
+  {
+    "from": "/approach/privacy",
+    "to": "https://maddevs.io/privacy/"
+  },
+  {
+    "from": "/approach/sustainability-policy",
+    "to": "https://maddevs.io/sustainability-policy/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/about/careers",
+    "to": "https://maddevs.io/careers/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers",
+    "to": "https://maddevs.io/ru/careers/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/aqa-engineer",
+    "to": "https://maddevs.io/ru/careers/aqa-engineer/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/frontend-developer",
+    "to": "https://maddevs.io/ru/careers/frontend-developer/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/golang-developer",
+    "to": "https://maddevs.io/ru/careers/golang-developer/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/golang-middle-developer",
+    "to": "https://maddevs.io/ru/careers/golang-middle-developer/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/ios-developer",
+    "to": "https://maddevs.io/ru/careers/ios-developer/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/java-developer",
+    "to": "https://maddevs.io/ru/careers/java-developer/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/jun-it-recruiter",
+    "to": "https://maddevs.io/ru/careers/jun-it-recruiter/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/junior-golan-developer",
+    "to": "https://maddevs.io/ru/careers/junior-golan-developer/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/pm-clutch",
+    "to": "https://maddevs.io/ru/careers/pm-clutch/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/project-manager",
+    "to": "https://maddevs.io/ru/careers/project-manager/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/python-develope-swp",
+    "to": "https://maddevs.io/ru/careers/python-develope-swp/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/python-developer-junior",
+    "to": "https://maddevs.io/ru/careers/python-developer-junior/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/about/careers/qa-engineer",
+    "to": "https://maddevs.io/ru/careers/qa-engineer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog-maddevs-io-job-openings/home",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/vacancy/home",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/featured-post",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/copywriter",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/marketing",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/it",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/python",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/django",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/go",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/golang",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/ios",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/hr",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/assistant",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/hr-department",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/assistant-delivery-manager",
+    "to": "https://maddevs.io/ru/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/golang-middle-senior-developer-v-finteh-proekt",
+    "to": "https://maddevs.io/careers/golang-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/vue-vuetify-middle-v-saas-proekt",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/mad-devs-ishet-senior-python-developer-v-proekt-clutch",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/project-manager-v-finteh-proekt",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/it-recruiter-middle-maddevs",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/ios-middle-senior-developer-v-finteh-proekt",
+    "to": "https://maddevs.io/careers/ios-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/middle-python-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/middle-android-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/senior-android-developer",
+    "to": "https://maddevs.io/careers/android-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/mad-devs-devops",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/middle-ios-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/senior-ios-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/mad-devs-ishet-golang-razrabotchika",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/junior-frontend-developer",
+    "to": "https://maddevs.io/ru/careers/junior-frontend-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/qa-engineer",
+    "to": "https://maddevs.io/ru/careers/qa-engineer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/pm-clutch",
+    "to": "https://maddevs.io/ru/careers/pm-clutch/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/ux-ui",
+    "to": "https://maddevs.io/ru/careers/ux-ui/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/.net-edentity",
+    "to": "https://maddevs.io/ru/careers/.net-edentity/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/business-analyst",
+    "to": "https://maddevs.io/ru/careers/business-analyst/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/mobile-team-lead",
+    "to": "https://maddevs.io/ru/careers/mobile-team-lead/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/it-recruiter",
+    "to": "https://maddevs.io/ru/careers/it-recruiter/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/.net",
+    "to": "https://maddevs.io/ru/careers/.net/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/project-manager",
+    "to": "https://maddevs.io/ru/careers/project-manager/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/ios-developer",
+    "to": "https://maddevs.io/ru/careers/ios-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/android-developer",
+    "to": "https://maddevs.io/ru/careers/android-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/careers/golang-developer",
+    "to": "https://maddevs.io/ru/careers/golang-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/golang-developer",
+    "to": "https://maddevs.io/careers/golang-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/ios-developer",
+    "to": "https://maddevs.io/careers/ios-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/android-developer",
+    "to": "https://maddevs.io/careers/android-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/about/careers/#open-positions",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/junior-frontend-developer",
+    "to": "https://maddevs.io/ru/careers/junior-frontend-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/qa-engineer",
+    "to": "https://maddevs.io/ru/careers/qa-engineer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/pm-clutch",
+    "to": "https://maddevs.io/ru/careers/pm-clutch/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/ux-ui",
+    "to": "https://maddevs.io/ru/careers/ux-ui/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/.net-edentity",
+    "to": "https://maddevs.io/ru/careers/.net-edentity/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/business-analyst",
+    "to": "https://maddevs.io/ru/careers/business-analyst/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/mobile-team-lead",
+    "to": "https://maddevs.io/ru/careers/mobile-team-lead/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/it-recruiter",
+    "to": "https://maddevs.io/ru/careers/it-recruiter/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/.net",
+    "to": "https://maddevs.io/ru/careers/.net/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/project-manager",
+    "to": "https://maddevs.io/ru/careers/project-manager/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/ios-developer",
+    "to": "https://maddevs.io/ru/careers/ios-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/android-developer",
+    "to": "https://maddevs.io/ru/careers/android-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/ru/about/careers/golang-developer",
+    "to": "https://maddevs.io/ru/careers/golang-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/lets-go-mad-devs-%D0%B8%D1%89%D0%B5%D1%82-golang-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0-1d486c5c0aa1",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/mad-devs-%D1%80%D0%B0%D0%B7%D1%8B%D1%81%D0%BA%D0%B8%D0%B2%D0%B0%D0%B5%D1%82-devops-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2-38da4d1a0093",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/mad-devs-ishet-middle-python-developer-bd01875e9afa",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/middle-and-senior-android-developer-cc4fa2c61708",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/middle-python-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/middle-android-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/senior-android-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/senior-ios-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/middle-ios-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/mad-devs-devops",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/middle-it-recruiter-941248482416",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/middle-and-senior-ios-developers-f5eb41be694d",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/insights/blog/senior-ios-developer",
+    "to": "https://maddevs.io/ru/careers/ios-developer/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/insights/blog/middle-python-developer",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/designer-wanted-a82cbed193e",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/middle-senior-mobile-developer-android-ios-1672d32ed83f",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/hr-wanted-a70716a9a8a8",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/junior-qa-tester-manual-6f478d3e08c",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/junior-intern-php-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA-103fc305e544",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/project-manager-58dbe9aec708",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/digital-marketing-manager-9f85c900cf28",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/qa-specialist-ef1814ad3b0d",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Careers/старые редиректы",
+    "from": "/blog/tag/job-opening",
+    "to": "https://maddevs.io/careers/#open-positions/"
+  },
+  {
+    "pageType": "Team",
+    "from": "/about/team",
+    "to": "https://maddevs.io/team/"
+  },
+  {
+    "pageType": "Contact Us",
+    "from": "/about/contact-us",
+    "to": "https://maddevs.io/contact-us/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process",
+    "to": "https://maddevs.io/development-process/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process/deployment-stage",
+    "to": "https://maddevs.io/development-process/deployment-stage/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process/design-stage",
+    "to": "https://maddevs.io/development-process/design-stage/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process/development-stage",
+    "to": "https://maddevs.io/development-process/development-stage/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process/discovery-stage",
+    "to": "https://maddevs.io/development-process/discovery-stage/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process/maintenance-stage",
+    "to": "https://maddevs.io/development-process/maintenance-stage/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process/pre-discovery-stage",
+    "to": "https://maddevs.io/development-process/pre-discovery-stage/"
+  },
+  {
+    "pageType": "Development Process",
+    "from": "/approach/development-process/qa-testing-stage",
+    "to": "https://maddevs.io/development-process/qa-testing-stage/"
+  },
+  {
+    "pageType": "Delivery Models",
+    "from": "/approach/delivery-models",
+    "to": "https://maddevs.io/delivery-models/"
+  },
+  {
+    "pageType": "Delivery Models",
+    "from": "/approach/delivery-models/staff-augmentation",
+    "to": "https://maddevs.io/delivery-models/staff-augmentation/"
+  },
+  {
+    "pageType": "Delivery Models",
+    "from": "/approach/delivery-models/dedicated-team",
+    "to": "https://maddevs.io/delivery-models/dedicated-team/"
+  },
+  {
+    "pageType": "Delivery Models",
+    "from": "/approach/delivery-models/temp-to-hire",
+    "to": "https://maddevs.io/delivery-models/temp-to-hire/"
+  },
+  {
+    "pageType": "Delivery Models",
+    "from": "/approach/delivery-models/technical-assessment",
+    "to": "https://maddevs.io/delivery-models/technical-assessment/"
+  },
+  {
+    "pageType": "Delivery Models",
+    "from": "/approach/delivery-models/team-supervision",
+    "to": "https://maddevs.io/delivery-models/team-supervision/"
+  },
+  {
+    "pageType": "Delivery Models",
+    "from": "/approach/delivery-models/transferring-projects",
+    "to": "https://maddevs.io/delivery-models/transferring-projects/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/backend-development",
+    "to": "https://maddevs.io/backend-development/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/backend-development/research-page",
+    "to": "https://maddevs.io/backend-development/research-page/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/backend-development/stack",
+    "to": "https://maddevs.io/backend-development/stack/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/backend-development/infr-preparation",
+    "to": "https://maddevs.io/backend-development/infr-preparation/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/backend-development/preparing",
+    "to": "https://maddevs.io/backend-development/preparing/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/backend-development/development",
+    "to": "https://maddevs.io/backend-development/development/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/backend-development/testing",
+    "to": "https://maddevs.io/backend-development/testing/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/frontend-development",
+    "to": "https://maddevs.io/frontend-development/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/frontend-development/research-phase",
+    "to": "https://maddevs.io/frontend-development/research-phase/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/frontend-development/wireframe-and-prototype",
+    "to": "https://maddevs.io/frontend-development/wireframe-and-prototype/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/frontend-development/tech-stack",
+    "to": "https://maddevs.io/frontend-development/tech-stack/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/frontend-development/user-facing-features",
+    "to": "https://maddevs.io/frontend-development/user-facing-features/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/frontend-development/qa-and-testing",
+    "to": "https://maddevs.io/frontend-development/qa-and-testing/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/mobile-development-page",
+    "to": "https://maddevs.io/mobile-development-page/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/mobile-development-page/business-analysis",
+    "to": "https://maddevs.io/mobile-development/business-analysis/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/mobile-development-page/prototypes",
+    "to": "https://maddevs.io/mobile-development/prototypes/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/mobile-development-page/mobile-app-development",
+    "to": "https://maddevs.io/mobile-development/mobile-app-development/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/mobile-development-page/run-test",
+    "to": "https://maddevs.io/mobile-development/run-test/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/mobile-development-page/support-and-maintenance",
+    "to": "https://maddevs.io/mobile-development/support-and-maintenance/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/devops",
+    "to": "https://maddevs.io/devops/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/devops/infrastructure-technical-audit",
+    "to": "https://maddevs.io/devops/infrastructure-technical-audit/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/devops/consulting-and-management",
+    "to": "https://maddevs.io/devops/consulting-and-management/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/devops/cloud-migration",
+    "to": "https://maddevs.io/devops/cloud-migration/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/devops/serverless-infrastructure-adoption",
+    "to": "https://maddevs.io/devops/serverless-infrastructure-adoption/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/devops/integrate-infrastructure",
+    "to": "https://maddevs.io/devops/integrate-infrastructure/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/design",
+    "to": "https://maddevs.io/design/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/design/ui-ux-design",
+    "to": "https://maddevs.io/design/ui-ux-design/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/design/web-design",
+    "to": "https://maddevs.io/design/web-design/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/design/mobile-design",
+    "to": "https://maddevs.io/design/mobile-design/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/qa-software-testing",
+    "to": "https://maddevs.io/software-testing/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/software-testing",
+    "to": "https://maddevs.io/software-testing/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/qa-software-testing/requirements-and-targets",
+    "to": "https://maddevs.io/qa-software-testing/requirements-and-targets/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/qa-software-testing/code-quality",
+    "to": "https://maddevs.io/qa-software-testing/code-quality/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/qa-software-testing/ongoing-activity",
+    "to": "https://maddevs.io/qa-software-testing/ongoing-activity/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/qa-software-testing/range-of-tests",
+    "to": "https://maddevs.io/qa-software-testing/range-of-tests/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/qa-software-testing/agile-environment",
+    "to": "https://maddevs.io/qa-software-testing/agile-environment/"
+  },
+  {
+    "pageType": "Services",
+    "from": "/services/qa-software-testing/ci-and-cd",
+    "to": "https://maddevs.io/qa-software-testing/ci-and-cd/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies",
+    "to": "https://maddevs.io/case-studies/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/godee",
+    "to": "https://maddevs.io/case-studies/godee/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/namba-food",
+    "to": "https://maddevs.io/case-studies/namba-food/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/sir-john-monash-centre",
+    "to": "https://maddevs.io/case-studies/sir-john-monash-centre/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/veeqo",
+    "to": "https://maddevs.io/case-studies/veeqo/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/yourcast",
+    "to": "https://maddevs.io/case-studies/yourcast/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/clutch",
+    "to": "https://maddevs.io/case-studies/clutch/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/peklo",
+    "to": "https://maddevs.io/case-studies/peklo/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/R4TCA-web-application",
+    "to": "https://maddevs.io/case-studies/R4TCA-web-application/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/citycam",
+    "to": "https://maddevs.io/case-studies/citycam/"
+  },
+  {
+    "pageType": "Кейсы",
+    "from": "/clients/case-studies/namba-taxi",
+    "to": "https://maddevs.io/case-studies/namba-taxi/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/projects/home",
+    "to": "https://maddevs.io/case-studies/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/ru-projects/home",
+    "to": "https://maddevs.io/case-studies/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/projects",
+    "to": "https://maddevs.io/case-studies/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/projects/#case-studies",
+    "to": "https://maddevs.io/case-studies/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/projects/#customers",
+    "to": "https://maddevs.io/case-studies/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/namba-food-startup-e6564e66806d",
+    "to": "https://maddevs.io/case-studies/namba-food/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/namba-food-startup-e6564e66806d?source=friends_link&sk=5baa5812251bab7b228c53758052d8ea",
+    "to": "https://maddevs.io/case-studies/namba-food/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/namba-food-top-1-delivery-service-in-central-asia-3df8ca4d436d",
+    "to": "https://maddevs.io/case-studies/namba-food/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/namba-food-top-1-delivery-service-in-central-asia-3df8ca4d436d?source=friends_link&sk=1dd67cc82dad8e4fae756b3a4d47f121",
+    "to": "https://maddevs.io/case-studies/namba-food/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/building-new-public-transport-habits-in-vietnam-with-godee-f7c4da25efc5",
+    "to": "https://maddevs.io/case-studies/godee/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/building-new-public-transport-habits-in-vietnam-with-godee-f7c4da25efc5?source=friends_link&sk=3e3f75a7f35f0e4d9d447a19e015330a",
+    "to": "https://maddevs.io/case-studies/godee/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/guardrails-helps-800-development-teams-to-establish-devsecops-with-automated-security-reviews-806c3c1d516b",
+    "to": "https://maddevs.io/case-studies/guardrails/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/guardrails-helps-800-development-teams-to-establish-devsecops-with-automated-security-reviews-806c3c1d516b?source=friends_link&sk=15f4cdb98f9410b27b9d76dfd94ad1d0",
+    "to": "https://maddevs.io/case-studies/guardrails/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/namba-taxi-development-and-integration-28b25cd0012a",
+    "to": "https://maddevs.io/case-studies/namba-taxi/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/namba-taxi-development-and-integration-28b25cd0012a?source=friends_link&sk=b5e875f7aed3e73bd23a0b430969f505",
+    "to": "https://maddevs.io/case-studies/namba-taxi/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/the-namba-project-1adea593dc83",
+    "to": "https://maddevs.io/case-studies/namba-taxi/"
+  },
+  {
+    "pageType": "Кейсы (url из старых редиректов)",
+    "from": "/the-namba-project-1adea593dc83?source=friends_link&sk=4a18ec55cc17c1896e2e09b0dfbe22a5",
+    "to": "https://maddevs.io/case-studies/namba-taxi/"
+  },
+  {
+    "pageType": "Open Source",
+    "from": "/insights/open-source",
+    "to": "https://maddevs.io/open-source/"
+  },
+  {
+    "pageType": "Open Source (url из старых редиректов)",
+    "from": "/projects/#open-source",
+    "to": "https://maddevs.io/open-source/"
+  },
+  {
+    "pageType": "Ebooks",
+    "from": "/insights/ebooks/pricing-strategies",
+    "to": "https://maddevs.io/ebooks/pricing-strategies/"
+  },
+  {
+    "pageType": "Blog",
+    "from": "/insights/blog",
+    "to": "https://maddevs.io/blog/"
+  },
+  {
+    "pageType": "Blog/из старых редиректов",
+    "from": "/ru/home",
+    "to": "https://maddevs.io/blog/"
+  },
+  {
+    "pageType": "Blog/из старых редиректов",
+    "from": "blog.maddevs.io",
+    "to": "https://maddevs.io/blog/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/editors-pick",
+    "to": "https://maddevs.io/blog/editors-pick/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/software-development",
+    "to": "https://maddevs.io/blog/software-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/project-management",
+    "to": "https://maddevs.io/blog/project-management/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/mobile-development",
+    "to": "https://maddevs.io/blog/mobile-app-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/android-development",
+    "to": "https://maddevs.io/blog/android-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/hardware",
+    "to": "https://maddevs.io/blog/hardware/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/devops",
+    "to": "https://maddevs.io/blog/devops/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/django",
+    "to": "https://maddevs.io/blog/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/frontend-development",
+    "to": "https://maddevs.io/blog/frontend-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/ios-development",
+    "to": "https://maddevs.io/blog/ios-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/project-management/swot-team-for-software-development-projects",
+    "to": "https://maddevs.io/blog/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/ui",
+    "to": "https://maddevs.io/blog/ui-ux/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/insights/blog/tag/ux",
+    "to": "https://maddevs.io/blog/ui-ux/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/blog/tag/software-features",
+    "to": "https://maddevs.io/blog/software-development/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/managment/home",
+    "to": "https://maddevs.io/blog/project-management/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/mad-vision/home",
+    "to": "https://maddevs.io/blog/project-management/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/editorspick/home",
+    "to": "https://maddevs.io/blog/editors-pick/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/technology/home",
+    "to": "https://maddevs.io/blog/software-development/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/tech-events/home",
+    "to": "https://maddevs.io/blog/software-development/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/blog/tag/featured-post",
+    "to": "https://maddevs.io/blog/editors-pick/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/blog/tag/customer-university",
+    "to": "https://maddevs.io/blog/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/blog/tag/pricing-strategies",
+    "to": "https://maddevs.io/blog/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/aibek-nogoev",
+    "to": "https://maddevs.io/author/aibek-nogoev/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/aidai-atakulova",
+    "to": "https://maddevs.io/author/aidai-atakulova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/alena-timokhovets",
+    "to": "https://maddevs.io/author/alena-timokhovets/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/alexander-vishnyakov",
+    "to": "https://maddevs.io/author/alexander-vishnyakov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/alexei-medvedev",
+    "to": "https://maddevs.io/author/alexei-medvedev/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/alice-jang",
+    "to": "https://maddevs.io/author/alice-jang/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/alisa-manakova",
+    "to": "https://maddevs.io/author/alisa-manakova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/alla-klimenko",
+    "to": "https://maddevs.io/author/alla-klimenko/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/altynai-n-alamanova",
+    "to": "https://maddevs.io/author/altynai-n-alamanova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/altynai-toktomuratova",
+    "to": "https://maddevs.io/author/altynai-toktomuratova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/anastasia-rostova",
+    "to": "https://maddevs.io/author/anastasia-rostova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/anatoliy-fedorenko",
+    "to": "https://maddevs.io/author/anatoliy-fedorenko/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/andrew-minkin",
+    "to": "https://maddevs.io/author/andrew-minkin/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/andrew-sapozhnikov",
+    "to": "https://maddevs.io/author/andrew-sapozhnikov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/anna-petrova",
+    "to": "https://maddevs.io/author/anna-petrova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/anton-kozlov",
+    "to": "https://maddevs.io/author/anton-kozlov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/arthur-elizavetenkov",
+    "to": "https://maddevs.io/author/arthur-elizavetenkov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/asadov-ahmed",
+    "to": "https://maddevs.io/author/asadov-ahmed/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/beksultan-tynybekov",
+    "to": "https://maddevs.io/author/beksultan-tynybekov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/belek-abylov",
+    "to": "https://maddevs.io/author/belek-abylov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/belek-eraliev",
+    "to": "https://maddevs.io/author/belek-eraliev/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/cholpon-dobulbekova",
+    "to": "https://maddevs.io/author/cholpon-dobulbekova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/daria-utesheva",
+    "to": "https://maddevs.io/author/daria-utesheva/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/darika-nurmamatova",
+    "to": "https://maddevs.io/author/darika-nurmamatova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/denis-grushkin",
+    "to": "https://maddevs.io/author/denis-grushkin/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/diana-ruslanova",
+    "to": "https://maddevs.io/author/diana-ruslanova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/dmitrii-kononenko",
+    "to": "https://maddevs.io/author/dmitrii-kononenko/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/eldar-akkozov",
+    "to": "https://maddevs.io/author/eldar-akkozov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/emir-sabyrkulov",
+    "to": "https://maddevs.io/author/emir-sabyrkulov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/karen-tovmasyan",
+    "to": "https://maddevs.io/author/karen-tovmasyan/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/kirill-avdeev",
+    "to": "https://maddevs.io/author/kirill-avdeev/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/klara-abdukova",
+    "to": "https://maddevs.io/author/klara-abdukova/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/maria-zaichenko",
+    "to": "https://maddevs.io/author/maria-zaichenko/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/meder-akkozov",
+    "to": "https://maddevs.io/author/meder-akkozov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/nuradil-alymkulov",
+    "to": "https://maddevs.io/author/nuradil-alymkulov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/oleg-katkov",
+    "to": "https://maddevs.io/author/oleg-katkov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/oleg-puzanov",
+    "to": "https://maddevs.io/author/oleg-puzanov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/pavel-kalashnikov",
+    "to": "https://maddevs.io/author/pavel-kalashnikov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/pavel-zverev",
+    "to": "https://maddevs.io/author/pavel-zverev/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/roman-chasovitin",
+    "to": "https://maddevs.io/author/roman-chasovitin/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/samat-jukeshov",
+    "to": "https://maddevs.io/author/samat-jukeshov/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/sergei-viatchanin",
+    "to": "https://maddevs.io/author/sergei-viatchanin/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/stanislav-shcherbinin",
+    "to": "https://maddevs.io/author/stanislav-shcherbinin/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/tamara-mun",
+    "to": "https://maddevs.io/author/tamara-mun/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/timur-minkin",
+    "to": "https://maddevs.io/author/timur-minkin/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/toktonazar-shatmanaliev",
+    "to": "https://maddevs.io/author/toktonazar-shatmanaliev/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/vlad-andreev",
+    "to": "https://maddevs.io/author/vlad-andreev/"
+  },
+  {
+    "pageType": "Author",
+    "from": "/insights/blog/author/vlada-arevkova",
+    "to": "https://maddevs.io/author/vlada-arevkova/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/why-it-projects-are-late-and-exceed-budgets",
+    "to": "https://maddevs.io/customer-university/why-it-projects-are-late-and-exceed-budgets/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/custom-software-development-pricing-strategies",
+    "to": "https://maddevs.io/customer-university/custom-software-development-pricing-strategies/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/pricing-models-in-software-development",
+    "to": "https://maddevs.io/customer-university/pricing-models-in-software-development/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/differences-between-software-engineers-seniority-levels",
+    "to": "https://maddevs.io/customer-university/differences-between-software-engineers-seniority-levels/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/offshore-contractor-regions",
+    "to": "https://maddevs.io/customer-university/offshore-contractor-regions/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/cooperation-models-with-software-companies",
+    "to": "https://maddevs.io/customer-university/cooperation-models-with-software-companies/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/why-it-projects-are-late-and-exceed-budgets",
+    "to": "https://maddevs.io/customer-university/why-it-projects-are-late-and-exceed-budgets/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/red-flags-in-software-development",
+    "to": "https://maddevs.io/customer-university/red-flags-in-software-development/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/software-maintenance-costs",
+    "to": "https://maddevs.io/customer-university/software-maintenance-costs/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/introduction-to-technical-debt",
+    "to": "https://maddevs.io/customer-university/introduction-to-technical-debt/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/mad-devs-software-price-estimation-principles",
+    "to": "https://maddevs.io/customer-university/mad-devs-software-price-estimation-principles/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/mad-devs-corporate-culture",
+    "to": "https://maddevs.io/customer-university/mad-devs-corporate-culture-overview/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/who-are-mad-developers",
+    "to": "https://maddevs.io/customer-university/who-are-mad-developers/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/remote-first-approach-to-work-in-it",
+    "to": "https://maddevs.io/customer-university/remote-first-approach-to-work-in-it/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/product-based-vs-service-based-companies",
+    "to": "https://maddevs.io/customer-university/product-based-vs-service-based-companies/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/growth-opportunities",
+    "to": "https://maddevs.io/customer-university/growth-opportunities/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/blog/senior-developers-in-mad-devs",
+    "to": "https://maddevs.io/customer-university/senior-developers-in-mad-devs/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/customer-university",
+    "to": "https://maddevs.io/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/a-bit-about-event-delegation-in-pure-js",
+    "to": "https://maddevs.io/blog/a-bit-about-event-delegation-in-pure-js/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/a-bit-about-event-delegation-in-pure-js-56f8356463ca",
+    "to": "https://maddevs.io/blog/a-bit-about-event-delegation-in-pure-js/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/a-bit-about-event-delegation-in-pure-js-56f8356463ca?source=friends_link&sk=4025f7342a240cc08ab4d1c0de456a5c",
+    "to": "https://maddevs.io/blog/a-bit-about-event-delegation-in-pure-js/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/a-bit-about-event-delegation-in-react",
+    "to": "https://maddevs.io/blog/a-bit-about-event-delegation-in-react/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/a-bit-about-event-delegation-in-react-3b92fb0a978b",
+    "to": "https://maddevs.io/blog/a-bit-about-event-delegation-in-react/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/a-bit-about-event-delegation-in-react-3b92fb0a978b?source=friends_link&sk=a8d9e27f4dec66fdafe5a6f408aa751d",
+    "to": "https://maddevs.io/blog/a-bit-about-event-delegation-in-react/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/addled-deploy-13d728bd4a63",
+    "to": "https://maddevs.io/blog/addled-deploy/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/addled-deploy-13d728bd4a63?source=friends_link&sk=721ab368fbda21ec0100ee7c4672fb19",
+    "to": "https://maddevs.io/blog/addled-deploy/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/ageism-in-it",
+    "to": "https://maddevs.io/blog/ageism-in-it/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/agile-team-structure",
+    "to": "https://maddevs.io/blog/agile-team-structure/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/amazing-template-for-react-application",
+    "to": "https://maddevs.io/blog/amazing-template-for-react-application/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/an-overview-of-cloud-delivery-models",
+    "to": "https://maddevs.io/blog/an-overview-of-cloud-delivery-models/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/apache-nifi-as-metric-collection-tool",
+    "to": "https://maddevs.io/blog/apache-nifi-as-metric-collection-tool/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/ariadna-opensource-geocoder-832f149f2981",
+    "to": "https://maddevs.io/blog/ariadna-opensource-geocoder/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/ariadna-opensource-geocoder-832f149f2981?source=friends_link&sk=554e098e65224fe49176898491665eea",
+    "to": "https://maddevs.io/blog/ariadna-opensource-geocoder/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/ariadna-opensource-geocoder",
+    "to": "https://maddevs.io/blog/ariadna-opensource-geocoder/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci",
+    "to": "https://maddevs.io/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci-9805042bc0c",
+    "to": "https://maddevs.io/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci-9805042bc0c?source=friends_link&sk=070a52f4fc970bf0474f6ceb270c1651",
+    "to": "https://maddevs.io/blog/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/avr-mcu-testing",
+    "to": "https://maddevs.io/blog/avr-mcu-testing/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/avr-mcu-testing-f925e84b7023",
+    "to": "https://maddevs.io/blog/avr-mcu-testing/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/avr-mcu-testing-f925e84b7023?source=friends_link&sk=f34cb696eddfb39f64c5d0a9cc966f19",
+    "to": "https://maddevs.io/blog/avr-mcu-testing/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/benefits-of-sports-for-developers-and-managers",
+    "to": "https://maddevs.io/blog/benefits-of-sports-for-developers-and-managers/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/best-architecture-for-the-react-project",
+    "to": "https://maddevs.io/blog/best-architecture-for-the-react-project/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/best-architecture-for-the-react-project-149b377b379d",
+    "to": "https://maddevs.io/blog/best-architecture-for-the-react-project/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/best-architecture-for-the-react-project-149b377b379d?source=friends_link&sk=573f09610a6358d4d6d51ee7e9fb5a45",
+    "to": "https://maddevs.io/blog/best-architecture-for-the-react-project/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/best-tech-stack-trends",
+    "to": "https://maddevs.io/blog/best-tech-stack-trends/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/boilerplates",
+    "to": "https://maddevs.io/blog/boilerplates/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/bullet-issues-tasks-that-kill",
+    "to": "https://maddevs.io/blog/bullet-issues-tasks-that-kill/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/bullet-issues-tasks-that-kill-95f480a2429",
+    "to": "https://maddevs.io/blog/bullet-issues-tasks-that-kill/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/bullet-issues-tasks-that-kill-95f480a2429?source=friends_link&sk=ac54ce08bb72960849b6d9fbfcd034ac",
+    "to": "https://maddevs.io/blog/bullet-issues-tasks-that-kill/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/candidate-portrait-for-developer",
+    "to": "https://maddevs.io/blog/candidate-portrait-for-developer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/cloud-service-as-a-service-at-your-service",
+    "to": "https://maddevs.io/blog/cloud-service-as-a-service-at-your-service/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/code-climate-code-analysis-locally-using-vscode-remote-containers",
+    "to": "https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/code-climate-code-analysis-locally-using-vscode-remote-containers-b4efaf6bf26e",
+    "to": "https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/code-climate-code-analysis-locally-using-vscode-remote-containers-b4efaf6bf26e?source=friends_link&sk=38246ea752ab8b6b61ca001b00e06fc9",
+    "to": "https://maddevs.io/blog/code-climate-code-analysis-locally-using-vscode-remote-containers/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/code-review-best-practices",
+    "to": "https://maddevs.io/blog/code-review-best-practices/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/cold-app-start-on-android",
+    "to": "https://maddevs.io/blog/cold-app-start-on-android/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/comedian-slack-standup-bot",
+    "to": "https://maddevs.io/blog/comedian-slack-standup-bot/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/comedian-17b0bb0ae8c7",
+    "to": "https://maddevs.io/blog/comedian-slack-standup-bot/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/comedian-17b0bb0ae8c7?source=friends_link&sk=da0f6ed251fbc86a219da51eb28d92c4",
+    "to": "https://maddevs.io/blog/comedian-slack-standup-bot/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/communication-in-software-development",
+    "to": "https://maddevs.io/blog/communication-in-software-development/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/configure-apollo-graphql-in-nuxtjs",
+    "to": "https://maddevs.io/blog/configure-apollo-graphql-in-nuxtjs/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/cross-functional-collaboration-and-how",
+    "to": "https://maddevs.io/blog/cross-functional-collaboration-and-how/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/crunch-in-it",
+    "to": "https://maddevs.io/blog/crunch-in-it/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/customer-onboarding-process",
+    "to": "https://maddevs.io/blog/customer-onboarding-process/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/deploy-and-scale-wordpress-with-docker-cloud-swarm-mode",
+    "to": "https://maddevs.io/blog/deploy-and-scale-wordpress-with-docker-cloud-swarm-mode/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/deploy-and-scale-wordpress-with-docker-cloud-swarm-mode-f780d4e735cb",
+    "to": "https://maddevs.io/blog/deploy-and-scale-wordpress-with-docker-cloud-swarm-mode/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/deploy-and-scale-wordpress-with-docker-cloud-swarm-mode-f780d4e735cb?source=friends_link&sk=ebcbee638acf7c337b2e64484994cb0b",
+    "to": "https://maddevs.io/blog/deploy-and-scale-wordpress-with-docker-cloud-swarm-mode/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/developer-education-experience",
+    "to": "https://maddevs.io/blog/developer-education-experience/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/developer-education-experience-11494843a68d",
+    "to": "https://maddevs.io/blog/developer-education-experience/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/developer-education-experience-11494843a68d?source=friends_link&sk=25d9c0d84f003a41405584cedb6ecfb2",
+    "to": "https://maddevs.io/blog/developer-education-experience/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/device-location-using-livedata-architecture-component",
+    "to": "https://maddevs.io/blog/device-location-using-livedata-architecture-component/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/device-location-using-livedata-architecture-component-5380c020ea54",
+    "to": "https://maddevs.io/blog/device-location-using-livedata-architecture-component/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/device-location-using-livedata-architecture-component-5380c020ea54?source=friends_link&sk=ec0af252b9e79af83db55a126f8f43fe",
+    "to": "https://maddevs.io/blog/device-location-using-livedata-architecture-component/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/devops-as-a-service",
+    "to": "https://maddevs.io/blog/devops-as-a-service/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/daas-devops-as-a-service-wut-6e34ceb865ca",
+    "to": "https://maddevs.io/blog/devops-as-a-service/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/daas-devops-as-a-service-wut-6e34ceb865ca?source=friends_link&sk=5f74ad6d24b8b1cecc353103c7825c42",
+    "to": "https://maddevs.io/blog/devops-as-a-service/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/dogfooding",
+    "to": "https://maddevs.io/blog/dogfooding/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/dogs-not-barking",
+    "to": "https://maddevs.io/blog/dogs-not-barking/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/effective-knowledge-transfer",
+    "to": "https://maddevs.io/blog/effective-knowledge-transfer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/effective-refactoring-of-heavy-database-interface",
+    "to": "https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/effective-refactoring-of-heavy-database-interface-2c355498afe7",
+    "to": "https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/effective-refactoring-of-heavy-database-interface-2c355498afe7?source=friends_link&sk=90d99e4b33c352950b090659273078f3",
+    "to": "https://maddevs.io/blog/effective-refactoring-of-heavy-database-interface/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/effective-virtual-meetings",
+    "to": "https://maddevs.io/blog/effective-virtual-meetings/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/fintech-and-software-development-opportunities-in-it",
+    "to": "https://maddevs.io/blog/fintech-and-software-development-opportunities-in-it/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/functional-programming-principles-in-javascript",
+    "to": "https://maddevs.io/blog/functional-programming-principles-in-javascript/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/functional-programming-principles-in-javascript-37339f7c9e60",
+    "to": "https://maddevs.io/blog/functional-programming-principles-in-javascript/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/functional-programming-principles-in-javascript-37339f7c9e60?source=friends_link&sk=7ed82308783fb3f3c645d10e0c2fb176",
+    "to": "https://maddevs.io/blog/functional-programming-principles-in-javascript/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/go-rest-or-grpc",
+    "to": "https://maddevs.io/blog/go-rest-or-grpc/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/go-rest-or-grpc-5eace88499bd",
+    "to": "https://maddevs.io/blog/go-rest-or-grpc/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/go-rest-or-grpc-5eace88499bd?source=friends_link&sk=3bc86cb5fc4d2ab229f3451fd6e100f5",
+    "to": "https://maddevs.io/blog/go-rest-or-grpc/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/go-unit-testing",
+    "to": "https://maddevs.io/blog/go-unit-testing/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/google-analytics-for-livestreams",
+    "to": "https://maddevs.io/blog/google-analytics-for-livestreams/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/google-analytics-for-livestreams-b726275752e",
+    "to": "https://maddevs.io/blog/google-analytics-for-livestreams/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/google-analytics-for-livestreams-b726275752e?source=friends_link&sk=4fac5f93fc1c21c7a0a6043d7e24839f",
+    "to": "https://maddevs.io/blog/google-analytics-for-livestreams/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/guaranteed-delivery-with-grpc-streams",
+    "to": "https://maddevs.io/blog/guaranteed-delivery-with-grpc-streams/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/guaranteed-delivery-with-grpc-streams-dc847ead7e6e",
+    "to": "https://maddevs.io/blog/guaranteed-delivery-with-grpc-streams/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/guaranteed-delivery-with-grpc-streams-dc847ead7e6e?source=friends_link&sk=a4be52cc0e4e96235e88f128caed05c7",
+    "to": "https://maddevs.io/blog/guaranteed-delivery-with-grpc-streams/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/guide-to-software-development-methodologies",
+    "to": "https://maddevs.io/blog/guide-to-software-development-methodologies/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/healthy-conflicts-in-software-development-projects",
+    "to": "https://maddevs.io/blog/healthy-conflicts-in-software-development-projects/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/healthy-conflicts-in-software-development-projects-75e0cd63894c",
+    "to": "https://maddevs.io/blog/healthy-conflicts-in-software-development-projects/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/healthy-conflicts-in-software-development-projects-75e0cd63894c?source=friends_link&sk=0b042a1770ebc60c20f8b65e831ce7f9",
+    "to": "https://maddevs.io/blog/healthy-conflicts-in-software-development-projects/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/hey-full-snack-developer",
+    "to": "https://maddevs.io/blog/hey-full-snack-developer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/hey-full-snack-developer-1eec707693fd",
+    "to": "https://maddevs.io/blog/hey-full-snack-developer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/hey-full-snack-developer-1eec707693fd?source=friends_link&sk=ef94d0315da4853bd0c3cfde763d3648",
+    "to": "https://maddevs.io/blog/hey-full-snack-developer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-can-programmer-grow-faster",
+    "to": "https://maddevs.io/blog/how-can-programmer-grow-faster/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-can-programmer-grow-faster-d8fccdb5eb2c",
+    "to": "https://maddevs.io/blog/how-can-programmer-grow-faster/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-can-programmer-grow-faster-d8fccdb5eb2c?source=friends_link&sk=f018e40b749a8592686fa114bc03df5c",
+    "to": "https://maddevs.io/blog/how-can-programmer-grow-faster/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-good-engineering-culture-is-in-your-team",
+    "to": "https://maddevs.io/blog/how-good-engineering-culture-is-in-your-team/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-good-engineering-culture-is-in-your-team-1ecd6f16da69",
+    "to": "https://maddevs.io/blog/how-good-engineering-culture-is-in-your-team/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-good-engineering-culture-is-in-your-team-1ecd6f16da69?source=friends_link&sk=8a155232c85c881d9c214a7c87c272f4",
+    "to": "https://maddevs.io/blog/how-good-engineering-culture-is-in-your-team/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-much-it-costs-to-build-banking-app",
+    "to": "https://maddevs.io/blog/how-much-it-costs-to-build-banking-app/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-project-manager-stays-focused",
+    "to": "https://maddevs.io/blog/how-project-manager-stays-focused/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-project-manager-stays-focused-fa86dcbc5c7a",
+    "to": "https://maddevs.io/blog/how-project-manager-stays-focused/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-project-manager-stays-focused-fa86dcbc5c7a?source=friends_link&sk=ca009cec370e54aed285c7ebff12fefe",
+    "to": "https://maddevs.io/blog/how-project-manager-stays-focused/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-automate-jira-mad-devs-experience",
+    "to": "https://maddevs.io/blog/how-to-automate-jira-mad-devs-experience/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-automate-jira-mad-devs-experience-50c7836eec65",
+    "to": "https://maddevs.io/blog/how-to-automate-jira-mad-devs-experience/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-automate-jira-mad-devs-experience-50c7836eec65?source=friends_link&sk=e3fb879ddacf5df9599251a94f99b2d1",
+    "to": "https://maddevs.io/blog/how-to-automate-jira-mad-devs-experience/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-automate-tasks-estimation-in-jira",
+    "to": "https://maddevs.io/blog/how-to-automate-tasks-estimation-in-jira/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-automate-tasks-estimation-in-jira-720bacf6d75d",
+    "to": "https://maddevs.io/blog/how-to-automate-tasks-estimation-in-jira/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-automate-tasks-estimation-in-jira-720bacf6d75d?source=friends_link&sk=f57cc9a52560108f1a045e4a60e63281",
+    "to": "https://maddevs.io/blog/how-to-automate-tasks-estimation-in-jira/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-become-a-software-developer",
+    "to": "https://maddevs.io/blog/how-to-become-a-software-developer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-become-a-software-developer-things-that-i-learned-in-the-it-company-103c40a31bec",
+    "to": "https://maddevs.io/blog/how-to-become-a-software-developer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-become-a-software-developer-things-that-i-learned-in-the-it-company-103c40a31bec?source=friends_link&sk=47c3c0c913b948a1adb2ebbf7c4663d5",
+    "to": "https://maddevs.io/blog/how-to-become-a-software-developer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-build-a-startup-with-an-outsource-team",
+    "to": "https://maddevs.io/blog/how-to-build-a-startup-with-an-outsource-team/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-build-a-startup-with-an-outsource-team-a3b584c80bf8",
+    "to": "https://maddevs.io/blog/how-to-build-a-startup-with-an-outsource-team/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-build-a-startup-with-an-outsource-team-a3b584c80bf8?source=friends_link&sk=79c1298518f05f4ba75ac5a8d05c006d",
+    "to": "https://maddevs.io/blog/how-to-build-a-startup-with-an-outsource-team/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-choose-a-stack-of-technologies-to-fit-your-project",
+    "to": "https://maddevs.io/blog/how-to-choose-a-stack-of-technologies-to-fit-your-project/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-communicate-with-client-to-build-a-successful-software",
+    "to": "https://maddevs.io/blog/how-to-communicate-with-client-to-build-a-successful-software/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-communicate-with-client-to-build-a-successful-software-6a054b089f6f",
+    "to": "https://maddevs.io/blog/how-to-communicate-with-client-to-build-a-successful-software/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-communicate-with-client-to-build-a-successful-software-6a054b089f6f?source=friends_link&sk=4fcf9634f2cf1b47fe109c9f33d18ddb",
+    "to": "https://maddevs.io/blog/how-to-communicate-with-client-to-build-a-successful-software/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-configure-ssg-and-ssr-on-nuxt",
+    "to": "https://maddevs.io/blog/how-to-configure-ssg-and-ssr-on-nuxt/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-deploy-a-project-on-heroku",
+    "to": "https://maddevs.io/blog/how-to-deploy-a-project-on-heroku/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-hire-a-developer",
+    "to": "https://maddevs.io/blog/how-to-hire-a-developer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-make-a-proper-description-for-a-pull-request",
+    "to": "https://maddevs.io/blog/how-to-make-a-proper-description-for-a-pull-request/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-make-a-proper-description-for-a-pull-request-5e1cbe9fb374",
+    "to": "https://maddevs.io/blog/how-to-make-a-proper-description-for-a-pull-request/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-make-a-proper-description-for-a-pull-request-5e1cbe9fb374?source=friends_link&sk=2b9cc357b19fd10e18fb638ed7f22eec",
+    "to": "https://maddevs.io/blog/how-to-make-a-proper-description-for-a-pull-request/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables",
+    "to": "https://maddevs.io/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-make-better-use-of-sass-extensions-for-custom-css-variables-6bdf9069337e",
+    "to": "https://maddevs.io/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-make-better-use-of-sass-extensions-for-custom-css-variables-6bdf9069337e?source=friends_link&sk=cc5b33b3ffad133412eef05650b2d93e",
+    "to": "https://maddevs.io/blog/how-to-make-better-use-of-sass-extensions-for-custom-css-variables/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-make-three-paid-eta-services-one-free",
+    "to": "https://maddevs.io/blog/how-to-make-three-paid-eta-services-one-free/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-make-three-paid-eta-services-one-free-6edc6affface",
+    "to": "https://maddevs.io/blog/how-to-make-three-paid-eta-services-one-free/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-make-three-paid-eta-services-one-free-6edc6affface?source=friends_link&sk=a01fa3774b63d1e8b6c23f6fb5db717e",
+    "to": "https://maddevs.io/blog/how-to-make-three-paid-eta-services-one-free/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-memorize-information-better-when-you-study",
+    "to": "https://maddevs.io/blog/how-to-memorize-information-better-when-you-study/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-memorize-information-better-when-you-study-2116b2b74839",
+    "to": "https://maddevs.io/blog/how-to-memorize-information-better-when-you-study/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-memorize-information-better-when-you-study-2116b2b74839?source=friends_link&sk=f776ddd16b0c969837e280309cce8639",
+    "to": "https://maddevs.io/blog/how-to-memorize-information-better-when-you-study/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-migrate-from-vue-2-to-vue-3",
+    "to": "https://maddevs.io/blog/how-to-migrate-from-vue-2-to-vue-3/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-protect-your-eyes-from-strain-while-working-in-it",
+    "to": "https://maddevs.io/blog/how-to-protect-your-eyes-from-strain-while-working-in-it/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-protect-your-eyes-from-strain-while-working-in-it-82ce9d3973bf",
+    "to": "https://maddevs.io/blog/how-to-protect-your-eyes-from-strain-while-working-in-it/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-protect-your-eyes-from-strain-while-working-in-it-82ce9d3973bf?source=friends_link&sk=73435a7b7bb0e67fefded7bfec4c39af",
+    "to": "https://maddevs.io/blog/how-to-protect-your-eyes-from-strain-while-working-in-it/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-ruin-a-relationship-with-the-client",
+    "to": "https://maddevs.io/blog/how-to-ruin-a-relationship-with-the-client/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-ruin-a-relationship-with-the-client-a850df35b3",
+    "to": "https://maddevs.io/blog/how-to-ruin-a-relationship-with-the-client/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-ruin-a-relationship-with-the-client-a850df35b3?source=friends_link&sk=c25b89dec2191b684f163c569eb72c6f",
+    "to": "https://maddevs.io/blog/how-to-ruin-a-relationship-with-the-client/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-set-up-automated-integration-tests-in-a-vue-application",
+    "to": "https://maddevs.io/blog/how-to-set-up-automated-integration-tests-in-a-vue-application/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-start-as-a-tech-blogger",
+    "to": "https://maddevs.io/blog/how-to-start-as-a-tech-blogger/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-start-as-a-tech-blogger-f66a3f54d47e",
+    "to": "https://maddevs.io/blog/how-to-start-as-a-tech-blogger/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-start-as-a-tech-blogger-f66a3f54d47e?source=friends_link&sk=9b66ed15741c36310a63b5eda4abeb0e",
+    "to": "https://maddevs.io/blog/how-to-start-as-a-tech-blogger/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-start-developing-for-raspberry-pi-with-qt",
+    "to": "https://maddevs.io/blog/how-to-start-developing-for-raspberry-pi-with-qt/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-stop-worrying-and-start-developing-for-raspberry-pi-with-qt-8df032f8a534",
+    "to": "https://maddevs.io/blog/how-to-start-developing-for-raspberry-pi-with-qt/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-stop-worrying-and-start-developing-for-raspberry-pi-with-qt-8df032f8a534?source=friends_link&sk=2bac39628922181872271fe358fa4cdc",
+    "to": "https://maddevs.io/blog/how-to-start-developing-for-raspberry-pi-with-qt/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-start-with-logging-in-go-projects-part-2",
+    "to": "https://maddevs.io/blog/how-to-start-with-logging-in-go-projects-part-2/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-start-with-logging-in-go-projects-part-2-1e57cc58f329",
+    "to": "https://maddevs.io/blog/how-to-start-with-logging-in-go-projects-part-2/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-start-with-logging-in-go-projects-part-2-1e57cc58f329?source=friends_link&sk=51935cb603c3763c55ff99fe40c11c12",
+    "to": "https://maddevs.io/blog/how-to-start-with-logging-in-go-projects-part-2/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-start-with-logging-in-golang-projects-part-1",
+    "to": "https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-start-with-logging-in-golang-projects-part-1-3e3a708b75be",
+    "to": "https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-start-with-logging-in-golang-projects-part-1-3e3a708b75be?source=friends_link&sk=b00bc9071228211bfbd6309e1be0124e",
+    "to": "https://maddevs.io/blog/how-to-start-with-logging-in-golang-projects-part-1/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-to-test-a-web-product-manually",
+    "to": "https://maddevs.io/blog/how-to-test-a-web-product-manually/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-test-a-web-product-manually-c019d6e8e2f3",
+    "to": "https://maddevs.io/blog/how-to-test-a-web-product-manually/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-to-test-a-web-product-manually-c019d6e8e2f3?source=friends_link&sk=b08f7867584f17fbfe224175143c1fe4",
+    "to": "https://maddevs.io/blog/how-to-test-a-web-product-manually/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-we-built-a-backend-system-for-uber-like-map-with-animated-cars-on-it-using-go",
+    "to": "https://maddevs.io/blog/how-we-built-a-backend-system-for-uber-like-map-with-animated-cars-on-it-using-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-a-backend-system-for-uber-like-map-with-animated-cars-on-it-using-go-29d5dcd517a",
+    "to": "https://maddevs.io/blog/how-we-built-a-backend-system-for-uber-like-map-with-animated-cars-on-it-using-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-a-backend-system-for-uber-like-map-with-animated-cars-on-it-using-go-29d5dcd517a?source=friends_link&sk=e8ce9b159a8b5913f0b39d9a751c9b5d",
+    "to": "https://maddevs.io/blog/how-we-built-a-backend-system-for-uber-like-map-with-animated-cars-on-it-using-go/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-we-built-a-failover-architecture-for-a-taxi-service-part-3-the-end",
+    "to": "https://maddevs.io/blog/how-we-built-a-failover-architecture-for-a-taxi-service-part-3-the-end/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-a-failover-architecture-for-a-taxi-service-part-3-the-end-78b2215caa08",
+    "to": "https://maddevs.io/blog/how-we-built-a-failover-architecture-for-a-taxi-service-part-3-the-end/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-a-failover-architecture-for-a-taxi-service-part-3-the-end-78b2215caa08?source=friends_link&sk=6cd4d88ff947021446019eb5f8e7271f",
+    "to": "https://maddevs.io/blog/how-we-built-a-failover-architecture-for-a-taxi-service-part-3-the-end/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-we-built-failover-architecture-for-a-taxi-service-part-1-intro",
+    "to": "https://maddevs.io/blog/how-we-built-failover-architecture-for-a-taxi-service-part-1-intro/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-failover-architecture-for-a-taxi-service-part-1-intro-e611eb33c115",
+    "to": "https://maddevs.io/blog/how-we-built-failover-architecture-for-a-taxi-service-part-1-intro/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-failover-architecture-for-a-taxi-service-part-1-intro-e611eb33c115?source=friends_link&sk=94fa9774333bbec0048b530a16193b4b",
+    "to": "https://maddevs.io/blog/how-we-built-failover-architecture-for-a-taxi-service-part-1-intro/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-we-built-failover-architecture-for-a-taxi-service-part-2-continued",
+    "to": "https://maddevs.io/blog/how-we-built-failover-architecture-for-a-taxi-service-part-2-continued/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-failover-architecture-for-a-taxi-service-part-2-continued-ae1caf740e68",
+    "to": "https://maddevs.io/blog/how-we-built-failover-architecture-for-a-taxi-service-part-2-continued/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-built-failover-architecture-for-a-taxi-service-part-2-continued-ae1caf740e68?source=friends_link&sk=3789d246c698d5a3e246f929feb1f90f",
+    "to": "https://maddevs.io/blog/how-we-built-failover-architecture-for-a-taxi-service-part-2-continued/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/how-we-made-restreaming-from-youtube-using-go",
+    "to": "https://maddevs.io/blog/how-we-made-restreaming-from-youtube-using-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-made-restreaming-from-youtube-using-go-dbe6eb1f1e0a",
+    "to": "https://maddevs.io/blog/how-we-made-restreaming-from-youtube-using-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/how-we-made-restreaming-from-youtube-using-go-dbe6eb1f1e0a?source=friends_link&sk=82aee53e9c03ceafafa18802e0bbd170",
+    "to": "https://maddevs.io/blog/how-we-made-restreaming-from-youtube-using-go/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/integration-of-stripe-connect-into-your-project",
+    "to": "https://maddevs.io/blog/integration-of-stripe-connect-into-your-project/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/integration-of-stripe-connect-926daa2978d5",
+    "to": "https://maddevs.io/blog/integration-of-stripe-connect-into-your-project/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/integration-of-stripe-connect-926daa2978d5?source=friends_link&sk=66b3f5d21d2a575b98ced7babae9e8e5",
+    "to": "https://maddevs.io/blog/integration-of-stripe-connect-into-your-project/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/internal-and-external-software-audits",
+    "to": "https://maddevs.io/blog/internal-and-external-software-audits/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/internship-program-automation-wip",
+    "to": "https://maddevs.io/blog/internship-program-automation-wip/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/internship-program-automation-wip-f1d5d976ea21",
+    "to": "https://maddevs.io/blog/internship-program-automation-wip/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/internship-program-automation-wip-f1d5d976ea21?source=friends_link&sk=45ca8d87c55a59440633c294ac75aa19",
+    "to": "https://maddevs.io/blog/internship-program-automation-wip/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/introduction-to-pcb-prototyping-with-easyeda-part-i-project-creation",
+    "to": "https://maddevs.io/blog/introduction-to-pcb-prototyping-with-easyeda-part-i-project-creation/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/introduction-to-pcb-prototyping-with-easyeda-part-i-project-creation-143563311253",
+    "to": "https://maddevs.io/blog/introduction-to-pcb-prototyping-with-easyeda-part-i-project-creation/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/introduction-to-pcb-prototyping-with-easyeda-part-i-project-creation-143563311253?source=friends_link&sk=27d475755a3259416bb9e91baa3b8f49",
+    "to": "https://maddevs.io/blog/introduction-to-pcb-prototyping-with-easyeda-part-i-project-creation/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/introduction-to-prototyping-with-easyeda-part-ii-simple-schematic",
+    "to": "https://maddevs.io/blog/introduction-to-prototyping-with-easyeda-part-ii-simple-schematic/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/introduction-to-prototyping-with-easyeda-part-ii-simple-schematic-fecafe9839c7",
+    "to": "https://maddevs.io/blog/introduction-to-prototyping-with-easyeda-part-ii-simple-schematic/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/introduction-to-prototyping-with-easyeda-part-ii-simple-schematic-fecafe9839c7?source=friends_link&sk=0f257710a40a69d79241b689d1885ed9",
+    "to": "https://maddevs.io/blog/introduction-to-prototyping-with-easyeda-part-ii-simple-schematic/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/leadership-lessons-i-learned-from-videogames",
+    "to": "https://maddevs.io/blog/leadership-lessons-i-learned-from-videogames/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/leadership-lessons-i-learned-from-videogames-b1e749b5c25",
+    "to": "https://maddevs.io/blog/leadership-lessons-i-learned-from-videogames/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/leadership-lessons-i-learned-from-videogames-b1e749b5c25?source=friends_link&sk=cc902e260d4ac18d1f9bdfc93500da24",
+    "to": "https://maddevs.io/blog/leadership-lessons-i-learned-from-videogames/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/lessons-learned-from-a-project-with-a-fixed-price-contract",
+    "to": "https://maddevs.io/blog/lessons-learned-from-a-project-with-a-fixed-price-contract/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/linuxkit-as-an-ecs-instance-with-terraform",
+    "to": "https://maddevs.io/blog/linuxkit-as-an-ecs-instance-with-terraform/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/linuxkit-as-a-ecs-instance-with-terraform-31a33116dbe2",
+    "to": "https://maddevs.io/blog/linuxkit-as-an-ecs-instance-with-terraform/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/linuxkit-as-a-ecs-instance-with-terraform-31a33116dbe2?source=friends_link&sk=7df0870df90d861a5987e6b5797c7994",
+    "to": "https://maddevs.io/blog/linuxkit-as-an-ecs-instance-with-terraform/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/log-collecting-with-elk-and-rsyslog",
+    "to": "https://maddevs.io/blog/log-collecting-with-elk-and-rsyslog/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/log-collecting-with-elk-and-rsyslog-218b032b12f4",
+    "to": "https://maddevs.io/blog/log-collecting-with-elk-and-rsyslog/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/log-collecting-with-elk-and-rsyslog-218b032b12f4?source=friends_link&sk=b67a43ff22a848b904b0349a88ae7042",
+    "to": "https://maddevs.io/blog/log-collecting-with-elk-and-rsyslog/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/mad-devs-climbs-clutchs-ranks-of-leading-web-developers-cloud-consultants-in-the-uk",
+    "to": "https://maddevs.io/blog/mad-devs-climbs-clutchs-ranks-of-leading-web-developers-cloud-consultants-in-the-uk/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/mad-devs-climbs-clutchs-ranks-of-leading-web-developers-cloud-consultants-in-the-uk-950926f32252",
+    "to": "https://maddevs.io/blog/mad-devs-climbs-clutchs-ranks-of-leading-web-developers-cloud-consultants-in-the-uk/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/mad-devs-climbs-clutchs-ranks-of-leading-web-developers-cloud-consultants-in-the-uk-950926f32252?source=friends_link&sk=440ead7d3bf7cf187ac050f2a3dcef76",
+    "to": "https://maddevs.io/blog/mad-devs-climbs-clutchs-ranks-of-leading-web-developers-cloud-consultants-in-the-uk/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/devops-engineers-in-mad-devs-449ded5221b6",
+    "to": "https://maddevs.io/insights/blog/devops-engineers-at-mad-devs/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/devops-engineers-in-mad-devs-449ded5221b6?source=friends_link&sk=2e0fa9326c958eddd0839178752f384e",
+    "to": "https://maddevs.io/insights/blog/devops-engineers-at-mad-devs/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/blog/mad-devs-devops",
+    "to": "https://maddevs.io/insights/blog/devops-engineers-at-mad-devs/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/insights/blog/devops-engineers-in-mad-devs",
+    "to": "https://maddevs.io/insights/blog/devops-engineers-at-mad-devs/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/blog/devops-engineers-in-mad-devs",
+    "to": "https://maddevs.io/insights/blog/devops-engineers-at-mad-devs/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/mad-fake-slack",
+    "to": "https://maddevs.io/blog/mad-fake-slack/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/mad-fake-slack-945ea810a778",
+    "to": "https://maddevs.io/blog/mad-fake-slack/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/mad-fake-slack-945ea810a778?source=friends_link&sk=fa6c97cb2c7398c9e005926a7f045564",
+    "to": "https://maddevs.io/blog/mad-fake-slack/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/major-technologies-in-your-tech-stack",
+    "to": "https://maddevs.io/blog/major-technologies-in-your-tech-stack/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/managed-service-vs-staff-agmentation",
+    "to": "https://maddevs.io/blog/managed-service-vs-staff-agmentation/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/manager-dos-and-donts",
+    "to": "https://maddevs.io/blog/manager-dos-and-donts/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/manager-dos-and-donts-83e2293c413d",
+    "to": "https://maddevs.io/blog/manager-dos-and-donts/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/manager-dos-and-donts-83e2293c413d?source=friends_link&sk=553e80d39aabcdf0dc47bac9779c7f73",
+    "to": "https://maddevs.io/blog/manager-dos-and-donts/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/managing-developers-remote-team-communication",
+    "to": "https://maddevs.io/blog/managing-developers-remote-team-communication/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/map-in-mercator-projection-for-android",
+    "to": "https://maddevs.io/blog/map-in-mercator-projection-for-android/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/map-in-mercator-projection-for-android-1dd479ec450e",
+    "to": "https://maddevs.io/blog/map-in-mercator-projection-for-android/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/media-storage-on-multiple-django",
+    "to": "https://maddevs.io/blog/media-storage-on-multiple-django/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/media-storage-on-multiple-django-924ba8282b79",
+    "to": "https://maddevs.io/blog/media-storage-on-multiple-django/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/media-storage-on-multiple-django-924ba8282b79?source=friends_link&sk=fd83fad987615088fcde1fc5cb07dffd",
+    "to": "https://maddevs.io/blog/media-storage-on-multiple-django/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/meet-glitch-com",
+    "to": "https://maddevs.io/blog/meet-glitch-com/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/meet-glitch-com-429c423cf8e1",
+    "to": "https://maddevs.io/blog/meet-glitch-com/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/meet-glitch-com-429c423cf8e1?source=friends_link&sk=1139dad2bb6b7d9ee7b3209068bf04f9",
+    "to": "https://maddevs.io/blog/meet-glitch-com/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/micronavigator-based-on",
+    "to": "https://maddevs.io/blog/micronavigator-based-on/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/micronavigator-based-on-stm32f100-3cebc718f638",
+    "to": "https://maddevs.io/blog/micronavigator-based-on/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/micronavigator-based-on-stm32f100-3cebc718f638?source=friends_link&sk=858d2cfafc3b87adf79995331bdf6154",
+    "to": "https://maddevs.io/blog/micronavigator-based-on/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/move-from-middle-developer-to-senior",
+    "to": "https://maddevs.io/blog/move-from-middle-developer-to-senior/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/namba-food-bot",
+    "to": "https://maddevs.io/blog/namba-food-bot/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/namba-food-bot-61b5be6acfec",
+    "to": "https://maddevs.io/blog/namba-food-bot/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/namba-food-bot-61b5be6acfec?source=friends_link&sk=1be9dc80e2567ed1e1a2713466c1e8fe",
+    "to": "https://maddevs.io/blog/namba-food-bot/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/nocode-lowcode-development",
+    "to": "https://maddevs.io/blog/nocode-lowcode-development/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/pm-mistakes",
+    "to": "https://maddevs.io/blog/pm-mistakes/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/pm-mistakes-9b58814e8cc9",
+    "to": "https://maddevs.io/blog/pm-mistakes/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/pm-mistakes-9b58814e8cc9?source=friends_link&sk=b10461d3f4b5d7babe3718676fe3d1c4",
+    "to": "https://maddevs.io/blog/pm-mistakes/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/positive-and-negative-reinforcement-in-teaching-programming",
+    "to": "https://maddevs.io/blog/positive-and-negative-reinforcement-in-teaching-programming/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/positive-and-negative-reinforcement-in-teaching-programming-b5dc1fcb042a",
+    "to": "https://maddevs.io/blog/positive-and-negative-reinforcement-in-teaching-programming/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/positive-and-negative-reinforcement-in-teaching-programming-b5dc1fcb042a?source=friends_link&sk=1e62dcbc7e3f987a8c862a2acccb30d7",
+    "to": "https://maddevs.io/blog/positive-and-negative-reinforcement-in-teaching-programming/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/progressive-web-apps-practical-usage-guide-8f9ddfea1cb3",
+    "to": "https://maddevs.io/blog/progressive-web-apps-practical-usage-guide/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/progressive-web-apps-practical-usage-guide-8f9ddfea1cb3?source=friends_link&sk=cd49b6a42f4488e952ff7ea3f44cc788",
+    "to": "https://maddevs.io/blog/progressive-web-apps-practical-usage-guide/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/progressive-web-apps-practical-usage-guide",
+    "to": "https://maddevs.io/blog/progressive-web-apps-practical-usage-guide/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/project-management-using-jira",
+    "to": "https://maddevs.io/blog/project-management-using-jira/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/qa-engineers-in-software-development",
+    "to": "https://maddevs.io/blog/qa-engineers-in-software-development/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/qa-software-testing-life-cycle",
+    "to": "https://maddevs.io/blog/qa-software-testing-life-cycle/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/react-typescript",
+    "to": "https://maddevs.io/blog/react-typescript/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/reasons-to-log-time",
+    "to": "https://maddevs.io/blog/reasons-to-log-time/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer",
+    "to": "https://maddevs.io/blog/reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer-43594faed19c",
+    "to": "https://maddevs.io/blog/reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer-43594faed19c?source=friends_link&sk=2b644f8deea5d86c0943cb9dab5eb70e",
+    "to": "https://maddevs.io/blog/reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/reduce-onboarding-costs",
+    "to": "https://maddevs.io/blog/reduce-onboarding-costs/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/remote-workers-work-more-hours",
+    "to": "https://maddevs.io/blog/remote-workers-work-more-hours/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/retrospective-meeting",
+    "to": "https://maddevs.io/blog/retrospective-meeting/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/run-kubernetes-on-aws/F",
+    "to": "https://maddevs.io/blog/run-kubernetes-on-aws/F/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/running-geo-django-on-elasticbeanstalk",
+    "to": "https://maddevs.io/blog/running-geo-django-on-elasticbeanstalk/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/running-geo-django-on-elasticbeanstalk-fd7b9862fb2c",
+    "to": "https://maddevs.io/blog/running-geo-django-on-elasticbeanstalk/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/running-geo-django-on-elasticbeanstalk-fd7b9862fb2c?source=friends_link&sk=c82987a32efd53ed2952e0320eeba448",
+    "to": "https://maddevs.io/blog/running-geo-django-on-elasticbeanstalk/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/running-postgres-as-a-build-requirement-in-teamcity-build",
+    "to": "https://maddevs.io/blog/running-postgres-as-a-build-requirement-in-teamcity-build/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/running-postgres-as-a-build-requirement-in-teamcity-build-8c6413576e33",
+    "to": "https://maddevs.io/blog/running-postgres-as-a-build-requirement-in-teamcity-build/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/running-postgres-as-a-build-requirement-in-teamcity-build-8c6413576e33?source=friends_link&sk=b40939316bd5b625bc60d38e3ecfb951",
+    "to": "https://maddevs.io/blog/running-postgres-as-a-build-requirement-in-teamcity-build/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/semantic-html",
+    "to": "https://maddevs.io/blog/semantic-html/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/seo-analyzer",
+    "to": "https://maddevs.io/blog/seo-analyzer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-architecture-design",
+    "to": "https://maddevs.io/blog/software-architecture-design/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/software-architecture-design-d08463fb04df",
+    "to": "https://maddevs.io/blog/software-architecture-design/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/software-architecture-design-d08463fb04df?source=friends_link&sk=20106a3ab3864d830ccddc813364e82b",
+    "to": "https://maddevs.io/blog/software-architecture-design/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-development-for-a-drug-delivery",
+    "to": "https://maddevs.io/blog/software-development-for-a-drug-delivery/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-development-metrics",
+    "to": "https://maddevs.io/blog/software-development-metrics/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-development-principles",
+    "to": "https://maddevs.io/blog/software-development-principles/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-features-acceptance-process-by-clients",
+    "to": "https://maddevs.io/blog/software-features-acceptance-process-by-clients/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/software-features-acceptance-process-by-clients-49948f783756",
+    "to": "https://maddevs.io/blog/software-features-acceptance-process-by-clients/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/software-features-acceptance-process-by-clients-49948f783756?source=friends_link&sk=75e7b63f7086c00e389dc83c3d426c8e",
+    "to": "https://maddevs.io/blog/software-features-acceptance-process-by-clients/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-project-handover",
+    "to": "https://maddevs.io/blog/software-project-handover/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-prototyping-and-mockups",
+    "to": "https://maddevs.io/blog/software-prototyping-and-mockups/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-quality-assurance",
+    "to": "https://maddevs.io/blog/software-quality-assurance/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/software-requirements-are-must-for-software-engineers",
+    "to": "https://maddevs.io/blog/software-requirements-are-must-for-software-engineers/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/statement-of-work-vs-scope-of-work",
+    "to": "https://maddevs.io/blog/statement-of-work-vs-scope-of-work/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/swot-team-for-software-development-projects",
+    "to": "https://maddevs.io/blog/swot-team-for-software-development-projects/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/tech-stack-of-prominent-companies",
+    "to": "https://maddevs.io/blog/tech-stack-of-prominent-companies/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/terraform-aws-eks",
+    "to": "https://maddevs.io/blog/terraform-aws-eks/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/terraform-hetzner",
+    "to": "https://maddevs.io/blog/terraform-hetzner/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/terraform-hetzner-1df05267baf0",
+    "to": "https://maddevs.io/blog/terraform-hetzner/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/terraform-hetzner-1df05267baf0?source=friends_link&sk=f37421ebf6a108e5d41ba9d1eddf83b5",
+    "to": "https://maddevs.io/blog/terraform-hetzner/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/testing-django-on-steroids-with-pytest",
+    "to": "https://maddevs.io/blog/testing-django-on-steroids-with-pytest/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/testing-django-on-steroids-with-pytest-38fe11a3538c",
+    "to": "https://maddevs.io/blog/testing-django-on-steroids-with-pytest/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/testing-django-on-steroids-with-pytest-38fe11a3538c?source=friends_link&sk=91e2e3622756e309ddb80d0dcc076c6a",
+    "to": "https://maddevs.io/blog/testing-django-on-steroids-with-pytest/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/the-cost-of-errors-in-hardware-projects",
+    "to": "https://maddevs.io/blog/the-cost-of-errors-in-hardware-projects/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-cost-of-errors-in-hardware-projects-7d73b0fd8465",
+    "to": "https://maddevs.io/blog/the-cost-of-errors-in-hardware-projects/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-cost-of-errors-in-hardware-projects-7d73b0fd8465?source=friends_link&sk=eb21eb69d892cb19c0f85f3e0276481e",
+    "to": "https://maddevs.io/blog/the-cost-of-errors-in-hardware-projects/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/the-difference-in-work-for-beginner-and-professional-developers",
+    "to": "https://maddevs.io/blog/the-difference-in-work-for-beginner-and-professional-developers/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-difference-in-work-for-beginner-and-professional-developers-e45ddd5e5bfe",
+    "to": "https://maddevs.io/blog/the-difference-in-work-for-beginner-and-professional-developers/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-difference-in-work-for-beginner-and-professional-developers-e45ddd5e5bfe?source=friends_link&sk=2f7fbe3b8621349c152c7532db04410b",
+    "to": "https://maddevs.io/blog/the-difference-in-work-for-beginner-and-professional-developers/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/the-evolution-of-internship",
+    "to": "https://maddevs.io/blog/the-evolution-of-internship/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-evolution-of-internship-721303ca6361",
+    "to": "https://maddevs.io/blog/the-evolution-of-internship/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-evolution-of-internship-721303ca6361?source=friends_link&sk=a45fc9f974a9a2cf7aab06c312bad185",
+    "to": "https://maddevs.io/blog/the-evolution-of-internship/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/the-five-rules-when-we-work-with-jira",
+    "to": "https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-five-rules-when-we-work-with-jira-d6fdbf6accfd",
+    "to": "https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-five-rules-when-we-work-with-jira-d6fdbf6accfd?source=friends_link&sk=3cb7100dbc222a487c92ed5330a65fcc",
+    "to": "https://maddevs.io/blog/the-five-rules-when-we-work-with-jira/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer",
+    "to": "https://maddevs.io/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-nuances-of-testing-in-pair-cucumber-js-puppeteer-49c3ff2da44c",
+    "to": "https://maddevs.io/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/the-nuances-of-testing-in-pair-cucumber-js-puppeteer-49c3ff2da44c?source=friends_link&sk=67af8b681b3fecead6f36c268b003bec",
+    "to": "https://maddevs.io/blog/the-nuances-of-testing-in-pair-cucumber-js-puppeteer/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/time-to-graphqlize",
+    "to": "https://maddevs.io/blog/time-to-graphqlize/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/time-to-graphqlize-f61034d86e35",
+    "to": "https://maddevs.io/blog/time-to-graphqlize/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/time-to-graphqlize-f61034d86e35?source=friends_link&sk=d4dc6c9f30def2ecfa3af4a47f8364e9",
+    "to": "https://maddevs.io/blog/time-to-graphqlize/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/time-tracking-in-software-development",
+    "to": "https://maddevs.io/blog/time-tracking-in-software-development/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/top-3-best-ci-for-your-js-projects-with-puppeteer-tests",
+    "to": "https://maddevs.io/blog/top-3-best-ci-for-your-js-projects-with-puppeteer-tests/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/top-3-best-ci-for-your-js-projects-with-puppeteer-tests-9395ff31d134",
+    "to": "https://maddevs.io/blog/top-3-best-ci-for-your-js-projects-with-puppeteer-tests/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/top-3-best-ci-for-your-js-projects-with-puppeteer-tests-9395ff31d134?source=friends_link&sk=a044c5ef6b644007179feae54c6b3bf3",
+    "to": "https://maddevs.io/blog/top-3-best-ci-for-your-js-projects-with-puppeteer-tests/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/top-open-source-bi-tools",
+    "to": "https://maddevs.io/blog/top-open-source-bi-tools/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/top-open-source-content-management-systems",
+    "to": "https://maddevs.io/blog/top-open-source-content-management-systems/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/top-open-source-project-management-tools",
+    "to": "https://maddevs.io/blog/top-open-source-project-management-tools/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/top-skills-every-successful-project-manager-needs-to-focus-on",
+    "to": "https://maddevs.io/blog/top-skills-every-successful-project-manager-needs-to-focus-on/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/3-top-skills-every-successful-project-manager-needs-to-focus-on-70827595cb6e",
+    "to": "https://maddevs.io/blog/top-skills-every-successful-project-manager-needs-to-focus-on/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/3-top-skills-every-successful-project-manager-needs-to-focus-on-70827595cb6e?source=friends_link&sk=0f5a4db2dfec97364adb8346169dd5b7",
+    "to": "https://maddevs.io/blog/top-skills-every-successful-project-manager-needs-to-focus-on/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/transparency-and-trust-in-team",
+    "to": "https://maddevs.io/blog/transparency-and-trust-in-team/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/transportation-industry-opportunities-in-it",
+    "to": "https://maddevs.io/blog/transportation-industry-opportunities-in-it/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/ultimate-guide-to-time-and-materials-contract",
+    "to": "https://maddevs.io/blog/ultimate-guide-to-time-and-materials-contract/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/underestimating-go",
+    "to": "https://maddevs.io/blog/underestimating-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/underestimating-go-c3b5eb497f9d",
+    "to": "https://maddevs.io/blog/underestimating-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/underestimating-go-c3b5eb497f9d?source=friends_link&sk=9aa2238435e278b6a83feb2783c8167f",
+    "to": "https://maddevs.io/blog/underestimating-go/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/view-colleagues-from-another-office-through-always-on-video-window",
+    "to": "https://maddevs.io/blog/view-colleagues-from-another-office-through-always-on-video-window/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/view-colleagues-from-another-office-through-always-on-video-window-71b4cf6efbbe",
+    "to": "https://maddevs.io/blog/view-colleagues-from-another-office-through-always-on-video-window/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/view-colleagues-from-another-office-through-always-on-video-window-71b4cf6efbbe?source=friends_link&sk=6967ee8ca44ab1f26f444261ba650f8d",
+    "to": "https://maddevs.io/blog/view-colleagues-from-another-office-through-always-on-video-window/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/visualization-as-a-method-of-drawing-the-readers-attention",
+    "to": "https://maddevs.io/blog/visualization-as-a-method-of-drawing-the-readers-attention/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/visualization-as-a-method-of-drawing-the-readers-attention-1d8cc5cfd5dd",
+    "to": "https://maddevs.io/blog/visualization-as-a-method-of-drawing-the-readers-attention/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/visualization-as-a-method-of-drawing-the-readers-attention-1d8cc5cfd5dd?source=friends_link&sk=dca1f05b9c7497c1d7a713838606f28a",
+    "to": "https://maddevs.io/blog/visualization-as-a-method-of-drawing-the-readers-attention/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/vue-form-validation",
+    "to": "https://maddevs.io/blog/vue-form-validation/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/waterfall-development-model",
+    "to": "https://maddevs.io/blog/waterfall-development-model/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/web-app-deploy-to-glitch",
+    "to": "https://maddevs.io/blog/web-app-deploy-to-glitch/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/web-app-deploy-to-glitch-com",
+    "to": "https://maddevs.io/blog/web-app-deploy-to-glitch/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/blog/web-app-deploy-to-glitch-com",
+    "to": "https://maddevs.io/blog/web-app-deploy-to-glitch/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/web-app-deploy-to-glitch-com-b43470c32a2f",
+    "to": "https://maddevs.io/blog/web-app-deploy-to-glitch/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/web-app-deploy-to-glitch-com-b43470c32a2f?source=friends_link&sk=9ac6f596478df5209de433903fc84897",
+    "to": "https://maddevs.io/blog/web-app-deploy-to-glitch/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/what-do-you-need-to-know-to-make-a-good-markup",
+    "to": "https://maddevs.io/blog/what-do-you-need-to-know-to-make-a-good-markup/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/its-not-just-a-layout-what-do-you-need-to-know-to-make-a-good-markup-ff178a1b2a95",
+    "to": "https://maddevs.io/blog/what-do-you-need-to-know-to-make-a-good-markup/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/its-not-just-a-layout-what-do-you-need-to-know-to-make-a-good-markup-ff178a1b2a95?source=friends_link&sk=e73f9d45425c502b5c3a088d1fd2ddf7",
+    "to": "https://maddevs.io/blog/what-do-you-need-to-know-to-make-a-good-markup/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/what-to-choose-to-implement-audio-video-calls-solution-using-webrtc",
+    "to": "https://maddevs.io/blog/what-to-choose-to-implement-audio-video-calls-solution-using-webrtc/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/what-to-choose-to-implement-audio-video-calls-solution-using-webrtc-ff5421e49a57",
+    "to": "https://maddevs.io/blog/what-to-choose-to-implement-audio-video-calls-solution-using-webrtc/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/what-to-choose-to-implement-audio-video-calls-solution-using-webrtc-ff5421e49a57?source=friends_link&sk=6bb96762811cb4c4e619284bf52629a6",
+    "to": "https://maddevs.io/blog/what-to-choose-to-implement-audio-video-calls-solution-using-webrtc/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/why-do-software-bugs-occur",
+    "to": "https://maddevs.io/blog/why-do-software-bugs-occur/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/why-do-you-need-senior-developers-in-project",
+    "to": "https://maddevs.io/blog/why-do-you-need-senior-developers-in-project/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/working-with-the-mysql-in-go",
+    "to": "https://maddevs.io/blog/working-with-the-mysql-in-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/working-with-the-mysql-in-go-58fcc951b41f",
+    "to": "https://maddevs.io/blog/working-with-the-mysql-in-go/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/working-with-the-mysql-in-go-58fcc951b41f?source=friends_link&sk=28d0f484b496b837d2cfd110cca50eef",
+    "to": "https://maddevs.io/blog/working-with-the-mysql-in-go/"
+  },
+  {
+    "pageType": "Posts",
+    "from": "/insights/blog/you-want-to-develop-a-mobile-application-are-you-sure",
+    "to": "https://maddevs.io/blog/you-want-to-develop-a-mobile-application-are-you-sure/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/you-want-to-develop-a-mobile-application-are-you-sure-9f274977c615",
+    "to": "https://maddevs.io/blog/you-want-to-develop-a-mobile-application-are-you-sure/"
+  },
+  {
+    "pageType": "Posts - из старых редиректов",
+    "from": "/you-want-to-develop-a-mobile-application-are-you-sure-9f274977c615?source=friends_link&sk=c1c0eff43bd69a99c78c389a8a8db960",
+    "to": "https://maddevs.io/blog/you-want-to-develop-a-mobile-application-are-you-sure/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/nastachku-2017-bdbdf83efb15",
+    "to": "https://medium.com/maddevs-io/nastachku-2017-bdbdf83efb15/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/bit-2017-bishkek-5509aeade425",
+    "to": "https://medium.com/maddevs-io/bit-2017-bishkek-5509aeade425/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/kolesa-web-conference-from-our-friends-in-almaty-62083fd36d75",
+    "to": "https://medium.com/maddevs-io/kolesa-web-conference-from-our-friends-in-almaty-62083fd36d75/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/op-2017-krakow-5f12d782f22c",
+    "to": "https://medium.com/maddevs-io/op-2017-krakow-5f12d782f22c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/women-tech-makers-bishkek-c6e87c8e7001",
+    "to": "https://medium.com/maddevs-io/women-tech-makers-bishkek-c6e87c8e7001/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/computer-science-students-986396201919",
+    "to": "https://medium.com/maddevs-io/computer-science-students-986396201919/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/iotsploit-wins-she-loves-tech-pitching-competition-in-singapore-3c3b53078f49",
+    "to": "https://medium.com/maddevs-io/iotsploit-wins-she-loves-tech-pitching-competition-in-singapore-3c3b53078f49/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/learn-go-with-our-codelab-e635ba705af6",
+    "to": "https://medium.com/maddevs-io/learn-go-with-our-codelab-e635ba705af6/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/a-glance-at-devfest-siberia-2017-161c678de0f6",
+    "to": "https://medium.com/maddevs-io/a-glance-at-devfest-siberia-2017-161c678de0f6/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/gophercon-russia-a-lot-of-warm-in-18-68747e8bff97",
+    "to": "https://medium.com/maddevs-io/gophercon-russia-a-lot-of-warm-in-18-68747e8bff97/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/mad-devs-icpc-northern-eurasia-the-2018-kyrgyzstan-subregional-contest-427be193ff5b",
+    "to": "https://medium.com/maddevs-io/mad-devs-icpc-northern-eurasia-the-2018-kyrgyzstan-subregional-contest-427be193ff5b/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/mad-devs-is-a-main-sponsor-of-google-developers-group-gdg-devfest-bishkek-2018-83d7f2abc19f",
+    "to": "https://medium.com/maddevs-io/mad-devs-is-a-main-sponsor-of-google-developers-group-gdg-devfest-bishkek-2018-83d7f2abc19f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/silkroadexplore-cbdc1c5f157f",
+    "to": "https://medium.com/maddevs-io/silkroadexplore-cbdc1c5f157f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/silkroadexplore-cbdc1c5f157f?source=friends_link&sk=ef2c64ed3308451b51b3f7b22b1a83fe",
+    "to": "https://medium.com/maddevs-io/silkroadexplore-cbdc1c5f157f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/teacherly-provides-collaboration-platform-to-70-000-teachers-88631cc5195f",
+    "to": "https://medium.com/maddevs-io/teacherly-provides-collaboration-platform-to-70-000-teachers-88631cc5195f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/teacherly-provides-collaboration-platform-to-70-000-teachers-88631cc5195f?source=friends_link&sk=0f492513f43ce5b4330c3cfa484378c5",
+    "to": "https://medium.com/maddevs-io/teacherly-provides-collaboration-platform-to-70-000-teachers-88631cc5195f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82-%D1%81%D0%B2%D0%BE%D0%B9-%D1%87%D1%83%D0%B6%D0%BE%D0%B9-%D1%81%D0%B2%D0%BE%D0%B9-917781fbb83d",
+    "to": "https://medium.com/maddevs-io/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D1%8B%D0%B9-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82-%D1%81%D0%B2%D0%BE%D0%B9-%D1%87%D1%83%D0%B6%D0%BE%D0%B9-%D1%81%D0%B2%D0%BE%D0%B9-917781fbb83d/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D1%82%D0%B5%D0%BA%D0%B2%D0%B8%D0%BC%D0%B5%D0%BD-164c29a222c3",
+    "to": "https://medium.com/maddevs-io/%D1%82%D0%B5%D0%BA%D0%B2%D0%B8%D0%BC%D0%B5%D0%BD-164c29a222c3/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD%D1%8B-%D0%B2-%D0%B8%D1%82-%D0%BA%D0%BE%D0%B3%D0%BE-%D1%82%D1%83%D1%82-%D0%B1%D0%BE%D0%BC%D0%B1%D0%B0%D0%BD%D1%83%D0%BB%D0%BE-cdc606872143",
+    "to": "https://medium.com/maddevs-io/%D0%B6%D0%B5%D0%BD%D1%89%D0%B8%D0%BD%D1%8B-%D0%B2-%D0%B8%D1%82-%D0%BA%D0%BE%D0%B3%D0%BE-%D1%82%D1%83%D1%82-%D0%B1%D0%BE%D0%BC%D0%B1%D0%B0%D0%BD%D1%83%D0%BB%D0%BE-cdc606872143/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5-ci-cd-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-screen-monitoring-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-http-travis-ci-org-14979e97bb91",
+    "to": "https://medium.com/maddevs-io/%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5-ci-cd-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-screen-monitoring-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-http-travis-ci-org-14979e97bb91/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-namba-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-82a66d9b584e",
+    "to": "https://medium.com/maddevs-io/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-namba-%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE-82a66d9b584e/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BD%D0%B0%D0%BC%D0%B1%D0%B0-%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%B8-%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5-f869bd100772",
+    "to": "https://medium.com/maddevs-io/%D0%BD%D0%B0%D0%BC%D0%B1%D0%B0-%D1%82%D0%B0%D0%BA%D1%81%D0%B8-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%B8-%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5-f869bd100772/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9-nambataxi-%D0%BF%D0%BE-%D1%8E%D0%B7%D0%B5%D1%80%D0%B0%D0%BC-%D0%B8-%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D1%8B%D0%BC-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC-2016-473da4c54136",
+    "to": "https://medium.com/maddevs-io/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9-nambataxi-%D0%BF%D0%BE-%D1%8E%D0%B7%D0%B5%D1%80%D0%B0%D0%BC-%D0%B8-%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%BD%D1%8B%D0%BC-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B0%D0%BC-2016-473da4c54136/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82-full-snack-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA-315a8fdb13c2",
+    "to": "https://medium.com/maddevs-io/%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82-full-snack-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA-315a8fdb13c2/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D1%85%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%D1%8B-%D0%B2-%D0%BA%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD%D0%B5-%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-957517947418",
+    "to": "https://medium.com/maddevs-io/%D1%85%D0%B0%D0%BA%D0%B0%D1%82%D0%BE%D0%BD%D1%8B-%D0%B2-%D0%BA%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD%D0%B5-%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-957517947418/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%BE%D1%80-%D0%B8%D0%BB%D0%B8-%D1%85%D0%BE%D0%B7%D1%8F%D0%B8%D0%BD-2050271173dc",
+    "to": "https://medium.com/maddevs-io/%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%BE%D1%80-%D0%B8%D0%BB%D0%B8-%D1%85%D0%BE%D0%B7%D1%8F%D0%B8%D0%BD-2050271173dc/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/https-blog-maddevs-io-yourcast-tv-32915159be1c",
+    "to": "https://medium.com/maddevs-io/https-blog-maddevs-io-yourcast-tv-32915159be1c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/outsource-people-2016-a14b9c1f1c46",
+    "to": "https://medium.com/maddevs-io/outsource-people-2016-a14b9c1f1c46/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/highload-2015-%D0%BA%D0%B0%D0%BA-%D1%8D%D1%82%D0%BE-%D0%B1%D1%8B%D0%BB%D0%BE-%D0%B8-%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-5e1b539233b5",
+    "to": "https://medium.com/maddevs-io/highload-2015-%D0%BA%D0%B0%D0%BA-%D1%8D%D1%82%D0%BE-%D0%B1%D1%8B%D0%BB%D0%BE-%D0%B8-%D1%87%D1%82%D0%BE-%D1%8D%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-5e1b539233b5/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/bullet-issues-336bb43e57e",
+    "to": "https://medium.com/maddevs-io/bullet-issues-336bb43e57e/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/kyrgyzstan-vector-maps-ec906ff40335",
+    "to": "https://medium.com/maddevs-io/kyrgyzstan-vector-maps-ec906ff40335/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/inversion-of-control-2cfbf0a494a0",
+    "to": "https://medium.com/maddevs-io/inversion-of-control-2cfbf0a494a0/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/gdg-devfest-novosibirsk-cfb47b36baba",
+    "to": "https://medium.com/maddevs-io/gdg-devfest-novosibirsk-cfb47b36baba/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/fosdem-22c2f71302a",
+    "to": "https://medium.com/maddevs-io/fosdem-22c2f71302a/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/silkroadexplore-387cba95cfbc",
+    "to": "https://medium.com/maddevs-io/silkroadexplore-387cba95cfbc/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/inspire-developers-2017-c4d3d161ce00",
+    "to": "https://medium.com/maddevs-io/inspire-developers-2017-c4d3d161ce00/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/go-web-api-c949bd1362b0",
+    "to": "https://medium.com/maddevs-io/go-web-api-c949bd1362b0/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/the-calm-company-52b43ba86431",
+    "to": "https://medium.com/maddevs-io/the-calm-company-52b43ba86431/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/highload-2016-72cca9611c77",
+    "to": "https://medium.com/maddevs-io/highload-2016-72cca9611c77/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/ariadna-85ed0495e12b",
+    "to": "https://medium.com/maddevs-io/ariadna-85ed0495e12b/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/programmer-education-7e4634eaad87",
+    "to": "https://medium.com/maddevs-io/programmer-education-7e4634eaad87/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/design-in-1x-ccdb2df249b0",
+    "to": "https://medium.com/maddevs-io/design-in-1x-ccdb2df249b0/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/digital-nomad-is-normal-db43b463a855",
+    "to": "https://medium.com/maddevs-io/digital-nomad-is-normal-db43b463a855/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/developer-sysadmin-c7e828c25d99",
+    "to": "https://medium.com/maddevs-io/developer-sysadmin-c7e828c25d99/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/developer-burnout-ead63b949fca",
+    "to": "https://medium.com/maddevs-io/developer-burnout-ead63b949fca/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/money-in-open-source-64fa61e92237",
+    "to": "https://medium.com/maddevs-io/money-in-open-source-64fa61e92237/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/fosdem-2017-log-b5fa129bc044",
+    "to": "https://medium.com/maddevs-io/fosdem-2017-log-b5fa129bc044/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/what-i-want-other-parents-to-know-about-women-in-tech-df09b0d9eda",
+    "to": "https://medium.com/maddevs-io/what-i-want-other-parents-to-know-about-women-in-tech-df09b0d9eda/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/golang-codelab-d508bb671f40",
+    "to": "https://medium.com/maddevs-io/golang-codelab-d508bb671f40/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/continuous-deployment-with-docker-cloud-1f19ac454781",
+    "to": "https://medium.com/maddevs-io/continuous-deployment-with-docker-cloud-1f19ac454781/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/golang-mysql-9aa09cdbb666",
+    "to": "https://medium.com/maddevs-io/golang-mysql-9aa09cdbb666/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/introduction-to-grpc-6de0d9c0fe61",
+    "to": "https://medium.com/maddevs-io/introduction-to-grpc-6de0d9c0fe61/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/gdg-almaty-26404184a9ff",
+    "to": "https://medium.com/maddevs-io/gdg-almaty-26404184a9ff/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/stackoverflow-dns-1db680f2032e",
+    "to": "https://medium.com/maddevs-io/stackoverflow-dns-1db680f2032e/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/things-i-learned-managing-site-reliability-9795383795df",
+    "to": "https://medium.com/maddevs-io/things-i-learned-managing-site-reliability-9795383795df/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/docker-for-beginners-a2c9c73e7d3d",
+    "to": "https://medium.com/maddevs-io/docker-for-beginners-a2c9c73e7d3d/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/mahach-892d2a259b1b",
+    "to": "https://medium.com/maddevs-io/mahach-892d2a259b1b/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/rit-2017-f214aad7370c",
+    "to": "https://medium.com/maddevs-io/rit-2017-f214aad7370c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/react-js-%D0%BA%D0%B0%D0%BA-%D0%BD%D0%B0%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C-material-ui-sortable-table-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82-%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%BE%D0%B9-drag-n-drop-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE-a77d521d1695",
+    "to": "https://medium.com/maddevs-io/react-js-%D0%BA%D0%B0%D0%BA-%D0%BD%D0%B0%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C-material-ui-sortable-table-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82-%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%BE%D0%B9-drag-n-drop-%D0%B4%D0%BB%D1%8F-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE-a77d521d1695/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/highload-2015-1b1486e84920",
+    "to": "https://medium.com/maddevs-io/highload-2015-1b1486e84920/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/yandex-taxi-vs-namba-taxi-274d7174187f",
+    "to": "https://medium.com/maddevs-io/yandex-taxi-vs-namba-taxi-274d7174187f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/remote-standup-afe649702171",
+    "to": "https://medium.com/maddevs-io/remote-standup-afe649702171/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/venture-features-81275bf5a622",
+    "to": "https://medium.com/maddevs-io/venture-features-81275bf5a622/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/addled-deploy-52d88d907cde",
+    "to": "https://medium.com/maddevs-io/addled-deploy-52d88d907cde/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/intern-motivation-bc5ca51edd7b",
+    "to": "https://medium.com/maddevs-io/intern-motivation-bc5ca51edd7b/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/internship-revolution-b9b3aa1c22ed",
+    "to": "https://medium.com/maddevs-io/internship-revolution-b9b3aa1c22ed/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D1%81%D0%B0%D0%BC%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B9-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%B4%D0%B5%D0%BF%D0%BB%D0%BE%D0%B8%D1%82%D1%8C-%D0%B3%D0%BE%D1%88%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%BA%D0%B8-4e2f31f5947e",
+    "to": "https://medium.com/maddevs-io/%D1%81%D0%B0%D0%BC%D1%8B%D0%B9-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B9-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%B4%D0%B5%D0%BF%D0%BB%D0%BE%D0%B8%D1%82%D1%8C-%D0%B3%D0%BE%D1%88%D0%BD%D1%8B%D0%B5-%D0%B1%D0%B8%D0%BD%D0%B0%D1%80%D0%BD%D0%B8%D0%BA%D0%B8-4e2f31f5947e/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/securing-future-iots-5aa52764ab7f",
+    "to": "https://medium.com/maddevs-io/securing-future-iots-5aa52764ab7f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/bitcoin-96376777823b",
+    "to": "https://medium.com/maddevs-io/bitcoin-96376777823b/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8-%D0%B2%D0%B5%D0%B1-%D0%BC%D0%B0%D0%B9%D0%BD%D0%B8%D0%BD%D0%B3%D0%B0-must-have-%D0%B2-2017-18%D0%B3%D0%B3-4a4064ffb66",
+    "to": "https://medium.com/maddevs-io/%D0%BF%D0%BB%D0%B0%D0%B3%D0%B8%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8-%D0%B2%D0%B5%D0%B1-%D0%BC%D0%B0%D0%B9%D0%BD%D0%B8%D0%BD%D0%B3%D0%B0-must-have-%D0%B2-2017-18%D0%B3%D0%B3-4a4064ffb66/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/us-vs-ca-6133e9dea998",
+    "to": "https://medium.com/maddevs-io/us-vs-ca-6133e9dea998/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/connection-pooling-for-rds-postgresql-with-terraform-cc530cf51af0",
+    "to": "https://medium.com/maddevs-io/connection-pooling-for-rds-postgresql-with-terraform-cc530cf51af0/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/juniour-communication-6fa9f22d88fa",
+    "to": "https://medium.com/maddevs-io/juniour-communication-6fa9f22d88fa/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BD%D0%B5-%D0%BF%D0%B8%D1%88%D0%B8-%D0%BA%D0%BE%D0%B4-67830e4db38c",
+    "to": "https://medium.com/maddevs-io/%D0%BD%D0%B5-%D0%BF%D0%B8%D1%88%D0%B8-%D0%BA%D0%BE%D0%B4-67830e4db38c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/we-hire-python-developers-fc6e3312d8b3",
+    "to": "https://medium.com/maddevs-io/we-hire-python-developers-fc6e3312d8b3/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/negative-motivation-for-interns-94871b8823e0",
+    "to": "https://medium.com/maddevs-io/negative-motivation-for-interns-94871b8823e0/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/golang-error-handling-18cf16758f81",
+    "to": "https://medium.com/maddevs-io/golang-error-handling-18cf16758f81/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/vscode-remote-python-interpreter-b05078cfae09",
+    "to": "https://medium.com/maddevs-io/vscode-remote-python-interpreter-b05078cfae09/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BB%D1%83%D1%87%D1%88%D0%B0%D1%8F-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B4%D0%BB%D1%8F-react-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-2f6f1feedc13",
+    "to": "https://medium.com/maddevs-io/%D0%BB%D1%83%D1%87%D1%88%D0%B0%D1%8F-%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%B4%D0%BB%D1%8F-react-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-2f6f1feedc13/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%B8%D1%81%D1%82%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD%D0%B0-%D0%B2-firebase-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%BE%D1%8F%D1%81%D0%BD%D1%8F%D0%B5%D0%BC-%D0%BD%D0%B5%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-9e30efa03f8a",
+    "to": "https://medium.com/maddevs-io/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%B8%D1%81%D1%82%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD%D0%B0-%D0%B2-firebase-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%BE%D1%8F%D1%81%D0%BD%D1%8F%D0%B5%D0%BC-%D0%BD%D0%B5%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-9e30efa03f8a/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/vscode-django-pylint-17a4c0ae12c1",
+    "to": "https://medium.com/maddevs-io/vscode-django-pylint-17a4c0ae12c1/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/ru-reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer-b81f1026e06c",
+    "to": "https://medium.com/maddevs-io/ru-reduce-gps-data-error-on-android-with-kalman-filter-and-accelerometer-b81f1026e06c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/gophercon-russia-%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D1%82%D0%B5%D0%BF%D0%BB%D0%B0-%D0%B2-18-9ab050d5cdee",
+    "to": "https://medium.com/maddevs-io/gophercon-russia-%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE-%D1%82%D0%B5%D0%BF%D0%BB%D0%B0-%D0%B2-18-9ab050d5cdee/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D1%83-%D0%B1%D1%8B%D1%81%D1%82%D1%80%D0%B5%D0%B5-efddc74643ce",
+    "to": "https://medium.com/maddevs-io/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82%D1%83-%D0%B1%D1%8B%D1%81%D1%82%D1%80%D0%B5%D0%B5-efddc74643ce/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/native-apps-vs-pwa-2da08fb923cb",
+    "to": "https://medium.com/maddevs-io/native-apps-vs-pwa-2da08fb923cb/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/namba-food-bot-bf7a15a871be",
+    "to": "https://medium.com/maddevs-io/namba-food-bot-bf7a15a871be/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/devops-%D1%8B-%D0%B2-mad-devs-b88e7495e40c",
+    "to": "https://medium.com/maddevs-io/devops-%D1%8B-%D0%B2-mad-devs-b88e7495e40c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/design-for-elcard-mobile-9c83e17727a3",
+    "to": "https://medium.com/maddevs-io/design-for-elcard-mobile-9c83e17727a3/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/mad-talks-ip-from-aza-4da85618211e",
+    "to": "https://medium.com/maddevs-io/mad-talks-ip-from-aza-4da85618211e/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/comedian-624add6ae0e6",
+    "to": "https://medium.com/maddevs-io/comedian-624add6ae0e6/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/oshibki-pma-db8ee5ec362",
+    "to": "https://medium.com/maddevs-io/oshibki-pma-db8ee5ec362/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/k6-4e8768723c41",
+    "to": "https://medium.com/maddevs-io/k6-4e8768723c41/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/django-postgresql-search-68274ef48801",
+    "to": "https://medium.com/maddevs-io/django-postgresql-search-68274ef48801/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/pm-concentration-f472a2c280a5",
+    "to": "https://medium.com/maddevs-io/pm-concentration-f472a2c280a5/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/passing-aws-csa-exam-49561d816f9a",
+    "to": "https://medium.com/maddevs-io/passing-aws-csa-exam-49561d816f9a/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/customer-onboarding-67fe7999ce31",
+    "to": "https://medium.com/maddevs-io/customer-onboarding-67fe7999ce31/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/mad-devs-icpc-northern-eurasia-the-2018-kyrgyzstan-subregional-contest-89523d73b4ab",
+    "to": "https://medium.com/maddevs-io/mad-devs-icpc-northern-eurasia-the-2018-kyrgyzstan-subregional-contest-89523d73b4ab/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/mad-devs-google-developers-group-gdg-devfest-bishkek-2018-2006acbe94a4",
+    "to": "https://medium.com/maddevs-io/mad-devs-google-developers-group-gdg-devfest-bishkek-2018-2006acbe94a4/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/go-rest-%D0%B8%D0%BB%D0%B8-grpc-f5d52d7ffff6",
+    "to": "https://medium.com/maddevs-io/go-rest-%D0%B8%D0%BB%D0%B8-grpc-f5d52d7ffff6/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D0%B4%D0%BB%D1%8F-graphql-%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-2a31a6ac667c",
+    "to": "https://medium.com/maddevs-io/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F-%D0%B4%D0%BB%D1%8F-graphql-%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-2a31a6ac667c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/math-big-problems-in-go-28aa9f10958b",
+    "to": "https://medium.com/maddevs-io/math-big-problems-in-go-28aa9f10958b/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/investment-plan-for-developers-20bc784b3b72",
+    "to": "https://medium.com/maddevs-io/investment-plan-for-developers-20bc784b3b72/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/secrets-513d41eaaf43",
+    "to": "https://medium.com/maddevs-io/secrets-513d41eaaf43/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/golang-after-ruby-b515a43912ad",
+    "to": "https://medium.com/maddevs-io/golang-after-ruby-b515a43912ad/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/terrafom-hetzner-a2f22534514b",
+    "to": "https://medium.com/maddevs-io/terrafom-hetzner-a2f22534514b/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D1%81%D0%BA%D0%B0%D0%B6%D0%B8-%D0%BD%D0%B5%D1%82-%D1%86%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B5-this-parent-parent-parent-%D0%B2-vue-js-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B0%D1%85-96f230cb5758",
+    "to": "https://medium.com/maddevs-io/%D1%81%D0%BA%D0%B0%D0%B6%D0%B8-%D0%BD%D0%B5%D1%82-%D1%86%D0%B5%D0%BF%D0%BE%D1%87%D0%BA%D0%B5-this-parent-parent-parent-%D0%B2-vue-js-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B0%D1%85-96f230cb5758/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/crm-like-a-god-aab144aada34",
+    "to": "https://medium.com/maddevs-io/crm-like-a-god-aab144aada34/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/why-most-beginners-projects-are-shit-f47d381649c2",
+    "to": "https://medium.com/maddevs-io/why-most-beginners-projects-are-shit-f47d381649c2/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/devops-as-a-sevice-b41e53ffe8e1",
+    "to": "https://medium.com/maddevs-io/devops-as-a-sevice-b41e53ffe8e1/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/go-ruby-js-vs-i-8b1346615a43",
+    "to": "https://medium.com/maddevs-io/go-ruby-js-vs-i-8b1346615a43/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/being-professional-at-work-455e21d6bf66",
+    "to": "https://medium.com/maddevs-io/being-professional-at-work-455e21d6bf66/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4-%D0%BD%D0%B0-slackclient-2-0-%D0%B8-%D1%84%D0%B5%D0%B9%D0%BA-%D1%81%D0%BB%D0%B0%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B1%D0%BE%D1%82%D0%B0-bd04861d6e33",
+    "to": "https://medium.com/maddevs-io/%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4-%D0%BD%D0%B0-slackclient-2-0-%D0%B8-%D1%84%D0%B5%D0%B9%D0%BA-%D1%81%D0%BB%D0%B0%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%BB%D0%BE%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85-%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2-%D0%B1%D0%BE%D1%82%D0%B0-bd04861d6e33/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/professional-way-6bb28956f564",
+    "to": "https://medium.com/maddevs-io/professional-way-6bb28956f564/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/devs-and-business-5573ee07e756",
+    "to": "https://medium.com/maddevs-io/devs-and-business-5573ee07e756/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/vscode-remote-containers-a6c5672eb5e9",
+    "to": "https://medium.com/maddevs-io/vscode-remote-containers-a6c5672eb5e9/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/project-manager-wanted-b5741ebcdb69",
+    "to": "https://medium.com/maddevs-io/project-manager-wanted-b5741ebcdb69/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/mad-fake-slack-alpha-9ea22989958c",
+    "to": "https://medium.com/maddevs-io/mad-fake-slack-alpha-9ea22989958c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/yandex-partnership-3e6857a332dd",
+    "to": "https://medium.com/maddevs-io/yandex-partnership-3e6857a332dd/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/top-3-ci-for-js-19bc55b2c5af",
+    "to": "https://medium.com/maddevs-io/top-3-ci-for-js-19bc55b2c5af/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/internship-program-automation-53cbd8b0e0f8",
+    "to": "https://medium.com/maddevs-io/internship-program-automation-53cbd8b0e0f8/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%BC-%D0%BD%D0%B0-go-ecf4b82c7625",
+    "to": "https://medium.com/maddevs-io/%D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%BC-%D0%BD%D0%B0-go-ecf4b82c7625/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/vscode-remote-containers-codeclimate-72526938352f",
+    "to": "https://medium.com/maddevs-io/vscode-remote-containers-codeclimate-72526938352f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/software-development-hack-4e76e6634d29",
+    "to": "https://medium.com/maddevs-io/software-development-hack-4e76e6634d29/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/how-to-make-github-badges-c2fecf753613",
+    "to": "https://medium.com/maddevs-io/how-to-make-github-badges-c2fecf753613/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/ruby-rails-developer-df6450a48904",
+    "to": "https://medium.com/maddevs-io/ruby-rails-developer-df6450a48904/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/micronavigator-based-on-stm32f100-8eec4ba6049d",
+    "to": "https://medium.com/maddevs-io/micronavigator-based-on-stm32f100-8eec4ba6049d/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/standup-bots-for-slack-d514ca0296b2",
+    "to": "https://medium.com/maddevs-io/standup-bots-for-slack-d514ca0296b2/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/programmers-oath-646e6d3f2136",
+    "to": "https://medium.com/maddevs-io/programmers-oath-646e6d3f2136/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/cucumber-js-puppeteer-testing-in-pair-31d559b7b8bf-31d559b7b8bf",
+    "to": "https://medium.com/maddevs-io/cucumber-js-puppeteer-testing-in-pair-31d559b7b8bf-31d559b7b8bf/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/acceptance-testing-on-cucumber-js-and-puppeteer-b3660401fdf0",
+    "to": "https://medium.com/maddevs-io/acceptance-testing-on-cucumber-js-and-puppeteer-b3660401fdf0/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/senior-full-stack-js-developer-65eb42d065b1",
+    "to": "https://medium.com/maddevs-io/senior-full-stack-js-developer-65eb42d065b1/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/introduction-to-glitch-7e286f1df1c6",
+    "to": "https://medium.com/maddevs-io/introduction-to-glitch-7e286f1df1c6/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/node-js-apps-deploy-to-glitch-fa00598c219",
+    "to": "https://medium.com/maddevs-io/node-js-apps-deploy-to-glitch-fa00598c219/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/how-to-connect-remote-offices-e80d1b5e2cd9",
+    "to": "https://medium.com/maddevs-io/how-to-connect-remote-offices-e80d1b5e2cd9/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/event-delegation-with-react-44a2029f23e2",
+    "to": "https://medium.com/maddevs-io/event-delegation-with-react-44a2029f23e2/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0-%D0%B8-%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B2-golangconf-team-lead-meetup-south-devfest-4d93865a9440",
+    "to": "https://medium.com/maddevs-io/%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0-%D0%B8-%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B2-golangconf-team-lead-meetup-south-devfest-4d93865a9440/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/qt-development-for-raspberry-pi-715cc76b6753",
+    "to": "https://medium.com/maddevs-io/qt-development-for-raspberry-pi-715cc76b6753/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/building-new-public-transport-habits-in-vietnam-5f670ca81046",
+    "to": "https://medium.com/maddevs-io/building-new-public-transport-habits-in-vietnam-5f670ca81046/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/event-delegation-in-javascript-616289317850",
+    "to": "https://medium.com/maddevs-io/event-delegation-in-javascript-616289317850/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B2-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0%D1%85-junior-devops-specialist-e60b5806bb7",
+    "to": "https://medium.com/maddevs-io/%D0%B2-%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0%D1%85-junior-devops-specialist-e60b5806bb7/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/golang-logging-7fdd3da5152f",
+    "to": "https://medium.com/maddevs-io/golang-logging-7fdd3da5152f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/grpc-streaming-delivery-2f5c86160705",
+    "to": "https://medium.com/maddevs-io/grpc-streaming-delivery-2f5c86160705/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/svg-css-variables-5cc7b53d0ebf",
+    "to": "https://medium.com/maddevs-io/svg-css-variables-5cc7b53d0ebf/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci-d06f6c2f96dc",
+    "to": "https://medium.com/maddevs-io/automatic-delivery-of-ios-applications-with-fastlane-and-gitlabci-d06f6c2f96dc/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81-easyeda-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-e569350588ef",
+    "to": "https://medium.com/maddevs-io/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81-easyeda-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-e569350588ef/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81-easyeda-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%8F-%D1%81%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0-8fa3f8ac3c5",
+    "to": "https://medium.com/maddevs-io/%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81-easyeda-%D1%87%D0%B0%D1%81%D1%82%D1%8C-2-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%B0%D1%8F-%D1%81%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0-8fa3f8ac3c5/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/%D0%BA%D0%B0%D0%BA-%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%B8%D1%82%D1%8C-%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA-pull-request-e95ae0177212",
+    "to": "https://medium.com/maddevs-io/%D0%BA%D0%B0%D0%BA-%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%B8%D1%82%D1%8C-%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA-pull-request-e95ae0177212/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/ru-how-to-memorize-information-better-when-you-study-2b80ee219056",
+    "to": "https://medium.com/maddevs-io/ru-how-to-memorize-information-better-when-you-study-2b80ee219056/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/kak-sohranit-zdorove-vashih-glaz-a829d4cb082a",
+    "to": "https://medium.com/maddevs-io/kak-sohranit-zdorove-vashih-glaz-a829d4cb082a/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/testirovanie-proshivok-mikrokontrollerov-avr-f079045419c",
+    "to": "https://medium.com/maddevs-io/testirovanie-proshivok-mikrokontrollerov-avr-f079045419c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/opyt-vnedreniya-stripe-connect-v-e-commerce-proekty-b6c7a6458418",
+    "to": "https://medium.com/maddevs-io/opyt-vnedreniya-stripe-connect-v-e-commerce-proekty-b6c7a6458418/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/progressive-web-apps-prakticheskoe-rukovodstvo-cc2cd02bc6fe",
+    "to": "https://medium.com/maddevs-io/progressive-web-apps-prakticheskoe-rukovodstvo-cc2cd02bc6fe/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/kak-sdelat-tri-platnyh-servisa-eta-odnim-besplatnym-d09d7a9bcd1c",
+    "to": "https://medium.com/maddevs-io/kak-sdelat-tri-platnyh-servisa-eta-odnim-besplatnym-d09d7a9bcd1c/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/vizualizaciya-kak-metod-zavlecheniya-chitatelya-85760d89965d",
+    "to": "https://medium.com/maddevs-io/vizualizaciya-kak-metod-zavlecheniya-chitatelya-85760d89965d/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/cena-oshibki-v-hardware-proekte-1ed85127d247",
+    "to": "https://medium.com/maddevs-io/cena-oshibki-v-hardware-proekte-1ed85127d247/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/effektivnaya-peredelka-interfejsa-bazy-dannyh-9cabed7560f5",
+    "to": "https://medium.com/maddevs-io/effektivnaya-peredelka-interfejsa-bazy-dannyh-9cabed7560f5/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/kak-isportit-otnosheniya-s-klientom-f995b316108e",
+    "to": "https://medium.com/maddevs-io/kak-isportit-otnosheniya-s-klientom-f995b316108e/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/kak-avtomatizirovat-process-ocenki-zadach-v-jira-b476b7aee30f",
+    "to": "https://medium.com/maddevs-io/kak-avtomatizirovat-process-ocenki-zadach-v-jira-b476b7aee30f/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/chto-nuzhno-znat-chtoby-verstat-horosho-dc4626d3b5da",
+    "to": "https://medium.com/maddevs-io/chto-nuzhno-znat-chtoby-verstat-horosho-dc4626d3b5da/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/programmirovanie-s-nulya-7-urokov-kotorym-ya-nauchilas-za-god-v-it-f93785e0ed20",
+    "to": "https://medium.com/maddevs-io/programmirovanie-s-nulya-7-urokov-kotorym-ya-nauchilas-za-god-v-it-f93785e0ed20/"
+  },
+  {
+    "pageType": "Posts на русском",
+    "from": "/delaem-kartu-v-proekcii-merkatora-dlya-android-9f61408b899c",
+    "to": "https://medium.com/maddevs-io/delaem-kartu-v-proekcii-merkatora-dlya-android-9f61408b899c/"
+  }
+]

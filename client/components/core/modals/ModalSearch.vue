@@ -57,7 +57,7 @@
               {{ formattedDate(post) }}
             </div>
             <NuxtLink
-              :to="`/insights/blog/author/${getAuthor(post, 'uid')}/`"
+              :to="`/blog/author/${getAuthor(post, 'uid')}/`"
               class="modal-search_result-item_content-author"
             >
               <img
@@ -212,9 +212,9 @@ export default {
 
     updateUrl() {
       if (this.value && this.value.length) {
-        this.$router.push({ path: '/insights/blog/search-result/', query: { searchBy: this.value } })
+        this.$router.push({ path: '/blog/search-result/', query: { searchBy: this.value } })
       } else {
-        this.$router.push('/insights/blog/')
+        this.$router.push('/blog/')
       }
     },
 

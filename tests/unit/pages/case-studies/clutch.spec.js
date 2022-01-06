@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Clutch from '@/pages/clients/case-studies/clutch'
+import Clutch from '@/pages/case-studies/clutch'
 import formBaseProps from '../../__mocks__/formBaseProps'
 
 const localVue = createLocalVue()
@@ -12,7 +12,7 @@ const DESCRIPTION = 'B2B Service Review Platform Case Study: How to adapt the B2
 const META_DATA = {
   description: DESCRIPTION,
   title: 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
-  'og:url': 'https://maddevs.io/clients/case-studies/clutch/',
+  'og:url': 'https://maddevs.io/case-studies/clutch/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
@@ -24,7 +24,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/clutch.png',
-  'twitter:url': 'https://maddevs.io/clients/case-studies/clutch/',
+  'twitter:url': 'https://maddevs.io/case-studies/clutch/',
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform", "description": "B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',

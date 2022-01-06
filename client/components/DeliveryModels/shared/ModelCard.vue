@@ -6,7 +6,7 @@
     :class="[`model-card--${className}`, full ? 'model-card--full' : '']"
   >
     <NuxtLink
-      :to="`/approach/delivery-models/${uid}/`"
+      :to="`/delivery-models/${uid}/`"
       class="model-card__link"
     >
       <div class="model-card__animation">

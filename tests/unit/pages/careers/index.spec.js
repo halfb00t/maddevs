@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Index from '@/pages/about/careers/index'
+import Index from '@/pages/careers/index'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

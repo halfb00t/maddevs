@@ -51,6 +51,8 @@ module.exports = {
   generate: {
     routes: getRoutes,
     fallback: '404.html',
+    // TODO enable crawler after removing old levels for urls
+    crawler: false,
   },
   css: [
     {

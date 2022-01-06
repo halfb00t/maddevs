@@ -51,10 +51,10 @@ const schema = JSON.stringify({
       url: 'https://maddevs.io/Open-Graph.png',
     },
   },
-  url: 'https://maddevs.io/insights/blog/',
+  url: 'https://maddevs.io/blog/',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://maddevs.io/insights/blog/',
+    '@id': 'https://maddevs.io/blog/',
   },
   datePublished: fallback?.data?.date,
   dateCreated: fallback?.data?.date,

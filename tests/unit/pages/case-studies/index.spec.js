@@ -1,10 +1,10 @@
 import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
-import Index from '@/pages/clients/case-studies/index'
+import Index from '@/pages/case-studies/index'
 
 const META_DATA = {
   description: 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
-  'og:url': 'https://maddevs.io/clients/case-studies/',
+  'og:url': 'https://maddevs.io/case-studies/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Custom Software Development Company',
@@ -16,7 +16,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs Custom Software Development Company',
   'twitter:description': 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
   'twitter:image:src': 'https://maddevs.io/Open-Graph.png',
-  'twitter:url': 'https://maddevs.io/clients/case-studies/',
+  'twitter:url': 'https://maddevs.io/case-studies/',
 }
 
 const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam']

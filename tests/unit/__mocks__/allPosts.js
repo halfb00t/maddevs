@@ -615,8 +615,8 @@ export default [
           items: [
             {
               embed: {
-                url: 'https://maddevs.io/clients/case-studies/godee/',
-                embed_url: 'https://maddevs.io/clients/case-studies/godee/',
+                url: 'https://maddevs.io/case-studies/godee/',
+                embed_url: 'https://maddevs.io/case-studies/godee/',
                 type: 'link',
                 version: '1.0',
                 title: 'Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service',
@@ -628,7 +628,7 @@ export default [
                 thumbnail_url: 'https://maddevs.io/godee.png',
                 thumbnail_width: null,
                 thumbnail_height: null,
-                html: '<div data-type="website"><a href="https://maddevs.io/clients/case-studies/godee/"><h1>Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service</h1><img src="https://maddevs.io/godee.png"><p>GoDee is a transportation app and management panel to commute in Ho Chi Minh City, Vietnam. Users can find routes, select the time, book seats and pay for the ride online.</p></a></div>',
+                html: '<div data-type="website"><a href="https://maddevs.io/case-studies/godee/"><h1>Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service</h1><img src="https://maddevs.io/godee.png"><p>GoDee is a transportation app and management panel to commute in Ho Chi Minh City, Vietnam. Users can find routes, select the time, book seats and pay for the ride online.</p></a></div>',
               },
               embed_title: null,
               embed_description: null,
@@ -959,7 +959,7 @@ export default [
                     type: 'hyperlink',
                     data: {
                       link_type: 'Web',
-                      url: 'https://maddevs.io/clients/case-studies/godee/',
+                      url: 'https://maddevs.io/case-studies/godee/',
                     },
                   },
                 ],

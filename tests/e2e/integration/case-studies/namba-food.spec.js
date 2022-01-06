@@ -2,7 +2,7 @@ describe('NambaFood case page', () => {
   const img = 'namba-food.png'
 
   it('Meta tags has a correct image URL', () => {
-    cy.visit('/clients/case-studies/namba-food/')
+    cy.visit('/case-studies/namba-food/')
 
     cy.get('head meta[property="og:image"]').should('have.attr', 'content', `https://maddevs.io/${img}`)
     cy.get('head meta[property="twitter:image:src"]').should('have.attr', 'content', `https://maddevs.io/${img}`)

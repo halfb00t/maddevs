@@ -63,7 +63,7 @@ exports[`Veeqo root component should render correctly 1`] = `
        
       <nuxtlink-stub
         class="case_next-project-button"
-        to="/clients/case-studies/yourcast/"
+        to="/case-studies/yourcast/"
       >
         
     Read next project

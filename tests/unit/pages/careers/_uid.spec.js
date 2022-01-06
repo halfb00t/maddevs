@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuelidate from 'vuelidate'
-import Vacancy from '@/pages/about/careers/_uid.vue'
+import Vacancy from '@/pages/careers/_uid.vue'
 
 const store = {
   getters: {

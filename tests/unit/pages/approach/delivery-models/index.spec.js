@@ -1,6 +1,6 @@
 import 'regenerator-runtime'
 import { shallowMount } from '@vue/test-utils'
-import DeliveryModels from '@/pages/approach/delivery-models'
+import DeliveryModels from '@/pages/delivery-models'
 
 jest.mock('@/mixins/headerMixin', () => () => ({}))
 

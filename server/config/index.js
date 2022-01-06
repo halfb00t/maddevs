@@ -1,11 +1,7 @@
 const envs = require('./env')
 
 // json
-const customerUniversityRedirects = require('./json/customer-university-redirects')
-const blogRedirects = require('./json/blog-redirects')
-const hrTagsRedirects = require('./json/hr-tags-redirects')
-const invalidLinksRedirects = require('./json/invalid-links-redirects')
-const careersRedirects = require('./json/careers-redirect')
+const mainRedirects = require('./json/mainRedirects.json')
 
 const bodyParserJSONConfig = { limit: '5mb' }
 const bodyParserURLEncodedConfig = { limit: '5mb', extended: true }
@@ -26,10 +22,6 @@ module.exports = {
   bodyParserJSONConfig,
   bodyParserURLEncodedConfig,
   mongoConfig,
-  customerUniversityRedirects,
-  blogRedirects,
-  hrTagsRedirects,
-  invalidLinksRedirects,
+  mainRedirects,
   sentryConfig,
-  careersRedirects,
 }
