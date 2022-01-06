@@ -14,6 +14,7 @@ const redirectToValidLink = require('./middlewares/redirectToValidLink')
 const redirectToRuCareerPostUrl = require('./middlewares/redirectToRuCareerPostUrl')
 const redirectToPrismicUrl = require('./middlewares/redirectToPrismicUrl')
 const redirectToCorrectUrl = require('./middlewares/redirectToCorrectUrl')
+const redirectToCorrectBlogUrl = require('./middlewares/redirectToCorrectBlogUrl')
 
 // config
 const config = require('./config')
@@ -44,6 +45,7 @@ function bootstrap() {
   app.use(redirectToCorrectUrl)
   app.use(redirectToRuCareerPostUrl)
   app.use(redirectToPrismicUrl)
+  app.use(redirectToCorrectBlogUrl)
 
   // Routers
   app.use(webRouter)
