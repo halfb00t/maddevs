@@ -37,7 +37,7 @@ exports[`FooterNavbar component should render correctly 1`] = `
       <nuxtlink-stub
         class="footer-navbar__nav-item"
         target="_blank"
-        to="/approach/privacy/"
+        to="/privacy/"
       >
         
       Privacy Policy

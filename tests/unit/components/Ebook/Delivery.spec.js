@@ -27,6 +27,6 @@ describe('Delivery component', () => {
 
   it('if call goToDeliveryPage func then redirect to the delivery page', () => {
     wrapper.vm.goToDeliveryPage()
-    expect(wrapper.vm.$router.push).toHaveBeenCalledWith('/approach/delivery-models/')
+    expect(wrapper.vm.$router.push).toHaveBeenCalledWith('/delivery-models/')
   })
 })

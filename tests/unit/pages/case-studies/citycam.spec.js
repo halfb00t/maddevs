@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import CityCam from '@/pages/clients/case-studies/citycam'
+import CityCam from '@/pages/case-studies/citycam'
 import formBaseProps from '../../__mocks__/formBaseProps'
 
 const localVue = createLocalVue()
@@ -12,7 +12,7 @@ const DESCRIPTION = 'IoT Case Study: How to monitor traffic in real-time? Read C
 const META_DATA = {
   description: DESCRIPTION,
   title: 'Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities',
-  'og:url': 'https://maddevs.io/clients/case-studies/citycam/',
+  'og:url': 'https://maddevs.io/case-studies/citycam/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities',
@@ -24,7 +24,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities',
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/citycam.png',
-  'twitter:url': 'https://maddevs.io/clients/case-studies/citycam/',
+  'twitter:url': 'https://maddevs.io/case-studies/citycam/',
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',

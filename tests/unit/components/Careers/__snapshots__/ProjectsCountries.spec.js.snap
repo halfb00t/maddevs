@@ -43,7 +43,7 @@ exports[`ProjectsCountries component should render correctly 1`] = `
       class="projects-countries_link-btn"
     >
       <nuxtlink-stub
-        to="/clients/case-studies/"
+        to="/case-studies/"
       >
         <uibutton-stub
           to="/"

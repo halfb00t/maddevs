@@ -1,5 +1,5 @@
 import { render } from '@testing-library/vue'
-import UID from '@/pages/approach/delivery-models/_uid'
+import UID from '@/pages/delivery-models/_uid'
 
 const stubs = ['Model']
 

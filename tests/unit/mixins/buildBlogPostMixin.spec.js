@@ -1,7 +1,7 @@
 import 'regenerator-runtime'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Post from '@/pages/insights/blog/_uid'
+import Post from '@/pages/blog/_uid'
 import buildBlogPostMixin from '@/mixins/buildBlogPostMixin'
 
 const localVue = createLocalVue()
@@ -195,7 +195,7 @@ describe('Build blog post mixin', () => {
     const result = await wrapper.vm.$options.asyncData.call(store, callObject)
     expect(result.post.date).toBe('Aug 25, 2020')
     expect(result.post.recommendedPosts).toHaveLength(3)
-    expect(result.openGraphUrl).toContain(`/insights/blog/${callObject.params.uid}/`)
+    expect(result.openGraphUrl).toContain(`/blog/${callObject.params.uid}/`)
   })
 
   it('asyncData method should get 404 error', async () => {

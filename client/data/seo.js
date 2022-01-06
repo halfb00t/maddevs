@@ -43,46 +43,46 @@ export const meta = {
   caseStudies: {
     title: 'Mad Devs Custom Software Development Company',
     description: 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
-    url: 'https://maddevs.io/clients/case-studies/',
+    url: 'https://maddevs.io/case-studies/',
     jsonLd: '{"@context": "http://www.schema.org", "@type": "WebPage", "name": "Mad Devs Custom Software Development Company", "url": "https://maddevs.io", "logo": "https://maddevs.io/Open-Graph.png", "foundingDate": "2016", "email": "team@maddevs.io", "description": "Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.", "address": {"@type": "PostalAddress", "streetAddress": "27 Old Gloucester Street", "addressLocality": "London", "addressRegion": "UK", "postalCode": "WC1N3AX"}, "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+442039848555"}, "sameAs": ["https://www.facebook.com/maddevsllc", "http://www.linkedin.com/company/mad-devs", "https://blog.maddevs.io", "https://clutch.co/profile/mad-devs", "https://www.glassdoor.com/Overview/Working-at-Mad-Devs-EI_IE2507466.11,19.htm", "https://twitter.com/MadDevsIO", "https://www.instagram.com/maddevsio", "https://www.crunchbase.com/organization/mad-devs", "https://github.com/maddevsio", "https://www.behance.net/maddevs"]}',
   },
   godee: {
     title: 'Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service',
     description:
       'Case Study Shuttle Bus Service. Read GoDee’s story on building a public transportation app for passengers and drivers and a monitoring system for admins in Vietnam.',
-    url: 'https://maddevs.io/clients/case-studies/godee/',
+    url: 'https://maddevs.io/case-studies/godee/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > Transportation Solutions", "name": "Mad Devs Case Study: GoDee - Convenient Shuttle Bus Service", "description": "Case Study Shuttle Bus Service. Read GoDee’s story on building a public transportation app for passengers and drivers and a monitoring system for admins in Vietnam.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   nambafood: {
     title: 'Mad Devs Case Study: Namba Food Top Delivery Service',
     description:
       'FoodTech Case Study. How to make a delivery app from scratch? Read Namba Food’s story of developing a custom software top delivery service in Central Asia.',
-    url: 'https://maddevs.io/clients/case-studies/namba-food/',
+    url: 'https://maddevs.io/case-studies/namba-food/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > FoodTech Solutions", "name": "Mad Devs Case Study: Namba Food Top Delivery Service", "description": "FoodTech Case Study. How to make a delivery app from scratch? Read Namba Food’s story of developing a custom software top delivery service in Central Asia.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   sjmc: {
     title: 'Mad Devs Case Study: Sir John Monash Centre',
     description:
       'BYOD Case Study. Read how Mad Devs enhanced and developed new features for the Sir John Monash Centre’s software, mobile applications, and technological debt.',
-    url: 'https://maddevs.io/clients/case-studies/sir-john-monash-centre/',
+    url: 'https://maddevs.io/case-studies/sir-john-monash-centre/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > BYOD Solutions", "name": "Mad Devs Case Study: Sir John Monash Centre", "description": "BYOD Case Study. Read how Mad Devs enhanced and developed new features for the Sir John Monash Centre’s software, mobile applications, and technological debt.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   yourcast: {
     title: 'Mad Devs Case Study: YourcastTV - online video streaming platform',
     description: 'OTT-like streaming platform case study. Read how Mad Devs developed an online video streaming service for isolated groups of people feeling homesick.',
-    url: 'https://maddevs.io/clients/case-studies/yourcast/',
+    url: 'https://maddevs.io/case-studies/yourcast/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: YourcastTV - online video streaming platform", "description": "OTT-like streaming platform case study. Read how Mad Devs developed an online video streaming service for isolated groups of people feeling homesick.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   veeqo: {
     title: 'Mad Devs Case Study: Veeqo an inventory management platform for e-commerce',
     description: 'Infrastructure Case Study: How to optimize and reduce infrastructure costs? Read Veeqo’s story of optimizing the costs along with improving the system’s performance.',
-    url: 'https://maddevs.io/clients/case-studies/veeqo/',
+    url: 'https://maddevs.io/case-studies/veeqo/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Veeqo an Inventory Management Platform for E-commerce", "description": "Infrastructure Case Study: How to optimize and reduce infrastructure costs? Read Veeqo’s story of optimizing the costs along with improving the system’s performance.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   itc: {
     title: 'Mad Devs Case Study: the International Trade Centre (ITC)',
     description: 'Digital Transformation Case Study: How to implement digital transformation? Read an ITC\'s story of improving the reports and the coaches\' coordination with a convenient web app.',
-    url: 'https://maddevs.io/clients/case-studies/R4TCA-web-application/',
+    url: 'https://maddevs.io/case-studies/R4TCA-web-application/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: the International Trade Centre (ITC)", "description": "Digital Transformation Case Study: How to implement digital transformation? Read an ITC\'s story of improving the reports and the coaches\' coordination with a convenient web app.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   openSource: {
@@ -98,31 +98,31 @@ export const meta = {
   peklo: {
     title: 'Mad Devs Case Study: Peklo Tool Keyword Grouping Software',
     description: 'AdTech Case Study: How to build a keyword grouping tool? Read Peklo Tool\'s story of preparing keywords groups to launch effective ads in Google and Yandex.',
-    url: 'https://maddevs.io/clients/case-studies/peklo/',
+    url: 'https://maddevs.io/case-studies/peklo/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Peklo Tool Keyword Grouping Software", "description": "AdTech Case Study: How to build a keyword grouping tool? Read Peklo Tool\'s story of preparing keywords groups to launch effective ads in Google and Yandex.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   citycam: {
     title: 'Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities',
     description: 'IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.',
-    url: 'https://maddevs.io/clients/case-studies/citycam/',
+    url: 'https://maddevs.io/case-studies/citycam/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   clutch: {
     title: 'Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform',
     description: 'B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.',
-    url: 'https://maddevs.io/clients/case-studies/clutch/',
+    url: 'https://maddevs.io/case-studies/clutch/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform", "description": "B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
   nambataxi: {
     title: 'Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek',
     description:
       'Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.',
-    url: 'https://maddevs.io/clients/case-studies/namba-taxi/',
+    url: 'https://maddevs.io/case-studies/namba-taxi/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > Transportation Solutions", "name": "Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek", "description": "Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
-    url: 'https://maddevs.io/insights/blog/',
+    url: 'https://maddevs.io/blog/',
   },
   ...deliveryModelsSeo,
   ...tagPagesSeo,

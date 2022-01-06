@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import InternationalTradeCenter from '@/pages/clients/case-studies/R4TCA-web-application'
+import InternationalTradeCenter from '@/pages/case-studies/R4TCA-web-application'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -19,7 +19,7 @@ const stubs = ['NuxtLink', 'Main', 'CaseHeader', 'CaseITC']
 
 const META_DATA = {
   description: DESCRIPTION,
-  'og:url': 'https://maddevs.io/clients/case-studies/R4TCA-web-application/',
+  'og:url': 'https://maddevs.io/case-studies/R4TCA-web-application/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Case Study: the International Trade Centre (ITC)',
@@ -31,7 +31,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs Case Study: the International Trade Centre (ITC)',
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/itc-case.jpg',
-  'twitter:url': 'https://maddevs.io/clients/case-studies/R4TCA-web-application/',
+  'twitter:url': 'https://maddevs.io/case-studies/R4TCA-web-application/',
 }
 
 const directives = {

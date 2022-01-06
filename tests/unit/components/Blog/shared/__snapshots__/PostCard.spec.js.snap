@@ -8,7 +8,7 @@ exports[`post card component render with very long title 1`] = `
   >
     <nuxtlink-stub
       class="post-card__image"
-      to="/insights/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
+      to="/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
     >
       <img
         alt="Feature image"
@@ -22,7 +22,7 @@ exports[`post card component render with very long title 1`] = `
       class="post-card__info"
     >
       <nuxtlink-stub
-        to="/insights/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
+        to="/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
       >
         <h2
           class="post-card__title post-card__title--short"
@@ -66,7 +66,7 @@ exports[`post card component render with very long title 1`] = `
           class="post-tag post-tag--light-theme"
           data-testid="test-tag"
           event="click"
-          to="/insights/blog/tag/markup/"
+          to="/blog/tag/markup/"
         >
           
   markup
@@ -88,7 +88,7 @@ exports[`post card component should render correctly with slot 1`] = `
   >
     <nuxtlink-stub
       class="post-card__image"
-      to="/insights/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
+      to="/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
     >
       <img
         alt="Feature image"
@@ -102,7 +102,7 @@ exports[`post card component should render correctly with slot 1`] = `
       class="post-card__info"
     >
       <nuxtlink-stub
-        to="/insights/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
+        to="/blog/its-not-just-a-layout-what-do-you-need-to-know-to/"
       >
         <h2
           class="post-card__title post-card__title--short"
@@ -146,7 +146,7 @@ exports[`post card component should render correctly with slot 1`] = `
           class="post-tag post-tag--light-theme"
           data-testid="test-tag"
           event="click"
-          to="/insights/blog/tag/markup/"
+          to="/blog/tag/markup/"
         >
           
   markup

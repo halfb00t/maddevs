@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/vue'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Veeqo from '@/pages/clients/case-studies/veeqo'
+import Veeqo from '@/pages/case-studies/veeqo'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -18,7 +18,7 @@ const mocks = {
 const META_DATA = {
   description: DESCRIPTION,
   title: 'Mad Devs: Software & Mobile App Development Company | Blog Author',
-  'og:url': 'https://maddevs.io/clients/case-studies/veeqo/',
+  'og:url': 'https://maddevs.io/case-studies/veeqo/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Case Study: Veeqo an inventory management platform for e-commerce',
@@ -30,7 +30,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs Case Study: Veeqo an inventory management platform for e-commerce',
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/veeqo-case.jpg',
-  'twitter:url': 'https://maddevs.io/clients/case-studies/veeqo/',
+  'twitter:url': 'https://maddevs.io/case-studies/veeqo/',
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Veeqo an Inventory Management Platform for E-commerce", "description": "Infrastructure Case Study: How to optimize and reduce infrastructure costs? Read Veeqo’s story of optimizing the costs along with improving the system’s performance.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/vue'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Nambataxi from '@/pages/clients/case-studies/namba-taxi'
+import Nambataxi from '@/pages/case-studies/namba-taxi'
 import formBaseProps from '../../__mocks__/formBaseProps'
 
 const localVue = createLocalVue()
@@ -12,7 +12,7 @@ const DESCRIPTION = 'Transportation Industry Case Study: How to develop software
 const META_DATA = {
   description: DESCRIPTION,
   title: 'Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek',
-  'og:url': 'https://maddevs.io/clients/case-studies/namba-taxi/',
+  'og:url': 'https://maddevs.io/case-studies/namba-taxi/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek',
@@ -24,7 +24,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek',
   'twitter:description': DESCRIPTION,
   'twitter:image:src': 'https://maddevs.io/namba-taxi.png',
-  'twitter:url': 'https://maddevs.io/clients/case-studies/namba-taxi/',
+  'twitter:url': 'https://maddevs.io/case-studies/namba-taxi/',
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek", "description": "Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',

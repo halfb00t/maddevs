@@ -2,7 +2,7 @@ export const casesList = [
   {
     width: 'full',
     id: 'clutch',
-    link: '/clients/case-studies/clutch/',
+    link: '/case-studies/clutch/',
     video: '/videos/clutch-banner.mp4#t=1',
     subtitle: 'B2B',
     title: 'The growth of Clutch.co',
@@ -19,7 +19,7 @@ export const casesList = [
   {
     width: 'big',
     id: 'sjmc',
-    link: '/clients/case-studies/sir-john-monash-centre/',
+    link: '/case-studies/sir-john-monash-centre/',
     video: '/videos/sjmc/sjmc-main-video.b35a387.mp4#t=2',
     subtitle: 'BYOD',
     title: 'Sir John Monash Centre',
@@ -36,7 +36,7 @@ export const casesList = [
   {
     width: 'small',
     id: 'peklo',
-    link: '/clients/case-studies/peklo/',
+    link: '/case-studies/peklo/',
     video: '/videos/peklo-banner.mp4#t=1',
     subtitle: 'Contextual ad launcher',
     title: 'Peklo Tool for better ad campaigns',
@@ -53,7 +53,7 @@ export const casesList = [
   {
     width: 'full',
     id: 'veeqo',
-    link: '/clients/case-studies/veeqo/',
+    link: '/case-studies/veeqo/',
     video: '/videos/veeqo-banner.mp4#t=1',
     subtitle: 'Logistics',
     title: 'Optimization for Veeqo',
@@ -70,7 +70,7 @@ export const casesList = [
   {
     width: 'big',
     id: 'yourcast',
-    link: '/clients/case-studies/yourcast/',
+    link: '/case-studies/yourcast/',
     video: '/videos/yourcast-banner.mp4#t=1',
     subtitle: 'Content Streaming',
     title: 'The Evolution of Yourcast.TV',
@@ -87,7 +87,7 @@ export const casesList = [
   {
     width: 'small',
     id: 'nambafood',
-    link: '/clients/case-studies/namba-food/',
+    link: '/case-studies/namba-food/',
     video: '/videos/main.ef19480.mp4#t=1',
     subtitle: 'Foodtech',
     title: 'Contactless Delivery Service',
@@ -104,7 +104,7 @@ export const casesList = [
   {
     width: 'full',
     id: 'itc',
-    link: '/clients/case-studies/R4TCA-web-application/',
+    link: '/case-studies/R4TCA-web-application/',
     video: '/videos/itc-banner.mp4#t=1',
     subtitle: 'Digital transformation',
     title: 'Ready4Trade Central Asia',
@@ -121,7 +121,7 @@ export const casesList = [
   {
     width: 'big',
     id: 'godee',
-    link: '/clients/case-studies/godee/',
+    link: '/case-studies/godee/',
     video: '/videos/godee-case-main-video.mp4#t=1',
     subtitle: 'Transportation',
     title: 'Convenient shuttle bus service',
@@ -138,7 +138,7 @@ export const casesList = [
   {
     width: 'small',
     id: 'citycam',
-    link: '/clients/case-studies/citycam/',
+    link: '/case-studies/citycam/',
     video: '/videos/citycam-banner.mp4#t=1',
     subtitle: 'Internet of Things',
     title: 'Better cities with CityCam',
@@ -155,7 +155,7 @@ export const casesList = [
   {
     width: 'full',
     id: 'nambataxi',
-    link: '/clients/case-studies/namba-taxi/',
+    link: '/case-studies/namba-taxi/',
     video: '/videos/namba-taxi-banner.mp4#t=1',
     subtitle: 'Transportation',
     title: 'Namba Taxi: Modernising transport',

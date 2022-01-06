@@ -1,7 +1,7 @@
 import '@testing-library/vue'
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Vuex from 'vuex'
-import Author from '@/pages/insights/blog/author/_uid.vue'
+import Author from '@/pages/blog/author/_uid.vue'
 
 const localVue = createLocalVue()
 
@@ -69,7 +69,7 @@ describe('Author _uid component', () => {
     })
     const result = await wrapper.vm.$options.asyncData.call(store, callObject)
     expect(mocks.$store.dispatch).toHaveBeenCalledWith('getBlogAuthor', callObject.params.uid)
-    expect(result.openGraphUrl).toContain(`/insights/blog/author/${callObject.params.uid}/`)
+    expect(result.openGraphUrl).toContain(`/blog/author/${callObject.params.uid}/`)
   })
 
   it('should async data work with failed promise', async () => {
@@ -160,7 +160,7 @@ describe('Author _uid component', () => {
 
     expect(callObject.next).toHaveBeenCalledTimes(2)
     expect(callObject.next).toHaveBeenLastCalledWith(
-      { path: `/insights/blog/author/${vm.$store.state.blogAuthors.author.uid}/` },
+      { path: `/blog/author/${vm.$store.state.blogAuthors.author.uid}/` },
     )
   })
 

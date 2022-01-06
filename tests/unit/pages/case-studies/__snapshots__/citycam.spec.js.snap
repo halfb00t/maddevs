@@ -89,7 +89,7 @@ exports[`CityCam _uid component should render correctly 1`] = `
        
       <nuxtlink-stub
         class="case_next-project-button"
-        to="/clients/case-studies/peklo/"
+        to="/case-studies/peklo/"
       >
         
     Read next project
