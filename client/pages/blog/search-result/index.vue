@@ -47,7 +47,7 @@ export default {
         if (query && query.length) {
           this.getPosts(query.replace(/\//g, ''))
         } else {
-          this.$router.push('/insights/blog/')
+          this.$router.push('/blog/')
         }
       }
     }

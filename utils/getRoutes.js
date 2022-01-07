@@ -10,20 +10,20 @@ const EXCLUDE_ROUTES = {
 }
 
 const IGNORE_ROUTES = [
-  '/blog/tag/featured-post',
-  '/blog/tag/copywriter',
-  '/blog/tag/marketing',
-  '/blog/tag/it',
-  '/blog/tag/python',
-  '/blog/tag/django',
-  '/blog/tag/go',
-  '/blog/tag/golang',
-  '/blog/tag/ios',
-  '/blog/tag/hr',
-  '/blog/tag/assistant',
-  '/blog/tag/hr-department',
-  '/blog/tag/assistant-delivery-manager',
-  '/blog/tag/software-features',
+  '/tag/featured-post',
+  '/tag/copywriter',
+  '/tag/marketing',
+  '/tag/it',
+  '/tag/python',
+  '/tag/django',
+  '/tag/go',
+  '/tag/golang',
+  '/tag/ios',
+  '/tag/hr',
+  '/tag/assistant',
+  '/tag/hr-department',
+  '/tag/assistant-delivery-manager',
+  '/tag/software-features',
   '/blog/mad-devs-devops',
   '/blog/middle-python-developer',
   '/blog/vue-vuetify-middle-v-saas-proekt',
@@ -116,14 +116,14 @@ const getRoutes = async () => {
 
   const authorPageRoutes = prismicPosts
     .filter(post => post.type === 'author')
-    .map(author => `/blog/author/${author.uid}`)
+    .map(author => `/author/${author.uid}`)
 
   const careerPageRoutes = prismicPosts
     .filter(post => post.type === 'vacancy')
     .map(vacancy => `/ru/careers/${vacancy.uid}`)
 
   const tagPageRoutes = prismicTags
-    .map(tag => `/blog/tag/${convertToSlug(tag)}`)
+    .map(tag => `/tag/${convertToSlug(tag)}`)
 
   /* Custom pages from production */
   const customPageRoutes = prismicPosts
