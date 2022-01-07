@@ -131,7 +131,7 @@ export default {
         {
           ...pricingStrategiesInfo,
           posts: this.filterPosts(pricingStrategies, allPosts),
-          redirectLink: '/insights/ebooks/pricing-strategies/',
+          redirectLink: '/ebooks/pricing-strategies/',
         },
         {
           ...developmentProcessInfo,

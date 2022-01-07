@@ -65,8 +65,8 @@
         <div class="blog-post__comments">
           <Disqus
             shortname="maddevs-io"
-            :url="`https://maddevs.io/insights/blog/${getPostUid}/`"
-            :identifier="`/insights/blog/${getPostUid}`"
+            :url="`https://maddevs.io/blog/${getPostUid}/`"
+            :identifier="`/blog/${getPostUid}`"
             lang="en"
           />
         </div>

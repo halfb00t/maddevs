@@ -7,7 +7,7 @@ const buildBlogPostMixin = (postType = 'post') => ({
     $prismic, store, params, error,
   }) {
     let schemaOrgSnippet = ''
-    const openGraphUrl = `${process.env.domain}/${postType === 'customer_university' ? 'customer-university' : 'insights/blog'}/${params?.uid}/`
+    const openGraphUrl = `${process.env.domain}/${postType === 'customer_university' ? 'customer-university' : 'blog'}/${params?.uid}/`
 
     try {
       const post = await store.dispatch('getBlogPost', { type: postType, uid: params.uid })

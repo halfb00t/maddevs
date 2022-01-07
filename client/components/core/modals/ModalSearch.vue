@@ -57,7 +57,7 @@
               {{ formattedDate(post) }}
             </div>
             <NuxtLink
-              :to="`/blog/author/${getAuthor(post, 'uid')}/`"
+              :to="`/author/${getAuthor(post, 'uid')}/`"
               class="modal-search_result-item_content-author"
             >
               <img

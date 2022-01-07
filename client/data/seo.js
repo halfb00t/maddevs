@@ -10,7 +10,7 @@ export const meta = {
     jsonLd: '{"@context": "http://www.schema.org", "@type": "Organization", "name": "Mad Devs Group LTD - Custom Software Development Company", "url": "https://maddevs.io", "logo": "https://maddevs.io/Open-Graph.png", "foundingDate": "2016", "email": "team@maddevs.io", "description": "Mad Devs Group LTD is a software development company headquartered in London, which specializes in developing highly scalable, enterprise-level software solutions. Since the year 2016, the Mad Devs Group LTD team has developed 50+ projects and online services for finance, transportation & logistics, security, edtech, and advertising industries. The company’s customers are based in the United States, Australia, United Kingdom, France, Germany, Switzerland, Austria, Poland, Vietnam, Singapore, Russia, and CIS countries.", "address": {"@type": "PostalAddress", "streetAddress": "27 Old Gloucester Street", "addressLocality": "London", "addressRegion": "UK", "postalCode": "WC1N3AX"}, "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "telephone": "+442039848555"}, "sameAs": ["https://www.facebook.com/maddevsllc", "http://www.linkedin.com/company/mad-devs", "https://blog.maddevs.io", "https://clutch.co/profile/mad-devs", "https://www.glassdoor.com/Overview/Working-at-Mad-Devs-EI_IE2507466.11,19.htm", "https://twitter.com/MadDevsIO", "https://www.instagram.com/maddevsio", "https://www.crunchbase.com/organization/mad-devs", "https://github.com/maddevsio", "https://www.behance.net/maddevs"]}',
   },
   careers: {
-    url: 'https://maddevs.io/about/careers/',
+    url: 'https://maddevs.io/careers/',
   },
   faq: {
     title: 'Mad Devs: Frequently Asked Questions',
@@ -32,7 +32,7 @@ export const meta = {
   privacy: {
     title: 'Mad Devs Privacy Policy',
     description: 'Mad Devs Privacy Policy: Website Acceptable Use Terms. We respect your privacy and are committed to protecting your personal information.',
-    url: 'https://maddevs.io/approach/privacy/',
+    url: 'https://maddevs.io/privacy/',
   },
   services: {
     title: 'Custom Software Development Services | Mad Devs',
@@ -88,12 +88,12 @@ export const meta = {
   openSource: {
     title: 'Open Source Projects | Mad Devs',
     description: 'Discover how Mad Devs open-source projects and boilerplate solutions help the community to make development productive and faster.',
-    url: 'https://maddevs.io/insights/open-source/',
+    url: 'https://maddevs.io/open-source/',
   },
   ebook: {
     title: 'Software Industry Ebooks | Mad Devs Insights',
     description: 'How to build a successful product? Read Mad Devs Ebooks to understand the key aspects of software and mobile app development.',
-    url: 'https://maddevs.io/insights/ebooks/pricing-strategies/',
+    url: 'https://maddevs.io/ebooks/pricing-strategies/',
   },
   peklo: {
     title: 'Mad Devs Case Study: Peklo Tool Keyword Grouping Software',

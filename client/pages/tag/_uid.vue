@@ -27,7 +27,7 @@ export default {
     try {
       await store.dispatch('getBlogTag', params.uid)
       return {
-        openGraphUrl: `${process.env.domain}/blog/tag/${params.uid}/`,
+        openGraphUrl: `${process.env.domain}/tag/${params.uid}/`,
       }
     } catch (e) {
       // Returns error page
