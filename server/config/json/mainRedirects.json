@@ -763,17 +763,17 @@
   },
   {
     "pageType": "Services",
-    "from": "/design/ui-ux-design",
+    "from": "/services/design/ui-ux-design",
     "to": "https://maddevs.io/design/ui-ux-design/"
   },
   {
     "pageType": "Services",
-    "from": "/design/web-design",
+    "from": "/services/design/web-design",
     "to": "https://maddevs.io/design/web-design/"
   },
   {
     "pageType": "Services",
-    "from": "/design/mobile-design",
+    "from": "/services/design/mobile-design",
     "to": "https://maddevs.io/design/mobile-design/"
   },
   {
