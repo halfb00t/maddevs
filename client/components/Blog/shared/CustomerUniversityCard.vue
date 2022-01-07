@@ -113,7 +113,7 @@ export default {
   computed: {
     postLink() {
       if (this.type === 'customer_university') return `/customer-university/${this.postId}/`
-      return `/insights/blog/${this.postId}/`
+      return `/blog/${this.postId}/`
     },
 
     firstParagraph() {

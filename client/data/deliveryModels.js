@@ -314,36 +314,36 @@ export const deliveryModelsSeo = {
   'delivery-models': {
     title: 'Collaboration Approaches and Delivery Models | Mad Devs',
     description: 'Expand your development capabilities by choosing proper delivery models for your IT project. Manage your product growth through an effective collaboration model.',
-    url: 'https://maddevs.io/approach/delivery-models/',
+    url: 'https://maddevs.io/delivery-models/',
   },
   'staff-augmentation': {
     title: 'IT Staff Augmentation | Mad Devs Delivery Models',
     description: 'Are you need quick development team scaling to meet release deadlines? Reach time-to-market targets and release deadlines faster with a staff augmentation model.',
-    url: 'https://maddevs.io/approach/delivery-models/staff-augmentation/',
+    url: 'https://maddevs.io/delivery-models/staff-augmentation/',
   },
   'dedicated-team': {
     title: 'Dedicated Development Team | Mad Devs Delivery Models',
     description: 'Do you need a development team that will supplement your existing team and focuses solely on your project? Hire a dedicated team to bring your product idea to life.',
-    url: 'https://maddevs.io/approach/delivery-models/dedicated-team/',
+    url: 'https://maddevs.io/delivery-models/dedicated-team/',
   },
   'temp-to-hire': {
     title: 'Temp to Hire | Mad Devs Delivery Models',
     description: 'Do you face long and complex employee recruitment processes? Expand the hiring geography with minimal onboarding and recruiting risks with temp to hire model.',
-    url: 'https://maddevs.io/approach/delivery-models/temp-to-hire/',
+    url: 'https://maddevs.io/delivery-models/temp-to-hire/',
   },
   'technical-assessment': {
     title: 'Technical Competency Assessment | Mad Devs Delivery Models',
     description: 'Are you looking for an unbiased expert assessment? Get unbias development team competency assessment to solve technical issues and scale your business.',
-    url: 'https://maddevs.io/approach/delivery-models/technical-assessment/',
+    url: 'https://maddevs.io/delivery-models/technical-assessment/',
   },
   'team-supervision': {
     title: 'Effective Team Supervision | Mad Devs Delivery Models',
     description: 'Are your business facing technical challenges due to rapid growth? Boost technical team performance with effective team supervision.',
-    url: 'https://maddevs.io/approach/delivery-models/team-supervision/',
+    url: 'https://maddevs.io/delivery-models/team-supervision/',
   },
   'transferring-projects': {
     title: 'IT Projects Transferring | Mad Devs Delivery Models',
     description: 'Do you need to prepare your project for transfer to another IT team? Protect your intellectual property while transferring a project with the project handover model.',
-    url: 'https://maddevs.io/approach/delivery-models/transferring-projects/',
+    url: 'https://maddevs.io/delivery-models/transferring-projects/',
   },
 }
