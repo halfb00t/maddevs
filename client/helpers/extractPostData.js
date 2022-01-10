@@ -12,6 +12,7 @@ export default post => {
     featuredImage: post.data.featured_image,
     recommendedPosts: post.recommendedPosts,
     postAuthor: post.data.post_author,
+    postCoAuthor: post.data.post_coAuthor,
     tableOfContents: post.data.table_of_contents,
     slices: post.data.body,
     tags: post.tags,
