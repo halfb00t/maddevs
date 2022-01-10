@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="blogAuthor"
-    class="author-slice"
+    :class="[contributors.length? 'author-slice author-slice--with-contributor' : 'author-slice']"
   >
     <div class="author-slice__info">
       <!--      main author block-->
@@ -61,7 +61,7 @@
 
       <!--            coauthor block-->
       <div
-        v-if="blogCoAuthor.uid"
+        v-if="blogCoAuthor.uid && !contributors.length"
         class="author-slice__author-wrapper author-slice__author-wrapper--co"
       >
         <NuxtLink
@@ -214,10 +214,15 @@ export default {
     margin: 49px 0;
     flex-direction: column;
   }
+  &--with-contributor{
+    display: flex;
+  }
   &__author-wrapper{
     display: flex;
     &--co{
-      margin-top: 10px;
+      @media only screen and (max-width: 1024px) {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -333,9 +338,6 @@ export default {
       margin-top: 2px;
       display: flex;
       flex-flow: row nowrap;
-      @media screen and (max-width: 1024px) {
-        justify-content: center;
-      }
     }
 
     &-item {
