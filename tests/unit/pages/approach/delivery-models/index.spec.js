@@ -6,7 +6,7 @@ jest.mock('@/mixins/headerMixin', () => () => ({}))
 
 const META_DATA = {
   description: 'Expand your development capabilities by choosing proper delivery models for your IT project. Manage your product growth through an effective collaboration model.',
-  'og:url': 'https://maddevs.io/approach/delivery-models/',
+  'og:url': 'https://maddevs.io/delivery-models/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Collaboration Approaches and Delivery Models | Mad Devs',
@@ -18,7 +18,7 @@ const META_DATA = {
   'twitter:text:title': 'Collaboration Approaches and Delivery Models | Mad Devs',
   'twitter:description': 'Expand your development capabilities by choosing proper delivery models for your IT project. Manage your product growth through an effective collaboration model.',
   'twitter:image:src': 'https://maddevs.io/Open-Graph.png',
-  'twitter:url': 'https://maddevs.io/approach/delivery-models/',
+  'twitter:url': 'https://maddevs.io/delivery-models/',
 }
 
 const stubs = ['Main']

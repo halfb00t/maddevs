@@ -10,7 +10,7 @@ exports[`AuthorSlice component should render correctly 1`] = `
     >
       <nuxtlink-stub
         class="author-slice__image author-slice__link"
-        to="/blog/author/undefined/"
+        to="/author/undefined/"
       >
         <img
           alt="Image"
@@ -23,7 +23,7 @@ exports[`AuthorSlice component should render correctly 1`] = `
       <div>
         <nuxtlink-stub
           class="author-slice__link"
-          to="/blog/author/undefined/"
+          to="/author/undefined/"
         >
           <p
             class="author-slice__name"

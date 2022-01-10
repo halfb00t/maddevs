@@ -44,7 +44,7 @@ describe('HeaderPost component', () => {
       stubs, props, mocks,
     })
     expect(screen.getAllByText('test')).not.toBeNull()
-    expect(screen.getByTestId('post-link').getAttribute('to')).toBe('/insights/blog/1/')
+    expect(screen.getByTestId('post-link').getAttribute('to')).toBe('/blog/1/')
     expect(container).toMatchSnapshot()
   })
 })

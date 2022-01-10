@@ -168,8 +168,8 @@ describe('ModalSearch component', () => {
     expect(wrapper.vm.searchPosts[1].data.id).toBe(1)
   })
 
-  it('if set to args Frontend Development, tagLink will return /blog/tag/frontend-development/', () => {
-    expect(wrapper.vm.tagLink('Frontend Development')).toEqual('/blog/tag/frontend-development/')
+  it('if set to args Frontend Development, tagLink will return /tag/frontend-development/', () => {
+    expect(wrapper.vm.tagLink('Frontend Development')).toEqual('/tag/frontend-development/')
   })
 
   it('if set to 2 arg position, getAuthor will return Senior', () => {
