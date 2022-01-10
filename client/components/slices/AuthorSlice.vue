@@ -18,7 +18,7 @@
             height="68"
           >
         </NuxtLink>
-        <div>
+        <div class="author-slice__data">
           <NuxtLink
             class="author-slice__link"
             :to="authorLink"
@@ -77,7 +77,7 @@
             height="68"
           >
         </NuxtLink>
-        <div>
+        <div class="author-slice__data">
           <NuxtLink
             class="author-slice__link"
             :to="coAuthorLink"
@@ -214,12 +214,15 @@ export default {
     margin: 49px 0;
     flex-direction: column;
   }
-  &--with-contributor{
+
+  &--with-contributor {
     display: flex;
   }
-  &__author-wrapper{
+
+  &__author-wrapper {
     display: flex;
-    &--co{
+
+    &--co {
       @media only screen and (max-width: 1024px) {
         margin-top: 10px;
       }
@@ -234,6 +237,12 @@ export default {
     @media only screen and (max-width: 1024px) {
       flex-direction: column;
       align-items: start;
+    }
+  }
+
+  &__data {
+    @media only screen and (max-width: 1024px) {
+      margin-left: 17px;
     }
   }
 
