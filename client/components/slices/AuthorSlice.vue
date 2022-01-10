@@ -54,6 +54,57 @@
           </li>
         </ul>
       </div>
+
+      <NuxtLink
+        class="author-slice__image author-slice__link"
+        :to="link"
+      >
+        <img
+          v-lazy-load
+          :data-src="authorImage.url"
+          :alt="authorImage.alt || 'Image'"
+          width="68"
+          height="68"
+        >
+      </NuxtLink>
+      <div>
+        <NuxtLink
+          class="author-slice__link"
+          :to="link"
+        >
+          <p class="author-slice__name">
+            {{ blogAuthor.name }}
+          </p>
+          <span class="author-slice__position">
+            {{ blogAuthor.position }}
+          </span>
+        </NuxtLink>
+        <ul
+          v-if="blogAuthor.socialNetworks.length"
+          class="author-slice__social-list"
+        >
+          <li
+            v-for="network in blogAuthor.socialNetworks"
+            :key="network.key"
+            :class="`author-slice__social-item--${network.key}`"
+            data-testid="test-social"
+            class="author-slice__social-item"
+          >
+            <a
+              :href="network.link.url"
+              :target="network.link.target"
+            >
+              <img
+                v-lazy-load
+                :data-src="require(`@/assets/img/AuthorSlice/svg/${network.key}.svg`)"
+                :alt="network.title || 'Image'"
+                width="22"
+                height="22"
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div
       v-if="contributors.length"
@@ -114,7 +165,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['blogAuthor']),
+    ...mapGetters(['blogAuthor', 'blogCoAuthor']),
 
     authorImage() {
       const { author_slice: authorSlice = {} } = this.blogAuthor?.image

@@ -12,7 +12,7 @@ const buildBlogPostMixin = (postType = 'post') => ({
     try {
       const post = await store.dispatch('getBlogPost', { type: postType, uid: params.uid })
       if (post?.data?.post_author) await store.dispatch('getBlogAuthor', post.data.post_author.uid)
-
+      if (post?.data?.post_coauthor) await store.dispatch('getBlogCoAuthor', post.data.post_coauthor.uid)
       // Schema org snippet
       schemaOrgSnippet = extractSchemaOrg(post.data.schema_org_snippets, post)
 
@@ -31,6 +31,7 @@ const buildBlogPostMixin = (postType = 'post') => ({
           featuredImage: post.data.featured_image,
           recommendedPosts: post.recommendedPosts,
           postAuthor: post.data.post_author,
+          postCoAuthor: post.data.post_coauthor || null,
           tableOfContents: post.data.table_of_contents,
           slices: post.data.body,
           tags: post.tags,

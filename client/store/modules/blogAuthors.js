@@ -5,6 +5,7 @@ import extractAuthorData from '@/helpers/extractAuthorData'
 export const state = () => ({
   authors: [],
   author: {},
+  coAuthor: {},
   authorPosts: [],
   authorPostsLoaded: false,
   authorPostsPage: 1,
@@ -16,6 +17,11 @@ export const mutations = {
   },
   SET_AUTHOR(state, author) {
     state.author = extractAuthorData(author)
+  },
+  SET_CO_AUTHOR(state, author) {
+    state.coAuthor = extractAuthorData(author)
+    setTimeout(() => {
+    }, 10)
   },
   SET_AUTHOR_POSTS(state, posts) {
     state.authorPosts = posts
@@ -37,6 +43,10 @@ export const actions = {
     const author = await getBlogAuthor(this.$prismic, payload)
     commit('SET_AUTHOR', author)
   },
+  async getBlogCoAuthor({ commit }, payload) {
+    const author = await getBlogAuthor(this.$prismic, payload)
+    commit('SET_CO_AUTHOR', author)
+  },
   async getAuthorPosts({ commit }, payload) {
     commit('SET_AUTHOR_POSTS_LOADED', false)
     commit('SET_AUTHOR_POSTS', [])
@@ -55,6 +65,9 @@ export const getters = {
   },
   blogAuthor(state) {
     return state.author
+  },
+  blogCoAuthor(state) {
+    return state.coAuthor
   },
   authorPosts(state) {
     return state.authorPosts
