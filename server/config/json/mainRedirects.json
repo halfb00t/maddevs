@@ -18,6 +18,18 @@
     "to": "https://maddevs.io/privacy/"
   },
   {
+    "from": "/about/infrastructure",
+    "to": "https://maddevs.io/infrastructure/"
+  },
+  {
+    "from": "/about/software-development",
+    "to": "https://maddevs.io/software-development/"
+  },
+  {
+    "from": "/about/consulting-and-audit",
+    "to": "https://maddevs.io/consulting-and-audit/"
+  },
+  {
     "from": "/approach/sustainability-policy",
     "to": "https://maddevs.io/sustainability-policy/"
   },
@@ -638,6 +650,11 @@
   },
   {
     "pageType": "Services",
+    "from": "/services/mobile-development",
+    "to": "https://maddevs.io/mobile-development/"
+  },
+  {
+    "pageType": "Services",
     "from": "/services/backend-development/research-page",
     "to": "https://maddevs.io/backend-development/research-page/"
   },
@@ -699,7 +716,7 @@
   {
     "pageType": "Services",
     "from": "/services/mobile-development-page",
-    "to": "https://maddevs.io/mobile-development-page/"
+    "to": "https://maddevs.io/mobile-development/"
   },
   {
     "pageType": "Services",
@@ -789,32 +806,32 @@
   {
     "pageType": "Services",
     "from": "/services/qa-software-testing/requirements-and-targets",
-    "to": "https://maddevs.io/qa-software-testing/requirements-and-targets/"
+    "to": "https://maddevs.io/software-testing/requirements-and-targets/"
   },
   {
     "pageType": "Services",
     "from": "/services/qa-software-testing/code-quality",
-    "to": "https://maddevs.io/qa-software-testing/code-quality/"
+    "to": "https://maddevs.io/software-testing/code-quality/"
   },
   {
     "pageType": "Services",
     "from": "/services/qa-software-testing/ongoing-activity",
-    "to": "https://maddevs.io/qa-software-testing/ongoing-activity/"
+    "to": "https://maddevs.io/software-testing/ongoing-activity/"
   },
   {
     "pageType": "Services",
     "from": "/services/qa-software-testing/range-of-tests",
-    "to": "https://maddevs.io/qa-software-testing/range-of-tests/"
+    "to": "https://maddevs.io/software-testing/range-of-tests/"
   },
   {
     "pageType": "Services",
     "from": "/services/qa-software-testing/agile-environment",
-    "to": "https://maddevs.io/qa-software-testing/agile-environment/"
+    "to": "https://maddevs.io/software-testing/agile-environment/"
   },
   {
     "pageType": "Services",
     "from": "/services/qa-software-testing/ci-and-cd",
-    "to": "https://maddevs.io/qa-software-testing/ci-and-cd/"
+    "to": "https://maddevs.io/software-testing/ci-and-cd/"
   },
   {
     "pageType": "Кейсы",
@@ -989,72 +1006,107 @@
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/editors-pick",
-    "to": "https://maddevs.io/blog/editors-pick/"
+    "to": "https://maddevs.io/tag/editors-pick/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/software-development",
-    "to": "https://maddevs.io/blog/software-development/"
+    "to": "https://maddevs.io/tag/software-development/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/project-management",
-    "to": "https://maddevs.io/blog/project-management/"
+    "to": "https://maddevs.io/tag/project-management/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/mobile-development",
-    "to": "https://maddevs.io/blog/mobile-app-development/"
+    "to": "https://maddevs.io/tag/mobile-app-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/blog/project-management/",
+    "to": "https://maddevs.io/tag/project-management/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/blog/mobile-development",
+    "to": "https://maddevs.io/tag/mobile-app-development/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/android-development",
-    "to": "https://maddevs.io/blog/android-development/"
+    "to": "https://maddevs.io/tag/android-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/blog/android-development",
+    "to": "https://maddevs.io/tag/android-development/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/hardware",
-    "to": "https://maddevs.io/blog/hardware/"
+    "to": "https://maddevs.io/tag/hardware/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/devops",
-    "to": "https://maddevs.io/blog/devops/"
+    "to": "https://maddevs.io/tag/devops/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/blog/devops",
+    "to": "https://maddevs.io/tag/devops/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/django",
-    "to": "https://maddevs.io/blog/"
+    "to": "https://maddevs.io/tag/django"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/frontend-development",
-    "to": "https://maddevs.io/blog/frontend-development/"
+    "to": "https://maddevs.io/tag/frontend-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/blog/frontend-development",
+    "to": "https://maddevs.io/tag/frontend-development/"
+  },
+  {
+    "pageType": "Tags",
+    "from": "/blog/tag/backend-development",
+    "to": "https://maddevs.io/tag/backend-development/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/ios-development",
-    "to": "https://maddevs.io/blog/ios-development/"
+    "to": "https://maddevs.io/tag/ios-development/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/project-management/swot-team-for-software-development-projects",
-    "to": "https://maddevs.io/blog/"
+    "to": "https://maddevs.io/tag/project-management/"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/ui",
-    "to": "https://maddevs.io/blog/ui-ux/"
+    "to": "https://maddevs.io/tag/ui"
   },
   {
     "pageType": "Tags",
     "from": "/insights/blog/tag/ux",
-    "to": "https://maddevs.io/blog/ui-ux/"
+    "to": "https://maddevs.io/tag/ui-ux/"
   },
   {
     "pageType": "Tags/из старых редиректов",
     "from": "/blog/tag/software-features",
-    "to": "https://maddevs.io/blog/software-development/"
+    "to": "https://maddevs.io/tag/software-development/"
+  },
+  {
+    "pageType": "Tags/из старых редиректов",
+    "from": "/blog/development",
+    "to": "https://maddevs.io/tag/software-development/"
   },
   {
     "pageType": "Tags/из старых редиректов",
@@ -3078,7 +3130,7 @@
   },
   {
     "pageType": "Posts - из старых редиректов",
-    "from": "/working-with-the-mysql-in-go-58fcc951b41f?source=friends_link&sk=28d0f484b496b837d2cfd110cca50eef",
+    "from": "/working-with-the-mysql-in-go-58fcc951b41f?source=friends_link&sk=28d0fhttps://maddevs.io/qa-software-testing/ci-and-cd484b496b837d2cfd110cca50eef",
     "to": "https://maddevs.io/blog/working-with-the-mysql-in-go/"
   },
   {
@@ -3900,5 +3952,10 @@
     "pageType": "Posts на русском",
     "from": "/delaem-kartu-v-proekcii-merkatora-dlya-android-9f61408b899c",
     "to": "https://medium.com/maddevs-io/delaem-kartu-v-proekcii-merkatora-dlya-android-9f61408b899c/"
+  },
+  {
+    "pageType": "Непонятные ссылки",
+    "from": "/tel:+442039848555",
+    "to": "https://maddevs.io/contact-us/"
   }
 ]

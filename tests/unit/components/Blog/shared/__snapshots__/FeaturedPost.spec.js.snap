@@ -45,7 +45,7 @@ exports[`featured post component is a Vue instance 1`] = `
               class="post-tag post-tag--dark-theme"
               data-testid="test-tag"
               event="click"
-              to="/blog/tag/markup/"
+              to="/tag/markup/"
             >
               
   markup

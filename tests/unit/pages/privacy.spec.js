@@ -4,7 +4,7 @@ import MainPrivacy from '@/pages/privacy'
 
 const META_DATA = {
   description: 'Mad Devs Privacy Policy: Website Acceptable Use Terms. We respect your privacy and are committed to protecting your personal information.',
-  'og:url': 'https://maddevs.io/approach/privacy/',
+  'og:url': 'https://maddevs.io/privacy/',
   'og:type': 'website',
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Privacy Policy',
@@ -16,7 +16,7 @@ const META_DATA = {
   'twitter:text:title': 'Mad Devs Privacy Policy',
   'twitter:description': 'Mad Devs Privacy Policy: Website Acceptable Use Terms. We respect your privacy and are committed to protecting your personal information.',
   'twitter:image:src': 'https://maddevs.io/Open-Graph.png',
-  'twitter:url': 'https://maddevs.io/approach/privacy/',
+  'twitter:url': 'https://maddevs.io/privacy/',
 }
 
 describe('Privacy page', () => {

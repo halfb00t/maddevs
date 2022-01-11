@@ -8,7 +8,7 @@ exports[`HeaderPost component should render correctly 1`] = `
     <nuxtlink-stub
       class="header-post__content"
       data-testid="post-link"
-      to="/insights/blog/1/"
+      to="/blog/1/"
     >
       <div
         class="header-post__text"
@@ -56,7 +56,7 @@ exports[`HeaderPost component should render correctly 1`] = `
      
     <nuxtlink-stub
       class="header-post__more-btn"
-      to="/insights/blog/"
+      to="/blog/"
     >
       
     More articles
