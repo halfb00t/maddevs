@@ -1,59 +1,123 @@
 <template>
   <div
     v-if="blogAuthor"
-    class="author-slice"
+    :class="[contributors.length? 'author-slice author-slice--with-contributor' : 'author-slice']"
   >
     <div class="author-slice__info">
-      <NuxtLink
-        class="author-slice__image author-slice__link"
-        :to="link"
-      >
-        <img
-          v-lazy-load
-          :data-src="authorImage.url"
-          :alt="authorImage.alt || 'Image'"
-          width="68"
-          height="68"
-        >
-      </NuxtLink>
-      <div>
+      <!--      main author block-->
+      <div class="author-slice__author-wrapper">
         <NuxtLink
-          class="author-slice__link"
-          :to="link"
+          class="author-slice__image author-slice__link"
+          :to="authorLink"
         >
-          <p class="author-slice__name">
-            {{ blogAuthor.name }}
-          </p>
-          <span class="author-slice__position">
-            {{ blogAuthor.position }}
-          </span>
-        </NuxtLink>
-        <ul
-          v-if="blogAuthor.socialNetworks.length"
-          class="author-slice__social-list"
-        >
-          <li
-            v-for="network in blogAuthor.socialNetworks"
-            :key="network.key"
-            :class="`author-slice__social-item--${network.key}`"
-            data-testid="test-social"
-            class="author-slice__social-item"
+          <img
+            v-lazy-load
+            :data-src="authorImage.url"
+            :alt="authorImage.alt || 'Image'"
+            width="68"
+            height="68"
           >
-            <a
-              :href="network.link.url"
-              :target="network.link.target"
+        </NuxtLink>
+        <div class="author-slice__data">
+          <NuxtLink
+            class="author-slice__link"
+            :to="authorLink"
+          >
+            <p class="author-slice__name">
+              {{ blogAuthor.name }}
+            </p>
+            <span class="author-slice__position">
+              {{ blogAuthor.position }}
+            </span>
+          </NuxtLink>
+          <ul
+            v-if="blogAuthor.socialNetworks.length"
+            class="author-slice__social-list"
+          >
+            <li
+              v-for="network in blogAuthor.socialNetworks"
+              :key="network.key"
+              :class="`author-slice__social-item--${network.key}`"
+              data-testid="test-social"
+              class="author-slice__social-item"
             >
-              <img
-                v-lazy-load
-                :data-src="require(`@/assets/img/AuthorSlice/svg/${network.key}.svg`)"
-                :alt="network.title || 'Image'"
-                width="22"
-                height="22"
+              <a
+                :href="network.link.url"
+                :target="network.link.target"
               >
-            </a>
-          </li>
-        </ul>
+                <img
+                  v-lazy-load
+                  :data-src="require(`@/assets/img/AuthorSlice/svg/${network.key}.svg`)"
+                  :alt="network.title || 'Image'"
+                  width="22"
+                  height="22"
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+      <!--      end main author block-->
+
+      <!--            coauthor block-->
+      <div
+        v-if="blogCoAuthor.uid && !contributors.length"
+        class="author-slice__author-wrapper author-slice__author-wrapper--co"
+      >
+        <NuxtLink
+          class="author-slice__image author-slice__link"
+          :to="coAuthorLink"
+        >
+          <img
+            v-if="coAuthorImage.url"
+            v-lazy-load
+            :data-src="coAuthorImage.url"
+            :alt="coAuthorImage.alt || 'Image'"
+            width="68"
+            height="68"
+          >
+        </NuxtLink>
+        <div class="author-slice__data">
+          <NuxtLink
+            class="author-slice__link"
+            :to="coAuthorLink"
+          >
+            <p class="author-slice__name">
+              {{ blogCoAuthor.name }}
+            </p>
+            <span class="author-slice__position">
+              {{ blogCoAuthor.position }}
+            </span>
+          </NuxtLink>
+          <ul
+            v-if="blogCoAuthor.socialNetworks.length"
+            class="author-slice__social-list"
+          >
+            <li
+              v-for="network in blogCoAuthor.socialNetworks"
+              :key="network.key"
+              :class="`author-slice__social-item--${network.key}`"
+              data-testid="test-social"
+              class="author-slice__social-item"
+            >
+              <a
+                :href="network.link.url"
+                :target="network.link.target"
+              >
+                <img
+                  v-lazy-load
+                  :data-src="require(`@/assets/img/AuthorSlice/svg/${network.key}.svg`)"
+                  :alt="network.title || 'Image'"
+                  width="22"
+                  height="22"
+                >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--     end coauthor block -->
     </div>
     <div
       v-if="contributors.length"
@@ -114,15 +178,24 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['blogAuthor']),
+    ...mapGetters(['blogAuthor', 'blogCoAuthor']),
 
     authorImage() {
       const { author_slice: authorSlice = {} } = this.blogAuthor?.image
       return authorSlice
     },
 
-    link() {
-      return linkResolver({ type: 'author', uid: this.blogAuthor.uid })
+    authorLink() {
+      return linkResolver({ type: 'author', uid: this.blogAuthor?.uid })
+    },
+
+    coAuthorImage() {
+      const { author_slice: authorSlice = {} } = this.blogCoAuthor?.image
+      return authorSlice
+    },
+
+    coAuthorLink() {
+      return linkResolver({ type: 'author', uid: this.blogCoAuthor?.uid })
     },
   },
 
@@ -134,31 +207,52 @@ export default {
 
 <style scoped lang="scss">
 .author-slice {
-  display: flex;
-  justify-content: space-between;
   padding-top: 20px;
   margin: 70px 0;
   border-top: 1px solid $border-color--red;
   @media only screen and (max-width: 1024px) {
     margin: 49px 0;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
-  &__info {
+
+  &--with-contributor {
     display: flex;
-    @media only screen and (max-width: 1024px) {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+  }
+
+  &__author-wrapper {
+    display: flex;
+
+    &--co {
+      @media only screen and (max-width: 1024px) {
+        margin-top: 10px;
+      }
     }
   }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__data {
+    @media only screen and (max-width: 1024px) {
+      margin-left: 17px;
+    }
+  }
+
   &__image {
     margin-right: 17px;
     background-color: $bgcolor--silver;
     @media screen and (max-width: 1024px) {
       margin-right: 0;
     }
+
     &,
     img {
       display: block;
@@ -166,7 +260,7 @@ export default {
       width: 68px;
       min-width: 68px;
       height: 68px;
-      border-radius: 50%;
+      border-radius: 14px;
       @media screen and (max-width: 1024px) {
         width: 64px;
         min-width: 64px;
@@ -174,9 +268,11 @@ export default {
       }
     }
   }
+
   &__link {
     text-decoration: none;
   }
+
   &__name {
     @include font('Poppins', 21px, 600);
     line-height: 130%;
@@ -187,6 +283,7 @@ export default {
       margin-top: 13px;
     }
   }
+
   &__position {
     font-size: 15px;
     line-height: 166%;
@@ -196,6 +293,7 @@ export default {
       margin-top: 4px;
     }
   }
+
   &__social {
     &-list {
       list-style: none;
@@ -204,19 +302,21 @@ export default {
       display: flex;
       flex-flow: row wrap;
       @media screen and (max-width: 1024px) {
-        margin-top: 14px;
-        justify-content: center;
+        margin-top: 8px;
       }
     }
+
     &-item {
       width: 29px;
       height: 29px;
       border-radius: 6px;
       background: $bgcolor--silver;
       margin-right: 16px;
+
       &:last-of-type {
         margin-right: 0;
       }
+
       a {
         display: flex;
         align-items: center;
@@ -226,28 +326,29 @@ export default {
       }
     }
   }
+
   &__contributors {
     margin-left: 20px;
     @media screen and (max-width: 1024px) {
       margin-left: 0;
       margin-top: 22px;
     }
+
     &-title {
       font-size: 13px;
       line-height: 166%;
       letter-spacing: -0.1px;
       color: $text-color--quote-box;
     }
+
     &-list {
       padding: 0;
       list-style: none;
       margin-top: 2px;
       display: flex;
       flex-flow: row nowrap;
-      @media screen and (max-width: 1024px) {
-        justify-content: center;
-      }
     }
+
     &-item {
       margin-left: -6px;
       background: $bgcolor--silver;
@@ -256,9 +357,11 @@ export default {
         border: 0;
         margin-left: 6px;
       }
+
       &:first-of-type {
         margin-left: -2px;
       }
+
       &,
       a,
       img {

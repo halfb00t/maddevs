@@ -31,6 +31,8 @@ exports[`header Blog is a Vue instance 1`] = `
     >
       <!---->
        
+      <!---->
+       
       <div
         class="blog-post__tag"
       >
@@ -38,7 +40,7 @@ exports[`header Blog is a Vue instance 1`] = `
           class="post-tag post-tag--dark-theme"
           data-testid="test-tag"
           event="click"
-          to="/blog/tag/project-management/"
+          to="/tag/project-management/"
         >
           
   Project Management

@@ -15,6 +15,8 @@ const redirectToRuCareerPostUrl = require('./middlewares/redirectToRuCareerPostU
 const redirectToPrismicUrl = require('./middlewares/redirectToPrismicUrl')
 const redirectToCorrectUrl = require('./middlewares/redirectToCorrectUrl')
 const redirectToCorrectBlogUrl = require('./middlewares/redirectToCorrectBlogUrl')
+const redirectToCorrectAuthorUrl = require('./middlewares/redirectToCorrectAuthorUrl')
+const redirectToCorrectSofwareTestingUrl = require('./middlewares/redirectToCorrectSoftwateTestingUrl')
 
 // config
 const config = require('./config')
@@ -46,6 +48,8 @@ function bootstrap() {
   app.use(redirectToRuCareerPostUrl)
   app.use(redirectToPrismicUrl)
   app.use(redirectToCorrectBlogUrl)
+  app.use(redirectToCorrectAuthorUrl)
+  app.use(redirectToCorrectSofwareTestingUrl)
 
   // Routers
   app.use(webRouter)

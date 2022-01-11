@@ -10,7 +10,13 @@
     <template #afterTitle>
       <div class="blog-post__post-info">
         <PostAuthor
+          class="blog-post__post-info-author"
           v-bind="blogAuthor"
+          theme="dark"
+          :date="date"
+        />
+        <PostAuthor
+          v-bind="blogCoAuthor"
           theme="dark"
           :date="date"
         />
@@ -53,7 +59,8 @@ export default {
 
     featuredImage: {
       type: Object,
-      default: () => {},
+      default: () => {
+      },
     },
 
     tags: {
@@ -68,7 +75,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['blogAuthor', 'blogTag']),
+    ...mapGetters(['blogAuthor', 'blogTag', 'blogCoAuthor']),
   },
 }
 </script>
@@ -82,6 +89,8 @@ export default {
     margin-top: 7px;
     margin-bottom: 43px;
     text-decoration: none;
+    width: 923px;
+    margin-left: -52px;
 
     a {
       text-decoration: none;
@@ -104,11 +113,33 @@ export default {
     &__post-info {
       padding: 0 24px;
       display: block;
+      margin: 0 0 40px 0;
+      &-author {
+        width: 50%;
+      }
     }
 
     &__tag {
-    margin-top: 19px;
+      margin-top: 19px;
+    }
   }
+}
+
+@media screen and (max-width: 768px) {
+  /deep/ .blog-post {
+    &__post-info {
+      padding: 0 24px;
+      display: block;
+      margin: inherit;
+      width: inherit;
+      &-author {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+    }
+    &__tag {
+      margin: 19px 0 44px 0;
+    }
   }
 }
 </style>
