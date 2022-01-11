@@ -74,6 +74,35 @@ const store = {
         },
       }],
     }),
+    blogCoAuthor: () => ({
+      name: 'Maddevs',
+      postition: 'position',
+      image: {
+        alt: 'alt',
+        url: 'someurl',
+        dimensions: {},
+        author_slice: {
+          url: '',
+          alt: '',
+          dimensions: {},
+        },
+      },
+      socialNetworks: [{
+        title: 'facebook',
+        key: 'facebook',
+        link: {
+          url: 'someurl',
+          target: '_blank',
+        },
+      }, {
+        title: 'instagram',
+        key: 'instagram',
+        link: {
+          url: 'instagram',
+          target: '_blank',
+        },
+      }],
+    }),
   },
 }
 
@@ -105,5 +134,19 @@ describe('AuthorSlice component', () => {
 
     expect(screen.getAllByTestId('test-social')).toHaveLength(store.getters.blogAuthor().socialNetworks.length)
     expect(screen.getAllByTestId('test-contributors')).toHaveLength(1)
+  })
+
+  it('should render correctly without data', () => {
+    store.getters.blogCoAuthor = () => ({})
+    const { container } = render(AuthorSlice, {
+      stubs,
+      store,
+      props,
+      directives: {
+        'lazy-load': () => {},
+      },
+    })
+
+    expect(container).toMatchSnapshot()
   })
 })

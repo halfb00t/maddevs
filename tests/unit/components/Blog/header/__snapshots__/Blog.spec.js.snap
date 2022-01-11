@@ -31,6 +31,8 @@ exports[`header Blog is a Vue instance 1`] = `
     >
       <!---->
        
+      <!---->
+       
       <div
         class="blog-post__tag"
       >
