@@ -5,6 +5,6 @@ describe('SitemapController function', () => {
     const res = { sendFile: jest.fn() }
     getSitemap(null, res)
 
-    expect(res.sendFile).toHaveBeenCalledWith(`${process.cwd()}/sitemap.xml`)
+    expect(res.sendFile).toHaveBeenCalledWith(`${process.cwd()}/sitemapindex.xml`)
   })
 })
