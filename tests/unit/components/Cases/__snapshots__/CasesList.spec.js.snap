@@ -148,6 +148,20 @@ exports[`CasesList component should render correctly 1`] = `
         videofilename="/videos/namba-taxi-banner.mp4#t=1"
         width="full"
       />
+      <caseslistitem-stub
+        class="cases-list_guardrails"
+        data-testid="test-case-card"
+        desc="edit this text 333"
+        item="[object Object]"
+        link="/case-studies/guardrails/"
+        logo="[object Object]"
+        posterlink="/images/Cases/nambataxi/png/nambataxi-banner.png"
+        subtitle="edit this text 333"
+        title="edit this text 333"
+        titletag="h3"
+        videofilename="/videos/namba-taxi-banner.mp4#t=1"
+        width="full"
+      />
     </section>
      
     <nuxtlink-stub

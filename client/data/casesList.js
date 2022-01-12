@@ -168,5 +168,21 @@ export const casesList = [
       file: 'nambataxi',
       alt: 'nambataxi logo',
     },
+  }, {
+    width: 'full',
+    id: 'guardrails',
+    link: '/case-studies/guardrails/',
+    video: '/videos/namba-taxi-banner.mp4#t=1',
+    subtitle: 'edit this text 333',
+    title: 'edit this text 333',
+    desc: 'edit this text 333',
+    poster: '/images/Cases/nambataxi/png/nambataxi-banner.png',
+    logo: {
+      width: 310,
+      height: 45,
+      folder: 'nambataxi',
+      file: 'nambataxi',
+      alt: 'nambataxi logo',
+    },
   },
 ]
