@@ -5,7 +5,7 @@
   "author": "Mad Devs",
   "private": true,
   "engines": {
-    "node": ">=15 <17"
+    "node": "14.10.1"
   },
   "scripts": {
     "dev": "nuxt",
@@ -129,7 +129,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run precommit",
-      "pre-push" : "npm run seo-analyze"
+      "pre-push": "npm run seo-analyze"
     }
   },
   "snyk": true
