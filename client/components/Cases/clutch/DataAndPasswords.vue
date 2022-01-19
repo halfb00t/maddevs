@@ -284,20 +284,6 @@ export default {
       border: none;
       margin-left: 20px;
       @include font($text-color--black, 36px, 600);
-
-      & span {
-        position: relative;
-
-        &:before {
-          content: '≃';
-          width: 28px;
-          height: 20px;
-          line-height: 0;
-          position: absolute;
-          top: 22px;
-          left: -35px;
-        }
-      }
     }
 
     &:last-child {
