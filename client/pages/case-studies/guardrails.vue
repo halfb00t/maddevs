@@ -1,25 +1,29 @@
 <template>
-  <main class="case case--guardrails">
-    <CaseHeader
-      :logo="logo"
-      project="guardrails"
-      video-name="/videos/guardrails-banner.mp4"
-      video-fallback-path="/images/Cases/clutch/png/clutch-banner.png"
-    >
-      <h1
-        slot="title"
-        class="case_header-title"
+  <main class="case">
+    <div class="case-guardrails__header-wrapper">
+      <CaseHeader
+        :logo="logo"
+        project="guardrails"
+        video-name="/videos/guardrails-banner.mp4"
+        video-fallback-path="/images/Cases/guardrails/png/guardrails-banner.png"
       >
-        Enhancing the GuardRails solution
-      </h1>
-      <p
-        slot="description"
-        class="case_header-description"
-      >
-        Mad Devs assisted GuardRails an application security platform <br> to advance their product and increase its business value.
-      </p>
-    </CaseHeader>
-    <!--    <Main />-->
+        <h1
+          slot="title"
+          class="case_header-title"
+        >
+          Enhancing the GuardRails solution
+        </h1>
+        <p
+          slot="description"
+          class="case_header-description"
+        >
+          Mad Devs assisted GuardRails an application security platform
+          <br>
+          to advance their product and increase its business value.
+        </p>
+      </CaseHeader>
+    </div>
+    <Main />
     <Footer
       link="/case-studies/clutch/"
       class-name="clutch"
@@ -41,7 +45,7 @@
 <script>
 import CaseHeader from '@/components/Cases/shared/CaseHeader'
 import Footer from '@/components/Cases/shared/CaseFooter'
-// import Main from '@/components/Cases/clutch/Main'
+import Main from '@/components/Cases/guardrails/Main'
 import { getMetadata, buildHead } from '@/data/seo'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 import headerMixin from '@/mixins/headerMixin'
@@ -50,7 +54,8 @@ export default {
   name: 'Clutch',
   components: {
     CaseHeader,
-    Footer, //    Main,
+    Footer,
+    Main,
 
   },
 
@@ -94,8 +99,8 @@ export default {
 @import '../../assets/styles/cases/media';
 
 .case {
-  &_header-guardrails {
-    background-color:  #323A45;
+  &-guardrails__header-wrapper {
+    background-color: rgba(50, 58, 69, 0.6);
   }
 
   &_header {
@@ -112,19 +117,19 @@ export default {
     }
   }
 
-  //&_guardrails-logo {
-  //  //width: 218px;
-  //  //height: 300px;
-  //
-  //  @media screen and (max-width: 1170px) {
-  //    margin-bottom: 50px;
-  //  }
-  //
-  //  @media screen and (max-width: 655px) {
-  //    width: 185px;
-  //    height: 53px;
-  //  }
-  //}
+  &_guardrails-logo {
+    width: 218px;
+    height: 300px;
+
+    @media screen and (max-width: 1170px) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 655px) {
+      width: 217px;
+      height: 138px;
+    }
+  }
 
   &_logotype-citycam {
     width: 210px;
