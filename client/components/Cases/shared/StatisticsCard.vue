@@ -23,13 +23,16 @@
       class="case_statistics-item_number p-16_bottom"
       :style="colorNumber"
     >
-      <span>{{ `${textBeforeNumber ? textBeforeNumber : ''}` + `${withoutSpaceBeforeNumber ? '' : ' '}` }}</span><!--
+      <span
+        :style="colorNumber"
+      >{{ `${textBeforeNumber ? textBeforeNumber : ''}` + `${withoutSpaceBeforeNumber ? '' : ' '}` }}</span><!--
       --><span
       :id="`statistics-${section}-${index}`"
       :data-end-value="number"
       :data-start-value="numberText"
+      :style="colorNumber"
       >{{ `${numberText}` }}</span><!--
-      --><span>{{ `${withoutSpaceAfterNumber ? '' : ' '}` + `${name ? name : ''}` }}</span>
+      --><span :style="colorNumber">{{ `${withoutSpaceAfterNumber ? '' : ' '}` + `${name ? name : ''}` }}</span>
     </component>
     <TextParagraph
       v-if="description"

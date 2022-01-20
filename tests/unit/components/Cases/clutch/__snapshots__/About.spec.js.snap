@@ -69,17 +69,23 @@ exports[`About component should render correctly 1`] = `
               style="color: rgb(4, 58, 180);"
             >
               <span
+                style="color: rgb(4, 58, 180);"
+              >
+                 
+              </span>
+              <span
                 data-end-value="1"
                 data-start-value="1"
                 id="statistics-about-0"
+                style="color: rgb(4, 58, 180);"
               >
-                
-      1
-    
+                1
               </span>
-              
-    million
-  
+              <span
+                style="color: rgb(4, 58, 180);"
+              >
+                 million
+              </span>
             </h3>
              
             <p
@@ -110,17 +116,23 @@ exports[`About component should render correctly 1`] = `
               style="color: rgb(4, 58, 180);"
             >
               <span
+                style="color: rgb(4, 58, 180);"
+              >
+                 
+              </span>
+              <span
                 data-end-value="225800"
                 data-start-value="225,800"
                 id="statistics-about-1"
+                style="color: rgb(4, 58, 180);"
               >
-                
-      225,800
-    
+                225,800
               </span>
-              
-    +
-  
+              <span
+                style="color: rgb(4, 58, 180);"
+              >
+                 +
+              </span>
             </h3>
              
             <p
@@ -151,17 +163,23 @@ exports[`About component should render correctly 1`] = `
               style="color: rgb(4, 58, 180);"
             >
               <span
+                style="color: rgb(4, 58, 180);"
+              >
+                 
+              </span>
+              <span
                 data-end-value="104300"
                 data-start-value="104,300"
                 id="statistics-about-2"
+                style="color: rgb(4, 58, 180);"
               >
-                
-      104,300
-    
+                104,300
               </span>
-              
-    +
-  
+              <span
+                style="color: rgb(4, 58, 180);"
+              >
+                 +
+              </span>
             </h3>
              
             <p
