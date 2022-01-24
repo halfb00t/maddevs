@@ -9,14 +9,14 @@
       </TextParagraph>
     </div>
     <div
-      class="container_full background-color-silver p-72_bottom m-72_bottom media-m-48_bottom case_review-container"
+      class="container_full about-block-background background-color-silver p-72_bottom m-72_bottom media-m-48_bottom case_review-container"
       :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/guardrails/png/statistics-background.png`)})`}"
     >
       <div class="container_regular">
         <h2 class="case_title_h2 case_title p-72_top media-p-41_top m-48_bottom media-m-24_bottom">
           GuardRails facts & figures
         </h2>
-        <StatisticsContainer class="m-48_bottom">
+        <StatisticsContainer class="m-72_bottom">
           <StatisticCard
             v-for="(review, i) in reviewsStatistics"
             :id="`about-item-${i}`"
@@ -36,6 +36,21 @@
             :index="i"
           />
         </StatisticsContainer>
+
+        <div class="technologies-list__wrapper">
+          <span class="technologies-list__title m-24_bottom">
+            The platform integrates 25+ scanning engines supporting 15+ programming languages
+          </span>
+
+          <ul class="technologies-list__items media-m-48_bottom">
+            <ListTechnologiesItem
+              v-for="technology in technologies"
+              :key="technology.name"
+              v-bind="technology"
+              class="technologies-list__item"
+            />
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -45,8 +60,8 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import StatisticsContainer from '@/components/Cases/shared/StatisticsContainer'
 import StatisticCard from '@/components/Cases/shared/StatisticsCard'
-
-import { reviewsStatistics } from '@/data/caseGuardrails'
+import ListTechnologiesItem from '@/components/Cases/shared/ListTechnologiesItem'
+import { reviewsStatistics, techStackLanguagesGuardrails } from '@/data/caseGuardrails'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 
 import countUp from '@/helpers/countUp'
@@ -54,9 +69,10 @@ import countUp from '@/helpers/countUp'
 export default {
   name: 'About',
   components: {
-    StatisticCard,
-    StatisticsContainer,
     TextParagraph,
+    StatisticsContainer,
+    StatisticCard,
+    ListTechnologiesItem,
   },
 
   mixins: [
@@ -67,8 +83,11 @@ export default {
   ],
 
   data() {
+    const technologies = techStackLanguagesGuardrails
+
     return {
       reviewsStatistics,
+      technologies,
     }
   },
 }
@@ -88,6 +107,78 @@ export default {
       background-size: 400px;
     }
   }
-
 }
+
+.case_review-container {
+  background-position: center;
+  background-size: cover;
+}
+
+.technologies-list {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 17px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 8px;
+    @media screen and (max-width: 991px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 720px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bgcolor--white-primary;
+    border-radius: 10px;
+    width: 102px;
+    height: 90px;
+
+    /deep/ .case_technologies-item__tech-icon {
+      height: 26px;
+    }
+  }
+
+  &__item:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    @media screen and (max-width: 991px) {
+      grid-column-start: inherit;
+      grid-column-end: inherit;
+    }
+  }
+
+  &__item:nth-child(5) {
+    display: flex;
+    text-align: center;
+    grid-column-start: 6;
+    grid-column-end: 8;
+
+    & .case_technologies-item__tech-icon {
+      display: inline-block;
+    }
+
+    @media screen and (max-width: 991px) {
+      grid-column-start: inherit;
+      grid-column-end: inherit;
+    }
+  }
+}
+
 </style>
