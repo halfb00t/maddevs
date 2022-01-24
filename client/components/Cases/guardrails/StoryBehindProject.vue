@@ -24,7 +24,7 @@
       performance, that was, to speed up continuous security monitoring and testing, increase the accuracy of
       vulnerability detection, and improve the stability of the app.
     </TextParagraph>
-    <TextParagraph class="m-24_bottom media-m-12_bottom">
+    <TextParagraph class="m-96_bottom media-m-48_bottom">
       By maximising the app’s potential, GuardRails wanted to take their product to a new level. This would
       allow for raising funds and thus increasing the product’s business value to a greater degree.
     </TextParagraph>
