@@ -9,6 +9,9 @@ const props = {
   number: 10,
 
   numberText: '10',
+  textBeforeNumber: 'text',
+  withoutSpaceBeforeNumber: true,
+  withoutSpaceAfterNumber: true,
 
   name: 'USD',
   numberColor: 'rgb(50, 55, 255)',
