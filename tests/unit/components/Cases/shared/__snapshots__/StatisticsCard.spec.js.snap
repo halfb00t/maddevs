@@ -29,17 +29,23 @@ exports[`StatisticsCard component should render correctly 1`] = `
       style="color: rgb(50, 55, 255);"
     >
       <span
+        style="color: rgb(50, 55, 255);"
+      >
+        text
+      </span>
+      <span
         data-end-value="10"
         data-start-value="10"
         id="statistics-test-1"
+        style="color: rgb(50, 55, 255);"
       >
-        
-      10
-    
+        10
       </span>
-      
-    USD
-  
+      <span
+        style="color: rgb(50, 55, 255);"
+      >
+        USD
+      </span>
     </h3>
      
     <p

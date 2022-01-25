@@ -107,35 +107,6 @@ export default {
     &_icon{
       margin-bottom: 5px;
     }
-    &:nth-child(3),&:nth-child(4) {
-      .case_statistics-item_number {
-        & span {
-          padding-left: 15px;
-          position: relative;
-          &:before {
-            content: '~';
-            width: 28px;
-            height: 20px;
-            line-height: 0;
-            position: absolute;
-            top: 24px;
-            left: -15px;
-          }
-          @media screen and (max-width: 900px) {
-            padding-left: 20px;
-            &:before {
-              left: -5px;
-            }
-          }
-          @media screen and (max-width: 820px) {
-            padding-left: 15px;
-            &:before {
-              left: -15px;
-            }
-          }
-        }
-      }
-    }
   }
 }
 </style>

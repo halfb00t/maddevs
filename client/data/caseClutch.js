@@ -164,6 +164,7 @@ export const speedStatistics = [
   {
     numberText: '1',
     number: 10,
+    textBeforeNumber: '≃',
     name: 'second',
     numberColor: '#ffffff',
     headerText: 'First Contentful Paint',
@@ -172,6 +173,7 @@ export const speedStatistics = [
   {
     numberText: '1',
     number: 10,
+    textBeforeNumber: '≃',
     name: 'second',
     numberColor: '#ffffff',
     headerText: 'Speed Index',
@@ -180,6 +182,7 @@ export const speedStatistics = [
   {
     numberText: '1',
     number: 10,
+    textBeforeNumber: '≃',
     name: 'second',
     numberColor: '#ffffff',
     headerText: 'Last Painted Hero',
