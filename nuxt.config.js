@@ -1,263 +1,214 @@
 import { getStoriesPaths } from 'slice-machine-ui/helpers/storybook'
-import getRoutes, { CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
+import getRoutes, { getSitemapRoutes, CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
-import { getSitemapRoutes, SITEMAP_PATHS } from './utils/getSitemap'
 
 require('dotenv').config()
 
-export default async () => {
-  const structuredRoutes = await getSitemapRoutes()
-  return {
-    srcDir: 'client/',
-    target: process.env.NUXT_TARGET || 'server',
-    /*
-     ** Server settings
-     */
-    server: {
-      host: process.env.HOST || '0', // https://debbie.codes/blog/nuxt-configure-server-to-see-site-on-mobile/
-      port: process.env.PORT || 3000,
+module.exports = {
+  srcDir: 'client/',
+  target: process.env.NUXT_TARGET || 'server',
+  /*
+   ** Server settings
+   */
+  server: {
+    host: process.env.HOST || '0', // https://debbie.codes/blog/nuxt-configure-server-to-see-site-on-mobile/
+    port: process.env.PORT || 3000,
+  },
+  /*
+   ** Headers of the page
+   */
+  head: {
+    htmlAttrs: {
+      lang: 'en',
     },
-    /*
-     ** Headers of the page
-     */
-    head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
-      title: 'Mad Devs: Software & Mobile App Development Company',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'yandex-verification', content: '1cce4e9bf6ebcdff' },
-        { name: 'facebook-domain-verification', content: 'gjmbb6g9th5cxl6awr0dx598t7ruz3' },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'sitemap', type: 'application/xml', href: 'https://maddevs.io/sitemapindex.xml' },
-      ],
-      script: [
-        { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver' },
-        { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}` },
-      ],
-    },
-    /*
-     ** Customize the progress bar color
-     */
-    loading: {
-      color: '#ec1c24',
-      height: '2px',
-    },
-    components: true,
-    /*
-     ** Component will be ignored in building
-     */
-    generate: {
-      routes: getRoutes,
-      fallback: '404.html',
-      // TODO enable crawler after removing old levels for urls
-      crawler: false,
-    },
-    css: [
-      {
-        src: '~/assets/styles/index.scss',
-        lang: 'scss',
-      },
-      {
-        src: 'simplebar/dist/simplebar.min.css',
-      },
+    title: 'Mad Devs: Software & Mobile App Development Company',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'yandex-verification', content: '1cce4e9bf6ebcdff' },
+      { name: 'facebook-domain-verification', content: 'gjmbb6g9th5cxl6awr0dx598t7ruz3' },
     ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'sitemap', type: 'application/xml', href: 'https://maddevs.io/sitemap.xml' },
+    ],
+    script: [
+      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver' },
+      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}` },
+    ],
+  },
+  /*
+   ** Customize the progress bar color
+   */
+  loading: {
+    color: '#ec1c24',
+    height: '2px',
+  },
+  components: true,
+  /*
+   ** Component will be ignored in building
+   */
+  generate: {
+    routes: getRoutes,
+    fallback: '404.html',
+    // TODO enable crawler after removing old levels for urls
+    crawler: false,
+  },
+  css: [
+    {
+      src: '~/assets/styles/index.scss',
+      lang: 'scss',
+    },
+    {
+      src: 'simplebar/dist/simplebar.min.css',
+    },
+  ],
+  /*
+   ** Server middlewares
+   */
+  serverMiddleware: [{ path: '/', handler: '~/../server/index.js' }],
+  /*
+   ** Build configuration
+   */
+  build: {
     /*
-     ** Server middlewares
+     ** Run ESLint on save
      */
-    serverMiddleware: [{ path: '/', handler: '~/../server/index.js' }],
-    /*
-     ** Build configuration
-     */
-    build: {
-      /*
-       ** Run ESLint on save
-       */
-      babel: {
-        plugins: [
-          ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+      ],
+    },
+    vendor: ['axios'],
+    transpile: ['swiper', 'dom7', 'vue-slicezone', 'nuxt-sm'],
+    followSymlinks: true,
+    cache: true,
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+          options: {
+            fix: true,
+          },
+        })
+      }
+    },
+  },
+  /*
+  ** Plugins
+  */
+  plugins: [
+    '~/plugins/vuelidate.js',
+    '~/plugins/vue-social-sharing.js',
+    '~/plugins/get-media-from-s3.js',
+    '~/plugins/header-handler.js',
+    '~/plugins/feature-flags.js',
+    '~/plugins/vue-prlx.js',
+    '~/plugins/google-tag-manager-debug.js',
+    { src: '~/plugins/sentry.js', mode: 'client' },
+    { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
+    { src: '~/plugins/vue-parallax', mode: 'client' },
+  ],
+  /*
+  ** Nuxt Modules
+  */
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/robots',
+    '@nuxtjs/prismic',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/gtm',
+    '@nuxtjs/style-resources',
+    ['nuxt-lazy-load', {
+      defaultImage: '/DoNotRemove/nuxt-lazy-load-fallback.svg',
+      directiveOnly: true,
+    },
+    ],
+    [
+      'nuxt-i18n',
+      {
+        strategy: 'prefix_except_default',
+        defaultLocale: 'en',
+        langDir: '~/locales/',
+        locales: [
+          { code: 'ru', iso: 'ru-RU', file: 'ru.json' },
+          { code: 'en', iso: 'en-EN', file: 'en.json' },
         ],
+        detectBrowserLanguage: false,
       },
-      vendor: ['axios'],
-      transpile: ['swiper', 'dom7', 'vue-slicezone', 'nuxt-sm'],
-      followSymlinks: true,
-      cache: true,
-      extend(config, { isDev, isClient }) {
-        if (isDev && isClient) {
-          config.module.rules.push({
-            enforce: 'pre',
-            test: /\.(js|vue)$/,
-            loader: 'eslint-loader',
-            exclude: /(node_modules)/,
-            options: {
-              fix: true,
-            },
-          })
-        }
-      },
-    },
-    /*
-    ** Plugins
-    */
-    plugins: [
-      '~/plugins/vuelidate.js',
-      '~/plugins/vue-social-sharing.js',
-      '~/plugins/get-media-from-s3.js',
-      '~/plugins/header-handler.js',
-      '~/plugins/feature-flags.js',
-      '~/plugins/vue-prlx.js',
-      '~/plugins/google-tag-manager-debug.js',
-      { src: '~/plugins/sentry.js', mode: 'client' },
-      { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
-      { src: '~/plugins/vue-parallax', mode: 'client' },
     ],
-    /*
-    ** Nuxt Modules
-    */
-    modules: [
-      '@nuxtjs/axios',
-      '@nuxtjs/robots',
-      '@nuxtjs/prismic',
-      '@nuxtjs/sitemap',
-      '@nuxtjs/gtm',
-      '@nuxtjs/style-resources',
-      ['nuxt-lazy-load', {
-        defaultImage: '/DoNotRemove/nuxt-lazy-load-fallback.svg',
-        directiveOnly: true,
-      },
-      ],
-      [
-        'nuxt-i18n',
-        {
-          strategy: 'prefix_except_default',
-          defaultLocale: 'en',
-          langDir: '~/locales/',
-          locales: [
-            { code: 'ru', iso: 'ru-RU', file: 'ru.json' },
-            { code: 'en', iso: 'en-EN', file: 'en.json' },
-          ],
-          detectBrowserLanguage: false,
-        },
-      ],
-      ['@nuxtjs/prismic', {
-        endpoint: process.env.NODE_PRISMIC_API,
-      }],
-      ['nuxt-sm'],
-    ],
-    sitemap: {
-      hostname: 'https://maddevs.io',
-      lastmod: new Date().toISOString(),
-      sitemaps: [
-        {
-          path: SITEMAP_PATHS.MAIN,
-          routes: structuredRoutes.main,
-          hostname: 'https://maddevs.io',
-          exclude: ['/**'],
-          gzip: false,
-        },
-        {
-          path: SITEMAP_PATHS.CASES,
-          routes: structuredRoutes.caseStudies,
-          hostname: 'https://maddevs.io',
-          exclude: ['/**'],
-          gzip: false,
-        },
-        {
-          path: SITEMAP_PATHS.INSIGHTS,
-          routes: structuredRoutes.insights,
-          hostname: 'https://maddevs.io',
-          exclude: ['/**'],
-          gzip: false,
-        },
-        {
-          path: SITEMAP_PATHS.BLOG,
-          routes: structuredRoutes.blog,
-          hostname: 'https://maddevs.io',
-          exclude: ['/**'],
-          gzip: false,
-        },
-        {
-          path: SITEMAP_PATHS.AUTHORS,
-          routes: structuredRoutes.authors,
-          hostname: 'https://maddevs.io',
-          exclude: ['/**'],
-          gzip: false,
-        },
-        {
-          path: SITEMAP_PATHS.CAREERS,
-          routes: structuredRoutes.careers,
-          hostname: 'https://maddevs.io',
-          exclude: ['/**'],
-          gzip: false,
-        },
-        {
-          path: SITEMAP_PATHS.SERVICES,
-          routes: structuredRoutes.services,
-          hostname: 'https://maddevs.io',
-          exclude: ['/**'],
-          gzip: false,
-        },
-      ],
-    },
-    axios: {
-      baseURL: '/',
-    },
-    robots: {
-      ...getRobots(process.env.FF_ENVIRONMENT),
-    },
-    prismic: {
+    ['@nuxtjs/prismic', {
       endpoint: process.env.NODE_PRISMIC_API,
-      linkResolver: '@/plugins/link-resolver',
-      htmlSerializer: '@/plugins/html-serializer',
-      preview: false,
+    }],
+    ['nuxt-sm'],
+  ],
+  sitemap: {
+    hostname: 'https://maddevs.io',
+    gzip: false,
+    path: '/sitemap.xml',
+    exclude: ['/**'],
+    routes: async () => {
+      const routes = await getSitemapRoutes()
+      return routes
     },
+  },
+  axios: {
+    baseURL: '/',
+  },
+  robots: {
+    ...getRobots(process.env.FF_ENVIRONMENT),
+  },
+  prismic: {
+    endpoint: process.env.NODE_PRISMIC_API,
+    linkResolver: '@/plugins/link-resolver',
+    htmlSerializer: '@/plugins/html-serializer',
+    preview: false,
+  },
+  gtm: {
+    enabled: true,
+    id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
+    // crossOrigin: true,
+    scriptDefer: true,
+    pageTracking: true,
+  },
+  publicRuntimeConfig: {
     gtm: {
-      enabled: true,
       id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
-      // crossOrigin: true,
-      scriptDefer: true,
-      pageTracking: true,
     },
-    publicRuntimeConfig: {
-      gtm: {
-        id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
-      },
+  },
+  storybook: {
+    stories: [...getStoriesPaths(), '~/prismicSlices/**/*.stories.js', '~/assets/styles/storybook.css'],
+  },
+  ignore: ['**/*.stories.js'],
+  env: {
+    environment: process.env.NODE_ENV,
+    s3PublicUrl: process.env.NODE_S3_PUBLIC_URL,
+    domain: process.env.NODE_DOMAIN,
+    reserveVacancyId: process.env.NODE_HUNTFLOW_RESERVE_VACANCY_ID,
+    emailHR: process.env.NODE_EMAIL_HR,
+    emailCV: process.env.NODE_EMAIL_CV,
+    emailContact: process.env.NODE_EMAIL_CONTACT,
+    emailMarketing: process.env.NODE_EMAIL_MARKETING,
+    sentryDsnFront: process.env.NODE_SENTRY_DSN_FRONT,
+    ffEnvironment: process.env.FF_ENVIRONMENT,
+    prismicApi: process.env.NODE_PRISMIC_API,
+    ipInfoToken: process.env.NODE_IP_INFO_TOKEN,
+    reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
+  },
+  router: {
+    trailingSlash: true,
+    extendRoutes: routes => {
+      routes.push(...CUSTOM_PAGE_ROUTES)
+      return routes
     },
-    storybook: {
-      stories: [...getStoriesPaths(), '~/prismicSlices/**/*.stories.js', '~/assets/styles/storybook.css'],
-    },
-    ignore: ['**/*.stories.js'],
-    env: {
-      environment: process.env.NODE_ENV,
-      s3PublicUrl: process.env.NODE_S3_PUBLIC_URL,
-      domain: process.env.NODE_DOMAIN,
-      reserveVacancyId: process.env.NODE_HUNTFLOW_RESERVE_VACANCY_ID,
-      emailHR: process.env.NODE_EMAIL_HR,
-      emailCV: process.env.NODE_EMAIL_CV,
-      emailContact: process.env.NODE_EMAIL_CONTACT,
-      emailMarketing: process.env.NODE_EMAIL_MARKETING,
-      sentryDsnFront: process.env.NODE_SENTRY_DSN_FRONT,
-      ffEnvironment: process.env.FF_ENVIRONMENT,
-      prismicApi: process.env.NODE_PRISMIC_API,
-      ipInfoToken: process.env.NODE_IP_INFO_TOKEN,
-      reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
-    },
-    router: {
-      trailingSlash: true,
-      extendRoutes: routes => {
-        routes.push(...CUSTOM_PAGE_ROUTES)
-        return routes
-      },
-    },
-    styleResources: {
-      scss: [
-        '~/assets/styles/_vars.scss',
-        '~/assets/styles/_mixins.scss',
-      ],
-    },
-  }
+  },
+  styleResources: {
+    scss: [
+      '~/assets/styles/_vars.scss',
+      '~/assets/styles/_mixins.scss',
+    ],
+  },
 }

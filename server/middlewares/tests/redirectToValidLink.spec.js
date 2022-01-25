@@ -43,10 +43,4 @@ describe('redirectToValidLink', () => {
     redirectToValidLink(req, res, next)
     expect(res.redirect).toHaveBeenCalledWith(301, `https://${req.headers.host}${req.url}/`)
   })
-
-  it('with trailing slash after sitemap will be redirect to url without /````', () => {
-    req.url = '/sitemapindex.xml/'
-    redirectToValidLink(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, `https://${req.headers.host}/sitemapindex.xml`)
-  })
 })
