@@ -1,5 +1,5 @@
 function getSitemap(req, res) {
-  res.sendFile(`${process.cwd()}/sitemapindex.xml`)
+  res.sendFile(`${process.cwd()}/sitemap.xml`)
 }
 
 module.exports = {

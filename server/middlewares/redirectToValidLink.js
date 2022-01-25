@@ -6,13 +6,10 @@ function redirectToValidLink(req, res, next) {
     if (!req.secure) link = `https://${req.headers.host}${req.url}`
   }
 
-  // Skip trailing slash for sitemaps
-  if (req.url.endsWith('.xml/')) res.redirect(301, `https://${req.headers.host}${req.url.slice(0, -1)}`)
-
   // Add trailing slash to the URL if it's missing
   if (req.url.substr(-1) !== '/'
     && req.method === 'GET'
-    && !req.url.endsWith('.xml')
+    && req.url !== '/sitemap.xml'
   ) {
     if (link) {
       link = `${link}/`
