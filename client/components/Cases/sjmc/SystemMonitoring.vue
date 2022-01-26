@@ -24,7 +24,7 @@
     <section class="container_middle m-48_bottom media-m-24_bottom">
       <Swiper
         :components="swiperGrafanaPrometheus"
-        :safari-top-bar="true"
+        :safari-top-bar="false"
         :box-shadow="true"
         safari-top-bar-image="safari-top-bar"
         safari-top-bar-alt="Safari Top Bar."
