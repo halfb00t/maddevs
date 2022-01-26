@@ -114,3 +114,18 @@ export const techStackLanguagesGuardrails = [
     imgAlt: 'Kubernetes',
   },
 ]
+
+export const ProjectsIssuesCards = [
+  {
+    title: 'Lack of integrations with hosting services/git providers',
+    description: 'We have changed the project’s technology stack to unlock pull requests faster after the checks.',
+    color: 'orange-dark',
+    img: 'cards-files',
+  },
+  {
+    title: 'Slow security checks blocking pull requests',
+    description: 'We have changed the project’s technology stack to unlock pull requests faster after the checks.',
+    color: 'outer-space',
+    img: 'cards-keyboard',
+  },
+]
