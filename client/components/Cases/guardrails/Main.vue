@@ -3,6 +3,7 @@
     <About />
     <StoryBehindProject />
     <ProjectIssues />
+    <Dashboard />
   </section>
 </template>
 
@@ -10,6 +11,7 @@
 import About from '@/components/Cases/guardrails/About'
 import StoryBehindProject from '@/components/Cases/guardrails/StoryBehindProject'
 import ProjectIssues from '@/components/Cases/guardrails/ProjectIssues'
+import Dashboard from '@/components/Cases/guardrails/Dashboard'
 
 export default {
   name: 'Main',
@@ -17,6 +19,7 @@ export default {
     About,
     StoryBehindProject,
     ProjectIssues,
+    Dashboard,
   },
 }
 </script>
