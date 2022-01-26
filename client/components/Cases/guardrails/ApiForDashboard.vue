@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="m-96_bottom">
     <div class="container_regular">
       <h2 class="case_title_h2 m-12_bottom">
         Building an API for the dashboard
@@ -33,7 +33,7 @@
         implemented into the GuardRails solution.
       </TextParagraph>
 
-      <blockquote class="case_blockquote-box m-48_bottom">
+      <blockquote class="case_blockquote-box">
         We increased the number of scanning engines from 15 to 25 and the number of programming languages—from 10 to 15.
       </blockquote>
     </div>
