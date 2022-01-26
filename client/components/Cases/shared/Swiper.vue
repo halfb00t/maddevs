@@ -22,6 +22,8 @@
           :key="element.fileName"
         >
           <Picture
+            :width="width"
+            :height="height"
             :folder="element.pictureFolder"
             :file="element.fileName"
             :extension="element.fileExtension"
@@ -106,6 +108,16 @@ export default {
     safariTopBarAlt: {
       type: String,
       default: '',
+    },
+
+    width: {
+      type: Number,
+      required: true,
+    },
+
+    height: {
+      type: Number,
+      required: true,
     },
   },
 
