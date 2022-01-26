@@ -28,6 +28,8 @@
         :box-shadow="true"
         safari-top-bar-image="safari-top-bar"
         safari-top-bar-alt="Safari Top Bar."
+        :width="1026"
+        :height="608"
       />
     </section>
     <section class="container_regular">
