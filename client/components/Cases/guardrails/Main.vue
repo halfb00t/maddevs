@@ -6,6 +6,7 @@
     <Dashboard />
     <ApiForDashboard />
     <CliandKubernetes />
+    <TechnicalAgility />
   </section>
 </template>
 
@@ -16,6 +17,7 @@ import ProjectIssues from '@/components/Cases/guardrails/ProjectIssues'
 import Dashboard from '@/components/Cases/guardrails/Dashboard'
 import ApiForDashboard from '@/components/Cases/guardrails/ApiForDashboard'
 import CliandKubernetes from '@/components/Cases/guardrails/CliandKubernetes'
+import TechnicalAgility from '@/components/Cases/guardrails/TechnicalAgility'
 
 export default {
   name: 'Main',
@@ -26,6 +28,7 @@ export default {
     Dashboard,
     ApiForDashboard,
     CliandKubernetes,
+    TechnicalAgility,
   },
 }
 </script>
