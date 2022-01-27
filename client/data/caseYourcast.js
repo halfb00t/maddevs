@@ -166,3 +166,62 @@ export const posters = [
     href: 'https://commons.wikimedia.org/wiki/File:FINAL_LEGIONARIOsmall.jpg',
   },
 ]
+
+export const projectInNumbersStatistics = [
+  {
+    numberText: '7500',
+    number: 7500,
+    name: '',
+    numberColor: '#7331C6',
+    description: ' viewers in the database ',
+    icon: {
+      name: 'account',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
+  },
+  {
+    numberText: '6000',
+    number: 6000,
+    name: '+',
+    numberColor: '#7331C6',
+    description: 'active / current viewers',
+    icon: {
+      name: 'user_circle',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
+  },
+  {
+    numberText: '500',
+    number: 500,
+    name: '',
+    numberColor: '#7331C6',
+    description: 'viewers per day',
+    icon: {
+      name: 'user_fill_add',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
+  },
+  {
+    numberText: '280',
+    number: 280,
+    name: '-300',
+    numberColor: '#7331C6',
+    description: 'concurrent viewers',
+    icon: {
+      name: 'video_file_fill',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
+  },
+]

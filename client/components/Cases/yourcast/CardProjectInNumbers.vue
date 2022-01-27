@@ -1,107 +1,65 @@
 <template>
-  <div class="card-content">
-    <div class="card-content_column-item">
-      <p class="card-content_title">
-        7500
-      </p>
-      <TextParagraph class="card-content_paragraph">
-        viewers in the <br>
-        database
-      </TextParagraph>
+  <section>
+    <div class="container_full m-48_top media-m-24_top m-48_bottom media-m-24_bottom">
+      <StatisticsContainer
+        :grid="4"
+        class="m-48_bottom"
+      >
+        <StatisticCard
+          v-for="(projectInNumber, i) in projectInNumbersStatistics"
+          :id="`projectInNumbers-item-${i}`"
+          :key="projectInNumber.description"
+          :number="projectInNumber.number"
+          :number-text="projectInNumber.numberText"
+          :name="projectInNumber.name"
+          :number-color="projectInNumber.numberColor"
+          :description="projectInNumber.description"
+          :icon="projectInNumber.icon"
+          section="projectInNumbers"
+          :index="i"
+          :without-space-after-number="true"
+        />
+      </StatisticsContainer>
     </div>
-    <div class="card-content_column-item">
-      <p class="card-content_title">
-        6000+
-      </p>
-      <TextParagraph class="card-content_paragraph">
-        active / current
-        <br>
-        viewers
-      </TextParagraph>
-    </div>
-    <div class="card-content_column-item">
-      <p class="card-content_title">
-        500
-      </p>
-      <TextParagraph class="card-content_paragraph">
-        viewers per day
-      </TextParagraph>
-    </div>
-    <div class="card-content_column-item">
-      <p class="card-content_title">
-        280–300
-      </p>
-      <TextParagraph class="card-content_paragraph">
-        concurrent viewers
-      </TextParagraph>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import TextParagraph from '@/components/Cases/shared/TextParagraph'
+import StatisticsContainer from '@/components/Cases/shared/StatisticsContainer'
+import StatisticCard from '@/components/Cases/shared/StatisticsCard'
+import { projectInNumbersStatistics } from '@/data/caseYourcast'
+import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
+import countUp from '@/helpers/countUp'
 
 export default {
   name: 'CardProjectInNumbers',
   components: {
-    TextParagraph,
+    StatisticsContainer,
+    StatisticCard,
   },
+
+  data() {
+    return {
+      projectInNumbersStatistics,
+    }
+  },
+
+  mixins: [
+    IntersectionObserverMixin(
+      ['statistics-projectInNumbers-1'],
+      countUp,
+    ),
+  ],
 }
 </script>
 
 <style scoped lang="scss">
-.card-content {
-  @include grid(154px 195px 173px 254px, auto, 0, 0);
-
-  &_column-item {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    border-right: 1px solid $border-color--white-03-opacity;
-
-    &:last-child {
-      border-right: none;
-    }
-  }
-
-  &_title,
-  &_paragraph {
-    color: $text-color--white-primary;
-  }
-
-  &_title {
-    @include font('Poppins', 48px, 600);
-    line-height: 62.4px;
-    letter-spacing: -0.02em;
-  }
-
-  &_paragraph {
-    font-size: 17px;
-    line-height: 23px;
-    letter-spacing: -0.035em;
-  }
-
-  @media screen and (max-width: 996px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &_column-item {
-      width: 131px;
-      padding: 20px 0;
-      border-right: none;
-      border-bottom: 1px solid $border-color--white-03-opacity;
-
-      &:first-child {
-        padding-top: 0;
-      }
-
-      &:last-child {
-        width: max-content;
-        padding-bottom: 0;
-        border-bottom: none;
-      }
-    }
+/deep/
+.case_paragraph {
+  font-size: 17px;
+  padding: 0 45px;
+  @media screen and (max-width: 820px) {
+    padding: 0;
   }
 }
 </style>
