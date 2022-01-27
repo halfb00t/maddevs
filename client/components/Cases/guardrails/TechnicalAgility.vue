@@ -10,10 +10,10 @@
         the Mad Devs team came useful, too.
       </TextParagraph>
 
-      <blockquote class="case_blockquote-box">
+      <TextQuoteBox>
         Being technically agile, we can quickly migrate to new platforms and switch to different technologies, adapting
         them to the needs of the project. That can save a customer plenty of time and costs.
-      </blockquote>
+      </TextQuoteBox>
     </div>
     <div class="container_regular">
       <h3 class="case_title_h4 m-12_bottom">
@@ -45,10 +45,10 @@
         to quickly deploy static sites, namely:
       </TextParagraph>
       <!--      todo add block with contentlocker -->
-      <blockquote class="case_blockquote-box">
+      <TextQuoteBox>
         We simply plugged our GitHub repository and added a little configuration; as a result, we had backend and
         frontend being built, deployed, and served in one place.
-      </blockquote>
+      </TextQuoteBox>
     </div>
 
     <div class="container_regular">
@@ -159,12 +159,14 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import LottieMad from '@/components/shared/LottieMad'
+import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 
 export default {
   name: 'TechnicalAgility',
   components: {
     TextParagraph,
     LottieMad,
+    TextQuoteBox,
   },
 
 }
@@ -177,18 +179,7 @@ export default {
     margin-left: auto;
     margin-right: auto;
   }
-  &_blockquote-box {
-    border-left: 2px solid #ec1c24;
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    color: #404143;
-    font-style: italic;
-    line-height: 166%;
-    letter-spacing: -.035em;
-    padding-left: 35px;
-    margin: 0 0 16px;
-  }
+
 }
 </style>
 

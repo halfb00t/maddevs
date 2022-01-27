@@ -33,20 +33,22 @@
         implemented into the GuardRails solution.
       </TextParagraph>
 
-      <blockquote class="case_blockquote-box">
+      <TextQuoteBox>
         We increased the number of scanning engines from 15 to 25 and the number of programming languages—from 10 to 15.
-      </blockquote>
+      </TextQuoteBox>
     </div>
   </div>
 </template>
 
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
+import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 
 export default {
   name: 'APIforDashboard',
   components: {
     TextParagraph,
+    TextQuoteBox,
   },
 }
 </script>
@@ -60,18 +62,6 @@ export default {
     margin-right: auto;
   }
 
-  &_blockquote-box {
-    border-left: 2px solid #ec1c24;
-    font-family: "Inter", sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    color: #404143;
-    font-style: italic;
-    line-height: 166%;
-    letter-spacing: -.035em;
-    padding-left: 35px;
-    margin: 0 0 16px;
-  }
 }
 
 </style>
