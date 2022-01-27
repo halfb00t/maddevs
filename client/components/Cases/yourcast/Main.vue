@@ -3,7 +3,6 @@
     <AboutYourcast id="case-first-section" />
     <ProjectInNumbers />
     <SupportedGadgets />
-    <Technologies />
     <KeyProjectMilestones />
     <PhaseOnlineCinema />
     <PhaseLiveStreamingTechnology />
@@ -12,6 +11,7 @@
     <PhaseUserAuthorisation />
     <WatchWhatYouLikeVideo />
     <PlansForSimilarProjects />
+    <Technologies />
     <Team />
   </section>
 </template>
