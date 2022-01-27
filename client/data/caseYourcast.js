@@ -1,27 +1,27 @@
 export const supportedGadgets = [
   {
-    title: 'Laptops',
-    width: 735,
-    height: 449,
-    file: 'macbook-pro',
-    alt: 'OTT-like Online Video Streaming Platform on MacBook Pro Laptop.',
-    color: 'purple-medium',
-  },
-  {
     title: 'Smartphones',
-    width: 312,
-    height: 627,
-    file: 'iphonex',
+    width: 364,
+    height: 413,
+    file: 'iphone-x-mockup-smartphones',
     alt: 'OTT-like Online Video Streaming Platform on IPhone X Smartphone.',
-    color: 'black-primary-bg',
+    color: 'dark-purple06',
   },
   {
     title: 'Tablets',
-    width: 518,
-    height: 374,
-    file: 'ipad-pro',
+    width: 368,
+    height: 415,
+    file: 'ipad-pro-11-inch-tablets',
     alt: 'OTT-like Online Video Streaming Platform on IPad Tablet.',
-    color: 'purple-dark',
+    color: 'dark-purple05',
+  },
+  {
+    title: 'Laptops',
+    width: 773,
+    height: 257,
+    file: 'macbook-pro-laptops',
+    alt: 'OTT-like Online Video Streaming Platform on MacBook Pro Laptop.',
+    color: 'dark-purple04',
   },
 ]
 
