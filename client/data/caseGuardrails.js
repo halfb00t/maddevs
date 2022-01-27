@@ -129,3 +129,47 @@ export const ProjectsIssuesCards = [
     img: 'cards-keyboard',
   },
 ]
+
+export const ResultStatistics = {
+  sdg: {
+    numberText: '0',
+    number: 1,
+    name: 'million',
+    textBeforeNumber: '',
+    numberColor: '#FF5A00',
+  },
+  usd: {
+    numberText: '0',
+    number: 740,
+    name: 'K',
+    textBeforeNumber: '(~',
+    numberColor: '#FF5A00',
+    description: 'was received by GuardRails in 2019 from Cocoon Capital, an early-stage venture capital firm investing in enterprise tech across Southeast Asia.',
+  },
+  time1: {
+    numberText: '0',
+    number: 2,
+    name: 's',
+    numberColor: '#FF5A00',
+  },
+  time2: {
+    numberText: '0',
+    number: 200,
+    name: '-',
+    withoutSpaceAfterNumber: true,
+    numberColor: '#FF5A00',
+  },
+  time3: {
+    numberText: '0',
+    number: 400,
+    name: 'ms',
+    withoutSpaceBeforeNumber: true,
+    numberColor: '#FF5A00',
+  },
+  time4: {
+    numberText: '0',
+    number: 30,
+    name: 'ms',
+    numberColor: '#FF5A00',
+  },
+}

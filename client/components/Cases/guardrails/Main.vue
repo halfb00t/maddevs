@@ -8,6 +8,7 @@
     <CliandKubernetes />
     <TechnicalAgility />
     <AgilityIsKey />
+    <ResultsAndAchievements />
   </section>
 </template>
 
@@ -20,6 +21,9 @@ import ApiForDashboard from '@/components/Cases/guardrails/ApiForDashboard'
 import CliandKubernetes from '@/components/Cases/guardrails/CliandKubernetes'
 import TechnicalAgility from '@/components/Cases/guardrails/TechnicalAgility'
 import AgilityIsKey from '@/components/Cases/guardrails/AgilityIsKey'
+import ResultsAndAchievements from '@/components/Cases/guardrails/ResultsAndAchievements'
+import countUp from '@/helpers/countUp'
+import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 
 export default {
   name: 'Main',
@@ -32,6 +36,15 @@ export default {
     CliandKubernetes,
     TechnicalAgility,
     AgilityIsKey,
+    ResultsAndAchievements,
   },
+
+  mixins: [
+    IntersectionObserverMixin(
+      ['usd', 'sgd', 'time1', 'time2', 'time3', 'time4'],
+      countUp,
+    ),
+  ],
 }
+
 </script>
