@@ -7,6 +7,7 @@
     <ApiForDashboard />
     <CliandKubernetes />
     <TechnicalAgility />
+    <AgilityIsKey />
   </section>
 </template>
 
@@ -18,6 +19,7 @@ import Dashboard from '@/components/Cases/guardrails/Dashboard'
 import ApiForDashboard from '@/components/Cases/guardrails/ApiForDashboard'
 import CliandKubernetes from '@/components/Cases/guardrails/CliandKubernetes'
 import TechnicalAgility from '@/components/Cases/guardrails/TechnicalAgility'
+import AgilityIsKey from '@/components/Cases/guardrails/AgilityIsKey'
 
 export default {
   name: 'Main',
@@ -29,6 +31,7 @@ export default {
     ApiForDashboard,
     CliandKubernetes,
     TechnicalAgility,
+    AgilityIsKey,
   },
 }
 </script>
