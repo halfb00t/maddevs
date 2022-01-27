@@ -126,6 +126,7 @@ export default {
     font-style: italic;
     line-height: 166%;
     letter-spacing: -0.035em;
+    margin-top: 8px;
   }
 
   /deep/
