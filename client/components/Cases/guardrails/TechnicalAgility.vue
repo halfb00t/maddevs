@@ -78,7 +78,7 @@
       </div>
       <!--     todo this component has bug with scrolling - need refactoring -->
 
-      <TextQuoteBox>
+      <TextQuoteBox class="m-48_bottom">
         We simply plugged our GitHub repository and added a little configuration; as a result, we had backend and
         frontend being built, deployed, and served in one place.
       </TextQuoteBox>
