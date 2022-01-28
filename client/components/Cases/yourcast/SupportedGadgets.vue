@@ -74,16 +74,32 @@ export default {
 .case {
   &_card {
     padding: 32px 8px 0 32px;
+    position: relative;
+    @media screen and (max-width: 720px) {
+      grid-column: 1 / 3;
+    }
+    &-title {
+      color: $text-color--white;
+    }
     &-img {
+      position: relative;
       min-width: 368px;
       left: 52%;
+      transform: translateX(-50%);
     }
   }
   &_card:nth-child(2) {
-    padding-left: 20px;
+    padding-left: 28px;
   }
-  &_card:nth-child(3) .case_card-img {
-    padding: 0;
+  &_card:nth-child(3) {
+    grid-column: 1 / 3;
+    text-align: center;
+    &-img {
+      padding: 0;
+    }
+  }
+  &_cards-group {
+    @include grid(repeat(2, 1fr), auto, 25px, 25px);
   }
 }
 
@@ -96,56 +112,4 @@ export default {
 .background-color-dark-purple04 {
   background: $bgcolor--dark-purple04-opacity;
 }
-//.case {
-//  &_supported-gadgets {
-//    @include grid(repeat(3, 1fr), auto, 15px, 0);
-//
-//    @media screen and (max-width: 870px) {
-//      @include grid(repeat(1, 1fr), auto, 0, 10px);
-//    }
-//  }
-//}
-//.case {
-//  &_card {
-//    padding-bottom: 0;
-//    background: rgba(48, 148, 171, 0.3);
-//    &:nth-child(3){
-//      text-align: center;
-//      grid-column-start: span 2;
-//      .case_card-img{
-//        padding: 0 30px;
-//      }
-//    }
-//  }
-//
-//  &_cards-group {
-//    @include grid(repeat(2, 1fr), auto, 23px, 23px);
-//  }
-//
-//  &_card-title {
-//    color: $text-color--white;
-//  }
-//
-//  &_card-img {
-//    min-width: 313px;
-//    position: relative;
-//    left: 50%;
-//    transform: translateX(-50%);
-//    @media screen and (max-width: 990px) {
-//      min-width: 200px
-//    }
-//  }
-//
-//  @media screen and (max-width: 720px) {
-//    & &_card {
-//      grid-column-start: span 1;
-//      &:nth-child(3) {
-//        text-align: left;
-//      }
-//    }
-//    &_cards-group {
-//      @include grid(repeat(1, 1fr), auto, 0, 24px);
-//    }
-//  }
-//}
 </style>
