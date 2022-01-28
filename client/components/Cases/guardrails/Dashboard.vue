@@ -32,7 +32,7 @@
         <div class="case_image-wrap">
           <Picture
             folder="guardrails"
-            file="dashboard-group"
+            file="dashboard-group-v2"
             extension="png"
             alt="Dashboard version 1"
             :width="1440"
@@ -107,10 +107,10 @@ export default {
 <style lang="scss" scoped>
 .case {
   &_container {
-    max-height: 762px;
+    max-height: 482px;
     overflow: hidden;
     @media screen and (max-width: 768px) {
-      max-height: 732px;
+      max-height: 276px;
     }
   }
 
@@ -120,19 +120,24 @@ export default {
     margin-right: auto;
   }
   &_image-wrap {
-    min-width: 3028px;
-    max-width: 3028px;
+    min-width: 3450px;
+    max-width: 3450px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 
-    @media screen and (max-width: 870px) {
+    @media screen and (max-width: 1024px) {
       left: unset;
-      right: 1086px;
+      right: 1220px;
       transform: none;
+    }
+    @media screen and (max-width: 768px) {
+      min-width: 2600px;
+      max-width: 2600px;
+      right: 918px;
+
     }
   }
 }
 
 </style>
-<!--todo refactor 122 line and change the image on s3-->
