@@ -220,69 +220,83 @@ export const technologies = [
     imgAlt: 'PHP',
   },
   {
-    name: 'apple',
-    alt: 'Gitlab',
-    imgAlt: 'Gitlab',
+    name: 'semantic-ui',
+    alt: 'Semantic UI',
+    imgAlt: 'Semantic UI',
   },
   {
     name: 'typescript',
-    alt: 'Ruby',
-    imgAlt: 'Ruby',
+    alt: 'TypeScript ',
+    imgAlt: 'TypeScript ',
   },
   {
     name: 'kubernetes',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    alt: 'Kubernetes',
+    imgAlt: 'Kubernetes',
   },
   {
-    name: 'docker',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    name: 'docker-v2',
+    alt: 'Docker',
+    imgAlt: 'Docker',
   },
   {
-    name: 'apple',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    name: 'couch-db',
+    alt: 'CouchDB',
+    imgAlt: 'CouchDB',
   },
   {
-    name: 'apple',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    name: 'serverless',
+    alt: 'Serverless',
+    imgAlt: 'Serverless',
   },
   {
-    name: 'apple',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    name: 'netlify-v2',
+    alt: 'Netlify',
+    imgAlt: 'Netlify',
   },
   {
     name: 'postgresql',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    alt: 'PostgreSQL',
+    imgAlt: 'PostgreSQL',
   },
   {
-    name: 'apple',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    name: 'graph-ql',
+    alt: 'GraphQL',
+    imgAlt: 'GraphQL',
   },
   {
-    name: 'apple',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    name: 'rabbit-mq',
+    alt: 'RabbitMQ',
+    imgAlt: 'RabbitMQ',
   },
   {
     name: 'aws-second-logo',
-    alt: 'Vue.js',
-    imgAlt: 'Vue.js',
+    alt: 'Amazon Web Services',
+    imgAlt: 'Amazon Web Services',
   },
 
 ]
 
 export const team = [
   {
-    name: 'Oleg Katkov',
-    position: 'Backend Developer',
+    name: 'Emir Sabyrkulov',
+    position: 'Full-Stack Developer',
     image: {
-      file: 'oleg-katkov',
+      file: 'emir-sabyrkulov',
+    },
+  },
+  {
+    name: 'Marat Bediev',
+    position: 'Full-Stack Developer',
+    image: {
+      file: 'marat-bediev',
+    },
+  },
+  {
+    name: 'Zhanyl Turtemirova',
+    position: 'Full-Stack Developer',
+    image: {
+      file: 'zhanyl-turtemirova',
     },
   },
 ]
