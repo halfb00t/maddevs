@@ -70,10 +70,10 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                   <img
                     alt="Device perfection"
                     class="image"
-                    data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
                     height="0"
+                    src="img.jpg"
                     width="0"
                   />
                 </picture>
@@ -99,10 +99,10 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                   <img
                     alt="Device perfection"
                     class="image"
-                    data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
                     height="0"
+                    src="img.jpg"
                     width="0"
                   />
                 </picture>
@@ -128,10 +128,10 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                   <img
                     alt="Device perfection"
                     class="image"
-                    data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
                     height="0"
+                    src="img.jpg"
                     width="0"
                   />
                 </picture>
@@ -175,10 +175,10 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                 <img
                   alt="Device perfection"
                   class="image"
-                  data-src="img.jpg"
                   data-srcset="img.jpg"
                   data-testid="test-picture-img"
                   height="0"
+                  src="img.jpg"
                   width="0"
                 />
               </picture>
@@ -196,10 +196,10 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                 <img
                   alt="Device perfection"
                   class="image"
-                  data-src="img.jpg"
                   data-srcset="img.jpg"
                   data-testid="test-picture-img"
                   height="0"
+                  src="img.jpg"
                   width="0"
                 />
               </picture>
@@ -217,10 +217,10 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                 <img
                   alt="Device perfection"
                   class="image"
-                  data-src="img.jpg"
                   data-srcset="img.jpg"
                   data-testid="test-picture-img"
                   height="0"
+                  src="img.jpg"
                   width="0"
                 />
               </picture>

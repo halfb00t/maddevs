@@ -74,10 +74,10 @@ exports[`Microservices component should render correctly 1`] = `
               <img
                 alt="SSO"
                 class="image"
-                data-src="img.jpg"
                 data-srcset="img.jpg"
                 data-testid="test-picture-img"
                 height="695"
+                src="img.jpg"
                 width="359"
               />
             </picture>

@@ -60,10 +60,10 @@ exports[`OngoingProgress component should render correctly 1`] = `
                   <img
                     alt="Ongoing progress"
                     class="image"
-                    data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
                     height="0"
+                    src="img.jpg"
                     width="0"
                   />
                 </picture>
@@ -89,10 +89,10 @@ exports[`OngoingProgress component should render correctly 1`] = `
                   <img
                     alt="Ongoing progress"
                     class="image"
-                    data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
                     height="0"
+                    src="img.jpg"
                     width="0"
                   />
                 </picture>
@@ -136,10 +136,10 @@ exports[`OngoingProgress component should render correctly 1`] = `
                 <img
                   alt="Ongoing progress"
                   class="image"
-                  data-src="img.jpg"
                   data-srcset="img.jpg"
                   data-testid="test-picture-img"
                   height="0"
+                  src="img.jpg"
                   width="0"
                 />
               </picture>
@@ -157,10 +157,10 @@ exports[`OngoingProgress component should render correctly 1`] = `
                 <img
                   alt="Ongoing progress"
                   class="image"
-                  data-src="img.jpg"
                   data-srcset="img.jpg"
                   data-testid="test-picture-img"
                   height="0"
+                  src="img.jpg"
                   width="0"
                 />
               </picture>
