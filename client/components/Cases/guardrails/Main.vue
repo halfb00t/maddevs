@@ -9,6 +9,8 @@
     <TechnicalAgility />
     <AgilityIsKey />
     <ResultsAndAchievements />
+    <Technologies />
+    <Team />
   </section>
 </template>
 
@@ -22,6 +24,8 @@ import CliandKubernetes from '@/components/Cases/guardrails/CliandKubernetes'
 import TechnicalAgility from '@/components/Cases/guardrails/TechnicalAgility'
 import AgilityIsKey from '@/components/Cases/guardrails/AgilityIsKey'
 import ResultsAndAchievements from '@/components/Cases/guardrails/ResultsAndAchievements'
+import Technologies from '@/components/Cases/guardrails/Technologies'
+import Team from '@/components/Cases/guardrails/Team'
 import countUp from '@/helpers/countUp'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 
@@ -37,6 +41,8 @@ export default {
     TechnicalAgility,
     AgilityIsKey,
     ResultsAndAchievements,
+    Technologies,
+    Team,
   },
 
   mixins: [
