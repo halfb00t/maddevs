@@ -130,6 +130,35 @@ export const ProjectsIssuesCards = [
   },
 ]
 
+export const TechnicalAgilityNetlify = [
+  {
+    icon: 'tech-agility-1',
+    description: 'Automated builds for Git',
+    alt: 'Netlify technology',
+  },
+  {
+    icon: 'tech-agility-3',
+    description: 'Version history',
+    alt: 'Netlify technology',
+  },
+  {
+    icon: 'tech-agility-2',
+    description: 'PR previews',
+    alt: 'Netlify technology',
+  },
+  {
+    icon: 'tech-agility-4',
+    description: 'CDN serving your website ',
+    alt: 'Netlify technology',
+  },
+  {
+    icon: 'tech-agility-5',
+    description: 'Serverless functions',
+    alt: 'Netlify technology',
+  },
+
+]
+
 export const ResultStatistics = {
   sdg: {
     numberText: '0',
@@ -173,3 +202,87 @@ export const ResultStatistics = {
     numberColor: '#FF5A00',
   },
 }
+
+export const technologies = [
+  {
+    name: 'js',
+    alt: 'JavaScript',
+    imgAlt: 'JavaScript',
+  },
+  {
+    name: 'node',
+    alt: 'Node.js',
+    imgAlt: 'Node.js',
+  },
+  {
+    name: 'php',
+    alt: 'PHP',
+    imgAlt: 'PHP',
+  },
+  {
+    name: 'apple',
+    alt: 'Gitlab',
+    imgAlt: 'Gitlab',
+  },
+  {
+    name: 'typescript',
+    alt: 'Ruby',
+    imgAlt: 'Ruby',
+  },
+  {
+    name: 'kubernetes',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'docker',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'apple',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'apple',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'apple',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'postgresql',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'apple',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'apple',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+  {
+    name: 'aws-second-logo',
+    alt: 'Vue.js',
+    imgAlt: 'Vue.js',
+  },
+
+]
+
+export const team = [
+  {
+    name: 'Oleg Katkov',
+    position: 'Backend Developer',
+    image: {
+      file: 'oleg-katkov',
+    },
+  },
+]

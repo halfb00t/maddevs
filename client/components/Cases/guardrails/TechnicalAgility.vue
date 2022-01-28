@@ -31,20 +31,53 @@
       </TextParagraph>
     </div>
     <div class="container_regular">
-      <h3 class="case_title_h4 m-12_bottom">
+      <h3
+        v-prlx="TechnicalAgilityTextAnimation"
+        class="case_title_h4 m-12_bottom"
+      >
         Netlify
       </h3>
-      <TextParagraph class="m-48_bottom">
+      <TextParagraph
+        v-prlx="TechnicalAgilityTextAnimation"
+        class="m-48_bottom"
+      >
         The CI/CD method is very important in app development as it automates the building, testing, and deployment
         processes. This allows developers to add new features and updates and immediately deliver them to the app users.
         Thus, CI/CD helps to derive benefits even from a simple prototype with some basic functionality.
       </TextParagraph>
-      <TextParagraph class="m-48_bottom">
+      <TextParagraph
+        v-prlx="TechnicalAgilityTextAnimation"
+        class="m-48_bottom"
+      >
         Netlify is a helpful tool that supports CI/CD and automatically builds and deploys the app changes. The
         GuardRails app’s dashboard was basically static files that had to be served, and Netlify had everything needed
         to quickly deploy static sites, namely:
       </TextParagraph>
-      <!--      todo add block with contentlocker -->
+
+      <!--     todo this component has bug with scrolling - need refactoring -->
+      <div class="case_cards-container">
+        <div class="case_column">
+          <CardTechSolution
+            v-for="result in TechnicalAgilityNetlify.slice(0, 2)"
+            v-bind="result"
+            :key="`guardrails-${result.icon}`"
+            folder="guardrails"
+          />
+        </div>
+        <div
+          v-prlx="TechnicalAgilityCardsAnimation"
+          class="case_column"
+        >
+          <CardTechSolution
+            v-for="result in TechnicalAgilityNetlify.slice(2, 6)"
+            v-bind="result"
+            :key="`guardrails-${result.icon}`"
+            folder="guardrails"
+          />
+        </div>
+      </div>
+      <!--     todo this component has bug with scrolling - need refactoring -->
+
       <TextQuoteBox>
         We simply plugged our GitHub repository and added a little configuration; as a result, we had backend and
         frontend being built, deployed, and served in one place.
@@ -142,7 +175,8 @@
         to the new stack
       </h3>
       <TextParagraph class="m-48_bottom">
-        Our workflow is thoroughly collaborative and transparent. The various tools we employ help us make sure that everyone on the team is on the same page, that tasks get properly tracked and finalised on time,
+        Our workflow is thoroughly collaborative and transparent. The various tools we employ help us make sure that
+        everyone on the team is on the same page, that tasks get properly tracked and finalised on time,
         and that issues are quickly spotted and resolved.
       </TextParagraph>
       <!-- todo add correct size to animation and bg-->
@@ -160,6 +194,8 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import LottieMad from '@/components/shared/LottieMad'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
+import CardTechSolution from '@/components/Cases/shared/CardTechSolution'
+import { TechnicalAgilityNetlify } from '@/data/caseGuardrails'
 
 export default {
   name: 'TechnicalAgility',
@@ -167,6 +203,38 @@ export default {
     TextParagraph,
     LottieMad,
     TextQuoteBox,
+    CardTechSolution,
+  },
+
+  data() {
+    return {
+      TechnicalAgilityNetlify,
+      TechnicalAgilityTextAnimation: {
+        direction: 'y',
+        speed: 0.1,
+        fromBottom: false,
+        reverse: true,
+        limit: {
+          min: -56,
+          max: 56,
+        },
+
+        mobileMaxWidth: 977,
+      },
+
+      TechnicalAgilityCardsAnimation: {
+        direction: 'y',
+        speed: 0.3,
+        fromBottom: false,
+        reverse: true,
+        limit: {
+          min: -179,
+          max: 56,
+        },
+
+        mobileMaxWidth: 977,
+      },
+    }
   },
 
 }
@@ -180,7 +248,35 @@ export default {
     margin-right: auto;
   }
 
+  &_cards-container {
+    @include grid(repeat(2, 1fr), auto, 24px, 0);
+  }
+
+  &_column {
+    @include grid(repeat(1, 1fr), repeat(4, minmax(min-content, max-content)), 0, 24px);
+
+    ::v-deep {
+      .card-content {
+        align-self: start;
+      }
+    }
+  }
+
+  @media screen and (max-width: 976px) {
+    &_cards-container {
+      margin-bottom: 96px;
+      @include grid(repeat(1, 1fr), auto, 0, 10px);
+    }
+
+    &_column {
+      grid-row-gap: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &_cards-container {
+      margin-bottom: 48px;
+    }
+  }
+
 }
 </style>
-
-<!-- todo remove /lottie/cases from aws -->
