@@ -47,8 +47,6 @@ exports[`Swift component should render correctly 1`] = `
                   extension="jpg"
                   file="admin"
                   folder="nambafood"
-                  height="490"
-                  width="1026"
                 />
                  
                 <!---->
@@ -61,8 +59,6 @@ exports[`Swift component should render correctly 1`] = `
                   extension="jpg"
                   file="dashboard"
                   folder="nambafood"
-                  height="490"
-                  width="1026"
                 />
                  
                 <!---->

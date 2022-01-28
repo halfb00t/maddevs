@@ -63,8 +63,8 @@ exports[`OngoingProgress component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="490"
-                    width="1026"
+                    height="0"
+                    width="0"
                   />
                 </picture>
                  
@@ -92,8 +92,8 @@ exports[`OngoingProgress component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="490"
-                    width="1026"
+                    height="0"
+                    width="0"
                   />
                 </picture>
                  
