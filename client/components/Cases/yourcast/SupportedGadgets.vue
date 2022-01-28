@@ -48,7 +48,6 @@
 
 <script>
 import Card from '@/components/Cases/shared/Card'
-// import CardSupportedGadgets from '@/components/Cases/yourcast/CardSupportedGadgets'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import { supportedGadgets } from '@/data/caseYourcast'
 import Picture from '@/components/Cases/shared/Picture'
@@ -57,7 +56,6 @@ export default {
   name: 'SupportedGadgets',
   components: {
     Card,
-    // CardSupportedGadgets,
     TextParagraph,
     Picture,
   },
