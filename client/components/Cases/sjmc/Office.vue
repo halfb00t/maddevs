@@ -20,6 +20,8 @@
         :components="swiperOfficeTeam"
         :safari-top-bar="false"
         :box-shadow="false"
+        :width="1440"
+        :height="661"
       />
     </section>
   </section>

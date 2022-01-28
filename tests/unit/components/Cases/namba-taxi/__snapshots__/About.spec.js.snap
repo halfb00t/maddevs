@@ -61,6 +61,8 @@ exports[`About component should render correctly 1`] = `
             numbertext="700"
             section="about"
             tag="p"
+            textbeforenumber="~"
+            withoutspacebeforenumber="true"
           />
           <statisticcard-stub
             description="trips per day"
@@ -72,6 +74,8 @@ exports[`About component should render correctly 1`] = `
             numbertext="10,000"
             section="about"
             tag="p"
+            textbeforenumber="~"
+            withoutspacebeforenumber="true"
           />
         </div>
          

@@ -104,6 +104,8 @@ export const aboutStatistics = [
   {
     numberText: '700',
     number: 700,
+    textBeforeNumber: '~',
+    withoutSpaceBeforeNumber: true,
     numberColor: '#008fc5',
     description: 'drivers',
     icon: {
@@ -117,6 +119,8 @@ export const aboutStatistics = [
   {
     numberText: '10,000',
     number: 10000,
+    textBeforeNumber: '~',
+    withoutSpaceBeforeNumber: true,
     numberColor: '#008fc5',
     description: 'trips per day',
     icon: {
