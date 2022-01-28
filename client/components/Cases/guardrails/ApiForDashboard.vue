@@ -15,9 +15,9 @@
       <div class="case-image-wrapper m-96_bottom">
         <img
           v-lazy-load
-          :data-src="$getMediaFromS3('/images/Cases/guardrails/png/dashboard-api.png')"
+          :data-src="$getMediaFromS3('/images/Cases/guardrails/png/dashboard-api-v2.png')"
           alt="Dashboard version 2"
-          class="case-guardrails-image"
+          class="case-image-wrapper__image"
         >
       </div>
     </div>
@@ -54,14 +54,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.case {
 
-  &-guardrails-image {
+.case-image-wrapper{
+  padding: 0 25px;
+  &__image{
+    width: 100%;
+    height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    max-width: 1028px;
+    filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.05)) drop-shadow(0px 5.47001px 41.35px rgba(0, 0, 0, 0.1));
   }
-
 }
 
 </style>

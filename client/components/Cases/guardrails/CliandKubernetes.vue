@@ -19,17 +19,17 @@
           v-lazy-load
           :data-src="$getMediaFromS3('/images/Cases/guardrails/png/cli.png')"
           alt="Guardrails CLI"
-          class="case-guardrails-image"
+          class="case-image-wrapper__image"
         >
       </div>
     </div>
 
-    <div class="container_regular">
+    <div class="container_regular m-96_bottom">
       <h2 class="case_title_h2 m-12_bottom">
         Availability in Kubernetes & Enterprise version
       </h2>
 
-      <TextParagraph class="m-48_bottom">
+      <TextParagraph>
         Mad Devs helped to develop an on-premise version of the app, which could fully meet the needs of GuardRails’
         enterprise customers, ensuring the security of their data. We also assisted with the creation of multiple
         options for deployment, including Kubernetes. Adopting Kubernetes expedited the deployment and scaling of the
@@ -51,11 +51,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.case {
-  &-guardrails-image {
+.case-image-wrapper{
+  padding: 0 25px;
+  &__image{
+    width: 100%;
+    height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    max-width: 1028px;
+    filter: drop-shadow(0px 2px 7px rgba(0, 0, 0, 0.05)) drop-shadow(0px 5.47001px 41.35px rgba(0, 0, 0, 0.1));
   }
 }
 
