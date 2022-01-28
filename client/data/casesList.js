@@ -168,5 +168,21 @@ export const casesList = [
       file: 'nambataxi',
       alt: 'nambataxi logo',
     },
+  }, {
+    width: 'full',
+    id: 'guardrails',
+    link: '/case-studies/guardrails/',
+    video: '/videos/guardrails-banner.mp4',
+    subtitle: 'finance',
+    title: 'Enhancing the GuardRails solution',
+    desc: 'Mad Devs assisted GuardRails an application security platform to advance their product and increase its business value.',
+    poster: '/images/Cases/guardrails/png/guardrails-banner.png',
+    logo: {
+      width: 105,
+      height: 67,
+      folder: 'guardrails',
+      file: 'guardrails-logo',
+      alt: 'Guardrails logo',
+    },
   },
 ]
