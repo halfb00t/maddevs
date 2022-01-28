@@ -20,7 +20,7 @@
         Instead of the standard Agile, GuardRails uses the Shape Up methodology. This facilitates building a meaningful
         product in a short time by giving a development team much freedom in their work.
       </TextParagraph>
-      <TextQuoteBox>
+      <TextQuoteBox class="m-72_bottom">
         Shape Up is about increasing the team’s freedom and motivation. We
         switched to Shape Up in days to ensure maximum convenience to the customer
       </TextQuoteBox>
@@ -36,13 +36,15 @@
         on time.
       </TextParagraph>
     </div>
-    <div class="container_regular">
-      <LottieMad
-        class="case_lottie"
-        height="670px"
-        :lottie-link="$getMediaFromS3(`/images/Cases/guardrails/lottie/workflow-methodology.json`)"
-        :autoplay="true"
-      />
+    <div class="case-lottie-wrapper background-color-outer-space m-48_bottom">
+      <div class="container_regular">
+        <LottieMad
+          class="case_lottie"
+          height="329"
+          :lottie-link="$getMediaFromS3(`/images/Cases/guardrails/lottie/workflow-methodology.json`)"
+          :autoplay="true"
+        />
+      </div>
     </div>
     <div class="container_regular">
       <TextParagraph class="m-24_bottom">
@@ -67,7 +69,6 @@
       </TextParagraph>
 
       <TextParagraph class="case_paragraph--bold m-24_bottom">
-        <!--todo this text in design is 500 weight but its not working in site-->
         Being agile in project management, communication, and software development, the
         Mad Devs team managed to deliver the GuardRails project on time and in accordance with the customer
         expectations.
@@ -108,9 +109,10 @@ export default {
 
 <style lang="scss" scoped>
 .case {
-  &-case_paragraph--bold{
+  &-case_paragraph--bold {
     font-weight: 500;
   }
+
   &-guardrails-image {
     display: block;
     margin-left: auto;
@@ -128,7 +130,9 @@ export default {
     letter-spacing: -0.035em;
     margin-top: 8px;
   }
-
+  &-lottie-wrapper{
+    padding: 80px 0;
+  }
   /deep/
   &_blockquote {
     font-size: 18px;
