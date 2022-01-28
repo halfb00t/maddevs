@@ -1,6 +1,6 @@
 <template>
   <div class="m-96_bottom">
-    <div class="container_regular">
+    <div class="container_regular m-48_bottom">
       <h2 class="case_title_h2 m-12_bottom">
         Technical agility
       </h2>
@@ -144,13 +144,20 @@
         for better scalability.
         <!--      todo check this text. its duplicated-->
       </TextParagraph>
-      <LottieMad
-        class="case_lottie"
-        height="670px"
-        :lottie-link="$getMediaFromS3(`/images/Cases/guardrails/lottie/implemented-ad-service.json`)"
-        :autoplay="true"
-      />
-      <!-- todo add correct size to animation and bg-->
+    </div>
+
+    <div class="case-lottie-wrapper--ad-service background-color-outer-space">
+      <div class="container_regular">
+        <LottieMad
+          class="case_lottie"
+          height="477px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/guardrails/lottie/implemented-ad-service.json`)"
+          :autoplay="true"
+        />
+      </div>
+    </div>
+
+    <div class="container_regular">
       <TextParagraph class="m-48_bottom">
         First, GuardRails was hosted on Google Cloud Platform with their app running on Docker Swarm. To reduce expenses
         related to cloud resource consumption, we migrated the customer to AWS using Kubernetes.
@@ -179,13 +186,16 @@
         everyone on the team is on the same page, that tasks get properly tracked and finalised on time,
         and that issues are quickly spotted and resolved.
       </TextParagraph>
-      <!-- todo add correct size to animation and bg-->
-      <LottieMad
-        class="case_lottie"
-        height="670px"
-        :lottie-link="$getMediaFromS3(`/images/Cases/guardrails/lottie/architecture.json`)"
-        :autoplay="true"
-      />
+    </div>
+    <div class="case-lottie-wrapper background-color-outer-space">
+      <div class="container_regular">
+        <LottieMad
+          class="case_lottie"
+          height="740px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/guardrails/lottie/architecture.json`)"
+          :autoplay="true"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -246,6 +256,12 @@ export default {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  &-lottie-wrapper{
+    &--ad-service{
+      padding: 42px 0 37px;
+      margin-bottom: 36px;
+    }
   }
 
   &_cards-container {
