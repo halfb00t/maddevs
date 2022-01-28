@@ -64,12 +64,12 @@
       </TextParagraph>
     </div>
     <div class="container_full">
-      <div class="case-image-wrapper m-96_bottom">
+      <div class="case-image-wrapper dashboard__image__wrapper m-96_bottom">
         <img
           v-lazy-load
           :data-src="$getMediaFromS3('/images/Cases/guardrails/png/dashboard-v2.png')"
           alt="Dashboard version 2"
-          class="case-guardrails-image"
+          class="image dashboard__image case-guardrails-image"
         >
       </div>
     </div>
@@ -105,6 +105,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.dashboard__image{
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 1028px;
+  &__wrapper{
+    padding: 0 25px;
+  }
+}
 .case {
   &_container {
     max-height: 482px;
