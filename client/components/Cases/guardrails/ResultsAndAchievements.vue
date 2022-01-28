@@ -119,7 +119,7 @@ export default {
 
   &_title-statistics {
     &--description {
-      font-size: 16px;
+      @include font('Inter', 16px, 600);
       line-height: 135%;
       color: #404143;
       max-width: 600px;
