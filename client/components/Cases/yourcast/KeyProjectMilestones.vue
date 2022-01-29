@@ -1,5 +1,5 @@
 <template>
-  <section class="container_regular p-96_bottom p-96_top key-project-milestone">
+  <section class="container_regular p-96_bottom p-96_top media-p-48_top media-p-0_bottom key-project-milestone">
     <h3
       v-prlx="animationSettingsTitle"
       class="case_title_h2 m-48_bottom media-m-24_bottom"
@@ -113,11 +113,12 @@ export default {
   @media screen and (max-width: 976px) {
     &_cards-container {
       margin-bottom: 96px;
-      @include grid(repeat(1, 1fr), auto, 0, 10px);
+      @include grid(repeat(1, 1fr), auto, 0, 20px);
     }
 
-    &_column {
-      grid-row-gap: 10px;
+    &_column,
+    &_column-right {
+      grid-row-gap: 20px;
     }
   }
   @media screen and (max-width: 768px) {

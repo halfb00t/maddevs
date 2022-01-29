@@ -9,7 +9,7 @@
         project has been continuously improving to provide more options for each category of viewers.
       </TextParagraph>
     </div>
-    <div class="container_full background-color-black p-100_top p-100_bottom">
+    <div class="container_full background-color-black p-100_top p-100_bottom media-p-48_top media-p-48_bottom">
       <div class="container_regular">
         <div class="case_cards-group">
           <Card
@@ -18,7 +18,7 @@
             :class="`background-color-${gadget.color}`"
             class="case_card"
           >
-            <h3 class="case_title_h4 case_card-title m-10_bottom media-m-8_bottom">
+            <h3 class="case_title_h4 case_card-title">
               {{ gadget.title }}
             </h3>
             <TextParagraph
@@ -71,29 +71,71 @@ export default {
 <style scoped lang="scss">
 .case {
   &_card {
-    padding: 32px 8px 0 32px;
+    padding: 32px 32px 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    @media screen and (max-width: 900px) {
+      padding:32px 28px 0;
+    }
     @media screen and (max-width: 720px) {
       grid-column: 1 / 3;
+      padding: 32px 12px 0;
     }
     &-title {
       color: $text-color--white;
+      margin-bottom: 30px;
     }
     &-img {
       position: relative;
-      min-width: 368px;
-      left: 52%;
+      width: 100%;
+      left: 50%;
       transform: translateX(-50%);
+      flex-grow: 1;
     }
   }
   &_card:nth-child(2) {
-    padding-left: 28px;
+      padding-left: 31px;
+      padding-right: 0;
+      @media screen and (max-width: 720px) {
+        padding-left: 12px;
+      }
+  }
+  &_card:nth-child(2) .case_card-img {
+    box-sizing: border-box;
+    padding-left: 9px;
+    width: 148%;
+    left: 74%;
+    @media screen and (max-width: 720px) {
+      padding-bottom: 8px;
+      width: 115%;
+      left: 57%;
+    }
   }
   &_card:nth-child(3) {
     grid-column: 1 / 3;
     text-align: center;
-    &-img {
-      padding: 0;
+    padding: 32px 32px 0;
+    @media screen and (max-width: 720px) {
+      text-align: left;
+      padding: 32px 0 0;
+    }
+  }
+  &_card:nth-child(3) .case_card-title {
+    @media screen and (max-width: 720px) {
+      margin-left: 12px;
+    }
+  }
+  &_card:nth-child(3) .case_card-img {
+    left: unset;
+    transform: none;
+    max-height: 254px;
+    max-width: 658px;
+    margin: 0 auto;
+    @media screen and (max-width: 720px) {
+      max-height: 100%;
     }
   }
   &_cards-group {

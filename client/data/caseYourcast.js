@@ -1,16 +1,16 @@
 export const supportedGadgets = [
   {
     title: 'Smartphones',
-    width: 1062,
-    height: 768,
-    file: 'iphone-x-smartphones',
+    width: 333,
+    height: 393,
+    file: 'smartphones',
     alt: 'OTT-like Online Video Streaming Platform on IPhone X Smartphone.',
     color: 'dark-purple06',
   },
   {
     title: 'Tablets',
-    width: 666,
-    height: 1334,
+    width: 1062,
+    height: 768,
     file: 'ipad-pro-tablets',
     alt: 'OTT-like Online Video Streaming Platform on IPad Tablet.',
     color: 'dark-purple05',
