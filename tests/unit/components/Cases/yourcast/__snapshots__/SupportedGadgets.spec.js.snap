@@ -2,152 +2,117 @@
 
 exports[`SupportedGadgets component should render correctly 1`] = `
 <div>
-  <section
-    class="container_regular"
-  >
-    <h3
-      class="case_title_h2 m-24_bottom media-m-12_bottom"
+  <section>
+    <div
+      class="container_regular"
     >
-      
-    Supported gadgets
-  
-    </h3>
-     
-    <p
-      class="case_paragraph m-48_bottom media-m-24_bottom"
-    >
-      
-    The platform is available on any device and remains equally friendly to both web and mobile users. Since 2016, the
-    project has been continuously improving to provide more options for each category of viewers.
-  
-    </p>
+      <h3
+        class="case_title_h2 m-24_bottom media-m-12_bottom"
+      >
+        
+      Supported gadgets
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-48_bottom media-m-24_bottom"
+      >
+        
+      The platform is available on any device and remains equally friendly to both web and mobile users. Since 2016, the
+      project has been continuously improving to provide more options for each category of viewers.
+    
+      </p>
+    </div>
      
     <div
-      class="m-107_bottom media-m-68_bottom case_supported-gadgets"
+      class="container_full background-color-black p-100_top p-100_bottom media-p-48_top media-p-48_bottom"
     >
       <div
-        class="case_card background-color-purple-medium"
+        class="container_regular"
       >
         <div
-          class="card-content"
+          class="case_cards-group"
         >
-          <h4
-            class="card-content_title case_title_h4"
-          >
-            
-    Laptops
-  
-          </h4>
-           
           <div
-            class="card-content_gadget-picture-wrapp card-content_gadget-picture-wrapp-macbook-pro-card"
+            class="case_card case_card background-color-dark-purple06"
           >
-            <picture-stub
-              alt="OTT-like Online Video Streaming Platform on MacBook Pro Laptop."
-              class="card-content_picture"
-              extension="png"
-              file="macbook-pro-card"
-              folder="yourcast"
-              height="449"
-              width="735"
-            />
+            <h3
+              class="case_title_h4 case_card-title"
+            >
+              
+            Smartphones
+          
+            </h3>
+             
+            <!---->
+             
+            <div
+              class="case_card-img"
+            >
+              <picture-stub
+                alt="OTT-like Online Video Streaming Platform on IPhone X Smartphone."
+                extension="png"
+                file="smartphones"
+                folder="yourcast"
+                height="393"
+                lazy="true"
+                width="333"
+              />
+            </div>
           </div>
-           
           <div
-            class="card-content_gadget-picture-wrapp-mobile card-content_gadget-picture-wrapp-mobile-macbook-pro"
+            class="case_card case_card background-color-dark-purple05"
           >
-            <picture-stub
-              alt="OTT-like Online Video Streaming Platform on MacBook Pro Laptop."
-              extension="png"
-              file="macbook-pro"
-              folder="yourcast"
-              height="449"
-              width="735"
-            />
+            <h3
+              class="case_title_h4 case_card-title"
+            >
+              
+            Tablets
+          
+            </h3>
+             
+            <!---->
+             
+            <div
+              class="case_card-img"
+            >
+              <picture-stub
+                alt="OTT-like Online Video Streaming Platform on IPad Tablet."
+                extension="png"
+                file="ipad-pro-tablets"
+                folder="yourcast"
+                height="768"
+                lazy="true"
+                width="1062"
+              />
+            </div>
           </div>
-        </div>
-      </div>
-      <div
-        class="case_card background-color-black-primary-bg"
-      >
-        <div
-          class="card-content"
-        >
-          <h4
-            class="card-content_title case_title_h4"
-          >
-            
-    Smartphones
-  
-          </h4>
-           
           <div
-            class="card-content_gadget-picture-wrapp card-content_gadget-picture-wrapp-iphonex-card"
+            class="case_card case_card background-color-dark-purple04"
           >
-            <picture-stub
-              alt="OTT-like Online Video Streaming Platform on IPhone X Smartphone."
-              class="card-content_picture"
-              extension="png"
-              file="iphonex-card"
-              folder="yourcast"
-              height="627"
-              width="312"
-            />
-          </div>
-           
-          <div
-            class="card-content_gadget-picture-wrapp-mobile card-content_gadget-picture-wrapp-mobile-iphonex"
-          >
-            <picture-stub
-              alt="OTT-like Online Video Streaming Platform on IPhone X Smartphone."
-              extension="png"
-              file="iphonex"
-              folder="yourcast"
-              height="627"
-              width="312"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        class="case_card background-color-purple-dark"
-      >
-        <div
-          class="card-content"
-        >
-          <h4
-            class="card-content_title case_title_h4"
-          >
-            
-    Tablets
-  
-          </h4>
-           
-          <div
-            class="card-content_gadget-picture-wrapp card-content_gadget-picture-wrapp-ipad-pro-card"
-          >
-            <picture-stub
-              alt="OTT-like Online Video Streaming Platform on IPad Tablet."
-              class="card-content_picture"
-              extension="png"
-              file="ipad-pro-card"
-              folder="yourcast"
-              height="374"
-              width="518"
-            />
-          </div>
-           
-          <div
-            class="card-content_gadget-picture-wrapp-mobile card-content_gadget-picture-wrapp-mobile-ipad-pro"
-          >
-            <picture-stub
-              alt="OTT-like Online Video Streaming Platform on IPad Tablet."
-              extension="png"
-              file="ipad-pro"
-              folder="yourcast"
-              height="374"
-              width="518"
-            />
+            <h3
+              class="case_title_h4 case_card-title"
+            >
+              
+            Laptops
+          
+            </h3>
+             
+            <!---->
+             
+            <div
+              class="case_card-img"
+            >
+              <picture-stub
+                alt="OTT-like Online Video Streaming Platform on MacBook Pro Laptop."
+                extension="png"
+                file="macbook-laptops"
+                folder="yourcast"
+                height="972"
+                lazy="true"
+                width="1324"
+              />
+            </div>
           </div>
         </div>
       </div>
