@@ -105,7 +105,7 @@
         TypeScript
       </h3>
       <TextParagraph class="m-48_bottom">
-        Different development tools may offer similar solutions—each with its benefits
+        Different development tools may offer similar solutions - each with its benefits
         and disadvantages. It is highly important to choose those that meet the project needs at the moment. Some of
         them might be a perfect fit in the early stage of development, but as the product grows, we shift to other
         tools.
@@ -160,7 +160,7 @@
         We transferred all data from CouchDB to PostgreSQL to ensure the use of the latest technology, feature-rich and
         well-supported. Also, we added GraphQL to fetch data promptly and efficiently. It took us just 1 month to
         complete
-        both tasks—migrate to PostgreSQL and add GraphQL.
+        both tasks - migrate to PostgreSQL and add GraphQL.
       </TextParagraph>
     </div>
 

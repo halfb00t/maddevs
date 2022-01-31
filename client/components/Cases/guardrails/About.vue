@@ -39,7 +39,7 @@
 
         <div class="technologies-list__wrapper">
           <span class="technologies-list__title m-48_bottom">
-            GuardRails is trusted by 1000+ software development teams globally—from startups to large corporations.
+            GuardRails is trusted by 1000+ software development teams globally - from startups to large corporations.
           </span>
           <span class="technologies-list__title m-24_bottom">
             The platform integrates 25+ scanning engines supporting 15+ programming languages

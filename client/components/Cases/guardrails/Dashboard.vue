@@ -52,7 +52,7 @@
         For the second version of the dashboard, we had a list of updated product requirements and a more flexible
         timeline and budget. So we elaborated on the dashboard’s UI design and functionality and optimised its
         performance characteristics, such as speed and stability. The second version offered more detailed settings and
-        reports—for example, the user could view the history of all scans and reports, see newly detected issues, and
+        reports - for example, the user could view the history of all scans and reports, see newly detected issues, and
         get remediation advice.
       </TextParagraph>
 
