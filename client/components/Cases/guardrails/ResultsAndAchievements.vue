@@ -14,11 +14,11 @@
           <span
             id="sgd"
             :data-end-value="ResultStatistics.sdg.number"
-          >{{ ResultStatistics.sdg.numberText }}</span>
+          >{{ ResultStatistics.sdg.number }}</span>
           <span>{{ ResultStatistics.sdg.name }} SGD {{ ResultStatistics.usd.textBeforeNumber }}</span><span
             id="usd"
             :data-end-value="ResultStatistics.usd.number"
-          >{{ ResultStatistics.usd.numberText }}</span><span>{{ ResultStatistics.usd.name }} USD) funding</span>
+          >{{ ResultStatistics.usd.number }}</span><span>{{ ResultStatistics.usd.name }} USD) funding</span>
         </span>
         <p class="case_title-statistics--description m-auto">
           {{ ResultStatistics.usd.description }}
