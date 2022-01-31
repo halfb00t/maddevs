@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '../../assets/styles/cases/base';
 @import '../../assets/styles/cases/components';
 @import '../../assets/styles/cases/media';
@@ -104,10 +104,9 @@ export default {
   &-guardrails__header-wrapper {
     background-color: rgba(50, 58, 69, 0.6);
   }
-  .guardrails-footer{
-    .case_title{
-      margin-bottom: 48px;
-    }
+  &_title-guardrails-footer{
+    margin-bottom: 48px;
+
   }
 
   &_header {
@@ -138,31 +137,5 @@ export default {
     }
   }
 
-  &_logotype-citycam {
-    width: 210px;
-    height: 90px;
-    margin-bottom: 30px;
-  }
-
-  &_title-citycam {
-    margin-bottom: 51px;
-    @media screen and (max-width: 500px) {
-      max-width: 400px;
-    }
-    @media screen and (max-width: 430px) {
-      max-width: 190px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    &_logotype-citycam {
-      width: 180px;
-      height: 65px;
-    }
-
-    &_title-citycam {
-      margin-bottom: 31px;
-    }
-  }
 }
 </style>
