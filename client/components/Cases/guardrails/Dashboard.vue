@@ -63,7 +63,7 @@
       </TextParagraph>
     </div>
     <div class="container_full">
-      <div class="case-image-wrapper m-96_bottom">
+      <div class="case-image-wrapper m-96_bottom media-m-48_bottom">
         <img
           v-lazy-load
           class="case-image-wrapper__image"

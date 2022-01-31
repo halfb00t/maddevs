@@ -118,6 +118,52 @@ export const meta = {
     description:
       'Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.',
     url: 'https://maddevs.io/case-studies/namba-taxi/',
+    jsonLd: '{ "@context": "https://schema.org", \n'
+      + ' "@type": "Article",\n'
+      + ' "headline": "DevSecOps Case Study: Enhancing GuardRails Continuous Security Verification Platform",\n'
+      + ' "alternativeHeadline": "This article also about a security application maintenance",\n'
+      + '"image":"https://d6xkme6dcvajw.cloudfront.net/images/Cases/guardrails/png/guardrails-banner.png",\n'
+      + ' "author": "Anna Petrova", \n'
+      + ' "editor": "Emir Sabyrkulov", \n'
+      + ' "genre": "IT", \n'
+      + ' "keywords": "devsecops, devsecops tools, devsecops process, devsecops processes, devsecops model, devsecops lifecycle, agile devsecops", \n'
+      + ' "wordcount": "2400",\n'
+      + '"publisher": {\n'
+      + '    "@type": "Organization",\n'
+      + '    "name": "Mad Devs Group LTD",\n'
+      + '    "logo": {\n'
+      + '      "@type": "ImageObject",\n'
+      + '      "url": "https://maddevs.io/Open-Graph.png"\n'
+      + '    }\n'
+      + '  },\n'
+      + ' "url": "https://maddevs.io/insights/blog/",\n'
+      + '   "mainEntityOfPage": {\n'
+      + '    "@type": "WebPage",\n'
+      + '    "@id": "https://maddevs.io/insights/blog//"\n'
+      + '  },\n'
+      + ' "datePublished": "2022-01-31",\n'
+      + ' "dateCreated": "2022-01-30",\n'
+      + ' "dateModified": "2022-01-31",\n'
+      + ' "description": "DevSecOps Platform Optimization Case Study: How to optimize a security application? Read GuardRails\' story of enhancing the security solution & reducing database responses from 2 seconds to 30 milliseconds.",\n'
+      + ' "articleBody": "Critical vulnerabilities can cost you a lot if they are not detected before your IT project goes to production. The security industry has to adjust to the challenges of cloud-first deployment and continuous security monitoring and testing. This is the niche that GuardRails fills, offering automated vulnerability scanning for code as part of a standard development process built under the DevSecOps approach.\n'
+      + 'The Story Behind the Project\n'
+      + 'By the time the Mad Devs experts got involved in the project, GuardRails had already had a prototype up and running. After the installation, the app could scan code looking for its vulnerabilities. Once a security issue was detected, the app created a pull request (PR) comment in the repository so that the user could review the scan report.\n'
+      + 'Having only a PR with a short lifespan, the user lacked information about the security problems and could not track them. So the customer’s top priority was to improve the usability of the product by making it more functional and user-friendly.      \n'
+      + 'Initially, the GuardRails app was an open-source GitHub solution. Integrating with other Version Control Systems (VCSs) was important for acquiring new users. In addition, it was necessary to optimize the overall app performance, that was, to speed up continuous security monitoring and testing, increase the accuracy of vulnerability detection, and improve the stability of the app.  \n'
+      + 'By maximising the app’s potential, GuardRails wanted to take their product to a new level. This would allow for raising funds and thus increasing the product’s business value to a greater degree. \t\n'
+      + 'Project Issues and How We Resolved Them\n'
+      + 'Lack of user-friendly reports: Mad Devs developed the security reporting dashboard and API that allowed users to track the history of scans and reports.\n'
+      + 'Slow security checks blocking pull requests: We have changed the project’s technology stack to unlock pull requests faster after the checks.\n'
+      + 'Lack of integrations with hosting services/git providers: The GitHub integration was ready by 50%, we completed the remaining part. We also added the GitLab integration and the one for BitBucket (now alpha version stage).\n'
+      + 'False positives occurred at vulnerability detection: Slow security checks blocking pull requestsWe expanded the number of open source libraries under the hood for a better quality of results."\n'
+      + ' }',
+  },
+
+  guardrails: {
+    title: 'DevSecOps Case Study: Enhancing GuardRails Continuous Security Verification Platform',
+    description:
+      'DevSecOps Platform Optimization Case Study: How to optimize a security application? Read GuardRails\' story of enhancing the security solution & reducing database responses from 2 seconds to 30 milliseconds.',
+    url: 'https://maddevs.io/case-studies/guardrails/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > Transportation Solutions", "name": "Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek", "description": "Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
   blog: {

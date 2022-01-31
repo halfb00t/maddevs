@@ -1,5 +1,5 @@
 <template>
-  <div class="m-96_bottom">
+  <div class="m-96_bottom media-m-56_bottom">
     <div class="container_regular">
       <h2 class="case_title_h2 m-48_bottom">
         Results and achievements
@@ -8,23 +8,21 @@
         class="case_statistics case_statistics--main m-48_bottom"
         :style="'color:'+ ResultStatistics.usd.numberColor"
       >
-        <div class="container_regular m-48_bottom">
+        <span
+          class="case_title-statistics case_text-align-center"
+        >
           <span
-            class="case_title-statistics case_text-align-center"
-          >
-            <span
-              id="sgd"
-              :data-end-value="ResultStatistics.sdg.number"
-            >{{ ResultStatistics.sdg.numberText }}</span>
-            <span>{{ ResultStatistics.sdg.name }} SGD {{ ResultStatistics.usd.textBeforeNumber }}</span><span
-              id="usd"
-              :data-end-value="ResultStatistics.usd.number"
-            >{{ ResultStatistics.usd.numberText }}</span><span>{{ ResultStatistics.usd.name }} USD) funding</span>
-          </span>
-          <p class="case_title-statistics--description m-auto">
-            {{ ResultStatistics.usd.description }}
-          </p>
-        </div>
+            id="sgd"
+            :data-end-value="ResultStatistics.sdg.number"
+          >{{ ResultStatistics.sdg.numberText }}</span>
+          <span>{{ ResultStatistics.sdg.name }} SGD {{ ResultStatistics.usd.textBeforeNumber }}</span><span
+            id="usd"
+            :data-end-value="ResultStatistics.usd.number"
+          >{{ ResultStatistics.usd.numberText }}</span><span>{{ ResultStatistics.usd.name }} USD) funding</span>
+        </span>
+        <p class="case_title-statistics--description m-auto">
+          {{ ResultStatistics.usd.description }}
+        </p>
       </div>
     </div>
 
@@ -63,23 +61,7 @@
         :style="'color:'+ ResultStatistics.usd.numberColor"
       >
         <span>
-          At first, we decreased the database response time from
-          <span
-            id="time1"
-            :data-end-value="ResultStatistics.time1.number"
-          >{{ ResultStatistics.time1.numberText }}</span>{{ ResultStatistics.time1.name }}
-          to
-          <span
-            id="time2"
-            :data-end-value="ResultStatistics.time2.number"
-          >{{ ResultStatistics.time2.numberText }}</span>{{ ResultStatistics.time2.name }}<span
-            id="time3"
-            :data-end-value="ResultStatistics.time3.number"
-          >{{ ResultStatistics.time3.numberText }}</span>{{ ResultStatistics.time3.name }}. Later, we reduced it to
-          <span
-            id="time4"
-            :data-end-value="ResultStatistics.time4.number"
-          >{{ ResultStatistics.time4.numberText }}</span>{{ ResultStatistics.time4.name }}for the most common requests.
+          At first, we decreased the database response time from 2s to 200-400ms. Later, we reduced it to 30msfor the most common requests.
         </span>
       </div>
     </div>
@@ -108,9 +90,10 @@ export default {
 .case {
   &_statistics {
     text-align: center;
+
     &--main,
     &--times {
-      @include font('Poppins', 36px, 600);
+      @include font('Poppins', 36px, 400);
       line-height: 130%;
       letter-spacing: -0.02em;
       font-style: normal;
@@ -119,7 +102,9 @@ export default {
 
   &_title-statistics {
     &--description {
-      @include font('Inter', 16px, 600);
+      @include font('Inter', 16px, 400);
+      font-style: normal;
+      font-weight: normal;
       line-height: 135%;
       color: #404143;
       max-width: 600px;

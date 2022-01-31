@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container_regular m-48_top media-m-24_top m-48_bottom media-m-24_bottom">
+    <div class="container_regular m-48_top media-m-24_top m-72_bottom media-m-24_bottom">
       <TextParagraph>
         Critical vulnerabilities can cost you a lot if they are not detected before your IT project goes to production.
         The security industry has to adjust to the challenges of cloud-first deployment and continuous security
@@ -9,7 +9,7 @@
       </TextParagraph>
     </div>
     <div
-      class="container_full about-block-background background-color-silver p-72_bottom m-72_bottom media-m-48_bottom case_review-container"
+      class="container_full about-block-background background-color-silver p-72_bottom m-96_bottom media-m-48_bottom case_review-container"
       :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/guardrails/png/statistics-background.png`)})`}"
     >
       <div class="container_regular">
@@ -38,6 +38,9 @@
         </StatisticsContainer>
 
         <div class="technologies-list__wrapper">
+          <span class="technologies-list__title m-48_bottom">
+            GuardRails is trusted by 1000+ software development teams globally—from startups to large corporations.
+          </span>
           <span class="technologies-list__title m-24_bottom">
             The platform integrates 25+ scanning engines supporting 15+ programming languages
           </span>

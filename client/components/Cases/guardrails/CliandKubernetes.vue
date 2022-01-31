@@ -13,7 +13,7 @@
     </div>
 
     <div class="container_full">
-      <div class="case-image-wrapper m-96_bottom">
+      <div class="case-image-wrapper m-96_bottom media-m-48_bottom">
         <!--        todo add shadow to img-->
         <img
           v-lazy-load
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="container_regular m-96_bottom">
+    <div class="container_regular m-96_bottom media-m-48_bottom">
       <h2 class="case_title_h2 m-12_bottom">
         Availability in Kubernetes & Enterprise version
       </h2>
