@@ -26,7 +26,7 @@
     <Main />
     <Footer
       link="/case-studies/clutch/"
-      class-name="clutch"
+      class-name="guardrails-footer clutch"
     >
       <img
         slot="icon"
@@ -37,7 +37,9 @@
         alt="Clutch"
         class="case_logotype-clutch"
       >
-      The growth of Clutch.co
+      <span class="m-96_bottom">
+        The growth of Clutch.co
+      </span>
     </Footer>
   </main>
 </template>
@@ -51,7 +53,7 @@ import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 import headerMixin from '@/mixins/headerMixin'
 
 export default {
-  name: 'Clutch',
+  name: 'Guardrails',
   components: {
     CaseHeader,
     Footer,
@@ -86,14 +88,14 @@ export default {
 
   head() {
     return buildHead({
-      ...getMetadata('clutch'),
-      image: 'https://maddevs.io/clutch.png',
+      ...getMetadata('guardrails'),
+      image: 'https://maddevs.io/guardrails-banner.png',
     })
   },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../assets/styles/cases/base';
 @import '../../assets/styles/cases/components';
 @import '../../assets/styles/cases/media';
@@ -101,6 +103,11 @@ export default {
 .case {
   &-guardrails__header-wrapper {
     background-color: rgba(50, 58, 69, 0.6);
+  }
+  .guardrails-footer{
+    .case_title{
+      margin-bottom: 48px;
+    }
   }
 
   &_header {
