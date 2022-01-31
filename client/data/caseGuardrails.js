@@ -34,8 +34,8 @@ export const reviewsStatistics = [
     },
   },
   {
-    numberText: '300',
-    number: 300,
+    numberText: '320',
+    number: 320,
     name: 'K',
     textBeforeNumber: '+',
     withoutSpaceBeforeNumber: true,
@@ -118,7 +118,7 @@ export const techStackLanguagesGuardrails = [
 export const ProjectsIssuesCards = [
   {
     title: 'Lack of integrations with hosting services/git providers',
-    description: 'We have changed the project’s technology stack to unlock pull requests faster after the checks.',
+    description: 'Mad Devs developed the security reporting dashboard and API that allowed users to track the history of scans and reports.',
     color: 'orange-dark',
     img: 'cards-files',
   },

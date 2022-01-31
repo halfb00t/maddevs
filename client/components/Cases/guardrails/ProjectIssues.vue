@@ -40,10 +40,10 @@
         >
           <!--todo refactor this component like base Card (with props)  -->
           <h3 class="case_title_h4 case_card-title m-8_bottom">
-            Need for user-friendly reports
+            Lack of integrations with hosting services/git providers
           </h3>
           <TextParagraph color="#ffffff">
-            Mad Devs developed the security reporting
+            The GitHub integration was ready by 50%, we completed the remaining part. We also added the GitLab integration and the one for BitBucket (now alpha version stage).
           </TextParagraph>
         </Card>
 
@@ -54,7 +54,7 @@
             False positives occurred at vulnerability detection
           </h3>
           <TextParagraph>
-            We expanded the number of open source libraries under the hood for a better quality of results
+            Slow security checks blocking pull requestsWe expanded the number of open source libraries under the hood for a better quality of results.
           </TextParagraph>
         </Card>
       </div>

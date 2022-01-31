@@ -165,15 +165,10 @@
     </div>
 
     <div class="container_regular">
-      <h3 class="case_title_h4 m-12_bottom">
+      <h3 class="case_title_h4 m-24_bottom">
         Here’s what the architecture became after migration
         to the new stack
       </h3>
-      <TextParagraph class="m-48_bottom">
-        Our workflow is thoroughly collaborative and transparent. The various tools we employ help us make sure that
-        everyone on the team is on the same page, that tasks get properly tracked and finalised on time,
-        and that issues are quickly spotted and resolved.
-      </TextParagraph>
     </div>
     <div class="case-lottie-wrapper background-color-outer-space">
       <div class="container_regular">
