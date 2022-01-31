@@ -26,8 +26,6 @@ import AgilityIsKey from '@/components/Cases/guardrails/AgilityIsKey'
 import ResultsAndAchievements from '@/components/Cases/guardrails/ResultsAndAchievements'
 import Technologies from '@/components/Cases/guardrails/Technologies'
 import Team from '@/components/Cases/guardrails/Team'
-import countUp from '@/helpers/countUp'
-import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 
 export default {
   name: 'Main',
@@ -45,12 +43,6 @@ export default {
     Team,
   },
 
-  mixins: [
-    IntersectionObserverMixin(
-      ['usd', 'sgd', 'time1', 'time2', 'time3', 'time4'],
-      countUp,
-    ),
-  ],
 }
 
 </script>
