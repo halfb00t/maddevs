@@ -41,8 +41,8 @@ exports[`Main component should render correctly 1`] = `
         class="m-auto m-96_top m-96_bottom media-m-48_top media-m-48_bottom"
       >
         
-    We respect the customer’s request to keep this project under the NDA and will not disclose the project name while
-    sharing its details.
+    Yourcast.TV started as Mad Devs’ pet video-streaming project and evolved into a larger service after we open-sourced our code and found a customer.
+    We respect the customer’s request to keep this project under the NDA, and we will not disclose the project’s name while sharing its details.
   
       </textquote-stub>
     </section>
@@ -76,10 +76,10 @@ exports[`Main component should render correctly 1`] = `
         >
           <section>
             <div
-              class="container_full m-48_top media-m-24_top m-48_bottom media-m-24_bottom"
+              class="container_full m-48_top media-m-24_top"
             >
               <div
-                class="m-48_bottom case_statistics-container case_statistics-container-4"
+                class="case_statistics-container case_statistics-container-4"
               >
                 <div
                   class="case_statistics-item"

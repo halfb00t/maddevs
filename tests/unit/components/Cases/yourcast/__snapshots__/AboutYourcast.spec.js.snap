@@ -38,8 +38,8 @@ exports[`AboutYourcast component should render correctly 1`] = `
       class="m-auto m-96_top m-96_bottom media-m-48_top media-m-48_bottom"
     >
       
-    We respect the customer’s request to keep this project under the NDA and will not disclose the project name while
-    sharing its details.
+    Yourcast.TV started as Mad Devs’ pet video-streaming project and evolved into a larger service after we open-sourced our code and found a customer.
+    We respect the customer’s request to keep this project under the NDA, and we will not disclose the project’s name while sharing its details.
   
     </textquote-stub>
   </section>
