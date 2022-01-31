@@ -106,7 +106,6 @@ export default {
   }
   &_title-guardrails-footer{
     margin-bottom: 48px;
-
   }
 
   &_header {
