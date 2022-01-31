@@ -1,5 +1,5 @@
 <template>
-  <div class="m-96_bottom">
+  <div class="m-96_bottom media-m-48_bottom">
     <div class="container_regular">
       <h2 class="case_title_h2 m-12_bottom">
         Agility is the key
@@ -74,7 +74,7 @@
         expectations.
       </TextParagraph>
 
-      <TextQuote class="m-auto m-96_top m-96_bottom media-m-48_top media-m-72_bottom">
+      <TextQuote class="m-auto m-96_top m-96_bottom media-m-48_top media-m-48_bottom">
         "I have learned a lot from GuardRails CEO Stefan Streichsbier who is a truly inspirational and awesome leader
         with a brilliant mind. He not only gives me and my brothers in arms the freedom to build things the right way
         with the right tooling but also allows us to use the most interesting and modern tools. Stefan is super

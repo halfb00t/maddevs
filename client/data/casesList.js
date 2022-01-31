@@ -173,7 +173,7 @@ export const casesList = [
     id: 'guardrails',
     link: '/case-studies/guardrails/',
     video: '/videos/guardrails-banner.mp4',
-    subtitle: 'finance',
+    subtitle: 'DevSecOps',
     title: 'Enhancing the GuardRails solution',
     desc: 'Mad Devs assisted GuardRails an application security platform to advance their product and increase its business value.',
     poster: '/images/Cases/guardrails/png/guardrails-banner.png',

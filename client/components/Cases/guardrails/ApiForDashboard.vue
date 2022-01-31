@@ -1,5 +1,5 @@
 <template>
-  <div class="m-96_bottom">
+  <div class="m-96_bottom media-m-48_bottom">
     <div class="container_regular">
       <h2 class="case_title_h2 m-12_bottom">
         Building an API for the dashboard
@@ -12,7 +12,7 @@
     </div>
 
     <div class="container_full">
-      <div class="case-image-wrapper m-96_bottom">
+      <div class="case-image-wrapper m-96_bottom media-m-48_bottom">
         <img
           v-lazy-load
           :data-src="$getMediaFromS3('/images/Cases/guardrails/png/dashboard-api-v2.png')"

@@ -1,5 +1,5 @@
 <template>
-  <div class="m-96_bottom">
+  <div class="m-96_bottom media-m-48_bottom">
     <div class="container_regular m-48_bottom">
       <h2 class="case_title_h2 m-12_bottom">
         Technical agility
@@ -134,18 +134,6 @@
       </TextParagraph>
     </div>
 
-    <div class="container_regular">
-      <h3 class="case_title_h4 m-12_bottom">
-        Implemented Ad Service
-      </h3>
-      <TextParagraph class="m-48_bottom">
-        To prepare the project for further growth, Mad Devs started to move it to a new stack to make sure that
-        GuardRails relies on the best-suited technologies. It was also necessary to pick cost-effective solutions
-        for better scalability.
-        <!--      todo check this text. its duplicated-->
-      </TextParagraph>
-    </div>
-
     <div class="case-lottie-wrapper--ad-service background-color-outer-space">
       <div class="container_regular">
         <LottieMad
@@ -257,8 +245,9 @@ export default {
     margin-left: auto;
     margin-right: auto;
   }
-  &-lottie-wrapper{
-    &--ad-service{
+
+  &-lottie-wrapper {
+    &--ad-service {
       padding: 42px 0 37px;
       margin-bottom: 36px;
     }
