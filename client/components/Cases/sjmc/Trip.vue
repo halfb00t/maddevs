@@ -10,6 +10,8 @@
         :components="swiperMadDevsTrip"
         :safari-top-bar="false"
         :box-shadow="false"
+        :width="1440"
+        :height="651"
       />
     </section>
     <section class="container_regular">

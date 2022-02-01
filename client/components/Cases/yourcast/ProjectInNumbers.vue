@@ -8,10 +8,7 @@
       audience sharing new feature requests for Mad Devs.
     </TextParagraph>
     <div class="m-96_bottom media-m-48_bottom">
-      <Card
-        class="background-color-purple-dark"
-        padding="32px 20px"
-      >
+      <Card style="padding: 0;">
         <CardProjectInNumbers />
       </Card>
     </div>

@@ -2,95 +2,203 @@
 
 exports[`CardProjectInNumbers component should render correctly 1`] = `
 <div>
-  <div
-    class="card-content"
-  >
+  <section>
     <div
-      class="card-content_column-item"
+      class="container_full m-48_top media-m-24_top"
     >
-      <p
-        class="card-content_title"
+      <div
+        class="case_statistics-container case_statistics-container-4"
       >
-        
-      7500
-    
-      </p>
-       
-      <p
-        class="case_paragraph card-content_paragraph"
-      >
-        
-      viewers in the 
-        <br />
-        
-      database
-    
-      </p>
+        <div
+          class="case_statistics-item"
+          id="projectInNumbers-item-0"
+        >
+          <!---->
+           
+          <img
+            alt="account"
+            class="case_statistics-item_icon m-21_bottom"
+            data-src="img.jpg"
+            data-testid="test-icon"
+            height="30px"
+            width="30px"
+          />
+           
+          <h3
+            class="case_statistics-item_number p-16_bottom"
+            style="color: rgb(115, 49, 198);"
+          >
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+               
+            </span>
+            <span
+              data-end-value="7500"
+              data-start-value="7500"
+              id="statistics-projectInNumbers-0"
+              style="color: rgb(115, 49, 198);"
+            >
+              7500
+            </span>
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+              
+            </span>
+          </h3>
+           
+          <p
+            class="case_paragraph case_statistics-item_description"
+          >
+            
+     viewers in the database 
+  
+          </p>
+        </div>
+        <div
+          class="case_statistics-item"
+          id="projectInNumbers-item-1"
+        >
+          <!---->
+           
+          <img
+            alt="user_circle"
+            class="case_statistics-item_icon m-21_bottom"
+            data-src="img.jpg"
+            data-testid="test-icon"
+            height="30px"
+            width="30px"
+          />
+           
+          <h3
+            class="case_statistics-item_number p-16_bottom"
+            style="color: rgb(115, 49, 198);"
+          >
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+               
+            </span>
+            <span
+              data-end-value="6000"
+              data-start-value="6000"
+              id="statistics-projectInNumbers-1"
+              style="color: rgb(115, 49, 198);"
+            >
+              6000
+            </span>
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+              +
+            </span>
+          </h3>
+           
+          <p
+            class="case_paragraph case_statistics-item_description"
+          >
+            
+    active / current viewers
+  
+          </p>
+        </div>
+        <div
+          class="case_statistics-item"
+          id="projectInNumbers-item-2"
+        >
+          <!---->
+           
+          <img
+            alt="user_fill_add"
+            class="case_statistics-item_icon m-21_bottom"
+            data-src="img.jpg"
+            data-testid="test-icon"
+            height="30px"
+            width="30px"
+          />
+           
+          <h3
+            class="case_statistics-item_number p-16_bottom"
+            style="color: rgb(115, 49, 198);"
+          >
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+               
+            </span>
+            <span
+              data-end-value="500"
+              data-start-value="500"
+              id="statistics-projectInNumbers-2"
+              style="color: rgb(115, 49, 198);"
+            >
+              500
+            </span>
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+              
+            </span>
+          </h3>
+           
+          <p
+            class="case_paragraph case_statistics-item_description"
+          >
+            
+    viewers per day
+  
+          </p>
+        </div>
+        <div
+          class="case_statistics-item"
+          id="projectInNumbers-item-3"
+        >
+          <!---->
+           
+          <img
+            alt="video_file_fill"
+            class="case_statistics-item_icon m-21_bottom"
+            data-src="img.jpg"
+            data-testid="test-icon"
+            height="30px"
+            width="30px"
+          />
+           
+          <h3
+            class="case_statistics-item_number p-16_bottom"
+            style="color: rgb(115, 49, 198);"
+          >
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+               
+            </span>
+            <span
+              data-end-value="280"
+              data-start-value="280"
+              id="statistics-projectInNumbers-3"
+              style="color: rgb(115, 49, 198);"
+            >
+              280
+            </span>
+            <span
+              style="color: rgb(115, 49, 198);"
+            >
+              -300
+            </span>
+          </h3>
+           
+          <p
+            class="case_paragraph case_statistics-item_description"
+          >
+            
+    concurrent viewers
+  
+          </p>
+        </div>
+      </div>
     </div>
-     
-    <div
-      class="card-content_column-item"
-    >
-      <p
-        class="card-content_title"
-      >
-        
-      6000+
-    
-      </p>
-       
-      <p
-        class="case_paragraph card-content_paragraph"
-      >
-        
-      active / current
-      
-        <br />
-        
-      viewers
-    
-      </p>
-    </div>
-     
-    <div
-      class="card-content_column-item"
-    >
-      <p
-        class="card-content_title"
-      >
-        
-      500
-    
-      </p>
-       
-      <p
-        class="case_paragraph card-content_paragraph"
-      >
-        
-      viewers per day
-    
-      </p>
-    </div>
-     
-    <div
-      class="card-content_column-item"
-    >
-      <p
-        class="card-content_title"
-      >
-        
-      280–300
-    
-      </p>
-       
-      <p
-        class="case_paragraph card-content_paragraph"
-      >
-        
-      concurrent viewers
-    
-      </p>
-    </div>
-  </div>
+  </section>
 </div>
 `;

@@ -1,27 +1,27 @@
 export const supportedGadgets = [
   {
-    title: 'Laptops',
-    width: 735,
-    height: 449,
-    file: 'macbook-pro',
-    alt: 'OTT-like Online Video Streaming Platform on MacBook Pro Laptop.',
-    color: 'purple-medium',
-  },
-  {
     title: 'Smartphones',
-    width: 312,
-    height: 627,
-    file: 'iphonex',
+    width: 333,
+    height: 393,
+    file: 'smartphones',
     alt: 'OTT-like Online Video Streaming Platform on IPhone X Smartphone.',
-    color: 'black-primary-bg',
+    color: 'dark-purple06',
   },
   {
     title: 'Tablets',
-    width: 518,
-    height: 374,
-    file: 'ipad-pro',
+    width: 1062,
+    height: 768,
+    file: 'ipad-pro-tablets',
     alt: 'OTT-like Online Video Streaming Platform on IPad Tablet.',
-    color: 'purple-dark',
+    color: 'dark-purple05',
+  },
+  {
+    title: 'Laptops',
+    width: 1324,
+    height: 972,
+    file: 'macbook-laptops',
+    alt: 'OTT-like Online Video Streaming Platform on MacBook Pro Laptop.',
+    color: 'dark-purple04',
   },
 ]
 
@@ -29,32 +29,31 @@ export const keyProjectMilestones = [
   {
     title: '2016',
     description:
-      'A database of movies with descriptions transformed into online cinema with a basic content management functionality.',
-
-    background: 'purple-light',
+      'As a pet project, Mad Devs developed a streaming service and open-sourced it, quickly finding a customer who wanted to expand the service for their business.',
+    icon: 'open-source',
   },
   {
     title: '2017',
     description: 'Live video streaming of popular TV channels became available.',
-    background: 'purple-primary',
+    icon: 'live-video',
   },
   {
     title: '2018',
     description: 'The project was redesigned to optimise resource consumption.',
-    background: 'purple-medium',
+    icon: 'optimization',
   },
   {
     lottieFileName: '',
     title: '2019',
     description: 'Added Video on Demand functionality.',
-    background: 'purple-dark',
+    icon: 'search',
   },
   {
     title: '2020',
     description:
       'User authorisation ensured a more personalised experience for each user. Custom filters, such as ‘favourites’, ‘already watched’ and ‘search’, made the service more viewer-friendly.',
 
-    background: 'black-primary-bg',
+    icon: 'user_circle_full_fill',
   },
 ]
 
@@ -164,5 +163,64 @@ export const posters = [
   {
     title: 'FINAL LEGIONARIO',
     href: 'https://commons.wikimedia.org/wiki/File:FINAL_LEGIONARIOsmall.jpg',
+  },
+]
+
+export const projectInNumbersStatistics = [
+  {
+    numberText: '7500',
+    number: 7500,
+    name: '',
+    numberColor: '#7331C6',
+    description: ' viewers in the database ',
+    icon: {
+      name: 'account',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
+  },
+  {
+    numberText: '6000',
+    number: 6000,
+    name: '+',
+    numberColor: '#7331C6',
+    description: 'active / current viewers',
+    icon: {
+      name: 'user_circle',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
+  },
+  {
+    numberText: '500',
+    number: 500,
+    name: '',
+    numberColor: '#7331C6',
+    description: 'viewers per day',
+    icon: {
+      name: 'user_fill_add',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
+  },
+  {
+    numberText: '280',
+    number: 280,
+    name: '-300',
+    numberColor: '#7331C6',
+    description: 'concurrent viewers',
+    icon: {
+      name: 'video_file_fill',
+      width: '30px',
+      height: '30px',
+      folder: 'yourcast',
+      type: 'svg',
+    },
   },
 ]
