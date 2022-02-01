@@ -1,15 +1,14 @@
-const axios = require('axios')
-const fs = require('fs')
-const FormData = require('form-data')
-const {
-  HUNTFLOW_API_URL, HUNTFLOW_TOKEN, HUNTFLOW_ACCOUNT_ID, HUNTFLOW_RESERVE_VACANCY_ID,
-} = require('../config')
+import axios from 'axios'
+import fs from 'fs'
+import FormData from 'form-data'
 
-const apiUrlPrefix = `${HUNTFLOW_API_URL}/account/${HUNTFLOW_ACCOUNT_ID}`
+import config from '../config'
+
+const apiUrlPrefix = `${config.HUNTFLOW_API_URL}/account/${config.HUNTFLOW_ACCOUNT_ID}`
 
 const defaultConfig = {
   headers: {
-    Authorization: `Bearer ${HUNTFLOW_TOKEN}`,
+    Authorization: `Bearer ${config.HUNTFLOW_TOKEN}`,
     'Content-Type': 'application/json',
   },
 }
@@ -20,7 +19,7 @@ const uploadFile = async cvFilePath => {
 
   const uploadResponse = await axios.post(`${apiUrlPrefix}/upload`, formData, {
     headers: {
-      Authorization: `Bearer ${HUNTFLOW_TOKEN}`,
+      Authorization: `Bearer ${config.HUNTFLOW_TOKEN}`,
       'Content-Type': 'multipart/form-data',
       ...formData.getHeaders(),
     },
@@ -74,7 +73,7 @@ const createApplication = async (vacancyId, candidateId, cvFileId) => {
   return applicationResponse.data
 }
 
-async function sendApplication(req) {
+export async function sendApplication(req) {
   try {
     let { vacancyId } = req.body
 
@@ -88,7 +87,7 @@ async function sendApplication(req) {
     try {
       await axios.get(`${apiUrlPrefix}/vacancies/${vacancyId}`, defaultConfig)
     } catch {
-      vacancyId = HUNTFLOW_RESERVE_VACANCY_ID
+      vacancyId = config.HUNTFLOW_RESERVE_VACANCY_ID
     }
 
     // Creating a vacancy application
@@ -98,8 +97,4 @@ async function sendApplication(req) {
   } catch (error) {
     return error
   }
-}
-
-module.exports = {
-  sendApplication,
 }

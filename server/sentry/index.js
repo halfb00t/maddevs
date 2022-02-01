@@ -1,11 +1,7 @@
-const Sentry = require('@sentry/node')
-const config = require('../config')
+import Sentry from '@sentry/node'
+import config from '../config'
 
-function configureSentry() {
+export function configureSentry() {
   Sentry.init(config.sentryConfig)
   return Sentry
-}
-
-module.exports = {
-  configureSentry,
 }

@@ -1,5 +1,11 @@
-const express = require('express')
-const multer = require('multer')
+import express from 'express'
+import multer from 'multer'
+
+// controllers
+import { create as createLead } from '../controllers/LeadsController'
+import { s3GetLinkWithLifeTime } from '../controllers/S3Controller'
+import { index as sendVacancyApplication } from '../controllers/CareersController'
+import { send } from '../controllers/SendEmailController'
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
@@ -12,12 +18,6 @@ const storage = multer.diskStorage({
   },
 })
 
-// controllers
-const { create: createLead } = require('../controllers/LeadsController')
-const { s3GetLinkWithLifeTime } = require('../controllers/S3Controller')
-const { index: sendVacancyApplication } = require('../controllers/CareersController')
-const { send } = require('../controllers/SendEmailController')
-
 const router = express.Router()
 
 router.post('/leads', createLead)
@@ -25,4 +25,4 @@ router.post('/get-link-with-life-time', s3GetLinkWithLifeTime)
 router.post('/careers', multer({ storage }).single('cvFile'), sendVacancyApplication)
 router.post('/send-email', multer({ storage, limits: { fieldSize: 25 * 1024 * 1024 } }).single('base64'), send)
 
-module.exports = router
+export default router

@@ -4,6 +4,7 @@
       <h2 class="case_title_h2 m-12_bottom media-m-12_bottom">
         Securely migrated data and passwords
       </h2>
+      <h1 />
       <TextParagraph class="m-12_bottom">
         Successful and secure data migration was vital as we were moving to a new architecture. The Mad Devs team
         meticulously tested each step so that tasks are performed seamlessly for users and the website’s performance

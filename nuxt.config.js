@@ -1,22 +1,24 @@
 import { getStoriesPaths } from 'slice-machine-ui/helpers/storybook'
+import { defineNuxtConfig } from '@nuxt/bridge'
+import dotenv from 'dotenv'
 import getRoutes, { getSitemapRoutes, CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
 
-require('dotenv').config()
+dotenv.config()
 
-module.exports = {
+export default defineNuxtConfig({
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
   /*
-   ** Server settings
-   */
+     ** Server settings
+     */
   server: {
     host: process.env.HOST || '0', // https://debbie.codes/blog/nuxt-configure-server-to-see-site-on-mobile/
     port: process.env.PORT || 3000,
   },
   /*
-   ** Headers of the page
-   */
+     ** Headers of the page
+     */
   head: {
     htmlAttrs: {
       lang: 'en',
@@ -38,16 +40,16 @@ module.exports = {
     ],
   },
   /*
-   ** Customize the progress bar color
-   */
+     ** Customize the progress bar color
+     */
   loading: {
     color: '#ec1c24',
     height: '2px',
   },
   components: true,
   /*
-   ** Component will be ignored in building
-   */
+     ** Component will be ignored in building
+     */
   generate: {
     routes: getRoutes,
     fallback: '404.html',
@@ -64,16 +66,16 @@ module.exports = {
     },
   ],
   /*
-   ** Server middlewares
-   */
+     ** Server middlewares
+     */
   serverMiddleware: [{ path: '/', handler: '~/../server/index.js' }],
   /*
-   ** Build configuration
-   */
+     ** Build configuration
+     */
   build: {
     /*
-     ** Run ESLint on save
-     */
+       ** Run ESLint on save
+       */
     babel: {
       plugins: [
         ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
@@ -98,8 +100,8 @@ module.exports = {
     },
   },
   /*
-  ** Plugins
-  */
+    ** Plugins
+    */
   plugins: [
     '~/plugins/vuelidate.js',
     '~/plugins/vue-social-sharing.js',
@@ -113,8 +115,8 @@ module.exports = {
     { src: '~/plugins/vue-parallax', mode: 'client' },
   ],
   /*
-  ** Nuxt Modules
-  */
+    ** Nuxt Modules
+    */
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/robots',
@@ -211,4 +213,4 @@ module.exports = {
       '~/assets/styles/_mixins.scss',
     ],
   },
-}
+})

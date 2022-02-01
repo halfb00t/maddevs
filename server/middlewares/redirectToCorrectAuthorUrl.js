@@ -4,4 +4,4 @@ function redirectToCorrectAuthorUrl(req, res, next) {
   else next()
 }
 
-module.exports = redirectToCorrectAuthorUrl
+export default redirectToCorrectAuthorUrl
