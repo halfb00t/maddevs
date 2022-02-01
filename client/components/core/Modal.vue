@@ -59,7 +59,7 @@
 import Simplebar from 'simplebar-vue'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import scrollOnBody from '@/mixins/scrollOnBody'
-import { Cookies } from '@/helpers/Cookies'
+import { Cookies } from '@/helpers/cookies'
 
 export default {
   name: 'Modal',
@@ -103,7 +103,7 @@ export default {
 
     whereIsCalled: {
       type: String,
-      default: '',
+      required: false,
     },
   },
 

@@ -134,7 +134,7 @@ import ContentLocker from '@/components/Blog/Post/ContentLocker'
 import { copyAnchorLinkMixin } from '@/mixins/copyAnchorLinkMixin'
 
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
-import { Cookies } from '@/helpers/Cookies'
+import { Cookies } from '@/helpers/cookies'
 
 export default {
   name: 'PostView',
