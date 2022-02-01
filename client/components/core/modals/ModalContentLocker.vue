@@ -2,6 +2,7 @@
   <Modal
     ref="modalContentLocker"
     modal-background="black"
+    where-is-called="ebook"
     :class="{ 'modal-content-locker': !formSended }"
   >
     <div

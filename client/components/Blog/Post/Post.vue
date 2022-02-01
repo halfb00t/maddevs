@@ -116,7 +116,7 @@
       class="progress-bar"
     />
     <client-only>
-      <ContentLocker />
+      <ContentLocker v-if="!sawModal" />
     </client-only>
   </main>
 </template>
@@ -134,6 +134,7 @@ import ContentLocker from '@/components/Blog/Post/ContentLocker'
 import { copyAnchorLinkMixin } from '@/mixins/copyAnchorLinkMixin'
 
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
+import { Cookies } from '@/helpers/Cookies'
 
 export default {
   name: 'PostView',
@@ -230,6 +231,7 @@ export default {
       headerContainer: null,
       isFixed: false,
       isBottom: false,
+      sawModal: false,
     }
   },
 
@@ -284,6 +286,7 @@ export default {
     document.querySelectorAll('.copy-link')
       .forEach(link => link.addEventListener('click', this.copyAnchorLink))
     this.dataLoaded = true
+    this.sawModal = Cookies.checkCookie('sawModal')
   },
 
   beforeDestroy() {
