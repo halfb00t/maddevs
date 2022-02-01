@@ -3,4 +3,4 @@ function applyXFrame(_, res, next) {
   next()
 }
 
-module.exports = applyXFrame
+export default applyXFrame

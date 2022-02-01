@@ -1,6 +1,7 @@
-require('dotenv')
-  .config()
-const { Radiator } = require('@maddevs/mad-radiator')
+import { Radiator } from '@maddevs/mad-radiator'
+import { config } from 'dotenv'
+
+config()
 
 function runRadiator() {
   const baseConfig = {
@@ -124,4 +125,4 @@ function runRadiator() {
   }
 }
 
-module.exports = runRadiator
+export default runRadiator

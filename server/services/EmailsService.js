@@ -1,5 +1,5 @@
-const sendpulse = require('sendpulse-api')
-const config = require('../config')
+import sendpulse from 'sendpulse-api'
+import config from '../config'
 
 const DEFAULT_FROM_EMAIL = 'marketing@maddevs.io'
 const DEFAULT_TO_NAME = 'Mad Devs Team'
@@ -53,7 +53,7 @@ function buildEmail({
   return email
 }
 
-async function sendMailFromVariables({ variables, templateId, attachment }) {
+export async function sendMailFromVariables({ variables, templateId, attachment }) {
   const emailParams = {
     templateId,
     variables,
@@ -69,7 +69,7 @@ async function sendMailFromVariables({ variables, templateId, attachment }) {
   return send(email)
 }
 
-async function sendCVResponseMail({ variables }) {
+export async function sendCVResponseMail({ variables }) {
   const emailParams = {
     templateId: 638666,
     variables,
@@ -82,9 +82,4 @@ async function sendCVResponseMail({ variables }) {
 
   const email = buildEmail(emailParams)
   return send(email)
-}
-
-module.exports = {
-  sendMailFromVariables,
-  sendCVResponseMail,
 }

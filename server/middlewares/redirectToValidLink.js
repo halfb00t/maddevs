@@ -22,4 +22,4 @@ function redirectToValidLink(req, res, next) {
   else next()
 }
 
-module.exports = redirectToValidLink
+export default redirectToValidLink
