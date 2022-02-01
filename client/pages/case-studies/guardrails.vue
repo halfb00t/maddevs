@@ -89,7 +89,7 @@ export default {
   head() {
     return buildHead({
       ...getMetadata('guardrails'),
-      image: 'https://maddevs.io/guardrails-banner.png',
+      image: 'https://maddevs.io/guardrails-meta-banner.png',
     })
   },
 }
