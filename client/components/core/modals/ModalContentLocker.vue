@@ -145,6 +145,7 @@ export default {
     letter-spacing: -1px;
     color: #111;
     text-align: center;
+    align-self: center;
     @media screen and (max-width: 580px) {
       @include font('Inter', 21px, 700);
       line-height: 24px;
