@@ -154,7 +154,7 @@ export default {
         Cookies.setCookie({
           name: 'sawModal',
           value: true,
-          expires: 30,
+          expires: 1,
         })
       }
     },
