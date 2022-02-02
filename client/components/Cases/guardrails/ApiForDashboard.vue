@@ -28,13 +28,13 @@
       </h3>
       <TextParagraph class="m-48_bottom media-m-48_bottom">
         Scanning is an essential part of the customer’s app. Mad Devs introduced significant changes to the scanning
-        mechanism which resulted in better stability and higher speed— a user could get a quick assessment of the entire
+        mechanism which resulted in better stability and higher speed - a user could get a quick assessment of the entire
         project. In addition, support for 10 more scanning engines and 5 more programming languages have been
         implemented into the GuardRails solution.
       </TextParagraph>
 
       <TextQuoteBox>
-        We increased the number of scanning engines from 15 to 25 and the number of programming languages—from 10 to 15.
+        We increased the number of scanning engines from 15 to 25 and the number of programming languages - from 10 to 15.
       </TextQuoteBox>
     </div>
   </div>

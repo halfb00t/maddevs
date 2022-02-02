@@ -5,7 +5,7 @@
         Agility is the key
       </h2>
       <TextParagraph class="m-48_bottom">
-        Technical agility yields better results when combined with agile management and communication—either within an
+        Technical agility yields better results when combined with agile management and communication - either within an
         internal team or in customer relationships. On top of that, agility becomes vitally important when the product
         is ready to grow and needs more resources for further development.
       </TextParagraph>

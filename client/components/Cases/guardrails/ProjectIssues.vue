@@ -54,7 +54,7 @@
             False positives occurred at vulnerability detection
           </h3>
           <TextParagraph>
-            Slow security checks blocking pull requestsWe expanded the number of open source libraries under the hood for a better quality of results.
+            Slow security checks blocking pull requests. We expanded the number of open source libraries under the hood for a better quality of results.
           </TextParagraph>
         </Card>
       </div>
