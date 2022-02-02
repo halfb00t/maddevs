@@ -2,6 +2,7 @@
   <Modal
     ref="modalContentLocker"
     modal-background="black"
+    where-is-called="ebook"
     :class="{ 'modal-content-locker': !formSended }"
   >
     <div
@@ -42,6 +43,7 @@
 import Modal from '@/components/core/Modal'
 import ReadForm from '@/components/Ebook/ReadForm'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
+import { Cookies } from '@/helpers/cookies'
 
 export default {
   name: 'ModalContentLocker',
@@ -93,6 +95,11 @@ export default {
         <br><br> Please check your email.
       `
       this.formSended = true
+      Cookies.setCookie({
+        name: 'sawModal',
+        value: true,
+        expires: 30,
+      })
     },
 
     show() {

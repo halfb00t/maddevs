@@ -59,6 +59,7 @@
 import Simplebar from 'simplebar-vue'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import scrollOnBody from '@/mixins/scrollOnBody'
+import { Cookies } from '@/helpers/cookies'
 
 export default {
   name: 'Modal',
@@ -98,6 +99,11 @@ export default {
     modalBackground: {
       type: String,
       default: 'white',
+    },
+
+    whereIsCalled: {
+      type: String,
+      required: false,
     },
   },
 
@@ -144,6 +150,13 @@ export default {
         this.$emit('on-close')
         this.isSuccess = false
       }, 100)
+      if (this.whereIsCalled === 'ebook') {
+        Cookies.setCookie({
+          name: 'sawModal',
+          value: true,
+          expires: 1,
+        })
+      }
     },
 
     show() {
