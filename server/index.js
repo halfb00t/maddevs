@@ -29,10 +29,6 @@ function bootstrap() {
   const app = express()
   const Sentry = configureSentry(app)
 
-  // Sentry handlers
-  app.use(Sentry.Handlers.requestHandler())
-  app.use(Sentry.Handlers.tracingHandler())
-
   // External middlewares
   app.use(cors())
   app.use(bodyParser.json(config.bodyParserJSONConfig))
@@ -55,11 +51,17 @@ function bootstrap() {
   app.use(webRouter)
   app.use('/api', apiRouter)
 
-  // Errors handler
-  app.use(Sentry.Handlers.errorHandler())
+  if (process.env.NODE_ENV === 'production') {
+    // Sentry handlers
+    app.use(Sentry.Handlers.requestHandler())
+    app.use(Sentry.Handlers.tracingHandler())
 
-  // radiator running
-  runRadiator()
+    // Errors handler
+    app.use(Sentry.Handlers.errorHandler())
+
+    // radiator running
+    runRadiator()
+  }
 
   return app
 }
