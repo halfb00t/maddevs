@@ -7,6 +7,9 @@ import getRobots from './utils/getRobots'
 dotenv.config()
 
 export default defineNuxtConfig({
+  alias: {
+    tslib: 'tslib/tslib.es6.js',
+  },
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
   /*
@@ -110,7 +113,7 @@ export default defineNuxtConfig({
     '~/plugins/feature-flags.js',
     '~/plugins/vue-prlx.js',
     '~/plugins/google-tag-manager-debug.js',
-    // { src: '~/plugins/sentry.js', mode: 'client' },
+    { src: '~/plugins/sentry.js', mode: 'client' },
     { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
     { src: '~/plugins/vue-parallax', mode: 'client' },
   ],
