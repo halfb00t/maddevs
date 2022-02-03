@@ -51,3 +51,5 @@ if (process.env.environment !== 'development') {
     ],
   })
 }
+
+export default () => {}
