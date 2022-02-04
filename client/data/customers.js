@@ -21,20 +21,19 @@ export const customers = [
   'nambataxi',
   'alfa-bank',
   'edumall',
-  'dzing',
   'topica',
   'terbine',
   'silk-road',
   'vms',
   'ase',
   'iothub',
+  'bile-bile',
 ]
 
 export const careersCustomers = [
   'clutch',
   'godee',
   'sjmc',
-  'dzing',
   'topica',
   'veeqo',
   'guardrails',
@@ -43,6 +42,7 @@ export const careersCustomers = [
   'alfa-bank',
   'edumall',
   'triggermesh',
+  'bile-bile',
 ]
 
 export const ratesPercentages = [
