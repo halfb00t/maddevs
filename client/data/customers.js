@@ -27,6 +27,7 @@ export const customers = [
   'vms',
   'ase',
   'iothub',
+  'bile-bile',
 ]
 
 export const careersCustomers = [
@@ -41,6 +42,7 @@ export const careersCustomers = [
   'alfa-bank',
   'edumall',
   'triggermesh',
+  'bile-bile',
 ]
 
 export const ratesPercentages = [
