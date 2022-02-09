@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-Vue.directive('s-parallax', {
+Vue.directive('mad-parallax', {
   bind(el) {
     const elem = el
     const parentHeight = elem.parentElement.getBoundingClientRect().height

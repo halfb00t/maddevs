@@ -10,7 +10,7 @@
     >
       <div class="case_cards-container m-12_bottom">
         <div
-          v-s-parallax
+          v-mad-parallax
           class="case_column"
         >
           <CardTechSolution
