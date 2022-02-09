@@ -6,18 +6,30 @@ Vue.directive('mad-parallax', {
       speed: binding.value?.speed || 0.1,
     }
     const elem = el
-    const parentHeight = elem.parentElement.getBoundingClientRect().height
-    const pxToMove = parentHeight - elem.getBoundingClientRect().height
-    window.addEventListener('scroll', () => {
-      const y = window.innerHeight - (elem.getBoundingClientRect().top + (elem.getBoundingClientRect().height / 2))
+    const mobileSize = 976
+    const parallaxScrollHander = () => {
+      const parentHeight = elem.parentElement.getBoundingClientRect().height
+      const pxToMove = parentHeight - elem.getBoundingClientRect().height
+      const elemInToView = window.innerHeight - (
+        elem.getBoundingClientRect().top + (elem.getBoundingClientRect().height / 2)
+      )
       elem.style.transition = `transform ${options.speed}s ease-out`
-      if (y < 0) {
+      if (elemInToView < 0) {
         elem.style.transform = 'translateY(0px)'
-      } else if (y + pxToMove + parentHeight < window.scrollY) {
+      } else if (elemInToView + pxToMove + parentHeight < window.scrollY) {
         elem.style.transform = `translateY(${pxToMove}px)`
       }
-      if (y >= 0 && y <= pxToMove) {
-        elem.style.transform = `translateY(${y}px)`
+      if (elemInToView >= 0 && elemInToView <= pxToMove) {
+        elem.style.transform = `translateY(${elemInToView}px)`
+      }
+    }
+    window.addEventListener('scroll', parallaxScrollHander)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= mobileSize) {
+        elem.style.transform = 'translateY(0px)'
+        window.removeEventListener('scroll', parallaxScrollHander)
+      } else {
+        window.addEventListener('scroll', parallaxScrollHander)
       }
     })
   },
