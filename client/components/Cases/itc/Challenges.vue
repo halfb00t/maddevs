@@ -8,31 +8,15 @@
         The main challenge for ITC was to coordinate missions and formalise recommendations provided by the coaches. Initially, the project was using a paper-based manual mission report to track their activities with SMEs. R4TCA implementers saw digitalisation as a major opportunity for improvement.
       </TextParagraph>
       <h3
-        v-prlx="animationSettingsTitle"
         class="case_title_h4 m-24_bottom"
       >
         Below are examples of issues that digitising the manual resolved:
       </h3>
-      <div class="case_cards-container m-96_bottom media-m-48_bottom">
-        <div class="case_column">
-          <CardTechSolution
-            v-for="issue in resolvedIssues.slice(0, 3)"
-            v-bind="issue"
-            :key="issue.icon"
-            folder="itc"
-          />
-        </div>
-        <div
-          v-prlx="animationSettingsCards"
-          class="case_column"
-        >
-          <CardTechSolution
-            v-for="issue in resolvedIssues.slice(3, 6)"
-            v-bind="issue"
-            :key="issue.icon"
-            folder="itc"
-          />
-        </div>
+      <div class="m-96_bottom media-m-48_bottom">
+        <ParallaxCards
+          :data-cards="resolvedIssues"
+          :start-slice="3"
+        />
       </div>
       <h2 class="case_title_h2 m-24_bottom">
         How our product solves the challenges
@@ -98,16 +82,16 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
-import CardTechSolution from '@/components/Cases/shared/CardTechSolution'
 import Picture from '@/components/Cases/shared/Picture'
 import { resolvedIssues } from '@/data/caseITC'
+import ParallaxCards from '@/components/Cases/shared/ParallaxCards/ParallaxCards'
 
 export default {
   name: 'Challenges',
   components: {
+    ParallaxCards,
     TextParagraph,
     TextQuoteBox,
-    CardTechSolution,
     Picture,
   },
 
@@ -121,27 +105,6 @@ export default {
         reverse: true,
         mobileMaxWidth: 991,
       },
-
-      animationSettingsTitle: {
-        speed: 0.05,
-        reverse: true,
-        limit: {
-          min: -55,
-          max: 55,
-        },
-
-        mobileMaxWidth: 991,
-      },
-
-      animationSettingsCards: {
-        reverse: true,
-        limit: {
-          min: -55,
-          max: 55,
-        },
-
-        mobileMaxWidth: 991,
-      },
     }
   },
 }
@@ -149,14 +112,6 @@ export default {
 
 <style scoped lang="scss">
 .case {
-  &_cards-container {
-    @include grid(repeat(2, 1fr), auto, 24px, 0);
-  }
-
-  &_column {
-    @include grid(repeat(1, 1fr), repeat(3, max-content), 0, 24px);
-  }
-
   &_title-statistics {
     margin-bottom: 6px;
     @include font('Poppins', 36px, 600);
@@ -200,16 +155,6 @@ export default {
     &_img-section {
       max-height: 276px;
       overflow: hidden;
-    }
-  }
-
-  @media screen and (max-width: 880px) {
-    &_cards-container {
-      @include grid(repeat(1, 1fr), auto, 0, 10px);
-    }
-
-    &_column {
-      grid-row-gap: 10px;
     }
   }
 }

@@ -5,46 +5,18 @@
     >
       Key project milestones
     </h3>
-    <div
-      class="media-m-48_bottom case_key-project-milestones"
-    >
-      <div class="case_cards-container m-12_bottom">
-        <div
-          v-mad-parallax
-          class="case_column"
-        >
-          <CardTechSolution
-            v-for="result in keyProjectMilestones.slice(0, 2)"
-            v-bind="result"
-            :key="result.icon"
-            folder="yourcast"
-            :icon="result.icon"
-          />
-        </div>
-        <div
-          class="case_column"
-        >
-          <CardTechSolution
-            v-for="result in keyProjectMilestones.slice(2, 5)"
-            v-bind="result"
-            :key="result.icon"
-            folder="yourcast"
-            :icon="result.icon"
-          />
-        </div>
-      </div>
-    </div>
+    <ParallaxCards :data-cards="keyProjectMilestones" />
   </section>
 </template>
 
 <script>
 import { keyProjectMilestones } from '@/data/caseYourcast'
-import CardTechSolution from '@/components/Cases/shared/CardTechSolution'
+import ParallaxCards from '@/components/Cases/shared/ParallaxCards/ParallaxCards'
 
 export default {
   name: 'KeyProjectMilestones',
   components: {
-    CardTechSolution,
+    ParallaxCards,
   },
 
   data() {
@@ -58,48 +30,5 @@ export default {
 <style lang="scss">
 .key-project-milestone {
   overflow: hidden;
-}
-.case {
-  &_cards-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
-    position: relative;
-  }
-
-  &_column {
-    @include grid(repeat(1, 1fr), repeat(2, minmax(min-content, max-content)), 0, 24px);
-    &-right {
-      @media screen and (min-width: 997px) {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-      @include grid(repeat(1, 1fr), repeat(3, minmax(min-content, max-content)), 0, 24px);
-    }
-    ::v-deep{
-      .card-content{
-        align-self: start;
-      }
-    }
-  }
-
-  @media screen and (max-width: 976px) {
-    &_cards-container {
-      margin-bottom: 96px;
-      @include grid(repeat(1, 1fr), auto, 0, 20px);
-    }
-
-    &_column,
-    &_column-right {
-      grid-row-gap: 20px;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    &_cards-container {
-      margin-bottom: 48px;
-    }
-  }
 }
 </style>
