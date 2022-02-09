@@ -1,7 +1,6 @@
 <template>
   <section class="container_regular p-96_bottom p-96_top media-p-48_top media-p-0_bottom key-project-milestone">
     <h3
-      v-prlx="animationSettingsTitle"
       class="case_title_h2 m-48_bottom media-m-24_bottom"
     >
       Key project milestones
@@ -11,6 +10,7 @@
     >
       <div class="case_cards-container m-12_bottom">
         <div
+          v-s-parallax
           class="case_column"
         >
           <CardTechSolution
@@ -22,18 +22,15 @@
           />
         </div>
         <div
-          v-prlx="animationSettingsCards"
           class="case_column"
         >
-          <div class="case_column-right">
-            <CardTechSolution
-              v-for="result in keyProjectMilestones.slice(2, 5)"
-              v-bind="result"
-              :key="result.icon"
-              folder="yourcast"
-              :icon="result.icon"
-            />
-          </div>
+          <CardTechSolution
+            v-for="result in keyProjectMilestones.slice(2, 5)"
+            v-bind="result"
+            :key="result.icon"
+            folder="yourcast"
+            :icon="result.icon"
+          />
         </div>
       </div>
     </div>
@@ -53,31 +50,6 @@ export default {
   data() {
     return {
       keyProjectMilestones,
-      animationSettingsTitle: {
-        direction: 'y',
-        speed: 0.3,
-        fromBottom: false,
-        reverse: true,
-        limit: {
-          min: -90,
-          max: 90,
-        },
-
-        mobileMaxWidth: 977,
-      },
-
-      animationSettingsCards: {
-        direction: 'y',
-        speed: 0.6,
-        fromBottom: false,
-        reverse: true,
-        limit: {
-          min: -240,
-          max: 240,
-        },
-
-        mobileMaxWidth: 977,
-      },
     }
   },
 }
@@ -89,7 +61,10 @@ export default {
 }
 .case {
   &_cards-container {
-    @include grid(repeat(2, 1fr), auto, 24px, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
     position: relative;
   }
 
