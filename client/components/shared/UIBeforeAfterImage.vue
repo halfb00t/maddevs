@@ -4,8 +4,11 @@
     class="img-wrapper"
   >
     <img
+      v-lazy-load
+      width="772px"
+      height="472px"
       class="img-wrapper__before-img"
-      :src="beforeImage"
+      :data-src="beforeImage"
       alt="Before image"
     >
     <div
@@ -13,8 +16,11 @@
       :style="{ width: `${compareWidth - 0.01 + '%'}`}"
     >
       <img
+        v-lazy-load
+        width="772px"
+        height="472px"
         class="img-wrapper__after-img"
-        :src="afterImage"
+        :data-src="afterImage"
         alt="After image"
         :style="{ width: width + 'px' }"
       >
