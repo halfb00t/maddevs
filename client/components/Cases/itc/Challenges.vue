@@ -23,7 +23,7 @@
       </h2>
     </div>
     <div class="case_img-section background-color-silver m-48_bottom media-m-24_bottom">
-      <div v-prlx="animationSettingsImg">
+      <div v-mad-parallax="animationSettingsImg">
         <div class="case_image-wrap">
           <Picture
             :width="1440"
@@ -100,10 +100,10 @@ export default {
       resolvedIssues,
       animationSettingsImg: {
         direction: 'x',
-        speed: 0.2,
-        fromBottom: true,
         reverse: true,
-        mobileMaxWidth: 991,
+        customMove: true,
+        startPoint: 4,
+        speed: 0.6,
       },
     }
   },

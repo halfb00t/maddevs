@@ -27,7 +27,7 @@
     <div
       class="container_full case_container background-color-outer-space back m-72_bottom media-m-48_bottom p-72_top media-p-41_top"
     >
-      <div v-prlx="animationSettings">
+      <div v-mad-parallax="animationSettings">
         <div class="case_image-wrap">
           <Picture
             folder="guardrails"
@@ -90,13 +90,11 @@ export default {
     return {
       animationSettings: {
         reverse: true,
-        limit: {
-          min: -30,
-          max: 0,
-        },
-
-        mobileMaxWidth: 961,
-        fromBottom: true,
+        maxMove: 30,
+        customMove: true,
+        speed: 0.3,
+        startPoint: 3,
+        setIndentTop: true,
       },
     }
   },

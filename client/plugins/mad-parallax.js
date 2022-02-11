@@ -1,5 +1,24 @@
 import Vue from 'vue'
 
+const setCustomProperties = (elem, options, elemInToView, parentHeight) => {
+  let maxMove = options.maxMove || elem.getBoundingClientRect().height
+  let scrollAnimation = elemInToView
+  if (options.reverse) {
+    scrollAnimation = -elemInToView
+    if (Math.sign(maxMove) !== -1) {
+      maxMove = -maxMove
+    }
+  }
+  if (elemInToView < 0) {
+    elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
+  } else if (elemInToView + Math.abs(maxMove) + parentHeight < window.scrollY) {
+    elem.style.transform = `translate${options.direction.toUpperCase()}(${maxMove}px)`
+  }
+  if (elemInToView >= 0 && elemInToView <= Math.abs(maxMove)) {
+    elem.style.transform = `translate${options.direction.toUpperCase()}(${scrollAnimation}px)`
+  }
+}
+
 const parallaxScrollHandler = (elem, options) => {
   if (elem.target !== document) {
     const elemInToView = window.innerHeight - (
@@ -10,24 +29,15 @@ const parallaxScrollHandler = (elem, options) => {
     if (!options.customMove) {
       const pxToMove = parentHeight - elem?.getBoundingClientRect().height
       if (elemInToView < 0) {
-        elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
+        elem.style.transform = 'translateY(0px)'
       } else if (elemInToView + pxToMove + parentHeight < window.scrollY) {
-        elem.style.transform = `translate${options.direction.toUpperCase()}(${pxToMove}px)`
+        elem.style.transform = `translateY(${pxToMove}px)`
       }
       if (elemInToView >= 0 && elemInToView <= pxToMove) {
-        elem.style.transform = `translate${options.direction.toUpperCase()}(${elemInToView}px)`
+        elem.style.transform = `translateY(${elemInToView}px)`
       }
     } else {
-      if (elemInToView < 0) {
-        elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
-      } else if (elemInToView + options.maxMove + parentHeight < window.scrollY) {
-        elem.style.transform = `translate${options.direction.toUpperCase()}(${options.maxMove}px)`
-      }
-      if (elemInToView >= 0 && elemInToView <= Math.abs(options.maxMove)) {
-        if (options.reverse) {
-          elem.style.transform = `translate${options.direction.toUpperCase()}(-${elemInToView}px)`
-        }
-      }
+      setCustomProperties(elem, options, elemInToView, parentHeight)
     }
   }
 }
@@ -35,9 +45,11 @@ const parallaxScrollHandler = (elem, options) => {
 const checkIsMobileSize = (elem, options) => {
   if (window.innerWidth <= options.mobileSize) {
     elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
-    window.removeEventListener('scroll', parallaxScrollHandler)
+    // eslint-disable-next-line no-use-before-define
+    window.removeEventListener('scroll', onScroll)
   } else {
-    window.addEventListener('scroll', parallaxScrollHandler)
+    // eslint-disable-next-line no-use-before-define
+    window.addEventListener('scroll', onScroll)
   }
 }
 
@@ -84,6 +96,7 @@ Vue.directive('mad-parallax', {
         el,
         options,
       })
+      onResize()
     }
   },
   unbind(el) {
