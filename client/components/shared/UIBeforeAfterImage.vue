@@ -156,8 +156,9 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     z-index: 999;
-    right: 0;
+    width: 100%;
     left: 0;
+    right: 0;
     height: 50px;
     cursor: ew-resize;
     background: rgba(0,0,0,.4);
