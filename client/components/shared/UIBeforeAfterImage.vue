@@ -5,20 +5,20 @@
   >
     <img
       v-lazy-load
-      width="772px"
-      height="472px"
+      width="772"
+      height="472"
       class="img-wrapper__before-img"
       :data-src="beforeImage"
       alt="Before image"
     >
     <div
       class="img-wrapper__compare-overlay"
-      :style="{ width: `${compareWidth - 0.01 + '%'}`}"
+      :style="{ width: `${compareWidth}%` }"
     >
       <img
         v-lazy-load
-        width="772px"
-        height="472px"
+        width="772"
+        height="472"
         class="img-wrapper__after-img"
         :data-src="afterImage"
         alt="After image"
@@ -105,12 +105,6 @@ export default {
       width: null,
       compareWidth: this.value,
     }
-  },
-
-  watch: {
-    value() {
-      this.compareWidth = this.value
-    },
   },
 
   mounted() {

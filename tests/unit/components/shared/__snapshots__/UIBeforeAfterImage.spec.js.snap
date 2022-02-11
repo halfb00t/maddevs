@@ -1,30 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UIBeforeAfterImage component should render correctly with slot 1`] = `
-<div>
-  <div
-    class="comparsion-container"
-    data-testid="track-img"
-  >
-    <img-comparison-slider
-      hover="true"
-    >
-      <img
-        alt="Image for compare"
-        data-src=""
-        height=""
-        slot="first"
-        width=""
-      />
-       
-      <img
-        alt="Image for compare"
-        data-src=""
-        height=""
-        slot="second"
-        width=""
-      />
-    </img-comparison-slider>
+exports[`UIBeforeAfterImage component should render correctly with images 1`] = `
+<div class="img-wrapper"><img width="772" height="472" data-src="img.jpg" alt="Before image" class="img-wrapper__before-img">
+  <div class="img-wrapper__compare-overlay" style="width: 50%;"><img width="772" height="472" data-src="img.jpg" alt="After image" class="img-wrapper__after-img" style="width: 0px;"></div> <input type="range" min="0" max="100" step="0.1" tabindex="-1" class="img-wrapper__compare-range">
+  <div class="img-wrapper__handle-wrap" style="left: 50%;">
+    <div class="img-wrapper__handle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img-wrapper__handle-arrow img-wrapper__handle-arrow--l">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img-wrapper__handle-arrow img-wrapper__handle-arrow--r">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg></div> <span class="img-wrapper__handle-line"></span>
+  </div>
+</div>
+`;
+
+exports[`UIBeforeAfterImage component the compareWidth should correctly react to change value of the input 1`] = `
+<div class="img-wrapper"><img width="772" height="472" data-src="img.jpg" alt="Before image" class="img-wrapper__before-img">
+  <div class="img-wrapper__compare-overlay" style="width: 50%;"><img width="772" height="472" data-src="img.jpg" alt="After image" class="img-wrapper__after-img" style="width: 0px;"></div> <input type="range" min="0" max="100" step="0.1" tabindex="-1" class="img-wrapper__compare-range">
+  <div class="img-wrapper__handle-wrap" style="left: 50%;">
+    <div class="img-wrapper__handle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img-wrapper__handle-arrow img-wrapper__handle-arrow--l">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="img-wrapper__handle-arrow img-wrapper__handle-arrow--r">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg></div> <span class="img-wrapper__handle-line"></span>
   </div>
 </div>
 `;
