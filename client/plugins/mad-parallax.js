@@ -1,21 +1,25 @@
 import Vue from 'vue'
 
 const setCustomProperties = (elem, options, elemInToView, parentHeight) => {
-  let maxMove = options.maxMove || elem.getBoundingClientRect().height
-  let scrollAnimation = elemInToView
-  if (options.reverse) {
-    scrollAnimation = -elemInToView
-    if (Math.sign(maxMove) !== -1) {
-      maxMove = -maxMove
+  if (options.prlx3d) {
+    elem.style.transform = `translate3d(0, ${elemInToView}px, 0)`
+  } else {
+    let maxMove = options.maxMove || elem.getBoundingClientRect().height
+    let scrollAnimation = elemInToView
+    if (options.reverse) {
+      scrollAnimation = -elemInToView
+      if (Math.sign(maxMove) !== -1) {
+        maxMove = -maxMove
+      }
     }
-  }
-  if (elemInToView < 0) {
-    elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
-  } else if (elemInToView + Math.abs(maxMove) + parentHeight < window.scrollY) {
-    elem.style.transform = `translate${options.direction.toUpperCase()}(${maxMove}px)`
-  }
-  if (elemInToView >= 0 && elemInToView <= Math.abs(maxMove)) {
-    elem.style.transform = `translate${options.direction.toUpperCase()}(${scrollAnimation}px)`
+    if (elemInToView < 0) {
+      elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
+    } else if (elemInToView + Math.abs(maxMove) + parentHeight < window.scrollY) {
+      elem.style.transform = `translate${options.direction.toUpperCase()}(${maxMove}px)`
+    }
+    if (elemInToView >= 0 && elemInToView <= Math.abs(maxMove)) {
+      elem.style.transform = `translate${options.direction.toUpperCase()}(${scrollAnimation}px)`
+    }
   }
 }
 
@@ -79,6 +83,7 @@ Vue.directive('mad-parallax', {
       customMove: binding.value?.customMove || false,
       startPoint: binding.value?.startPoint || 1.5,
       disabled: binding.value?.disabled || false,
+      prlx3d: binding.value?.prlx3d || false,
     }
     if (!options.disabled) {
       if (options.reverse) {
