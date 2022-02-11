@@ -26,12 +26,13 @@ const setCustomProperties = (elem, options, elemInToView, parentHeight) => {
 const parallaxScrollHandler = (elem, options) => {
   if (elem.target !== document) {
     const elemInToView = window.innerHeight - (
-      elem?.getBoundingClientRect().top + (elem?.getBoundingClientRect().height / options.startPoint)
+      elem.getBoundingClientRect().top + (elem.getBoundingClientRect().height / options.startPoint)
     )
-    const parentHeight = elem?.parentElement?.getBoundingClientRect().height
+    const parentHeight = elem.parentElement.getBoundingClientRect().height
     elem.style.transition = `transform ${options.speed}s ease-out`
+    // DEFAULT WORK WITH CARDS IN TWO COLUMNS
     if (!options.customMove) {
-      const pxToMove = parentHeight - elem?.getBoundingClientRect().height
+      const pxToMove = parentHeight - elem.getBoundingClientRect().height
       if (elemInToView < 0) {
         elem.style.transform = 'translateY(0px)'
       } else if (elemInToView + pxToMove + parentHeight < window.scrollY) {
@@ -41,11 +42,12 @@ const parallaxScrollHandler = (elem, options) => {
         elem.style.transform = `translateY(${elemInToView}px)`
       }
     } else {
+      // CUSTOM PARALLAXES DEPENDING ON THE PASSED OPTIONS
       setCustomProperties(elem, options, elemInToView, parentHeight)
     }
   }
 }
-
+// CHECK FOR RESIZE
 const checkIsMobileSize = (elem, options) => {
   if (window.innerWidth <= options.mobileSize) {
     elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
@@ -60,6 +62,7 @@ const checkIsMobileSize = (elem, options) => {
 let elems = []
 let options = {}
 
+// WRAPPER FUNCTIONS FOR REMOVING EVENT LISTENERS
 const onScroll = () => {
   for (const elem of elems) {
     parallaxScrollHandler(elem.el, elem.options)
@@ -75,15 +78,15 @@ const onResize = () => {
 Vue.directive('mad-parallax', {
   bind(el, binding) {
     options = {
-      speed: binding.value?.speed || 0.1,
-      direction: binding.value?.direction || 'y',
-      mobileSize: binding.value?.mobileSize || 976,
-      maxMove: binding.value?.maxMove || 0,
-      reverse: binding.value?.reverse || false,
-      customMove: binding.value?.customMove || false,
-      startPoint: binding.value?.startPoint || 1.5,
-      disabled: binding.value?.disabled || false,
-      prlx3d: binding.value?.prlx3d || false,
+      speed: binding.value?.speed || 0.1, // Speed for animation
+      direction: binding.value?.direction || 'y', // Direction for transform
+      mobileSize: binding.value?.mobileSize || 976, // Disable parallax when window size < mobileSize
+      maxMove: binding.value?.maxMove || 0, // For custom move in px
+      reverse: binding.value?.reverse || false, // For negative move
+      customMove: binding.value?.customMove || false, // For enable custom move
+      startPoint: binding.value?.startPoint || 1.5, // From which part of the block to start the animation when scrolling
+      disabled: binding.value?.disabled || false, // For disable parallax
+      prlx3d: binding.value?.prlx3d || false, // For big image with 3d transform parallax
     }
     if (!options.disabled) {
       if (options.reverse) {
