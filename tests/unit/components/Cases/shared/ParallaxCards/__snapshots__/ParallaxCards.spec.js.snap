@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParallaxCards component should render correctly 1`] = `
+<div>
+  <div
+    class="parallax_cards"
+  >
+    <div
+      class="parallax_cards__item"
+    >
+      <div
+        class="card-content background-color-silver"
+        iconheight="51.94"
+        iconwidth="51.94"
+      >
+        <img
+          alt="test-icon"
+          class="card-content_icon"
+          data-src="img.jpg"
+          height="51.94"
+          width="51.94"
+        />
+         
+        <h4
+          class="case_title_h4 m-10-bottom"
+        >
+          
+    test title
+  
+        </h4>
+         
+        <p
+          class="case_paragraph"
+        >
+          
+      test description
+    
+        </p>
+         
+      </div>
+      <div
+        class="card-content background-color-silver"
+        iconheight="51.94"
+        iconwidth="51.94"
+      >
+        <img
+          alt="test-icon-2"
+          class="card-content_icon"
+          data-src="img.jpg"
+          height="51.94"
+          width="51.94"
+        />
+         
+        <h4
+          class="case_title_h4 m-10-bottom"
+        >
+          
+    test title 2
+  
+        </h4>
+         
+        <p
+          class="case_paragraph"
+        >
+          
+      test description 2
+    
+        </p>
+         
+      </div>
+    </div>
+     
+    <div
+      class="parallax_cards__item"
+    >
+      <div
+        class="card-content background-color-silver"
+        iconheight="51.94"
+        iconwidth="51.94"
+      >
+        <img
+          alt="test-icon-3"
+          class="card-content_icon"
+          data-src="img.jpg"
+          height="51.94"
+          width="51.94"
+        />
+         
+        <h4
+          class="case_title_h4 m-10-bottom"
+        >
+          
+    test title 3
+  
+        </h4>
+         
+        <p
+          class="case_paragraph"
+        >
+          
+      test description 3
+    
+        </p>
+         
+      </div>
+      <div
+        class="card-content background-color-silver"
+        iconheight="51.94"
+        iconwidth="51.94"
+      >
+        <img
+          alt="test-icon-4"
+          class="card-content_icon"
+          data-src="img.jpg"
+          height="51.94"
+          width="51.94"
+        />
+         
+        <h4
+          class="case_title_h4 m-10-bottom"
+        >
+          
+    test title 4
+  
+        </h4>
+         
+        <p
+          class="case_paragraph"
+        >
+          
+      test description 4
+    
+        </p>
+         
+      </div>
+    </div>
+  </div>
+</div>
+`;

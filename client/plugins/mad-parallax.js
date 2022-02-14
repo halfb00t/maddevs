@@ -2,7 +2,10 @@ import Vue from 'vue'
 
 const setCustomProperties = (elem, options, elemInToView, parentHeight) => {
   if (options.prlx3d) {
-    elem.style.transform = `translate3d(0, ${elemInToView}px, 0)`
+    const { top, bottom } = elem.getBoundingClientRect()
+    if (top < window.scrollY && bottom > 0) {
+      elem.style.transform = `translate3d(0, ${elemInToView}px, 0)`
+    }
   } else {
     let maxMove = options.maxMove || elem.getBoundingClientRect().height
     let scrollAnimation = elemInToView
