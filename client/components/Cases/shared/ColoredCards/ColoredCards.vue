@@ -1,7 +1,20 @@
+<!--
+example:
+
+<ColoredCards
+  :cards-data="coloredCardsData"
+  grid-type="one-left-two-right"
+/>
+
+-->
 <template>
-  <div class="colored-cards">
+  <div
+    v-if="availableGridTypes.includes(gridType)"
+    class="colored-cards"
+    :class="`card-grid-type--${gridType}`"
+  >
     <ColoredCard
-      v-for="card in cards"
+      v-for="(card, index) in cardsData"
       :key="card.title"
       :title="card.title"
       :pre-title="card.preTitle"
@@ -9,6 +22,7 @@
       :image="card.image"
       :has-image="card.hasImage"
       :color-name="card.colorName"
+      :card-index="index+1"
     />
   </div>
 </template>
@@ -23,58 +37,81 @@ export default {
   },
 
   props: {
-    cards: {
+    cardsData: {
       type: [Object, Array],
       default() {
         return {}
       },
     },
+
+    gridType: { // available types: one-one, two-one, two-two, one-left-two-right
+      type: String,
+      required: true,
+    },
   },
 
-  mounted() {
-    console.log(this.cards)
+  data() {
+    return {
+      availableGridTypes: ['one-one', 'two-one', 'two-two', 'one-left-two-right'],
+    }
   },
 }
 </script>
 
 <style scoped lang="scss">
-.colored-cards{
-  //@include grid(repeat(1, 1fr), auto, 0, 24px);
-    @include grid(repeat(2, 1fr), auto, 24px, 0);
-
+.colored-cards {
+  display: grid;
+  grid-gap: 24px;
 }
-//&_cards-group {
-//  @include grid(repeat(2, 1fr), auto, 24px, 0);
-//}
 
-//.colored-card{
-//
-//}
-//
-//&_card-title {
-//  color: $text-color--white;
-//}
-//
-//&_card-img {
-//  min-width: 396px;
-//  margin: -32px 0 0;
-//  position: relative;
-//  left: 50%;
-//  transform: translateX(-50%);
-//
-//  @media screen and (max-width: 768px) {
-//    margin: -20px 0 0;
-//  }
-//
-//  @media screen and (min-width: 470px) and (max-width: 720px) {
-//    min-width: 550px
-//  }
-//}
-//
-//@media screen and (max-width: 720px) {
-//  &_cards-group {
-//    @include grid(repeat(1, 1fr), auto, 0, 24px);
-//  }
-//}
+.card-grid-type {
+  &--one-one {
+    grid-template-columns: repeat(2, 1fr);
+    .colored-card {
+      grid-column: span 2;
+    }
+  }
+
+  &--two-one {
+    grid-template-columns: repeat(2, 1fr);
+
+    .colored-card {
+      grid-column: span 2;
+
+      &--1, &--2,{
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &--two-two {
+    grid-template-columns: repeat(2, 1fr);
+
+    .colored-card {
+      grid-column: span 2;
+
+      &--1, &--2, &--3, &--4 {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &--one-left-two-right {
+    grid-template-columns: repeat(2, 1fr);
+
+    .colored-card {
+      grid-column: span 2;
+
+      &--1, {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      &--2, &--3 {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+    }
+  }
+}
 
 </style>
