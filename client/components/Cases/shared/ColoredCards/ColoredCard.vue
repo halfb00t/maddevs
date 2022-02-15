@@ -1,30 +1,33 @@
 <template>
   <div
     class="colored-card"
-    :class="`background-color-${colorName} colored-card--${cardIndex}`"
+    :class="`colored-card--${cardIndex} ${cardColor.card}`"
   >
-    <div class="colored-card__image-wrapper">
-      <Picture
-        v-if="hasImage"
-        class="colored-card__image"
-        :class="`colored-card-image-${image.file}`"
-        :width="396"
-        :height="200"
-        :file="image.file"
-        :alt="image.alt || 'Image'"
-        :folder="image.folder"
-        extension="png"
-      />
-    </div>
+    <template v-if="cardImage.file">
+      <div class="colored-card__image-wrapper">
+        <Picture
+          class="colored-card__image"
+          :class="`colored-card-image-${cardImage.file}`"
+          :width="396"
+          :height="200"
+          :file="cardImage.file"
+          :alt="cardImage.alt || 'Image'"
+          :folder="cardImage.folder"
+          extension="png"
+        />
+      </div>
+    </template>
 
     <div class="colored-card__footer">
       <span
         v-if="preTitle"
         class="colored-card__pre-title"
+        :class="cardColor.preTitle"
       >{{ preTitle }}</span>
       <h2
         v-if="title"
         class="colored-card__title"
+        :class="cardColor.title"
       >
         {{ title }}
       </h2>
@@ -34,6 +37,7 @@
           v-for="description in descriptions"
           :key="description"
           class="colored-card__description"
+          :class="cardColor.descriptions"
         >
           {{ description }}
         </TextParagraph>
@@ -42,6 +46,7 @@
         <TextParagraph
           v-if="descriptions"
           class="colored-card__description"
+          :class="cardColor.descriptions"
         >
           {{ descriptions }}
         </TextParagraph>
@@ -66,6 +71,7 @@ export default {
   props: {
     cardIndex: {
       type: Number,
+      required: true,
     },
 
     preTitle: {
@@ -78,32 +84,41 @@ export default {
       default: '',
     },
 
-    colorName: {
-      type: String,
-      default: '',
-    },
-
     descriptions: {
       type: [String, Array],
       default: '',
     },
 
-    hasImage: {
-      type: Boolean,
-      default: false,
-    },
-
     image: {
       type: Object,
-      default: () => ({
-        width: 0,
-        height: 0,
-        folder: '',
-        file: '',
-        alt: '',
-      }),
+      default: () => {
+      },
     },
 
+    colors: {
+      type: Object,
+      default: () => {
+      },
+    },
+  },
+
+  data() {
+    return {
+      cardColor: {
+        card: this.colors?.card ? `background-color-${this.colors?.card}` : '',
+        title: this.colors?.title ? `text-color-${this.colors?.title}` : '',
+        preTitle: this.colors?.preTitle ? `text-color-${this.colors?.preTitle}` : '',
+        descriptions: this.colors?.descriptions ? `text-color-${this.colors?.descriptions}` : '',
+      },
+
+      cardImage: {
+        width: this.image?.width,
+        height: this.image?.height,
+        folder: this.image?.folder,
+        file: this.image?.file,
+        alt: this.image?.alt,
+      },
+    }
   },
 }
 </script>

@@ -16,12 +16,11 @@ example:
     <ColoredCard
       v-for="(card, index) in cardsData"
       :key="card.title"
-      :title="card.title"
       :pre-title="card.preTitle"
+      :title="card.title"
       :descriptions="card.descriptions"
       :image="card.image"
-      :has-image="card.hasImage"
-      :color-name="card.colorName"
+      :colors="card.colors"
       :card-index="index+1"
     />
   </div>
@@ -39,9 +38,7 @@ export default {
   props: {
     cardsData: {
       type: [Object, Array],
-      default() {
-        return {}
-      },
+      required: true,
     },
 
     gridType: { // available types: one-one, two-one, two-two, one-left-two-right
@@ -67,6 +64,7 @@ export default {
 .card-grid-type {
   &--one-one {
     grid-template-columns: repeat(2, 1fr);
+
     .colored-card {
       grid-column: span 2;
     }
@@ -78,7 +76,7 @@ export default {
     .colored-card {
       grid-column: span 2;
 
-      &--1, &--2,{
+      &--1, &--2, {
         grid-column: span 1;
       }
     }
@@ -106,6 +104,7 @@ export default {
         grid-column: span 1;
         grid-row: span 2;
       }
+
       &--2, &--3 {
         grid-column: span 1;
         grid-row: span 1;
@@ -113,5 +112,4 @@ export default {
     }
   }
 }
-
 </style>
