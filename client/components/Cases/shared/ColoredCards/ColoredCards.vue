@@ -1,12 +1,3 @@
-<!--
-example:
-
-<ColoredCards
-  :cards-data="coloredCardsData"
-  grid-type="one-left-two-right"
-/>
-
--->
 <template>
   <div
     v-if="availableGridTypes.includes(gridType)"
@@ -15,7 +6,7 @@ example:
   >
     <ColoredCard
       v-for="(card, index) in cardsData"
-      :key="card.title"
+      :key="index+1"
       :pre-title="card.preTitle"
       :title="card.title"
       :descriptions="card.descriptions"

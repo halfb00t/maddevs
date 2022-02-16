@@ -21,22 +21,22 @@
     <div class="colored-card__footer">
       <span
         v-if="preTitle"
-        class="colored-card__pre-title"
+        class="colored-card__pre-title case_paragraph-uppercase m-10_bottom media-m-8_bottom"
         :class="cardColor.preTitle"
       >{{ preTitle }}</span>
-      <h2
+      <h3
         v-if="title"
-        class="colored-card__title"
+        class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
         :class="cardColor.title"
       >
         {{ title }}
-      </h2>
+      </h3>
 
       <template v-if="Array.isArray(descriptions)">
         <TextParagraph
           v-for="description in descriptions"
           :key="description"
-          class="colored-card__description"
+          class="colored-card__description m-24_bottom media-m-16_bottom"
           :class="cardColor.descriptions"
         >
           {{ description }}
@@ -143,6 +143,9 @@ export default {
   &__footer {
     flex-grow: 1;
     padding: 20px;
+  }
+  &__pre-title{
+    display: block;
   }
 }
 </style>
