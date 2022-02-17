@@ -9,35 +9,41 @@
     <Card class="background-color-black">
       <CardNinjaSushi />
     </Card>
-    <CardsBusinessModelsGrid />
-    <Card class="background-color-silver">
-      <h3 class="case_title_h4 m-8_bottom">
-        Namba Food API
-      </h3>
-      <TextParagraph>
-        Namba Food API allows businesses to integrate the API into any mobile payment application. As a result,
-        end-users can quickly order goods and services without leaving the app using the app’s own payment system. Such
-        API benefits businesses because end users use the payment method defined by the mobile app. At the moment, Mbank
-        by Commercial Bank Kyrgyzstan and Balance by Beeline, a telecommunication service provider, have successfully
-        integrated Namba Food API into their mobile apps.
-      </TextParagraph>
-    </Card>
+    <div class="cards">
+      <ColoredCards
+        :cards-data="nambaFood"
+        grid-type="one-left-two-right"
+      />
+    </div>
   </section>
 </template>
 
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Card from '@/components/Cases/shared/Card'
-import CardsBusinessModelsGrid from '@/components/Cases/nambafood/cards/CardsBusinessModelsGrid'
+import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import { nambaFood } from '@/data/nambaFood'
 import CardNinjaSushi from '@/components/Cases/nambafood/cards/CardNinjaSushi'
 
 export default {
   name: 'BusinessModel',
   components: {
     TextParagraph,
+    ColoredCards,
     Card,
-    CardsBusinessModelsGrid,
     CardNinjaSushi,
+  },
+
+  data() {
+    return {
+      nambaFood,
+    }
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.cards {
+  margin-top: 24px;
+}
+</style>

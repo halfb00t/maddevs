@@ -228,72 +228,91 @@ exports[`ClusterisationAlgorithm component should render correctly 1`] = `
       </h3>
        
       <div
-        class="case_cards"
+        class="colored-cards m-72_bottom media-m-48_bottom card-grid-type--two-one"
       >
         <div
-          class="case_cards-group"
+          class="colored-card colored-card--1 background-color-black"
         >
-          <div
-            class="case_card background-color-black"
-          >
-            <h4
-              class="case_title_h4 case_card-title m-8_bottom"
-            >
-              
-            Detection of negative keywords
-          
-            </h4>
-             
-            <p
-              class="case_paragraph"
-              style="color: rgb(255, 255, 255);"
-            >
-              
-            The tool identifies irrelevant keywords for narrower, more specific targeting.
-          
-            </p>
-          </div>
+          <!---->
            
           <div
-            class="case_card background-color-gray"
+            class="colored-card__footer"
           >
-            <h4
-              class="case_title_h4 case_card-title m-8_bottom"
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
             >
               
-            Removal of explicit and implicit duplicates
-          
-            </h4>
+      Detection of negative keywords
+    
+            </h3>
              
             <p
-              class="case_paragraph"
-              style="color: rgb(255, 255, 255);"
+              class="case_paragraph colored-card__description text-color-white"
             >
               
-            Duplicates inevitably occur, and the tool is configured to eliminate them.
-          
+        The tool identifies irrelevant keywords for narrower, more specific targeting.
+      
             </p>
+             
           </div>
         </div>
-         
         <div
-          class="case_card background-color-yellow m-96_bottom media-m-48_bottom"
+          class="colored-card colored-card--2 background-color-gray"
         >
-          <h4
-            class="case_title_h4 m-8_bottom"
-          >
-            
-          Elimination of negative keywords across groups
-        
-          </h4>
+          <!---->
            
-          <p
-            class="case_paragraph"
+          <div
+            class="colored-card__footer"
           >
-            
-          This reduces competition among keywords so that users see relevant ads and get to the right pages.
-        
-          </p>
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+            >
+              
+      Removal of explicit and implicit duplicates
+    
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description text-color-white"
+            >
+              
+        Duplicates inevitably occur, and the tool is configured to eliminate them.
+      
+            </p>
+             
+          </div>
+        </div>
+        <div
+          class="colored-card colored-card--3 background-color-yellow"
+        >
+          <!---->
+           
+          <div
+            class="colored-card__footer"
+          >
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
+            >
+              
+      Elimination of negative keywords across groups
+    
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description"
+            >
+              
+        This reduces competition among keywords so that users see relevant ads and get to the right pages.
+      
+            </p>
+             
+          </div>
         </div>
       </div>
     </div>
