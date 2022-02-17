@@ -81,9 +81,11 @@ exports[`ClusterisationAlgorithm component should render correctly 1`] = `
       <swiper-stub
         boxshadow="true"
         components="[object Object],[object Object]"
+        height="517"
         safaritopbaralt=""
         safaritopbarimage=""
         sliderdescription=""
+        width="1026"
       />
     </div>
      
