@@ -4,26 +4,15 @@
       Phase 3: Elasticsearch
     </h2>
     <TextParagraph class="m-24_bottom">
-      Elasticsearch is crucial in the way users experience the Veeqo platform: the dashboard and the entire interface rely on Elasticsearch. Even if everything else functions flawlessly, delays in the search engine alone cause problems for user experience.
+      Elasticsearch is crucial in the way users experience the Veeqo platform: the dashboard and the entire interface
+      rely on Elasticsearch. Even if everything else functions flawlessly, delays in the search engine alone cause
+      problems for user experience.
     </TextParagraph>
-    <div class="case_cards-container m-96_bottom media-m-48_bottom">
-      <Card class="background-color-silver">
-        <h3 class="case_title_h4 m-8_bottom">
-          Challenge
-        </h3>
-        <TextParagraph>
-          Elasticsearch didn’t cope with the load due to its outdated version and non-optimized configurations.
-        </TextParagraph>
-      </Card>
-      <Card class="background-color-blue-light">
-        <h3 class="case_title_h4 m-8_bottom">
-          Effect on users
-        </h3>
-        <TextParagraph>
-          The users were often unable to access search results. Elasticsearch would expose them to delays of up to 30 seconds.
-        </TextParagraph>
-      </Card>
-    </div>
+    <ColoredCards
+      :cards-data="elasticsearchCards"
+      grid-type="two-two"
+      class="m-96_bottom media-m-48_bottom"
+    />
     <h3 class="case_title_h4 m-8_bottom">
       Solution
     </h3>
@@ -31,7 +20,9 @@
       There are two main ways to improve performance: Increase compute resources, Optimize the use of resources
     </TextParagraph>
     <TextParagraph class="m-34_bottom media-m-24_bottom">
-      At any given moment DevOps specialists calculate and evaluate cost factors of different solutions. We applied both types of solutions as we started with enhancing the cluster and later optimized indexing to make searching as convenient for users as possible.
+      At any given moment DevOps specialists calculate and evaluate cost factors of different solutions. We applied both
+      types of solutions as we started with enhancing the cluster and later optimized indexing to make searching as
+      convenient for users as possible.
     </TextParagraph>
     <div class="case_cards-container">
       <Card
@@ -68,7 +59,9 @@
         </TextParagraph>
         <List>
           <ListItemDot>Refactored them to make them concise</ListItemDot>
-          <ListItemDot>Used the replication and sharding mechanisms to distribute the indices among five nodes</ListItemDot>
+          <ListItemDot>
+            Used the replication and sharding mechanisms to distribute the indices among five nodes
+          </ListItemDot>
         </List>
       </Card>
     </div>
@@ -80,14 +73,23 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Card from '@/components/Cases/shared/Card'
 import ListItemDot from '@/components/Cases/shared/ListItemDot'
 import List from '@/components/Cases/shared/List'
+import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import { elasticsearchCards } from '@/data/caseVeeqo'
 
 export default {
   name: 'PhaseElasticsearch',
   components: {
+    ColoredCards,
     TextParagraph,
     Card,
     ListItemDot,
     List,
+  },
+
+  data() {
+    return {
+      elasticsearchCards,
+    }
   },
 }
 </script>
