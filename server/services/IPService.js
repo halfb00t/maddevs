@@ -1,31 +1,20 @@
-const { lookup } = require('geoip-lite')
-const fetch = require('node-fetch')
+const axios = require('axios')
 const {
   IP_INFO_TOKEN, IP_BAN_LIST, IP_TEST_LIST, TEST_EMAIL,
 } = require('../config/env')
 
-async function getIpInfo(ip) {
-  const info = await fetch.default(`https://ipinfo.io/${ip}?token=${IP_INFO_TOKEN}`)
+async function getIpInfo() {
+  const info = await axios.get(`https://ipinfo.io/json?token=${IP_INFO_TOKEN}`)
 
-  return info.json()
+  return info.data
 }
 
-function getIPByRequest(req) {
-  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
-  /**
-   * In several cases ip can be an array of ips separated with comma('92.38.148.60, 172.68.132.29')
-   * To resolve this behavior we need to split an ip and get only the first element
-   */
-  return ip.split(',')[0]
-}
-
-async function getLocationByIP(ip) {
-  const local = lookup(ip) || {}
-  const fromAPI = await getIpInfo(ip) || {}
-
+async function getLocation() {
+  const fromAPI = await getIpInfo() || {}
   return {
-    country: fromAPI.country || local.country || '-',
-    city: fromAPI.city || local.city || '-',
+    ip: fromAPI.ip || '-',
+    country: fromAPI.country || '-',
+    city: fromAPI.city || '-',
   }
 }
 
@@ -40,8 +29,7 @@ function isTestIP(ip) {
 }
 
 module.exports = {
-  getIPByRequest,
-  getLocationByIP,
+  getLocation,
   isBlockedIP,
   isTestIP,
 }
