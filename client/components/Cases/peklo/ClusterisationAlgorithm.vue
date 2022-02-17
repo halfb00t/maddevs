@@ -43,6 +43,8 @@
         :components="slides"
         :safari-top-bar="false"
         :box-shadow="true"
+        :width="1026"
+        :height="517"
       />
     </div>
     <div class="container_regular">
@@ -181,22 +183,6 @@ export default {
     text-align: center;
     font-size: 13px;
     letter-spacing: -0.02em;
-  }
-
-  &_cards-group {
-    @include grid(repeat(2, 1fr), auto, 24px, 0);
-
-    @media screen and (max-width: 768px) {
-      @include grid(repeat(1, 1fr), auto, 0, 24px);
-    }
-  }
-
-  &_cards {
-    @include grid(repeat(1, 1fr), auto, 0, 24px);
-  }
-
-  &_card-title {
-    color: $text-color--white;
   }
 
   @media screen and (max-width: 768px) {

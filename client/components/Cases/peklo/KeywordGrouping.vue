@@ -88,18 +88,7 @@ export default {
     letter-spacing: -0.02em;
   }
 
-  &_cards {
-    @include grid(repeat(2, 1fr), auto, 24px, 0);
-  }
-
-  &_card-title {
-    color: $text-color--white;
-  }
-
   @media screen and (max-width: 768px) {
-    &_cards {
-      @include grid(repeat(1, 1fr), auto, 0, 24px);
-    }
 
     &_img-alt {
       font-size: 11px;
