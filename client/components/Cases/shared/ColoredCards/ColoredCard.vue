@@ -142,9 +142,10 @@ export default {
 
   &__footer {
     flex-grow: 1;
-    padding: 20px;
+    padding: 25px;
   }
   &__pre-title{
+    text-transform: uppercase;
     display: block;
   }
 }

@@ -1,3 +1,4 @@
+<!--Please check readme.md-->
 <template>
   <div
     v-if="availableGridTypes.includes(gridType)"
@@ -99,6 +100,18 @@ export default {
       &--2, &--3 {
         grid-column: span 1;
         grid-row: span 1;
+      }
+    }
+  }
+
+  &--one-left-two-right,
+  &--two-two,
+  &--two-one {
+    @media screen and (max-width: 820px) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .colored-card {
+        grid-column: span 2;
       }
     }
   }
