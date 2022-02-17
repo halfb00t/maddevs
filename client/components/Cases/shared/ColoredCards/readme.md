@@ -5,7 +5,7 @@ At first, you should import this **Colored Card** to your component.
 Please use this import:
 
 ```javascript
-import ColoredCard from '@/components/Cases/shared/ColoredCards/ColoredCard'
+import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
 ```
 
 ## Cards object properties 
