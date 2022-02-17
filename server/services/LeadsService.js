@@ -32,7 +32,7 @@ function buildPayload({ variables }) {
       customfield_10056: variables.email,
       customfield_10063: variables.company,
       customfield_10057: variables.phoneNumber,
-      customfield_10166: { value: variables.interest },
+      customfield_10166: { value: variables.interest},
       customfield_10064: 'maddevs.io',
       customfield_10066: 'https://megadocnotprovided.com',
       description: {
