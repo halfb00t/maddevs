@@ -91,7 +91,7 @@ describe('Leads service', () => {
         customfield_10058: 'Fullname',
         customfield_10063: 'company',
         customfield_10064: 'maddevs.io',
-        customfield_10166: {value: variables.interest},
+        customfield_10166: 'Partnership',
         customfield_10066: 'https://megadocnotprovided.com',
         issuetype: {
           id: '10082',
