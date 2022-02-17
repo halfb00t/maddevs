@@ -39,18 +39,7 @@ const cardsDataArray = [
 ]
 ```
 
-#Component properties
-
-###Colored Cards properties
-
-
-
-| Parameter     | Type     | Required | Description                          |
-| :------------ | :------- | :------  | :----------------------------------- |
-| `:cards-data` | `array`  | **true** | Name of array variable in data file  |
-| `grid-type`   | `string` | **true** | Type of card layout                  |
-
-###Available grid-type values
+###Cards object properties
 
 | Parameter                | Type                 | Required  | Description                                                                                                             |
 | :----------------------- | :------------------- | :-------- | :---------------------------------------------------------------------------------------------------------------------- |
@@ -70,6 +59,14 @@ const cardsDataArray = [
 | `   colors.descriptions` | `string`             | **false** | Descriptions text color                                                                                                 |
 
 
+#Component properties
+
+###Colored Cards properties
+
+| Parameter     | Type     | Required | Description                          |
+| :------------ | :------- | :------  | :----------------------------------- |
+| `:cards-data` | `array`  | **true** | Name of array variable in data file  |
+| `grid-type`   | `string` | **true** | Type of card layout                  |
 
 ###Available grid-type values
 | Parameter              | Description         |
