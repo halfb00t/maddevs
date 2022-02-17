@@ -75,7 +75,7 @@ import ListItemDot from '@/components/Cases/shared/ListItemDot'
 import List from '@/components/Cases/shared/List'
 import Picture from '@/components/Cases/shared/Picture'
 import { continuousIntegrationCards } from '@/data/caseVeeqo'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'PhaseContinuousIntegration',

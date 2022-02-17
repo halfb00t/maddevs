@@ -127,7 +127,7 @@ import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import Swiper from '@/components/Cases/shared/Swiper'
 import Picture from '@/components/Cases/shared/Picture'
 import { slides, additionalFunctionsCards } from '@/data/casePeklo'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'ClusterisationAlgorithm',

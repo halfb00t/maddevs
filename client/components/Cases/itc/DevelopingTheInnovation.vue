@@ -115,7 +115,7 @@ import Picture from '@/components/Cases/shared/Picture'
 import { developingInnovation, idList, domainDrivenBenefits } from '@/data/caseITC'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'DevelopingTheInnovation',

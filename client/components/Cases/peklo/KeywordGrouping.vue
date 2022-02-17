@@ -57,7 +57,7 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuote from '@/components/Cases/shared/TextQuote'
 import Picture from '@/components/Cases/shared/Picture'
 import { keywordGroupingCards } from '@/data/casePeklo'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'KeywordGrouping',

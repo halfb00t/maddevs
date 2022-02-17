@@ -17,7 +17,7 @@
 
 <script>
 import { ProjectsIssuesCards } from '@/data/caseGuardrails'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'ProjectIssues',

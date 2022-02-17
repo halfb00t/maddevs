@@ -53,7 +53,7 @@ import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import CardTechSolution from '@/components/Cases/shared/CardTechSolution'
 import FixingDatabaseOutagesResult from '@/components/Cases/veeqo/FixingDatabaseOutagesResult'
 import { techSolutions, fixingDatabaseCards } from '@/data/caseVeeqo'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'PhaseFixingDatabaseOutages',

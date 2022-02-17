@@ -73,7 +73,7 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Card from '@/components/Cases/shared/Card'
 import ListItemDot from '@/components/Cases/shared/ListItemDot'
 import List from '@/components/Cases/shared/List'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 import { elasticsearchCards } from '@/data/caseVeeqo'
 
 export default {

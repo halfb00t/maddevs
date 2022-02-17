@@ -21,7 +21,7 @@
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Card from '@/components/Cases/shared/Card'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 import { nambaFood } from '@/data/nambaFood'
 import CardNinjaSushi from '@/components/Cases/nambafood/cards/CardNinjaSushi'
 

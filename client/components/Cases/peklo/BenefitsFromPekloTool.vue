@@ -16,7 +16,7 @@
 
 <script>
 import { benefitsCards } from '@/data/casePeklo'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'BenefitsFromPekloTool',
