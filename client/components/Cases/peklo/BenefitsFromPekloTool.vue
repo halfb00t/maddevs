@@ -1,63 +1,27 @@
 <template>
   <section
-    class="container_regular"
+    class="container_regular m-72_bottom media-m-48_bottom"
     data-aos="fade-up"
     data-aos-anchor-placement="bottom"
   >
     <h2 class="case_title_h2 m-24_bottom">
       Who benefits from Peklo Tool
     </h2>
-    <div
-      class="case_cards"
-    >
-      <div class="case_cards-group">
-        <Card
-          v-for="card in benefitsCards"
-          :key="card.title"
-          :class="`background-color-${card.color}`"
-        >
-          <div class="case_card-img">
-            <Picture
-              :width="396"
-              :height="200"
-              :file="card.img"
-              :alt="card.title || 'Image'"
-              folder="peklo"
-              extension="png"
-            />
-          </div>
-          <h3 class="case_title_h4 case_card-title m-24_top m-8_bottom">
-            {{ card.title }}
-          </h3>
-          <TextParagraph color="#ffffff">
-            {{ card.description }}
-          </TextParagraph>
-        </Card>
-      </div>
-      <Card class="background-color-yellow m-96_bottom media-m-48_bottom">
-        <h3 class="case_title_h4 m-8_bottom">
-          Entrepreneurs
-        </h3>
-        <TextParagraph>
-          Subscription to Peklo Tool pays off after a single contextual advertising campaign. The money saved by automation can significantly exceed the service’s price.
-        </TextParagraph>
-      </Card>
-    </div>
+    <ColoredCards
+      :cards-data="benefitsCards"
+      grid-type="two-one"
+    />
   </section>
 </template>
 
 <script>
-import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import Picture from '@/components/Cases/shared/Picture'
-import Card from '@/components/Cases/shared/Card'
 import { benefitsCards } from '@/data/casePeklo'
+import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
 
 export default {
   name: 'BenefitsFromPekloTool',
   components: {
-    TextParagraph,
-    Card,
-    Picture,
+    ColoredCards,
   },
 
   data() {
