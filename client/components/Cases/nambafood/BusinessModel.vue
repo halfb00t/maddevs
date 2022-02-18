@@ -11,7 +11,7 @@
     </Card>
     <div class="cards">
       <ColoredCards
-        :cards-data="nambaFood"
+        :cards-data="businessModel"
         grid-type="one-left-two-right"
       />
     </div>
@@ -22,7 +22,7 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Card from '@/components/Cases/shared/Card'
 import ColoredCards from '@/components/Cases/shared/ColoredCards'
-import { nambaFood } from '@/data/nambaFood'
+import { businessModel } from '@/data/caseNambafood'
 import CardNinjaSushi from '@/components/Cases/nambafood/cards/CardNinjaSushi'
 
 export default {
@@ -36,7 +36,7 @@ export default {
 
   data() {
     return {
-      nambaFood,
+      businessModel,
     }
   },
 }
