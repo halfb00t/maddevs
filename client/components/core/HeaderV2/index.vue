@@ -65,6 +65,7 @@
               Contact me
             </button>
             <button
+              v-if="isMobile"
               type="button"
               data-testid="test-burger"
               class="header__burger-btn"
@@ -139,6 +140,7 @@ import ModalSearch from '@/components/core/modals/ModalSearch'
 import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
 import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
 import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
+import { isMobile } from '@/helpers/isMobileDeviceDetect'
 
 // TODO: Need to transfer this constant to @/data/navigation.js
 const navigation = [
@@ -174,6 +176,8 @@ export default {
 
   data() {
     return {
+      mobileResolution: 1012,
+      isMobile: false,
       navigation,
       activeNavigation: null,
       showLogoText: false,
@@ -215,6 +219,8 @@ export default {
   },
 
   mounted() {
+    this.showBurgerMenu()
+    window.addEventListener('resize', this.showBurgerMenu)
     this.addEventListeners()
     this.setStylesForHeader()
 
@@ -224,11 +230,19 @@ export default {
     })
   },
 
+  unmounted() {
+    window.removeEventListener('resize', this.showBurgerMenu)
+  },
+
   beforeDestroy() {
     this.removeEventListeners()
   },
 
   methods: {
+    showBurgerMenu() {
+      this.isMobile = isMobile()
+    },
+
     ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
 
     showModal() {
