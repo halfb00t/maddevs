@@ -8,7 +8,7 @@ Please use this import:
 import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
 ```
 
-## Cards object properties 
+## Cards object properties
 
 Then you should create a data file (or use existing) and create **cardsDataArray** (you can use your variable name)
 

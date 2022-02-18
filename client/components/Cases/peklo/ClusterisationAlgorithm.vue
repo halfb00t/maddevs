@@ -43,6 +43,8 @@
         :components="slides"
         :safari-top-bar="false"
         :box-shadow="true"
+        :width="1026"
+        :height="517"
       />
     </div>
     <div class="container_regular">
@@ -107,36 +109,11 @@
       <h3 class="case_title_h3 m-24_bottom media-m-12_bottom">
         Additional functions
       </h3>
-      <div
-        class="case_cards"
-      >
-        <div class="case_cards-group">
-          <Card class="background-color-black">
-            <h4 class="case_title_h4 case_card-title m-8_bottom">
-              Detection of negative keywords
-            </h4>
-            <TextParagraph color="#ffffff">
-              The tool identifies irrelevant keywords for narrower, more specific targeting.
-            </TextParagraph>
-          </Card>
-          <Card class="background-color-gray">
-            <h4 class="case_title_h4 case_card-title m-8_bottom">
-              Removal of explicit and implicit duplicates
-            </h4>
-            <TextParagraph color="#ffffff">
-              Duplicates inevitably occur, and the tool is configured to eliminate them.
-            </TextParagraph>
-          </Card>
-        </div>
-        <Card class="background-color-yellow m-96_bottom media-m-48_bottom">
-          <h4 class="case_title_h4 m-8_bottom">
-            Elimination of negative keywords across groups
-          </h4>
-          <TextParagraph>
-            This reduces competition among keywords so that users see relevant ads and get to the right pages.
-          </TextParagraph>
-        </Card>
-      </div>
+      <ColoredCards
+        :cards-data="additionalFunctionsCards"
+        grid-type="two-one"
+        class="m-72_bottom media-m-48_bottom"
+      />
     </div>
   </section>
 </template>
@@ -149,12 +126,13 @@ import ListItemDot from '@/components/Cases/shared/ListItemDot'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import Swiper from '@/components/Cases/shared/Swiper'
 import Picture from '@/components/Cases/shared/Picture'
-import Card from '@/components/Cases/shared/Card'
-import { slides } from '@/data/casePeklo'
+import { slides, additionalFunctionsCards } from '@/data/casePeklo'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'ClusterisationAlgorithm',
   components: {
+    ColoredCards,
     TextParagraph,
     LottieMad,
     List,
@@ -162,12 +140,12 @@ export default {
     TextQuoteBox,
     Swiper,
     Picture,
-    Card,
   },
 
   data() {
     return {
       slides,
+      additionalFunctionsCards,
     }
   },
 }
@@ -205,22 +183,6 @@ export default {
     text-align: center;
     font-size: 13px;
     letter-spacing: -0.02em;
-  }
-
-  &_cards-group {
-    @include grid(repeat(2, 1fr), auto, 24px, 0);
-
-    @media screen and (max-width: 768px) {
-      @include grid(repeat(1, 1fr), auto, 0, 24px);
-    }
-  }
-
-  &_cards {
-    @include grid(repeat(1, 1fr), auto, 0, 24px);
-  }
-
-  &_card-title {
-    color: $text-color--white;
   }
 
   @media screen and (max-width: 768px) {
