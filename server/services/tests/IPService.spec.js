@@ -2,16 +2,13 @@ import 'regenerator-runtime'
 import axios from 'axios'
 import * as IPService from '../IPService'
 
-const response = { data: 'some data' }
-jest.spyOn(axios, 'get').mockImplementation(() => Promise.resolve(response))
+jest.mock('axios')
 
 jest.mock('../../config/env', () => ({
   IP_BAN_LIST: '212.42.107.138, 212.42.107.133',
   IP_TEST_LIST: '91.247.56.247',
   TEST_EMAIL: 'test@test.com',
 }))
-
-const getLocationData = locationData => Promise.resolve(jest.fn(() => Promise.resolve({ data: { ...locationData } })))
 
 describe('IPService', () => {
   it('should correctly return True if user blocked', async () => {
@@ -31,25 +28,28 @@ describe('IPService', () => {
       .toBe('test@test.com')
   })
 
-  // eslint-disable-next-line jest/no-commented-out-tests
-  // it('should correctly return Location', async () => {
-  //   axios.get.mockImplementation(() => getLocationData({
-  //     ip: 'ip',
-  //     city: 'bishkek',
-  //     country: 'Kyrgyzstan',
-  //   }))
+  it('should correctly return Location', async () => {
+    const info = {
+      data: {
+        ip: 'ip',
+        city: 'bishkek',
+        country: 'Kyrgyzstan',
+      },
+    }
 
-  //   const location = await IPService.getLocation()
-  //   expect(location)
-  //     .toEqual({
-  //       ip: 'ip',
-  //       city: 'bishkek',
-  //       country: 'Kyrgyzstan',
-  //     })
-  // })
+    axios.get.mockResolvedValue(info)
+
+    const location = await IPService.getLocation()
+    expect(location)
+      .toEqual({
+        ip: 'ip',
+        city: 'bishkek',
+        country: 'Kyrgyzstan',
+      })
+  })
 
   it('should correctly return Location (alternative case)', async () => {
-    axios.get.mockImplementation(() => getLocationData({}))
+    axios.get.mockResolvedValue({ data: '' })
 
     const location = await IPService.getLocation()
     expect(location)

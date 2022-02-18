@@ -2,7 +2,7 @@ const { sendMailFromVariables } = require('../services/EmailsService')
 const { createLead } = require('../services/LeadsService')
 const { validate } = require('../utils/validation')
 const {
-  getLocation, isBlockedIP, isTestIP,
+  getIPByRequest, getLocation, isBlockedIP, isTestIP,
 } = require('../services/IPService')
 const { reCaptchaVerification } = require('../services/reCaptchaVerification')
 
@@ -16,14 +16,16 @@ async function create(req, res) {
   const { isValid, error } = validate(req, 'email')
   if (!isValid) return res.status(error.status).json(error)
 
-  const { ip, city, country } = await getLocation()
+  const ipFromRequest = getIPByRequest(req)
+
+  const { ip, city, country } = await getLocation(ipFromRequest)
   if (isBlockedIP(ip)) return res.json({ error: 'Your ip is in a blacklist' })
 
   const body = {
     ...req.body,
     variables: {
       ...req.body.variables,
-      ip,
+      ip: ip || ipFromRequest,
       geoIp: `Country: ${country}, City: ${city}`,
     },
   }
