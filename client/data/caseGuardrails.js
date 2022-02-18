@@ -117,7 +117,7 @@ export const techStackLanguagesGuardrails = [
 
 export const ProjectsIssuesCards = [
   {
-    title: 'Lack of integrations with hosting services/git providers',
+    title: 'Lack of user-friendly reports',
     descriptions: 'Mad Devs developed the security reporting dashboard and API that allowed users to track the history of scans and reports.',
     image: {
       width: 396,
@@ -139,7 +139,7 @@ export const ProjectsIssuesCards = [
       width: 396,
       height: 200,
       folder: 'guardrails',
-      file: 'cards-files',
+      file: 'cards-keyboard',
       alt: 'Lack of integrations with hosting services/git providers',
     },
     colors: {
