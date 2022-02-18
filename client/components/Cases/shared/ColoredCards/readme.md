@@ -5,12 +5,13 @@ At first, you should import this **Colored Card** to your component.
 Please use this import:
 
 ```javascript
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 ```
 
 ## Cards object properties
 
 Then you should create a data file (or use existing) and create **cardsDataArray** (you can use your variable name)
+
 
 Empty card object for example:
 ```javascript
@@ -39,6 +40,52 @@ const cardsDataArray = [
 ]
 ```
 
+
+Example import data file (for case page)
+
+```javascript
+import { cardsDataArray } from '@/data/caseName'
+```
+
+Add imported file to component **data**:
+
+```javascript
+export default {
+  data() {
+    return {
+      cardsDataArray,
+    }
+  },
+}
+```
+
+## Usage
+Add component to page
+
+```html
+<ColoredCards
+  :cards-data="cardsDataArray" 
+  grid-type="one-left-two-right"
+/>
+```
+
+#Component properties
+
+###Colored Cards properties
+
+| Parameter     | Type     | Required | Description                          |
+| :------------ | :------- | :------  | :----------------------------------- |
+| `:cards-data` | `array`  | **true** | Name of array variable in data file  |
+| `grid-type`   | `string` | **true** | Type of card layout                  |
+
+###Available grid-type values
+| Parameter              | Description         |
+| :--------------------- | :-------------------|
+| `one-one`              | Type of card layout |
+| `two-one`              | Type of card layout |
+| `two-two`              | Type of card layout |
+| `one-left-two-right`   | Type of card layout |
+
 ###Cards object properties
 
 | Parameter                | Type                 | Required  | Description                                                                                                             |
@@ -59,49 +106,22 @@ const cardsDataArray = [
 | `   colors.descriptions` | `string`             | **false** | Descriptions text color                                                                                                 |
 
 
-#Component properties
-
-###Colored Cards properties
-
-| Parameter     | Type     | Required | Description                          |
-| :------------ | :------- | :------  | :----------------------------------- |
-| `:cards-data` | `array`  | **true** | Name of array variable in data file  |
-| `grid-type`   | `string` | **true** | Type of card layout                  |
-
-###Available grid-type values
-| Parameter              | Description         |
-| :--------------------- | :-------------------|
-| `one-one`              | Type of card layout |
-| `two-one`              | Type of card layout |
-| `two-two`              | Type of card layout |
-| `one-left-two-right`   | Type of card layout |
-
 ##Grid type layout visual examples:
 
 ### **one-one**
 !['one one'](./readmeFiles/one-one.png)
+<hr>
 
 ### **two-one**
 ![alt text](./readmeFiles/two-one.png)
+<hr>
 
 ### **two-two**
 ![alt text](./readmeFiles/two-two.png)
+<hr>
 
 ### **one-left-two-right**
 ![alt text](./readmeFiles/one-left-two-right.png)
-
-
-## Usage
-
-Add component to page 
-
-```html
-
-<ColoredCards
-  :cards-data="cardsDataArray"
-  grid-type="one-left-two-right"
-/>
-```
 
 ##Author
 - [Antoneo333](https://github.com/Antoneo-MD)
