@@ -38,7 +38,7 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import { whyCityCamCards, idCardList } from '@/data/caseCityCam'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
-import ColoredCards from '@/components/Cases/shared/ColoredCards/ColoredCards'
+import ColoredCards from '@/components/Cases/shared/ColoredCards/'
 
 export default {
   name: 'WhyCityCam',
