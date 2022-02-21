@@ -73,8 +73,8 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="0"
-                    width="0"
+                    height="525"
+                    width="1026"
                   />
                 </picture>
                  
@@ -102,8 +102,8 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="0"
-                    width="0"
+                    height="525"
+                    width="1026"
                   />
                 </picture>
                  
@@ -131,8 +131,8 @@ exports[`DevicePerfecting component should render correctly 1`] = `
                     data-src="img.jpg"
                     data-srcset="img.jpg"
                     data-testid="test-picture-img"
-                    height="0"
-                    width="0"
+                    height="525"
+                    width="1026"
                   />
                 </picture>
                  
