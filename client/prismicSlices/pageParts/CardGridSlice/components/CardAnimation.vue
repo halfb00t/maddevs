@@ -26,12 +26,6 @@ export default {
     },
   },
 
-  data() {
-    return {
-      animationData: null,
-    }
-  },
-
   computed: {
     animationId() {
       const id = uuidv4()

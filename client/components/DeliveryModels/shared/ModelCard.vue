@@ -10,8 +10,10 @@
       class="model-card__link"
     >
       <div class="model-card__animation">
-        <Lottie
-          :options="lottieOptions"
+        <LottieMad
+          :autoplay="false"
+          :loop="false"
+          :lottie-link="$getMediaFromS3(`/images/DeliveryModels/lottie/${animationName}.json`)"
           @animCreated="animCreatedHandler"
         />
       </div>
@@ -27,13 +29,13 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie/src/lottie.vue'
+import LottieMad from '@/components/shared/LottieMad'
 import UIArrowButton from '@/components/shared/UIArrowButton'
 
 export default {
   name: 'ModelCard',
   components: {
-    Lottie,
+    LottieMad,
     UIArrowButton,
   },
 
@@ -77,18 +79,7 @@ export default {
   data() {
     return {
       animation: null,
-      animationIsPlayed: false,
     }
-  },
-
-  computed: {
-    lottieOptions() {
-      return {
-        animationData: require(`@/assets/lottie/deliveryModels/${this.animationName}.json`),
-        autoplay: false,
-        loop: false,
-      }
-    },
   },
 
   mounted() {
@@ -109,7 +100,8 @@ export default {
       try {
         this.animation.play()
       } catch (err) {
-        // prevent catch
+        // to-do: handle the error
+        console.log('Error: ', err)
       }
     },
 
@@ -121,7 +113,6 @@ export default {
         const startArea = (window.innerHeight / 100) * screenPercent
 
         if (rect.top <= (window.innerHeight - startArea) && !this.animationPlayed) {
-          this.animationIsPlayed = true
           this.playAnimation()
         }
       }
@@ -225,7 +216,7 @@ export default {
   }
 
   &--temp-to-hire {
-    /deep/ .model-card {
+    ::v-deep .model-card {
       &__link {
         padding-top: 120px;
       }
@@ -247,7 +238,7 @@ export default {
   }
 
   &--technical-assessment {
-    /deep/ .model-card {
+    ::v-deep .model-card {
       &__link {
         padding-top: 120px;
       }
@@ -307,6 +298,10 @@ export default {
     &__title {
       font-size: 30px;
       line-height: 37px;
+    }
+
+    ::v-deep .lottie-container {
+      min-height: auto;
     }
   }
 
