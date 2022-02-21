@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import { isMobile } from 'mobile-device-detect'
+import { isMobile } from '@/helpers/isMobileDeviceDetect'
 import mainMixins from '@/mixins/mainMixins'
 
 export default {
@@ -127,8 +127,12 @@ export default {
 
   data() {
     return {
-      isMobile,
+      isMobile: false,
     }
+  },
+
+  mounted() {
+    this.isMobile = isMobile()
   },
 
   methods: {

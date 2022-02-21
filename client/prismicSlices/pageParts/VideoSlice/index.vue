@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import { isMobile } from 'mobile-device-detect'
+import { isMobile } from '@/helpers/isMobileDeviceDetect'
 import mainMixins from '@/mixins/mainMixins'
 
 export default {
@@ -88,7 +88,7 @@ export default {
 
   data() {
     return {
-      isMobile,
+      isMobile: false,
       title: this.slice?.primary?.title,
       subtitle: this.slice?.primary?.subtitle,
       width: this.slice?.primary?.width,
@@ -111,6 +111,10 @@ export default {
       if (this.colorTheme === 'black') return 'black'
       return 'white'
     },
+  },
+
+  mounted() {
+    this.isMobile = isMobile()
   },
 
   methods: {
