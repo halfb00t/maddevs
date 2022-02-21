@@ -3,7 +3,7 @@
 exports[`Benefits component should render correctly 1`] = `
 <div>
   <section
-    class="container_regular"
+    class="container_regular m-96_bottom media-m-48_bottom"
   >
     <h2
       class="case_title_h2 m-12_bottom "
@@ -44,51 +44,166 @@ exports[`Benefits component should render correctly 1`] = `
     </h3>
      
     <div
-      class="case_cards-container"
+      class="parallax_cards"
     >
       <div
-        class="case_column"
+        class="parallax_cards__item"
       >
-        <cardtechsolution-stub
-          alt="Sharing economy"
-          description="Namba Taxi was one of the first companies in Central Asia to join the sharing economy. If calling a cab is simple enough, people will prefer it to owning a car. This creates a city with fewer cars and a more efficient distribution of resources, making urban development more sustainable."
-          folder="nambataxi"
-          icon="economy"
-          title="Sharing economy"
-        />
-        <cardtechsolution-stub
-          alt="Transparency"
-          description="Operators and passengers can track cab rides in real time. The mobile applications we developed for this project enable convenient communication and feedback. Riders can order a taxi with just a few taps, and both riders and drivers can see the progress of a ride."
-          folder="nambataxi"
-          icon="transparency"
-          title="Transparency"
-        />
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Sharing economy"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
+          >
+            
+    Sharing economy
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      Namba Taxi was one of the first companies in Central Asia to join the sharing economy. If calling a cab is simple enough, people will prefer it to owning a car. This creates a city with fewer cars and a more efficient distribution of resources, making urban development more sustainable.
+    
+          </p>
+           
+        </div>
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Transparency"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
+          >
+            
+    Transparency
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      Operators and passengers can track cab rides in real time. The mobile applications we developed for this project enable convenient communication and feedback. Riders can order a taxi with just a few taps, and both riders and drivers can see the progress of a ride.
+    
+          </p>
+           
+        </div>
       </div>
        
       <div
-        class="case_column"
+        class="parallax_cards__item"
       >
-        <cardtechsolution-stub
-          alt="Quick service"
-          description="A Namba Taxi cab arrives within 7 minutes. A smart itinerary planning system drastically reduced waiting time by eliminating much  of the manual work done by dispatchers. The system’s scalable, failproof architecture can handle up to 700 drivers on the line, 6,000 queries per second, and 10,000 orders a day."
-          folder="nambataxi"
-          icon="service"
-          title="Quick service"
-        />
-        <cardtechsolution-stub
-          alt="Mobile transformation"
-          description="With Namba Taxi, drivers and passengers can do everything on their mobile devices. When development started in 2013, passengers had to make a phone call to order a cab, effectively turning taxi services into call centres. Namba Taxi changed this paradigm."
-          folder="nambataxi"
-          icon="mobile"
-          title="Mobile transformation"
-        />
-        <cardtechsolution-stub
-          alt="Quality control"
-          description="With an automated ordering system, Namba Taxi can focus on improving the passenger experience. The company monitors a multitude of performance indicators, including each car’s technical condition and even drivers’ health, to ensure more enjoyable cab rides."
-          folder="nambataxi"
-          icon="quality"
-          title="Quality control"
-        />
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Quick service"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
+          >
+            
+    Quick service
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      A Namba Taxi cab arrives within 7 minutes. A smart itinerary planning system drastically reduced waiting time by eliminating much  of the manual work done by dispatchers. The system’s scalable, failproof architecture can handle up to 700 drivers on the line, 6,000 queries per second, and 10,000 orders a day.
+    
+          </p>
+           
+        </div>
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Mobile transformation"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
+          >
+            
+    Mobile transformation
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      With Namba Taxi, drivers and passengers can do everything on their mobile devices. When development started in 2013, passengers had to make a phone call to order a cab, effectively turning taxi services into call centres. Namba Taxi changed this paradigm.
+    
+          </p>
+           
+        </div>
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Quality control"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
+          >
+            
+    Quality control
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      With an automated ordering system, Namba Taxi can focus on improving the passenger experience. The company monitors a multitude of performance indicators, including each car’s technical condition and even drivers’ health, to ensure more enjoyable cab rides.
+    
+          </p>
+           
+        </div>
       </div>
     </div>
   </section>

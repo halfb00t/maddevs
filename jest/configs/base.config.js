@@ -18,7 +18,6 @@ module.exports = {
     // process `*.svg` files with `imgTransform.js`
     '\\.(svg|png|webp|jpg|jpeg)$': '<rootDir>/jest/utils/imgTransformer.js',
   },
-  transformIgnorePatterns: ['/node_modules/(?!vue-lottie)'],
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   collectCoverage: true,
   collectCoverageFrom: [

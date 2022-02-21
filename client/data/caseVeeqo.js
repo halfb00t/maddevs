@@ -1,5 +1,3 @@
-import { cardAnimationY20, cardAnimationY40 } from '@/data/animationConfigs'
-
 export const inventoryAndShipping = [
   {
     title: 'FOUNDED',
@@ -56,14 +54,28 @@ export const elasticsearchResults = [
     title: 'Feedback',
     description: 'We received massive positive feedback as Veeqo users were contacting customer',
     alt: 'We Received Massive Positive Feedback As Veeqo Users Were Contacting the Customer.',
-    animationSettings: cardAnimationY20,
+    animationSettings: {
+      reverse: true,
+      maxMove: 20,
+      customMove: true,
+      speed: 0.3,
+      startPoint: 3,
+      setIndentTop: true,
+    },
   },
   {
     icon: 'gears-card',
     title: 'Elasticsearch',
     description: 'Elasticsearch became more efficient and reliable without costing the customer more',
     alt: 'Elasticsearch Became More Efficient and Reliable Without Costing the Customer More.',
-    animationSettings: cardAnimationY40,
+    animationSettings: {
+      reverse: true,
+      maxMove: 40,
+      customMove: true,
+      speed: 0.3,
+      startPoint: 3,
+      setIndentTop: true,
+    },
   },
 ]
 
@@ -84,7 +96,14 @@ export const infrastructureAsCodeResult = [
     title: 'Reduced by 35%',
     description: 'without losses in performance and security',
     alt: 'Infrastructure Costs Redused by 35% Without Losses in Performance and Security.',
-    animationSettings: cardAnimationY20,
+    animationSettings: {
+      reverse: true,
+      maxMove: 20,
+      customMove: true,
+      speed: 0.3,
+      startPoint: 3,
+      setIndentTop: true,
+    },
   },
   {
     icon: 'speed-card',
@@ -92,7 +111,14 @@ export const infrastructureAsCodeResult = [
     title: '~250-300ms',
     description: 'More secure data access Search time decreased initially to under 5 seconds and by now to ~250-300ms',
     alt: 'Elasticsearch – More Secure Data Access Search Time Decreased Initially to Under 5 Seconds and by Now to ~250–300ms.',
-    animationSettings: cardAnimationY40,
+    animationSettings: {
+      reverse: true,
+      maxMove: 40,
+      customMove: true,
+      speed: 0.3,
+      startPoint: 3,
+      setIndentTop: true,
+    },
   },
 ]
 

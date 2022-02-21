@@ -106,11 +106,9 @@ module.exports = {
     '~/plugins/get-media-from-s3.js',
     '~/plugins/header-handler.js',
     '~/plugins/feature-flags.js',
-    '~/plugins/vue-prlx.js',
     '~/plugins/google-tag-manager-debug.js',
     { src: '~/plugins/sentry.js', mode: 'client' },
-    { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
-    { src: '~/plugins/vue-parallax', mode: 'client' },
+    '~/plugins/mad-parallax.js',
   ],
   /*
   ** Nuxt Modules
@@ -138,6 +136,7 @@ module.exports = {
           { code: 'en', iso: 'en-EN', file: 'en.json' },
         ],
         detectBrowserLanguage: false,
+        parsePages: false,
       },
     ],
     ['@nuxtjs/prismic', {

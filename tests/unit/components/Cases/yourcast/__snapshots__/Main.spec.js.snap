@@ -402,159 +402,165 @@ exports[`Main component should render correctly 1`] = `
       </h3>
        
       <div
-        class="media-m-48_bottom case_key-project-milestones"
+        class="parallax_cards"
       >
         <div
-          class="case_cards-container m-12_bottom"
+          class="parallax_cards__item"
         >
           <div
-            class="case_column"
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
           >
-            <div
-              class="case_card card-content background-color-silver"
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom"
             >
-              <img
-                alt="Icon"
-                class="card-content_icon"
-                data-src="img.jpg"
-                height="51.94"
-                width="51.94"
-              />
-               
-              <h3
-                class="case_title_h4 m-10-bottom"
-              >
-                
+              
     2016
   
-              </h3>
-               
-              <p
-                class="case_paragraph"
-              >
-                
-    As a pet project, Mad Devs developed a streaming service and open-sourced it, quickly finding a customer who wanted to expand the service for their business.
-  
-              </p>
-            </div>
-            <div
-              class="case_card card-content background-color-silver"
+            </h4>
+             
+            <p
+              class="case_paragraph"
             >
-              <img
-                alt="Icon"
-                class="card-content_icon"
-                data-src="img.jpg"
-                height="51.94"
-                width="51.94"
-              />
-               
-              <h3
-                class="case_title_h4 m-10-bottom"
-              >
-                
+              
+      As a pet project, Mad Devs developed a streaming service and open-sourced it, quickly finding a customer who wanted to expand the service for their business.
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom"
+            >
+              
     2017
   
-              </h3>
-               
-              <p
-                class="case_paragraph"
-              >
-                
-    Live video streaming of popular TV channels became available.
-  
-              </p>
-            </div>
-          </div>
-           
-          <div
-            class="case_column"
-          >
-            <div
-              class="case_column-right"
+            </h4>
+             
+            <p
+              class="case_paragraph"
             >
-              <div
-                class="case_card card-content background-color-silver"
-              >
-                <img
-                  alt="Icon"
-                  class="card-content_icon"
-                  data-src="img.jpg"
-                  height="51.94"
-                  width="51.94"
-                />
-                 
-                <h3
-                  class="case_title_h4 m-10-bottom"
-                >
-                  
+              
+      Live video streaming of popular TV channels became available.
+    
+            </p>
+             
+          </div>
+        </div>
+         
+        <div
+          class="parallax_cards__item"
+        >
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom"
+            >
+              
     2018
   
-                </h3>
-                 
-                <p
-                  class="case_paragraph"
-                >
-                  
-    The project was redesigned to optimise resource consumption.
-  
-                </p>
-              </div>
-              <div
-                class="case_card card-content background-color-silver"
-                lottiefilename=""
-              >
-                <img
-                  alt="Icon"
-                  class="card-content_icon"
-                  data-src="img.jpg"
-                  height="51.94"
-                  width="51.94"
-                />
-                 
-                <h3
-                  class="case_title_h4 m-10-bottom"
-                >
-                  
+            </h4>
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      The project was redesigned to optimise resource consumption.
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom"
+            >
+              
     2019
   
-                </h3>
-                 
-                <p
-                  class="case_paragraph"
-                >
-                  
-    Added Video on Demand functionality.
-  
-                </p>
-              </div>
-              <div
-                class="case_card card-content background-color-silver"
-              >
-                <img
-                  alt="Icon"
-                  class="card-content_icon"
-                  data-src="img.jpg"
-                  height="51.94"
-                  width="51.94"
-                />
-                 
-                <h3
-                  class="case_title_h4 m-10-bottom"
-                >
-                  
+            </h4>
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Added Video on Demand functionality.
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom"
+            >
+              
     2020
   
-                </h3>
-                 
-                <p
-                  class="case_paragraph"
-                >
-                  
-    User authorisation ensured a more personalised experience for each user. Custom filters, such as ‘favourites’, ‘already watched’ and ‘search’, made the service more viewer-friendly.
-  
-                </p>
-              </div>
-            </div>
+            </h4>
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      User authorisation ensured a more personalised experience for each user. Custom filters, such as ‘favourites’, ‘already watched’ and ‘search’, made the service more viewer-friendly.
+    
+            </p>
+             
           </div>
         </div>
       </div>

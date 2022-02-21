@@ -19,7 +19,7 @@ jest.mock('../../services/reCaptchaVerification', () => ({
 
 jest.mock('../../services/IPService', () => ({
   getIPByRequest: jest.fn(),
-  getLocationByIP: jest.fn(),
+  getLocation: jest.fn(),
   isBlockedIP: jest.fn(),
   isTestIP: jest.fn(),
 }))
@@ -27,7 +27,7 @@ jest.mock('../../services/IPService', () => ({
 const sendEmail = jest.fn(() => Promise.resolve({ id: '1' }))
 const createLead = jest.fn(() => Promise.resolve({ data: 'data' }))
 const getIPByRequest = jest.fn(() => Promise.resolve('212.42.107.134'))
-const getLocationByIP = jest.fn(() => Promise.resolve({
+const getLocation = jest.fn(() => Promise.resolve({
   country: 'Kyrgyzstan',
   city: 'Bishkek',
 }))
@@ -37,7 +37,7 @@ const verification = jest.fn(() => Promise.resolve({ data: { success: true, mess
 emailsService.sendMailFromVariables.mockImplementation(sendEmail)
 leadsService.createLead.mockImplementation(createLead)
 IPService.getIPByRequest.mockImplementation(getIPByRequest)
-IPService.getLocationByIP.mockImplementation(getLocationByIP)
+IPService.getLocation.mockImplementation(getLocation)
 reCaptcha.reCaptchaVerification.mockImplementation(verification)
 
 describe('leadsController', () => {

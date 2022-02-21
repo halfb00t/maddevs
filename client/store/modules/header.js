@@ -2,8 +2,6 @@
 
 // Api functions
 import { getHeaderContent } from '@/api/header'
-import { getBlogPost } from '@/api/blogPost'
-import { getBlogAuthor } from '@/api/blogAuthors'
 
 // Helper functions
 import extractPostData from '@/helpers/extractPostData'
@@ -13,9 +11,9 @@ const extractHeaderSection = async (prismic, headerContent = {}, navSection) => 
   let menus = []
 
   // Get blog post data for header sections
-  const { type: postType, uid: postUID } = headerContent[`${navSection}_blog_post`]
-  const post = await getBlogPost(prismic, { type: postType, uid: postUID })
-  const author = await getBlogAuthor(prismic, post?.data?.post_author?.uid)
+  const sectionPost = headerContent[`${navSection}_blog_post`]
+  const post = sectionPost
+  const author = sectionPost.data.post_author
   const getLink = () => {
     const link = headerContent.body
       .find(item => item.primary?.nav_section.toLowerCase() === navSection)
@@ -61,14 +59,14 @@ export const actions = {
     const headerContent = await getHeaderContent(this.$prismic)
     const company = await extractHeaderSection(this.$prismic, headerContent, 'company')
     const services = await extractHeaderSection(this.$prismic, headerContent, 'services')
-    const industries = await extractHeaderSection(this.$prismic, headerContent, 'industries')
+    // const industries = await extractHeaderSection(this.$prismic, headerContent, 'industries')
     const clients = await extractHeaderSection(this.$prismic, headerContent, 'clients')
     const insights = await extractHeaderSection(this.$prismic, headerContent, 'insights')
 
     commit('SET_HEADER_CONTENT', {
       company,
       services,
-      industries,
+      // industries,
       clients,
       insights,
     })
