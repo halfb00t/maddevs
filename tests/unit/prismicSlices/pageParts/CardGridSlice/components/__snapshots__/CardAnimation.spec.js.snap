@@ -5,7 +5,7 @@ exports[`LottieCard LottieCard with items should render correctly with data 1`] 
   <div
     animationdata="android-app"
     class="lottie-container case_lottie"
-    id="-undefined"
+    id="-null"
     style="--height: 395px; --width: 100%;"
   />
 </div>

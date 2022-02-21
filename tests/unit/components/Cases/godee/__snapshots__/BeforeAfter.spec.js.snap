@@ -18,28 +18,84 @@ exports[`BeforeAfter component should render correctly 1`] = `
         class="container_regular"
       >
         <div
-          class="comparsion-container"
-          data-testid="track-img"
+          class="img-wrapper"
         >
-          <img-comparison-slider
-            hover="true"
+          <img
+            alt="Before image"
+            class="img-wrapper__before-img"
+            data-src="img.jpg"
+            height="472"
+            width="772"
+          />
+           
+          <div
+            class="img-wrapper__compare-overlay"
+            style="width: 50%;"
           >
             <img
-              alt="Image for compare"
+              alt="After image"
+              class="img-wrapper__after-img"
               data-src="img.jpg"
-              height="578.47"
-              slot="first"
-              width="1000"
+              height="472"
+              width="772"
             />
+          </div>
+           
+          <input
+            class="img-wrapper__compare-range"
+            max="100"
+            min="0"
+            step="0.05"
+            tabindex="-1"
+            type="range"
+          />
+           
+          <div
+            class="img-wrapper__handle-wrap"
+            style="left: 50%;"
+          >
+            <div
+              class="img-wrapper__handle"
+            >
+              <svg
+                class="img-wrapper__handle-arrow img-wrapper__handle-arrow--l"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="15 18 9 12 15 6"
+                />
+              </svg>
+               
+              <svg
+                class="img-wrapper__handle-arrow img-wrapper__handle-arrow--r"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polyline
+                  points="9 18 15 12 9 6"
+                />
+              </svg>
+            </div>
              
-            <img
-              alt="Image for compare"
-              data-src="img.jpg"
-              height="578.47"
-              slot="second"
-              width="1000"
+            <span
+              class="img-wrapper__handle-line"
             />
-          </img-comparison-slider>
+          </div>
         </div>
       </div>
     </section>

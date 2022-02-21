@@ -108,7 +108,6 @@ module.exports = {
     '~/plugins/feature-flags.js',
     '~/plugins/google-tag-manager-debug.js',
     { src: '~/plugins/sentry.js', mode: 'client' },
-    { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
     '~/plugins/mad-parallax.js',
   ],
   /*
@@ -137,6 +136,7 @@ module.exports = {
           { code: 'en', iso: 'en-EN', file: 'en.json' },
         ],
         detectBrowserLanguage: false,
+        parsePages: false,
       },
     ],
     ['@nuxtjs/prismic', {

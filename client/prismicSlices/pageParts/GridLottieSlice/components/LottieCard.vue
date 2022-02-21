@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { v4 as uuidv4 } from 'uuid'
+import uid from '@/helpers/generatorUid'
 import LottieMad from '@/components/shared/LottieMad'
 
 export default {
@@ -26,11 +26,20 @@ export default {
     },
   },
 
+  data() {
+    return {
+      id: null,
+    }
+  },
+
   computed: {
     animationId() {
-      const id = uuidv4()
-      return `${this.animationName}-${id}`
+      return `${this.animationName}-${this.id}`
     },
+  },
+
+  mounted() {
+    this.id = uid()
   },
 }
 </script>

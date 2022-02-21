@@ -143,11 +143,9 @@ export default {
       let text = children.join('')
 
       if (type === Elements.preformatted) {
-        // the second parameter of function excludes tags
         text = convertTagsToText(text, ['br'])
       } else {
         text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
-          // the second parameter of function excludes tags
           const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
           return `<code class="inline-code">${formattedCode}</code>`
         })
