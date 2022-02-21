@@ -236,3 +236,58 @@ export const team = [
     },
   },
 ]
+
+export const fixingDatabaseCards = [
+  {
+    preTitle: 'Challenge',
+    title: 'Regular outage',
+    descriptions: 'Without any detectable load spikes, the database would often reach maximum processor performance and deny service as the queries piled up in the query queue. To get the system up and running again, workers had to be manually restarted every time.',
+    colors: {
+      card: 'silver',
+      preTitle: 'quick-silver',
+    },
+  },
+  {
+    preTitle: 'Effect on users',
+    title: 'Degraded user services',
+    descriptions: 'Users had limited access to services: they couldn\'t view contents, place orders, or manage their settings.',
+    colors: {
+      card: 'blue-light',
+      preTitle: 'quick-silver',
+    },
+  },
+]
+
+export const continuousIntegrationCards = [
+  {
+    title: 'Challenge',
+    descriptions: 'Development processes lacked consistency. Particularly, the project had manually configured CI system and pipelines, different development, test, and production environments and runtimes, non-reproducible development environment, inconsistent test builds.',
+    colors: {
+      card: 'silver',
+    },
+  },
+  {
+    title: 'Solution',
+    descriptions: 'Dockerization is the most viable solution today to set up continuous delivery. As our application was back then partially hosted on Heroku, we created a unified runtime for developers and CI by dockerizing the main app using a Heroku Stack image and Docker Compose. It made CI reliable and allowed simplifying deployment. Also, it sped up bootstrapping of the development environment.',
+    colors: {
+      card: 'blue-light',
+    },
+  },
+]
+
+export const elasticsearchCards = [
+  {
+    title: 'Challenge',
+    descriptions: 'Elasticsearch didn’t cope with the load due to its outdated version and non-optimized configurations.',
+    colors: {
+      card: 'silver',
+    },
+  },
+  {
+    title: 'Effect on users',
+    descriptions: 'The users were often unable to access search results. Elasticsearch would expose them to delays of up to 30 seconds.',
+    colors: {
+      card: 'blue-light',
+    },
+  },
+]

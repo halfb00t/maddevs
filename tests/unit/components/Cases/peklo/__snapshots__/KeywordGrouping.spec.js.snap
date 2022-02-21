@@ -58,50 +58,68 @@ exports[`KeywordGrouping component should render correctly 1`] = `
     </p>
      
     <div
-      class="case_cards"
       data-aos="fade-up"
       data-aos-anchor-placement="bottom"
     >
       <div
-        class="case_card background-color-black-primary-bg"
+        class="colored-cards card-grid-type--two-two"
       >
-        <h3
-          class="case_title_h4 case_card-title m-8_bottom"
+        <div
+          class="colored-card colored-card--1 background-color-black"
         >
-          
-        Problem
-      
-        </h3>
-         
-        <p
-          class="case_paragraph"
-          style="color: rgb(255, 255, 255);"
-        >
-          
+          <!---->
+           
+          <div
+            class="colored-card__footer"
+          >
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+            >
+              
+      Problem
+    
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description text-color-white"
+            >
+              
         NLP could cope with grouping, but it would’ve taken several minutes to process a single file with keywords in it
       
-        </p>
-      </div>
-       
-      <div
-        class="case_card background-color-gray"
-      >
-        <h3
-          class="case_title_h4 case_card-title m-8_bottom"
+            </p>
+             
+          </div>
+        </div>
+        <div
+          class="colored-card colored-card--2 background-color-gray"
         >
-          
-        Solution
-      
-        </h3>
-         
-        <p
-          class="case_paragraph"
-          style="color: rgb(255, 255, 255);"
-        >
-          
+          <!---->
+           
+          <div
+            class="colored-card__footer"
+          >
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+            >
+              
+      Solution
+    
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description text-color-white"
+            >
+              
         Integration with an extensive dictionary of contextual synonyms in a separate cache
       
-        </p>
+            </p>
+             
+          </div>
+        </div>
       </div>
     </div>
      

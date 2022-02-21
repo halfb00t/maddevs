@@ -196,3 +196,34 @@ export const idList = [
   'innovation-item-4',
   'innovation-item-5',
 ]
+
+const cardBgColor = {
+  card: 'silver',
+}
+
+export const domainDrivenBenefits = [
+  {
+    descriptions: 'The backend structure allows for future modifications and augmentations, making the app scalable and adaptable.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
+  {
+    descriptions: 'Data processing can be flexibly optimised separately for the read side and the write side.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
+  {
+    descriptions: 'Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
+  {
+    descriptions: 'The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
+]

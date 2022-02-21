@@ -2,7 +2,7 @@
   <div class="card-use-case">
     <ClientOnly>
       <h3
-        :class="`card-use-case__${classList.uniqueСlass}-title`"
+        :class="`card-use-case__${classList.uniqueClass}-title`"
         class="card-use-case__title case_title_h4"
         v-html="title"
       >
@@ -10,17 +10,17 @@
       </h3>
     </ClientOnly>
     <div
-      :class="`card-use-case__${classList.uniqueСlass}-description-wrapper`"
+      :class="`card-use-case__${classList.uniqueClass}-description-wrapper`"
       class="card-use-case__description-wrapper"
     >
       <TextParagraph
-        :class="`card-use-case__${classList.uniqueСlass}-paragraph`"
+        :class="`card-use-case__${classList.uniqueClass}-paragraph`"
         class="card-use-case__paragraph"
       >
         {{ description }}
       </TextParagraph>
       <div
-        :class="`card-use-case__${classList.uniqueСlass}-picture`"
+        :class="`card-use-case__${classList.uniqueClass}-picture`"
         class="card-use-case__desktop-picture"
       >
         <Picture
@@ -32,7 +32,7 @@
         />
       </div>
       <div
-        :class="`card-use-case__${classList.uniqueСlass}-mobile-picture`"
+        :class="`card-use-case__${classList.uniqueClass}-mobile-picture`"
         class="card-use-case__mobile-picture"
       >
         <Picture

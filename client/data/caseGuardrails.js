@@ -117,16 +117,52 @@ export const techStackLanguagesGuardrails = [
 
 export const ProjectsIssuesCards = [
   {
-    title: 'Lack of integrations with hosting services/git providers',
-    description: 'Mad Devs developed the security reporting dashboard and API that allowed users to track the history of scans and reports.',
-    color: 'orange-dark',
-    img: 'cards-files',
+    title: 'Lack of user-friendly reports',
+    descriptions: 'Mad Devs developed the security reporting dashboard and API that allowed users to track the history of scans and reports.',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'guardrails',
+      file: 'cards-files',
+      alt: 'Lack of integrations with hosting services/git providers',
+    },
+    colors: {
+      card: 'orange-dark',
+      title: 'white',
+      descriptions: 'white',
+    },
   },
   {
     title: 'Slow security checks blocking pull requests',
-    description: 'We have changed the project’s technology stack to unlock pull requests faster after the checks.',
-    color: 'outer-space',
-    img: 'cards-keyboard',
+    descriptions: 'We have changed the project’s technology stack to unlock pull requests faster after the checks.',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'guardrails',
+      file: 'cards-keyboard',
+      alt: 'Lack of integrations with hosting services/git providers',
+    },
+    colors: {
+      card: 'outer-space',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Lack of integrations with hosting services/git providers',
+    descriptions: 'The GitHub integration was ready by 50%, we completed the remaining part. We also added the GitLab integration and the one for BitBucket (now alpha version stage).',
+    colors: {
+      card: 'turquoise',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'False positives occurred at vulnerability detection',
+    descriptions: 'Slow security checks blocking pull requests. We expanded the number of open source libraries under the hood for a better quality of results.',
+    colors: {
+      card: 'silver',
+    },
   },
 ]
 
