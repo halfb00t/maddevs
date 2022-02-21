@@ -1,7 +1,7 @@
 <template>
   <div class="case_parallax-layer m-48_top media-m-24_top m-48_bottom media-m-24_bottom m-auto">
     <div
-      v-parallax="0.4"
+      v-mad-parallax="animationSettings"
       class="case_parallax-wrapper"
     >
       <img
@@ -18,6 +18,15 @@
 <script>
 export default {
   name: 'ParallaxImage',
+  data() {
+    return {
+      animationSettings: {
+        customMove: true,
+        prlx3d: true,
+        startPoint: 1.1,
+      },
+    }
+  },
 }
 </script>
 

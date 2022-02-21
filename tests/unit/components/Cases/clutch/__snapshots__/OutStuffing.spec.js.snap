@@ -3,7 +3,7 @@
 exports[`OutStuffing component should render correctly 1`] = `
 <div>
   <section
-    class="container_regular"
+    class="container_regular m-96_bottom media-m-48_bottom"
   >
     <h3
       class="case_title_h2 m-12_bottom"
@@ -33,13 +33,15 @@ exports[`OutStuffing component should render correctly 1`] = `
     </h3>
      
     <div
-      class="case_cards-container m-12_bottom"
+      class="parallax_cards"
     >
       <div
-        class="case_column"
+        class="parallax_cards__item"
       >
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Graph icon"
@@ -55,12 +57,15 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Built service-oriented architecture
-  
+      Built service-oriented architecture
+    
           </p>
+           
         </div>
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Person icon"
@@ -76,12 +81,15 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Integrated single sign-on (SSO)
-  
+      Integrated single sign-on (SSO)
+    
           </p>
+           
         </div>
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Cost icon."
@@ -97,12 +105,15 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Optimised Clutch.co’s infrastructure costs
-  
+      Optimised Clutch.co’s infrastructure costs
+    
           </p>
+           
         </div>
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Menu icon"
@@ -118,17 +129,20 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Implemented Matchmaking and Shortlist
-  
+      Implemented Matchmaking and Shortlist
+    
           </p>
+           
         </div>
       </div>
        
       <div
-        class="case_column"
+        class="parallax_cards__item"
       >
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Settings icon."
@@ -144,12 +158,15 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Developed the Statistics service for intelligent decision making
-  
+      Developed the Statistics service for intelligent decision making
+    
           </p>
+           
         </div>
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Box icon."
@@ -165,12 +182,15 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Developed a repository for geographical data
-  
+      Developed a repository for geographical data
+    
           </p>
+           
         </div>
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Chip icon."
@@ -186,12 +206,15 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Implemented a connector between Clutch and HubSpot
-  
+      Implemented a connector between Clutch and HubSpot
+    
           </p>
+           
         </div>
         <div
-          class="case_card card-content background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
           <img
             alt="Speed icon."
@@ -207,9 +230,10 @@ exports[`OutStuffing component should render correctly 1`] = `
             class="case_paragraph"
           >
             
-    Improved website and widget performance
-  
+      Improved website and widget performance
+    
           </p>
+           
         </div>
       </div>
     </div>

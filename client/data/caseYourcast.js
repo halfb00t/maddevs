@@ -28,32 +28,46 @@ export const supportedGadgets = [
 export const keyProjectMilestones = [
   {
     title: '2016',
-    description:
+    descriptions:
       'As a pet project, Mad Devs developed a streaming service and open-sourced it, quickly finding a customer who wanted to expand the service for their business.',
     icon: 'open-source',
+    folder: 'yourcast',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     title: '2017',
-    description: 'Live video streaming of popular TV channels became available.',
+    descriptions: 'Live video streaming of popular TV channels became available.',
     icon: 'live-video',
+    folder: 'yourcast',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     title: '2018',
-    description: 'The project was redesigned to optimise resource consumption.',
+    descriptions: 'The project was redesigned to optimise resource consumption.',
     icon: 'optimization',
+    folder: 'yourcast',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
-    lottieFileName: '',
     title: '2019',
-    description: 'Added Video on Demand functionality.',
+    descriptions: 'Added Video on Demand functionality.',
     icon: 'search',
+    folder: 'yourcast',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     title: '2020',
-    description:
+    descriptions:
       'User authorisation ensured a more personalised experience for each user. Custom filters, such as ‘favourites’, ‘already watched’ and ‘search’, made the service more viewer-friendly.',
 
     icon: 'user_circle_full_fill',
+    folder: 'yourcast',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
 ]
 

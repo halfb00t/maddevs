@@ -9,7 +9,7 @@
           v-for="result in elasticsearchResults"
           v-bind="result"
           :key="result.title"
-          v-prlx="result.animationSettings"
+          v-mad-parallax="result.animationSettings"
           class="case_result-card"
         />
       </div>

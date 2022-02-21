@@ -33,58 +33,164 @@ exports[`Challenges component should render correctly 1`] = `
       </h3>
        
       <div
-        class="case_cards-container m-96_bottom media-m-48_bottom"
+        class="m-96_bottom media-m-48_bottom"
       >
         <div
-          class="case_column"
+          class="parallax_cards"
         >
-          <cardtechsolution-stub
-            alt="Files icon"
-            description="Extensive use of paper (minimum 2 reams of paper per SME)"
-            folder="itc"
-            icon="files"
-            title=""
-          />
-          <cardtechsolution-stub
-            alt="Search book icon"
-            description="Challenges with manually tracking coaching mission statuses, outputs, and outcomes"
-            folder="itc"
-            icon="search-book"
-            title=""
-          />
-          <cardtechsolution-stub
-            alt="Info icon."
-            description="Lack of readily available mission critical information"
-            folder="itc"
-            icon="info"
-            title=""
-          />
-        </div>
-         
-        <div
-          class="case_column"
-        >
-          <cardtechsolution-stub
-            alt="Connection icon"
-            description="ITC had to manually calculate any mission statistics"
-            folder="itc"
-            icon="connection"
-            title=""
-          />
-          <cardtechsolution-stub
-            alt="Folder icon."
-            description="Coaching reports presented challenges with storing, extracting, compiling, and using data derived from coaching"
-            folder="itc"
-            icon="folder"
-            title=""
-          />
-          <cardtechsolution-stub
-            alt="Lock file icon."
-            description="Challenges of information accessibility to the Institutional Partners in each country, the ITC, EU, and other stakeholders"
-            folder="itc"
-            icon="lock-file"
-            title=""
-          />
+          <div
+            class="parallax_cards__item"
+          >
+            <div
+              class="card-content background-color-silver"
+              iconheight="51.94"
+              iconwidth="51.94"
+            >
+              <img
+                alt="Files icon"
+                class="card-content_icon"
+                data-src="img.jpg"
+                height="51.94"
+                width="51.94"
+              />
+               
+              <!---->
+               
+              <p
+                class="case_paragraph"
+              >
+                
+      Extensive use of paper (minimum 2 reams of paper per SME)
+    
+              </p>
+               
+            </div>
+            <div
+              class="card-content background-color-silver"
+              iconheight="51.94"
+              iconwidth="51.94"
+            >
+              <img
+                alt="Search book icon"
+                class="card-content_icon"
+                data-src="img.jpg"
+                height="51.94"
+                width="51.94"
+              />
+               
+              <!---->
+               
+              <p
+                class="case_paragraph"
+              >
+                
+      Challenges with manually tracking coaching mission statuses, outputs, and outcomes
+    
+              </p>
+               
+            </div>
+            <div
+              class="card-content background-color-silver"
+              iconheight="51.94"
+              iconwidth="51.94"
+            >
+              <img
+                alt="Info icon."
+                class="card-content_icon"
+                data-src="img.jpg"
+                height="51.94"
+                width="51.94"
+              />
+               
+              <!---->
+               
+              <p
+                class="case_paragraph"
+              >
+                
+      Lack of readily available mission critical information
+    
+              </p>
+               
+            </div>
+          </div>
+           
+          <div
+            class="parallax_cards__item"
+          >
+            <div
+              class="card-content background-color-silver"
+              iconheight="51.94"
+              iconwidth="51.94"
+            >
+              <img
+                alt="Connection icon"
+                class="card-content_icon"
+                data-src="img.jpg"
+                height="51.94"
+                width="51.94"
+              />
+               
+              <!---->
+               
+              <p
+                class="case_paragraph"
+              >
+                
+      ITC had to manually calculate any mission statistics
+    
+              </p>
+               
+            </div>
+            <div
+              class="card-content background-color-silver"
+              iconheight="51.94"
+              iconwidth="51.94"
+            >
+              <img
+                alt="Folder icon."
+                class="card-content_icon"
+                data-src="img.jpg"
+                height="51.94"
+                width="51.94"
+              />
+               
+              <!---->
+               
+              <p
+                class="case_paragraph"
+              >
+                
+      Coaching reports presented challenges with storing, extracting, compiling, and using data derived from coaching
+    
+              </p>
+               
+            </div>
+            <div
+              class="card-content background-color-silver"
+              iconheight="51.94"
+              iconwidth="51.94"
+            >
+              <img
+                alt="Lock file icon."
+                class="card-content_icon"
+                data-src="img.jpg"
+                height="51.94"
+                width="51.94"
+              />
+               
+              <!---->
+               
+              <p
+                class="case_paragraph"
+              >
+                
+      Challenges of information accessibility to the Institutional Partners in each country, the ITC, EU, and other stakeholders
+    
+              </p>
+               
+            </div>
+          </div>
         </div>
       </div>
        
