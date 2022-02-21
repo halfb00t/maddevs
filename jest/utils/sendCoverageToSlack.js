@@ -1,4 +1,4 @@
-const request = require('request')
+const axios = require('axios')
 const { readFile } = require('fs')
 const chalk = require('chalk')
 const { findArgument, getColor } = require('.')
@@ -54,24 +54,18 @@ function createMessage(vars) {
 
 function sendMessageToSlack(reportResults, webhookUrl) {
   const resultMessage = createMessage(reportResults)
-  const options = {
-    uri: webhookUrl,
-    method: 'POST',
-    json: {
-      text: resultMessage.text,
-      attachments: resultMessage.attachments,
-    },
+  axios.post(webhookUrl, {
+    text: resultMessage.text,
+    attachments: resultMessage.attachments,
+  }, {
     mrkdwn: true,
-  }
-  request(options, error => {
-    if (error) {
-      // eslint-disable-next-line no-console
-      console.log(chalk.red(error))
-      process.exit(1)
-    } else {
-      // eslint-disable-next-line no-console
-      console.log(chalk.green('Message sent to Slack'))
-    }
+  }).then(() => {
+    // eslint-disable-next-line no-console
+    console.log(chalk.green('Message sent to Slack'))
+  }).catch(error => {
+    // eslint-disable-next-line no-console
+    console.log(chalk.red(error))
+    process.exit(1)
   })
 }
 
