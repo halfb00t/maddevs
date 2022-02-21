@@ -112,7 +112,7 @@ export default {
     this.width = this.$refs.imageWrapper.getBoundingClientRect().width
   },
 
-  unmounted() {
+  destroyed() {
     window.removeEventListener('resize', this.resizeHandler)
   },
 
