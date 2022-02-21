@@ -14,6 +14,7 @@ const props = {
 
 const spy = jest.fn()
 const testWidth = 420
+const inputValue = 89
 
 describe('UIBeforeAfterImage component', () => {
   let wrapper
@@ -41,11 +42,13 @@ describe('UIBeforeAfterImage component', () => {
 
   it('the compareWidth should correctly react to change value of the input', () => {
     const rangeInput = wrapper.find('.img-wrapper__compare-range')
-    rangeInput.setValue(89)
+    rangeInput.setValue(inputValue)
     rangeInput.trigger('input change')
 
-    expect(wrapper.vm.compareWidth).toBe('89')
-    expect(wrapper).toMatchSnapshot()
+    setTimeout(() => {
+      expect(wrapper.find('.img-wrapper__compare-overlay').attributes().style).toBe(`width: ${inputValue}%;`)
+    }, 0)
+    expect(wrapper.vm.compareWidth).toBe(`${inputValue}`)
   })
 
   it('does not fire resize event by default', () => {
@@ -59,5 +62,16 @@ describe('UIBeforeAfterImage component', () => {
 
     expect(spy).toHaveBeenCalledTimes(1)
     expect(window.innerWidth).toBe(testWidth)
+  })
+
+  it('should correctly remove resize event listener from window', () => {
+    wrapper = shallowMount(UIBeforeAfterImage, {
+      directives,
+      propsData: props,
+      attachTo: document.body,
+    })
+    wrapper.destroy()
+
+    expect(spy).toHaveBeenCalledTimes(1)
   })
 })

@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue'
 import CardAnimation from '@/prismicSlices/pageParts/CardGridSlice/components/CardAnimation'
 import '../../../../__mocks__/intersectionObserverMock'
 
-jest.mock('uuid')
+jest.mock('@/helpers/generatorUid')
 
 const stubs = ['lottieOptions']
 

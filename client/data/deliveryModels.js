@@ -1,7 +1,7 @@
 export const deliveryModels = {
   'staff-augmentation': {
     className: 'staff-augmentation',
-    animationName: 'tolya',
+    animationName: 'teamMembers',
     animationSpeed: 0.7,
     startAnimationOnScreenPercent: 20,
     title: 'Reach time-to-market targets and release deadlines faster with <span>augmented staff members.</span>',
