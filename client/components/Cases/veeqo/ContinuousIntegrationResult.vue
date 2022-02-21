@@ -22,8 +22,8 @@
           </h4>
         </div>
         <div
-          v-prlx="animationSettings"
-          class="case_card case_card-anim"
+          v-mad-parallax="animationSettings"
+          class="case_card"
         >
           <img
             v-lazy-load
@@ -55,13 +55,11 @@ export default {
     return {
       animationSettings: {
         reverse: true,
-        limit: {
-          min: -20,
-          max: 20,
-        },
-
-        mobileMaxWidth: 621,
-        fromBottom: true,
+        maxMove: 20,
+        customMove: true,
+        speed: 0.3,
+        startPoint: 3,
+        setIndentTop: true,
       },
     }
   },
@@ -102,14 +100,9 @@ export default {
     align-items: center;
     padding: 52px 14px;
     background: $bgcolor--blue-veeqo;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
-  }
-
-  &_card-anim {
-    position: relative;
-    top: 20px;
   }
 
   &_card-icon {

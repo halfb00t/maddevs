@@ -17,8 +17,8 @@
           </h3>
         </div>
         <div
-          v-prlx="animationSettings"
-          class="case_dashboard-item case_animate-text"
+          v-mad-parallax="animationSettings"
+          class="case_dashboard-item"
         >
           <TextParagraphUppercase class="case_dashboard-desc m-8_bottom media-m-6_bottom">
             Subsystems
@@ -29,8 +29,10 @@
         </div>
       </div>
     </div>
-    <div v-prlx="animationSettings">
-      <div class="case_image-wrapp">
+    <div v-mad-parallax="animationSettings">
+      <div
+        class="case_image-wrapp"
+      >
         <Picture
           folder="veeqo"
           file="high-level"
@@ -63,13 +65,11 @@ export default {
     return {
       animationSettings: {
         reverse: true,
-        limit: {
-          min: -30,
-          max: 0,
-        },
-
-        mobileMaxWidth: 961,
-        fromBottom: true,
+        maxMove: 30,
+        customMove: true,
+        speed: 0.3,
+        startPoint: 3,
+        setIndentTop: true,
       },
     }
   },

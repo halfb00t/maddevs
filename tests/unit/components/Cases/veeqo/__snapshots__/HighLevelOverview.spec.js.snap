@@ -48,7 +48,7 @@ exports[`HighLevelOverview component should render correctly 1`] = `
         </div>
          
         <div
-          class="case_dashboard-item case_animate-text"
+          class="case_dashboard-item"
         >
           <p
             class="case_paragraph-uppercase case_dashboard-desc m-8_bottom media-m-6_bottom"

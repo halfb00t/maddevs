@@ -133,28 +133,43 @@ export const ProjectsIssuesCards = [
 export const TechnicalAgilityNetlify = [
   {
     icon: 'tech-agility-1',
-    description: 'Automated builds for Git',
+    descriptions: 'Automated builds for Git',
     alt: 'Netlify technology',
+    folder: 'guardrails',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'tech-agility-3',
-    description: 'Version history',
+    descriptions: 'Version history',
     alt: 'Netlify technology',
+    folder: 'guardrails',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'tech-agility-2',
-    description: 'PR previews',
+    descriptions: 'PR previews',
     alt: 'Netlify technology',
+    folder: 'guardrails',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'tech-agility-4',
-    description: 'CDN serving your website ',
+    descriptions: 'CDN serving your website ',
     alt: 'Netlify technology',
+    folder: 'guardrails',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'tech-agility-5',
-    description: 'Serverless functions',
+    descriptions: 'Serverless functions',
     alt: 'Netlify technology',
+    folder: 'guardrails',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
 
 ]
