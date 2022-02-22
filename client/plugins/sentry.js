@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { Integrations } from '@sentry/tracing'
 import * as Sentry from '@sentry/vue'
 
-if (process.env.environment !== 'development') {
+if (process.env.NODE_ENV === 'production') {
   Sentry.init({
     Vue,
     dsn: process.env.sentryDsnFront,
