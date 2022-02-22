@@ -73,9 +73,10 @@
           >
             <span class="case_button-text">Visit Website</span>
             <img
+              v-lazy-load
               width="47px"
               height="43px"
-              :src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-icon.svg`)"
+              :data-src="$getMediaFromS3(`/images/Cases/clutch/svg/maddevs-icon.svg`)"
               alt="MadDevs logo"
               class="case_button-image"
             >

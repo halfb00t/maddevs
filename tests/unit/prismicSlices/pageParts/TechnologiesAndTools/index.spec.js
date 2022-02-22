@@ -14,6 +14,8 @@ const apiData = {
   animation: 'fade-up',
 }
 
+const stubs = ['LazyHydrate', 'TechnologiesAndTools', 'ToolsGrid', 'ExistingToolsGrid']
+
 describe('Technologies and Tools Grid slice', () => {
   it('should correctly render TechnologiesAndTools component', () => {
     const variation = 'default-slice'
@@ -21,6 +23,7 @@ describe('Technologies and Tools Grid slice', () => {
 
     const { container } = render(TechnologiesAndTools, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('technologies-grid-variation')).not.toBeNull()
@@ -35,6 +38,7 @@ describe('Technologies and Tools Grid slice', () => {
 
     const { container } = render(TechnologiesAndTools, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('tools-grid-variation')).not.toBeNull()

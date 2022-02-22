@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/vue'
 import CustomerTestimonials from '@/prismicSlices/pageParts/CustomerTestimonials'
 
-const stubs = ['CustomerTestimonialsSlice', 'Testimonials']
+const stubs = ['CustomerTestimonialsSlice', 'Testimonials', 'LazyHydrate']
 
 const apiData = {
   animation: 'fade-up',

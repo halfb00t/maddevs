@@ -48,33 +48,38 @@
           </div>
         </div>
       </div>
-      <UIOutlinedButton
-        full-width
-        color="red"
-        class="project-start-slice__button"
-        @click="$refs.modalOrderProjectFromUs.show()"
-      >
-        Submit your project
-      </UIOutlinedButton>
+      <LazyHydrate when-visible>
+        <UIOutlinedButton
+          full-width
+          color="red"
+          class="project-start-slice__button"
+          @click="$refs.modalOrderProjectFromUs.show()"
+        >
+          Submit your project
+        </UIOutlinedButton>
+      </LazyHydrate>
     </div>
-    <ModalOrderProjectFromUs
-      id="order-project-from-us-modal"
-      ref="modalOrderProjectFromUs"
-      :location="'\'Submit your project\' button, about page'"
-    />
+    <LazyHydrate when-visible>
+      <ModalOrderProjectFromUs
+        id="order-project-from-us-modal"
+        ref="modalOrderProjectFromUs"
+        :location="'\'Submit your project\' button, about page'"
+      />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import { steps } from '@/data/quickProjectStart'
-import UIOutlinedButton from '@/components/shared/UIOutlinedButton'
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'ProjectStartSlice',
   components: {
-    UIOutlinedButton,
+    LazyHydrate,
+    UIOutlinedButton: () => import('@/components/shared/UIOutlinedButton'),
     ModalOrderProjectFromUs: () => import('@/components/core/modals/ModalOrderProjectFromUs'),
   },
 

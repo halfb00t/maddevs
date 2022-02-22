@@ -11,8 +11,8 @@ exports[`ImageSlice component should render correctly 1`] = `
       <img
         alt="image"
         class="image-slice__image"
+        data-src="../../../../client/assets/img/Home/jpg/experts/Alice.jpg"
         data-testid="test-picture-img"
-        src="../../../../client/assets/img/Home/jpg/experts/Alice.jpg"
       />
     </div>
   </section>

@@ -8,8 +8,9 @@
       class="container"
     >
       <img
+        v-lazy-load
         :style="{ backgroundColor: sliceBackground }"
-        :src="image.url"
+        :data-src="image.url"
         :alt="image.alt || 'Image'"
         class="image-slice__image"
         data-testid="test-picture-img"

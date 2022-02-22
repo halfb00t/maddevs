@@ -8,40 +8,41 @@
       :data-aos="slice.primary.animation"
       data-testid="key-metrics-slice__container"
     >
-      <FirstVariation
-        v-if="slice.variation === 'default-slice'"
-        v-bind="slice.primary"
-        :metrics="slice.items"
-        data-testid="first-variation"
-      />
-      <SecondVariation
-        v-else-if="slice.variation === 'secondVariation'"
-        v-bind="slice.primary"
-        :metrics="slice.items"
-        data-testid="second-variation"
-      />
-      <ThirdVariation
-        v-else-if="slice.variation === 'thirdVariation'"
-        v-bind="slice.primary"
-        :metrics="slice.items"
-        data-testid="third-variation"
-      />
+      <LazyHydrate when-visible>
+        <FirstVariation
+          v-if="slice.variation === 'default-slice'"
+          v-bind="slice.primary"
+          :metrics="slice.items"
+          data-testid="first-variation"
+        />
+        <SecondVariation
+          v-else-if="slice.variation === 'secondVariation'"
+          v-bind="slice.primary"
+          :metrics="slice.items"
+          data-testid="second-variation"
+        />
+        <ThirdVariation
+          v-else-if="slice.variation === 'thirdVariation'"
+          v-bind="slice.primary"
+          :metrics="slice.items"
+          data-testid="third-variation"
+        />
+      </LazyHydrate>
     </div>
   </section>
 </template>
 
 <script>
-import FirstVariation from './variations/FirstVariation'
-import SecondVariation from './variations/SecondVariation'
-import ThirdVariation from './variations/ThirdVariation'
+import LazyHydrate from 'vue-lazy-hydration'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'KeyMetricsSlice',
   components: {
-    FirstVariation,
-    SecondVariation,
-    ThirdVariation,
+    LazyHydrate,
+    FirstVariation: () => import('./variations/FirstVariation'),
+    SecondVariation: () => import('./variations/SecondVariation'),
+    ThirdVariation: () => import('./variations/ThirdVariation'),
   },
 
   mixins: [animateOnScrollMixin({

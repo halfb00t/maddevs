@@ -18,22 +18,26 @@
     >
       Key results achieved by the Clutch.co and Mad Devs collaboration
     </h3>
-    <ParallaxCards
-      :data-cards="clutchResults"
-      :start-slice="4"
-    />
+    <LazyHydrate when-visible>
+      <ParallaxCards
+        :data-cards="clutchResults"
+        :start-slice="4"
+      />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import { clutchResults } from '@/data/caseClutch'
-import ParallaxCards from '@/components/Cases/shared/ParallaxCards/ParallaxCards'
+// import ParallaxCards from '@/components/Cases/shared/ParallaxCards/ParallaxCards'
 
 export default {
   name: 'OutStuffing',
   components: {
-    ParallaxCards,
+    LazyHydrate,
+    ParallaxCards: () => import('@/components/Cases/shared/ParallaxCards/ParallaxCards'),
     TextParagraph,
   },
 

@@ -25,6 +25,8 @@ const getProps = params => ({
   },
 })
 
+const stubs = ['UILinkButton', 'LazyHydrate', 'UIOutlinedButton', 'UIButton']
+
 describe('Button slice', () => {
   it('should correctly render UIButton', () => {
     const props = getProps(apiData)
@@ -32,6 +34,7 @@ describe('Button slice', () => {
 
     const { container } = render(ButtonSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('button-ui')).not.toBeNull()
@@ -46,6 +49,7 @@ describe('Button slice', () => {
 
     const { container } = render(ButtonSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('button-ui')).toBeNull()
@@ -60,6 +64,7 @@ describe('Button slice', () => {
 
     const { container } = render(ButtonSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('button-ui')).toBeNull()

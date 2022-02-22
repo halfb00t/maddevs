@@ -139,8 +139,8 @@ exports[`DevOps component should render correctly 1`] = `
             <img
               alt="MadDevs logo"
               class="case_button-image"
+              data-src="img.jpg"
               height="43px"
-              src="img.jpg"
               width="47px"
             />
           </div>

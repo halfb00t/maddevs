@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import { render, screen } from '@testing-library/vue'
 import KeyMetricsSlice from '@/prismicSlices/pageParts/KeyMetricsSlice'
 
-const stubs = ['FirstVariation', 'SecondVariation', 'ThirdVariation']
+const stubs = ['FirstVariation', 'SecondVariation', 'ThirdVariation', 'LazyHydrate']
 
 const backgrounds = {
   white: '#ffffff',
