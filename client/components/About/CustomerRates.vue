@@ -174,7 +174,7 @@ export default {
           font-size: 44px;
           line-height: 46px;
           letter-spacing: -1.4px;
-          color: #aaaaaa;
+          color: $text-color--dark-gray;
           @media screen and (max-width: 767px) {
             font-size: 38px;
             line-height: 39px;
