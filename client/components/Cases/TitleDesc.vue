@@ -25,7 +25,7 @@
   h1 {
     @include font('Poppins', 100px, 800);
     line-height: 96px;
-    color: #fff;
+    color: $text-color--white-primary;
     margin-bottom: 32px;
 
     @media screen and (max-width: 1140px) {
@@ -64,7 +64,7 @@
     max-width: 820px;
     line-height: 34px;
     letter-spacing: -0.013em;
-    color: #fff;
+    color: $text-color--white-primary;
 
     @media screen and (max-width: 1140px) {
       font-size: 26px;

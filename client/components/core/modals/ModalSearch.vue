@@ -245,7 +245,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: $bgcolor--black-opacity-1;
     z-index: 999;
     padding-top: 115px;
     padding-bottom: 30px;
@@ -265,11 +265,11 @@ export default {
       display: flex;
       flex-wrap: nowrap;
       width: 100%;
-      border-bottom: 1px solid #404143;
+      border-bottom: 1px solid $border-color--grey-pale;
       padding-bottom: 14px;
       position: sticky;
       top: -117px;
-      background-color: #000;
+      background-color: $bgcolor--black-opacity-1;
       padding-top: 15px;
 
       @media only screen and (max-width: 440px) {
@@ -298,7 +298,7 @@ export default {
         width: 100%;
         border: 0;
         background-color: transparent;
-        color: #fff;
+        color: $text-color--white-primary;
         line-height: 130%;
         letter-spacing: -0.04em;
         @include font('Poppins', 33px, 600);
@@ -373,7 +373,7 @@ export default {
             max-height: 57px;
             line-height: 124%;
             letter-spacing: -0.03em;
-            color: #fff;
+            color: $text-color--white-primary;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
@@ -386,7 +386,7 @@ export default {
             font-weight: normal;
             line-height: 141%;
             letter-spacing: -0.02em;
-            color: #A0A0A1;
+            color: $text-color--grey-opacity-40-percent;
             margin: 8px 0;
             @include font('Inter', 11px, 400);
           }
@@ -404,14 +404,14 @@ export default {
 
             h5 {
               line-height: 141%;
-              color: #fff;
+              color: $text-color--white-primary;
               letter-spacing: -0.02em;
               @include font('Inter', 11px, 500);
             }
 
             p {
               line-height: 141%;
-              color: rgba(255, 255, 255, 0.6);
+              color: $text-color--white07-opacity;
               letter-spacing: -0.02em;
               @include font('Inter', 11px, 400);
             }
@@ -422,7 +422,7 @@ export default {
 
     // Not found
     &_not-found {
-      color: #EC1C24;
+      color: $text-color--red;
       font-weight: normal;
       line-height: 166%;
       letter-spacing: -0.035em;
@@ -434,7 +434,7 @@ export default {
       margin-top: 50px;
 
       h5 {
-        color: #707072;
+        color: $text-color--grey-pale;
         line-height: 166%;
         letter-spacing: -0.02em;
         @include font('Inter', 13px, 400);
@@ -450,8 +450,8 @@ export default {
         &-item {
           line-height: 166%;
           letter-spacing: -0.02em;
-          color: #F4F4F4;
-          background: #404143;
+          color: $text-color--cultured;
+          background: $bgcolor--quote-box;
           border-radius: 2px;
           padding: 4px 16px;
           margin: 5px;

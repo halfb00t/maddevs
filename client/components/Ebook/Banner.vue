@@ -89,7 +89,7 @@ export default {
       max-width: 650px;
       @include font('Inter', 68px, 600);
       line-height: 72px;
-      color: #fff;
+      color: $text-color--white-primary;
       margin-bottom: 72px;
       letter-spacing: -2px;
 
@@ -104,7 +104,7 @@ export default {
       @include font('Inter', 20px, 600);
       letter-spacing: -0.4px;
       line-height: 26px;
-      color: #fff;
+      color: $text-color--white-primary;
       margin-bottom: 16px;
 
       @media screen and (max-width: 540px) {
@@ -122,7 +122,7 @@ export default {
         align-items: flex-start;
         @include font('Inter', 16px, 400);
         line-height: 24px;
-        color: #fff;
+        color: $text-color--white-primary;
         letter-spacing: -0.4px;
 
         @media screen and (max-width: 540px) {
@@ -137,7 +137,7 @@ export default {
           height: 5px;
           display: inline-block;
           border-radius: 100%;
-          background-color: #fff;
+          background-color: $text-color--white-primary;
           margin: 10px 10px 0;
         }
       }
@@ -152,7 +152,7 @@ export default {
         @include font('Inter', 16px, 600);
         letter-spacing: -0.4px;
         line-height: 20px;
-        color: #fff;
+        color: $text-color--white-primary;
       }
 
       button {

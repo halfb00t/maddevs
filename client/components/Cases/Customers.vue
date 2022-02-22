@@ -86,14 +86,14 @@ export default {
   }
 
   &--light {
-    background-color: #fff;
+    background-color: $bgcolor--white-primary;
 
     .customers__main-title {
-      color: #101113;
+      color: $text-color--black-oil;
     }
 
     .customers__description {
-      color: #101113;
+      color: $text-color--black-oil;
     }
   }
 

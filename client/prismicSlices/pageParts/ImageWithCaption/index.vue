@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background: #ffffff;
+  background: $bgcolor--white-primary;
   display: block;
   width: 100%;
 }

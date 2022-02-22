@@ -351,13 +351,13 @@ export default {
       left: -102px;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #F4F4F4;
+      background-color: $bgcolor--silver;
       padding: 4px 8px;
       box-sizing: border-box;
       border-radius: 4px;
       border: 0;
       line-height: 18px;
-      color: #101113;
+      color: $text-color--black-oil;
       transition: all 0.1s ease;
       @include font('Inter', 12px, 400);
     }

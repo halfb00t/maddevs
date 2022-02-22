@@ -184,7 +184,7 @@ export default {
   }
 
   &__divider {
-    color: #ff0029;
+    color: $text-color--ruddy;
   }
 
   &__position {

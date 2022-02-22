@@ -110,7 +110,7 @@ $tech_legends: (
 
   &__item {
     margin-right: 31px;
-    color: #938f95;
+    color: $text-color--spanish-gray;
     font-size: 14px;
     line-height: 22px;
     letter-spacing: -0.02em;
@@ -140,7 +140,7 @@ $tech_legends: (
       margin-right: 8px;
       top: 7px;
       left: 4px;
-      background: #938f95;
+      background: $bgcolor--spanish-gray;
       opacity: 0;
       transition: opacity 0.2s;
     }
@@ -172,7 +172,7 @@ $tech_legends: (
     &__item {
       margin-right: 9px;
       margin-left: 9px;
-      color: #938f95;
+      color: $text-color--spanish-gray;
       font-size: 12px;
       line-height: 18px;
       display: flex;

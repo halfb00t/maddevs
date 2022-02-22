@@ -63,7 +63,7 @@ export default {
     @include font('Inter', 16px, 400);
     line-height: 24px;
     letter-spacing: -0.4px;
-    color: #111;
+    color: $text-color--chinese-black;
     margin-top: 8px;
   }
 }

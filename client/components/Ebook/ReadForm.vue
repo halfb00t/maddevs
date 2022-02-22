@@ -152,9 +152,9 @@ export default {
         width: 100%;
         padding: 12px 15px;
         @include font('Inter', 16px, 400);
-        color: #707072;
+        color: $text-color--grey-pale;
         border-radius: 4px;
-        border: 1px solid #707072;
+        border: 1px solid $text-color--grey-pale;
         background-color: transparent;
         box-sizing: border-box;
       }
@@ -163,7 +163,7 @@ export default {
         left: 17px !important;
         top: 50% !important;
         transform: translateY(-50%);
-        color: #707072;
+        color: $text-color--grey-pale;
       }
     }
   }
@@ -174,9 +174,9 @@ export default {
     @include font('Inter', 16px, 600);
     line-height: 20px;
     letter-spacing: -0.4px;
-    color: #A0A0A1;
+    color: $text-color--grey-opacity-40-percent;
     border-radius: 4px;
-    border: 1px solid #707072;
+    border: 1px solid $border-color--grey-selected;
     background-color: transparent;
     margin-bottom: 16px;
     box-sizing: border-box;
@@ -187,18 +187,18 @@ export default {
     }
 
     &--active {
-      background-color: #ec1c24;
-      border-color: #ec1c24;
-      color: #fff;
+      background-color: $bgcolor--red;
+      border-color: $border-color--red;
+      color: $text-color--white-primary;
       opacity: 1;
       cursor: pointer;
 
       &:hover {
-        background-color: #d41e24;
+        background-color: $bgcolor--maximum-red;
       }
 
       &:active {
-        background-color: #c21c22;
+        background-color: $bgcolor--fire-engine-red;
       }
     }
   }
@@ -206,7 +206,7 @@ export default {
   &__caption {
     @include font('Inter', 14px, 400);
     letter-spacing: -0.4px;
-    color: #A0A0A1;
+    color: $text-color--grey-opacity-40-percent;
     line-height: 18px;
   }
 }

@@ -106,7 +106,7 @@ export default {
       font-style: normal;
       font-weight: normal;
       line-height: 135%;
-      color: #404143;
+      color: $text-color--quote-box;
       max-width: 600px;
       text-align: center;
       margin-left: auto;

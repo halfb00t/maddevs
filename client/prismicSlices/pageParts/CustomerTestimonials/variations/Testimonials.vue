@@ -124,7 +124,7 @@ export default {
       font-size: 24px;
       line-height: 29px;
       letter-spacing: -0.013em;
-      color: #101113;
+      color: $text-color--black-oil;
       margin: 0 0 20px;
 
       @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -190,7 +190,7 @@ export default {
     }
 
     &-name {
-      color: #6d7a7d;
+      color: $text-color--auroMetalSaurus;
       font-size: 14px;
       line-height: 18px;
       margin-top: 3px;

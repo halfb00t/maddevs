@@ -165,11 +165,11 @@ export default {
 
   &_card {
     &-header {
-      background-color: #3094AB;
+      background-color: $bgcolor--steel-blue;
 
       &:nth-child(2) {
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
-        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid $border-color--white-02-opacity;
+        border-left: 1px solid $border-color--white-02-opacity;
       }
 
       &_text {
@@ -187,7 +187,7 @@ export default {
         }
 
         &:first-child {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          border-bottom: 1px solid $border-color--white-02-opacity;
           font-weight: 700;
           text-transform: uppercase;
         }
@@ -204,7 +204,7 @@ export default {
 
       &:last-child {
         margin-top: 12px;
-        background-color: #62BA56;
+        background-color: $bgcolor--apple;
         font-weight: 700;
         height: 43px;
         font-size: 14px;
@@ -212,7 +212,7 @@ export default {
 
       &:first-child {
         height: 77px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        border-bottom: 1px solid $border-color--white-002-opacity;
         font-weight: 500;
         font-size: 13px;
       }
@@ -246,7 +246,7 @@ export default {
           justify-content: center;
           background-color: rgba(48, 148, 171, 0.3);
           height: 69px;
-          border-right: 1px solid rgba(255, 255, 255, 0.1);
+          border-right: 1px solid $border-color--grey-01-opacity;
           padding: 0 10px;
 
         }
@@ -259,7 +259,7 @@ export default {
 
           & div {
             margin-left: 5px;
-            background-color: #62BA56;
+            background-color: $bgcolor--apple;
             border: none;
           }
         }

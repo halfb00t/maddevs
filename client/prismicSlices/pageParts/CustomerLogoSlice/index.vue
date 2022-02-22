@@ -188,7 +188,7 @@ export default {
         color: $text-color--white;
       }
       &_logo {
-        background-color: #191A1B;
+        background-color: $bgcolor--eerie-black;
       }
     }
   }
