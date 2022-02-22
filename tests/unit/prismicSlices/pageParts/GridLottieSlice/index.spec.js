@@ -21,12 +21,15 @@ const getProps = params => ({
   },
 })
 
+const stubs = ['GridLottieLink', 'LazyHydrate', 'GridLottie']
+
 describe('Card Grid slice', () => {
   it('should correctly render CardGrid component', () => {
     const props = getProps(apiData)
     props.slice.variation = 'default-slice'
     const { container } = render(GridLottieMain, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('card-lottie')).not.toBeNull()
@@ -39,6 +42,7 @@ describe('Card Grid slice', () => {
     props.slice.variation = 'gridLottieLink'
     const { container } = render(GridLottieMain, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('card-lottie')).toBeNull()

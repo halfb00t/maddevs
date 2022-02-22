@@ -5,6 +5,12 @@ import getRobots from './utils/getRobots'
 require('dotenv').config()
 
 module.exports = {
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  buildModule: ['nuxt-compress'],
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
   /*
@@ -33,8 +39,8 @@ module.exports = {
       { rel: 'sitemap', type: 'application/xml', href: 'https://maddevs.io/sitemap.xml' },
     ],
     script: [
-      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver' },
-      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}` },
+      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', async: true, body: true },
+      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, async: true, body: true },
     ],
   },
   /*
@@ -143,6 +149,17 @@ module.exports = {
       endpoint: process.env.NODE_PRISMIC_API,
     }],
     ['nuxt-sm'],
+    [
+      'nuxt-compress',
+      {
+        gzip: {
+          threshold: 8192,
+        },
+        brotli: {
+          threshold: 8192,
+        },
+      },
+    ],
   ],
   sitemap: {
     hostname: 'https://maddevs.io',
@@ -199,6 +216,7 @@ module.exports = {
   },
   router: {
     trailingSlash: true,
+    prefetchLinks: false,
     extendRoutes: routes => {
       routes.push(...CUSTOM_PAGE_ROUTES)
       return routes

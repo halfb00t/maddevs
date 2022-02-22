@@ -32,12 +32,14 @@
           </div>
           <div class="ps-main-card-section ps-main-card-section--right">
             <img
-              :src="image.url"
+              v-lazy-load
+              :data-src="image.url"
               :alt="image.alt"
               class="ps-main-card__image"
             >
             <img
-              :src="linkedCompanyLogo.url"
+              v-lazy-load
+              :data-src="linkedCompanyLogo.url"
               :alt="linkedCompanyLogo.alt"
               class="ps-main-card__linked-logo"
             >
@@ -60,12 +62,14 @@
             >
               <div class="ps-sub-card-section ps-sub-card-section--left">
                 <img
-                  :src="item.image.url"
+                  v-lazy-load
+                  :data-src="item.image.url"
                   :alt="item.image.alt"
                   class="ps-sub-card__image"
                 >
                 <img
-                  :src="item.linkedCompanyLogo.url"
+                  v-lazy-load
+                  :data-src="item.linkedCompanyLogo.url"
                   :alt="item.linkedCompanyLogo.alt"
                   class="ps-sub-card__linked-logo"
                 >

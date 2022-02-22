@@ -6,15 +6,16 @@ exports[`Card Grid slice should correctly render CardGrid component 1`] = `
     class="grid-lottie"
     style="background-color: rgb(17, 18, 19);"
   >
-    <div
-      class="container aos-init aos-animate"
-      data-aos="fade-up"
-      data-testid="card-lottie"
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
     >
-      <ul
-        class="grid-lottie__grid"
+      <gridlottie-stub
+        class="aos-init aos-animate"
+        data-aos="fade-up"
+        data-testid="card-lottie"
       />
-    </div>
+    </lazyhydrate-stub>
   </section>
 </div>
 `;
@@ -25,15 +26,16 @@ exports[`Card Grid slice should correctly render CardGridWithIcon component 1`] 
     class="grid-lottie"
     style="background-color: rgb(17, 18, 19);"
   >
-    <div
-      class="container aos-init aos-animate"
-      data-aos="fade-up"
-      data-testid="card-lottie-link"
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
     >
-      <div
-        class="grid-lottie__grid"
+      <gridlottielink-stub
+        class="aos-init aos-animate"
+        data-aos="fade-up"
+        data-testid="card-lottie-link"
       />
-    </div>
+    </lazyhydrate-stub>
   </section>
 </div>
 `;

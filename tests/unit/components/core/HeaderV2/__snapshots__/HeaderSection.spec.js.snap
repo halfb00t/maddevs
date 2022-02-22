@@ -29,14 +29,7 @@ exports[`HeaderSection component should render correctly 1`] = `
           class="header-section__post"
         >
           <headerpost-stub
-            date=""
-            featuredimage="[object Object]"
-            postauthor="[object Object]"
-            posttype=""
-            slices=""
-            tags=""
-            title=""
-            uid=""
+            post-author="[object Object]"
           />
         </div>
       </div>

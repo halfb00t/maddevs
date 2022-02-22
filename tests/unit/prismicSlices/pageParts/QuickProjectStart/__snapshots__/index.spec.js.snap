@@ -107,14 +107,7 @@ exports[`QuickProjectStart slice should render correctly with data 1`] = `
         </div>
       </div>
        
-      <button
-        class="ui-outlined-button project-start-slice__button ui-outlined-button--red ui-outlined-button--full-width"
-        data-testid="project-start-slice__button"
-      >
-        
-      Submit your project
-    
-      </button>
+      <!---->
     </div>
      
     <!---->
@@ -144,22 +137,10 @@ exports[`QuickProjectStart slice should render correctly without data 1`] = `
         class="project-start-slice__list"
       />
        
-      <button
-        class="ui-outlined-button project-start-slice__button ui-outlined-button--red ui-outlined-button--full-width"
-        data-testid="project-start-slice__button"
-      >
-        
-      Submit your project
-    
-      </button>
+      <!---->
     </div>
      
-    <transition-stub
-      mode="out-in"
-      name="main-fade"
-    >
-      <!---->
-    </transition-stub>
+    <!---->
   </section>
 </div>
 `;

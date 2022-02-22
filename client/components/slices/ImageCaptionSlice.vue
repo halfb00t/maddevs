@@ -19,7 +19,8 @@
           ref="zoom"
         >
           <img
-            :src="img.url"
+            v-lazy-load
+            :data-src="img.url"
             :alt="img.alt || 'Image'"
           >
         </SimpleModal>

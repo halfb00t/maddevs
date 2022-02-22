@@ -30,6 +30,8 @@ const getProps = params => ({
   },
 })
 
+const stubs = ['SimpleText', 'Title', 'TitleText', 'TitleTextButton', 'Paragraph', 'FlexibleParagraph', 'LazyHydrate']
+
 describe('Spacer slice', () => {
   let wrapper
 
@@ -104,6 +106,7 @@ describe('TextSlice slice', () => {
     props.slice.variation = 'default-slice'
     const { container } = render(TextSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('text-slice-default')).not.toBeNull()
@@ -120,6 +123,7 @@ describe('TextSlice slice', () => {
     props.slice.variation = 'title'
     const { container } = render(TextSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('text-slice-default')).toBeNull()
@@ -135,6 +139,7 @@ describe('TextSlice slice', () => {
     props.slice.variation = 'titleText'
     const { container } = render(TextSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('text-slice-default')).toBeNull()
@@ -150,6 +155,7 @@ describe('TextSlice slice', () => {
     props.slice.variation = 'titleTextButton'
     const { container } = render(TextSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('text-slice-default')).toBeNull()
@@ -165,6 +171,7 @@ describe('TextSlice slice', () => {
     props.slice.variation = 'paragraph'
     const { container } = render(TextSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('text-slice-default')).toBeNull()
@@ -180,6 +187,7 @@ describe('TextSlice slice', () => {
     props.slice.variation = 'flexibleParagraph'
     const { container } = render(TextSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('text-slice-default')).toBeNull()
