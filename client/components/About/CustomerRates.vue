@@ -107,7 +107,7 @@ export default {
         &__rates-block {
           padding-top: 28px;
           padding-bottom: 40px;
-          color: #111213;
+          color: $text-color--black-lighter;
           @media  screen and (max-width: 1366px) {
             padding-left: 10px;
             padding-right: 10px;
@@ -174,7 +174,7 @@ export default {
           font-size: 44px;
           line-height: 46px;
           letter-spacing: -1.4px;
-          color: #ec1c24;
+          color: $text-color--dark-gray;
           @media screen and (max-width: 767px) {
             font-size: 38px;
             line-height: 39px;

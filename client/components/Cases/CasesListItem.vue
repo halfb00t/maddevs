@@ -245,7 +245,7 @@ export default {
     justify-content: flex-start;
     position: relative;
     z-index: 1;
-    color: #F4F4F4;
+    color: $text-color--cultured;
     * {
       @include font('Inter', 16px, 400);
       color: inherit;
@@ -295,8 +295,8 @@ export default {
       font-size: 16px;
       line-height: 100%;
       text-decoration: none;
-      background-color: #fff;
-      color: #000;
+      background-color: $bgcolor--white-primary;
+      color: $text-color--black;
       padding: 0 8px;
       border-radius: 4px;
       overflow: hidden;

@@ -85,7 +85,7 @@ export default {
     margin-bottom: 4px;
     border-radius: 100%;
     overflow: hidden;
-    background-color: #f4f4f4;
+    background-color: $bgcolor--silver;
   }
 
   &__position {

@@ -82,7 +82,7 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 80px;
-    background-color: #1D1D1F;
+    background-color: $bgcolor--black-pale;
     border-radius: 4px;
 
     &-1 {
@@ -123,7 +123,7 @@ export default {
 
   &_title {
     margin-bottom: 40px;
-    color: #fff;
+    color: $text-color--white-primary;
     @include font('Inter', 56px, 700);
     letter-spacing: -0.013em;
     line-height: 60px;
@@ -144,20 +144,20 @@ export default {
     @include font('Inter', 28px, 700);
     line-height: 38px;
     max-width: 686px;
-    color: #F4F4F4;
+    color: $text-color--cultured;
     letter-spacing: -0.013em;
     margin-bottom: 40px;
 
     /deep/ .yellow {
-      color: #F7C744;
+      color: $text-color--yellow;
     }
 
     /deep/ .red {
-      color: #DC251C;
+      color: $text-color--red-dark;
     }
 
     /deep/ .green {
-      color: #14c94d;
+      color: $text-color--green-pale;
     }
 
     @media screen and (max-width: 1120px) {
@@ -174,7 +174,7 @@ export default {
       letter-spacing: -0.013em;
       @include font('Inter', 17px, 400);
       line-height: 180%;
-      color: #A0A0A1;
+      color: $text-color--grey-opacity-40-percent;
 
       @media screen and (max-width: 1120px) {
         font-size: 17px;

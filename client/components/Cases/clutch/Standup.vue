@@ -231,7 +231,7 @@ export default {
         height: 90px;
         padding: 0 20px;
         margin-bottom: 12px;
-        background-color: #3094AB;
+        background-color: $bgcolor--steel-blue;
         font-weight: 600;
         font-size: 18px;
         text-align: left;

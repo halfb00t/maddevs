@@ -141,7 +141,7 @@ export default {
       width: 100%;
       @include font('Inter', 100px, 700);
       line-height: 96px;
-      color: #fff;
+      color: $text-color--white-primary;
       text-align: center;
       letter-spacing: -0.04em;
       margin-top: 135px;
@@ -163,7 +163,7 @@ export default {
       max-width: 815px;
       @include font('Inter', 32px, 400);
       line-height: 44px;
-      color: #F4F4F4;
+      color: $text-color--cultured;
       text-align: center;
       letter-spacing: -0.013em;
       margin: 32px auto auto;
@@ -191,7 +191,7 @@ export default {
     }
 
     /deep/ .featured-post__title {
-      color: #fff;
+      color: $text-color--white-primary;
     }
   }
 }
