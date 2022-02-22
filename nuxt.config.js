@@ -126,7 +126,7 @@ module.exports = {
     },
     ],
     [
-      'nuxt-i18n',
+      '@nuxtjs/i18n',
       {
         strategy: 'prefix_except_default',
         defaultLocale: 'en',
