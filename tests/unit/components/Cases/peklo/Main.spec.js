@@ -9,6 +9,7 @@ const stubs = ['About',
   'PekloToolUnderTheHood',
   'Technologies',
   'Team',
+  'LazyHydrate',
 ]
 
 describe('Main component', () => {
