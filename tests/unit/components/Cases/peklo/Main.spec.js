@@ -1,4 +1,5 @@
 import { render } from '@testing-library/vue'
+import { shallowMount } from '@vue/test-utils'
 import Main from '@/components/Cases/peklo/Main'
 
 const stubs = ['About',
@@ -18,5 +19,16 @@ describe('Main component', () => {
     })
 
     expect(container).toMatchSnapshot()
+  })
+  describe('Dymanic imports', () => {
+    beforeEach(() => {
+      jest.resetModules()
+    })
+    it('should find text in dymanic imports', async () => {
+      const App = (await import('@/components/Cases/peklo/BenefitsFromPekloTool')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
+    })
   })
 })

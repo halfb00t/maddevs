@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt build --modern=server",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "npm run lint-vue-scss & npm run lint-scss & npm run lint-es",
@@ -52,6 +52,7 @@
     "cli-progress": "^3.9.0",
     "cors": "^2.8.5",
     "countup.js": "^2.0.8",
+    "consola": "^2.15.3",
     "debug": "^4.3.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

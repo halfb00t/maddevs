@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/vue'
+import { shallowMount } from '@vue/test-utils'
 import CustomerTestimonials from '@/prismicSlices/pageParts/CustomerTestimonials'
 
 const stubs = ['CustomerTestimonialsSlice', 'Testimonials', 'LazyHydrate']
@@ -40,5 +41,23 @@ describe('CustomerTestimonials slice', () => {
     expect(screen.queryByTestId('first-variation')).toBeNull()
     expect(screen.queryByTestId('second-variation')).not.toBeNull()
     expect(container).toMatchSnapshot()
+  })
+
+  describe('Dymanic imports CustomerTestimonials', () => {
+    beforeEach(() => {
+      jest.resetModules()
+    })
+    it('should find text in dymanic imports CustomerTestimonialsSlice', async () => {
+      const App = (await import('@/prismicSlices/pageParts/CustomerTestimonials/variations/CustomerTestimonialsSlice')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.findComponent({ name: 'CustomerTestimonials' }).exists()).toBe(true)
+    })
+    it('should find text in dymanic imports Testimonials', async () => {
+      const App = (await import('@/prismicSlices/pageParts/CustomerTestimonials/variations/Testimonials')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.testimonials').exists()).toBe(true)
+    })
   })
 })
