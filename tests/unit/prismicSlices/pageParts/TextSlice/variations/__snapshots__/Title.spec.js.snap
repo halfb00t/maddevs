@@ -5,12 +5,14 @@ exports[`Title with data should render correctly with data 1`] = `
   <section
     class="title-slice title-slice-text--center"
   >
-    <h1
-      class="title-slice-text title-slice-text----16-px"
-      style="max-width: 500px;"
-    >
-      test
-    </h1>
+    <div>
+      <h1
+        class="title-slice-text title-slice-text----16-px"
+        style="max-width: 500px;"
+      >
+        test
+      </h1>
+    </div>
   </section>
 </div>
 `;
