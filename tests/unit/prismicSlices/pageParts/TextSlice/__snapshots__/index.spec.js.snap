@@ -71,10 +71,12 @@ exports[`TextSlice slice should correctly render Title component 1`] = `
           size-xl="90px"
           size-xs="50px"
         >
-          <h2
-            class="title-slice-text title-slice-text--size-md"
-            style="max-width: 100%;"
-          />
+          <div>
+            <h2
+              class="title-slice-text title-slice-text--size-md"
+              style="max-width: 100%;"
+            />
+          </div>
         </section>
       </transition-stub>
     </div>
