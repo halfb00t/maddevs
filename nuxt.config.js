@@ -136,7 +136,7 @@ module.exports = {
   ** Nuxt Modules
   */
   modules: [
-    ['modules/js-optimizer.js', { setOutputFilenames: true }], // need to async loaded javascript chunks
+    ['~/modules/js-optimizer.js', { setOutputFilenames: true }], // need to async loaded javascript chunks
     '@nuxtjs/axios',
     '@nuxtjs/robots',
     '@nuxtjs/prismic',
