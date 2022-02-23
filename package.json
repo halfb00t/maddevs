@@ -18,7 +18,7 @@
     "lint-scss": "sass-lint client/assets/styles/*.scss --verbose",
     "precommit": "npm run lint",
     "heroku-postbuild": "npm run build",
-    "heroku-cleanup": "cd ./client; ls | grep -v static | xargs rm -rfv",
+    "heroku-cleanup": "cd ./client; ls | grep -v static | grep -v modules | xargs rm -rfv",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect",
     "test": "npm run test:unit && npm run test:e2e",
