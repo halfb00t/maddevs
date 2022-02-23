@@ -189,4 +189,28 @@ describe('Button slice', () => {
       expect(wrapper.vm.sliceAlignment).toBe('right')
     })
   })
+
+  describe('Dymanic imports', () => {
+    beforeEach(() => {
+      jest.resetModules()
+    })
+    it('should find text in dymanic imports UIButton', async () => {
+      const App = (await import('@/components/shared/UIButton')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.ui-button').exists()).toBe(true)
+    })
+    it('should find text in dymanic imports UIOutlinedButton', async () => {
+      const App = (await import('@/components/shared/UIOutlinedButton')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.ui-outlined-button').exists()).toBe(true)
+    })
+    it('should find text in dymanic imports UILinkButton', async () => {
+      const App = (await import('@/components/shared/UILinkButton')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.ui-link-button').exists()).toBe(true)
+    })
+  })
 })

@@ -135,4 +135,28 @@ describe('KeyMetrics slice', () => {
       expect(wrapper.vm.sliceBackground).toBeNull()
     })
   })
+
+  describe('Dymanic imports KeyMetricsSlice', () => {
+    beforeEach(() => {
+      jest.resetModules()
+    })
+    it('should find text in dymanic imports FirstVariation', async () => {
+      const App = (await import('@/prismicSlices/pageParts/KeyMetricsSlice/variations/FirstVariation')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.key-metrics-slice__title').exists()).toBe(true)
+    })
+    it('should find text in dymanic imports SecondVariation', async () => {
+      const App = (await import('@/prismicSlices/pageParts/KeyMetricsSlice/variations/SecondVariation')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.key-metrics-slice__title').exists()).toBe(true)
+    })
+    it('should find text in dymanic imports ThirdVariation', async () => {
+      const App = (await import('@/prismicSlices/pageParts/KeyMetricsSlice/variations/ThirdVariation')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.key-metrics-slice__title').exists()).toBe(true)
+    })
+  })
 })

@@ -5,11 +5,6 @@ import getRobots from './utils/getRobots'
 require('dotenv').config()
 
 module.exports = {
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
   buildModule: ['nuxt-compress'],
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
@@ -86,7 +81,7 @@ module.exports = {
       ],
     },
     vendor: ['axios'],
-    transpile: ['swiper', 'dom7', 'vue-slicezone', 'nuxt-sm'],
+    transpile: ['swiper', 'dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration'],
     followSymlinks: true,
     cache: true,
     extend(config, { isDev, isClient }) {
@@ -101,6 +96,27 @@ module.exports = {
           },
         })
       }
+    },
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true,
+    },
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true,
+      },
+    },
+    optimization: {
+      minimize: true,
     },
   },
   /*
@@ -120,6 +136,7 @@ module.exports = {
   ** Nuxt Modules
   */
   modules: [
+    ['modules/js-optimizer.js', { setOutputFilenames: true }], // need to async loaded javascript chunks
     '@nuxtjs/axios',
     '@nuxtjs/robots',
     '@nuxtjs/prismic',

@@ -95,4 +95,22 @@ describe('Card Grid slice', () => {
       expect(wrapper.vm.sliceBackground).toBeNull()
     })
   })
+
+  describe('Dymanic imports GridLottieSlice', () => {
+    beforeEach(() => {
+      jest.resetModules()
+    })
+    it('should find text in dymanic imports GridLottie', async () => {
+      const App = (await import('@/prismicSlices/pageParts/GridLottieSlice/variations/GridLottie')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.grid-lottie__grid').exists()).toBe(true)
+    })
+    it('should find text in dymanic imports GridLottieLink', async () => {
+      const App = (await import('@/prismicSlices/pageParts/GridLottieSlice/variations/GridLottieLink')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.grid-lottie__grid').exists()).toBe(true)
+    })
+  })
 })
