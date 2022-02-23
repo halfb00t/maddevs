@@ -119,6 +119,9 @@
           },
           "size-sm": {
             "content": "16-px"
+          },
+          "showAnchorLink": {
+            "content": false
           }
         }
       },

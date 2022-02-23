@@ -121,6 +121,15 @@
           },
           "type": "Text"
         },
+        "showAnchorLink": {
+          "config": {
+            "label": "Show anchor link",
+            "placeholder_false": "hide",
+            "placeholder_true": "show",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
         "maxWidth": {
           "config": {
             "label": "Max width",
