@@ -69,7 +69,7 @@ export default {
     },
   },
 
-  mounted() {
+  updated() {
     document.querySelectorAll('.copy-link')
       .forEach(link => {
         link.addEventListener('click', this.copyAnchorLink)
@@ -84,8 +84,9 @@ export default {
   methods: {
     createAnchorTag(text, tag, size) {
       return `
-      <${tag} class="anchor_title-h title-slice-text--${size}" id="${this.createAnchorID(text)}">${text}</${tag}>
+      <${tag} class="anchor_title-h title-slice-text--${size}">${text}</${tag}>
       <div class="anchor_copy-link">
+      <div style="visibility: hidden; position: absolute; top: -60px;" id="${this.createAnchorID(text)}"></div>
         <button data-id="${this.createAnchorID(text)}" class="copy-link">
           <img src="${require('@/assets/img/common/anchor.svg')}" alt="Anchor" width="16" height="16" />
         </button>
@@ -277,6 +278,10 @@ export default {
       cursor: pointer;
       border: 0;
       background-color: transparent;
+      @media screen and (max-width: 768px) {
+        left: 0;
+        top: 0;
+      }
 
       img {
         width: 16px;
