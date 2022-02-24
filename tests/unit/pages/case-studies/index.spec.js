@@ -57,15 +57,57 @@ describe('Index page', () => {
     })
   })
 
-  describe('Dymanic imports', () => {
+  describe('Dymanic imports index', () => {
     beforeEach(() => {
       jest.resetModules()
     })
-    it('should find text in dymanic imports', async () => {
-      const App = (await import('@/components/Cases/peklo/BenefitsFromPekloTool')).default
-      const wrapper = shallowMount(App)
 
-      expect(wrapper.find('.main').exists()).toBe(true)
+    it('should find text in dymanic import TitleDesc', async () => {
+      const App = (await import('@/components/Cases/TitleDesc')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.title-desc').exists()).toBe(true)
+    })
+
+    it('should find text in dymanic import CasesList', async () => {
+      const App = (await import('@/components/Cases/CasesList')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.cases-list').exists()).toBe(true)
+    })
+
+    it('should find text in dymanic import Customers', async () => {
+      const App = (await import('@/components/Cases/Customers')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.customers').exists()).toBe(true)
+    })
+
+    it('should find text in dymanic import BuildDevTeam', async () => {
+      const App = (await import('@/components/Cases/BuildDevTeam')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.build-dev-team_wrapper').exists()).toBe(true)
     })
   })
 })
