@@ -1,6 +1,5 @@
 <template>
   <section>
-    <div id="case-first-section" />
     <About />
     <HighLevelOverview />
     <ChallengesAndSolutions />
