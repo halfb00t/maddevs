@@ -5,19 +5,13 @@ exports[`Index page should render correctly 1`] = `
   <main
     class="main"
   >
-    <titledesc-stub />
+    <!---->
      
-    <caseslist-stub
-      itemtitletag="h2"
-      limit="11"
-    />
+    <!---->
      
-    <customers-stub
-      iconbackground="transparent"
-      light="true"
-    />
+    <!---->
      
-    <builddevteam-stub />
+    <!---->
   </main>
 </div>
 `;

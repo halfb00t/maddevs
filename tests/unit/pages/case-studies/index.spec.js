@@ -19,7 +19,7 @@ const META_DATA = {
   'twitter:url': 'https://maddevs.io/case-studies/',
 }
 
-const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam']
+const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam', 'LazyHydrate']
 
 const mocks = {
   $lazyLoad: {
@@ -54,6 +54,18 @@ describe('Index page', () => {
     expect(actual.meta).toHaveLength(Object.keys(META_DATA).length)
     actual.meta.forEach(meta => {
       expect(META_DATA[meta.name] || META_DATA[meta.property]).toBe(meta.content)
+    })
+  })
+
+  describe('Dymanic imports', () => {
+    beforeEach(() => {
+      jest.resetModules()
+    })
+    it('should find text in dymanic imports', async () => {
+      const App = (await import('@/components/Cases/peklo/BenefitsFromPekloTool')).default
+      const wrapper = shallowMount(App)
+
+      expect(wrapper.find('.main').exists()).toBe(true)
     })
   })
 })
