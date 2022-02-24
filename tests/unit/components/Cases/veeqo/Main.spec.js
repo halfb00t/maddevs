@@ -18,6 +18,7 @@ const stubs = [
   'Picture',
   'PhaseFixingDatabaseOutages',
   'ListTechnologiesItem',
+  'LazyHydrate',
 ]
 
 describe('Main component', () => {
