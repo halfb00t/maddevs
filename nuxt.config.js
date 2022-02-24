@@ -1,5 +1,4 @@
 import { getStoriesPaths } from 'slice-machine-ui/helpers/storybook'
-import fs from 'fs'
 import getRoutes, { getSitemapRoutes, CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
 
@@ -13,10 +12,6 @@ module.exports = {
    ** Server settings
    */
   server: {
-    https: {
-      key: fs.readFileSync('../localhost-key.pem'),
-      cert: fs.readFileSync('../localhost.pem'),
-    },
     host: process.env.HOST || '0', // https://debbie.codes/blog/nuxt-configure-server-to-see-site-on-mobile/
     port: process.env.PORT || 3000,
   },
