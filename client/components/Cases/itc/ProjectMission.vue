@@ -125,6 +125,7 @@ import { thematicAreas } from '@/data/caseITC'
 
 export default {
   name: 'ProjectMission',
+
   components: {
     TextParagraph,
     CardThematicArea,
