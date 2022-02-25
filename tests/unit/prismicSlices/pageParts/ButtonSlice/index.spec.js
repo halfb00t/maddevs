@@ -190,27 +190,22 @@ describe('Button slice', () => {
     })
   })
 
-  describe('Dymanic imports', () => {
-    beforeEach(() => {
-      jest.resetModules()
-    })
-    it('should find text in dymanic imports UIButton', async () => {
-      const App = (await import('@/components/shared/UIButton')).default
-      const wrapper = shallowMount(App)
+  describe('Dynamic imports ButtonSlice', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(ButtonSlice, {
+        propsData: getProps({
+          ...apiData,
+        }),
+      })
 
-      expect(wrapper.find('.ui-button').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports UIOutlinedButton', async () => {
-      const App = (await import('@/components/shared/UIOutlinedButton')).default
-      const wrapper = shallowMount(App)
+      const UILinkButton = await container.vm.$options.components.UILinkButton.call()
+      const UIOutlinedButton = await container.vm.$options.components.UIOutlinedButton.call()
+      const UIButton = await container.vm.$options.components.UIButton.call()
 
-      expect(wrapper.find('.ui-outlined-button').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports UILinkButton', async () => {
-      const App = (await import('@/components/shared/UILinkButton')).default
-      const wrapper = shallowMount(App)
-
-      expect(wrapper.find('.ui-link-button').exists()).toBe(true)
+      expect(UILinkButton.default.name).toBe('UILinkButton')
+      expect(UIOutlinedButton.default.name).toBe('UIOutlinedButton')
+      expect(UIButton.default.name).toBe('UIButton')
+      expect(container.vm.$options.props.slice.default.call()).toEqual({})
     })
   })
 })

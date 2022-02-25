@@ -136,27 +136,22 @@ describe('KeyMetrics slice', () => {
     })
   })
 
-  describe('Dymanic imports KeyMetricsSlice', () => {
-    beforeEach(() => {
-      jest.resetModules()
-    })
-    it('should find text in dymanic imports FirstVariation', async () => {
-      const App = (await import('@/prismicSlices/pageParts/KeyMetricsSlice/variations/FirstVariation')).default
-      const wrapper = shallowMount(App)
+  describe('Dynamic imports KeyMetricsSlice', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(KeyMetricsSlice, {
+        propsData: getProps({
+          ...apiData,
+          background: 'grey',
+        }),
+      })
 
-      expect(wrapper.find('.key-metrics-slice__title').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports SecondVariation', async () => {
-      const App = (await import('@/prismicSlices/pageParts/KeyMetricsSlice/variations/SecondVariation')).default
-      const wrapper = shallowMount(App)
+      const FirstVariation = await container.vm.$options.components.FirstVariation.call()
+      const SecondVariation = await container.vm.$options.components.SecondVariation.call()
+      const ThirdVariation = await container.vm.$options.components.ThirdVariation.call()
 
-      expect(wrapper.find('.key-metrics-slice__title').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports ThirdVariation', async () => {
-      const App = (await import('@/prismicSlices/pageParts/KeyMetricsSlice/variations/ThirdVariation')).default
-      const wrapper = shallowMount(App)
-
-      expect(wrapper.find('.key-metrics-slice__title').exists()).toBe(true)
+      expect(FirstVariation.default.name).toBe('FirstVariation')
+      expect(SecondVariation.default.name).toBe('SecondVariation')
+      expect(ThirdVariation.default.name).toBe('ThirdVariation')
     })
   })
 })

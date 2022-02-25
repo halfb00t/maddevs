@@ -248,4 +248,32 @@ describe('TextSlice slice', () => {
       expect(wrapper.vm.colorThemeClass).toBe('text-slice--white-theme')
     })
   })
+
+  describe('Dynamic imports TextSlice', () => {
+    it('should correctly import components', async () => {
+      resizeWindow(768)
+      const container = shallowMount(TextSlice, {
+        propsData: getProps({
+          ...apiData,
+          xs: '',
+          sm: '',
+          md: '',
+        }),
+      })
+
+      const Title = await container.vm.$options.components.Title.call()
+      const SimpleText = await container.vm.$options.components.SimpleText.call()
+      const TitleText = await container.vm.$options.components.TitleText.call()
+      const TitleTextButton = await container.vm.$options.components.TitleTextButton.call()
+      const Paragraph = await container.vm.$options.components.Paragraph.call()
+      const FlexibleParagraph = await container.vm.$options.components.FlexibleParagraph.call()
+
+      expect(Title.default.name).toBe('TitleSlice')
+      expect(SimpleText.default.name).toBe('SimpleText')
+      expect(TitleText.default.name).toBe('TitleText')
+      expect(TitleTextButton.default.name).toBe('TitleTextButton')
+      expect(Paragraph.default.name).toBe('ParagraphSlice')
+      expect(FlexibleParagraph.default.name).toBe('FlexibleParagraph')
+    })
+  })
 })
