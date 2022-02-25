@@ -43,21 +43,15 @@ describe('CustomerTestimonials slice', () => {
     expect(container).toMatchSnapshot()
   })
 
-  describe('Dymanic imports CustomerTestimonials', () => {
-    beforeEach(() => {
-      jest.resetModules()
-    })
-    it('should find text in dymanic imports CustomerTestimonialsSlice', async () => {
-      const App = (await import('@/prismicSlices/pageParts/CustomerTestimonials/variations/CustomerTestimonialsSlice')).default
-      const wrapper = shallowMount(App)
+  describe('Dynamic imports CustomerTestimonials', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(CustomerTestimonials)
 
-      expect(wrapper.findComponent({ name: 'CustomerTestimonials' }).exists()).toBe(true)
-    })
-    it('should find text in dymanic imports Testimonials', async () => {
-      const App = (await import('@/prismicSlices/pageParts/CustomerTestimonials/variations/Testimonials')).default
-      const wrapper = shallowMount(App)
+      const CustomerTestimonialsSlice = await container.vm.$options.components.CustomerTestimonialsSlice.call()
+      const Testimonials = await container.vm.$options.components.Testimonials.call()
 
-      expect(wrapper.find('.testimonials').exists()).toBe(true)
+      expect(CustomerTestimonialsSlice.default.name).toBe('CustomerTestimonialsSlice')
+      expect(Testimonials.default.name).toBe('Testimonials')
     })
   })
 })

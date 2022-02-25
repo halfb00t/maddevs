@@ -27,152 +27,42 @@ describe('Main component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  describe('Dymanic imports Main', () => {
-    beforeEach(() => {
-      jest.resetModules()
-    })
-    it('should find text in dymanic imports AboutYourcast', async () => {
-      const App = (await import('@/components/Cases/yourcast/AboutYourcast')).default
-      const wrapper = shallowMount(App, {
+  describe('Dynamic imports Yourcast component Main', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(Main, {
         mocks: {
           $getMediaFromS3: () => 'img.jpg',
         },
         directives,
       })
 
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports ProjectInNumbers', async () => {
-      const App = (await import('@/components/Cases/yourcast/ProjectInNumbers')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
+      const AboutYourcast = await container.vm.$options.components.AboutYourcast.call()
+      const ProjectInNumbers = await container.vm.$options.components.ProjectInNumbers.call()
+      const SupportedGadgets = await container.vm.$options.components.SupportedGadgets.call()
+      const Technologies = await container.vm.$options.components.Technologies.call()
+      const KeyProjectMilestones = await container.vm.$options.components.KeyProjectMilestones.call()
+      const PhaseOnlineCinema = await container.vm.$options.components.PhaseOnlineCinema.call()
+      const PhaseLiveStreamingTechnology = await container.vm.$options.components.PhaseLiveStreamingTechnology.call()
+      const PhaseRedesignAndOptimisations = await container.vm.$options.components.PhaseRedesignAndOptimisations.call()
+      const PhaseVideoOnDemand = await container.vm.$options.components.PhaseVideoOnDemand.call()
+      const PhaseUserAuthorisation = await container.vm.$options.components.PhaseUserAuthorisation.call()
+      const WatchWhatYouLikeVideo = await container.vm.$options.components.WatchWhatYouLikeVideo.call()
+      const PlansForSimilarProjects = await container.vm.$options.components.PlansForSimilarProjects.call()
+      const Team = await container.vm.$options.components.Team.call()
 
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports SupportedGadgets', async () => {
-      const App = (await import('@/components/Cases/yourcast/SupportedGadgets')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports Technologies', async () => {
-      const App = (await import('@/components/Cases/yourcast/Technologies')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports KeyProjectMilestones', async () => {
-      const App = (await import('@/components/Cases/yourcast/KeyProjectMilestones')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports PhaseOnlineCinema', async () => {
-      const App = (await import('@/components/Cases/yourcast/PhaseOnlineCinema')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports PhaseLiveStreamingTechnology', async () => {
-      const App = (await import('@/components/Cases/yourcast/PhaseLiveStreamingTechnology')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports PhaseRedesignAndOptimisations', async () => {
-      const App = (await import('@/components/Cases/yourcast/PhaseRedesignAndOptimisations')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports PhaseVideoOnDemand', async () => {
-      const App = (await import('@/components/Cases/yourcast/PhaseVideoOnDemand')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports PhaseUserAuthorisation', async () => {
-      const App = (await import('@/components/Cases/yourcast/PhaseUserAuthorisation')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports WatchWhatYouLikeVideo', async () => {
-      const App = (await import('@/components/Cases/yourcast/WatchWhatYouLikeVideo')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_image-wrapp').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports PlansForSimilarProjects', async () => {
-      const App = (await import('@/components/Cases/yourcast/PlansForSimilarProjects')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h3').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports Team', async () => {
-      const App = (await import('@/components/Cases/yourcast/Team')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
+      expect(AboutYourcast.default.name).toBe('AboutYourcast')
+      expect(ProjectInNumbers.default.name).toBe('ProjectInNumbers')
+      expect(SupportedGadgets.default.name).toBe('SupportedGadgets')
+      expect(Technologies.default.name).toBe('TechnologyStack')
+      expect(KeyProjectMilestones.default.name).toBe('KeyProjectMilestones')
+      expect(PhaseOnlineCinema.default.name).toBe('PhaseOnlineCinema')
+      expect(PhaseLiveStreamingTechnology.default.name).toBe('PhaseLiveStreamingTechnology')
+      expect(PhaseRedesignAndOptimisations.default.name).toBe('PhaseRedesignAndOptimisations')
+      expect(PhaseVideoOnDemand.default.name).toBe('PhaseVideoOnDemand')
+      expect(PhaseUserAuthorisation.default.name).toBe('PhaseUserAuthorisation')
+      expect(WatchWhatYouLikeVideo.default.name).toBe('WatchWhatYouLikeVideo')
+      expect(PlansForSimilarProjects.default.name).toBe('PlansForSimilarProjects')
+      expect(Team.default.name).toBe('MeetTheTeam')
     })
   })
 })

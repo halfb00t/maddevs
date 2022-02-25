@@ -96,21 +96,15 @@ describe('Card Grid slice', () => {
     })
   })
 
-  describe('Dymanic imports GridLottieSlice', () => {
-    beforeEach(() => {
-      jest.resetModules()
-    })
-    it('should find text in dymanic imports GridLottie', async () => {
-      const App = (await import('@/prismicSlices/pageParts/GridLottieSlice/variations/GridLottie')).default
-      const wrapper = shallowMount(App)
+  describe('Dynamic imports GridLottieMain', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(GridLottieMain)
 
-      expect(wrapper.find('.grid-lottie__grid').exists()).toBe(true)
-    })
-    it('should find text in dymanic imports GridLottieLink', async () => {
-      const App = (await import('@/prismicSlices/pageParts/GridLottieSlice/variations/GridLottieLink')).default
-      const wrapper = shallowMount(App)
+      const GridLottieLink = await container.vm.$options.components.GridLottieLink.call()
+      const GridLottie = await container.vm.$options.components.GridLottie.call()
 
-      expect(wrapper.find('.grid-lottie__grid').exists()).toBe(true)
+      expect(GridLottieLink.default.name).toBe('GridLottieLink')
+      expect(GridLottie.default.name).toBe('GridLottie')
     })
   })
 })
