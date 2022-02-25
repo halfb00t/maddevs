@@ -26,7 +26,7 @@ describe('Main component', () => {
   })
 
   describe('Dymanic imports Main', () => {
-    it('should', async () => {
+    it('should correctly import components', async () => {
       const container = shallowMount(Main, {
         mocks: {
           $getMediaFromS3: () => 'img.jpg',
