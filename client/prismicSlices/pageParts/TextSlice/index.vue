@@ -54,7 +54,6 @@
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration'
-
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {

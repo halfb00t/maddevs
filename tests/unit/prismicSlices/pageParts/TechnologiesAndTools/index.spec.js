@@ -91,4 +91,18 @@ describe('Technologies and Tools Grid slice', () => {
       expect(wrapper.vm.sliceBackground).toBeNull()
     })
   })
+
+  describe('Dynamic imports TechnologiesAndTools', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(TechnologiesAndTools)
+
+      const TechnologiesAndTool = await container.vm.$options.components.TechnologiesAndTools.call()
+      const ToolsGrid = await container.vm.$options.components.ToolsGrid.call()
+      const ExistingToolsGrid = await container.vm.$options.components.ExistingToolsGrid.call()
+
+      expect(TechnologiesAndTool.default.name).toBe('TechnologiesAndTools')
+      expect(ToolsGrid.default.name).toBe('ToolsGrid')
+      expect(ExistingToolsGrid.default.name).toBe('ExistingToolsGrid')
+    })
+  })
 })
