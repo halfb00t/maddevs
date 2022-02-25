@@ -26,176 +26,43 @@ describe('Main component', () => {
   })
 
   describe('Dymanic imports Main', () => {
-    beforeEach(() => {
-      jest.resetModules()
-    })
-
-    it('should find text in dymanic imports About', async () => {
-      const App = (await import('@/components/Cases/sjmc/About')).default
-      const wrapper = shallowMount(App, {
+    it('should', async () => {
+      const container = shallowMount(Main, {
         mocks: {
           $getMediaFromS3: () => 'img.jpg',
         },
         directives,
       })
 
-      expect(wrapper.find('.container_regular').exists()).toBe(true)
-    })
+      const About = await container.vm.$options.components.About.call()
+      const Partnership = await container.vm.$options.components.Partnership.call()
+      const TheChallenges = await container.vm.$options.components.TheChallenges.call()
+      const Software = await container.vm.$options.components.Software.call()
+      const MobileApplications = await container.vm.$options.components.MobileApplications.call()
+      const Hardware = await container.vm.$options.components.Hardware.call()
+      const KeyGoals = await container.vm.$options.components.KeyGoals.call()
+      const Technologies = await container.vm.$options.components.Technologies.call()
+      const Office = await container.vm.$options.components.Office.call()
+      const TeamIssues = await container.vm.$options.components.TeamIssues.call()
+      const SystemMonitoring = await container.vm.$options.components.SystemMonitoring.call()
+      const AutomatedTesting = await container.vm.$options.components.AutomatedTesting.call()
+      const Trip = await container.vm.$options.components.Trip.call()
+      const OngoingPartnership = await container.vm.$options.components.OngoingPartnership.call()
 
-    it('should find text in dymanic imports Partnership', async () => {
-      const App = (await import('@/components/Cases/sjmc/Partnership')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports TheChallenges', async () => {
-      const App = (await import('@/components/Cases/sjmc/TheChallenges')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h3').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports Software', async () => {
-      const App = (await import('@/components/Cases/sjmc/Software')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports MobileApplications', async () => {
-      const App = (await import('@/components/Cases/sjmc/MobileApplications')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports Hardware', async () => {
-      const App = (await import('@/components/Cases/sjmc/Hardware')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h3').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports KeyGoals', async () => {
-      const App = (await import('@/components/Cases/sjmc/KeyGoals')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports Technologies', async () => {
-      const App = (await import('@/components/Cases/sjmc/Technologies')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h3').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports Office', async () => {
-      const App = (await import('@/components/Cases/sjmc/Office')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h3').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports TeamIssues', async () => {
-      const App = (await import('@/components/Cases/sjmc/TeamIssues')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h3').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports SystemMonitoring', async () => {
-      const App = (await import('@/components/Cases/sjmc/SystemMonitoring')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports AutomatedTesting', async () => {
-      const App = (await import('@/components/Cases/sjmc/AutomatedTesting')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports Trip', async () => {
-      const App = (await import('@/components/Cases/sjmc/Trip')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic imports OngoingPartnership', async () => {
-      const App = (await import('@/components/Cases/sjmc/OngoingPartnership')).default
-      const wrapper = shallowMount(App, {
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-        directives,
-      })
-
-      expect(wrapper.find('.case_title_h2').exists()).toBe(true)
+      expect(About.default.name).toBe('About')
+      expect(Partnership.default.name).toBe('Partnership')
+      expect(TheChallenges.default.name).toBe('TheChallenges')
+      expect(Software.default.name).toBe('Software')
+      expect(MobileApplications.default.name).toBe('MobileApplications')
+      expect(Hardware.default.name).toBe('Hardware')
+      expect(KeyGoals.default.name).toBe('KeyGoals')
+      expect(Technologies.default.name).toBe('Technologies')
+      expect(Office.default.name).toBe('Office')
+      expect(TeamIssues.default.name).toBe('TeamIssues')
+      expect(SystemMonitoring.default.name).toBe('SystemMonitoring')
+      expect(AutomatedTesting.default.name).toBe('AutomatedTesting')
+      expect(Trip.default.name).toBe('Trip')
+      expect(OngoingPartnership.default.name).toBe('OngoingPartnership')
     })
   })
 })
