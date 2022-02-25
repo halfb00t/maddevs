@@ -80,7 +80,7 @@ module.exports = {
       ],
     },
     vendor: ['axios'],
-    transpile: ['swiper', 'dom7', 'vue-slicezone', 'nuxt-sm'],
+    transpile: ['dom7', 'vue-slicezone', 'nuxt-sm'],
     followSymlinks: true,
     cache: true,
     extend(config, { isDev, isClient }) {
