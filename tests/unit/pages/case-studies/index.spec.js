@@ -19,7 +19,7 @@ const META_DATA = {
   'twitter:url': 'https://maddevs.io/case-studies/',
 }
 
-const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam']
+const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam', 'LazyHydrate']
 
 const mocks = {
   $lazyLoad: {
@@ -54,6 +54,60 @@ describe('Index page', () => {
     expect(actual.meta).toHaveLength(Object.keys(META_DATA).length)
     actual.meta.forEach(meta => {
       expect(META_DATA[meta.name] || META_DATA[meta.property]).toBe(meta.content)
+    })
+  })
+
+  describe('Dymanic imports index', () => {
+    beforeEach(() => {
+      jest.resetModules()
+    })
+
+    it('should find text in dymanic import TitleDesc', async () => {
+      const App = (await import('@/components/Cases/TitleDesc')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.title-desc').exists()).toBe(true)
+    })
+
+    it('should find text in dymanic import CasesList', async () => {
+      const App = (await import('@/components/Cases/CasesList')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.cases-list').exists()).toBe(true)
+    })
+
+    it('should find text in dymanic import Customers', async () => {
+      const App = (await import('@/components/Cases/Customers')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.customers').exists()).toBe(true)
+    })
+
+    it('should find text in dymanic import BuildDevTeam', async () => {
+      const App = (await import('@/components/Cases/BuildDevTeam')).default
+      const wrapper = shallowMount(App, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      expect(wrapper.find('.build-dev-team_wrapper').exists()).toBe(true)
     })
   })
 })
