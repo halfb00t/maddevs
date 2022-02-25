@@ -35,6 +35,7 @@ import { casesList } from '@/data/casesList'
 
 export default {
   name: 'CasesList',
+
   components: { CasesListItem },
   mixins: [mainMixins],
   props: {

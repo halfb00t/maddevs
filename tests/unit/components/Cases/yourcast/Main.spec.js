@@ -139,6 +139,7 @@ describe('Main component', () => {
 
       expect(wrapper.find('.case_title_h2').exists()).toBe(true)
     })
+    
     it('should find text in dymanic imports PhaseUserAuthorisation', async () => {
       const App = (await import('@/components/Cases/yourcast/PhaseUserAuthorisation')).default
       const wrapper = shallowMount(App, {
