@@ -80,6 +80,7 @@ import { customerTestimonials as testimonials } from '@/data/customerTestimonial
 
 export default {
   name: 'CustomerTestimonials',
+
   props: {
     title: {
       type: String,
