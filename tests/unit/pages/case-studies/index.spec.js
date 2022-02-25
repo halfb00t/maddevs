@@ -58,56 +58,23 @@ describe('Index page', () => {
   })
 
   describe('Dymanic imports index', () => {
-    beforeEach(() => {
-      jest.resetModules()
-    })
-
-    it('should find text in dymanic import TitleDesc', async () => {
-      const App = (await import('@/components/Cases/TitleDesc')).default
-      const wrapper = shallowMount(App, {
+    it('should find text in dymanic imports', async () => {
+      const container = shallowMount(Index, {
         directives,
         mocks: {
           $getMediaFromS3: () => 'img.jpg',
         },
       })
 
-      expect(wrapper.find('.title-desc').exists()).toBe(true)
-    })
+      const TitleDesc = await container.vm.$options.components.TitleDesc.call()
+      const CasesList = await container.vm.$options.components.CasesList.call()
+      const Customers = await container.vm.$options.components.Customers.call()
+      const BuildDevTeam = await container.vm.$options.components.BuildDevTeam.call()
 
-    it('should find text in dymanic import CasesList', async () => {
-      const App = (await import('@/components/Cases/CasesList')).default
-      const wrapper = shallowMount(App, {
-        directives,
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-      })
-
-      expect(wrapper.find('.cases-list').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic import Customers', async () => {
-      const App = (await import('@/components/Cases/Customers')).default
-      const wrapper = shallowMount(App, {
-        directives,
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-      })
-
-      expect(wrapper.find('.customers').exists()).toBe(true)
-    })
-
-    it('should find text in dymanic import BuildDevTeam', async () => {
-      const App = (await import('@/components/Cases/BuildDevTeam')).default
-      const wrapper = shallowMount(App, {
-        directives,
-        mocks: {
-          $getMediaFromS3: () => 'img.jpg',
-        },
-      })
-
-      expect(wrapper.find('.build-dev-team_wrapper').exists()).toBe(true)
+      expect(TitleDesc.default.name).toBe('TitleDesc')
+      expect(CasesList.default.name).toBe('CasesList')
+      expect(Customers.default.name).toBe('Customers')
+      expect(BuildDevTeam.default.name).toBe('BuildDevTeam')
     })
   })
 })
