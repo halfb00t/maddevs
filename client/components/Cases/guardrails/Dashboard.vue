@@ -80,7 +80,7 @@ import Picture from '@/components/Cases/shared/Picture'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 
 export default {
-  name: 'HighLevelOverview',
+  name: 'Dashboard',
   components: {
     TextParagraph,
     Picture,

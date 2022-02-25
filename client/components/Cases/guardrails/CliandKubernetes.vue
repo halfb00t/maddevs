@@ -43,7 +43,7 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 
 export default {
-  name: 'HighLevelOverview',
+  name: 'CliandKubernetes',
   components: {
     TextParagraph,
   },
