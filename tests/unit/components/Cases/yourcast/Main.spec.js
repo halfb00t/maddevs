@@ -8,20 +8,22 @@ const directives = {
   'mad-parallax': () => {},
 }
 
+const stubs = [
+  'NuxtLink',
+  'TextQuote',
+  'Picture',
+  'ListTechnologiesItem',
+  'PhaseLiveStreamingTechnology',
+  'LazyHydrate',
+]
+
 describe('Main component', () => {
   it('should render correctly', () => {
     const { container } = render(Main, {
       mocks: {
         $getMediaFromS3: () => 'img.jpg',
       },
-      stubs: [
-        'NuxtLink',
-        'TextQuote',
-        'Picture',
-        'ListTechnologiesItem',
-        'PhaseLiveStreamingTechnology',
-        'LazyHydrate',
-      ],
+      stubs,
       directives,
     })
     expect(container).toMatchSnapshot()
