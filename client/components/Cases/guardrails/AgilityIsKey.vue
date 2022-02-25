@@ -96,7 +96,7 @@ import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import TextQuote from '@/components/Cases/shared/TextQuote'
 
 export default {
-  name: 'AgilityIsTheKey',
+  name: 'AgilityIsKey',
   components: {
     TextParagraph,
     LottieMad,
