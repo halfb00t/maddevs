@@ -8,160 +8,215 @@ exports[`CasesList component should render correctly 1`] = `
     <section
       class="cases-list"
     >
-      <caseslistitem-stub
-        class="cases-list_clutch"
-        data-testid="test-case-card"
-        desc="Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers of users through cutting-edge technological solutions"
-        item="[object Object]"
-        link="/case-studies/clutch/"
-        logo="[object Object]"
-        posterlink="/images/Cases/clutch/png/clutch-banner.png"
-        subtitle="B2B"
-        title="The growth of Clutch.co"
-        titletag="h3"
-        videofilename="/videos/clutch-banner.mp4#t=1"
-        width="full"
-      />
-      <caseslistitem-stub
-        class="cases-list_sjmc"
-        data-testid="test-case-card"
-        desc="Mad Devs engineers helped Sir John Monash Centre to enhance and maintain the BYOD multimedia technology."
-        item="[object Object]"
-        link="/case-studies/sir-john-monash-centre/"
-        logo="[object Object]"
-        posterlink="/images/Cases/sjmc/jpg/sjmc-poster.jpg"
-        subtitle="BYOD"
-        title="Sir John Monash Centre"
-        titletag="h3"
-        videofilename="/videos/sjmc/sjmc-main-video.b35a387.mp4#t=2"
-        width="big"
-      />
-      <caseslistitem-stub
-        class="cases-list_peklo"
-        data-testid="test-case-card"
-        desc="Mad Devs developed parsing- and clusterisation-based software that automates keyword grouping and text generation, making the launch of contextual ads two times faster."
-        item="[object Object]"
-        link="/case-studies/peklo/"
-        logo="[object Object]"
-        posterlink="/images/Cases/peklo/jpg/peklo-banner.jpg"
-        subtitle="Contextual ad launcher"
-        title="Peklo Tool for better ad campaigns"
-        titletag="h3"
-        videofilename="/videos/peklo-banner.mp4#t=1"
-        width="small"
-      />
-      <caseslistitem-stub
-        class="cases-list_veeqo"
-        data-testid="test-case-card"
-        desc="Our DevOps team optimized the infrastructure for Veeqo, an inventory and shipping e-commerce platform, and made it highly efficient, smooth, and cost-effective for our partners."
-        item="[object Object]"
-        link="/case-studies/veeqo/"
-        logo="[object Object]"
-        posterlink="/images/Cases/veeqo/svg/veeqo-banner-bg.svg"
-        subtitle="Logistics"
-        title="Optimization for Veeqo"
-        titletag="h3"
-        videofilename="/videos/veeqo-banner.mp4#t=1"
-        width="full"
-      />
-      <caseslistitem-stub
-        class="cases-list_yourcast"
-        data-testid="test-case-card"
-        desc="Mad Devs developed a secure and private video streaming service and live video broadcasting cinema to provide entertainment experience to isolated groups feeling homesick."
-        item="[object Object]"
-        link="/case-studies/yourcast/"
-        logo="[object Object]"
-        posterlink="/images/Cases/yourcast/jpg/yourcast-poster.jpg"
-        subtitle="Content Streaming"
-        title="The Evolution of Yourcast.TV"
-        titletag="h3"
-        videofilename="/videos/yourcast-banner.mp4#t=1"
-        width="big"
-      />
-      <caseslistitem-stub
-        class="cases-list_nambafood"
-        data-testid="test-case-card"
-        desc="Mad Devs created the Namba Food delivery service from scratch. The solution orchestrates feature-rich apps for couriers, end-users, and business owners."
-        item="[object Object]"
-        link="/case-studies/namba-food/"
-        logo="[object Object]"
-        posterlink="/images/Cases/nambafood/jpg/nambafood-poster.jpg"
-        subtitle="Foodtech"
-        title="Contactless Delivery Service"
-        titletag="h3"
-        videofilename="/videos/main.ef19480.mp4#t=1"
-        width="small"
-      />
-      <caseslistitem-stub
-        class="cases-list_itc"
-        data-testid="test-case-card"
-        desc="A web app customized for the delivery of export management coaching missions that contributes to the development of intra-regional and international trade in Central Asia"
-        item="[object Object]"
-        link="/case-studies/R4TCA-web-application/"
-        logo="[object Object]"
-        posterlink="/images/Cases/itc/jpg/itc-banner.jpg"
-        subtitle="Digital transformation"
-        title="Ready4Trade Central Asia"
-        titletag="h3"
-        videofilename="/videos/itc-banner.mp4#t=1"
-        width="full"
-      />
-      <caseslistitem-stub
-        class="cases-list_godee"
-        data-testid="test-case-card"
-        desc="Mad Devs helped GoDee with developing feature-rich software to re-invent public mobility by building new smart ways of a daily commute."
-        item="[object Object]"
-        link="/case-studies/godee/"
-        logo="[object Object]"
-        posterlink="/images/Cases/godee/jpg/godee-poster.jpg"
-        subtitle="Transportation"
-        title="Convenient shuttle bus service"
-        titletag="h3"
-        videofilename="/videos/godee-case-main-video.mp4#t=1"
-        width="big"
-      />
-      <caseslistitem-stub
-        class="cases-list_citycam"
-        data-testid="test-case-card"
-        desc="Building hardware and software for energy-efficient and highly autonomous traffic cameras"
-        item="[object Object]"
-        link="/case-studies/citycam/"
-        logo="[object Object]"
-        posterlink="/images/Cases/citycam/png/citycam-banner.png"
-        subtitle="Internet of Things"
-        title="Better cities with CityCam"
-        titletag="h3"
-        videofilename="/videos/citycam-banner.mp4#t=1"
-        width="small"
-      />
-      <caseslistitem-stub
-        class="cases-list_nambataxi"
-        data-testid="test-case-card"
-        desc="The system that took urban transport in Bishkek, Kyrgyzstan to the next level in 2013 by making taxi ordering fast, efficient and convenient and continues to function today."
-        item="[object Object]"
-        link="/case-studies/namba-taxi/"
-        logo="[object Object]"
-        posterlink="/images/Cases/nambataxi/png/nambataxi-banner.png"
-        subtitle="Transportation"
-        title="Namba Taxi: Modernising transport"
-        titletag="h3"
-        videofilename="/videos/namba-taxi-banner.mp4#t=1"
-        width="full"
-      />
-      <caseslistitem-stub
-        class="cases-list_guardrails"
-        data-testid="test-case-card"
-        desc="Mad Devs assisted GuardRails an application security platform to advance their product and increase its business value."
-        item="[object Object]"
-        link="/case-studies/guardrails/"
-        logo="[object Object]"
-        posterlink="/images/Cases/guardrails/png/guardrails-banner.png"
-        subtitle="DevSecOps"
-        title="Enhancing the GuardRails solution"
-        titletag="h3"
-        videofilename="/videos/guardrails-banner.mp4"
-        width="full"
-      />
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_clutch"
+          data-testid="test-case-card"
+          desc="Helping a successful data-driven B2B platform smoothly adapt to increasing loads and numbers of users through cutting-edge technological solutions"
+          item="[object Object]"
+          link="/case-studies/clutch/"
+          logo="[object Object]"
+          poster-link="/images/Cases/clutch/png/clutch-banner.png"
+          subtitle="B2B"
+          title="The growth of Clutch.co"
+          title-tag="h3"
+          video-file-name="/videos/clutch-banner.mp4#t=1"
+          width="full"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_sjmc"
+          data-testid="test-case-card"
+          desc="Mad Devs engineers helped Sir John Monash Centre to enhance and maintain the BYOD multimedia technology."
+          item="[object Object]"
+          link="/case-studies/sir-john-monash-centre/"
+          logo="[object Object]"
+          poster-link="/images/Cases/sjmc/jpg/sjmc-poster.jpg"
+          subtitle="BYOD"
+          title="Sir John Monash Centre"
+          title-tag="h3"
+          video-file-name="/videos/sjmc/sjmc-main-video.b35a387.mp4#t=2"
+          width="big"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_peklo"
+          data-testid="test-case-card"
+          desc="Mad Devs developed parsing- and clusterisation-based software that automates keyword grouping and text generation, making the launch of contextual ads two times faster."
+          item="[object Object]"
+          link="/case-studies/peklo/"
+          logo="[object Object]"
+          poster-link="/images/Cases/peklo/jpg/peklo-banner.jpg"
+          subtitle="Contextual ad launcher"
+          title="Peklo Tool for better ad campaigns"
+          title-tag="h3"
+          video-file-name="/videos/peklo-banner.mp4#t=1"
+          width="small"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_veeqo"
+          data-testid="test-case-card"
+          desc="Our DevOps team optimized the infrastructure for Veeqo, an inventory and shipping e-commerce platform, and made it highly efficient, smooth, and cost-effective for our partners."
+          item="[object Object]"
+          link="/case-studies/veeqo/"
+          logo="[object Object]"
+          poster-link="/images/Cases/veeqo/svg/veeqo-banner-bg.svg"
+          subtitle="Logistics"
+          title="Optimization for Veeqo"
+          title-tag="h3"
+          video-file-name="/videos/veeqo-banner.mp4#t=1"
+          width="full"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_yourcast"
+          data-testid="test-case-card"
+          desc="Mad Devs developed a secure and private video streaming service and live video broadcasting cinema to provide entertainment experience to isolated groups feeling homesick."
+          item="[object Object]"
+          link="/case-studies/yourcast/"
+          logo="[object Object]"
+          poster-link="/images/Cases/yourcast/jpg/yourcast-poster.jpg"
+          subtitle="Content Streaming"
+          title="The Evolution of Yourcast.TV"
+          title-tag="h3"
+          video-file-name="/videos/yourcast-banner.mp4#t=1"
+          width="big"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_nambafood"
+          data-testid="test-case-card"
+          desc="Mad Devs created the Namba Food delivery service from scratch. The solution orchestrates feature-rich apps for couriers, end-users, and business owners."
+          item="[object Object]"
+          link="/case-studies/namba-food/"
+          logo="[object Object]"
+          poster-link="/images/Cases/nambafood/jpg/nambafood-poster.jpg"
+          subtitle="Foodtech"
+          title="Contactless Delivery Service"
+          title-tag="h3"
+          video-file-name="/videos/main.ef19480.mp4#t=1"
+          width="small"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_itc"
+          data-testid="test-case-card"
+          desc="A web app customized for the delivery of export management coaching missions that contributes to the development of intra-regional and international trade in Central Asia"
+          item="[object Object]"
+          link="/case-studies/R4TCA-web-application/"
+          logo="[object Object]"
+          poster-link="/images/Cases/itc/jpg/itc-banner.jpg"
+          subtitle="Digital transformation"
+          title="Ready4Trade Central Asia"
+          title-tag="h3"
+          video-file-name="/videos/itc-banner.mp4#t=1"
+          width="full"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_godee"
+          data-testid="test-case-card"
+          desc="Mad Devs helped GoDee with developing feature-rich software to re-invent public mobility by building new smart ways of a daily commute."
+          item="[object Object]"
+          link="/case-studies/godee/"
+          logo="[object Object]"
+          poster-link="/images/Cases/godee/jpg/godee-poster.jpg"
+          subtitle="Transportation"
+          title="Convenient shuttle bus service"
+          title-tag="h3"
+          video-file-name="/videos/godee-case-main-video.mp4#t=1"
+          width="big"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_citycam"
+          data-testid="test-case-card"
+          desc="Building hardware and software for energy-efficient and highly autonomous traffic cameras"
+          item="[object Object]"
+          link="/case-studies/citycam/"
+          logo="[object Object]"
+          poster-link="/images/Cases/citycam/png/citycam-banner.png"
+          subtitle="Internet of Things"
+          title="Better cities with CityCam"
+          title-tag="h3"
+          video-file-name="/videos/citycam-banner.mp4#t=1"
+          width="small"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_nambataxi"
+          data-testid="test-case-card"
+          desc="The system that took urban transport in Bishkek, Kyrgyzstan to the next level in 2013 by making taxi ordering fast, efficient and convenient and continues to function today."
+          item="[object Object]"
+          link="/case-studies/namba-taxi/"
+          logo="[object Object]"
+          poster-link="/images/Cases/nambataxi/png/nambataxi-banner.png"
+          subtitle="Transportation"
+          title="Namba Taxi: Modernising transport"
+          title-tag="h3"
+          video-file-name="/videos/namba-taxi-banner.mp4#t=1"
+          width="full"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_guardrails"
+          data-testid="test-case-card"
+          desc="Mad Devs assisted GuardRails an application security platform to advance their product and increase its business value."
+          item="[object Object]"
+          link="/case-studies/guardrails/"
+          logo="[object Object]"
+          poster-link="/images/Cases/guardrails/png/guardrails-banner.png"
+          subtitle="DevSecOps"
+          title="Enhancing the GuardRails solution"
+          title-tag="h3"
+          video-file-name="/videos/guardrails-banner.mp4"
+          width="full"
+        />
+      </lazyhydrate-stub>
     </section>
      
     <nuxtlink-stub
