@@ -1,30 +1,37 @@
 <template>
   <div class="delivery-models">
-    <Banner />
-    <ModelsGrid />
-    <Presentation />
+    <LazyHydrate when-visible>
+      <Banner />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ModelsGrid />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Presentation />
+    </LazyHydrate>
     <div class="delivery-models--bg-white">
-      <Testimonials />
-      <CTABanner />
+      <LazyHydrate when-visible>
+        <Testimonials />
+      </LazyHydrate>
+      <LazyHydrate when-visible>
+        <CTABanner />
+      </LazyHydrate>
     </div>
   </div>
 </template>
 
 <script>
-import Banner from '@/components/DeliveryModels/Banner'
-import ModelsGrid from '@/components/DeliveryModels/ModelsGrid'
-import Presentation from '@/components/DeliveryModels/Presentation'
-import Testimonials from '@/components/DeliveryModels/Testimonials'
-import CTABanner from '@/components/DeliveryModels/CTABanner'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Main',
   components: {
-    Banner,
-    ModelsGrid,
-    Presentation,
-    Testimonials,
-    CTABanner,
+    LazyHydrate,
+    Banner: () => import('@/components/DeliveryModels/Banner'),
+    ModelsGrid: () => import('@/components/DeliveryModels/ModelsGrid'),
+    Presentation: () => import('@/components/DeliveryModels/Presentation'),
+    Testimonials: () => import('@/components/DeliveryModels/Testimonials'),
+    CTABanner: () => import('@/components/DeliveryModels/CTABanner'),
   },
 }
 </script>
