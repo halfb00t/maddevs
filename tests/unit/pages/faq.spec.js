@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import MainFaq from '@/pages/faq'
+
+const stubs = ['LazyHydrate']
 
 const META_DATA = {
   description: 'FAQs. Have a question? Find answers on our Frequently asked questions page. Discover more about Mad Devs\' team, expertise, pricing, and more.',
@@ -20,15 +22,17 @@ const META_DATA = {
 }
 
 describe('FAQ page', () => {
-  it('should render correctly', () => {
-    render(MainFaq, {
+  it('should render correctly', async () => {
+    const { container } = render(MainFaq, {
+      stubs,
     })
 
-    expect(screen.getByText(/Frequently Asked Questions/i).className).toBe('faq__title')
+    expect(container).toMatchSnapshot()
   })
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(MainFaq, {
+      stubs,
     })
 
     const actual = wrapper.vm.$options.head.call(wrapper.vm)
@@ -36,6 +40,17 @@ describe('FAQ page', () => {
     expect(actual.meta).toHaveLength(Object.keys(META_DATA).length)
     actual.meta.forEach(meta => {
       expect(META_DATA[meta.name] || META_DATA[meta.property]).toBe(meta.content)
+    })
+  })
+
+  describe('Dynamic imports MainFaq component FAQ', () => {
+    it('should correctly import component', async () => {
+      const container = shallowMount(MainFaq, {
+        stubs,
+      })
+      const FAQ = await container.vm.$options.components.FAQ.call()
+
+      expect(FAQ.default.name).toBe('FAQ')
     })
   })
 })
