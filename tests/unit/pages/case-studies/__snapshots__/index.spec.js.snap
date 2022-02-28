@@ -12,14 +12,9 @@ exports[`Index page should render correctly 1`] = `
       <titledesc-stub />
     </lazyhydrate-stub>
      
-    <lazyhydrate-stub
-      idletimeout="2000"
-      whenvisible="true"
-    >
-      <caseslist-stub
-        item-title-tag="h2"
-      />
-    </lazyhydrate-stub>
+    <caseslist-stub
+      item-title-tag="h2"
+    />
      
     <lazyhydrate-stub
       idletimeout="2000"

@@ -3,9 +3,7 @@
     <LazyHydrate when-visible>
       <TitleDesc />
     </LazyHydrate>
-    <LazyHydrate when-visible>
-      <CasesList item-title-tag="h2" />
-    </LazyHydrate>
+    <CasesList item-title-tag="h2" />
     <LazyHydrate when-visible>
       <Customers light />
     </LazyHydrate>
