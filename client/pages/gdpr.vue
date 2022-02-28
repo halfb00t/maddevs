@@ -1,17 +1,21 @@
 <template>
   <main class="main">
-    <GDPR />
+    <LazyHydrate when-visible>
+      <GDPR />
+    </LazyHydrate>
   </main>
 </template>
 
 <script>
-import GDPR from '@/components/core/GDPR'
+import LazyHydrate from 'vue-lazy-hydration'
 import { getMetadata, buildHead } from '@/data/seo'
 
 export default {
   name: 'MainGdpr',
+
   components: {
-    GDPR,
+    LazyHydrate,
+    GDPR: () => import('@/components/core/GDPR'),
   },
 
   nuxtI18n: false,
