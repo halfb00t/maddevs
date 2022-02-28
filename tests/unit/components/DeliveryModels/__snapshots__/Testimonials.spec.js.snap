@@ -21,27 +21,52 @@ exports[`Testimonials component should render correctly 1`] = `
       <div
         class="customer-testimonials__grid"
       >
-        <testimonialblock-stub
-          author="[object Object]"
-          featured="true"
-          text="Mad Devs have extensive experience in various industries, which allows them to solve issues quickly and efficiently."
-        />
-        <testimonialblock-stub
-          author="[object Object]"
-          text="They fully disclose what they’re doing and why they’re doing it."
-        />
-        <testimonialblock-stub
-          author="[object Object]"
-          text="They work as if their own money and success are on the line."
-        />
-        <testimonialblock-stub
-          author="[object Object]"
-          text="Our infrastructure is much more resilient and secure."
-        />
-        <testimonialblock-stub
-          author="[object Object]"
-          text="I’m most impressed with their technical capacities."
-        />
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <testimonialblock-stub
+            author="[object Object]"
+            featured="true"
+            text="Mad Devs have extensive experience in various industries, which allows them to solve issues quickly and efficiently."
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <testimonialblock-stub
+            author="[object Object]"
+            text="They fully disclose what they’re doing and why they’re doing it."
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <testimonialblock-stub
+            author="[object Object]"
+            text="They work as if their own money and success are on the line."
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <testimonialblock-stub
+            author="[object Object]"
+            text="Our infrastructure is much more resilient and secure."
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <testimonialblock-stub
+            author="[object Object]"
+            text="I’m most impressed with their technical capacities."
+          />
+        </lazyhydrate-stub>
       </div>
     </div>
   </div>
