@@ -157,6 +157,7 @@ export default {
   border-radius: 2px;
   overflow: hidden;
   text-decoration: none;
+
   &-link {
     width: 100%;
     height: 100%;
@@ -175,21 +176,25 @@ export default {
       padding: 24px;
     }
   }
+
   &--full {
     grid-column: auto / span 3;
     @media screen and (max-width: 1140px) {
       grid-column: auto / span 4;
     }
   }
+
   &--big {
     grid-column: auto / span 2;
     @media screen and (max-width: 992px) {
       grid-column: auto / span 4;
     }
   }
+
   &--middle {
     grid-column: auto / span 1;
   }
+
   &--small {
     grid-column: auto / span 1;
     @media screen and (max-width: 1140px) {
@@ -199,9 +204,11 @@ export default {
       grid-column: auto / span 4;
     }
   }
+
   @media screen and (max-width: 375px) {
     grid-column: auto / span 4 !important;
   }
+
   &-video {
     position: absolute;
     top: 0;
@@ -212,6 +219,7 @@ export default {
     object-fit: cover;
     background-position: center;
     background-size: cover;
+
     &_poster {
       width: calc(100% + 2px);
       height: calc(100% + 2px);
@@ -224,6 +232,7 @@ export default {
       margin: -1px;
     }
   }
+
   &::before {
     content: '';
     width: 100%;
@@ -236,6 +245,7 @@ export default {
     user-select: none;
     pointer-events: none;
   }
+
   &-info {
     width: 100%;
     height: 100%;
@@ -250,14 +260,17 @@ export default {
       @include font('Inter', 16px, 400);
       color: inherit;
     }
+
     &-logo {
       max-width: 105px;
       height: auto;
       margin-bottom: auto;
     }
+
     &-peklo-logo {
       max-width: 80px;
     }
+
     > span {
       text-transform: uppercase;
       letter-spacing: 0.28em;
@@ -266,6 +279,7 @@ export default {
       line-height: 140%;
       margin-bottom: 16px;
     }
+
     h2, h3 {
       max-width: 350px;
       font-size: 40px;
@@ -276,6 +290,7 @@ export default {
         font-size: 32px;
       }
     }
+
     p {
       max-width: 500px;
       height: 0;
@@ -290,6 +305,7 @@ export default {
         display: none;
       }
     }
+
     > a {
       height: 0;
       font-size: 16px;
@@ -302,9 +318,11 @@ export default {
       overflow: hidden;
       transition: all 0.4s ease;
       transform: translateY(100px);
+
       &:hover {
         opacity: 0.8;
       }
+
       @media screen and (max-width: 768px) {
         height: auto;
         transform: none;
@@ -317,6 +335,7 @@ export default {
       }
     }
   }
+
   &:hover {
     .cases-list_item-info {
       p {
@@ -324,6 +343,7 @@ export default {
         margin: 16px 0;
         transform: none;
       }
+
       > a {
         height: auto;
         padding: 8px;
@@ -332,11 +352,13 @@ export default {
     }
   }
 }
+
 .is-mobile {
   .cases-list_item-info {
     p {
       display: none;
     }
+
     > a {
       height: auto;
       transform: none;
