@@ -456,6 +456,14 @@
 .anchor_title {
   position: relative;
 
+  @media (min-width: 992px) {
+    scroll-margin-top: 63px;
+  }
+
+  @media (max-width: 991px) {
+    scroll-margin-top: 48px;
+  }
+
   .anchor_copy-link {
     button {
       display: none;
