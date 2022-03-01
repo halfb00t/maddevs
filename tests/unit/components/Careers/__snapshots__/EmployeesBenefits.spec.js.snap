@@ -19,48 +19,93 @@ exports[`EmployeesBenefits component should render correctly 1`] = `
       <div
         class="employees-benefits_benefits-cards"
       >
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
-        <benefitcard-stub
-          icon="[object Object]"
-          title="translated"
-        />
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <benefitcard-stub
+            icon="[object Object]"
+            title="translated"
+          />
+        </lazyhydrate-stub>
       </div>
     </div>
      
     <div
       class="employees-benefits_slider-wrap"
     >
-      <uislider-stub
-        options="[object Object]"
-        slides="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
-      />
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <uislider-stub
+          options="[object Object]"
+          slides="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+        />
+      </lazyhydrate-stub>
     </div>
   </div>
 </div>
