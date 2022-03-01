@@ -1,39 +1,47 @@
 <template>
   <div class="careers">
     <Banner />
-    <ProjectsCountries />
-    <Benefits />
-    <KeyMetrics />
+    <LazyHydrate when-visible>
+      <ProjectsCountries />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Benefits />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <KeyMetrics />
+    </LazyHydrate>
     <div class="careers_white-section">
-      <EmployeesBenefits />
-      <OpenPositions />
-      <CTABanner />
+      <LazyHydrate when-visible>
+        <EmployeesBenefits />
+      </LazyHydrate>
+      <LazyHydrate when-visible>
+        <OpenPositions />
+      </LazyHydrate>
+      <LazyHydrate when-visible>
+        <CTABanner />
+      </LazyHydrate>
     </div>
     <ScrollToPositionsLink />
   </div>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import { mapActions } from 'vuex'
 import Banner from '@/components/Careers/Banner'
-import ProjectsCountries from '@/components/Careers/ProjectsCountries'
-import Benefits from '@/components/Careers/Benefits'
-import KeyMetrics from '@/components/Careers/KeyMetrics'
-import EmployeesBenefits from '@/components/Careers/EmployeesBenefits'
-import OpenPositions from '@/components/Careers/OpenPositions'
-import CTABanner from '@/components/Careers/CTABanner'
 import ScrollToPositionsLink from '@/components/Careers/shared/ScrollToPositionsLink'
 
 export default {
   name: 'Main',
   components: {
+    LazyHydrate,
     Banner,
-    ProjectsCountries,
-    Benefits,
-    KeyMetrics,
-    EmployeesBenefits,
-    OpenPositions,
-    CTABanner,
+    ProjectsCountries: () => import('@/components/Careers/ProjectsCountries'),
+    Benefits: () => import('@/components/Careers/Benefits'),
+    KeyMetrics: () => import('@/components/Careers/KeyMetrics'),
+    EmployeesBenefits: () => import('@/components/Careers/EmployeesBenefits'),
+    OpenPositions: () => import('@/components/Careers/OpenPositions'),
+    CTABanner: () => import('@/components/Careers/CTABanner'),
     ScrollToPositionsLink,
   },
 

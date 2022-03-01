@@ -5,6 +5,9 @@ import getRobots from './utils/getRobots'
 require('dotenv').config()
 
 module.exports = {
+  render: {
+    resourceHints: false,
+  },
   buildModule: ['nuxt-compress'],
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
@@ -34,8 +37,8 @@ module.exports = {
       { rel: 'sitemap', type: 'application/xml', href: 'https://maddevs.io/sitemap.xml' },
     ],
     script: [
-      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', async: true, body: true },
-      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, async: true, body: true },
+      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', defer: true, body: true },
+      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, defer: true, body: true },
     ],
   },
   /*
@@ -113,6 +116,8 @@ module.exports = {
         removeRedundantAttributes: true,
         trimCustomFragments: true,
         useShortDoctype: true,
+        preserveLineBreaks: false,
+        collapseWhitespace: true,
       },
     },
     optimization: {

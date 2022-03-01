@@ -1,23 +1,28 @@
 <template>
   <div>
     <ul class="positions-grid">
-      <PositionsGridItem
+      <LazyHydrate
         v-for="vacancy in vacanciesToShow"
         :key="vacancy.uid"
-        v-bind="vacancy"
-      />
+        when-visible
+      >
+        <PositionsGridItem
+          v-bind="vacancy"
+        />
+      </LazyHydrate>
     </ul>
   </div>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import { mapGetters } from 'vuex'
-import PositionsGridItem from '@/components/Careers/shared/PositionsGridItem'
 
 export default {
   name: 'PositionsGrid',
   components: {
-    PositionsGridItem,
+    LazyHydrate,
+    PositionsGridItem: () => import('@/components/Careers/shared/PositionsGridItem'),
   },
 
   computed: {

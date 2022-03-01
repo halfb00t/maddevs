@@ -9,32 +9,38 @@
       <div
         class="employees-benefits_benefits-cards"
       >
-        <BenefitCard
+        <LazyHydrate
           v-for="(benefit, i) of employeesBenefits"
-          v-bind="benefit"
           :key="`benefit_${i}`"
-        />
+          when-visible
+        >
+          <BenefitCard
+            v-bind="benefit"
+          />
+        </LazyHydrate>
       </div>
     </div>
     <div class="employees-benefits_slider-wrap">
-      <UISlider
-        :options="swiperOptions"
-        :slides="slides"
-      />
+      <LazyHydrate when-visible>
+        <UISlider
+          :options="swiperOptions"
+          :slides="slides"
+        />
+      </LazyHydrate>
     </div>
   </div>
 </template>
 
 <script>
-import BenefitCard from '@/components/Careers/shared/BenefitCard'
-import UISlider from '@/components/shared/UISlider'
+import LazyHydrate from 'vue-lazy-hydration'
 import { slides } from '@/data/careersPage'
 
 export default {
   name: 'EmployeesBenefits',
   components: {
-    BenefitCard,
-    UISlider,
+    LazyHydrate,
+    BenefitCard: () => import('@/components/Careers/shared/BenefitCard'),
+    UISlider: () => import('@/components/shared/UISlider'),
   },
 
   data() {
