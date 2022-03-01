@@ -7,46 +7,23 @@ exports[`slice block component should render correctly 1`] = `
       class=""
       data-testid="test-slice-post"
     >
-      <div
-        class="post-part single"
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
       >
-        <prismicrichtext-stub
-          class="textslice"
-          field="[object Object]"
-        />
-      </div>
+        <!---->
+      </lazyhydrate-stub>
     </section>
     <section
       class="quote"
       data-testid="test-slice-post"
     >
-      <div
-        class="post-part single"
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
       >
-        <blockquote
-          class="block-quotation"
-        >
-          <p>
-            lorem ipsum dolor sit ame
-          </p>
-        </blockquote>
-         
         <!---->
-         
-        <div
-          class="author p-border"
-        >
-          <!---->
-           
-          <div
-            class="author__name"
-          >
-            
-      John Doe
-    
-          </div>
-        </div>
-      </div>
+      </lazyhydrate-stub>
     </section>
     <section
       class=""
@@ -86,65 +63,38 @@ exports[`slice block component should render correctly 1`] = `
       class=""
       data-testid="test-slice-post"
     >
-      <imagecaptionslice-stub
-        slice="[object Object]"
-      />
-    </section>
-    <section
-      class=""
-      data-testid="test-slice-post"
-    >
-      <imageattributesslice-stub
-        slice="[object Object]"
-      />
-    </section>
-    <section
-      class=""
-      data-testid="test-slice-post"
-    >
-      <ol
-        class="case-list_numbered"
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
       >
-        <prismicrichtext-stub
-          field="list introduction"
+        <imagecaptionslice-stub
+          slice="[object Object]"
         />
-         
-        <li
-          class="case_list-numbered_item"
-        >
-          
-    list item 1
-  
-        </li>
-        <li
-          class="case_list-numbered_item"
-        >
-          
-    list item 2
-  
-        </li>
-        <li
-          class="case_list-numbered_item"
-        >
-          
-    list item 3
-  
-        </li>
-        <li
-          class="case_list-numbered_item"
-        >
-          
-    list item 4
-  
-        </li>
-        <li
-          class="case_list-numbered_item"
-        >
-          
-    list item 5
-  
-        </li>
-      </ol>
+      </lazyhydrate-stub>
+    </section>
+    <section
+      class=""
+      data-testid="test-slice-post"
+    >
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <imageattributesslice-stub
+          slice="[object Object]"
+        />
+      </lazyhydrate-stub>
+    </section>
+    <section
+      class=""
+      data-testid="test-slice-post"
+    >
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <!---->
+      </lazyhydrate-stub>
     </section>
   </section>
 </div>
