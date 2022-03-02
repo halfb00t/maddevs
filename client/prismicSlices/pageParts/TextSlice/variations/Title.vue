@@ -13,7 +13,7 @@
       <div
         class="title-slice"
         :style="{ maxWidth }"
-        v-html="createAnchorTag(title, tag, size)"
+        v-html="createAnchorTag(tag, title, size)"
       />
     </div>
     <div v-else>
@@ -82,16 +82,17 @@ export default {
   },
 
   methods: {
-    createAnchorTag(text, tag, size) {
+    createAnchorTag(tag, text, size) {
       return `
-      <${tag} class="anchor_title-h title-slice-text--${size}">${text}</${tag}>
-      <div class="anchor_copy-link">
-      <div style="visibility: hidden; position: absolute; top: -60px;" id="${this.createAnchorID(text)}"></div>
-        <button data-id="${this.createAnchorID(text)}" class="copy-link">
-          <img src="${require('@/assets/img/common/anchor.svg')}" alt="Anchor" width="16" height="16" />
-        </button>
-        <div class="anchor_copy-link-tooltip">Copy link</div>
-      </div>
+        <div id="${this.createAnchorID(text)}" class="anchor_title">
+          <${tag} class="anchor_title-h title-slice-text--${size}">${text}</${tag}>
+          <div class="anchor_copy-link">
+            <button data-id="${this.createAnchorID(text)}" class="copy-link">
+              <img src="${require('@/assets/img/common/anchor.svg')}" alt="Anchor" width="16" height="16" />
+            </button>
+            <div class="anchor_copy-link-tooltip">Copy link</div>
+          </div>
+        </div>
       `
     },
   },
