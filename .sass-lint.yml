@@ -37,6 +37,7 @@ rules:
     -
       'extra-properties':
         - 'scrollbar-width'
+        - 'scroll-margin-top'
   no-trailing-whitespace: 2
   no-trailing-zero: 2
   no-transition-all: 0
