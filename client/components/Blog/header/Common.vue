@@ -63,7 +63,7 @@ export default {
   },
 
   head() {
-    return {
+    return this.compressedImage && {
       link: [
         {
           rel: 'preload',
