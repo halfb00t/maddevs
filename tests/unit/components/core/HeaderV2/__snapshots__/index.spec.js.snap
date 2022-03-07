@@ -304,6 +304,8 @@ exports[`Header component should render correctly 1`] = `
           </div>
         </div>
       </div>
+       
+      <!---->
     </header>
      
     <!---->

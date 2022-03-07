@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from '@testing-library/vue'
-
 import { createLocalVue, RouterLinkStub, shallowMount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Header from '@/components/core/HeaderV2'
@@ -25,7 +24,7 @@ const store = new Vuex.Store({
   getters,
 })
 
-const stubs = ['ModalContactMe', 'HeaderPost', 'HeaderMobile']
+const stubs = ['ModalContactMe', 'HeaderPost', 'HeaderMobile', 'Crumbs']
 
 const mocks = {
   $nuxt: {
