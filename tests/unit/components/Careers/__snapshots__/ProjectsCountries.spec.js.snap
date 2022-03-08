@@ -35,7 +35,7 @@ exports[`ProjectsCountries component should render correctly 1`] = `
      
     <uicustomerslist-stub
       class="projects-countries_customers-list"
-      customers="clutch,godee,sjmc,dzing,topica,veeqo,guardrails,teacherly,nambataxi,alfa-bank,edumall,triggermesh"
+      customers="clutch,godee,sjmc,topica,veeqo,guardrails,teacherly,nambataxi,alfa-bank,edumall,triggermesh,bile-bile"
       iconbackground="transparent"
     />
      

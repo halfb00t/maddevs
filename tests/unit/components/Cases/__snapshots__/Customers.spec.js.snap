@@ -31,7 +31,7 @@ exports[`Customers component should render correctly 1`] = `
       </div>
        
       <uicustomerslist-stub
-        customers="godee,guardrails,teacherly,triggermesh,clutch,eatigo,veeqo,admitad,iotsploit,sjmc,progressay,kickoico,nambafood,showmebishkek,mythril,seso,tengri,peklo,bandpay,nambataxi,alfa-bank,edumall,dzing,topica,terbine,silk-road,vms,ase,iothub"
+        customers="godee,guardrails,teacherly,triggermesh,clutch,eatigo,veeqo,admitad,iotsploit,sjmc,progressay,kickoico,nambafood,showmebishkek,mythril,seso,tengri,peklo,bandpay,nambataxi,alfa-bank,edumall,topica,terbine,silk-road,vms,ase,iothub,bile-bile"
         iconbackground="transparent"
       />
     </div>

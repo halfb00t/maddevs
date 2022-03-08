@@ -1,4 +1,3 @@
-import { getStoriesPaths } from 'slice-machine-ui/helpers/storybook'
 import getRoutes, { getSitemapRoutes, CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
 
@@ -216,9 +215,7 @@ module.exports = {
       id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
     },
   },
-  storybook: {
-    stories: [...getStoriesPaths(), '~/prismicSlices/**/*.stories.js', '~/assets/styles/storybook.css'],
-  },
+
   ignore: ['**/*.stories.js'],
   env: {
     environment: process.env.NODE_ENV,
