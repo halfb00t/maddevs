@@ -19,11 +19,16 @@
 
 <script>
 import Picture from '@/components/Cases/shared/Picture'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'InventoryChangeLog',
   components: {
     Picture,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {

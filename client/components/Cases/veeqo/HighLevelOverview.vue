@@ -52,6 +52,7 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextParagraphUppercase from '@/components/Cases/shared/TextParagraphUppercase'
 import Picture from '@/components/Cases/shared/Picture'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'HighLevelOverview',
@@ -59,6 +60,10 @@ export default {
     TextParagraph,
     TextParagraphUppercase,
     Picture,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {
