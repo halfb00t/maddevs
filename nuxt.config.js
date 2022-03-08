@@ -108,7 +108,6 @@ module.exports = {
     '~/plugins/feature-flags.js',
     '~/plugins/google-tag-manager-debug.js',
     { src: '~/plugins/sentry.js', mode: 'client' },
-    '~/plugins/mad-parallax.js',
   ],
   /*
   ** Nuxt Modules

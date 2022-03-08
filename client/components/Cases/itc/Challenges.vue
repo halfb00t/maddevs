@@ -85,6 +85,7 @@ import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import Picture from '@/components/Cases/shared/Picture'
 import { resolvedIssues } from '@/data/caseITC'
 import ParallaxCards from '@/components/Cases/shared/ParallaxCards/ParallaxCards'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'Challenges',
@@ -93,6 +94,10 @@ export default {
     TextParagraph,
     TextQuoteBox,
     Picture,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {
