@@ -20,11 +20,16 @@
 <script>
 import CardResult from '@/components/Cases/veeqo/CardResult'
 import { infrastructureAsCodeResult } from '@/data/caseVeeqo'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'PhasInfrastructureAsCodeResult',
   components: {
     CardResult,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {

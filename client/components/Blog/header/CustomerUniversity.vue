@@ -185,7 +185,7 @@ export default {
 
 <style scoped lang="scss">
 .cluster-navigation {
-  color: white;
+  color: $text-color--white-primary;
   align-items: center;
   margin-bottom: 64px;
   display: flex;
@@ -244,7 +244,7 @@ export default {
           top: 0;
           height: 100%;
           width: calc(100% + 40px);
-          background: #f4f4f4;
+          background: $bgcolor--silver;
           position: absolute;
           z-index: -1;
           opacity: 0;

@@ -15,7 +15,7 @@ export const getHeaderContent = async prismic => {
     'author.name',
     'author.position',
     'author.uid',
-    'author.thumbnail_image',
+    'author.thumbnail',
     'author.social_networks',
     'author.image',
     'author.meta_title',

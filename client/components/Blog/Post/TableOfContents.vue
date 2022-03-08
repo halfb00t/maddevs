@@ -112,7 +112,7 @@ export default {
   max-width: 200px;
 
   &__title {
-    color: #101113;
+    color: $text-color--black-oil;
     line-height: 130%;
     margin-bottom: 18px;
     font-weight: bold;
@@ -132,7 +132,7 @@ export default {
       font-size: 14px;
       line-height: 130%;
       letter-spacing: -0.1px;
-      color: #101113;
+      color: $text-color--black-oil;
       margin-bottom: 6px;
       padding: 10px 8px;
       box-sizing: border-box;

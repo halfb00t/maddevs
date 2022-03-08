@@ -30,12 +30,17 @@
   </div>
 </template>
 <script>
+import MadParallax from '@/plugins/mad-parallax'
 import ParallaxCard from '@/components/Cases/shared/ParallaxCards/ParallaxCard'
 
 export default {
   name: 'ParallaxCards',
   components: {
     ParallaxCard,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   props: {

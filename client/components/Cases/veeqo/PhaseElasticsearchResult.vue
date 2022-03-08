@@ -24,12 +24,17 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import CardResult from '@/components/Cases/veeqo/CardResult'
 import { elasticsearchResults } from '@/data/caseVeeqo'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'PhaseElasticsearchResult',
   components: {
     TextParagraph,
     CardResult,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {

@@ -116,7 +116,7 @@ export default {
   grid-auto-flow: dense;
   gap: 30px;
   z-index: 1;
-  background-color: #111213;
+  background-color: $bgcolor--black;
 
   @media screen and (max-width: 1140px) {
     grid-template-columns: repeat(4, 1fr);
@@ -179,7 +179,7 @@ export default {
       justify-content: flex-start;
       position: relative;
       z-index: 1;
-      color: #F4F4F4;
+      color: $text-color--cultured;
 
       * {
         @include font('Inter', 16px, 400);
@@ -228,8 +228,8 @@ export default {
         line-height: 100%;
         text-decoration: none;
         padding: 8px;
-        background-color: #fff;
-        color: #000;
+        background-color: $bgcolor--white-primary;
+        color: $text-color--black;
         border-radius: 4px;
 
         @media screen and (max-width: 375px) {
@@ -241,7 +241,7 @@ export default {
 
   &_see-more {
     @include font('Inter', 16px, 400);
-    color: #EC1C24;
+    color: $text-color--red;
     font-weight: normal;
     line-height: 100%;
     letter-spacing: -0.013em;
@@ -262,7 +262,7 @@ export default {
         position: absolute;
         bottom: 0;
         left: 0;
-        background-color: #EC1C24;
+        background-color: $bgcolor--red;
       }
     }
   }

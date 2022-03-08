@@ -16,8 +16,15 @@
 </template>
 
 <script>
+import MadParallax from '@/plugins/mad-parallax'
+
 export default {
   name: 'ParallaxImage',
+
+  directives: {
+    MadParallax,
+  },
+
   data() {
     return {
       animationSettings: {

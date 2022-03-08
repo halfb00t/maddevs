@@ -44,11 +44,16 @@
 
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'ContinuousIntegrationResult',
   components: {
     TextParagraph,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {

@@ -78,12 +78,17 @@
 <script>
 import Picture from '@/components/Cases/shared/Picture'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'Dashboard',
   components: {
     TextParagraph,
     Picture,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {

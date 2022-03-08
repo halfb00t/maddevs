@@ -124,7 +124,7 @@ export default {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #a0a0a1;
+    color: $text-color--grey-opacity-40-percent;
     font-style: italic;
     line-height: 166%;
     letter-spacing: -0.035em;

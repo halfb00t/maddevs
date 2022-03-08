@@ -97,12 +97,12 @@ export default {
   },
 
   head() {
-    return {
+    return this.authorImage?.url && {
       link: [
         {
           rel: 'preload',
           as: 'image',
-          href: this.authorImage.url,
+          href: this.authorImage?.url,
         },
       ],
     }
@@ -185,7 +185,7 @@ export default {
   }
 
   &__divider {
-    color: #ff0029;
+    color: $text-color--ruddy;
   }
 
   &__position {

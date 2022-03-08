@@ -84,7 +84,7 @@ module.exports = {
       ],
     },
     vendor: ['axios'],
-    transpile: ['swiper', 'dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration'],
+    transpile: ['dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration'],
     followSymlinks: true,
     cache: true,
     extend(config, { isDev, isClient }) {
@@ -135,7 +135,6 @@ module.exports = {
     '~/plugins/feature-flags.js',
     '~/plugins/google-tag-manager-debug.js',
     { src: '~/plugins/sentry.js', mode: 'client' },
-    '~/plugins/mad-parallax.js',
   ],
   /*
   ** Nuxt Modules
@@ -154,7 +153,7 @@ module.exports = {
     },
     ],
     [
-      'nuxt-i18n',
+      '@nuxtjs/i18n',
       {
         strategy: 'prefix_except_default',
         defaultLocale: 'en',
