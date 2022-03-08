@@ -1,9 +1,10 @@
-const axios = require('axios')
-const fs = require('fs')
-const FormData = require('form-data')
-const {
+import axios from 'axios'
+import fs from 'fs'
+import FormData from 'form-data'
+
+import {
   HUNTFLOW_API_URL, HUNTFLOW_TOKEN, HUNTFLOW_ACCOUNT_ID, HUNTFLOW_RESERVE_VACANCY_ID,
-} = require('../config')
+} from '../config/env'
 
 const apiUrlPrefix = `${HUNTFLOW_API_URL}/account/${HUNTFLOW_ACCOUNT_ID}`
 
@@ -74,7 +75,7 @@ const createApplication = async (vacancyId, candidateId, cvFileId) => {
   return applicationResponse.data
 }
 
-async function sendApplication(req) {
+export async function sendApplication(req) {
   try {
     let { vacancyId } = req.body
 
@@ -98,8 +99,4 @@ async function sendApplication(req) {
   } catch (error) {
     return error
   }
-}
-
-module.exports = {
-  sendApplication,
 }

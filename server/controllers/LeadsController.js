@@ -1,12 +1,17 @@
-const { sendMailFromVariables } = require('../services/EmailsService')
-const { createLead } = require('../services/LeadsService')
-const { validate } = require('../utils/validation')
-const {
-  getIPByRequest, getLocation, isBlockedIP, isTestIP,
-} = require('../services/IPService')
-const { reCaptchaVerification } = require('../services/reCaptchaVerification')
+import { sendMailFromVariables } from '../services/EmailsService'
+import { createLead } from '../services/LeadsService'
+import { validate } from '../utils/validation'
 
-async function create(req, res) {
+import {
+  getIPByRequest,
+  getLocation,
+  isBlockedIP,
+  isTestIP,
+} from '../services/IPService'
+
+import { reCaptchaVerification } from '../services/reCaptchaVerification'
+
+export async function create(req, res) {
   if (req.body.variables.fromId === 'contact-me-modal' || req.body.variables.fromId === 'footer-form') {
     if (!req.body.variables.token) return res.json({ success: false, message: 'Invalid token' })
     const { data } = await reCaptchaVerification(req.body.variables.token)
@@ -42,8 +47,4 @@ async function create(req, res) {
   const response = await createLead(req)
 
   return res.json(response)
-}
-
-module.exports = {
-  create,
 }

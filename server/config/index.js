@@ -1,7 +1,7 @@
-const envs = require('./env')
+import envs from './env'
 
 // json
-const mainRedirects = require('./json/mainRedirects.json')
+import mainRedirects from './json/mainRedirects.json'
 
 const bodyParserJSONConfig = { limit: '5mb' }
 const bodyParserURLEncodedConfig = { limit: '5mb', extended: true }
@@ -17,7 +17,7 @@ const sentryConfig = {
   environment: envs.NODE_ENV,
 }
 
-module.exports = {
+export default {
   ...envs,
   bodyParserJSONConfig,
   bodyParserURLEncodedConfig,

@@ -1,28 +1,28 @@
-const express = require('express')
-const cors = require('cors')
+import express from 'express'
+import cors from 'cors'
 
 // sentry
-const { configureSentry } = require('./sentry')
+import { configureSentry } from './sentry'
 
 // radiator
-const runRadiator = require('./radiator')
+import runRadiator from './radiator'
 
 // custom middlewares
-const applyXFrame = require('./middlewares/applyXFrame')
-const redirectToValidLink = require('./middlewares/redirectToValidLink')
-const redirectToRuCareerPostUrl = require('./middlewares/redirectToRuCareerPostUrl')
-const redirectToPrismicUrl = require('./middlewares/redirectToPrismicUrl')
-const redirectToCorrectUrl = require('./middlewares/redirectToCorrectUrl')
-const redirectToCorrectBlogUrl = require('./middlewares/redirectToCorrectBlogUrl')
-const redirectToCorrectAuthorUrl = require('./middlewares/redirectToCorrectAuthorUrl')
-const redirectToCorrectSofwareTestingUrl = require('./middlewares/redirectToCorrectSoftwateTestingUrl')
+import applyXFrame from './middlewares/applyXFrame'
+import redirectToValidLink from './middlewares/redirectToValidLink'
+import redirectToRuCareerPostUrl from './middlewares/redirectToRuCareerPostUrl'
+import redirectToPrismicUrl from './middlewares/redirectToPrismicUrl'
+import redirectToCorrectUrl from './middlewares/redirectToCorrectUrl'
+import redirectToCorrectBlogUrl from './middlewares/redirectToCorrectBlogUrl'
+import redirectToCorrectAuthorUrl from './middlewares/redirectToCorrectAuthorUrl'
+import redirectToCorrectSofwareTestingUrl from './middlewares/redirectToCorrectSoftwateTestingUrl'
 
 // config
-const config = require('./config')
+import config from './config'
 
 // routers
-const webRouter = require('./routes/web')
-const apiRouter = require('./routes/api')
+import webRouter from './routes/web'
+import apiRouter from './routes/api'
 
 function bootstrap() {
   const app = express()
@@ -63,4 +63,4 @@ function bootstrap() {
   return app
 }
 
-module.exports = bootstrap()
+export default bootstrap()

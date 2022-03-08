@@ -27,6 +27,7 @@ db.json
 # Nuxt build
 .nuxt
 dist/
+.output
 
 # Prismic slice machine directories and files
 .yo-rc.json

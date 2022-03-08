@@ -1,11 +1,10 @@
-const express = require('express')
-
+import express from 'express'
 // controllers
-const { switchLanguage } = require('../controllers/LanguageController')
+import switchLanguage from '../controllers/LanguageController'
 
 const router = express.Router()
 
 router.get('/ru', switchLanguage)
 router.get('/en', switchLanguage)
 
-module.exports = router
+export default router

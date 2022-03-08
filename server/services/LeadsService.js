@@ -1,5 +1,5 @@
-const axios = require('axios')
-const { ATLASSIAN_AUTH_TOKEN, ATLASSIAN_PROJECT_KEY, ATLASSIAN_API_URL } = require('../config/env')
+import axios from 'axios'
+import { ATLASSIAN_AUTH_TOKEN, ATLASSIAN_PROJECT_KEY, ATLASSIAN_API_URL } from '../config/env'
 
 function generateToken(token) {
   return Buffer.from(token).toString('base64')
@@ -54,7 +54,7 @@ function buildPayload({ variables }) {
   }
 }
 
-async function createLead({ body }) {
+export async function createLead({ body }) {
   try {
     const token = generateToken(ATLASSIAN_AUTH_TOKEN)
     const payload = buildPayload(body)
@@ -70,8 +70,4 @@ async function createLead({ body }) {
   } catch (error) {
     return error
   }
-}
-
-module.exports = {
-  createLead,
 }

@@ -4,4 +4,4 @@ function redirectToCorrectBlogUrl(req, res, next) {
   else next()
 }
 
-module.exports = redirectToCorrectBlogUrl
+export default redirectToCorrectBlogUrl

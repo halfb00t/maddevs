@@ -1,5 +1,5 @@
-const getRequestUrl = require('../utils/getRequestUrl')
-const config = require('../config')
+import { getRequestUrl } from '../utils/getRequestUrl'
+import config from '../config'
 
 function redirectToCorrectUrl(req, res, next) {
   const match = config.mainRedirects.find(url => url.from === getRequestUrl(req))
@@ -7,4 +7,4 @@ function redirectToCorrectUrl(req, res, next) {
   else next()
 }
 
-module.exports = redirectToCorrectUrl
+export default redirectToCorrectUrl

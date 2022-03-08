@@ -4,4 +4,4 @@ function redirectToCorrectSoftwareTestingUrl(req, res, next) {
   else next()
 }
 
-module.exports = redirectToCorrectSoftwareTestingUrl
+export default redirectToCorrectSoftwareTestingUrl

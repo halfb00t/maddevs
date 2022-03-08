@@ -1,4 +1,4 @@
-function validate(req, type) {
+export function validate(req, type) {
   const error = {
     status: 200,
     message: 'OK',
@@ -45,8 +45,4 @@ function validate(req, type) {
     isValid: error.status === 200,
     error,
   }
-}
-
-module.exports = {
-  validate,
 }

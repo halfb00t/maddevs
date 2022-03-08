@@ -1,7 +1,11 @@
-const axios = require('axios')
-const {
-  IP_INFO_TOKEN, IP_BAN_LIST, IP_TEST_LIST, TEST_EMAIL,
-} = require('../config/env')
+import axios from 'axios'
+
+import {
+  IP_BAN_LIST,
+  IP_INFO_TOKEN,
+  IP_TEST_LIST,
+  TEST_EMAIL,
+} from '../config/env'
 
 async function getIpInfo() {
   const info = await axios.get(`https://ipinfo.io/json?token=${IP_INFO_TOKEN}`)
@@ -15,7 +19,7 @@ async function getIpInfoByIp(ip) {
   return info.data
 }
 
-async function getLocation(ip) {
+export async function getLocation(ip) {
   const local = await getIpInfoByIp(ip) || {}
   const fromAPI = await getIpInfo() || {}
 
@@ -26,7 +30,7 @@ async function getLocation(ip) {
   }
 }
 
-function getIPByRequest(req) {
+export function getIPByRequest(req) {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
   /**
    * In several cases ip can be an array of ips separated with comma('92.38.148.60, 172.68.132.29')
@@ -35,20 +39,12 @@ function getIPByRequest(req) {
   return ip.split(',')[0]
 }
 
-function isBlockedIP(ip) {
+export function isBlockedIP(ip) {
   const banList = (IP_BAN_LIST || '').split(',')
   return banList.includes(ip)
 }
 
-function isTestIP(ip) {
+export function isTestIP(ip) {
   const banList = (IP_TEST_LIST || '').split(',')
   return { testIP: banList.includes(ip), testEmail: TEST_EMAIL || '' }
-}
-
-module.exports = {
-  getLocation,
-  isBlockedIP,
-  isTestIP,
-  getIpInfoByIp,
-  getIPByRequest,
 }

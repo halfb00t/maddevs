@@ -1,8 +1,8 @@
-const { sendMailFromVariables, sendCVResponseMail } = require('../services/EmailsService')
-const { sendApplication } = require('../services/HuntflowService')
-const { validate } = require('../utils/validation')
-const { getIPByRequest, getLocation, isBlockedIP } = require('../services/IPService')
-const { reCaptchaVerification } = require('../services/reCaptchaVerification')
+import { sendCVResponseMail, sendMailFromVariables } from '../services/EmailsService'
+import { sendApplication } from '../services/HuntflowService'
+import { validate } from '../utils/validation'
+import { getIPByRequest, getLocation, isBlockedIP } from '../services/IPService'
+import { reCaptchaVerification } from '../services/reCaptchaVerification'
 
 const parseRequest = req => ({
   ...req,
@@ -16,7 +16,7 @@ const buildRequest = (req, key) => ({
   body: req.body[key],
 })
 
-async function index(req, res) {
+export async function index(req, res) {
   const parsedReq = parseRequest(req)
   if (!parsedReq.body.variables.token) return res.json({ success: false, message: 'Invalid token' })
   const { data } = await reCaptchaVerification(parsedReq.body.variables.token)
@@ -53,8 +53,4 @@ async function index(req, res) {
   const userEmailResponse = await sendCVResponseMail(emailReq.body)
 
   return res.json({ email: hrEmailResponse, userEmail: userEmailResponse, huntflow: huntflowResponse })
-}
-
-module.exports = {
-  index,
 }

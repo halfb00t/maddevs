@@ -51,3 +51,5 @@ if (process.env.FF_ENVIRONMENT === 'production') {
     ],
   })
 }
+
+export default () => {}

@@ -1,5 +1,5 @@
-const getRequestUrl = require('../utils/getRequestUrl')
-const getPrismicDocuments = require('../utils/getPrismicDocuments')
+import { getRequestUrl } from '../utils/getRequestUrl'
+import getPrismicDocuments from '../utils/getPrismicDocuments'
 
 const extractRedirectsList = document => {
   let newRedirects = []
@@ -25,4 +25,4 @@ async function redirectToPrismicUrl(req, res, next) {
   return next()
 }
 
-module.exports = redirectToPrismicUrl
+export default redirectToPrismicUrl

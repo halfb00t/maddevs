@@ -6,4 +6,4 @@ function redirectToRuCareerPostUrl(req, res, next) {
   else next()
 }
 
-module.exports = redirectToRuCareerPostUrl
+export default redirectToRuCareerPostUrl

@@ -1,5 +1,5 @@
-const { sendMailFromVariables } = require('../services/EmailsService')
-const { validate } = require('../utils/validation')
+import { sendMailFromVariables } from '../services/EmailsService'
+import { validate } from '../utils/validation'
 
 const parseRequest = req => ({
   ...req,
@@ -13,7 +13,7 @@ const buildRequest = (req, key) => ({
   body: req.body[key],
 })
 
-async function send(req, res) {
+export async function send(req, res) {
   const parsedReq = parseRequest(req)
   const emailReq = buildRequest(parsedReq, 'email')
 
@@ -23,8 +23,4 @@ async function send(req, res) {
   const emailRes = await sendMailFromVariables(emailReq.body)
 
   return res.json({ email: emailRes })
-}
-
-module.exports = {
-  send,
 }

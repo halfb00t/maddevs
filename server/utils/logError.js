@@ -1,4 +1,4 @@
-const Sentry = require('@sentry/node')
+import Sentry from '@sentry/node'
 
 function logError(error, message = '') {
   Sentry.captureException(error)
@@ -6,4 +6,4 @@ function logError(error, message = '') {
   console.error(message, error)
 }
 
-module.exports = logError
+export default logError
