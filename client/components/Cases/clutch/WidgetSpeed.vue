@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import MadParallax from '@/plugins/mad-parallax'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Picture from '@/components/Cases/shared/Picture'
 
@@ -39,6 +40,10 @@ export default {
   components: {
     TextParagraph,
     Picture,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {

@@ -1,6 +1,4 @@
-import Vue from 'vue'
-
-const setCustomProperties = (elem, options, elemInToView, parentHeight) => {
+export const setCustomProperties = (elem, options, elemInToView, parentHeight) => {
   if (options.prlx3d) {
     const { top, bottom } = elem.getBoundingClientRect()
     if (top < window.scrollY && bottom > 0) {
@@ -26,7 +24,7 @@ const setCustomProperties = (elem, options, elemInToView, parentHeight) => {
   }
 }
 
-const parallaxScrollHandler = (elem, options) => {
+export const parallaxScrollHandler = (elem, options) => {
   if (elem.target !== document) {
     const elemInToView = window.innerHeight - (
       elem.getBoundingClientRect().top + (elem.getBoundingClientRect().height / options.startPoint)
@@ -51,7 +49,7 @@ const parallaxScrollHandler = (elem, options) => {
   }
 }
 // CHECK FOR RESIZE
-const checkIsMobileSize = (elem, options) => {
+export const checkIsMobileSize = (elem, options) => {
   if (window.innerWidth <= options.mobileSize) {
     elem.style.transform = `translate${options.direction.toUpperCase()}(0px)`
     // eslint-disable-next-line no-use-before-define
@@ -66,19 +64,19 @@ let elems = []
 let options = {}
 
 // WRAPPER FUNCTIONS FOR REMOVING EVENT LISTENERS
-const onScroll = () => {
-  for (const elem of elems) {
+export const onScroll = (event, elemsProp = elems) => {
+  for (const elem of elemsProp) {
     parallaxScrollHandler(elem.el, elem.options)
   }
 }
 
-const onResize = () => {
+export const onResize = () => {
   for (const elem of elems) {
     checkIsMobileSize(elem.el, elem.options)
   }
 }
 
-Vue.directive('mad-parallax', {
+const MadParallax = {
   bind(el, binding) {
     options = {
       speed: binding.value?.speed || 0.1, // Speed for animation
@@ -117,4 +115,6 @@ Vue.directive('mad-parallax', {
       window.removeEventListener('resize', onResize)
     }
   },
-})
+}
+
+export default MadParallax
