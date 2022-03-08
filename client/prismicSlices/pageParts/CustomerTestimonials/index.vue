@@ -2,32 +2,40 @@
   <section
     class="customer-testimonials-main"
   >
-    <CustomerTestimonialsSlice
+    <LazyHydrate
       v-if="slice.variation === 'default-slice'"
-      :title="title"
-      :data-aos="animation"
-      data-testid="first-variation"
-    />
-    <Testimonials
+      when-visible
+    >
+      <CustomerTestimonialsSlice
+        :title="title"
+        :data-aos="animation"
+        data-testid="first-variation"
+      />
+    </LazyHydrate>
+    <LazyHydrate
       v-else-if="slice.variation === 'testimonialsSecondVariation'"
-      :title="title"
-      :data-aos="animation"
-      data-testid="second-variation"
-    />
+      when-visible
+    >
+      <Testimonials
+        :title="title"
+        :data-aos="animation"
+        data-testid="second-variation"
+      />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import CustomerTestimonialsSlice from './variations/CustomerTestimonialsSlice'
-import Testimonials from './variations/Testimonials'
+import LazyHydrate from 'vue-lazy-hydration'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'CustomerTestimonials',
 
   components: {
-    CustomerTestimonialsSlice,
-    Testimonials,
+    LazyHydrate,
+    CustomerTestimonialsSlice: () => import('./variations/CustomerTestimonialsSlice'),
+    Testimonials: () => import('./variations/Testimonials'),
   },
 
   mixins: [animateOnScrollMixin({
@@ -58,7 +66,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .customer-testimonials-main {
-    background-color: #f5f7f9;
-  }
+.customer-testimonials-main {
+  background-color: #f5f7f9;
+}
 </style>

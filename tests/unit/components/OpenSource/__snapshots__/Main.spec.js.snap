@@ -5,18 +5,18 @@ exports[`Main component should render correctly 1`] = `
   <div
     class="open-source"
   >
-    <banner-stub />
+    <!---->
      
-    <paragraphsection-stub />
+    <!---->
      
-    <featuredprojects-stub />
+    <!---->
      
     <div
       class="open-source--bg-white"
     >
-      <boilerplates-stub />
+      <!---->
        
-      <ctabanner-stub />
+      <!---->
     </div>
   </div>
 </div>

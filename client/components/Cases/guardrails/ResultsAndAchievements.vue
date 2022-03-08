@@ -74,7 +74,7 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import { ResultStatistics } from '@/data/caseGuardrails'
 
 export default {
-  name: 'AgilityIsTheKey',
+  name: 'ResultsAndAchievements',
   components: { TextParagraph },
 
   data() {

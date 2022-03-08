@@ -45,7 +45,7 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 
 export default {
-  name: 'APIforDashboard',
+  name: 'ApiForDashboard',
   components: {
     TextParagraph,
     TextQuoteBox,

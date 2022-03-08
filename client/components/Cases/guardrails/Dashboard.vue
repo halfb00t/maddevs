@@ -81,7 +81,7 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import MadParallax from '@/plugins/mad-parallax'
 
 export default {
-  name: 'HighLevelOverview',
+  name: 'Dashboard',
   components: {
     TextParagraph,
     Picture,

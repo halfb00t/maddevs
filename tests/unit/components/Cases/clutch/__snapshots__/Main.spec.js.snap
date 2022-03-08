@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component should render correctly 1`] = `
+<div>
+  <section>
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="[object Object]"
+    >
+      <about-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="[object Object]"
+    >
+      <whyclutch-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="[object Object]"
+    >
+      <techchallenges-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <outstuffing-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <microservices-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <dataandpasswords-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <widgetspeed-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <dataprocessed-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <devops-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <workflow-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <pipelines-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <standup-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <techstack-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <review-stub />
+    </lazyhydrate-stub>
+  </section>
+</div>
+`;

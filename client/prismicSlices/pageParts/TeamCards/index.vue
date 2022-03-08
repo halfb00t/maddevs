@@ -17,7 +17,8 @@
           @mouseleave="(expert.isHover && hoverCount >= 3) ? toggleImageHanlde() : {}"
         >
           <img
-            :src="expert.isHover && !toggleImage ? expert.hoverImage.url : expert.image.url"
+            v-lazy-load
+            :data-src="expert.isHover && !toggleImage ? expert.hoverImage.url : expert.image.url"
             :alt="expert.image.alt || 'Image'"
             width="295"
             height="401"
@@ -36,7 +37,8 @@
           </div>
           <img
             v-if="expert.linkedin.url"
-            :src="require(`@/assets/img/Home/svg/team/linkedin.svg`)"
+            v-lazy-load
+            :data-src="require(`@/assets/img/Home/svg/team/linkedin.svg`)"
             width="24"
             height="24"
             alt="Linkedin"

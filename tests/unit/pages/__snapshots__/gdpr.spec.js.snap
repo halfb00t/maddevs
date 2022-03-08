@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gdpr page should render correctly 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+  </main>
+</div>
+`;

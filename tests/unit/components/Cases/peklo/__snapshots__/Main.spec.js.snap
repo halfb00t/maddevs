@@ -3,21 +3,61 @@
 exports[`Main component should render correctly 1`] = `
 <div>
   <section>
-    <about-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <about-stub />
+    </lazyhydrate-stub>
      
-    <benefitsfrompeklotool-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <benefitsfrompeklotool-stub />
+    </lazyhydrate-stub>
      
-    <howpeklotoolworks-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <howpeklotoolworks-stub />
+    </lazyhydrate-stub>
      
-    <keywordgrouping-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <keywordgrouping-stub />
+    </lazyhydrate-stub>
      
-    <clusterisationalgorithm-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <clusterisationalgorithm-stub />
+    </lazyhydrate-stub>
      
-    <peklotoolunderthehood-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <peklotoolunderthehood-stub />
+    </lazyhydrate-stub>
      
-    <technologies-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <technologies-stub />
+    </lazyhydrate-stub>
      
-    <team-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <team-stub />
+    </lazyhydrate-stub>
   </section>
 </div>
 `;

@@ -7,6 +7,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'TitleDesc',
+}
+</script>
+
 <style lang="scss" scoped>
 .title-desc {
   margin-top: 180px;

@@ -1,37 +1,54 @@
 <template>
   <section>
-    <About />
-    <BenefitsFromPekloTool />
-    <HowPekloToolWorks />
-    <KeywordGrouping />
-    <ClusterisationAlgorithm />
-    <PekloToolUnderTheHood />
-    <Technologies />
-    <Team />
+    <LazyHydrate when-visible>
+      <About />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <BenefitsFromPekloTool />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <HowPekloToolWorks />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <KeywordGrouping />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <ClusterisationAlgorithm />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <PekloToolUnderTheHood />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <Technologies />
+    </LazyHydrate>
+
+    <LazyHydrate when-visible>
+      <Team />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import About from '@/components/Cases/peklo/About'
-import BenefitsFromPekloTool from '@/components/Cases/peklo/BenefitsFromPekloTool'
-import HowPekloToolWorks from '@/components/Cases/peklo/HowPekloToolWorks'
-import KeywordGrouping from '@/components/Cases/peklo/KeywordGrouping'
-import ClusterisationAlgorithm from '@/components/Cases/peklo/ClusterisationAlgorithm'
-import PekloToolUnderTheHood from '@/components/Cases/peklo/PekloToolUnderTheHood'
-import Technologies from '@/components/Cases/peklo/Technologies'
-import Team from '@/components/Cases/peklo/Team'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Main',
   components: {
-    About,
-    BenefitsFromPekloTool,
-    HowPekloToolWorks,
-    KeywordGrouping,
-    ClusterisationAlgorithm,
-    PekloToolUnderTheHood,
-    Technologies,
-    Team,
+    About: () => import('@/components/Cases/peklo/About'),
+    BenefitsFromPekloTool: () => import('@/components/Cases/peklo/BenefitsFromPekloTool'),
+    HowPekloToolWorks: () => import('@/components/Cases/peklo/HowPekloToolWorks'),
+    KeywordGrouping: () => import('@/components/Cases/peklo/KeywordGrouping'),
+    ClusterisationAlgorithm: () => import('@/components/Cases/peklo/ClusterisationAlgorithm'),
+    PekloToolUnderTheHood: () => import('@/components/Cases/peklo/PekloToolUnderTheHood'),
+    Technologies: () => import('@/components/Cases/peklo/Technologies'),
+    Team: () => import('@/components/Cases/peklo/Team'),
+    LazyHydrate,
   },
 }
 </script>

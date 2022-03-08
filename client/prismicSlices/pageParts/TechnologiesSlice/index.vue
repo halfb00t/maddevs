@@ -1,5 +1,8 @@
 <template>
-  <section class="technologies-slice">
+  <section
+    ref="technologiesRef"
+    class="technologies-slice"
+  >
     <div
       class="container"
       data-testid="container"
@@ -32,6 +35,7 @@
         </div>
       </div>
       <div
+        v-if="intoView"
         :class="[
           'technologies-slice__grid',
           `technologies-slice__grid--${categoryToClass(activeCategory)}`
@@ -94,7 +98,12 @@ export default {
       title: this.slice.primary.title,
       animation: this.slice.primary.animation,
       alreadyAnimated: false, // needed to prevent the aos animation repeating on DOM changes
+      intoView: false, // needed to don't show technologies grid while block don't viewport
     }
+  },
+
+  mounted() {
+    this.mountWhenVisible()
   },
 
   methods: {
@@ -108,6 +117,19 @@ export default {
 
     categoryToClass(category) {
       return category.replace(/\W/g, '').toLowerCase()
+    },
+
+    // Function for lazy created grid technologies. For better LCP
+    mountWhenVisible() {
+      const Observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.intoView = true
+            observer.unobserve(entry.target)
+          }
+        })
+      })
+      Observer.observe(this.$refs.technologiesRef)
     },
   },
 }

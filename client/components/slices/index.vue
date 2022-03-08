@@ -11,60 +11,86 @@
       <!-- Text slice template -->
       <template v-if="slice.slice_type === 'text'">
         <!-- Here :slice="slice" passes the data to the component -->
-        <TextSlice
-          :slice="slice"
-          :html-serializer="serializer"
-        />
+        <LazyHydrate when-visible>
+          <TextSlice
+            :slice="slice"
+            :html-serializer="serializer"
+          />
+        </LazyHydrate>
       </template>
       <!-- Quote slice template -->
       <template v-else-if="slice.slice_type === 'quote'">
-        <QuoteSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <QuoteSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <!-- Image with caption slice template -->
       <template v-else-if="slice.slice_type === 'image_with_caption'">
-        <ImageCaptionSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <ImageCaptionSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'image_with_attributes'">
-        <ImageAttributesSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <ImageAttributesSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'embed'">
-        <EmbedSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <EmbedSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'codeblock'">
         <CodeBlockSlice :slice="slice" />
       </template>
       <template v-else-if="slice.slice_type === 'divider'">
-        <DividerSlice />
+        <LazyHydrate when-visible>
+          <DividerSlice />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'ordered_list'">
-        <OrderedList
-          :slice="slice"
-          :html-serializer="serializer"
-        />
+        <LazyHydrate when-visible>
+          <OrderedList
+            :slice="slice"
+            :html-serializer="serializer"
+          />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'doublecolumn_bordered'">
-        <DoubleColumnBorderedSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <DoubleColumnBorderedSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'github_gist'">
-        <GithubGistSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <GithubGistSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'image_gallery'">
-        <GallerySlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <GallerySlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'section_id'">
-        <SectionIdSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <SectionIdSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <template v-else-if="slice.slice_type === 'author'">
-        <AuthorSlice :slice="slice" />
+        <LazyHydrate when-visible>
+          <AuthorSlice :slice="slice" />
+        </LazyHydrate>
       </template>
       <!-- Common slices end -->
 
       <!-- Careers slices start -->
       <template v-else-if="slice.slice_type === 'vacancy_text'">
-        <VacancyText
-          :slice="slice"
-          :html-serializer="serializer"
-        />
+        <LazyHydrate when-visible>
+          <VacancyText
+            :slice="slice"
+            :html-serializer="serializer"
+          />
+        </LazyHydrate>
       </template>
       <!-- Careers slices end -->
     </section>
@@ -72,46 +98,31 @@
 </template>
 
 <script>
-// Common slices
-import CodeBlockSlice from '@/components/slices/CodeBlockSlice/index.vue'
-import SectionIdSlice from '@/components/slices/SectionIdSlice'
-import QuoteSlice from '@/components/slices/QuoteSlice.vue'
-import TextSlice from '@/components/slices/TextSlice.vue'
-import ImageCaptionSlice from '@/components/slices/ImageCaptionSlice.vue'
-import EmbedSlice from '@/components/slices/EmbedSlice.vue'
-import DividerSlice from '@/components/slices/DividerSlice'
-import ImageAttributesSlice from '@/components/slices/ImageAttributesSlice'
-import OrderedList from '@/components/slices/OrderedList'
-import DoubleColumnBorderedSlice from '@/components/slices/DoubleColumnBorderedSlice'
-import GithubGistSlice from '@/components/slices/GithubGistSlice'
-import GallerySlice from '@/components/slices/GallerySlice'
-import AuthorSlice from '@/components/slices/AuthorSlice'
-
-// Careers slices
-import VacancyText from '@/components/slices/Careers/VacancyText'
-
+import LazyHydrate from 'vue-lazy-hydration'
 import linkResolver from '@/plugins/link-resolver'
 import mainMixins from '@/mixins/mainMixins'
 import convertTagsToText from '@/helpers/convertTagsToText'
+import CodeBlockSlice from '@/components/slices/CodeBlockSlice/'
 
 export default {
   name: 'SlicesBlock',
 
   components: {
-    DoubleColumnBorderedSlice,
-    OrderedList,
-    ImageAttributesSlice,
+    LazyHydrate,
     CodeBlockSlice,
-    QuoteSlice,
-    TextSlice,
-    ImageCaptionSlice,
-    EmbedSlice,
-    DividerSlice,
-    GithubGistSlice,
-    GallerySlice,
-    SectionIdSlice,
-    AuthorSlice,
-    VacancyText,
+    SectionIdSlice: () => import('@/components/slices/SectionIdSlice'),
+    QuoteSlice: () => import('@/components/slices/QuoteSlice.vue'),
+    TextSlice: () => import('@/components/slices/TextSlice.vue'),
+    ImageCaptionSlice: () => import('@/components/slices/ImageCaptionSlice.vue'),
+    EmbedSlice: () => import('@/components/slices/EmbedSlice.vue'),
+    DividerSlice: () => import('@/components/slices/DividerSlice'),
+    ImageAttributesSlice: () => import('@/components/slices/ImageAttributesSlice'),
+    OrderedList: () => import('@/components/slices/OrderedList'),
+    DoubleColumnBorderedSlice: () => import('@/components/slices/DoubleColumnBorderedSlice'),
+    GithubGistSlice: () => import('@/components/slices/GithubGistSlice'),
+    GallerySlice: () => import('@/components/slices/GallerySlice'),
+    AuthorSlice: () => import('@/components/slices/AuthorSlice'),
+    VacancyText: () => import('@/components/slices/Careers/VacancyText'),
   },
 
   mixins: [mainMixins],

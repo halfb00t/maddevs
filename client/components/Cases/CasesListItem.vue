@@ -72,6 +72,7 @@ import mainMixins from '@/mixins/mainMixins'
 
 export default {
   mixins: [mainMixins],
+
   props: {
     titleTag: {
       type: String,

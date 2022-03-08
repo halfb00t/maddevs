@@ -5,19 +5,32 @@ exports[`Index page should render correctly 1`] = `
   <main
     class="main"
   >
-    <titledesc-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <titledesc-stub />
+    </lazyhydrate-stub>
      
     <caseslist-stub
-      itemtitletag="h2"
-      limit="11"
+      item-title-tag="h2"
     />
      
-    <customers-stub
-      iconbackground="transparent"
-      light="true"
-    />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <customers-stub
+        light=""
+      />
+    </lazyhydrate-stub>
      
-    <builddevteam-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <builddevteam-stub />
+    </lazyhydrate-stub>
   </main>
 </div>
 `;

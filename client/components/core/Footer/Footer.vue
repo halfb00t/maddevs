@@ -9,38 +9,45 @@
           <h2 class="footer__main-title">
             Get In Touch
           </h2>
-          <FooterContacts />
-          <FooterNavbar class="footer__navbar-desktop" />
+          <LazyHydrate when-visible>
+            <FooterContacts />
+          </LazyHydrate>
+          <LazyHydrate when-visible>
+            <FooterNavbar class="footer__navbar-desktop" />
+          </LazyHydrate>
         </div>
         <div class="footer__content-right">
-          <FooterForm />
+          <LazyHydrate when-visible>
+            <FooterForm />
+          </LazyHydrate>
         </div>
       </div>
       <div class="footer__mobile-content footer__social-network-list-mobile">
-        <FooterSocialNetworks />
+        <LazyHydrate when-visible>
+          <FooterSocialNetworks />
+        </LazyHydrate>
       </div>
       <div class="footer__mobile-content">
-        <FooterNavbarMobile />
+        <LazyHydrate when-visible>
+          <FooterNavbarMobile />
+        </LazyHydrate>
       </div>
     </div>
   </footer>
 </template>
 
 <script>
-import FooterForm from '@/components/core/forms/FooterForm'
-import FooterContacts from '@/components/core/Footer/FooterContacts'
-import FooterNavbar from '@/components/core/Footer/FooterNavbar'
-import FooterNavbarMobile from '@/components/core/Footer/FooterNavbarMobile'
-import FooterSocialNetworks from '@/components/core/Footer/FooterSocialNetworks'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Footer',
   components: {
-    FooterForm,
-    FooterContacts,
-    FooterNavbar,
-    FooterNavbarMobile,
-    FooterSocialNetworks,
+    LazyHydrate,
+    FooterForm: () => import('@/components/core/forms/FooterForm'),
+    FooterContacts: () => import('@/components/core/Footer/FooterContacts'),
+    FooterNavbar: () => import('@/components/core/Footer/FooterNavbar'),
+    FooterNavbarMobile: () => import('@/components/core/Footer/FooterNavbarMobile'),
+    FooterSocialNetworks: () => import('@/components/core/Footer/FooterSocialNetworks'),
   },
 
   data() {

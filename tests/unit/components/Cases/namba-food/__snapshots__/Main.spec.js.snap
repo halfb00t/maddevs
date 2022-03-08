@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component should render correctly 1`] = `
+<div>
+  <section
+    class="case_body"
+  >
+    <div
+      class="case_animation_block"
+      id="case-first-section"
+    />
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+  </section>
+</div>
+`;

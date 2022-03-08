@@ -5,6 +5,10 @@ import getRobots from './utils/getRobots'
 require('dotenv').config()
 
 module.exports = {
+  render: {
+    resourceHints: false,
+  },
+  buildModule: ['nuxt-compress'],
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
   /*
@@ -33,8 +37,8 @@ module.exports = {
       { rel: 'sitemap', type: 'application/xml', href: 'https://maddevs.io/sitemap.xml' },
     ],
     script: [
-      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver' },
-      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}` },
+      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', defer: true, body: true },
+      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, defer: true, body: true },
     ],
   },
   /*
@@ -80,7 +84,7 @@ module.exports = {
       ],
     },
     vendor: ['axios'],
-    transpile: ['dom7', 'vue-slicezone', 'nuxt-sm'],
+    transpile: ['dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration'],
     followSymlinks: true,
     cache: true,
     extend(config, { isDev, isClient }) {
@@ -95,6 +99,29 @@ module.exports = {
           },
         })
       }
+    },
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true,
+    },
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true,
+        preserveLineBreaks: false,
+        collapseWhitespace: true,
+      },
+    },
+    optimization: {
+      minimize: true,
     },
   },
   /*
@@ -113,6 +140,7 @@ module.exports = {
   ** Nuxt Modules
   */
   modules: [
+    ['~/modules/js-optimizer.js', { setOutputFilenames: true }], // need to async loaded javascript chunks
     '@nuxtjs/axios',
     '@nuxtjs/robots',
     '@nuxtjs/prismic',
@@ -142,6 +170,17 @@ module.exports = {
       endpoint: process.env.NODE_PRISMIC_API,
     }],
     ['nuxt-sm'],
+    [
+      'nuxt-compress',
+      {
+        gzip: {
+          threshold: 8192,
+        },
+        brotli: {
+          threshold: 8192,
+        },
+      },
+    ],
   ],
   sitemap: {
     hostname: 'https://maddevs.io',
@@ -198,6 +237,7 @@ module.exports = {
   },
   router: {
     trailingSlash: true,
+    prefetchLinks: false,
     extendRoutes: routes => {
       routes.push(...CUSTOM_PAGE_ROUTES)
       return routes

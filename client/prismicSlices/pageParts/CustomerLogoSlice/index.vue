@@ -19,7 +19,8 @@
           data-testid="customer-logo-slice-item"
         >
           <img
-            :src="customer.logo.url"
+            v-lazy-load
+            :data-src="customer.logo.url"
             :alt="customer.logo.alt || 'Image'"
           >
         </div>

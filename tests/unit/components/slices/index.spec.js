@@ -2,6 +2,14 @@ import { shallowMount } from '@vue/test-utils'
 import { render } from '@testing-library/vue'
 import SlicesBlock from '@/components/slices'
 
+const stubs = [
+  'PrismicImage',
+  'PrismicRichText',
+  'ImageAttributesSlice',
+  'ImageCaptionSlice',
+  'LazyHydrate',
+]
+
 const toOneLine = text => text
   .replace(/ +(?= )/g, '')
   .replace(/\n/g, '')
@@ -113,7 +121,7 @@ describe('slice block component', () => {
           asHtml: html => `<p>${html}</p>`,
         },
       },
-      stubs: ['PrismicImage', 'PrismicRichText', 'ImageAttributesSlice', 'ImageCaptionSlice'],
+      stubs,
     })
 
     expect(container).toMatchSnapshot()
@@ -135,7 +143,7 @@ describe('Post component copyAnchorLink', () => {
 
   beforeEach(() => {
     wrapper = shallowMount(SlicesBlock, {
-      stubs: ['PrismicRichText', 'ImageAttributesSlice', 'ImageCaptionSlice'],
+      stubs,
       propsData: {
         slice,
         slices,
@@ -350,5 +358,39 @@ describe('Post component copyAnchorLink', () => {
     const imageHtml = '<p class=" block-img"><img src="" alt="Image" copyright=""></p>'
     const result = wrapper.vm.htmlSerializer('image', element, null, ['Blog post title'])
     expect(toOneLine(result)).toStrictEqual(toOneLine(imageHtml))
+  })
+
+  describe('Dynamic imports', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(SlicesBlock)
+
+      const SectionIdSlice = await container.vm.$options.components.SectionIdSlice.call()
+      const QuoteSlice = await container.vm.$options.components.QuoteSlice.call()
+      const TextSlice = await container.vm.$options.components.TextSlice.call()
+      const ImageCaptionSlice = await container.vm.$options.components.ImageCaptionSlice.call()
+      const EmbedSlice = await container.vm.$options.components.EmbedSlice.call()
+      const DividerSlice = await container.vm.$options.components.DividerSlice.call()
+      const ImageAttributesSlice = await container.vm.$options.components.ImageAttributesSlice.call()
+      const OrderedList = await container.vm.$options.components.OrderedList.call()
+      const DoubleColumnBorderedSlice = await container.vm.$options.components.DoubleColumnBorderedSlice.call()
+      const GithubGistSlice = await container.vm.$options.components.GithubGistSlice.call()
+      const GallerySlice = await container.vm.$options.components.GallerySlice.call()
+      const AuthorSlice = await container.vm.$options.components.AuthorSlice.call()
+      const VacancyText = await container.vm.$options.components.VacancyText.call()
+
+      expect(SectionIdSlice.default.name).toBe('SectionIdSlice')
+      expect(QuoteSlice.default.name).toBe('QuoteSlice')
+      expect(TextSlice.default.name).toBe('TextSlice')
+      expect(ImageCaptionSlice.default.name).toBe('ImageCaptionSlice')
+      expect(EmbedSlice.default.name).toBe('EmbedSlice')
+      expect(DividerSlice.default.name).toBe('Divider')
+      expect(ImageAttributesSlice.default.name).toBe('ImageAttributesSlice')
+      expect(OrderedList.default.name).toBe('OrderedList')
+      expect(DoubleColumnBorderedSlice.default.name).toBe('DoubleColumnBorderedSlice')
+      expect(GithubGistSlice.default.name).toBe('GithubGistSlice')
+      expect(GallerySlice.default.name).toBe('GallerySlice')
+      expect(AuthorSlice.default.name).toBe('AuthorSlice')
+      expect(VacancyText.default.name).toBe('VacancyText')
+    })
   })
 })

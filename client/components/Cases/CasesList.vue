@@ -2,22 +2,26 @@
   <div class="container">
     <section class="cases-list">
       <!-- Card -->
-      <CasesListItem
+      <LazyHydrate
         v-for="(item, i) of casesList.slice(0, limit)"
         :key="`case_list_item_${i}`"
-        :video-file-name="item.video"
-        :logo="item.logo"
-        :subtitle="item.subtitle"
-        :title-tag="itemTitleTag"
-        :title="item.title"
-        :desc="item.desc"
-        :width="item.width"
-        :link="item.link"
-        :poster-link="item.poster"
-        :item="item"
-        :class="`cases-list_${item.id}`"
-        data-testid="test-case-card"
-      />
+        when-visible
+      >
+        <CasesListItem
+          :video-file-name="item.video"
+          :logo="item.logo"
+          :subtitle="item.subtitle"
+          :title-tag="itemTitleTag"
+          :title="item.title"
+          :desc="item.desc"
+          :width="item.width"
+          :link="item.link"
+          :poster-link="item.poster"
+          :item="item"
+          :class="`cases-list_${item.id}`"
+          data-testid="test-case-card"
+        />
+      </LazyHydrate>
     </section>
     <NuxtLink
       to="/case-studies/"
@@ -29,13 +33,18 @@
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import mainMixins from '@/mixins/mainMixins'
-import CasesListItem from '@/components/Cases/CasesListItem'
 import { casesList } from '@/data/casesList'
 
 export default {
   name: 'CasesList',
-  components: { CasesListItem },
+
+  components: {
+    CasesListItem: () => import('@/components/Cases/CasesListItem'),
+    LazyHydrate,
+  },
+
   mixins: [mainMixins],
   props: {
     itemTitleTag: {

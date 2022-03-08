@@ -1,35 +1,49 @@
 <template>
   <section class="case_body p-48_top media-p-24_top">
-    <AboutYourcast id="case-first-section" />
-    <ProjectInNumbers />
-    <SupportedGadgets />
-    <KeyProjectMilestones />
-    <PhaseOnlineCinema />
-    <PhaseLiveStreamingTechnology />
-    <PhaseRedesignAndOptimisations />
-    <PhaseVideoOnDemand />
-    <PhaseUserAuthorisation />
-    <WatchWhatYouLikeVideo />
-    <PlansForSimilarProjects />
-    <Technologies />
-    <Team />
+    <LazyHydrate when-visible>
+      <AboutYourcast id="case-first-section" />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ProjectInNumbers />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <SupportedGadgets />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <KeyProjectMilestones />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseOnlineCinema />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseLiveStreamingTechnology />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseRedesignAndOptimisations />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseVideoOnDemand />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseUserAuthorisation />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <WatchWhatYouLikeVideo />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PlansForSimilarProjects />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Technologies />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Team />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import AboutYourcast from '@/components/Cases/yourcast/AboutYourcast'
-import ProjectInNumbers from '@/components/Cases/yourcast/ProjectInNumbers'
-import SupportedGadgets from '@/components/Cases/yourcast/SupportedGadgets'
-import Technologies from '@/components/Cases/yourcast/Technologies'
-import KeyProjectMilestones from '@/components/Cases/yourcast/KeyProjectMilestones'
-import PhaseOnlineCinema from '@/components/Cases/yourcast/PhaseOnlineCinema'
-import PhaseLiveStreamingTechnology from '@/components/Cases/yourcast/PhaseLiveStreamingTechnology'
-import PhaseRedesignAndOptimisations from '@/components/Cases/yourcast/PhaseRedesignAndOptimisations'
-import PhaseVideoOnDemand from '@/components/Cases/yourcast/PhaseVideoOnDemand'
-import PhaseUserAuthorisation from '@/components/Cases/yourcast/PhaseUserAuthorisation'
-import WatchWhatYouLikeVideo from '@/components/Cases/yourcast/WatchWhatYouLikeVideo'
-import PlansForSimilarProjects from '@/components/Cases/yourcast/PlansForSimilarProjects'
-import Team from '@/components/Cases/yourcast/Team'
+import LazyHydrate from 'vue-lazy-hydration'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import playVideo from '@/helpers/playVideo'
 
@@ -41,19 +55,20 @@ const observerOptions = {
 
 export default {
   components: {
-    AboutYourcast,
-    ProjectInNumbers,
-    SupportedGadgets,
-    Technologies,
-    KeyProjectMilestones,
-    PhaseOnlineCinema,
-    PhaseLiveStreamingTechnology,
-    PhaseRedesignAndOptimisations,
-    PhaseVideoOnDemand,
-    PhaseUserAuthorisation,
-    WatchWhatYouLikeVideo,
-    PlansForSimilarProjects,
-    Team,
+    LazyHydrate,
+    AboutYourcast: () => import('@/components/Cases/yourcast/AboutYourcast'),
+    ProjectInNumbers: () => import('@/components/Cases/yourcast/ProjectInNumbers'),
+    SupportedGadgets: () => import('@/components/Cases/yourcast/SupportedGadgets'),
+    Technologies: () => import('@/components/Cases/yourcast/Technologies'),
+    KeyProjectMilestones: () => import('@/components/Cases/yourcast/KeyProjectMilestones'),
+    PhaseOnlineCinema: () => import('@/components/Cases/yourcast/PhaseOnlineCinema'),
+    PhaseLiveStreamingTechnology: () => import('@/components/Cases/yourcast/PhaseLiveStreamingTechnology'),
+    PhaseRedesignAndOptimisations: () => import('@/components/Cases/yourcast/PhaseRedesignAndOptimisations'),
+    PhaseVideoOnDemand: () => import('@/components/Cases/yourcast/PhaseVideoOnDemand'),
+    PhaseUserAuthorisation: () => import('@/components/Cases/yourcast/PhaseUserAuthorisation'),
+    WatchWhatYouLikeVideo: () => import('@/components/Cases/yourcast/WatchWhatYouLikeVideo'),
+    PlansForSimilarProjects: () => import('@/components/Cases/yourcast/PlansForSimilarProjects'),
+    Team: () => import('@/components/Cases/yourcast/Team'),
   },
 
   mixins: [

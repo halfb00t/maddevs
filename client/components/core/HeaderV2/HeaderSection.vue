@@ -29,15 +29,13 @@
 </template>
 
 <script>
-
 import HeaderMenu from '@/components/core/HeaderV2/HeaderMenu'
-import HeaderPost from '@/components/core/HeaderV2/HeaderPost'
 
 export default {
   name: 'HeaderSection',
   components: {
     HeaderMenu,
-    HeaderPost,
+    HeaderPost: () => import('@/components/core/HeaderV2/HeaderPost'),
   },
 
   props: {

@@ -5,26 +5,31 @@
         Customer <br> Testimonials
       </h2>
       <div class="customer-testimonials__grid">
-        <TestimonialBlock
+        <LazyHydrate
           v-for="(testimonial, i) in testimonials"
           :key="testimonial.author && testimonial.author.name"
-          :featured="i === 0"
-          :text="testimonial.text"
-          :author="testimonial.author"
-        />
+          when-visible
+        >
+          <TestimonialBlock
+            :featured="i === 0"
+            :text="testimonial.text"
+            :author="testimonial.author"
+          />
+        </LazyHydrate>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import TestimonialBlock from '@/components/DeliveryModels/shared/TestimonialBlock'
+import LazyHydrate from 'vue-lazy-hydration'
 import { testimonials } from '@/data/deliveryModels'
 
 export default {
   name: 'Testimonials',
   components: {
-    TestimonialBlock,
+    LazyHydrate,
+    TestimonialBlock: () => import('@/components/DeliveryModels/shared/TestimonialBlock'),
   },
 
   data() {

@@ -5,12 +5,16 @@ exports[`CustomerTestimonials slice should render correctly with CustomerTestimo
   <section
     class="customer-testimonials-main"
   >
-    <customertestimonialsslice-stub
-      class="aos-init aos-animate"
-      data-aos="fade-up"
-      data-testid="first-variation"
-      title="Customer Testimonials"
-    />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <customertestimonialsslice-stub
+        class="aos-init aos-animate"
+        data-aos="fade-up"
+        data-testid="first-variation"
+      />
+    </lazyhydrate-stub>
   </section>
 </div>
 `;
@@ -20,12 +24,16 @@ exports[`CustomerTestimonials slice should render correctly with Testimonials co
   <section
     class="customer-testimonials-main"
   >
-    <testimonials-stub
-      class="aos-init aos-animate"
-      data-aos="fade-up"
-      data-testid="second-variation"
-      title="Testimonials"
-    />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <testimonials-stub
+        class="aos-init aos-animate"
+        data-aos="fade-up"
+        data-testid="second-variation"
+      />
+    </lazyhydrate-stub>
   </section>
 </div>
 `;

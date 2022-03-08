@@ -11,7 +11,8 @@
       class="post-author__image"
     >
       <img
-        :src="authorImage.url"
+        v-lazy-load
+        :data-src="authorImage.url"
         :alt="authorImage.alt || 'Image'"
         width="40"
         height="40"

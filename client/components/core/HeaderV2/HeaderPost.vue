@@ -15,7 +15,8 @@
         </p>
       </div>
       <img
-        :src="featuredImage && featuredImage.url"
+        v-lazy-load
+        :data-src="featuredImage && featuredImage.url"
         :alt="featuredImage && featuredImage.alt"
         width="260"
         height="161"
