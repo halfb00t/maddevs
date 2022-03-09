@@ -6,6 +6,7 @@
     <BaseForm
       id="contacts-slice-form"
       ref="baseForm"
+      :is-partnership="true"
       :use-company="true"
       :use-description="true"
       :use-labels="false"
