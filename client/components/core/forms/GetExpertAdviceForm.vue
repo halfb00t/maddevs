@@ -4,6 +4,9 @@
     ref="baseForm"
     button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
     button-label="Get expert advice"
+    :use-interest-radio-input="true"
+    :interest-radio-input-required="true"
+    :default-interest-radio-input="true"
     :additional-valid="!$v.validationGroup.$invalid"
     @submit="handleSubmit"
   >
