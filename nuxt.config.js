@@ -6,19 +6,25 @@ import getRobots from './utils/getRobots'
 dotenv.config()
 
 export default defineNuxtConfig({
+  alias: {
+    tslib: 'tslib/tslib.es6.js',
+  },
   render: {
     resourceHints: false,
   },
   buildModule: ['nuxt-compress'],
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
+  nitro: {
+    preset: 'server',
+  },
   /*
      ** Server settings
      */
-  server: {
-    host: process.env.HOST || '0', // https://debbie.codes/blog/nuxt-configure-server-to-see-site-on-mobile/
-    port: process.env.PORT || 3000,
-  },
+  // server: {
+  //   host: process.env.HOST || '0', // https://debbie.codes/blog/nuxt-configure-server-to-see-site-on-mobile/
+  //   port: process.env.PORT || 3000,
+  // },
   /*
      ** Headers of the page
      */
@@ -113,7 +119,7 @@ export default defineNuxtConfig({
       ],
     },
     vendor: ['axios'],
-    transpile: ['dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration'],
+    transpile: ['dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration', 'sm-commons', 'prismic-dom'],
     followSymlinks: true,
     cache: true,
     extend(config, {

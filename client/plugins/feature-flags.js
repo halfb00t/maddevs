@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import FeatureFlags from '../featureFlags'
 
-Vue.use(FeatureFlags)
-
-export default () => {}
+export default () => {
+  Vue.use(FeatureFlags)
+}

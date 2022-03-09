@@ -2,10 +2,10 @@ import express from 'express'
 import cors from 'cors'
 
 // sentry
-import { configureSentry } from './sentry'
+// import { configureSentry } from './sentry'
 
 // radiator
-import runRadiator from './radiator'
+// import runRadiator from './radiator'
 
 // custom middlewares
 import applyXFrame from './middlewares/applyXFrame'
@@ -26,11 +26,11 @@ import apiRouter from './routes/api'
 
 function bootstrap() {
   const app = express()
-  const Sentry = configureSentry(app)
+  // const Sentry = configureSentry(app)
 
   // Sentry handlers
-  app.use(Sentry.Handlers.requestHandler())
-  app.use(Sentry.Handlers.tracingHandler())
+  // app.use(Sentry.Handlers.requestHandler())
+  // app.use(Sentry.Handlers.tracingHandler())
 
   // External middlewares
   app.use(cors())
@@ -55,10 +55,10 @@ function bootstrap() {
   app.use('/api', apiRouter)
 
   // Errors handler
-  app.use(Sentry.Handlers.errorHandler())
+  // app.use(Sentry.Handlers.errorHandler())
 
   // radiator running
-  runRadiator()
+  // runRadiator()
 
   return app
 }

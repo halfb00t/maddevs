@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuelidate from 'vuelidate'
 
-Vue.use(Vuelidate)
-
-export default () => {}
+export default () => {
+  Vue.use(Vuelidate)
+}
