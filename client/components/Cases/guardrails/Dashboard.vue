@@ -66,6 +66,8 @@
       <div class="case-image-wrapper m-96_bottom media-m-48_bottom">
         <img
           v-lazy-load
+          :width="1028"
+          :height="612"
           class="case-image-wrapper__image"
           :data-src="$getMediaFromS3('/images/Cases/guardrails/png/dashboard-v3.png')"
           alt="Dashboard version 2"
