@@ -248,6 +248,11 @@ export default {
       default: false,
     },
 
+    isPartnership: {
+      type: Boolean,
+      default: false,
+    },
+
     interestRadioLabel: {
       type: String,
       default: 'I\'m interested in ...',
@@ -296,6 +301,7 @@ export default {
 
   methods: {
     defaultChoice() {
+      if (this.isPartnership) return 'Partnership'
       return this.defaultInterestRadioInput ? this.interestRadioChoices[0] : ''
     },
 
