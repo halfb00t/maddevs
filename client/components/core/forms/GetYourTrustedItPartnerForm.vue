@@ -5,6 +5,9 @@
     button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
     button-label="Get your trusted IT partner"
     :additional-valid="!$v.validationGroup.$invalid"
+    :use-interest-radio-input="true"
+    :interest-radio-input-required="true"
+    :default-interest-radio-input="true"
     @submit="handleSubmit"
   >
     <BaseInput

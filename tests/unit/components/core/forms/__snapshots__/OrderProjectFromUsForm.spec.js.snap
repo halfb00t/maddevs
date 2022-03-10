@@ -33,7 +33,74 @@ exports[`OrderProjectFromUsForm component should render correctly 1`] = `
         <!---->
       </div>
        
-      <!---->
+      <div
+        class="radio-button-list"
+        value="Software development"
+      >
+        <p
+          class="radio-button-list__field-name field-name required"
+          data-testid="test-radio-label"
+        >
+          
+    I'm interested in ...
+  
+        </p>
+         
+        <div
+          class="radio-button-list__container"
+        >
+          <div
+            data-testid="test-radio-buttons"
+          >
+            <label
+              class="radio-button-list__form-checkbox-label form-checkbox-label"
+              data-testid="test-radio-label-0"
+            >
+              <div
+                class="radio-button-list__label-text checked"
+              >
+                Software development
+              </div>
+               
+              <input
+                class="form-checkbox-input"
+                name="radioBtn"
+                type="radio"
+                value="Software development"
+              />
+               
+              <div
+                class="checkmark"
+              />
+            </label>
+          </div>
+          <div
+            data-testid="test-radio-buttons"
+          >
+            <label
+              class="radio-button-list__form-checkbox-label form-checkbox-label"
+              data-testid="test-radio-label-1"
+            >
+              <div
+                class="radio-button-list__label-text"
+              >
+                Partnership
+              </div>
+               
+              <input
+                class="form-checkbox-input"
+                name="radioBtn"
+                type="radio"
+                value="Partnership"
+              />
+               
+              <div
+                class="checkmark"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
        
       <div
         class="modal-field-item field-item"
