@@ -27,6 +27,7 @@
     "test:unit:browser": "node ./jest -- --test=browser",
     "test:staging": "node ./jest && node ./jest/utils/sendCoverageToSlack.js",
     "test:e2e": "cypress run",
+    "test:update:snapshot": "npm run test:unit -- -u",
     "generate:coverage-badges": "node ./jest/utils/generateCoverageBadges.js -output './client/static'",
     "seo-analyze": "npm run build && npm run generate && node ./SEOAnalyzer/index.js",
     "slicemachine": "start-slicemachine --port 9999",
