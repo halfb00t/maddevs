@@ -35,6 +35,7 @@ exports[`PhasInfrastructureAsCodeResult component should render correctly 1`] = 
           class="case_result-card"
           description="without losses in performance and security"
           icon="chart"
+          style="position: relative; top: 20px;"
           title="Reduced by 35%"
         />
         <cardresult-stub
@@ -44,6 +45,7 @@ exports[`PhasInfrastructureAsCodeResult component should render correctly 1`] = 
           class="case_result-card"
           description="More secure data access Search time decreased initially to under 5 seconds and by now to ~250-300ms"
           icon="speed-card"
+          style="position: relative; top: 40px;"
           title="~250-300ms"
         />
       </div>

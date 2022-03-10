@@ -30,7 +30,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .featured-projects {
   padding-bottom: 150px;
   &__head {

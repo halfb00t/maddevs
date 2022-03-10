@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/vue'
+import { shallowMount } from '@vue/test-utils'
 import CustomerTestimonials from '@/prismicSlices/pageParts/CustomerTestimonials'
 
-const stubs = ['CustomerTestimonialsSlice', 'Testimonials']
+const stubs = ['CustomerTestimonialsSlice', 'Testimonials', 'LazyHydrate']
 
 const apiData = {
   animation: 'fade-up',
@@ -40,5 +41,17 @@ describe('CustomerTestimonials slice', () => {
     expect(screen.queryByTestId('first-variation')).toBeNull()
     expect(screen.queryByTestId('second-variation')).not.toBeNull()
     expect(container).toMatchSnapshot()
+  })
+
+  describe('Dynamic imports CustomerTestimonials', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(CustomerTestimonials)
+
+      const CustomerTestimonialsSlice = await container.vm.$options.components.CustomerTestimonialsSlice.call()
+      const Testimonials = await container.vm.$options.components.Testimonials.call()
+
+      expect(CustomerTestimonialsSlice.default.name).toBe('CustomerTestimonialsSlice')
+      expect(Testimonials.default.name).toBe('Testimonials')
+    })
   })
 })

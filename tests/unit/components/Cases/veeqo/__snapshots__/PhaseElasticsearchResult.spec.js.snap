@@ -33,6 +33,7 @@ exports[`PhaseElasticsearchResult component should render correctly 1`] = `
           class="case_result-card"
           description="We received massive positive feedback as Veeqo users were contacting customer"
           icon="message-card"
+          style="position: relative; top: 20px;"
           title="Feedback"
         />
         <cardresult-stub
@@ -41,6 +42,7 @@ exports[`PhaseElasticsearchResult component should render correctly 1`] = `
           class="case_result-card"
           description="Elasticsearch became more efficient and reliable without costing the customer more"
           icon="gears-card"
+          style="position: relative; top: 40px;"
           title="Elasticsearch"
         />
       </div>

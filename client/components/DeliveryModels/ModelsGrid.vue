@@ -1,25 +1,30 @@
 <template>
   <div class="container models-grid_container">
     <div class="models-grid">
-      <ModelCard
+      <LazyHydrate
         v-for="(modelKey, i) in Object.keys(models)"
         :key="modelKey"
-        :full="i === 2 || i === 3"
-        :uid="modelKey"
-        v-bind="models[modelKey]"
-      />
+        when-visible
+      >
+        <ModelCard
+          :full="i === 2 || i === 3"
+          :uid="modelKey"
+          v-bind="models[modelKey]"
+        />
+      </LazyHydrate>
     </div>
   </div>
 </template>
 
 <script>
-import ModelCard from '@/components/DeliveryModels/shared/ModelCard'
+import LazyHydrate from 'vue-lazy-hydration'
 import { deliveryModels } from '@/data/deliveryModels'
 
 export default {
   name: 'ModelsGrid',
   components: {
-    ModelCard,
+    LazyHydrate,
+    ModelCard: () => import('@/components/DeliveryModels/shared/ModelCard'),
   },
 
   data() {

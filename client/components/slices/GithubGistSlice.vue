@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VueEmbedGist
+    <VueGist
       v-if="isMounted"
       :gist-id="$prismic.asText(slice.primary.gist_id)"
       :file="$prismic.asText(slice.primary.file_name)"
@@ -9,13 +9,12 @@
 </template>
 
 <script>
-import VueEmbedGist from 'vue-embed-gist'
-import 'vue-embed-gist/dist/vue-embed-gist.css'
+import VueGist from '@/components/VueGist/VueGist'
 
 export default {
   name: 'GithubGistSlice',
   components: {
-    VueEmbedGist,
+    VueGist,
   },
 
   props: {

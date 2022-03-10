@@ -124,15 +124,15 @@ export default {
 
 /deep/ .cta-banner__info > a {
   padding: 17px 31px 17px 28px;
-  background-color: #EC1C24;
+  background-color: $bgcolor--red;
   border-radius: 4px;
   line-height: 100%;
   text-decoration: none;
-  color: #fff;
+  color: $text-color--white-primary;
   @include font('Inter', 18px, 400);
 
   &:active {
-    background-color: #b11218;
+    background-color: $bgcolor--carnelian;
   }
 }
 </style>

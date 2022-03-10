@@ -1,41 +1,51 @@
 <template>
   <section>
-    <About />
-    <WhyCityCam />
-    <ChallengesAndSolutions />
-    <Prototype />
-    <PowerSupply />
-    <DevicePerfecting />
-    <OngoingProgress />
-    <Technologies />
-    <Team />
+    <LazyHydrate when-visible>
+      <About />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <WhyCityCam />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ChallengesAndSolutions />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Prototype />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PowerSupply />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <DevicePerfecting />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <OngoingProgress />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Technologies />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Team />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-
-import About from '@/components/Cases/citycam/About'
-import WhyCityCam from '@/components/Cases/citycam/WhyCityCam'
-import ChallengesAndSolutions from '@/components/Cases/citycam/ChallengesAndSolutions'
-import Prototype from '@/components/Cases/citycam/Prototype'
-import PowerSupply from '@/components/Cases/citycam/PowerSupply'
-import DevicePerfecting from '@/components/Cases/citycam/DevicePerfecting'
-import OngoingProgress from '@/components/Cases/citycam/OngoingProgress'
-import Technologies from '@/components/Cases/citycam/Technologies'
-import Team from '@/components/Cases/citycam/Team'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Main',
   components: {
-    Team,
-    Technologies,
-    OngoingProgress,
-    DevicePerfecting,
-    PowerSupply,
-    Prototype,
-    ChallengesAndSolutions,
-    About,
-    WhyCityCam,
+    LazyHydrate,
+    About: () => import('@/components/Cases/citycam/About'),
+    WhyCityCam: () => import('@/components/Cases/citycam/WhyCityCam'),
+    ChallengesAndSolutions: () => import('@/components/Cases/citycam/ChallengesAndSolutions'),
+    Prototype: () => import('@/components/Cases/citycam/Prototype'),
+    PowerSupply: () => import('@/components/Cases/citycam/PowerSupply'),
+    DevicePerfecting: () => import('@/components/Cases/citycam/DevicePerfecting'),
+    OngoingProgress: () => import('@/components/Cases/citycam/OngoingProgress'),
+    Technologies: () => import('@/components/Cases/citycam/Technologies'),
+    Team: () => import('@/components/Cases/citycam/Team'),
   },
 }
 </script>

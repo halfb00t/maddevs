@@ -5,18 +5,43 @@ exports[`Main component should render correctly 1`] = `
   <div
     class="delivery-models"
   >
-    <banner-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <banner-stub />
+    </lazyhydrate-stub>
      
-    <modelsgrid-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <modelsgrid-stub />
+    </lazyhydrate-stub>
      
-    <presentation-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <presentation-stub />
+    </lazyhydrate-stub>
      
     <div
       class="delivery-models--bg-white"
     >
-      <testimonials-stub />
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <testimonials-stub />
+      </lazyhydrate-stub>
        
-      <ctabanner-stub />
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <ctabanner-stub />
+      </lazyhydrate-stub>
     </div>
   </div>
 </div>

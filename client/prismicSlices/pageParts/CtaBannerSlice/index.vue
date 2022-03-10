@@ -116,7 +116,7 @@ export default {
 
 <style lang="scss" scoped>
 .cta-banner-slice {
-  background-color: #fff;
+  background-color: $bgcolor--white-primary;
 
   &_content {
     box-sizing: border-box;
@@ -260,8 +260,8 @@ export default {
       line-height: 18px;
       display: block;
       letter-spacing: -0.4px;
-      color: #111111;
-      background-color: #FCFCFD;
+      color: $text-color--chinese-black;
+      background-color: $bgcolor--white-darken;
       padding: 0 8px;
     }
 
@@ -271,9 +271,9 @@ export default {
       display: block;
       margin-top: 2px;
       letter-spacing: -0.4px;
-      background-color: #FCFCFD;
+      background-color: $bgcolor--white-darken;
       padding: 0 8px;
-      color: #111111;
+      color: $text-color--chinese-black;
       @media screen and (max-width: 768px) {
         margin-top: 0;
       }

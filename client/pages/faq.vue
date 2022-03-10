@@ -1,17 +1,21 @@
 <template>
   <main class="main">
-    <FAQ />
+    <LazyHydrate when-visible>
+      <FAQ />
+    </LazyHydrate>
   </main>
 </template>
 
 <script>
-import FAQ from '@/components/core/FAQ'
+import LazyHydrate from 'vue-lazy-hydration'
 import { getMetadata, buildHead } from '@/data/seo'
 
 export default {
   name: 'MainFaq',
+
   components: {
-    FAQ,
+    LazyHydrate,
+    FAQ: () => import('@/components/core/FAQ'),
   },
 
   nuxtI18n: false,

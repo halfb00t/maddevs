@@ -102,122 +102,136 @@ exports[`BusinessModel component should render correctly 1`] = `
     </div>
      
     <div
-      class="case_business-models-grid"
+      class="cards"
     >
       <div
-        class="case_card background-color-silver case_business-models-grid__personal-card"
+        class="colored-cards card-grid-type--one-left-two-right"
       >
         <div
-          class="case_business-models-grid__personal-image"
+          class="colored-card colored-card--1 background-color-silver"
         >
-          <picture-stub
-            alt="Namba Food: Food and Grocery Delivery Service Couriers."
-            extension="png"
-            file="personal"
-            folder="nambafood"
-            height="256"
-            width="399"
-          />
-        </div>
-         
-        <div
-          class="case_business-models-grid__text-wrapper"
-        >
-          <h3
-            class="m-8_bottom case_title_h4"
+          <div
+            class="colored-card__image-wrapper"
           >
-            
-        Personal courier
-      
-          </h3>
+            <picture-stub
+              alt="Namba Food: Food and Grocery Delivery Service Couriers."
+              class="colored-card__image colored-card-image-personal"
+              extension="png"
+              file="personal"
+              folder="nambafood"
+              height="200"
+              width="396"
+            />
+          </div>
            
-          <p
-            class="case_paragraph"
+          <div
+            class="colored-card__footer"
           >
-            
-        The personal courier service works 24/7, enabling quick delivery for both organizations and individuals.
-        Regardless of the product’s nature, personal couriers deliver it on time and, if needed, anonymously.
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
+            >
+              
+      Personal courier
+    
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description"
+            >
+              
+        The personal courier service works 24/7, enabling quick delivery for both organizations and individuals. Regardless of the product’s nature, personal couriers deliver it on time and, if needed, anonymously.
       
-          </p>
+            </p>
+             
+          </div>
         </div>
-      </div>
-       
-      <div
-        class="case_business-models-grid__right-column"
-      >
         <div
-          class="case_card background-color-turquoise"
+          class="colored-card colored-card--2 background-color-turquoise"
         >
-          <h3
-            class="m-8_bottom case_title_h4"
-            style="color: rgb(255, 255, 255);"
-          >
-            
-        Outsource partners
-      
-          </h3>
+          <!---->
            
-          <p
-            class="case_paragraph"
-            style="color: rgb(255, 255, 255);"
+          <div
+            class="colored-card__footer"
           >
-            
-        Businesses running e-commerce websites, but wanting to outsource delivery services, can benefit from Namba
-        Food’s checkout page, which allows businesses to quickly integrate delivery without incurring 
-            <br />
-            
-        operational costs.
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+            >
+              
+      Outsource partners
+    
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description text-color-white"
+            >
+              
+        Businesses running e-commerce websites, but wanting to outsource delivery services, can benefit from Namba Food’s checkout page, which allows businesses to quickly integrate delivery without incurring operational costs.
       
-          </p>
+            </p>
+             
+          </div>
         </div>
-         
         <div
-          class="case_card background-color-berry"
+          class="colored-card colored-card--3 background-color-berry"
         >
-          <h3
-            class="m-8_bottom case_title_h4"
-            style="color: rgb(255, 255, 255);"
-          >
-            
-        Delivery of food and goods
-      
-          </h3>
+          <!---->
            
-          <p
-            class="case_paragraph"
-            style="color: rgb(255, 255, 255);"
+          <div
+            class="colored-card__footer"
           >
-            
-        Namba Food's delivery service positions itself as an intermediary body between goods and food service
-        providers and customers.
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+            >
+              
+      Delivery of food and goods
+    
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description text-color-white"
+            >
+              
+        Namba Food's delivery service positions itself as an intermediary body between goods and food service providers and customers.
       
-          </p>
+            </p>
+             
+          </div>
         </div>
-      </div>
-    </div>
-     
-    <div
-      class="case_card background-color-silver"
-    >
-      <h3
-        class="case_title_h4 m-8_bottom"
-      >
-        
+        <div
+          class="colored-card colored-card--4 background-color-silver"
+        >
+          <!---->
+           
+          <div
+            class="colored-card__footer"
+          >
+            <!---->
+             
+            <h3
+              class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
+            >
+              
       Namba Food API
     
-      </h3>
-       
-      <p
-        class="case_paragraph"
-      >
-        
-      Namba Food API allows businesses to integrate the API into any mobile payment application. As a result,
-      end-users can quickly order goods and services without leaving the app using the app’s own payment system. Such
-      API benefits businesses because end users use the payment method defined by the mobile app. At the moment, Mbank
-      by Commercial Bank Kyrgyzstan and Balance by Beeline, a telecommunication service provider, have successfully
-      integrated Namba Food API into their mobile apps.
-    
-      </p>
+            </h3>
+             
+            <p
+              class="case_paragraph colored-card__description"
+            >
+              
+        Namba Food API allows businesses to integrate the API into any mobile payment application. As a result, end-users can quickly order goods and services without leaving the app using the app’s own payment system. Such API benefits businesses because end users use the payment method defined by the mobile app. At the moment, Mbank by Commercial Bank Kyrgyzstan and Balance by Beeline, a telecommunication service provider, have successfully integrated Namba Food API into their mobile apps.
+      
+            </p>
+             
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

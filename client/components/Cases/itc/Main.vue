@@ -1,46 +1,58 @@
 <template>
   <section>
     <div id="case-first-section" />
-    <About />
-    <ProjectMission />
-    <Challenges />
-    <SavingTime />
-    <CollectingDataForAnalysis />
-    <DevelopingTheInnovation />
-    <Technologies />
-    <Team />
-    <FuturePlans />
-    <Partnership />
+    <LazyHydrate when-visible>
+      <About />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ProjectMission />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Challenges />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <SavingTime />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <CollectingDataForAnalysis />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <DevelopingTheInnovation />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Technologies />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Team />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <FuturePlans />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Partnership />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import About from '@/components/Cases/itc/About'
-import ProjectMission from '@/components/Cases/itc/ProjectMission'
-import Team from '@/components/Cases/itc/Team'
-import Technologies from '@/components/Cases/itc/Technologies'
-import Challenges from '@/components/Cases/itc/Challenges'
-import SavingTime from '@/components/Cases/itc/SavingTime'
-import CollectingDataForAnalysis from '@/components/Cases/itc/CollectingDataForAnalysis'
-import DevelopingTheInnovation from '@/components/Cases/itc/DevelopingTheInnovation'
-import FuturePlans from '@/components/Cases/itc/FuturePlans'
-import Partnership from '@/components/Cases/itc/Partnership'
+import LazyHydrate from 'vue-lazy-hydration'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import countUp from '@/helpers/countUp'
 
 export default {
   name: 'Main',
   components: {
-    About,
-    ProjectMission,
-    Team,
-    Technologies,
-    Challenges,
-    SavingTime,
-    CollectingDataForAnalysis,
-    DevelopingTheInnovation,
-    FuturePlans,
-    Partnership,
+    LazyHydrate,
+    About: () => import('@/components/Cases/itc/About'),
+    ProjectMission: () => import('@/components/Cases/itc/ProjectMission'),
+    Team: () => import('@/components/Cases/itc/Team'),
+    Technologies: () => import('@/components/Cases/itc/Technologies'),
+    Challenges: () => import('@/components/Cases/itc/Challenges'),
+    SavingTime: () => import('@/components/Cases/itc/SavingTime'),
+    CollectingDataForAnalysis: () => import('@/components/Cases/itc/CollectingDataForAnalysis'),
+    DevelopingTheInnovation: () => import('@/components/Cases/itc/DevelopingTheInnovation'),
+    FuturePlans: () => import('@/components/Cases/itc/FuturePlans'),
+    Partnership: () => import('@/components/Cases/itc/Partnership'),
   },
 
   mixins: [

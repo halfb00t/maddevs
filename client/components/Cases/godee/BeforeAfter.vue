@@ -6,11 +6,10 @@
       </h2>
       <div class="container_regular">
         <UIBeforeAfterImage
-          :before-image="$getMediaFromS3(`/images/Cases/godee/png/application-before.png`)"
-          :after-image="$getMediaFromS3(`/images/Cases/godee/png/application-after.png`)"
-          base-width="1000"
-          base-height="578.47"
-          alt="GoDee Public Transportation App at 2018 and now."
+          :value="50"
+          :step="0.05"
+          :before-image="$getMediaFromS3(`/images/Cases/godee/png/application-after.png`)"
+          :after-image="$getMediaFromS3(`/images/Cases/godee/png/application-before.png`)"
         />
       </div>
     </section>

@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component should render correctly 1`] = `
+<div>
+  <section>
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <!---->
+    </lazyhydrate-stub>
+  </section>
+</div>
+`;

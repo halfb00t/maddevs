@@ -182,54 +182,99 @@ exports[`DevelopingTheInnovation component should render correctly 1`] = `
       </h3>
        
       <div
-        class="case_cards-container m-48_bottom media-m-24_bottom"
+        class="m-48_bottom media-m-24_bottom"
       >
         <div
-          class="case_card background-color-silver"
+          class="colored-cards card-grid-type--two-two"
         >
-          <p
-            class="case_paragraph"
+          <div
+            class="colored-card colored-card--1 background-color-silver"
           >
-            
-          The backend structure allows for future modifications and augmentations, making the app scalable and adaptable.
-        
-          </p>
-        </div>
-         
-        <div
-          class="case_card background-color-silver"
-        >
-          <p
-            class="case_paragraph"
+            <!---->
+             
+            <div
+              class="colored-card__footer"
+            >
+              <!---->
+               
+              <!---->
+               
+              <p
+                class="case_paragraph colored-card__description"
+              >
+                
+        The backend structure allows for future modifications and augmentations, making the app scalable and adaptable.
+      
+              </p>
+               
+            </div>
+          </div>
+          <div
+            class="colored-card colored-card--2 background-color-silver"
           >
-            
-          Data processing can be flexibly optimised separately for the read side and the write side.
-        
-          </p>
-        </div>
-         
-        <div
-          class="case_card background-color-silver"
-        >
-          <p
-            class="case_paragraph"
+            <!---->
+             
+            <div
+              class="colored-card__footer"
+            >
+              <!---->
+               
+              <!---->
+               
+              <p
+                class="case_paragraph colored-card__description"
+              >
+                
+        Data processing can be flexibly optimised separately for the read side and the write side.
+      
+              </p>
+               
+            </div>
+          </div>
+          <div
+            class="colored-card colored-card--3 background-color-silver"
           >
-            
-          Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities.
-        
-          </p>
-        </div>
-         
-        <div
-          class="case_card background-color-silver"
-        >
-          <p
-            class="case_paragraph"
+            <!---->
+             
+            <div
+              class="colored-card__footer"
+            >
+              <!---->
+               
+              <!---->
+               
+              <p
+                class="case_paragraph colored-card__description"
+              >
+                
+        Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities.
+      
+              </p>
+               
+            </div>
+          </div>
+          <div
+            class="colored-card colored-card--4 background-color-silver"
           >
-            
-          The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles.
-        
-          </p>
+            <!---->
+             
+            <div
+              class="colored-card__footer"
+            >
+              <!---->
+               
+              <!---->
+               
+              <p
+                class="case_paragraph colored-card__description"
+              >
+                
+        The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles.
+      
+              </p>
+               
+            </div>
+          </div>
         </div>
       </div>
        

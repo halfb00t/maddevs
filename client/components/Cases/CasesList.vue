@@ -2,22 +2,26 @@
   <div class="container">
     <section class="cases-list">
       <!-- Card -->
-      <CasesListItem
+      <LazyHydrate
         v-for="(item, i) of casesList.slice(0, limit)"
         :key="`case_list_item_${i}`"
-        :video-file-name="item.video"
-        :logo="item.logo"
-        :subtitle="item.subtitle"
-        :title-tag="itemTitleTag"
-        :title="item.title"
-        :desc="item.desc"
-        :width="item.width"
-        :link="item.link"
-        :poster-link="item.poster"
-        :item="item"
-        :class="`cases-list_${item.id}`"
-        data-testid="test-case-card"
-      />
+        when-visible
+      >
+        <CasesListItem
+          :video-file-name="item.video"
+          :logo="item.logo"
+          :subtitle="item.subtitle"
+          :title-tag="itemTitleTag"
+          :title="item.title"
+          :desc="item.desc"
+          :width="item.width"
+          :link="item.link"
+          :poster-link="item.poster"
+          :item="item"
+          :class="`cases-list_${item.id}`"
+          data-testid="test-case-card"
+        />
+      </LazyHydrate>
     </section>
     <NuxtLink
       to="/case-studies/"
@@ -29,13 +33,18 @@
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import mainMixins from '@/mixins/mainMixins'
-import CasesListItem from '@/components/Cases/CasesListItem'
 import { casesList } from '@/data/casesList'
 
 export default {
   name: 'CasesList',
-  components: { CasesListItem },
+
+  components: {
+    CasesListItem: () => import('@/components/Cases/CasesListItem'),
+    LazyHydrate,
+  },
+
   mixins: [mainMixins],
   props: {
     itemTitleTag: {
@@ -107,7 +116,7 @@ export default {
   grid-auto-flow: dense;
   gap: 30px;
   z-index: 1;
-  background-color: #111213;
+  background-color: $bgcolor--black;
 
   @media screen and (max-width: 1140px) {
     grid-template-columns: repeat(4, 1fr);
@@ -170,7 +179,7 @@ export default {
       justify-content: flex-start;
       position: relative;
       z-index: 1;
-      color: #F4F4F4;
+      color: $text-color--cultured;
 
       * {
         @include font('Inter', 16px, 400);
@@ -219,8 +228,8 @@ export default {
         line-height: 100%;
         text-decoration: none;
         padding: 8px;
-        background-color: #fff;
-        color: #000;
+        background-color: $bgcolor--white-primary;
+        color: $text-color--black;
         border-radius: 4px;
 
         @media screen and (max-width: 375px) {
@@ -232,7 +241,7 @@ export default {
 
   &_see-more {
     @include font('Inter', 16px, 400);
-    color: #EC1C24;
+    color: $text-color--red;
     font-weight: normal;
     line-height: 100%;
     letter-spacing: -0.013em;
@@ -253,7 +262,7 @@ export default {
         position: absolute;
         bottom: 0;
         left: 0;
-        background-color: #EC1C24;
+        background-color: $bgcolor--red;
       }
     }
   }

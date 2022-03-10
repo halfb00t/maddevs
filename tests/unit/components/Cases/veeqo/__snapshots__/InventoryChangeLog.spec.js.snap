@@ -5,7 +5,9 @@ exports[`InventoryChangeLog component should render correctly 1`] = `
   <div
     class="case_container container_full background-color-silver m-48_bottom"
   >
-    <div>
+    <div
+      style="position: relative; top: 50px;"
+    >
       <div
         class="case_image-wrapp"
       >

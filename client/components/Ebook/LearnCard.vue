@@ -56,7 +56,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: #1D1D1F;
+  background-color: $bgcolor--black-pale;
   border-radius: 4px;
   padding: 24px;
 
@@ -70,7 +70,7 @@ export default {
     @include font('Inter', 21px, 600);
     line-height: 24px;
     letter-spacing: -1px;
-    color: #fff;
+    color: $text-color--white-primary;
     margin-bottom: 21px;
     padding: 0;
   }
@@ -79,7 +79,7 @@ export default {
     @include font('Inter', 16px, 400);
     line-height: 24px;
     letter-spacing: -0.4px;;
-    color: #CFCFD0;
+    color: $text-color--grey-20-percent;
   }
 }
 </style>

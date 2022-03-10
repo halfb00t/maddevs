@@ -181,7 +181,7 @@ export default {
     font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    color: #101113;
+    color: $text-color--black-oil;
     @media screen and (max-width: 1280px) {
       right: 20px;
     }
@@ -196,7 +196,7 @@ export default {
       top: auto;
       bottom: 0;
       right: 0;
-      background-color: #f4f4f4;
+      background-color: $bgcolor--silver;
       padding: 5px;
     }
     span {

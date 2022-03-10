@@ -186,7 +186,7 @@ export default {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-color: #000;
+      background-color: $bgcolor--black-primary;
       box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.45);
       cursor: default;
       display: block;
@@ -229,7 +229,7 @@ export default {
       top: 0;
       right: 50%;
       transform: translateX(50%);
-      background-color: #fff;
+      background-color: $bgcolor--white-primary;
       opacity: 0.2;
     }
 

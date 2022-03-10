@@ -15,6 +15,8 @@
       <div class="case-image-wrapper m-96_bottom media-m-48_bottom">
         <img
           v-lazy-load
+          :width="1028"
+          :height="612"
           :data-src="$getMediaFromS3('/images/Cases/guardrails/png/dashboard-api-v2.png')"
           alt="Dashboard version 2"
           class="case-image-wrapper__image"
@@ -45,7 +47,7 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 
 export default {
-  name: 'APIforDashboard',
+  name: 'ApiForDashboard',
   components: {
     TextParagraph,
     TextQuoteBox,

@@ -20,7 +20,7 @@ jest.mock('../../services/HuntflowService', () => ({
 
 jest.mock('../../services/IPService', () => ({
   getIPByRequest: jest.fn(),
-  getLocationByIP: jest.fn(),
+  getLocation: jest.fn(),
   isBlockedIP: jest.fn(),
 }))
 
@@ -28,7 +28,7 @@ jest.mock('../../services/IPService', () => ({
 const sendApplication = jest.fn()
 const sendEmail = jest.fn(() => Promise.resolve({ data: 'data' }))
 const getIPByRequest = jest.fn(() => Promise.resolve('212.42.107.134'))
-const getLocationByIP = jest.fn(() => Promise.resolve({
+const getLocation = jest.fn(() => Promise.resolve({
   country: 'Kyrgyzstan',
   city: 'Bishkek',
 }))
@@ -40,7 +40,7 @@ emailsService.sendMailFromVariables.mockImplementation(sendEmail)
 emailsService.sendCVResponseMail.mockImplementation(sendEmail)
 huntflowService.sendApplication.mockImplementation(sendApplication)
 IPService.getIPByRequest.mockImplementation(getIPByRequest)
-IPService.getLocationByIP.mockImplementation(getLocationByIP)
+IPService.getLocation.mockImplementation(getLocation)
 IPService.isBlockedIP.mockImplementation(isBlockedIP)
 reCaptcha.reCaptchaVerification.mockImplementation(verification)
 

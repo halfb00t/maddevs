@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import { isMobile } from 'mobile-device-detect'
+import { isMobile } from '@/helpers/isMobileDeviceDetect'
 import mainMixins from '@/mixins/mainMixins'
 
 export default {
@@ -88,7 +88,7 @@ export default {
 
   data() {
     return {
-      isMobile,
+      isMobile: false,
       title: this.slice?.primary?.title,
       subtitle: this.slice?.primary?.subtitle,
       width: this.slice?.primary?.width,
@@ -111,6 +111,10 @@ export default {
       if (this.colorTheme === 'black') return 'black'
       return 'white'
     },
+  },
+
+  mounted() {
+    this.isMobile = isMobile()
   },
 
   methods: {
@@ -143,11 +147,11 @@ export default {
   }
 
   &--white-theme {
-    background-color: #fff;
+    background-color: $bgcolor--white-primary;
   }
 
   &--black-theme {
-    background-color: #000;
+    background-color: $bgcolor--black-primary;
   }
 
   &-link {
@@ -269,7 +273,7 @@ export default {
     justify-content: flex-start;
     position: relative;
     z-index: 1;
-    color: #F4F4F4;
+    color: $text-color--cultured;
 
     * {
       @include font('Inter', 16px, 400);
@@ -328,8 +332,8 @@ export default {
       font-size: 16px;
       line-height: 100%;
       text-decoration: none;
-      background-color: #fff;
-      color: #000;
+      background-color: $bgcolor--white-primary;
+      color: $text-color--black;
       padding: 0 8px;
       border-radius: 4px;
       overflow: hidden;

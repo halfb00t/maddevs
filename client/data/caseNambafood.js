@@ -4,7 +4,7 @@ export const usageScenarios = [
     description: 'Offers easy-to-use interface and fast navigation for Namba Food users.',
     classList: {
       cardColor: 'background-color-red',
-      uniqueСlass: 'red-card',
+      uniqueClass: 'red-card',
     },
 
     fileName: 'apple-iphone-xr-silver',
@@ -16,7 +16,7 @@ export const usageScenarios = [
     description: 'Allows planning a route and quickly getting information about orders.',
     classList: {
       cardColor: 'background-color-black',
-      uniqueСlass: 'black-card',
+      uniqueClass: 'black-card',
     },
 
     fileName: 'samsung-galaxy-s20-cosmic-gray',
@@ -28,7 +28,7 @@ export const usageScenarios = [
     description: 'Includes full control of the ordering process from order acceptance to status tracking.',
     classList: {
       cardColor: 'background-color-turquoise',
-      uniqueСlass: 'turquoise-card',
+      uniqueClass: 'turquoise-card',
     },
 
     fileName: 'system-for-call-center',
@@ -40,7 +40,7 @@ export const usageScenarios = [
     description: 'Facilitates uploading the menu and updating information about services.',
     classList: {
       cardColor: 'background-color-silver',
-      uniqueСlass: 'white-card',
+      uniqueClass: 'white-card',
     },
 
     fileName: 'sjms-analytics-mini',
@@ -223,6 +223,73 @@ export const team = [
     position: 'Full-stack Developer',
     image: {
       file: 'belek-abylov',
+    },
+  },
+]
+export const businessModel = [
+  {
+    title: 'Personal courier',
+    descriptions: 'The personal courier service works 24/7, enabling quick delivery for both organizations and individuals. Regardless of the product’s nature, personal couriers deliver it on time and, if needed, anonymously.',
+    image: {
+      width: 399,
+      height: 256,
+      folder: 'nambafood',
+      file: 'personal',
+      alt: 'Namba Food: Food and Grocery Delivery Service Couriers.',
+    },
+    colors: {
+      card: 'silver',
+    },
+  },
+  {
+    title: 'Outsource partners',
+    descriptions: 'Businesses running e-commerce websites, but wanting to outsource delivery services, can benefit from Namba Food’s checkout page, which allows businesses to quickly integrate delivery without incurring operational costs.',
+    colors: {
+      card: 'turquoise',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Delivery of food and goods',
+    descriptions: 'Namba Food\'s delivery service positions itself as an intermediary body between goods and food service providers and customers.',
+    colors: {
+      card: 'berry',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Namba Food API',
+    descriptions: 'Namba Food API allows businesses to integrate the API into any mobile payment application. As a result, end-users can quickly order goods and services without leaving the app using the app’s own payment system. Such API benefits businesses because end users use the payment method defined by the mobile app. At the moment, Mbank by Commercial Bank Kyrgyzstan and Balance by Beeline, a telecommunication service provider, have successfully integrated Namba Food API into their mobile apps.',
+    colors: {
+      card: 'silver',
+    },
+  },
+]
+export const swiftCards = [
+  {
+    descriptions: 'Track the couriers\' locations on a map and provide statuses of all orders and couriers.',
+    colors: {
+      card: 'silver',
+    },
+  },
+  {
+    descriptions: 'Extract customers’ notes and communicate them to couriers.',
+    colors: {
+      card: 'silver',
+    },
+  },
+  {
+    descriptions: 'Assign orders and prepare reports.',
+    colors: {
+      card: 'silver',
+    },
+  },
+  {
+    descriptions: 'Call curriers using Free SWITCH microservice.',
+    colors: {
+      card: 'silver',
     },
   },
 ]

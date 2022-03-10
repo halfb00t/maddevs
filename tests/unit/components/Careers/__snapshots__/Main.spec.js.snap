@@ -7,20 +7,50 @@ exports[`Main component should render correctly 1`] = `
   >
     <banner-stub />
      
-    <projectscountries-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <projectscountries-stub />
+    </lazyhydrate-stub>
      
-    <benefits-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <benefits-stub />
+    </lazyhydrate-stub>
      
-    <keymetrics-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <keymetrics-stub />
+    </lazyhydrate-stub>
      
     <div
       class="careers_white-section"
     >
-      <employeesbenefits-stub />
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <employeesbenefits-stub />
+      </lazyhydrate-stub>
        
-      <openpositions-stub />
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <openpositions-stub />
+      </lazyhydrate-stub>
        
-      <ctabanner-stub />
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <ctabanner-stub />
+      </lazyhydrate-stub>
     </div>
      
     <scrolltopositionslink-stub />

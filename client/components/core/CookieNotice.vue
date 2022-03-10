@@ -56,7 +56,7 @@ export default {
   left: 0;
   right: 0;
   z-index: 10000000000;
-  background-color: #101113;
+  background-color: $text-color--black-oil;
   padding: 25px 20px;
   @media screen and (max-width: 400px) {
     padding: 20px;
@@ -74,10 +74,10 @@ export default {
   }
 
   &__message {
-    color: #fff;
+    color: $text-color--white-primary;
     margin-right: 50px;
     &-link {
-      color: #fff;
+      color: $text-color--white-primary;
       text-decoration: underline;
     }
     @include font('Inter', 14px, 400);

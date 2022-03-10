@@ -10,7 +10,13 @@
           v-for="(item, i) of items"
           :key="`case-list-slice_item_${i}`"
           :video-file-name="item.video"
-          :logo="{folder: item.folder, file: item.file, alt: item.alt, width: item.logoWidth, height: item.logoHeight}"
+          :logo="{
+            folder: item.folder,
+            file: item.file,
+            alt: item.alt,
+            width: item.logoWidth,
+            height: item.logoHeight
+          }"
           :subtitle="item.subtitle"
           :title="item.title"
           :desc="item.description"
@@ -26,6 +32,7 @@
 <script>
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import mainMixins from '@/mixins/mainMixins'
 import CasesListItem from '@/components/Cases/CasesListItem'
 
 export default {
@@ -37,7 +44,7 @@ export default {
     anchorPlacement: 'top-center',
     duration: 1000,
     once: true,
-  })],
+  }), mainMixins],
 
   props: {
     slice: {

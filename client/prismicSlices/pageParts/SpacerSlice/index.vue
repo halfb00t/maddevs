@@ -78,7 +78,7 @@ export default {
   width: 100%;
   display: block;
   position: relative;
-  background-color: #fff;
+  background-color: $bgcolor--white-primary;
   margin: -1px 0;
   z-index: -1;
 }

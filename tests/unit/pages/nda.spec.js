@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import Mainnda from '@/pages/nda'
+
+const stubs = ['LazyHydrate']
 
 const META_DATA = {
   description: 'Signing an NDA has been a standard practice at Mad Devs for each employee on the first day of work: we understand the importance of confidentiality in our clients\' projects.',
@@ -21,14 +23,16 @@ const META_DATA = {
 
 describe('Nda page', () => {
   it('should render correctly', () => {
-    render(Mainnda, {
+    const { container } = render(Mainnda, {
+      stubs,
     })
 
-    expect(screen.getByText(/All staff members, including contractors and consultants working for/i)).toBeTruthy()
+    expect(container).toMatchSnapshot()
   })
 
   it('should correct work head method', () => {
     const wrapper = shallowMount(Mainnda, {
+      stubs,
     })
 
     const actual = wrapper.vm.$options.head.call(wrapper.vm)
@@ -36,6 +40,18 @@ describe('Nda page', () => {
     expect(actual.meta).toHaveLength(Object.keys(META_DATA).length)
     actual.meta.forEach(meta => {
       expect(META_DATA[meta.name] || META_DATA[meta.property]).toBe(meta.content)
+    })
+  })
+
+  describe('Dynamic imports Mainnda component NDA', () => {
+    it('should correctly import component', async () => {
+      const container = shallowMount(Mainnda, {
+        stubs,
+      })
+
+      const NDA = await container.vm.$options.components.NDA.call()
+
+      expect(NDA.default.name).toBe('NDA')
     })
   })
 })

@@ -59,7 +59,7 @@ export default {
   padding-top: 62px;
   height: 100vh;
   min-height: 568px;
-  background: linear-gradient(180deg, rgba(17, 18, 19, 0) 75%, #111213 100%);
+  background: linear-gradient(180deg, rgba(17, 18, 19, 0) 75%, $bgcolor--black 100%);
   overflow: hidden;
   &__image {
     display: block;

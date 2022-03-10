@@ -24,6 +24,8 @@
       <Swiper
         :components="devicePerfectingSlides"
         :safari-top-bar="false"
+        :width="1026"
+        :height="525"
       />
     </div>
     <div class="container_regular">

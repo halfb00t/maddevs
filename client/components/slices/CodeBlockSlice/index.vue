@@ -12,13 +12,13 @@
 <script>
 import { PrismEditor } from 'vue-prism-editor'
 import 'vue-prism-editor/dist/prismeditor.min.css'
-
 import 'prismjs'
 import Prism from 'prismjs/components/prism-core.min'
 import '@/components/slices/CodeBlockSlice/highlights'
 
 export default {
   name: 'CodeblockSlice',
+
   components: {
     PrismEditor,
   },

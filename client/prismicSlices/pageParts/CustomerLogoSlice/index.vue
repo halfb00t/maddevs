@@ -19,7 +19,8 @@
           data-testid="customer-logo-slice-item"
         >
           <img
-            :src="customer.logo.url"
+            v-lazy-load
+            :data-src="customer.logo.url"
             :alt="customer.logo.alt || 'Image'"
           >
         </div>
@@ -188,7 +189,7 @@ export default {
         color: $text-color--white;
       }
       &_logo {
-        background-color: #191A1B;
+        background-color: $bgcolor--eerie-black;
       }
     }
   }

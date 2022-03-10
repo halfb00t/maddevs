@@ -76,12 +76,12 @@ export default {
     margin-top: 37px;
 
     /deep/ .metrica-card {
-      background-color: #1D1D1F;
+      background-color: $bgcolor--black-pale;
       padding: 22px 47px 30px;
 
       &_title,
       &_description {
-        color: #CFCFD0;
+        color: $text-color--grey-20-percent;
       }
     }
 

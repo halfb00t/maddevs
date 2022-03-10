@@ -48,7 +48,7 @@ export default {
       font-size: 17px;
       line-height: 166%;
       letter-spacing: -0.035em;
-      color: #F4F4F4;
+      color: $text-color--cultured;
       margin-bottom: 15px;
       @include font('Inter', 14px, 400);
     }

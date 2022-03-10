@@ -1,17 +1,20 @@
 <template>
   <main class="main">
-    <NDA />
+    <LazyHydrate when-visible>
+      <NDA />
+    </LazyHydrate>
   </main>
 </template>
 
 <script>
-import NDA from '@/components/core/NDA'
+import LazyHydrate from 'vue-lazy-hydration'
 import { getMetadata, buildHead } from '@/data/seo'
 
 export default {
   name: 'MainNda',
   components: {
-    NDA,
+    NDA: () => import('@/components/core/NDA'),
+    LazyHydrate,
   },
 
   nuxtI18n: false,

@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const mkdirp = require('mkdirp')
 const { get } = require('https')
-const { readFile, writeFile } = require('fs')
+const {
+  readFile, writeFile, existsSync, mkdirSync,
+} = require('fs')
 
 /**
  * Will lookup the argument in the cli arguments list and will return a
@@ -67,12 +68,12 @@ const writeBadgeInFolder = (key, res) => {
 
 const getBadgeByKey = report => key => {
   const url = getBadge(report, key)
-
   download(url, async (err, res) => {
     if (err) throw err
-
     try {
-      await mkdirp(outputPath)
+      if (!existsSync(outputPath)) {
+        mkdirSync(outputPath)
+      }
       writeBadgeInFolder(key, res)
     } catch (error) {
       console.error(`Could not create output directory ${error}`)

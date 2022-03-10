@@ -17,6 +17,8 @@
         <!--        todo add shadow to img-->
         <img
           v-lazy-load
+          :width="1028"
+          :height="596"
           :data-src="$getMediaFromS3('/images/Cases/guardrails/png/cli.png')"
           alt="Guardrails CLI"
           class="case-image-wrapper__image"
@@ -43,7 +45,7 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 
 export default {
-  name: 'HighLevelOverview',
+  name: 'CliandKubernetes',
   components: {
     TextParagraph,
   },
