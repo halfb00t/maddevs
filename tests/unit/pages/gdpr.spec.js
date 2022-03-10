@@ -1,6 +1,8 @@
-import { render, screen } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import MainGdpr from '@/pages/gdpr'
+
+const stubs = ['LazyHydrate']
 
 const META_DATA = {
   description: 'Mad Devs is committed to complying with the data protection and privacy rules in the EU General Data Protection Regulation (GDPR).',
@@ -21,19 +23,35 @@ const META_DATA = {
 
 describe('Gdpr page', () => {
   it('should render correctly', () => {
-    render(MainGdpr, {})
+    const { container } = render(MainGdpr, {
+      stubs,
+    })
 
-    expect(screen.getByText(/Compliance Commitment/i).className).toBe('gdpr__title')
+    expect(container).toMatchSnapshot()
   })
 
   it('should correct work head method', () => {
-    const wrapper = shallowMount(MainGdpr, {})
+    const wrapper = shallowMount(MainGdpr, {
+      stubs,
+    })
 
     const actual = wrapper.vm.$options.head.call(wrapper.vm)
 
     expect(actual.meta).toHaveLength(Object.keys(META_DATA).length)
     actual.meta.forEach(meta => {
       expect(META_DATA[meta.name] || META_DATA[meta.property]).toBe(meta.content)
+    })
+  })
+
+  describe('Dynamic imports MainGdpr component Main', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(MainGdpr, {
+        stubs,
+      })
+
+      const GDPR = await container.vm.$options.components.GDPR.call()
+
+      expect(GDPR.default.name).toBe('GDPR')
     })
   })
 })

@@ -17,8 +17,8 @@
           </h3>
         </div>
         <div
-          v-prlx="animationSettings"
-          class="case_dashboard-item case_animate-text"
+          v-mad-parallax="animationSettings"
+          class="case_dashboard-item"
         >
           <TextParagraphUppercase class="case_dashboard-desc m-8_bottom media-m-6_bottom">
             Subsystems
@@ -29,8 +29,10 @@
         </div>
       </div>
     </div>
-    <div v-prlx="animationSettings">
-      <div class="case_image-wrapp">
+    <div v-mad-parallax="animationSettings">
+      <div
+        class="case_image-wrapp"
+      >
         <Picture
           folder="veeqo"
           file="high-level"
@@ -50,6 +52,7 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextParagraphUppercase from '@/components/Cases/shared/TextParagraphUppercase'
 import Picture from '@/components/Cases/shared/Picture'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'HighLevelOverview',
@@ -59,17 +62,19 @@ export default {
     Picture,
   },
 
+  directives: {
+    MadParallax,
+  },
+
   data() {
     return {
       animationSettings: {
         reverse: true,
-        limit: {
-          min: -30,
-          max: 0,
-        },
-
-        mobileMaxWidth: 961,
-        fromBottom: true,
+        maxMove: 30,
+        customMove: true,
+        speed: 0.3,
+        startPoint: 3,
+        setIndentTop: true,
       },
     }
   },

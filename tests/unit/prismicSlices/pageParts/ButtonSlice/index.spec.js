@@ -25,6 +25,8 @@ const getProps = params => ({
   },
 })
 
+const stubs = ['UILinkButton', 'LazyHydrate', 'UIOutlinedButton', 'UIButton']
+
 describe('Button slice', () => {
   it('should correctly render UIButton', () => {
     const props = getProps(apiData)
@@ -32,6 +34,7 @@ describe('Button slice', () => {
 
     const { container } = render(ButtonSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('button-ui')).not.toBeNull()
@@ -46,6 +49,7 @@ describe('Button slice', () => {
 
     const { container } = render(ButtonSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('button-ui')).toBeNull()
@@ -60,6 +64,7 @@ describe('Button slice', () => {
 
     const { container } = render(ButtonSlice, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('button-ui')).toBeNull()
@@ -182,6 +187,25 @@ describe('Button slice', () => {
       })
 
       expect(wrapper.vm.sliceAlignment).toBe('right')
+    })
+  })
+
+  describe('Dynamic imports ButtonSlice', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(ButtonSlice, {
+        propsData: getProps({
+          ...apiData,
+        }),
+      })
+
+      const UILinkButton = await container.vm.$options.components.UILinkButton.call()
+      const UIOutlinedButton = await container.vm.$options.components.UIOutlinedButton.call()
+      const UIButton = await container.vm.$options.components.UIButton.call()
+
+      expect(UILinkButton.default.name).toBe('UILinkButton')
+      expect(UIOutlinedButton.default.name).toBe('UIOutlinedButton')
+      expect(UIButton.default.name).toBe('UIButton')
+      expect(container.vm.$options.props.slice.default.call()).toEqual({})
     })
   })
 })

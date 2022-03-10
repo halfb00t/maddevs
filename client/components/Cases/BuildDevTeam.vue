@@ -48,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 .build-dev-team {
   &_wrapper {
-    background-color: #fff;
+    background-color: $bgcolor--white-primary;
     padding-bottom: 100px;
     margin-top: -1px;
     @media screen and (max-width: 768px) {

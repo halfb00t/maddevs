@@ -64,6 +64,6 @@ describe('TeamCards slice', () => {
       }),
     })
     const img = screen.getAllByTestId('item-img')[0]
-    expect(img.getAttribute('src')).toEqual('https://google.com/')
+    expect(img.getAttribute('data-src')).toEqual('https://google.com/')
   })
 })

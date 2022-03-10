@@ -19,7 +19,7 @@ const META_DATA = {
   'twitter:url': 'https://maddevs.io/case-studies/',
 }
 
-const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam']
+const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam', 'LazyHydrate']
 
 const mocks = {
   $lazyLoad: {
@@ -54,6 +54,27 @@ describe('Index page', () => {
     expect(actual.meta).toHaveLength(Object.keys(META_DATA).length)
     actual.meta.forEach(meta => {
       expect(META_DATA[meta.name] || META_DATA[meta.property]).toBe(meta.content)
+    })
+  })
+
+  describe('Dymanic imports index', () => {
+    it('should find text in dymanic imports', async () => {
+      const container = shallowMount(Index, {
+        directives,
+        mocks: {
+          $getMediaFromS3: () => 'img.jpg',
+        },
+      })
+
+      const TitleDesc = await container.vm.$options.components.TitleDesc.call()
+      const CasesList = await container.vm.$options.components.CasesList.call()
+      const Customers = await container.vm.$options.components.Customers.call()
+      const BuildDevTeam = await container.vm.$options.components.BuildDevTeam.call()
+
+      expect(TitleDesc.default.name).toBe('TitleDesc')
+      expect(CasesList.default.name).toBe('CasesList')
+      expect(Customers.default.name).toBe('Customers')
+      expect(BuildDevTeam.default.name).toBe('BuildDevTeam')
     })
   })
 })

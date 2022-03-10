@@ -9,7 +9,7 @@
           v-for="result in infrastructureAsCodeResult"
           v-bind="result"
           :key="result.title"
-          v-prlx="result.animationSettings"
+          v-mad-parallax="result.animationSettings"
           class="case_result-card"
         />
       </div>
@@ -20,11 +20,16 @@
 <script>
 import CardResult from '@/components/Cases/veeqo/CardResult'
 import { infrastructureAsCodeResult } from '@/data/caseVeeqo'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'PhasInfrastructureAsCodeResult',
   components: {
     CardResult,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {

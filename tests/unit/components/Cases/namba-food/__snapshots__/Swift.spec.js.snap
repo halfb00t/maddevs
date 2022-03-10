@@ -47,6 +47,8 @@ exports[`Swift component should render correctly 1`] = `
                   extension="jpg"
                   file="admin"
                   folder="nambafood"
+                  height="525"
+                  width="1026"
                 />
                  
                 <!---->
@@ -59,6 +61,8 @@ exports[`Swift component should render correctly 1`] = `
                   extension="jpg"
                   file="dashboard"
                   folder="nambafood"
+                  height="525"
+                  width="1026"
                 />
                  
                 <!---->
@@ -138,48 +142,95 @@ exports[`Swift component should render correctly 1`] = `
       </div>
        
       <div
-        class="case_delivery-control-cards m-72_bottom media-m-48_bottom"
+        class="colored-cards m-72_bottom media-m-48_bottom card-grid-type--two-two"
       >
         <div
-          class="background-color-silver case_delivery-control-card"
+          class="colored-card colored-card--1 background-color-silver"
         >
-          <p
-            class="case_paragraph"
+          <!---->
+           
+          <div
+            class="colored-card__footer"
           >
-            
-          Track the couriers' locations on a map and provide statuses of all orders and couriers.
-        
-          </p>
+            <!---->
+             
+            <!---->
+             
+            <p
+              class="case_paragraph colored-card__description"
+            >
+              
+        Track the couriers' locations on a map and provide statuses of all orders and couriers.
+      
+            </p>
+             
+          </div>
         </div>
-         
         <div
-          class="background-color-silver case_delivery-control-card"
+          class="colored-card colored-card--2 background-color-silver"
         >
-          <p
-            class="case_paragraph"
+          <!---->
+           
+          <div
+            class="colored-card__footer"
           >
-             Extract customers’ notes and communicate them to couriers. 
-          </p>
+            <!---->
+             
+            <!---->
+             
+            <p
+              class="case_paragraph colored-card__description"
+            >
+              
+        Extract customers’ notes and communicate them to couriers.
+      
+            </p>
+             
+          </div>
         </div>
-         
         <div
-          class="background-color-silver case_delivery-control-card"
+          class="colored-card colored-card--3 background-color-silver"
         >
-          <p
-            class="case_paragraph"
+          <!---->
+           
+          <div
+            class="colored-card__footer"
           >
-             Assign orders and prepare reports. 
-          </p>
+            <!---->
+             
+            <!---->
+             
+            <p
+              class="case_paragraph colored-card__description"
+            >
+              
+        Assign orders and prepare reports.
+      
+            </p>
+             
+          </div>
         </div>
-         
         <div
-          class="background-color-silver case_delivery-control-card"
+          class="colored-card colored-card--4 background-color-silver"
         >
-          <p
-            class="case_paragraph"
+          <!---->
+           
+          <div
+            class="colored-card__footer"
           >
-             Call curriers using Free SWITCH microservice. 
-          </p>
+            <!---->
+             
+            <!---->
+             
+            <p
+              class="case_paragraph colored-card__description"
+            >
+              
+        Call curriers using Free SWITCH microservice.
+      
+            </p>
+             
+          </div>
         </div>
       </div>
        

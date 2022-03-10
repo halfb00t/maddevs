@@ -294,7 +294,7 @@ export default {
       top: 0;
       right: 50%;
       transform: translateX(50%);
-      background-color: #fff;
+      background-color: $bgcolor--white-primary;
       opacity: 0.2;
     }
 

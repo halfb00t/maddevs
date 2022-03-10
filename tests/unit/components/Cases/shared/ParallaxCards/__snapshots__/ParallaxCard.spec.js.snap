@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParallaxCard component should render correctly 1`] = `
+<div>
+  <div
+    class="card-content background-color-silver"
+  >
+    <img
+      alt="test-icon"
+      class="card-content_icon"
+      data-src="img.jpg"
+      height="50"
+      width="50"
+    />
+     
+    <h4
+      class="case_title_h4 m-10-bottom"
+    >
+      
+    test
+  
+    </h4>
+     
+    <p
+      class="case_paragraph"
+    >
+      
+      test description
+    
+    </p>
+     
+  </div>
+</div>
+`;

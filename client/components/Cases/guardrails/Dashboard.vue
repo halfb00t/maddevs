@@ -27,7 +27,7 @@
     <div
       class="container_full case_container background-color-outer-space back m-72_bottom media-m-48_bottom p-72_top media-p-41_top"
     >
-      <div v-prlx="animationSettings">
+      <div v-mad-parallax="animationSettings">
         <div class="case_image-wrap">
           <Picture
             folder="guardrails"
@@ -78,25 +78,28 @@
 <script>
 import Picture from '@/components/Cases/shared/Picture'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
-  name: 'HighLevelOverview',
+  name: 'Dashboard',
   components: {
     TextParagraph,
     Picture,
+  },
+
+  directives: {
+    MadParallax,
   },
 
   data() {
     return {
       animationSettings: {
         reverse: true,
-        limit: {
-          min: -30,
-          max: 0,
-        },
-
-        mobileMaxWidth: 961,
-        fromBottom: true,
+        maxMove: 30,
+        customMove: true,
+        speed: 0.3,
+        startPoint: 3,
+        setIndentTop: true,
       },
     }
   },

@@ -3,38 +3,49 @@
     class="card-grid-main"
     :style="{ backgroundColor: sliceBackground }"
   >
-    <TechnologiesAndTools
+    <LazyHydrate
       v-if="slice.variation === 'default-slice'"
-      v-bind="slice"
-      :data-aos="slice.primary.animation"
-      data-testid="technologies-grid-variation"
-    />
-    <ToolsGrid
+      when-visible
+    >
+      <TechnologiesAndTools
+        v-bind="slice"
+        :data-aos="slice.primary.animation"
+        data-testid="technologies-grid-variation"
+      />
+    </LazyHydrate>
+    <LazyHydrate
       v-if="slice.variation === 'toolsGrid'"
-      v-bind="slice"
-      :slice="slice"
-      data-testid="tools-grid-variation"
-    />
-    <ExistingToolsGrid
+      when-visible
+    >
+      <ToolsGrid
+        v-bind="slice"
+        :slice="slice"
+        data-testid="tools-grid-variation"
+      />
+    </LazyHydrate>
+    <LazyHydrate
       v-if="slice.variation === 'existingToolsGrid'"
-      v-bind="slice.primary"
-      data-testid="existing-grid-variation"
-    />
+      when-visible
+    >
+      <ExistingToolsGrid
+        v-bind="slice.primary"
+        data-testid="existing-grid-variation"
+      />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import TechnologiesAndTools from './variations/TechnologiesAndTools'
-import ToolsGrid from './variations/ToolsGrid'
-import ExistingToolsGrid from './variations/ExistingToolsGrid'
+import LazyHydrate from 'vue-lazy-hydration'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'ToolsGridMain',
   components: {
-    TechnologiesAndTools,
-    ToolsGrid,
-    ExistingToolsGrid,
+    LazyHydrate,
+    TechnologiesAndTools: () => import('./variations/TechnologiesAndTools'),
+    ToolsGrid: () => import('./variations/ToolsGrid'),
+    ExistingToolsGrid: () => import('./variations/ExistingToolsGrid'),
   },
 
   mixins: [

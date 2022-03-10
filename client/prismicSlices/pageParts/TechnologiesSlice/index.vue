@@ -1,5 +1,8 @@
 <template>
-  <section class="technologies-slice">
+  <section
+    ref="technologiesRef"
+    class="technologies-slice"
+  >
     <div
       class="container"
       data-testid="container"
@@ -32,6 +35,7 @@
         </div>
       </div>
       <div
+        v-if="intoView"
         :class="[
           'technologies-slice__grid',
           `technologies-slice__grid--${categoryToClass(activeCategory)}`
@@ -94,7 +98,12 @@ export default {
       title: this.slice.primary.title,
       animation: this.slice.primary.animation,
       alreadyAnimated: false, // needed to prevent the aos animation repeating on DOM changes
+      intoView: false, // needed to don't show technologies grid while block don't viewport
     }
+  },
+
+  mounted() {
+    this.mountWhenVisible()
   },
 
   methods: {
@@ -108,6 +117,19 @@ export default {
 
     categoryToClass(category) {
       return category.replace(/\W/g, '').toLowerCase()
+    },
+
+    // Function for lazy created grid technologies. For better LCP
+    mountWhenVisible() {
+      const Observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.intoView = true
+            observer.unobserve(entry.target)
+          }
+        })
+      })
+      Observer.observe(this.$refs.technologiesRef)
     },
   },
 }
@@ -181,7 +203,7 @@ $tech_legends: (
 
   &__category {
     margin-right: 31px;
-    color: #938f95;
+    color: $text-color--spanish-gray;
     font-size: 14px;
     line-height: 22px;
     letter-spacing: -0.02em;
@@ -211,7 +233,7 @@ $tech_legends: (
       margin-right: 8px;
       top: 7px;
       left: 4px;
-      background: #938f95;
+      background: $bgcolor--spanish-gray;
       opacity: 0;
       transition: opacity 0.2s;
     }

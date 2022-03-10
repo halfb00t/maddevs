@@ -27,6 +27,7 @@
 <script>
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import mainMixins from '@/mixins/mainMixins'
 import CasesListItem from '@/components/Cases/CasesListItem'
 import { casesList } from '@/data/casesList'
 
@@ -39,7 +40,7 @@ export default {
     anchorPlacement: 'top-center',
     duration: 1000,
     once: true,
-  })],
+  }), mainMixins],
 
   props: {
     slice: {

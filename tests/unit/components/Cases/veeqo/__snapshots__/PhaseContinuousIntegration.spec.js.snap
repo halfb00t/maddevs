@@ -14,46 +14,63 @@ exports[`PhaseContinuousIntegration component should render correctly 1`] = `
     </h2>
      
     <div
-      class="case_cards-container"
+      class="colored-cards card-grid-type--two-two"
     >
       <div
-        class="case_card background-color-silver"
+        class="colored-card colored-card--1 background-color-silver"
       >
-        <h3
-          class="case_title_h4 m-8_bottom"
-        >
-          
-        Challenge
-      
-        </h3>
+        <!---->
          
-        <p
-          class="case_paragraph"
+        <div
+          class="colored-card__footer"
         >
-          
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
+          >
+            
+      Challenge
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description"
+          >
+            
         Development processes lacked consistency. Particularly, the project had manually configured CI system and pipelines, different development, test, and production environments and runtimes, non-reproducible development environment, inconsistent test builds.
       
-        </p>
+          </p>
+           
+        </div>
       </div>
-       
       <div
-        class="case_card background-color-blue-light"
+        class="colored-card colored-card--2 background-color-blue-light"
       >
-        <h3
-          class="case_title_h4 m-8_bottom"
-        >
-          
-        Solution
-      
-        </h3>
+        <!---->
          
-        <p
-          class="case_paragraph"
+        <div
+          class="colored-card__footer"
         >
-          
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
+          >
+            
+      Solution
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description"
+          >
+            
         Dockerization is the most viable solution today to set up continuous delivery. As our application was back then partially hosted on Heroku, we created a unified runtime for developers and CI by dockerizing the main app using a Heroku Stack image and Docker Compose. It made CI reliable and allowed simplifying deployment. Also, it sped up bootstrapping of the development environment.
       
-        </p>
+          </p>
+           
+        </div>
       </div>
     </div>
      
@@ -64,7 +81,8 @@ exports[`PhaseContinuousIntegration component should render correctly 1`] = `
         class="case_blockquote-box m-auto"
       >
         
-    The developers didn’t trust their CI system. CI wasn’t helping them; it was hindering their work instead. It’s just bad DevOps.
+    The developers didn’t trust their CI system. CI wasn’t helping them; it was hindering their work instead. It’s
+    just bad DevOps.
   
       </blockquote>
        
@@ -143,7 +161,11 @@ exports[`PhaseContinuousIntegration component should render correctly 1`] = `
       class="case_paragraph m-34_bottom"
     >
       
-    Jenkins was operated manually on a separate EC2 instance. Managing it was thus challenging, especially in emergencies. We moved the Jenkins master to ECS by remaking its provisioning, deployment, and updating (Later, we’ll move it to k8s, but in 2017, ECS was the only good option for us). We reduced build time and cost by allocating a small part of compute resources of Jenkins agents to reserved instances and moving 90% of the load to spot instances.
+    Jenkins was operated manually on a separate EC2 instance. Managing it was thus challenging, especially in
+    emergencies. We moved the Jenkins master to ECS by remaking its provisioning, deployment, and updating (Later,
+    we’ll move it to k8s, but in 2017, ECS was the only good option for us). We reduced build time and cost by
+    allocating a small part of compute resources of Jenkins agents to reserved instances and moving 90% of the load to
+    spot instances.
   
     </p>
      
@@ -182,7 +204,8 @@ exports[`PhaseContinuousIntegration component should render correctly 1`] = `
       class="m-auto m-96_top m-96_bottom media-m-48_top media-m-72_bottom"
     >
       
-    Everything down to the last comma is now written in the form of code. Even if we took Jenkins down completely and had to build it from scratch again, it’d take us no more than 10 minutes.
+    Everything down to the last comma is now written in the form of code. Even if we took Jenkins down completely and
+    had to build it from scratch again, it’d take us no more than 10 minutes.
   
     </textquote-stub>
   </section>

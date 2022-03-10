@@ -9,6 +9,10 @@ const props = {
   startAnimationOnScreenPercent: 23,
 }
 
+const mocks = {
+  $getMediaFromS3: () => 'img.jpg',
+}
+
 const stubs = ['NuxtLink']
 
 describe('ModelCard component', () => {
@@ -16,6 +20,7 @@ describe('ModelCard component', () => {
     const { container } = render(ModelCard, {
       stubs,
       props,
+      mocks,
     })
 
     expect(container).toMatchSnapshot()

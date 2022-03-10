@@ -195,14 +195,21 @@ export const developmentGoals = [
   {
     title: 'GPS',
     icon: 'gps',
-    paragraphs: [
+    alt: 'GPS',
+    folder: 'godee',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+    descriptions:
       'We use GPS data to track buses, and we have developed an algorithm that predicts bus travel/arrival time using a geocoding service that also calculates delays related to traffic jams and their severity. This predictor functionality calculates the estimated arrival time on specific routes. It allows our passengers to check whether their requested bus will arrive on time, considering traffic jams.',
-    ],
   },
   {
     title: 'Payment method',
     icon: 'payment-method',
-    paragraphs: [
+    alt: 'Payment method',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+    folder: 'godee',
+    descriptions: [
       'Cashless payments are becoming more popular in Vietnam, so we have integrated Stripe service into GoDee, enabling passengers to pay with credit cards easily and quickly.',
       'We have also developed an API for flawless third-party service integration. Visa/Mastercard, AmEx, MoMo and JCB are integrated into the GoDee user app to facilitate cashless payments.',
     ],
@@ -210,23 +217,32 @@ export const developmentGoals = [
   {
     title: 'Online time-tables & live location tracking',
     icon: 'live-location-tacking',
-    paragraphs: [
+    alt: 'Online time-tables & live location tracking',
+    folder: 'godee',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+    descriptions:
       'To help make the GoDee app easier to use, we created a system that tracks bus locations in real time. This means that every user can book a seat as their bus approaches their location.',
-    ],
   },
   {
     title: 'Referrals',
     icon: 'referrals',
-    paragraphs: [
+    alt: 'Referrals',
+    folder: 'godee',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+    descriptions:
       'To add to the commuter experience, inside the shuttle bus application, users can share referrals and get free rides as bonuses. After receiving a referral code from a referrer, the user can input the code from the booking confirmation as a promo code and enjoy one free ride. Meanwhile, referrers also receive a reward with "an “X" number of free rides.',
-    ],
   },
   {
     title: 'The best possible routes',
     icon: 'possible-routes',
-    paragraphs: [
+    alt: 'The best possible routes',
+    folder: 'godee',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+    descriptions:
       'Depending on passengers’ requests, the system allows drivers to construct the best possible routes automatically. If there are no orders from passengers, drivers will skip stops along the route.',
-    ],
   },
 ]
 

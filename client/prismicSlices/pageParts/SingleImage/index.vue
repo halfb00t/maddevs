@@ -48,8 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 .image-slice {
-  color: #ffffff;
-  background-color: #ffffff;
+  color: $text-color--white-primary;
+  background-color: $bgcolor--white-primary;
 
   &__wrapper {
     padding: 47px 40px;
@@ -72,7 +72,7 @@ export default {
     font-size: 40px;
     line-height: 100%;
     letter-spacing: -0.04em;
-    color: #F4F4F4;
+    color: $text-color--cultured;
   }
 
   &__text {
@@ -81,7 +81,7 @@ export default {
     letter-spacing: 0.28em;
     text-transform: uppercase;
     margin-bottom: 16px;
-    color: #F4F4F4;
+    color: $text-color--cultured;
   }
 }
 </style>

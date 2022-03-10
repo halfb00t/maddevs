@@ -1,6 +1,5 @@
 const express = require('express')
 const cors = require('cors')
-const bodyParser = require('body-parser')
 
 // sentry
 const { configureSentry } = require('./sentry')
@@ -35,8 +34,8 @@ function bootstrap() {
 
   // External middlewares
   app.use(cors())
-  app.use(bodyParser.json(config.bodyParserJSONConfig))
-  app.use(bodyParser.urlencoded(config.bodyParserURLEncodedConfig))
+  app.use(express.json(config.bodyParserJSONConfig))
+  app.use(express.urlencoded(config.bodyParserURLEncodedConfig))
 
   // Enable trust proxy
   app.enable('trust proxy')

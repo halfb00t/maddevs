@@ -1,59 +1,75 @@
 <template>
   <section>
-    <div id="case-first-section" />
-    <About />
-    <HighLevelOverview />
-    <ChallengesAndSolutions />
-    <PhaseFixingDatabaseOutages />
-    <PhaseContinuousIntegration />
-    <ContinuousIntegrationResult />
-    <PhaseElasticsearch />
-    <PhaseElasticsearchResult />
-    <PhaseCuttingTheCosts />
-    <PhaseMovingToKubernetes />
-    <InventoryChangeLog />
-    <PhasInfrastructureAsCode />
-    <PhasInfrastructureAsCodeResult />
-    <Technologies />
-    <Team />
+    <LazyHydrate when-visible>
+      <About />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <HighLevelOverview />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ChallengesAndSolutions />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseFixingDatabaseOutages />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseContinuousIntegration />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ContinuousIntegrationResult />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseElasticsearch />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseElasticsearchResult />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseCuttingTheCosts />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhaseMovingToKubernetes />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <InventoryChangeLog />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhasInfrastructureAsCode />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PhasInfrastructureAsCodeResult />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Technologies />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Team />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import About from '@/components/Cases/veeqo/About'
-import HighLevelOverview from '@/components/Cases/veeqo/HighLevelOverview'
-import ChallengesAndSolutions from '@/components/Cases/veeqo/ChallengesAndSolutions'
-import PhaseFixingDatabaseOutages from '@/components/Cases/veeqo/PhaseFixingDatabaseOutages'
-import PhaseContinuousIntegration from '@/components/Cases/veeqo/PhaseContinuousIntegration'
-import ContinuousIntegrationResult from '@/components/Cases/veeqo/ContinuousIntegrationResult'
-import PhaseElasticsearch from '@/components/Cases/veeqo/PhaseElasticsearch'
-import PhaseElasticsearchResult from '@/components/Cases/veeqo/PhaseElasticsearchResult'
-import PhaseCuttingTheCosts from '@/components/Cases/veeqo/PhaseCuttingTheCosts'
-import PhasInfrastructureAsCode from '@/components/Cases/veeqo/PhasInfrastructureAsCode'
-import PhasInfrastructureAsCodeResult from '@/components/Cases/veeqo/PhasInfrastructureAsCodeResult'
-import Team from '@/components/Cases/veeqo/Team'
-import Technologies from '@/components/Cases/veeqo/Technologies'
-import PhaseMovingToKubernetes from '@/components/Cases/veeqo/PhaseMovingToKubernetes'
-import InventoryChangeLog from '@/components/Cases/veeqo/InventoryChangeLog'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Main',
   components: {
-    About,
-    HighLevelOverview,
-    ChallengesAndSolutions,
-    PhaseFixingDatabaseOutages,
-    PhaseContinuousIntegration,
-    ContinuousIntegrationResult,
-    PhaseElasticsearch,
-    PhaseElasticsearchResult,
-    PhaseCuttingTheCosts,
-    PhasInfrastructureAsCode,
-    PhasInfrastructureAsCodeResult,
-    Team,
-    Technologies,
-    PhaseMovingToKubernetes,
-    InventoryChangeLog,
+    About: () => import('@/components/Cases/veeqo/About'),
+    HighLevelOverview: () => import('@/components/Cases/veeqo/HighLevelOverview'),
+    ChallengesAndSolutions: () => import('@/components/Cases/veeqo/ChallengesAndSolutions'),
+    PhaseFixingDatabaseOutages: () => import('@/components/Cases/veeqo/PhaseFixingDatabaseOutages'),
+    PhaseContinuousIntegration: () => import('@/components/Cases/veeqo/PhaseContinuousIntegration'),
+    ContinuousIntegrationResult: () => import('@/components/Cases/veeqo/ContinuousIntegrationResult'),
+    PhaseElasticsearch: () => import('@/components/Cases/veeqo/PhaseElasticsearch'),
+    PhaseElasticsearchResult: () => import('@/components/Cases/veeqo/PhaseElasticsearchResult'),
+    PhaseCuttingTheCosts: () => import('@/components/Cases/veeqo/PhaseCuttingTheCosts'),
+    PhasInfrastructureAsCode: () => import('@/components/Cases/veeqo/PhasInfrastructureAsCode'),
+    PhasInfrastructureAsCodeResult: () => import('@/components/Cases/veeqo/PhasInfrastructureAsCodeResult'),
+    Team: () => import('@/components/Cases/veeqo/Team'),
+    Technologies: () => import('@/components/Cases/veeqo/Technologies'),
+    PhaseMovingToKubernetes: () => import('@/components/Cases/veeqo/PhaseMovingToKubernetes'),
+    InventoryChangeLog: () => import('@/components/Cases/veeqo/InventoryChangeLog'),
+    LazyHydrate,
   },
 }
 </script>

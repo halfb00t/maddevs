@@ -21,10 +21,18 @@
         public mobility by building new smart ways of a daily commute.
       </p>
     </CaseHeader>
-    <About />
-    <IssuesAndSolution />
-    <ParallaxImage />
-    <IssuesAndSolutionCards />
+    <LazyHydrate when-visible>
+      <About />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <IssuesAndSolution />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ParallaxImage />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <IssuesAndSolutionCards />
+    </LazyHydrate>
     <section class="container_full case_video-wrapper m-60_top media-m-24_top m-96_bottom media-m-48_bottom">
       <iframe
         v-lazy-load
@@ -35,61 +43,73 @@
         allowfullscreen
       />
     </section>
-    <Collaboration />
-    <Mvp />
-    <BeforeAfter />
-    <DevelopmentGoals />
-    <PreviewCards />
-    <IntellegentManagementPanel :is-iphone="isIphone" />
-    <TripsMonitor :is-iphone="isIphone" />
-    <RouteOptimisation :is-iphone="isIphone" />
-    <RealTimeETA />
-    <InfrastructureScheme />
-    <TechnologyStack />
-    <Monitoring />
-    <StableScalableSolution />
-    <Team />
-    <CaseFooter
-      link="/case-studies/namba-food/"
-      class-name="namba-food"
-    >
-      <img
-        slot="icon"
-        v-lazy-load
-        :data-src="require(`@/assets/img/Studies/svg/nambafood-footer.svg`)"
-        width="200"
-        height="63"
-        alt="Namba Food"
-        class="case_logotype-namba-food"
+    <LazyHydrate when-visible>
+      <Collaboration />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Mvp />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <BeforeAfter />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <DevelopmentGoals />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <PreviewCards />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <IntellegentManagementPanel :is-iphone="isIphone" />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TripsMonitor :is-iphone="isIphone" />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <RouteOptimisation :is-iphone="isIphone" />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <RealTimeETA />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <InfrastructureScheme />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TechnologyStack />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Monitoring />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <StableScalableSolution />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Team />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <CaseFooter
+        link="/case-studies/namba-food/"
+        class-name="namba-food"
       >
-      Namba Food <br>
-      Top Delivery Service in <br class="case_mobile-break-namba-food">
-      Central Asia
-    </CaseFooter>
+        <img
+          slot="icon"
+          v-lazy-load
+          :data-src="require(`@/assets/img/Studies/svg/nambafood-footer.svg`)"
+          width="200"
+          height="63"
+          alt="Namba Food"
+          class="case_logotype-namba-food"
+        >
+        Namba Food <br>
+        Top Delivery Service in <br class="case_mobile-break-namba-food">
+        Central Asia
+      </CaseFooter>
+    </LazyHydrate>
   </main>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import CaseHeader from '@/components/Cases/shared/CaseHeader'
-import About from '@/components/Cases/godee/About'
-import IssuesAndSolution from '@/components/Cases/godee/IssuesAndSolution'
-import ParallaxImage from '@/components/Cases/godee/ParallaxImage'
-import IssuesAndSolutionCards from '@/components/Cases/godee/IssuesAndSolutionCards'
-import Collaboration from '@/components/Cases/godee/Collaboration'
-import Mvp from '@/components/Cases/godee/Mvp'
-import BeforeAfter from '@/components/Cases/godee/BeforeAfter'
-import DevelopmentGoals from '@/components/Cases/godee/DevelopmentGoals'
-import PreviewCards from '@/components/Cases/godee/PreviewCards'
-import IntellegentManagementPanel from '@/components/Cases/godee/IntellegentManagementPanel'
-import TripsMonitor from '@/components/Cases/godee/TripsMonitor'
-import RouteOptimisation from '@/components/Cases/godee/RouteOptimisation'
-import RealTimeETA from '@/components/Cases/godee/RealTimeETA'
-import InfrastructureScheme from '@/components/Cases/godee/InfrastructureScheme'
-import TechnologyStack from '@/components/Cases/godee/TechnologyStack'
-import Monitoring from '@/components/Cases/godee/Monitoring'
-import StableScalableSolution from '@/components/Cases/godee/StableScalableSolution'
-import Team from '@/components/Cases/godee/Team'
-import CaseFooter from '@/components/Cases/shared/CaseFooter'
 import isIphoneMixin from '@/mixins/isIphoneMixin'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import playVideo from '@/helpers/playVideo'
@@ -103,26 +123,27 @@ const observerOptions = {
 export default {
   name: 'Main',
   components: {
+    LazyHydrate,
     CaseHeader,
-    About,
-    IssuesAndSolution,
-    ParallaxImage,
-    IssuesAndSolutionCards,
-    Collaboration,
-    Mvp,
-    BeforeAfter,
-    DevelopmentGoals,
-    PreviewCards,
-    IntellegentManagementPanel,
-    TripsMonitor,
-    RouteOptimisation,
-    RealTimeETA,
-    InfrastructureScheme,
-    TechnologyStack,
-    Monitoring,
-    StableScalableSolution,
-    Team,
-    CaseFooter,
+    About: () => import('@/components/Cases/godee/About'),
+    IssuesAndSolution: () => import('@/components/Cases/godee/IssuesAndSolution'),
+    ParallaxImage: () => import('@/components/Cases/godee/ParallaxImage'),
+    IssuesAndSolutionCards: () => import('@/components/Cases/godee/IssuesAndSolutionCards'),
+    Collaboration: () => import('@/components/Cases/godee/Collaboration'),
+    Mvp: () => import('@/components/Cases/godee/Mvp'),
+    BeforeAfter: () => import('@/components/Cases/godee/BeforeAfter'),
+    DevelopmentGoals: () => import('@/components/Cases/godee/DevelopmentGoals'),
+    PreviewCards: () => import('@/components/Cases/godee/PreviewCards'),
+    IntellegentManagementPanel: () => import('@/components/Cases/godee/IntellegentManagementPanel'),
+    TripsMonitor: () => import('@/components/Cases/godee/TripsMonitor'),
+    RouteOptimisation: () => import('@/components/Cases/godee/RouteOptimisation'),
+    RealTimeETA: () => import('@/components/Cases/godee/RealTimeETA'),
+    InfrastructureScheme: () => import('@/components/Cases/godee/InfrastructureScheme'),
+    TechnologyStack: () => import('@/components/Cases/godee/TechnologyStack'),
+    Monitoring: () => import('@/components/Cases/godee/Monitoring'),
+    StableScalableSolution: () => import('@/components/Cases/godee/StableScalableSolution'),
+    Team: () => import('@/components/Cases/godee/Team'),
+    CaseFooter: () => import('@/components/Cases/shared/CaseFooter'),
   },
 
   mixins: [

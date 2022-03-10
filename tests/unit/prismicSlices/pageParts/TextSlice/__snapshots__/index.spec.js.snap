@@ -11,7 +11,12 @@ exports[`Spacer slice renders correctly 1`] = `
     <transition-stub
       name="fade"
     >
-      <!---->
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <!---->
+      </lazyhydrate-stub>
     </transition-stub>
   </div>
 </section>
@@ -29,20 +34,20 @@ exports[`TextSlice slice should correctly render SimpleText component 1`] = `
       <transition-stub
         name="fade"
       >
-        <p
-          class="text-slice__content"
-          colortheme="silver"
-          data-testid="text-slice-default"
-          size-lg="80px"
-          size-md="70px"
-          size-sm="60px"
-          size-xl="90px"
-          size-xs="50px"
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
         >
-          
-  
-
-        </p>
+          <simpletext-stub
+            colortheme="silver"
+            data-testid="text-slice-default"
+            size-lg="80px"
+            size-md="70px"
+            size-sm="60px"
+            size-xl="90px"
+            size-xs="50px"
+          />
+        </lazyhydrate-stub>
       </transition-stub>
     </div>
   </section>
@@ -61,23 +66,21 @@ exports[`TextSlice slice should correctly render Title component 1`] = `
       <transition-stub
         name="fade"
       >
-        <section
-          class="title-slice title-slice-text--left"
-          colortheme="silver"
-          data-testid="text-slice-title"
-          size-lg="80px"
-          size-md="70px"
-          size-sm="60px"
-          size-xl="90px"
-          size-xs="50px"
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
         >
-          <div>
-            <h2
-              class="title-slice-text title-slice-text--size-md"
-              style="max-width: 100%;"
-            />
-          </div>
-        </section>
+          <title-stub
+            colortheme="silver"
+            data-testid="text-slice-title"
+            size="size-md"
+            size-lg="80px"
+            size-md="70px"
+            size-sm="60px"
+            size-xl="90px"
+            size-xs="50px"
+          />
+        </lazyhydrate-stub>
       </transition-stub>
     </div>
   </section>
@@ -96,23 +99,20 @@ exports[`TextSlice slice should correctly render TitleText component 1`] = `
       <transition-stub
         name="fade"
       >
-        <div
-          class="text-slice__content"
-          data-testid="text-slice-titleText"
-          size-lg="80px"
-          size-md="70px"
-          size-sm="60px"
-          size-xl="90px"
-          size-xs="50px"
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
         >
-          <h2>
-            
-          </h2>
-           
-          <p>
-            
-          </p>
-        </div>
+          <titletext-stub
+            colortheme="silver"
+            data-testid="text-slice-titleText"
+            size-lg="80px"
+            size-md="70px"
+            size-sm="60px"
+            size-xl="90px"
+            size-xs="50px"
+          />
+        </lazyhydrate-stub>
       </transition-stub>
     </div>
   </section>
@@ -131,21 +131,21 @@ exports[`TextSlice slice should correctly render flexibleParagraph component 1`]
       <transition-stub
         name="fade"
       >
-        <section
-          class="paragraph-slice paragraph-slice--left"
-          colortheme="silver"
-          data-testid="text-slice-flexibleParagraph"
-          size-lg="80px"
-          size-md="70px"
-          size-sm="60px"
-          size-xl="90px"
-          size-xs="50px"
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
         >
-          <p
-            class="paragraph-slice-text paragraph-slice-text--size-md paragraph-slice-text--default"
-            style="--font-weight: 400; --text-align: left; --max-width: 100%;"
+          <flexibleparagraph-stub
+            colortheme="silver"
+            data-testid="text-slice-flexibleParagraph"
+            size="size-md"
+            size-lg="80px"
+            size-md="70px"
+            size-sm="60px"
+            size-xl="90px"
+            size-xs="50px"
           />
-        </section>
+        </lazyhydrate-stub>
       </transition-stub>
     </div>
   </section>
@@ -164,21 +164,21 @@ exports[`TextSlice slice should correctly render paragraph component 1`] = `
       <transition-stub
         name="fade"
       >
-        <section
-          class="paragraph-slice paragraph-slice-text--left"
-          colortheme="silver"
-          data-testid="text-slice-paragraph"
-          size-lg="80px"
-          size-md="70px"
-          size-sm="60px"
-          size-xl="90px"
-          size-xs="50px"
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
         >
-          <p
-            class="paragraph-slice-text paragraph-slice-text--size-md paragraph-slice-text--default"
-            style="max-width: 100%;"
+          <paragraph-stub
+            colortheme="silver"
+            data-testid="text-slice-paragraph"
+            size="size-md"
+            size-lg="80px"
+            size-md="70px"
+            size-sm="60px"
+            size-xl="90px"
+            size-xs="50px"
           />
-        </section>
+        </lazyhydrate-stub>
       </transition-stub>
     </div>
   </section>
@@ -197,37 +197,20 @@ exports[`TextSlice slice should correctly render titleTextButton component 1`] =
       <transition-stub
         name="fade"
       >
-        <div
-          class="text-slice__content"
-          data-testid="text-slice-titleTextButton"
-          size-lg="80px"
-          size-md="70px"
-          size-sm="60px"
-          size-xl="90px"
-          size-xs="50px"
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
         >
-          <h2>
-            
-          </h2>
-           
-          <p>
-            
-          </p>
-           
-          <a
-            target="_blank"
-          >
-            <button
-              class="ui-button"
-              style="position: relative; overflow: hidden;"
-            >
-              
-              <div
-                class="wave"
-              />
-            </button>
-          </a>
-        </div>
+          <titletextbutton-stub
+            colortheme="silver"
+            data-testid="text-slice-titleTextButton"
+            size-lg="80px"
+            size-md="70px"
+            size-sm="60px"
+            size-xl="90px"
+            size-xs="50px"
+          />
+        </lazyhydrate-stub>
       </transition-stub>
     </div>
   </section>

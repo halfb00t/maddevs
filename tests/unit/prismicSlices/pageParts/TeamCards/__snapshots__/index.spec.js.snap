@@ -19,9 +19,9 @@ exports[`TeamCards slice should render correctly 1`] = `
           <img
             alt="Alt text"
             class="meet-our-experts__expert-item-img"
+            data-src="https://google.com/"
             data-testid="item-img"
             height="401"
-            src="https://google.com/"
             width="295"
           />
            
@@ -52,8 +52,8 @@ exports[`TeamCards slice should render correctly 1`] = `
           <img
             alt="Linkedin"
             class="meet-our-experts__expert-linkedin-link"
+            data-src="[object Object]"
             height="24"
-            src="[object Object]"
             width="24"
           />
            
@@ -71,9 +71,9 @@ exports[`TeamCards slice should render correctly 1`] = `
           <img
             alt="Text Alt"
             class="meet-our-experts__expert-item-img"
+            data-src="https://yandex.ru/"
             data-testid="item-img"
             height="401"
-            src="https://yandex.ru/"
             width="295"
           />
            
@@ -104,8 +104,8 @@ exports[`TeamCards slice should render correctly 1`] = `
           <img
             alt="Linkedin"
             class="meet-our-experts__expert-linkedin-link"
+            data-src="[object Object]"
             height="24"
-            src="[object Object]"
             width="24"
           />
            

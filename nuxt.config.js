@@ -4,6 +4,10 @@ import getRobots from './utils/getRobots'
 require('dotenv').config()
 
 module.exports = {
+  render: {
+    resourceHints: false,
+  },
+  buildModule: ['nuxt-compress'],
   srcDir: 'client/',
   target: process.env.NUXT_TARGET || 'server',
   /*
@@ -32,8 +36,8 @@ module.exports = {
       { rel: 'sitemap', type: 'application/xml', href: 'https://maddevs.io/sitemap.xml' },
     ],
     script: [
-      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver' },
-      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}` },
+      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', defer: true, body: true },
+      { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, defer: true, body: true },
     ],
   },
   /*
@@ -79,7 +83,7 @@ module.exports = {
       ],
     },
     vendor: ['axios'],
-    transpile: ['swiper', 'dom7', 'vue-slicezone', 'nuxt-sm'],
+    transpile: ['dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration'],
     followSymlinks: true,
     cache: true,
     extend(config, { isDev, isClient }) {
@@ -95,6 +99,29 @@ module.exports = {
         })
       }
     },
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true,
+    },
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: true,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true,
+        preserveLineBreaks: false,
+        collapseWhitespace: true,
+      },
+    },
+    optimization: {
+      minimize: true,
+    },
   },
   /*
   ** Plugins
@@ -105,16 +132,14 @@ module.exports = {
     '~/plugins/get-media-from-s3.js',
     '~/plugins/header-handler.js',
     '~/plugins/feature-flags.js',
-    '~/plugins/vue-prlx.js',
     '~/plugins/google-tag-manager-debug.js',
     { src: '~/plugins/sentry.js', mode: 'client' },
-    { src: '~/plugins/img-comparison-slider.js', mode: 'client' },
-    { src: '~/plugins/vue-parallax', mode: 'client' },
   ],
   /*
   ** Nuxt Modules
   */
   modules: [
+    ['~/modules/js-optimizer.js', { setOutputFilenames: true }], // need to async loaded javascript chunks
     '@nuxtjs/axios',
     '@nuxtjs/robots',
     '@nuxtjs/prismic',
@@ -127,7 +152,7 @@ module.exports = {
     },
     ],
     [
-      'nuxt-i18n',
+      '@nuxtjs/i18n',
       {
         strategy: 'prefix_except_default',
         defaultLocale: 'en',
@@ -137,12 +162,24 @@ module.exports = {
           { code: 'en', iso: 'en-EN', file: 'en.json' },
         ],
         detectBrowserLanguage: false,
+        parsePages: false,
       },
     ],
     ['@nuxtjs/prismic', {
       endpoint: process.env.NODE_PRISMIC_API,
     }],
     ['nuxt-sm'],
+    [
+      'nuxt-compress',
+      {
+        gzip: {
+          threshold: 8192,
+        },
+        brotli: {
+          threshold: 8192,
+        },
+      },
+    ],
   ],
   sitemap: {
     hostname: 'https://maddevs.io',
@@ -197,6 +234,7 @@ module.exports = {
   },
   router: {
     trailingSlash: true,
+    prefetchLinks: false,
     extendRoutes: routes => {
       routes.push(...CUSTOM_PAGE_ROUTES)
       return routes

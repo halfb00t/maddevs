@@ -25,76 +25,216 @@ exports[`Requirements component should render correctly 1`] = `
     </p>
      
     <div
-      class="case_cards-container"
+      class="m-48_bottom"
     >
       <div
-        class="case_column"
+        class="parallax_cards"
       >
-        <cardtechsolution-stub
-          alt="Workflow"
-          description="Minimal alterations to the workflow: Switching to a new software system should be smooth and painless for the company and the drivers."
-          folder="nambataxi"
-          icon="requirement-1"
-          title=""
-        />
-        <cardtechsolution-stub
-          alt="Scalability"
-          description="Scalability: To allow the system to grow in the future, we planned to implement an architecture that can be modified and expanded.
-"
-          folder="nambataxi"
-          icon="requirement-2"
-          title=""
-        />
-        <cardtechsolution-stub
-          alt="Support"
-          description="Support for Android devices: We needed to promote the transition to more convenient, modern technologies.
-"
-          folder="nambataxi"
-          icon="requirement-3"
-          title=""
-        />
-        <cardtechsolution-stub
-          alt="Real-time updates"
-          description="Real-time updates: We focused on reducing waiting times as this parameter is crucial to the passenger experience."
-          folder="nambataxi"
-          icon="requirement-4"
-          title=""
-        />
-      </div>
-       
-      <div
-        class="case_column"
-      >
-        <cardtechsolution-stub
-          alt="Tolerance"
-          description="High fault tolerance: Demand for taxi services can have dramatic ups and downs (e.g., when it starts to rain), so the system should have failover capability."
-          folder="nambataxi"
-          icon="requirement-5"
-          title=""
-        />
-        <cardtechsolution-stub
-          alt="Agile"
-          description="Agile development: If the customer’s requirements change during development, we can introduce new technologies as needed."
-          folder="nambataxi"
-          icon="requirement-6"
-          title=""
-        />
-        <cardtechsolution-stub
-          alt="Compatibility"
-          description="Compatibility with navigators: Not everyone had switched to mobile apps when the project started, so we had to ensure integration with drivers’ devices
-"
-          folder="nambataxi"
-          icon="requirement-7"
-          title=""
-        />
-        <cardtechsolution-stub
-          alt="Safe transition"
-          description="Safe transition: Moving from old software to new software must not paralyse the business’s continuous operation or reduce the quality of service.
-"
-          folder="nambataxi"
-          icon="requirement-8"
-          title=""
-        />
+        <div
+          class="parallax_cards__item"
+        >
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Workflow"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Minimal alterations to the workflow: Switching to a new software system should be smooth and painless for the company and the drivers.
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Scalability"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Scalability: To allow the system to grow in the future, we planned to implement an architecture that can be modified and expanded.
+
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Support"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Support for Android devices: We needed to promote the transition to more convenient, modern technologies.
+
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Real-time updates"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Real-time updates: We focused on reducing waiting times as this parameter is crucial to the passenger experience.
+    
+            </p>
+             
+          </div>
+        </div>
+         
+        <div
+          class="parallax_cards__item"
+        >
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Tolerance"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      High fault tolerance: Demand for taxi services can have dramatic ups and downs (e.g., when it starts to rain), so the system should have failover capability.
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Agile"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Agile development: If the customer’s requirements change during development, we can introduce new technologies as needed.
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Compatibility"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Compatibility with navigators: Not everyone had switched to mobile apps when the project started, so we had to ensure integration with drivers’ devices
+
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Safe transition"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <!---->
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Safe transition: Moving from old software to new software must not paralyse the business’s continuous operation or reduce the quality of service.
+
+    
+            </p>
+             
+          </div>
+        </div>
       </div>
     </div>
      

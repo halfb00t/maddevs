@@ -1,13 +1,29 @@
-const { lookup } = require('geoip-lite')
-const fetch = require('node-fetch')
+const axios = require('axios')
 const {
   IP_INFO_TOKEN, IP_BAN_LIST, IP_TEST_LIST, TEST_EMAIL,
 } = require('../config/env')
 
-async function getIpInfo(ip) {
-  const info = await fetch.default(`https://ipinfo.io/${ip}?token=${IP_INFO_TOKEN}`)
+async function getIpInfo() {
+  const info = await axios.get(`https://ipinfo.io/json?token=${IP_INFO_TOKEN}`)
 
-  return info.json()
+  return info.data
+}
+
+async function getIpInfoByIp(ip) {
+  const info = await axios.get(`http://ip-api.com/json/${ip}`)
+
+  return info.data
+}
+
+async function getLocation(ip) {
+  const local = await getIpInfoByIp(ip) || {}
+  const fromAPI = await getIpInfo() || {}
+
+  return {
+    ip: fromAPI.ip || local.query || '-',
+    country: fromAPI.country || local.country || '-',
+    city: fromAPI.city || local.city || '-',
+  }
 }
 
 function getIPByRequest(req) {
@@ -17,16 +33,6 @@ function getIPByRequest(req) {
    * To resolve this behavior we need to split an ip and get only the first element
    */
   return ip.split(',')[0]
-}
-
-async function getLocationByIP(ip) {
-  const local = lookup(ip) || {}
-  const fromAPI = await getIpInfo(ip) || {}
-
-  return {
-    country: fromAPI.country || local.country || '-',
-    city: fromAPI.city || local.city || '-',
-  }
 }
 
 function isBlockedIP(ip) {
@@ -40,8 +46,9 @@ function isTestIP(ip) {
 }
 
 module.exports = {
-  getIPByRequest,
-  getLocationByIP,
+  getLocation,
   isBlockedIP,
   isTestIP,
+  getIpInfoByIp,
+  getIPByRequest,
 }
