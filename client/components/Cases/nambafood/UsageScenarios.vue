@@ -9,18 +9,18 @@
     </TextParagraph>
     <div class="case_usage-scenarios">
       <Card
-        v-for="useСase in usageScenarios"
-        :key="useСase.title"
-        :class="useСase.classList.cardColor"
+        v-for="useCase in usageScenarios"
+        :key="useCase.title"
+        :class="useCase.classList.cardColor"
         class="case_usage-scenarios-card"
       >
         <CardUseCase
-          :title="useСase.title"
-          :description="useСase.description"
-          :file-name="useСase.fileName"
-          :file-extension="useСase.fileExtension"
-          :alt="useСase.alt || 'Image'"
-          :class-list="useСase.classList"
+          :title="useCase.title"
+          :description="useCase.description"
+          :file-name="useCase.fileName"
+          :file-extension="useCase.fileExtension"
+          :alt="useCase.alt || 'Image'"
+          :class-list="useCase.classList"
           picture-folder="nambafood"
         />
       </Card>

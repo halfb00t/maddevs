@@ -11,7 +11,8 @@
       class="post-author__image"
     >
       <img
-        :src="authorImage.url"
+        v-lazy-load
+        :data-src="authorImage.url"
         :alt="authorImage.alt || 'Image'"
         width="40"
         height="40"
@@ -96,12 +97,12 @@ export default {
   },
 
   head() {
-    return {
+    return this.authorImage?.url && {
       link: [
         {
           rel: 'preload',
           as: 'image',
-          href: this.authorImage.url,
+          href: this.authorImage?.url,
         },
       ],
     }
@@ -184,7 +185,7 @@ export default {
   }
 
   &__divider {
-    color: #ff0029;
+    color: $text-color--ruddy;
   }
 
   &__position {

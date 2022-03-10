@@ -61,7 +61,7 @@ export default {
     outline: none;
     background: transparent;
     padding: 0;
-    color: #938f95;
+    color: $text-color--spanish-gray;
     margin-right: 31px;
     display: flex;
     align-items: center;
@@ -105,7 +105,7 @@ export default {
         min-width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: #938f95;
+        background: $bgcolor--spanish-gray;
         opacity: 0;
         transition: opacity 0.2s;
       }

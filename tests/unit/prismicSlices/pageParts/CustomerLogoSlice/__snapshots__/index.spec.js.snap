@@ -20,7 +20,7 @@ exports[`Custom logo slice should render correctly with data 1`] = `
         >
           <img
             alt="first customer logo"
-            src="https://maddevs.io/Open-Graph.png"
+            data-src="https://maddevs.io/Open-Graph.png"
           />
         </div>
         <div
@@ -29,7 +29,7 @@ exports[`Custom logo slice should render correctly with data 1`] = `
         >
           <img
             alt="second customer logo"
-            src="https://maddevs.io/Open-Graph.png"
+            data-src="https://maddevs.io/Open-Graph.png"
           />
         </div>
       </div>

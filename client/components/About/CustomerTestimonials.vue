@@ -80,6 +80,7 @@ import { customerTestimonials as testimonials } from '@/data/customerTestimonial
 
 export default {
   name: 'CustomerTestimonials',
+
   props: {
     title: {
       type: String,
@@ -121,7 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 .customer-testimonials {
-  background-color: #f5f7f9;
+  background-color: $bgcolor--white;
 
   &__title {
     @include h2-title;
@@ -167,7 +168,7 @@ export default {
       }
 
       @media screen and (max-width: 767px) {
-        border-bottom: 1px solid #d7dde1;
+        border-bottom: 1px solid $border-color--grey-cases;
         margin-bottom: 24px;
         padding-bottom: 24px;
 
@@ -183,7 +184,7 @@ export default {
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.02em;
-      color: #111213;
+      color: $text-color--black-lighter;
       margin: 0 0 16px;
 
       @media screen and (min-width: 768px) {
@@ -271,7 +272,7 @@ export default {
     }
 
     &-name {
-      color: #6d7a7d;
+      color: $text-color--auroMetalSaurus;
       font-size: 14px;
       line-height: 18px;
       margin-top: 3px;

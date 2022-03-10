@@ -1,15 +1,44 @@
 export const whyCityCamCards = [
   {
     title: 'Individual citizens',
-    description: 'They can check what’s happening on major crossroads (or those they’re planning to include in their routes) before even getting in the car for their drive home, to work, or elsewhere. It’s convenient, and it can save residents time and money.',
-    color: 'yellow-dark',
-    img: 'street',
+    descriptions: 'They can check what’s happening on major crossroads (or those they’re planning to include in their routes) before even getting in the car for their drive home, to work, or elsewhere. It’s convenient, and it can save residents time and money.',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'citycam',
+      file: 'street',
+      alt: 'Individual citizens',
+    },
+    colors: {
+      card: 'yellow-dark',
+      title: 'white',
+      descriptions: 'white',
+    },
   },
   {
     title: 'Local businesses',
-    description: 'They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.',
-    color: 'blue-darkened',
-    img: 'mall',
+    descriptions: 'They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'citycam',
+      file: 'mall',
+      alt: 'Local businesses',
+    },
+    colors: {
+      card: 'blue-darkened',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'City administrators',
+    descriptions: 'They can identify weaknesses in the way traffic is currently organised by statistically analysing what crossroads and road sections get clogged frequently. Adjustments, like making certain green lights last longer, can solve congestion problems.',
+    colors: {
+      card: 'blue-dark',
+      title: 'white',
+      descriptions: 'white',
+    },
   },
 ]
 

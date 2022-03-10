@@ -3,7 +3,7 @@
 exports[`DevelopmentGoals component should render correctly 1`] = `
 <div>
   <section
-    class="container_regular"
+    class="container_regular m-96_bottom media-m-46_bottom"
   >
     <h3
       class="case_title_h2 m-24_bottom case_text-align-center"
@@ -14,102 +14,172 @@ exports[`DevelopmentGoals component should render correctly 1`] = `
     </h3>
      
     <div
-      class="case_development-goals p-96_bottom media-p-48_bottom"
+      class="parallax_cards"
     >
       <div
-        class="case_development-goals-left-column"
+        class="parallax_cards__item"
       >
         <div
-          class="case_card background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
-          <cardgodeefeature-stub
-            iconname="gps"
-            title="GPS"
+          <img
+            alt="GPS"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
           >
-            <p
-              class="case_paragraph"
-            >
-              
-            We use GPS data to track buses, and we have developed an algorithm that predicts bus travel/arrival time using a geocoding service that also calculates delays related to traffic jams and their severity. This predictor functionality calculates the estimated arrival time on specific routes. It allows our passengers to check whether their requested bus will arrive on time, considering traffic jams.
-          
-            </p>
-          </cardgodeefeature-stub>
+            
+    GPS
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      We use GPS data to track buses, and we have developed an algorithm that predicts bus travel/arrival time using a geocoding service that also calculates delays related to traffic jams and their severity. This predictor functionality calculates the estimated arrival time on specific routes. It allows our passengers to check whether their requested bus will arrive on time, considering traffic jams.
+    
+          </p>
+           
         </div>
         <div
-          class="case_card background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
-          <cardgodeefeature-stub
-            iconname="payment-method"
-            title="Payment method"
+          <img
+            alt="Payment method"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
           >
-            <p
-              class="case_paragraph m-24_bottom media-m-12_bottom"
-            >
-              
-            Cashless payments are becoming more popular in Vietnam, so we have integrated Stripe service into GoDee, enabling passengers to pay with credit cards easily and quickly.
-          
-            </p>
-            <p
-              class="case_paragraph"
-            >
-              
-            We have also developed an API for flawless third-party service integration. Visa/Mastercard, AmEx, MoMo and JCB are integrated into the GoDee user app to facilitate cashless payments.
-          
-            </p>
-          </cardgodeefeature-stub>
+            
+    Payment method
+  
+          </h4>
+           
+          <p
+            class="case_paragraph m-24_bottom media-m-12_bottom"
+          >
+            
+      Cashless payments are becoming more popular in Vietnam, so we have integrated Stripe service into GoDee, enabling passengers to pay with credit cards easily and quickly.
+    
+          </p>
+          <p
+            class="case_paragraph m-24_bottom media-m-12_bottom"
+          >
+            
+      We have also developed an API for flawless third-party service integration. Visa/Mastercard, AmEx, MoMo and JCB are integrated into the GoDee user app to facilitate cashless payments.
+    
+          </p>
+           
         </div>
       </div>
        
       <div
-        class="case_development-goals-right-column"
+        class="parallax_cards__item"
       >
         <div
-          class="case_card background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
-          <cardgodeefeature-stub
-            iconname="live-location-tacking"
-            title="Online time-tables & live location tracking"
+          <img
+            alt="Online time-tables & live location tracking"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
           >
-            <p
-              class="case_paragraph"
-            >
-              
-            To help make the GoDee app easier to use, we created a system that tracks bus locations in real time. This means that every user can book a seat as their bus approaches their location.
-          
-            </p>
-          </cardgodeefeature-stub>
+            
+    Online time-tables & live location tracking
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      To help make the GoDee app easier to use, we created a system that tracks bus locations in real time. This means that every user can book a seat as their bus approaches their location.
+    
+          </p>
+           
         </div>
         <div
-          class="case_card background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
-          <cardgodeefeature-stub
-            iconname="referrals"
-            title="Referrals"
+          <img
+            alt="Referrals"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
           >
-            <p
-              class="case_paragraph"
-            >
-              
-            To add to the commuter experience, inside the shuttle bus application, users can share referrals and get free rides as bonuses. After receiving a referral code from a referrer, the user can input the code from the booking confirmation as a promo code and enjoy one free ride. Meanwhile, referrers also receive a reward with "an “X" number of free rides.
-          
-            </p>
-          </cardgodeefeature-stub>
+            
+    Referrals
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      To add to the commuter experience, inside the shuttle bus application, users can share referrals and get free rides as bonuses. After receiving a referral code from a referrer, the user can input the code from the booking confirmation as a promo code and enjoy one free ride. Meanwhile, referrers also receive a reward with "an “X" number of free rides.
+    
+          </p>
+           
         </div>
         <div
-          class="case_card background-color-silver"
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
         >
-          <cardgodeefeature-stub
-            iconname="possible-routes"
-            title="The best possible routes"
+          <img
+            alt="The best possible routes"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom"
           >
-            <p
-              class="case_paragraph"
-            >
-              
-            Depending on passengers’ requests, the system allows drivers to construct the best possible routes automatically. If there are no orders from passengers, drivers will skip stops along the route.
-          
-            </p>
-          </cardgodeefeature-stub>
+            
+    The best possible routes
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      Depending on passengers’ requests, the system allows drivers to construct the best possible routes automatically. If there are no orders from passengers, drivers will skip stops along the route.
+    
+          </p>
+           
         </div>
       </div>
     </div>

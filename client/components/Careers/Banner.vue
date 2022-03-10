@@ -122,10 +122,10 @@ export default {
 
   &_btn {
     padding: 12px 24px;
-    background: #FFFFFF;
+    background: $bgcolor--white-primary;
     box-sizing: border-box;
     border-radius: 4px;
-    color: #101113;
+    color: $text-color--black-oil;
     border: none;
     @include font('Inter', 16px, 400);
     letter-spacing: -0.013em;
@@ -137,7 +137,7 @@ export default {
     }
 
     &:active {
-      background-color: #dadada;
+      background-color: $bgcolor--gainsboro;
     }
   }
 
@@ -152,7 +152,7 @@ export default {
     @include font('Inter', 32px, 400);
     line-height: 44px;
     letter-spacing: -0.013em;
-    color: #F4F4F4;
+    color: $text-color--cultured;
     margin-bottom: 56px;
 
     span {

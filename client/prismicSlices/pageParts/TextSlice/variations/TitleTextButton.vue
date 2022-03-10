@@ -6,18 +6,21 @@
       :href="buttonLink.url"
       target="_blank"
     >
-      <UIButton>{{ buttonText }}</UIButton>
+      <LazyHydrate when-visible>
+        <UIButton>{{ buttonText }}</UIButton>
+      </LazyHydrate>
     </a>
   </div>
 </template>
 
 <script>
-import UIButton from '@/components/shared/UIButton'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'TitleTextButton',
   components: {
-    UIButton,
+    LazyHydrate,
+    UIButton: () => import('@/components/shared/UIButton'),
   },
 
   props: {

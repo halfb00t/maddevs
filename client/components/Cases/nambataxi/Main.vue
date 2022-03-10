@@ -1,35 +1,43 @@
 <template>
   <section>
-    <About />
-    <Benefits />
-    <Requirements />
-    <FaultTolerance />
-    <MobileApplications />
-    <TechStackNamba />
-    <TeamNambaTaxi />
+    <LazyHydrate when-visible>
+      <About />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Benefits />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Requirements />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <FaultTolerance />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <MobileApplications />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TechStackNamba />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TeamNambaTaxi />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-
-import About from '@/components/Cases/nambataxi/About'
-import Benefits from '@/components/Cases/nambataxi/Benefits'
-import Requirements from '@/components/Cases/nambataxi/Requirements'
-import FaultTolerance from '@/components/Cases/nambataxi/FaultTolerance'
-import MobileApplications from '@/components/Cases/nambataxi/MobileApplications'
-import TechStackNamba from '@/components/Cases/nambataxi/TechStackNamba'
-import TeamNambaTaxi from '@/components/Cases/nambataxi/TeamNambaTaxi'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Main',
   components: {
-    TeamNambaTaxi,
-    TechStackNamba,
-    MobileApplications,
-    FaultTolerance,
-    Requirements,
-    Benefits,
-    About,
+    LazyHydrate,
+    TeamNambaTaxi: () => import('@/components/Cases/nambataxi/TeamNambaTaxi'),
+    TechStackNamba: () => import('@/components/Cases/nambataxi/TechStackNamba'),
+    MobileApplications: () => import('@/components/Cases/nambataxi/MobileApplications'),
+    FaultTolerance: () => import('@/components/Cases/nambataxi/FaultTolerance'),
+    Requirements: () => import('@/components/Cases/nambataxi/Requirements'),
+    Benefits: () => import('@/components/Cases/nambataxi/Benefits'),
+    About: () => import('@/components/Cases/nambataxi/About'),
   },
 }
 </script>

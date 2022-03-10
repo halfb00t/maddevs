@@ -3,13 +3,11 @@
     class="container_regular"
   >
     <h2
-      v-prlx="animationRequirementsText"
       class="case_title_h2 m-24_bottom media-m-12_bottom"
     >
       How we did it: Requirements and limitations
     </h2>
     <TextParagraph
-      v-prlx="animationRequirementsText"
       class="m-24_bottom"
     >
       Software requirements were prepared in close collaboration with the customer and with emphasis on business goals.
@@ -17,26 +15,11 @@
       on how convenient it will be for us to develop it. Discussions and analysis helped identify eight main
       requirements.
     </TextParagraph>
-    <div class="case_cards-container">
-      <div class="case_column">
-        <CardTechSolution
-          v-for="result in nambaRequirements.slice(0, 4)"
-          v-bind="result"
-          :key="`namba-${result.icon}`"
-          folder="nambataxi"
-        />
-      </div>
-      <div
-        v-prlx="animationRequirementsCards"
-        class="case_column"
-      >
-        <CardTechSolution
-          v-for="result in nambaRequirements.slice(4, 8)"
-          v-bind="result"
-          :key="`namba-${result.icon}`"
-          folder="nambataxi"
-        />
-      </div>
+    <div class="m-48_bottom">
+      <ParallaxCards
+        :data-cards="nambaRequirements"
+        :start-slice="4"
+      />
     </div>
     <TextParagraph
       class="m-96_bottom media-m-48_bottom"
@@ -60,82 +43,23 @@
 
 <script>
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import CardTechSolution from '@/components/Cases/shared/CardTechSolution'
 import { nambaRequirements } from '@/data/caseNambaTaxi'
 import TextQuote from '@/components/Cases/shared/TextQuote'
+import ParallaxCards from '@/components/Cases/shared/ParallaxCards/ParallaxCards'
 
 export default {
   name: 'Requirements',
   components: {
+    ParallaxCards,
     TextParagraph,
-    CardTechSolution,
     TextQuote,
   },
 
   data() {
     return {
       nambaRequirements,
-      animationRequirementsText: {
-        direction: 'y',
-        speed: 0.2,
-        fromBottom: false,
-        reverse: true,
-        limit: {
-          min: -56,
-          max: 56,
-        },
-
-        mobileMaxWidth: 977,
-      },
-
-      animationRequirementsCards: {
-        direction: 'y',
-        speed: 0.2,
-        fromBottom: false,
-        reverse: true,
-        limit: {
-          min: -56,
-          max: 56,
-        },
-
-        mobileMaxWidth: 977,
-      },
     }
   },
 }
 
 </script>
-
-<style scoped lang="scss">
-.case {
-  &_cards-container {
-    @include grid(repeat(2, 1fr), auto, 24px, 0);
-  }
-
-  &_column {
-    @include grid(repeat(1, 1fr), repeat(4, minmax(min-content, max-content)), 0, 24px);
-
-    ::v-deep {
-      .card-content {
-        align-self: start;
-      }
-    }
-  }
-
-  @media screen and (max-width: 976px) {
-    &_cards-container {
-      margin-bottom: 96px;
-      @include grid(repeat(1, 1fr), auto, 0, 10px);
-    }
-
-    &_column {
-      grid-row-gap: 10px;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    &_cards-container {
-      margin-bottom: 48px;
-    }
-  }
-}
-</style>

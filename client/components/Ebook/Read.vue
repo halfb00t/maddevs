@@ -107,7 +107,7 @@ export default {
 
 <style lang="scss" scoped>
 .ebook-read {
-  background-color: #fff;
+  background-color: $bgcolor--white-primary;
   padding-bottom: 40px;
 
   &__form {
@@ -117,7 +117,7 @@ export default {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 42px 48px;
-    background-color: #F4F4F4;
+    background-color: $bgcolor--silver;
     border-radius: 4px;
     box-sizing: border-box;
     align-self: flex-start;
@@ -162,7 +162,7 @@ export default {
       @include font('Inter', 22px, 400);
       line-height: 30px;
       letter-spacing: -1px;
-      color: #111;
+      color: $text-color--chinese-black;
       margin-bottom: 24px;
       width: 100%;
       margin-top: 15px;
@@ -206,7 +206,7 @@ export default {
     @include font('Inter', 42px, 600);
     line-height: 46px;
     letter-spacing: -1.3px;
-    color: #111;
+    color: $text-color--chinese-black;
     margin-bottom: 32px;
 
     @media screen and (max-width: 992px) {

@@ -94,24 +94,6 @@ describe('Header component', () => {
     expect(document.body.scrollTop).toBe(0)
   })
 
-  it('should correct work burger click handler', async () => {
-    render(Header, {
-      localVue,
-      mocks,
-      stubs,
-      store,
-    })
-
-    const burgerButton = screen.getByTestId('test-burger')
-    await fireEvent.click(burgerButton)
-    await fireEvent.touchMove(document.body)
-
-    expect(screen.queryByTestId('test-burger--close')).toBeTruthy()
-
-    await fireEvent.click(burgerButton)
-    expect(screen.queryByTestId('test-burger--close')).toBeFalsy()
-  })
-
   it('should correct work scroll handler', async () => {
     render(Header, {
       localVue,

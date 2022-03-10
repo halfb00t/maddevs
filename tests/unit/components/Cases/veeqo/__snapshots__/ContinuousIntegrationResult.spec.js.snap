@@ -48,7 +48,8 @@ exports[`ContinuousIntegrationResult component should render correctly 1`] = `
         </div>
          
         <div
-          class="case_card case_card-anim"
+          class="case_card"
+          style="position: relative; top: 20px;"
         >
           <img
             alt="Decreased Cost of CI Maintenance."

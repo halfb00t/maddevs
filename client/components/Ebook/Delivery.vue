@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .ebook-delivery {
-  background-color: #fff;
+  background-color: $bgcolor--white-primary;
   padding-bottom: 50px;
   margin: -1px 0;
 
@@ -50,7 +50,7 @@ export default {
     @include font('Inter', 16px, 600);
     letter-spacing: -0.4px;
     line-height: 20px;
-    color: #fff;
+    color: $text-color--white-primary;
     padding: 14px 24px;
 
     @media screen and (max-width: 900px) {

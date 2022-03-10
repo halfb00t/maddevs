@@ -13,6 +13,8 @@
         slider-description=""
         safari-top-bar-image="swiper-frame"
         safari-top-bar-alt="Namba Food: Food and Grocery Delivery Service Website Header."
+        :width="1026"
+        :height="525"
       />
     </section>
     <section class="container_regular">
@@ -23,22 +25,11 @@
       <TextQuoteBox class="m-auto m-48_top m-48_bottom media-m-24_top media-m-24_bottom">
         The Swift admin panel helps operators to stay in touch with a courier if there is an issue on the way.
       </TextQuoteBox>
-      <div class="case_delivery-control-cards m-72_bottom media-m-48_bottom">
-        <div class="background-color-silver case_delivery-control-card">
-          <TextParagraph>
-            Track the couriers' locations on a map and provide statuses of all orders and couriers.
-          </TextParagraph>
-        </div>
-        <div class="background-color-silver case_delivery-control-card">
-          <TextParagraph> Extract customers’ notes and communicate them to couriers. </TextParagraph>
-        </div>
-        <div class="background-color-silver case_delivery-control-card">
-          <TextParagraph> Assign orders and prepare reports. </TextParagraph>
-        </div>
-        <div class="background-color-silver case_delivery-control-card">
-          <TextParagraph> Call curriers using Free SWITCH microservice. </TextParagraph>
-        </div>
-      </div>
+      <ColoredCards
+        :cards-data="swiftCards"
+        grid-type="two-two"
+        class="m-72_bottom media-m-48_bottom"
+      />
       <h3 class="case_title_h3 m-12_bottom">
         Intelligent auto-assignment system for courier management
       </h3>
@@ -102,9 +93,9 @@
           class="case_map-video"
           width="100%"
           height="100%"
-          loop="true"
-          muted="true"
-          autoplay="true"
+          :loop="true"
+          :muted="true"
+          :autoplay="true"
         >
           <source
             :data-src="$getMediaFromS3('/videos/map.c41e893.mp4')"
@@ -123,7 +114,8 @@ import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import List from '@/components/Cases/shared/List'
 import ListItemDot from '@/components/Cases/shared/ListItemDot'
-import { adminPanel } from '@/data/caseNambafood'
+import { adminPanel, swiftCards } from '@/data/caseNambafood'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'Swift',
@@ -134,6 +126,7 @@ export default {
     TextQuoteBox,
     List,
     ListItemDot,
+    ColoredCards,
   },
 
   props: {
@@ -145,6 +138,7 @@ export default {
 
   data() {
     return {
+      swiftCards,
       adminPanel,
       loaded: false,
     }

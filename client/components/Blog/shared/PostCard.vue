@@ -39,27 +39,30 @@
         />
       </NuxtLink>
       <div class="post-card__meta">
-        <PostTag
-          v-if="post.tags && post.tags.length"
-          :tag="tag || post.tags[0]"
-          :disabled="disableTagLink"
-          :theme="theme"
-        />
+        <LazyHydrate when-visible>
+          <PostTag
+            v-if="post.tags && post.tags.length"
+            :tag="tag || post.tags[0]"
+            :disabled="disableTagLink"
+            :theme="theme"
+          />
+        </LazyHydrate>
       </div>
-      <PostAuthor
-        v-bind="author"
-        :disabled="disableAuthorLink"
-        theme="light"
-        :date="formattedDate"
-      />
+      <LazyHydrate when-visible>
+        <PostAuthor
+          v-bind="author"
+          :disabled="disableAuthorLink"
+          theme="light"
+          :date="formattedDate"
+        />
+      </LazyHydrate>
     </div>
   </div>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
 import linkResolver from '@/plugins/link-resolver.js'
-import PostAuthor from '@/components/Blog/shared/PostAuthor'
-import PostTag from '@/components/Blog/shared/PostTag'
 import getFirstParagraph from '@/helpers/getFirstParagraph'
 import textEllipsis from '@/helpers/textEllipsis'
 import formatDate from '@/helpers/formatDate'
@@ -67,8 +70,9 @@ import formatDate from '@/helpers/formatDate'
 export default {
   name: 'PostCard',
   components: {
-    PostAuthor,
-    PostTag,
+    LazyHydrate,
+    PostAuthor: () => import('@/components/Blog/shared/PostAuthor'),
+    PostTag: () => import('@/components/Blog/shared/PostTag'),
   },
 
   props: {

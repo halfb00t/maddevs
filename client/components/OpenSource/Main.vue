@@ -1,30 +1,37 @@
 <template>
   <div class="open-source">
-    <Banner />
-    <ParagraphSection />
-    <FeaturedProjects />
+    <LazyHydrate when-visible>
+      <Banner />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ParagraphSection />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <FeaturedProjects />
+    </LazyHydrate>
     <div class="open-source--bg-white">
-      <Boilerplates />
-      <CTABanner />
+      <LazyHydrate when-visible>
+        <Boilerplates />
+      </LazyHydrate>
+      <LazyHydrate when-visible>
+        <CTABanner />
+      </LazyHydrate>
     </div>
   </div>
 </template>
 
 <script>
-import Banner from '@/components/OpenSource/Banner'
-import ParagraphSection from '@/components/OpenSource/ParagraphSection'
-import FeaturedProjects from '@/components/OpenSource/FeaturedProjects'
-import Boilerplates from '@/components/OpenSource/Boilerplates'
-import CTABanner from '@/components/OpenSource/CTABanner'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Main',
   components: {
-    Banner,
-    ParagraphSection,
-    FeaturedProjects,
-    Boilerplates,
-    CTABanner,
+    LazyHydrate,
+    Banner: () => import('@/components/OpenSource/Banner'),
+    ParagraphSection: () => import('@/components/OpenSource/ParagraphSection'),
+    FeaturedProjects: () => import('@/components/OpenSource/FeaturedProjects'),
+    Boilerplates: () => import('@/components/OpenSource/Boilerplates'),
+    CTABanner: () => import('@/components/OpenSource/CTABanner'),
   },
 }
 </script>

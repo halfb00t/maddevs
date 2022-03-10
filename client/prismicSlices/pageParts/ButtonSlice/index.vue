@@ -9,69 +9,80 @@
       :data-aos="animation"
       data-testid="button-slice-container"
     >
-      <UIButton
+      <LazyHydrate
         v-if="variation === 'default-slice'"
-        :full-width="fullWidth"
-        is-link
-        :to="link.url"
-        target="_self"
-        data-testid="button-ui"
-        :class="[
-          'button-slice__button',
-          'button-slice__button--normal',
-        ]"
-        :style="{ maxWidth }"
+        when-visible
       >
-        {{ text }}
-      </UIButton>
-      <UIOutlinedButton
+        <UIButton
+          :full-width="fullWidth"
+          is-link
+          :to="link.url"
+          target="_self"
+          data-testid="button-ui"
+          :class="[
+            'button-slice__button',
+            'button-slice__button--normal',
+          ]"
+          :style="{ maxWidth }"
+        >
+          {{ text }}
+        </UIButton>
+      </LazyHydrate>
+      <LazyHydrate
         v-else-if="variation === 'outlinedButton'"
-        :full-width="fullWidth"
-        :color="color"
-        is-link
-        :to="link.url"
-        target="_self"
-        data-testid="button-outline"
-        :class="[
-          'button-slice__button',
-          'button-slice__button--outlined',
-        ]"
-        :style="{ maxWidth }"
+        when-visible
       >
-        {{ text }}
-      </UIOutlinedButton>
-      <UILinkButton
+        <UIOutlinedButton
+          :full-width="fullWidth"
+          :color="color"
+          is-link
+          :to="link.url"
+          target="_self"
+          data-testid="button-outline"
+          :class="[
+            'button-slice__button',
+            'button-slice__button--outlined',
+          ]"
+          :style="{ maxWidth }"
+        >
+          {{ text }}
+        </UIOutlinedButton>
+      </LazyHydrate>
+      <LazyHydrate
         v-else-if="variation === 'linkButton'"
-        :full-width="fullWidth"
-        :color="color"
-        is-link
-        :to="link.url"
-        target="_self"
-        data-testid="button-link"
-        :class="[
-          'button-slice__button',
-          'button-slice__button--link',
-        ]"
-        :style="{ maxWidth }"
+        when-visible
       >
-        {{ text }}
-      </UILinkButton>
+        <UILinkButton
+          :full-width="fullWidth"
+          :color="color"
+          is-link
+          :to="link.url"
+          target="_self"
+          data-testid="button-link"
+          :class="[
+            'button-slice__button',
+            'button-slice__button--link',
+          ]"
+          :style="{ maxWidth }"
+        >
+          {{ text }}
+        </UILinkButton>
+      </LazyHydrate>
     </div>
   </div>
 </template>
 
 <script>
-import UIButton from '@/components/shared/UIButton'
-import UIOutlinedButton from '@/components/shared/UIOutlinedButton'
-import UILinkButton from '@/components/shared/UILinkButton'
+import LazyHydrate from 'vue-lazy-hydration'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'ButtonSlice',
   components: {
-    UIButton,
-    UIOutlinedButton,
-    UILinkButton,
+    LazyHydrate,
+    UIButton: () => import('@/components/shared/UIButton'),
+    UIOutlinedButton: () => import('@/components/shared/UIOutlinedButton'),
+    UILinkButton: () => import('@/components/shared/UILinkButton'),
   },
 
   mixins: [animateOnScrollMixin({

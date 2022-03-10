@@ -20,7 +20,12 @@ exports[`OpenPositions component should render correctly 1`] = `
       
         </h2>
          
-        <positionsfilter-stub />
+        <lazyhydrate-stub
+          idletimeout="2000"
+          whenvisible="true"
+        >
+          <positionsfilter-stub />
+        </lazyhydrate-stub>
       </div>
        
       <positionsgrid-stub />

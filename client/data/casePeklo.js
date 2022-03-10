@@ -1,15 +1,91 @@
 export const benefitsCards = [
   {
     title: 'Digital marketing specialists',
-    description: 'Automation allows launching contextual ads 2-3 times faster. The saved time can be spent on strategic and creative work that humans are good at, like KPI analysis and media planning.',
-    color: 'black',
-    img: 'laptop',
+    descriptions: 'Automation allows launching contextual ads 2-3 times faster. The saved time can be spent on strategic and creative work that humans are good at, like KPI analysis and media planning.',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'peklo',
+      file: 'laptop',
+      alt: 'Digital marketing specialists',
+    },
+    colors: {
+      card: 'black',
+      title: 'white',
+      descriptions: 'white',
+    },
   },
   {
     title: 'Promotion agencies',
-    description: 'Resources (in specialists’ time) needed to start a contextual ad campaign decrease by 50-80%. It makes delivering the results the customer needs more achievable.',
-    color: 'gray',
-    img: 'team-communication',
+    descriptions: 'Resources (in specialists’ time) needed to start a contextual ad campaign decrease by 50-80%. It makes delivering the results the customer needs more achievable.',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'peklo',
+      file: 'team-communication',
+      alt: 'Promotion agencies',
+    },
+    colors: {
+      card: 'gray',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Entrepreneurs',
+    descriptions: 'Subscription to Peklo Tool pays off after a single contextual advertising campaign. The money saved by automation can significantly exceed the service’s price.',
+    colors: {
+      card: 'yellow',
+    },
+  },
+]
+
+export const keywordGroupingCards = [
+  {
+    title: 'Problem',
+    descriptions: 'NLP could cope with grouping, but it would’ve taken several minutes to process a single file with keywords in it',
+    colors: {
+      card: 'black',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Solution',
+    descriptions: 'Integration with an extensive dictionary of contextual synonyms in a separate cache',
+    colors: {
+      card: 'gray',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+]
+
+export const additionalFunctionsCards = [
+  {
+    title: 'Detection of negative keywords',
+    descriptions: 'The tool identifies irrelevant keywords for narrower, more specific targeting.',
+    colors: {
+      card: 'black',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Removal of explicit and implicit duplicates',
+    descriptions: 'Duplicates inevitably occur, and the tool is configured to eliminate them.',
+    colors: {
+      card: 'gray',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Elimination of negative keywords across groups',
+    descriptions: 'This reduces competition among keywords so that users see relevant ads and get to the right pages.',
+    colors: {
+      card: 'yellow',
+    },
   },
 ]
 

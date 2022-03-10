@@ -14,62 +14,71 @@ exports[`PhaseFixingDatabaseOutages component should render correctly 1`] = `
     </h2>
      
     <div
-      class="case_cards-container"
+      class="colored-cards card-grid-type--two-two"
     >
       <div
-        class="case_card background-color-silver"
+        class="colored-card colored-card--1 background-color-silver"
       >
-        <p
-          class="case_paragraph-uppercase case_card-name m-10_bottom media-m-8_bottom"
-        >
-          
-        Challenge
-      
-        </p>
+        <!---->
          
-        <h3
-          class="case_title_h4 m-10_bottom media-m-8_bottom"
+        <div
+          class="colored-card__footer"
         >
-          
-        Regular outage
-      
-        </h3>
-         
-        <p
-          class="case_paragraph"
-        >
-          
+          <span
+            class="colored-card__pre-title case_paragraph-uppercase m-10_bottom media-m-8_bottom text-color-quick-silver"
+          >
+            Challenge
+          </span>
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
+          >
+            
+      Regular outage
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description"
+          >
+            
         Without any detectable load spikes, the database would often reach maximum processor performance and deny service as the queries piled up in the query queue. To get the system up and running again, workers had to be manually restarted every time.
       
-        </p>
+          </p>
+           
+        </div>
       </div>
-       
       <div
-        class="case_card background-color-blue-light"
+        class="colored-card colored-card--2 background-color-blue-light"
       >
-        <p
-          class="case_paragraph-uppercase case_card-name m-10_bottom media-m-8_bottom"
-        >
-          
-        Effect on users
-      
-        </p>
+        <!---->
          
-        <h3
-          class="case_title_h4 m-10_bottom media-m-8_bottom"
+        <div
+          class="colored-card__footer"
         >
-          
-        Degraded user services
-      
-        </h3>
-         
-        <p
-          class="case_paragraph"
-        >
-          
+          <span
+            class="colored-card__pre-title case_paragraph-uppercase m-10_bottom media-m-8_bottom text-color-quick-silver"
+          >
+            Effect on users
+          </span>
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom"
+          >
+            
+      Degraded user services
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description"
+          >
+            
         Users had limited access to services: they couldn't view contents, place orders, or manage their settings.
       
-        </p>
+          </p>
+           
+        </div>
       </div>
     </div>
      

@@ -159,7 +159,7 @@ export default {
     line-height: 46px;
     margin-bottom: 24px;
     letter-spacing: -1.3px;
-    color: #000;
+    color: $text-color--black;
   }
 
   &__paragraph {
@@ -204,7 +204,6 @@ export default {
       display: block;
       width: 100%;
       height: auto;
-      vertical-align: middle;
     }
 
     &-wrapper {

@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils'
 import { render, screen } from '@testing-library/vue'
 import KeyMetricsSlice from '@/prismicSlices/pageParts/KeyMetricsSlice'
 
-const stubs = ['FirstVariation', 'SecondVariation', 'ThirdVariation']
+const stubs = ['FirstVariation', 'SecondVariation', 'ThirdVariation', 'LazyHydrate']
 
 const backgrounds = {
   white: '#ffffff',
@@ -133,6 +133,25 @@ describe('KeyMetrics slice', () => {
       })
 
       expect(wrapper.vm.sliceBackground).toBeNull()
+    })
+  })
+
+  describe('Dynamic imports KeyMetricsSlice', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(KeyMetricsSlice, {
+        propsData: getProps({
+          ...apiData,
+          background: 'grey',
+        }),
+      })
+
+      const FirstVariation = await container.vm.$options.components.FirstVariation.call()
+      const SecondVariation = await container.vm.$options.components.SecondVariation.call()
+      const ThirdVariation = await container.vm.$options.components.ThirdVariation.call()
+
+      expect(FirstVariation.default.name).toBe('FirstVariation')
+      expect(SecondVariation.default.name).toBe('SecondVariation')
+      expect(ThirdVariation.default.name).toBe('ThirdVariation')
     })
   })
 })

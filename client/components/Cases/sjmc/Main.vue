@@ -4,64 +4,72 @@
       id="case-first-section"
       class="case_animation_block"
     />
-    <About />
-    <Partnership />
-    <TheChallenges />
-    <Software />
-    <!-- <section class="container_full case_full-screen-slider">
-      <Swiper
-        :components="swiperMultimediaManagement"
-        :safariTopBar="false"
-        :boxShadow="false"
-        sliderDescription="Australia-based IT company to create integrated multimedia solutions."
-      />
-    </section> -->
-    <MobileApplications />
-    <Hardware />
-    <KeyGoals />
-    <Technologies />
-    <Office />
-    <TeamIssues />
-    <SystemMonitoring />
-    <AutomatedTesting />
-    <Trip />
-    <OngoingPartnership />
+    <LazyHydrate when-visible>
+      <About />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Partnership />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TheChallenges />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Software />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <MobileApplications />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Hardware />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <KeyGoals />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Technologies />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Office />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TeamIssues />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <SystemMonitoring />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <AutomatedTesting />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <Trip />
+    </LazyHydrate>
+    <LazyHydrate when-visible>
+      <OngoingPartnership />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import About from '@/components/Cases/sjmc/About'
-import Partnership from '@/components/Cases/sjmc/Partnership'
-import TheChallenges from '@/components/Cases/sjmc/TheChallenges'
-import Software from '@/components/Cases/sjmc/Software'
-import MobileApplications from '@/components/Cases/sjmc/MobileApplications'
-import Hardware from '@/components/Cases/sjmc/Hardware'
-import KeyGoals from '@/components/Cases/sjmc/KeyGoals'
-import Technologies from '@/components/Cases/sjmc/Technologies'
-import Office from '@/components/Cases/sjmc/Office'
-import TeamIssues from '@/components/Cases/sjmc/TeamIssues'
-import SystemMonitoring from '@/components/Cases/sjmc/SystemMonitoring'
-import AutomatedTesting from '@/components/Cases/sjmc/AutomatedTesting'
-import Trip from '@/components/Cases/sjmc/Trip'
-import OngoingPartnership from '@/components/Cases/sjmc/OngoingPartnership'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Main',
   components: {
-    About,
-    Partnership,
-    TheChallenges,
-    Software,
-    MobileApplications,
-    Hardware,
-    KeyGoals,
-    Technologies,
-    Office,
-    TeamIssues,
-    SystemMonitoring,
-    AutomatedTesting,
-    Trip,
-    OngoingPartnership,
+    LazyHydrate,
+    About: () => import('@/components/Cases/sjmc/About'),
+    Partnership: () => import('@/components/Cases/sjmc/Partnership'),
+    TheChallenges: () => import('@/components/Cases/sjmc/TheChallenges'),
+    Software: () => import('@/components/Cases/sjmc/Software'),
+    MobileApplications: () => import('@/components/Cases/sjmc/MobileApplications'),
+    Hardware: () => import('@/components/Cases/sjmc/Hardware'),
+    KeyGoals: () => import('@/components/Cases/sjmc/KeyGoals'),
+    Technologies: () => import('@/components/Cases/sjmc/Technologies'),
+    Office: () => import('@/components/Cases/sjmc/Office'),
+    TeamIssues: () => import('@/components/Cases/sjmc/TeamIssues'),
+    SystemMonitoring: () => import('@/components/Cases/sjmc/SystemMonitoring'),
+    AutomatedTesting: () => import('@/components/Cases/sjmc/AutomatedTesting'),
+    Trip: () => import('@/components/Cases/sjmc/Trip'),
+    OngoingPartnership: () => import('@/components/Cases/sjmc/OngoingPartnership'),
   },
 }
 </script>

@@ -277,30 +277,7 @@ exports[`Header component should render correctly 1`] = `
           
             </button>
              
-            <button
-              class="header__burger-btn"
-              data-testid="test-burger"
-              type="button"
-            >
-              <svg
-                class="header__burger--open"
-                fill="none"
-                height="10"
-                viewBox="0 0 30 10"
-                width="30"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 0H30V1H0V0Z"
-                  fill="#F5F7F9"
-                />
-                 
-                <path
-                  d="M0 9H30V10H0V9Z"
-                  fill="#F5F7F9"
-                />
-              </svg>
-            </button>
+            <!---->
           </div>
         </div>
       </div>

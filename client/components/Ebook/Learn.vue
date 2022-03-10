@@ -44,7 +44,7 @@ export default {
 
   h2 {
     @include font('Inter', 42px, 600);
-    color: #fff;
+    color: $text-color--white-primary;
     line-height: 46px;
     letter-spacing: -1.3px;
     margin-bottom: 32px;

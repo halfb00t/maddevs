@@ -10,7 +10,9 @@
         <h2 class="open-positions__title">
           {{ $t('careers.section-8.title') }}
         </h2>
-        <PositionsFilter />
+        <LazyHydrate when-visible>
+          <PositionsFilter />
+        </LazyHydrate>
       </div>
       <PositionsGrid />
     </div>
@@ -18,13 +20,14 @@
 </template>
 
 <script>
-import PositionsFilter from '@/components/Careers/shared/PositionsFilter'
+import LazyHydrate from 'vue-lazy-hydration'
 import PositionsGrid from '@/components/Careers/shared/PositionsGrid'
 
 export default {
   name: 'OpenPositions',
   components: {
-    PositionsFilter,
+    LazyHydrate,
+    PositionsFilter: () => import('@/components/Careers/shared/PositionsFilter'),
     PositionsGrid,
   },
 }

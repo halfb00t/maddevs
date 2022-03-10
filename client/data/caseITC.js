@@ -1,33 +1,51 @@
 export const resolvedIssues = [
   {
     icon: 'files',
-    description: 'Extensive use of paper (minimum 2 reams of paper per SME)',
+    descriptions: 'Extensive use of paper (minimum 2 reams of paper per SME)',
     alt: 'Files icon',
+    folder: 'itc',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'search-book',
-    description: 'Challenges with manually tracking coaching mission statuses, outputs, and outcomes',
+    descriptions: 'Challenges with manually tracking coaching mission statuses, outputs, and outcomes',
     alt: 'Search book icon',
+    folder: 'itc',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'info',
-    description: 'Lack of readily available mission critical information',
+    descriptions: 'Lack of readily available mission critical information',
     alt: 'Info icon.',
+    folder: 'itc',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'connection',
-    description: 'ITC had to manually calculate any mission statistics',
+    descriptions: 'ITC had to manually calculate any mission statistics',
     alt: 'Connection icon',
+    folder: 'itc',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'folder',
-    description: 'Coaching reports presented challenges with storing, extracting, compiling, and using data derived from coaching',
+    descriptions: 'Coaching reports presented challenges with storing, extracting, compiling, and using data derived from coaching',
     alt: 'Folder icon.',
+    folder: 'itc',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
   {
     icon: 'lock-file',
-    description: 'Challenges of information accessibility to the Institutional Partners in each country, the ITC, EU, and other stakeholders',
+    descriptions: 'Challenges of information accessibility to the Institutional Partners in each country, the ITC, EU, and other stakeholders',
     alt: 'Lock file icon.',
+    folder: 'itc',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
   },
 ]
 
@@ -177,4 +195,35 @@ export const idList = [
   'innovation-item-3',
   'innovation-item-4',
   'innovation-item-5',
+]
+
+const cardBgColor = {
+  card: 'silver',
+}
+
+export const domainDrivenBenefits = [
+  {
+    descriptions: 'The backend structure allows for future modifications and augmentations, making the app scalable and adaptable.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
+  {
+    descriptions: 'Data processing can be flexibly optimised separately for the read side and the write side.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
+  {
+    descriptions: 'Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
+  {
+    descriptions: 'The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles.',
+    colors: {
+      ...cardBgColor,
+    },
+  },
 ]

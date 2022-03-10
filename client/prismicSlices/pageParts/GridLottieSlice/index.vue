@@ -3,32 +3,40 @@
     class="grid-lottie"
     :style="{ backgroundColor: sliceBackground }"
   >
-    <GridLottie
+    <LazyHydrate
       v-if="slice.variation === 'default-slice'"
-      :items="slice.items"
-      :data-aos="slice.primary.animation"
-      data-testid="card-lottie"
-    />
-    <GridLottieLink
+      when-visible
+    >
+      <GridLottie
+        :items="slice.items"
+        :data-aos="slice.primary.animation"
+        data-testid="card-lottie"
+      />
+    </LazyHydrate>
+    <LazyHydrate
       v-else-if="slice.variation === 'gridLottieLink'"
-      :items="slice.items"
-      :data-aos="slice.primary.animation"
-      data-testid="card-lottie-link"
-    />
+      when-visible
+    >
+      <GridLottieLink
+        :items="slice.items"
+        :data-aos="slice.primary.animation"
+        data-testid="card-lottie-link"
+      />
+    </LazyHydrate>
   </section>
 </template>
 
 <script>
-import GridLottie from './variations/GridLottie'
-import GridLottieLink from './variations/GridLottieLink'
+import LazyHydrate from 'vue-lazy-hydration'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 
 export default {
   name: 'GridLottieMain',
 
   components: {
-    GridLottie,
-    GridLottieLink,
+    LazyHydrate,
+    GridLottie: () => import('./variations/GridLottie'),
+    GridLottieLink: () => import('./variations/GridLottieLink'),
   },
 
   mixins: [animateOnScrollMixin({

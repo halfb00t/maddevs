@@ -63,7 +63,7 @@ export default {
   },
 
   head() {
-    return {
+    return this.compressedImage && {
       link: [
         {
           rel: 'preload',
@@ -119,7 +119,6 @@ export default {
       height: auto;
       max-height: 534px;
       display: block;
-      vertical-align: middle;
       object-fit: cover;
     }
   }

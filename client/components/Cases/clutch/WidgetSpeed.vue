@@ -12,7 +12,7 @@
     </div>
     <div class="container_full background-color-blue-grey p-80_bottom p-80_top media-p-24_top media-p-0_bottom">
       <div class="case_img-section">
-        <div v-prlx="animationSettingsImg">
+        <div v-mad-parallax="animationSettingsImg">
           <div class="case_image-wrap">
             <Picture
               :width="1440"
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import MadParallax from '@/plugins/mad-parallax'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import Picture from '@/components/Cases/shared/Picture'
 
@@ -41,14 +42,18 @@ export default {
     Picture,
   },
 
+  directives: {
+    MadParallax,
+  },
+
   data() {
     return {
       animationSettingsImg: {
         direction: 'x',
-        speed: 0.2,
-        fromBottom: true,
         reverse: true,
-        mobileMaxWidth: 991,
+        customMove: true,
+        startPoint: 3.5,
+        speed: 0.3,
       },
     }
   },

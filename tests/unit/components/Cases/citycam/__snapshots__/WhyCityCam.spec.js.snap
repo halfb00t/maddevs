@@ -37,105 +37,115 @@ exports[`WhyCityCam component should render correctly 1`] = `
     </p>
      
     <div
-      class="case_cards m-24_bottom"
+      class="colored-cards m-24_bottom card-grid-type--two-one"
     >
       <div
-        class="case_cards-group"
+        class="colored-card colored-card--1 background-color-yellow-dark"
       >
         <div
-          class="case_card background-color-yellow-dark"
-          id="citycam-card-0"
+          class="colored-card__image-wrapper"
         >
-          <div
-            class="case_card-img"
-          >
-            <picture-stub
-              alt="Individual citizens"
-              extension="png"
-              file="street"
-              folder="citycam"
-              height="200"
-              lazy="true"
-              width="396"
-            />
-          </div>
-           
-          <h3
-            class="case_title_h4 case_card-title m-24_top m-8_bottom"
-          >
-            
-          Individual citizens
-        
-          </h3>
-           
-          <p
-            class="case_paragraph"
-            style="color: rgb(255, 255, 255);"
-          >
-            
-          They can check what’s happening on major crossroads (or those they’re planning to include in their routes) before even getting in the car for their drive home, to work, or elsewhere. It’s convenient, and it can save residents time and money.
-        
-          </p>
+          <picture-stub
+            alt="Individual citizens"
+            class="colored-card__image colored-card-image-street"
+            extension="png"
+            file="street"
+            folder="citycam"
+            height="200"
+            width="396"
+          />
         </div>
+         
         <div
-          class="case_card background-color-blue-darkened"
-          id="citycam-card-1"
+          class="colored-card__footer"
         >
-          <div
-            class="case_card-img"
-          >
-            <picture-stub
-              alt="Local businesses"
-              extension="png"
-              file="mall"
-              folder="citycam"
-              height="200"
-              lazy="true"
-              width="396"
-            />
-          </div>
+          <!---->
            
           <h3
-            class="case_title_h4 case_card-title m-24_top m-8_bottom"
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
           >
             
-          Local businesses
-        
+      Individual citizens
+    
           </h3>
            
           <p
-            class="case_paragraph"
-            style="color: rgb(255, 255, 255);"
+            class="case_paragraph colored-card__description text-color-white"
           >
             
-          They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.
-        
+        They can check what’s happening on major crossroads (or those they’re planning to include in their routes) before even getting in the car for their drive home, to work, or elsewhere. It’s convenient, and it can save residents time and money.
+      
           </p>
+           
         </div>
       </div>
-       
       <div
-        class="case_card background-color-blue-dark"
-        id="citycam-card-2"
+        class="colored-card colored-card--2 background-color-blue-darkened"
       >
-        <h3
-          class="case_title_h4 case_card-title m-8_bottom"
+        <div
+          class="colored-card__image-wrapper"
         >
-          
-        City administrators
-      
-        </h3>
+          <picture-stub
+            alt="Local businesses"
+            class="colored-card__image colored-card-image-mall"
+            extension="png"
+            file="mall"
+            folder="citycam"
+            height="200"
+            width="396"
+          />
+        </div>
          
-        <p
-          class="case_paragraph"
-          style="color: rgb(255, 255, 255);"
+        <div
+          class="colored-card__footer"
         >
-          
-        They can identify weaknesses in the way traffic is currently organised by statistically analysing what
-        crossroads and road sections get clogged frequently. Adjustments, like making certain green lights last
-        longer, can solve congestion problems.
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Local businesses
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description text-color-white"
+          >
+            
+        They can see how many and how often potential customers drive past their store/eatery/salon and how the supplies they need make it to them through the city. All this helps devise better business models in terms of both marketing and logistics.
       
-        </p>
+          </p>
+           
+        </div>
+      </div>
+      <div
+        class="colored-card colored-card--3 background-color-blue-dark"
+      >
+        <!---->
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      City administrators
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description text-color-white"
+          >
+            
+        They can identify weaknesses in the way traffic is currently organised by statistically analysing what crossroads and road sections get clogged frequently. Adjustments, like making certain green lights last longer, can solve congestion problems.
+      
+          </p>
+           
+        </div>
       </div>
     </div>
      

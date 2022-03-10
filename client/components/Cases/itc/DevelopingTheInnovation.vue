@@ -60,27 +60,11 @@
       <h3 class="case_title_h3 m-12_bottom">
         Benefits of CQRS
       </h3>
-      <div class="case_cards-container m-48_bottom media-m-24_bottom">
-        <Card class="background-color-silver">
-          <TextParagraph>
-            The backend structure allows for future modifications and augmentations, making the app scalable and adaptable.
-          </TextParagraph>
-        </Card>
-        <Card class="background-color-silver">
-          <TextParagraph>
-            Data processing can be flexibly optimised separately for the read side and the write side.
-          </TextParagraph>
-        </Card>
-        <Card class="background-color-silver">
-          <TextParagraph>
-            Overcomplicated logic is avoided so that the app’s performance does not have bottlenecks or vulnerabilities.
-          </TextParagraph>
-        </Card>
-        <Card class="background-color-silver">
-          <TextParagraph>
-            The system is more secure because access must be managed on one side only, so it is simpler to separate and distribute functions among user roles.
-          </TextParagraph>
-        </Card>
+      <div class="m-48_bottom media-m-24_bottom">
+        <ColoredCards
+          :cards-data="domainDrivenBenefits"
+          grid-type="two-two"
+        />
       </div>
       <div class="m-96_bottom media-m-48_bottom">
         <LottieMad
@@ -124,25 +108,25 @@
 <script>
 import LottieMad from '@/components/shared/LottieMad'
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
-import Card from '@/components/Cases/shared/Card'
 import TextQuoteBox from '@/components/Cases/shared/TextQuoteBox'
 import ListNumberedBox from '@/components/Cases/shared/ListNumberedBox'
 import ListNumberedItemBox from '@/components/Cases/shared/ListNumberedItemBox'
 import Picture from '@/components/Cases/shared/Picture'
-import { developingInnovation, idList } from '@/data/caseITC'
+import { developingInnovation, idList, domainDrivenBenefits } from '@/data/caseITC'
 import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
 import setBackground from '@/helpers/setBackground'
+import ColoredCards from '@/components/Cases/shared/ColoredCards'
 
 export default {
   name: 'DevelopingTheInnovation',
   components: {
     TextParagraph,
-    Card,
     TextQuoteBox,
     LottieMad,
     ListNumberedBox,
     ListNumberedItemBox,
     Picture,
+    ColoredCards,
   },
 
   mixins: [
@@ -155,6 +139,7 @@ export default {
   data() {
     return {
       developingInnovation,
+      domainDrivenBenefits,
     }
   },
 }

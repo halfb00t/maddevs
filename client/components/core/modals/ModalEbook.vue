@@ -95,7 +95,7 @@ export default {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 42px 48px;
-  background-color: #F4F4F4;
+  background-color: $bgcolor--silver;
   border-radius: 4px;
   box-sizing: border-box;
 
@@ -117,7 +117,7 @@ export default {
     @include font('Inter', 22px, 400);
     line-height: 30px;
     letter-spacing: -1px;
-    color: #111;
+    color: $text-color--chinese-black;
     margin-top: 15px;
     margin-bottom: 24px;
     width: 100%;

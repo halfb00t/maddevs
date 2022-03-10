@@ -14,6 +14,8 @@ const apiData = {
   animation: 'fade-up',
 }
 
+const stubs = ['LazyHydrate', 'TechnologiesAndTools', 'ToolsGrid', 'ExistingToolsGrid']
+
 describe('Technologies and Tools Grid slice', () => {
   it('should correctly render TechnologiesAndTools component', () => {
     const variation = 'default-slice'
@@ -21,6 +23,7 @@ describe('Technologies and Tools Grid slice', () => {
 
     const { container } = render(TechnologiesAndTools, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('technologies-grid-variation')).not.toBeNull()
@@ -35,6 +38,7 @@ describe('Technologies and Tools Grid slice', () => {
 
     const { container } = render(TechnologiesAndTools, {
       props,
+      stubs,
     })
 
     expect(screen.queryByTestId('tools-grid-variation')).not.toBeNull()
@@ -85,6 +89,20 @@ describe('Technologies and Tools Grid slice', () => {
       })
 
       expect(wrapper.vm.sliceBackground).toBeNull()
+    })
+  })
+
+  describe('Dynamic imports TechnologiesAndTools', () => {
+    it('should correctly import components', async () => {
+      const container = shallowMount(TechnologiesAndTools)
+
+      const TechnologiesAndTool = await container.vm.$options.components.TechnologiesAndTools.call()
+      const ToolsGrid = await container.vm.$options.components.ToolsGrid.call()
+      const ExistingToolsGrid = await container.vm.$options.components.ExistingToolsGrid.call()
+
+      expect(TechnologiesAndTool.default.name).toBe('TechnologiesAndTools')
+      expect(ToolsGrid.default.name).toBe('ToolsGrid')
+      expect(ExistingToolsGrid.default.name).toBe('ExistingToolsGrid')
     })
   })
 })

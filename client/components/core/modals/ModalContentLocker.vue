@@ -122,7 +122,7 @@ export default {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 25px 46px;
-  background-color: #F4F4F4;
+  background-color: $bgcolor--silver;
   border-radius: 4px;
   box-sizing: border-box;
 
@@ -192,7 +192,7 @@ export default {
       }
       @media screen and (max-width: 720px) {
         margin-top: 0;
-        background-color: #F4F4F4;
+        background-color: $bgcolor--silver;
       }
     }
 

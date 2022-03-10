@@ -3,19 +3,54 @@
 exports[`Main component should render correctly 1`] = `
 <div>
   <section>
-    <about-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <about-stub />
+    </lazyhydrate-stub>
      
-    <benefits-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <benefits-stub />
+    </lazyhydrate-stub>
      
-    <requirements-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <requirements-stub />
+    </lazyhydrate-stub>
      
-    <faulttolerance-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <faulttolerance-stub />
+    </lazyhydrate-stub>
      
-    <mobileapplications-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <mobileapplications-stub />
+    </lazyhydrate-stub>
      
-    <techstacknamba-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <techstacknamba-stub />
+    </lazyhydrate-stub>
      
-    <teamnambataxi-stub />
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <teamnambataxi-stub />
+    </lazyhydrate-stub>
   </section>
 </div>
 `;

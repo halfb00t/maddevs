@@ -1,6 +1,6 @@
 <template>
   <div class="case_container container_full background-color-silver m-48_bottom">
-    <div v-prlx="animationSettings">
+    <div v-mad-parallax="animationSettings">
       <div class="case_image-wrapp">
         <Picture
           folder="veeqo"
@@ -19,6 +19,7 @@
 
 <script>
 import Picture from '@/components/Cases/shared/Picture'
+import MadParallax from '@/plugins/mad-parallax'
 
 export default {
   name: 'InventoryChangeLog',
@@ -26,17 +27,19 @@ export default {
     Picture,
   },
 
+  directives: {
+    MadParallax,
+  },
+
   data() {
     return {
       animationSettings: {
         reverse: true,
-        limit: {
-          min: -50,
-          max: 0,
-        },
-
-        mobileMaxWidth: 881,
-        fromBottom: true,
+        maxMove: 50,
+        customMove: true,
+        speed: 0.6,
+        startPoint: 1.7,
+        setIndentTop: true,
       },
     }
   },
