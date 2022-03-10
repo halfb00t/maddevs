@@ -5,6 +5,9 @@
     button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
     button-label="Get an infrastructure audit"
     :use-company="true"
+    :use-interest-radio-input="true"
+    :interest-radio-input-required="true"
+    :default-interest-radio-input="true"
     @submit="handleSubmit"
   >
     <RadioList
