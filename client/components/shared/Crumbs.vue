@@ -1,30 +1,48 @@
 <template>
   <ol
-    vocab="http://schema.org/"
-    typeof="BreadcrumbList"
+    itemscope
+    itemtype="https://schema.org/BreadcrumbList"
   >
     <li
       v-if="crumbs.length"
+      itemprop="itemListElement"
+      itemscope
+      itemtype="http://schema.org/ListItem"
       class="item"
     >
       <NuxtLink
         :to="'/'"
         class="title"
+        itemprop="item"
+        title="Mad Devs"
       >
-        Mad Devs
+        <span itemprop="name">Mad Devs</span>
+        <meta
+          itemprop="position"
+          content="0"
+        >
       </NuxtLink>
     </li>
     <li
       v-for="(crumb, i) in crumbs"
-      :key="i"
+      :key="`${i}-${crumb}`"
       class="item"
+      itemprop="itemListElement"
+      itemscope
+      itemtype="https://schema.org/ListItem"
     >
       <NuxtLink
-        :tag="(crumbs.length - 1) === i ? 'span': 'a'"
         :to="crumb.to"
+        :event="(crumbs.length - 1) === i ? '' : 'click'"
         class="title"
+        itemprop="item"
+        :title="crumb.title"
       >
-        {{ crumb.title }}
+        <span itemprop="name">{{ crumb.title }}</span>
+        <meta
+          itemprop="position"
+          content="i + 1"
+        >
       </NuxtLink>
     </li>
   </ol>
