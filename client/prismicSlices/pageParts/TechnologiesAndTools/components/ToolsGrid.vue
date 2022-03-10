@@ -1,8 +1,8 @@
 <template>
   <div class="tools-grid">
     <div
-      v-for="tool in tools"
-      :key="tool.label"
+      v-for="(tool, i) in tools"
+      :key="`${tool.label}-${i}`"
       :title="tool.label"
       class="tools-grid__item"
       :class="[
