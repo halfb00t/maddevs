@@ -290,35 +290,3 @@ describe('Post component', () => {
     expect(wrapper.vm.isBottom).toBe(false)
   })
 })
-
-describe('Post component copyAnchorLink', () => {
-  const wrapper = shallowMount(Post, {
-    localVue,
-    stubs,
-    mocks,
-    store,
-    propsData: props,
-  })
-
-  it('if has attr data-id in btn will return valid link', () => {
-    const event = {
-      target: {
-        getAttribute: () => 'blog-post-title',
-        nextElementSibling: document.createElement('div'),
-      },
-    }
-    const result = wrapper.vm.copyAnchorLink(event)
-    expect(result).toBe('http://localhost/blog-post-title#blog-post-title')
-  })
-
-  it('if not have attr data-id in btn will return null', () => {
-    const event = {
-      target: {
-        getAttribute: () => undefined,
-        nextElementSibling: document.createElement('div'),
-      },
-    }
-    const result = wrapper.vm.copyAnchorLink(event)
-    expect(result).toBeNull()
-  })
-})
