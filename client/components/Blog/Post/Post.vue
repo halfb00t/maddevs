@@ -131,7 +131,6 @@ import CustomerUniversityHeader from '@/components/Blog/header/CustomerUniversit
 import CustomerUniversityNavigation from '@/components/Blog/Post/CustomerUniversityNavigation'
 import PostCard from '@/components/Blog/shared/PostCard'
 import ContentLocker from '@/components/Blog/Post/ContentLocker'
-import { copyAnchorLinkMixin } from '@/mixins/copyAnchorLinkMixin'
 
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import { Cookies } from '@/helpers/cookies'
@@ -149,7 +148,7 @@ export default {
     Disqus,
   },
 
-  mixins: [findPostAuthorMixin, copyAnchorLinkMixin],
+  mixins: [findPostAuthorMixin],
 
   props: {
     type: {
@@ -283,15 +282,8 @@ export default {
 
   mounted() {
     window.addEventListener('scroll', this.scrollHandler)
-    document.querySelectorAll('.copy-link')
-      .forEach(link => link.addEventListener('click', this.copyAnchorLink))
     this.dataLoaded = true
     this.sawModal = Cookies.checkCookie('sawModal')
-  },
-
-  beforeDestroy() {
-    document.querySelectorAll('.copy-link')
-      .forEach(link => link.removeEventListener('click', this.copyAnchorLink))
   },
 
   destroyed() {
