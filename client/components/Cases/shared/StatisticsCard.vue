@@ -56,10 +56,12 @@ export default {
   props: {
     headerText: {
       type: String,
+      default: '',
     },
 
     headerTextColor: {
       type: String,
+      default: '',
     },
 
     number: {
@@ -74,10 +76,12 @@ export default {
 
     name: {
       type: String,
+      default: '',
     },
 
     textBeforeNumber: {
       type: String,
+      default: '',
     },
 
     withoutSpaceBeforeNumber: {
@@ -90,14 +94,17 @@ export default {
 
     numberColor: {
       type: String,
+      default: '',
     },
 
     icon: {
       type: Object,
+      default: () => {},
     },
 
     description: {
       type: String,
+      default: '',
     },
 
     tag: {
@@ -107,6 +114,7 @@ export default {
 
     descriptionColor: {
       type: String,
+      default: '',
     },
 
     section: {

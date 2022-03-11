@@ -60,3 +60,5 @@ rules:
   no-css-comments: 0
   no-url-protocols: 0
   no-url-domains: 0
+  mixins-before-declarations: false
+  variable-name-format: 'camelCase'
