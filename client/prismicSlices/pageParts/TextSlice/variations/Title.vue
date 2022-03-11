@@ -69,7 +69,7 @@ export default {
     },
   },
 
-  updated() {
+  mounted() {
     document.querySelectorAll('.copy-link')
       .forEach(link => {
         link.addEventListener('click', this.copyAnchorLink)
