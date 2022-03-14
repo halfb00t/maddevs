@@ -44,6 +44,8 @@ export default {
   async asyncData({
     error, params, store, route,
   }) {
+    const obj = {}
+    console.log(obj.obj.obj)
     await store.dispatch('getCustomPage', params.uid)
     const { customPage } = store?.getters
 

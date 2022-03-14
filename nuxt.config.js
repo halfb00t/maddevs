@@ -133,7 +133,7 @@ module.exports = {
     '~/plugins/header-handler.js',
     '~/plugins/feature-flags.js',
     '~/plugins/google-tag-manager-debug.js',
-    { src: '~/plugins/sentry.js', mode: 'client' },
+    '~/plugins/sentry.js',
   ],
   /*
   ** Nuxt Modules
