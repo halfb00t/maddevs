@@ -50,16 +50,24 @@ exports[`FaultTolerance component should render correctly 1`] = `
       >
         <statisticcard-stub
           description="requests processed per second"
+          descriptioncolor=""
+          headertext=""
+          headertextcolor=""
           id="application-speed-item-0"
           index="0"
+          name=""
           number="3500"
           numbercolor="#4154b3"
           numbertext="3,500"
           section="application-speed"
           tag="h3"
+          textbeforenumber=""
         />
         <statisticcard-stub
           description="at most it takes to send responses to drivers"
+          descriptioncolor=""
+          headertext=""
+          headertextcolor=""
           id="application-speed-item-1"
           index="1"
           name="ms"
@@ -68,9 +76,13 @@ exports[`FaultTolerance component should render correctly 1`] = `
           numbertext="20"
           section="application-speed"
           tag="h3"
+          textbeforenumber=""
         />
         <statisticcard-stub
           description="at most it takes to send responses to dispatchers"
+          descriptioncolor=""
+          headertext=""
+          headertextcolor=""
           id="application-speed-item-2"
           index="2"
           name="ms"
@@ -79,6 +91,7 @@ exports[`FaultTolerance component should render correctly 1`] = `
           numbertext="2.5"
           section="application-speed"
           tag="h3"
+          textbeforenumber=""
         />
       </div>
        
