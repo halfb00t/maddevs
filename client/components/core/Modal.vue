@@ -104,6 +104,7 @@ export default {
     whereIsCalled: {
       type: String,
       required: false,
+      default: '',
     },
   },
 

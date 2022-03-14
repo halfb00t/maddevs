@@ -60,7 +60,9 @@
       >
         <div
           class="case_banner background-color-silver m-60_bottom media-m-48_bottom"
-          :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/clutch/svg/cat.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/bigcloud.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/smallcloud.svg`)})` }"
+          :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/clutch/svg/cat.svg`)}),
+           url(${$getMediaFromS3(`/images/Cases/clutch/svg/bigcloud.svg`)}),
+           url(${$getMediaFromS3(`/images/Cases/clutch/svg/smallcloud.svg`)})` }"
         >
           <TextParagraph class="case_banner-text">
             Mad Devs

@@ -12,7 +12,8 @@
     </div>
     <div
       class="container_full background-color-silver p-66_top p-42_bottom m-96_bottom media-p-65_bottom media-m-48_bottom case_review-container"
-      :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/nambataxi/svg/map-bg-1.svg`)}), url(${$getMediaFromS3(`/images/Cases/nambataxi/svg/map-bg-2.svg`)})` }"
+      :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/nambataxi/svg/map-bg-1.svg`)}),
+       url(${$getMediaFromS3(`/images/Cases/nambataxi/svg/map-bg-2.svg`)})` }"
     >
       <div class="container_regular case_review">
         <StatisticsContainer
