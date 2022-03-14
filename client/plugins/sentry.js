@@ -2,7 +2,6 @@ import Vue from 'vue'
 import { Integrations } from '@sentry/tracing'
 import * as Sentry from '@sentry/vue'
 
-console.log('Sentry init')
 Sentry.init({
   Vue,
   dsn: process.env.sentryDsnFront,
@@ -50,5 +49,3 @@ Sentry.init({
     /metrics\.itunes\.apple\.com\.edgesuite\.net\//i,
   ],
 })
-/* eslint-disable-next-line */
-testSentryProd2()
