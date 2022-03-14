@@ -132,7 +132,8 @@ describe('html-serializer function', () => {
       }
 
       const result = serializer(properties.type, properties.element, properties.content, properties.children)
-      expect(result).toBe(`<p class=" block-img"><NuxtLink to="/not-found/"><img src="${properties.element.url}" alt="" copyright=""></NuxtLink></p>`)
+      expect(result)
+        .toBe(`<p class=" block-img"><NuxtLink to="/not-found/"><img src="${properties.element.url}" alt="" copyright=""></NuxtLink></p>`)
     })
 
     it('renders correctly with images if type equals document with blank', () => {
@@ -157,6 +158,7 @@ describe('html-serializer function', () => {
       }
 
       const result = serializer(properties.type, properties.element, properties.content, properties.children)
+      // eslint-disable-next-line vue/max-len
       expect(result).toBe(`<p class=" block-img"><a href="" target="_blank" rel="noopener"><img src="${properties.element.url}" alt="" copyright=""></a></p>`)
     })
 

@@ -10,7 +10,8 @@
     </div>
     <div
       class="container_full background-color-silver p-72_bottom m-72_bottom media-m-48_bottom case_review-container"
-      :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/clutch/svg/map-bg-1.svg`)}), url(${$getMediaFromS3(`/images/Cases/clutch/svg/map-bg-2.svg`)})` }"
+      :style="{ backgroundImage: `url(${$getMediaFromS3(`/images/Cases/clutch/svg/map-bg-1.svg`)}),
+       url(${$getMediaFromS3(`/images/Cases/clutch/svg/map-bg-2.svg`)})` }"
     >
       <div class="container_regular">
         <h2 class="case_title_h2 case_title p-72_top media-p-41_top m-48_bottom media-m-24_bottom">

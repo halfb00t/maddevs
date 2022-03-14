@@ -62,12 +62,12 @@
         class="mad-community__posts-section"
       >
         <CustomerUniversityCard
-          v-for="(madCommunityPost, idx) in madCommunityPostToShow"
-          :key="madCommunityPost.id"
-          v-bind="madCommunityPost.data"
+          v-for="(madCommunityPostItem, idx) in madCommunityPostToShow"
+          :key="madCommunityPostItem.id"
+          v-bind="madCommunityPostItem.data"
           :author="findAuthor(madCommunityPostToShow[0].data.post_author.id, allAuthors)"
-          :post-id="madCommunityPost.uid"
-          :type="madCommunityPost.type"
+          :post-id="madCommunityPostItem.uid"
+          :type="madCommunityPostItem.type"
           direction="row"
           :is-main="isFirstElement(idx)"
           :size="calculateCardSize(idx)"
@@ -156,6 +156,10 @@ export default {
     this.getCustomerUniversityPosts()
   },
 
+  updated() {
+    this.$nextTick(() => initializeLazyLoad())
+  },
+
   methods: {
     ...mapActions(['getCustomerUniversitySectionPosts', 'getCustomerUniversityPosts']),
     filterPosts(postIdList, allPosts) {
@@ -185,10 +189,6 @@ export default {
     redirectTo(url) {
       this.$router.push(url)
     },
-  },
-
-  updated() {
-    this.$nextTick(() => initializeLazyLoad())
   },
 }
 </script>

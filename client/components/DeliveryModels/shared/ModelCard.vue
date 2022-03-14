@@ -101,6 +101,7 @@ export default {
         this.animation.play()
       } catch (err) {
         // to-do: handle the error
+        // eslint-disable-next-line no-console
         console.log('Error: ', err)
       }
     },
