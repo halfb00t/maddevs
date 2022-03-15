@@ -247,3 +247,21 @@ export const lookingAtFrontendCards = [
     },
   },
 ]
+
+export const integratingOnlineCards = [
+  {
+    title: 'Payment processor for businesses',
+    description: 'We used Stripe to enable BandPay users to easily and quickly accept payments and send payouts',
+    color: 'gray',
+    icon: 'stripe',
+    iconWidth: '298',
+    iconHeight: '124',
+  },
+]
+
+export const integrationOnlineList = [
+  'It is easy to use and customise',
+  'It is quick and scalable',
+  'It accepts all major credit and debit cards',
+  'It detects and prevents fraudulent transactions',
+]

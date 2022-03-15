@@ -15,6 +15,9 @@
     <LazyHydrate when-visible>
       <LookingAtTheFrontend />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <IntegratingOnline />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -29,6 +32,7 @@ export default {
     BenefitMostBandPay: () => import('@/components/Cases/bandpay/BenefitMostBandPay'),
     ChallengesSolutions: () => import('@/components/Cases/bandpay/ChallengesSolutions'),
     LookingAtTheFrontend: () => import('@/components/Cases/bandpay/LookingAtTheFrontend'),
+    IntegratingOnline: () => import('@/components/Cases/bandpay/IntegratingOnline'),
   },
 
 }
