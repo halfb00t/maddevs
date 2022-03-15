@@ -27,6 +27,9 @@
     <LazyHydrate when-visible>
       <BandPayAppArchitecture />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ImplementingPipelines />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -45,6 +48,7 @@ export default {
     TwoSmartphones: () => import('@/components/Cases/bandpay/TwoSmartphones'),
     WhatIsBackend: () => import('@/components/Cases/bandpay/WhatIsBackend'),
     BandPayAppArchitecture: () => import('@/components/Cases/bandpay/BandPayAppArchitecture'),
+    ImplementingPipelines: () => import('@/components/Cases/bandpay/ImplementingPipelines'),
   },
 
 }
