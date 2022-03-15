@@ -18,6 +18,9 @@
     <LazyHydrate when-visible>
       <IntegratingOnline />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TwoSmartphones />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -33,6 +36,7 @@ export default {
     ChallengesSolutions: () => import('@/components/Cases/bandpay/ChallengesSolutions'),
     LookingAtTheFrontend: () => import('@/components/Cases/bandpay/LookingAtTheFrontend'),
     IntegratingOnline: () => import('@/components/Cases/bandpay/IntegratingOnline'),
+    TwoSmartphones: () => import('@/components/Cases/bandpay/TwoSmartphones'),
   },
 
 }
