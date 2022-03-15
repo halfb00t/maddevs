@@ -89,5 +89,8 @@ export default {
 }
 ::v-deep .case_statistics-item:not(:first-child) .case_statistics-item_description {
   padding: 0 48px;
+  @media screen and (max-width: 820px) {
+    padding: 0;
+  }
 }
 </style>
