@@ -19,6 +19,14 @@ async function getLocation(ip) {
   const local = await getIpInfoByIp(ip) || {}
   const fromAPI = await getIpInfo() || {}
 
+  console.log('local', local)
+  console.log('fromAPI', fromAPI)
+  console.log('getLocation', {
+    ip: fromAPI.ip || local.query || '-',
+    country: fromAPI.country || local.country || '-',
+    city: fromAPI.city || local.city || '-',
+  })
+
   return {
     ip: fromAPI.ip || local.query || '-',
     country: fromAPI.country || local.country || '-',
