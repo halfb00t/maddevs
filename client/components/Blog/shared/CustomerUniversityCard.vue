@@ -13,8 +13,8 @@
     >
       <img
         v-lazy-load
-        :data-src="featuredImage.url"
-        :alt="featuredImage.alt"
+        :data-src="featured_image.url"
+        :alt="featured_image.alt"
         width="560"
         height="311"
       >
@@ -54,7 +54,7 @@ export default {
   },
 
   props: {
-    featuredImage: {
+    featured_image: {
       type: Object,
       default: () => ({}),
     },
