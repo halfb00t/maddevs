@@ -36,6 +36,9 @@
     <LazyHydrate when-visible>
       <ProjectDevelopment />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ProjectPlanning />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -57,6 +60,7 @@ export default {
     ImplementingPipelines: () => import('@/components/Cases/bandpay/ImplementingPipelines'),
     BuyerRegistration: () => import('@/components/Cases/bandpay/BuyerRegistration'),
     ProjectDevelopment: () => import('@/components/Cases/bandpay/ProjectDevelopment'),
+    ProjectPlanning: () => import('@/components/Cases/bandpay/ProjectPlanning'),
   },
 
 }
