@@ -285,3 +285,39 @@ export const whatIsBackendCards = [
     iconHeight: '124',
   },
 ]
+
+export const bandPayAppCards = [
+  {
+    title: 'Activity/Fragment',
+    descriptions:
+      'Handles UI events',
+    icon: 'activity-fragment',
+    folder: 'bandpay',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+  },
+  {
+    title: 'ViewModel',
+    descriptions: 'Stores logic with related features and uses (Repository/Service)',
+    icon: 'view-model',
+    folder: 'bandpay',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+  },
+  {
+    title: 'Repository/Service',
+    descriptions: 'Sends requests related to the feature group (Profile, Agreement, Chat, Sign In/Sign Up)',
+    icon: 'repository-service',
+    folder: 'bandpay',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+  },
+  {
+    title: 'NetworkModule',
+    descriptions: 'Makes requests, initiates connections, adds tokens to headers, and handles expired tokens',
+    icon: 'network-module',
+    folder: 'bandpay',
+    iconWidth: 51.94,
+    iconHeight: 51.94,
+  },
+]
