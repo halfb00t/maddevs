@@ -40,6 +40,7 @@ function getIPByRequest(req) {
    * In several cases ip can be an array of ips separated with comma('92.38.148.60, 172.68.132.29')
    * To resolve this behavior we need to split an ip and get only the first element
    */
+  console.log('ip by req', ip.split(',')[0])
   return ip.split(',')[0]
 }
 
