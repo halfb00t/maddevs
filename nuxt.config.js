@@ -1,9 +1,11 @@
+import dotenv from 'dotenv'
 import getRoutes, { getSitemapRoutes, CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
+import getPlugins from './utils/getPlugins'
 
-require('dotenv').config()
+dotenv.config()
 
-module.exports = {
+export default () => ({
   render: {
     resourceHints: false,
   },
@@ -126,15 +128,7 @@ module.exports = {
   /*
   ** Plugins
   */
-  plugins: [
-    '~/plugins/vuelidate.js',
-    '~/plugins/vue-social-sharing.js',
-    '~/plugins/get-media-from-s3.js',
-    '~/plugins/header-handler.js',
-    '~/plugins/feature-flags.js',
-    '~/plugins/google-tag-manager-debug.js',
-    '~/plugins/sentry.js',
-  ],
+  plugins: getPlugins(process.env.FF_ENVIRONMENT === 'production'),
   /*
   ** Nuxt Modules
   */
@@ -246,4 +240,4 @@ module.exports = {
       '~/assets/styles/_mixins.scss',
     ],
   },
-}
+})
