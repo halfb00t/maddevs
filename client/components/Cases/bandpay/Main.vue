@@ -21,6 +21,9 @@
     <LazyHydrate when-visible>
       <TwoSmartphones />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <WhatIsBackend />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -37,6 +40,7 @@ export default {
     LookingAtTheFrontend: () => import('@/components/Cases/bandpay/LookingAtTheFrontend'),
     IntegratingOnline: () => import('@/components/Cases/bandpay/IntegratingOnline'),
     TwoSmartphones: () => import('@/components/Cases/bandpay/TwoSmartphones'),
+    WhatIsBackend: () => import('@/components/Cases/bandpay/WhatIsBackend'),
   },
 
 }

@@ -265,3 +265,23 @@ export const integrationOnlineList = [
   'It accepts all major credit and debit cards',
   'It detects and prevents fraudulent transactions',
 ]
+
+export const whatIsBackendList = [
+  'Speed is one of the main advantages of this language: having a small footprint, Go allowed us to create a lightweight application that can run fast and have low CPU usage',
+  'The other important advantages of the Go language are concurrency and scalability, which enable the BandPay app to process multiple tasks and have many users online simultaneously',
+  'Although the language is relatively new, it has a great community of developers and therefore its own high standards. These standards help developers to code instead of arguing with one another about the format of the language, which significantly improves the project onboarding',
+  'Go is great for writing unit and integration tests, so we increased code coverage for the project from the very beginning ',
+  'All the necessary integrations had Go libraries with the communities that support and develop them, so finding an existing library was not a problem',
+  'Go is a statically-typed language, which is always a preferred option for fintech projects',
+]
+
+export const whatIsBackendCards = [
+  {
+    title: 'A great choice for efficient backend',
+    description: 'We maximized the potential of Go to develop high-performance backend for the BandPay app',
+    color: 'gray',
+    icon: 'go',
+    iconWidth: '242',
+    iconHeight: '124',
+  },
+]
