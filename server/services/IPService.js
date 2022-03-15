@@ -17,7 +17,7 @@ async function getIpInfoByIp(ip) {
 
 async function getLocation(ip) {
   const local = await getIpInfoByIp(ip) || {}
-  const fromAPI = await getIpInfo() || {}
+  const fromAPI = await getIpInfo(ip) || {}
 
   console.log('local', local)
   console.log('fromAPI', fromAPI)
