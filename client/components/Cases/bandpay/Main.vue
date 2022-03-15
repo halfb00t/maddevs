@@ -12,6 +12,9 @@
     <LazyHydrate when-visible>
       <ChallengesSolutions />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <LookingAtTheFrontend />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -25,6 +28,7 @@ export default {
     OpportunitiesCards: () => import('@/components/Cases/bandpay/OpportunitiesCards'),
     BenefitMostBandPay: () => import('@/components/Cases/bandpay/BenefitMostBandPay'),
     ChallengesSolutions: () => import('@/components/Cases/bandpay/ChallengesSolutions'),
+    LookingAtTheFrontend: () => import('@/components/Cases/bandpay/LookingAtTheFrontend'),
   },
 
 }

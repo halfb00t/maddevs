@@ -185,3 +185,65 @@ export const challengesSolutionsCards = [
     iconHeight: 51.94,
   },
 ]
+
+export const lookingAtFrontendCards = [
+  {
+    title: 'High performance',
+    descriptions: 'React.js uses Virtual DOM (Document Object Model) to render and update UI quickly and efficiently',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'bandpay',
+      file: 'high-performance',
+      alt: 'High performance',
+    },
+    colors: {
+      card: 'black',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Flexibility',
+    descriptions: 'Due to the modular structure of the code, the React frontends are easy to maintain, update, and scale',
+    image: {
+      width: 396,
+      height: 200,
+      folder: 'bandpay',
+      file: 'flexibility',
+      alt: 'Flexibility',
+    },
+    colors: {
+      card: 'gray',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Reusability',
+    descriptions: 'React components are independent pieces with their own logic that can be reused later in the project',
+    colors: {
+      card: 'selective-yellow',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Stability',
+    descriptions: 'React uses downward data flow so the changes made in child structures don’t affect parent structures',
+    colors: {
+      card: 'black-primary-bg',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'SEO-friendliness',
+    descriptions: 'The React library supports all modern browsers, offering quick page loading and rendering',
+    colors: {
+      card: 'maastricht-blue',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+]
