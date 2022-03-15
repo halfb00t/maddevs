@@ -9,6 +9,9 @@
     <LazyHydrate when-visible>
       <BenefitMostBandPay />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <ChallengesSolutions />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -21,6 +24,7 @@ export default {
     About: () => import('@/components/Cases/bandpay/About'),
     OpportunitiesCards: () => import('@/components/Cases/bandpay/OpportunitiesCards'),
     BenefitMostBandPay: () => import('@/components/Cases/bandpay/BenefitMostBandPay'),
+    ChallengesSolutions: () => import('@/components/Cases/bandpay/ChallengesSolutions'),
   },
 
 }
