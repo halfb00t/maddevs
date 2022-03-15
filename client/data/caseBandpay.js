@@ -68,3 +68,72 @@ export const statisticsBandPay = [
     },
   },
 ]
+
+export const coloredCardsItems = [
+  {
+    title: 'Promote business across the web and via SMS',
+    image: {
+      width: 160,
+      height: 302,
+      folder: 'bandpay',
+      file: 'message-desktop',
+      alt: 'Promote business across the web and via SMS',
+    },
+    colors: {
+      card: 'prussian-blue',
+      title: 'white',
+      descriptions: 'white',
+    },
+  },
+  {
+    title: 'Automate invoicing',
+    image: {
+      width: 160,
+      height: 302,
+      folder: 'bandpay',
+      file: 'laptop-desktop',
+      alt: 'Automate invoicing',
+    },
+    colors: {
+      card: 'midnight-blue',
+      title: 'white',
+    },
+  },
+  {
+    title: 'Set the timeline, amount, and deliverables for each project milestone',
+    colors: {
+      card: 'heat-wave',
+      title: 'white',
+    },
+  },
+  {
+    title: 'Deposit funds to start projects',
+    image: {
+      width: 160,
+      height: 302,
+      folder: 'bandpay',
+      file: 'laptop-desktop-with-girl',
+      alt: 'Deposit funds to start projects',
+    },
+    colors: {
+      card: 'rich-black',
+      title: 'white',
+    },
+  },
+  {
+    title: 'Create agreements',
+    colors: {
+      card: 'selective-yellow',
+      title: 'white',
+    },
+    centered: true,
+  },
+  {
+    title: 'Automate invoicing',
+    colors: {
+      card: 'maastricht-blue',
+      title: 'white',
+    },
+    centered: true,
+  },
+]

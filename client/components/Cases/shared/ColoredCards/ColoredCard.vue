@@ -1,9 +1,9 @@
 <template>
   <div
     class="colored-card"
-    :class="`colored-card--${cardIndex} ${cardColor.card}`"
+    :class="`colored-card--${cardIndex} ${cardColor.card} ${pictureRight ? 'row-flex' : ''}`"
   >
-    <template v-if="cardImage.file">
+    <template v-if="cardImage.file && !pictureRight">
       <div class="colored-card__image-wrapper">
         <Picture
           class="colored-card__image"
@@ -18,7 +18,10 @@
       </div>
     </template>
 
-    <div class="colored-card__footer">
+    <div
+      class="colored-card__footer"
+      :class="`${centeredTitle ? 'colored-card__footer--centered' : ''}`"
+    >
       <span
         v-if="preTitle"
         class="colored-card__pre-title case_paragraph-uppercase m-10_bottom media-m-8_bottom"
@@ -54,6 +57,22 @@
 
       <slot />
     </div>
+    <template v-if="cardImage.file && pictureRight">
+      <div
+        :class="`${pictureRight ? 'colored-card__image-wrapper--right' : 'colored-card__image-wrapper'}`"
+      >
+        <Picture
+          class="colored-card__image"
+          :class="`colored-card-image-${cardImage.file}`"
+          :width="160"
+          :height="302"
+          :file="cardImage.file"
+          :alt="cardImage.alt || 'Image'"
+          :folder="cardImage.folder"
+          extension="png"
+        />
+      </div>
+    </template>
   </div>
 </template>
 
@@ -100,6 +119,16 @@ export default {
       default: () => {
       },
     },
+
+    pictureRight: {
+      type: Boolean,
+      default: false,
+    },
+
+    centeredTitle: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
@@ -133,6 +162,11 @@ export default {
   &__image-wrapper {
     max-height: 200px;
     overflow: hidden;
+    &--right {
+      min-width: 162px;
+      min-height: 302px;
+      overflow: hidden;
+    }
   }
 
   &__image .image {
@@ -143,10 +177,19 @@ export default {
   &__footer {
     flex-grow: 1;
     padding: 25px;
+    &--centered {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__pre-title{
     text-transform: uppercase;
     display: block;
   }
+}
+
+.row-flex {
+  flex-direction: row;
 }
 </style>
