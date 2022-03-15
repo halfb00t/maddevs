@@ -30,6 +30,9 @@
     <LazyHydrate when-visible>
       <ImplementingPipelines />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <BuyerRegistration />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -49,6 +52,7 @@ export default {
     WhatIsBackend: () => import('@/components/Cases/bandpay/WhatIsBackend'),
     BandPayAppArchitecture: () => import('@/components/Cases/bandpay/BandPayAppArchitecture'),
     ImplementingPipelines: () => import('@/components/Cases/bandpay/ImplementingPipelines'),
+    BuyerRegistration: () => import('@/components/Cases/bandpay/BuyerRegistration'),
   },
 
 }
