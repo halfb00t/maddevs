@@ -39,6 +39,9 @@
     <LazyHydrate when-visible>
       <ProjectPlanning />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <KeyAchievements />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -61,6 +64,7 @@ export default {
     BuyerRegistration: () => import('@/components/Cases/bandpay/BuyerRegistration'),
     ProjectDevelopment: () => import('@/components/Cases/bandpay/ProjectDevelopment'),
     ProjectPlanning: () => import('@/components/Cases/bandpay/ProjectPlanning'),
+    KeyAchievements: () => import('@/components/Cases/bandpay/KeyAchievements'),
   },
 
 }
