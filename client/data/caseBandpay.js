@@ -78,6 +78,11 @@ export const coloredCardsItems = [
       folder: 'bandpay',
       file: 'message-desktop',
       alt: 'Promote business across the web and via SMS',
+      mobileImage: {
+        width: 130,
+        height: 140,
+        file: 'message-mobile',
+      },
     },
     colors: {
       card: 'prussian-blue',
@@ -93,6 +98,11 @@ export const coloredCardsItems = [
       folder: 'bandpay',
       file: 'laptop-desktop',
       alt: 'Automate invoicing',
+      mobileImage: {
+        width: 130,
+        height: 140,
+        file: 'laptop-mobile',
+      },
     },
     colors: {
       card: 'midnight-blue',
@@ -114,6 +124,11 @@ export const coloredCardsItems = [
       folder: 'bandpay',
       file: 'laptop-desktop-with-girl',
       alt: 'Deposit funds to start projects',
+      mobileImage: {
+        width: 130,
+        height: 140,
+        file: 'laptop-mobile-with-girl',
+      },
     },
     colors: {
       card: 'rich-black',

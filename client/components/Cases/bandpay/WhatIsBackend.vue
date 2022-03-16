@@ -113,6 +113,10 @@ export default {
 
   &_card {
     position: relative;
+    padding-left: 50px;
+    @media screen and (max-width: 920px) {
+      padding: 29px 29px 139px 29px;
+    }
   }
 
   &_card-title {
@@ -123,12 +127,18 @@ export default {
   &_card-description {
     max-width: 373px;
     color: $text-color--grey-20-percent;
+    @media screen and (max-width: 920px) {
+      max-width: 100%;
+    }
   }
 
   &_card-icon {
     position: absolute;
     right: 17px;
-    bottom: 0;
+    bottom: -8px;
+    @media screen and (max-width: 920px) {
+      right: 5px;
+    }
   }
 }
 

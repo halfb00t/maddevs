@@ -1,6 +1,6 @@
 <template>
   <section class="m-96_bottom media-m-48_bottom">
-    <div class="container_regular m-48_top media-m-24_top m-72_bottom media-m-24_bottom">
+    <div class="container_regular m-48_top m-72_bottom media-m-48_bottom">
       <TextParagraph>
         Many freelancers and small businesses have little knowledge of how to write contracts and arrange payments.
         Still, it is essential to guarantee that the work will be paid in full and on time.

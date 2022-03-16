@@ -168,4 +168,8 @@ export default {
     }
   }
 }
+
+.case .case_footer::before {
+  background-color: transparent;
+}
 </style>
