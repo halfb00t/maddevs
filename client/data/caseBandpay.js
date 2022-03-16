@@ -321,3 +321,91 @@ export const bandPayAppCards = [
     iconHeight: 51.94,
   },
 ]
+
+export const techStackBandpay = [
+  {
+    name: 'swift',
+    alt: 'Swift',
+    imgAlt: 'Swift',
+  },
+  {
+    name: 'kotlin',
+    alt: 'Kotlin',
+    imgAlt: 'Kotlin',
+  },
+  {
+    name: 'go',
+    alt: 'Go',
+    imgAlt: 'Go',
+  },
+  {
+    name: 'react',
+    alt: 'React.js',
+    imgAlt: 'React.js',
+  },
+  {
+    name: 'twilio',
+    alt: 'Twilio',
+    imgAlt: 'Twilio',
+  },
+  {
+    name: 'slack',
+    alt: 'Slack',
+    imgAlt: 'Slack',
+  },
+  {
+    name: 'firebase',
+    alt: 'Firebase',
+    imgAlt: 'Firebase',
+  },
+  {
+    name: 'stripe',
+    alt: 'Stripe',
+    imgAlt: 'Stripe',
+  },
+  {
+    name: 'heroku',
+    alt: 'Heroku',
+    imgAlt: 'Heroku',
+  },
+  {
+    name: 'simpletexting',
+    alt: 'SimpleTexting',
+    imgAlt: 'SimpleTexting',
+  },
+  {
+    name: 'postgresql',
+    alt: 'PostgreSQL',
+    imgAlt: 'PostgreSQL',
+  },
+  {
+    name: 'redis',
+    alt: 'Redis',
+    imgAlt: 'Redis',
+  },
+  {
+    name: 'docker',
+    alt: 'Docker',
+    imgAlt: 'Docker',
+  },
+  {
+    name: 'retrofit',
+    alt: 'Retrofit',
+    imgAlt: 'Retrofit',
+  },
+  {
+    name: 'moya',
+    alt: 'Moya',
+    imgAlt: 'Moya',
+  },
+  {
+    name: 'fastlane',
+    alt: 'Fastlane',
+    imgAlt: 'Fastlane',
+  },
+  {
+    name: 'gitlab',
+    alt: 'GitLab CI',
+    imgAlt: 'GitLab CI',
+  },
+]

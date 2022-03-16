@@ -42,6 +42,9 @@
     <LazyHydrate when-visible>
       <KeyAchievements />
     </LazyHydrate>
+    <LazyHydrate when-visible>
+      <TechnologiesStack />
+    </LazyHydrate>
   </section>
 </template>
 <script>
@@ -65,6 +68,7 @@ export default {
     ProjectDevelopment: () => import('@/components/Cases/bandpay/ProjectDevelopment'),
     ProjectPlanning: () => import('@/components/Cases/bandpay/ProjectPlanning'),
     KeyAchievements: () => import('@/components/Cases/bandpay/KeyAchievements'),
+    TechnologiesStack: () => import('@/components/Cases/bandpay/TechnologiesStack'),
   },
 
 }
