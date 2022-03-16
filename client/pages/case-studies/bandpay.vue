@@ -93,8 +93,8 @@ export default {
 
   head() {
     return buildHead({
-      ...getMetadata('guardrails'),
-      image: 'https://maddevs.io/guardrails-meta-banner.png',
+      ...getMetadata('bandpay'),
+      image: 'https://maddevs.io/bandpay-meta-banner.png',
     })
   },
 }
@@ -170,6 +170,6 @@ export default {
 }
 
 .case .case_footer::before {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 </style>

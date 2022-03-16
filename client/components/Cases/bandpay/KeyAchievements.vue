@@ -16,7 +16,8 @@
       data-aos-anchor-placement="bottom"
     >
       <iframe
-        src="https://www.youtube.com/embed/a0V5qU5oUfA"
+        v-lazy-load
+        data-src="https://www.youtube.com/embed/a0V5qU5oUfA"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
