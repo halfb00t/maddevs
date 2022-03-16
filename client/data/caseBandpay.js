@@ -409,3 +409,167 @@ export const techStackBandpay = [
     imgAlt: 'GitLab CI',
   },
 ]
+
+export const teamBandpay = [
+  {
+    name: 'Tamara Mun',
+    position: 'Delivery Manager',
+    image: {
+      file: 'tamara-mun',
+    },
+  },
+  {
+    name: 'Samat Jukeshov',
+    position: 'Project Manager',
+    image: {
+      file: 'samat-jukeshov',
+    },
+  },
+  {
+    name: 'Pavel Zverev',
+    position: 'Tech Lead',
+    image: {
+      file: 'pavel-zverev',
+    },
+  },
+  {
+    name: 'Mikhail Efimenko',
+    position: 'Designer',
+    image: {
+      file: 'mikhail-efimenko',
+    },
+  },
+  {
+    name: 'Alex Krivov',
+    position: 'Designer',
+    image: {
+      file: 'aleksandr-krivov',
+    },
+  },
+  {
+    name: 'Maksim Gachevsky',
+    position: 'Frontend Developer',
+    image: {
+      file: 'maksim-gachevski',
+    },
+  },
+  {
+    name: 'Altynai Baitulakova',
+    position: 'Backend Developer',
+    image: {
+      file: 'altynai-baitulakova',
+    },
+  },
+  {
+    name: 'Anatoliy Fedorenko',
+    position: 'Backend Developer',
+    image: {
+      file: 'anatoliy-fedorenko',
+    },
+  },
+  {
+    name: 'Oleg Katkov',
+    position: 'Backend Developer',
+    image: {
+      file: 'oleg-katkov',
+    },
+  },
+  {
+    name: 'Dastan Mamyrov',
+    position: 'Android Developer',
+    image: {
+      file: 'dastan-mamyrov',
+    },
+  },
+  {
+    name: 'Aisalkyn Tashmatova',
+    position: 'Android Developer',
+    image: {
+      file: 'aisalkyn-tashmatova',
+    },
+  },
+  {
+    name: 'Aibek Nogoev',
+    position: 'iOS Developer',
+    image: {
+      file: 'aibek-nogoev',
+    },
+  },
+  {
+    name: 'Ksenia Zharikova',
+    position: 'iOS Developer',
+    image: {
+      file: 'ksenia-zharikova',
+    },
+  },
+  {
+    name: 'Oksana Budnikova',
+    position: 'QA Engineer',
+    image: {
+      file: 'oksana-budnikova',
+    },
+  },
+  {
+    name: 'Meerim Zhanuzakova',
+    position: 'QA Engineer',
+    image: {
+      file: 'meerim-zhanuzakova',
+    },
+  },
+  {
+    name: 'Dmitrii Khalezin',
+    position: 'DevOps Engineer',
+    image: {
+      file: 'dmitrii-khalezin',
+    },
+  },
+  {
+    name: 'Ruslan Kasymov',
+    position: 'Project Manager',
+    image: {
+      file: 'kasymov',
+    },
+  },
+  {
+    name: 'Kirill Kotyunin',
+    position: 'Frontend Developer',
+    image: {
+      file: 'kirill-kotyunin',
+    },
+  },
+  {
+    name: 'Nikita Karpukhin',
+    position: 'Backend Developer',
+    image: {
+      file: 'nikita-karpukhin',
+    },
+  },
+  {
+    name: 'Anton Kozlov',
+    position: 'Backend Developer',
+    image: {
+      file: 'anton-kozlov',
+    },
+  },
+  {
+    name: 'Bogdan Telepov',
+    position: 'Android Developer',
+    image: {
+      file: 'bogdan-telepov',
+    },
+  },
+  {
+    name: 'Altynai Toktomuratova',
+    position: 'iOS Developer',
+    image: {
+      file: 'altynai-toktomuratova',
+    },
+  },
+  {
+    name: 'Vladimir Pan',
+    position: 'QA Engineer',
+    image: {
+      file: 'vladimir-pan',
+    },
+  },
+]
