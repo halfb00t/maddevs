@@ -122,7 +122,7 @@ export default () => ({
       },
     },
     optimization: {
-      minimize: true,
+      minimize: process.env.FF_ENVIRONMENT !== 'development',
     },
   },
   /*
