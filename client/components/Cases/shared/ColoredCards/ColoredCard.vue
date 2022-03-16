@@ -175,13 +175,13 @@ export default {
 
   mounted() {
     this.isMobile = window.innerWidth <= 820
-    if (this.cardImage.mobileImage) {
+    if (this.cardImage.mobileImage.file) {
       window.addEventListener('resize', this.checkMobile)
     }
   },
 
   beforeDestroy() {
-    if (this.cardImage.mobileImage) {
+    if (this.cardImage.mobileImage.file) {
       window.removeEventListener('resize', this.checkMobile)
     }
   },
