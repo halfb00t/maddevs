@@ -9,6 +9,10 @@
     "to": "https://maddevs.io/"
   },
   {
+    "from": "/?utm_source=clutch.co&utm_medium=referral",
+    "to": "https://maddevs.io/?utm_source=clutch.co&utm_medium=referral/"
+  },
+  {
     "pageType": "из старых редиректов",
     "from": "/profile/mad-devs",
     "to": "https://maddevs.io/"
