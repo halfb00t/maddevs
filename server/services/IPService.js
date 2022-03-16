@@ -3,8 +3,8 @@ const {
   IP_INFO_TOKEN, IP_BAN_LIST, IP_TEST_LIST, TEST_EMAIL,
 } = require('../config/env')
 
-async function getIpInfo() {
-  const info = await axios.get(`https://ipinfo.io/json?token=${IP_INFO_TOKEN}`)
+async function getIpInfo(ip) {
+  const info = await axios.get(`https://ipinfo.io/${ip}?token=${IP_INFO_TOKEN}`)
 
   return info.data
 }
@@ -17,7 +17,7 @@ async function getIpInfoByIp(ip) {
 
 async function getLocation(ip) {
   const local = await getIpInfoByIp(ip) || {}
-  const fromAPI = await getIpInfo() || {}
+  const fromAPI = await getIpInfo(ip) || {}
 
   return {
     ip: fromAPI.ip || local.query || '-',
