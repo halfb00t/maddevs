@@ -15,6 +15,12 @@
         class="header__container container"
       >
         <div class="header__content">
+          <div
+            v-if="logoTextIsActive"
+            class="header__content-crumbs"
+          >
+            <Crumbs />
+          </div>
           <div class="header__content-left">
             <NuxtLink
               to="/"
@@ -109,12 +115,6 @@
             </button>
           </div>
         </div>
-      </div>
-      <div
-        v-if="logoTextIsActive"
-        class="header__container-crumbs"
-      >
-        <Crumbs />
       </div>
     </header>
     <HeaderMobile
@@ -352,20 +352,9 @@ export default {
   &__container {
     position: relative;
 
-    &-crumbs {
-      position: absolute;
-      bottom: -10px;
-      left: 90px;
-    }
-
     @media screen and (max-width: 1012px) {
       padding: 0 10px 0 25px;
       max-width: 100%;
-
-      &-crumbs {
-        top: 70px;
-        left: 26px;
-      }
     }
   }
 
@@ -378,9 +367,22 @@ export default {
     justify-content: space-between;
     align-items: stretch;
     color: $text-color--white-primary;
+
+    &-crumbs {
+      position: absolute;
+      bottom: -15px;
+      left: 0px;
+
+      @media screen and (max-width: 1012px) {
+        top: 70px;
+        left: 0px;
+      }
+    }
+
     @media screen and (max-width: 1012px) {
       height: 48px;
     }
+
     a {
       color: $text-color--white-primary;
     }
