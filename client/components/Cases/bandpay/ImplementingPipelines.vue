@@ -29,7 +29,7 @@
         </li>
       </ol>
     </div>
-    <div class="container_full background-color-silver p-48_top p-48_bottom">
+    <div class="container_full background-color-silver p-24_top p-24_bottom">
       <div class="container_regular">
         <LottieMad
           class="case_lottie"
@@ -61,12 +61,8 @@ export default {
   }
 
   &_advantages-item {
-    margin-bottom: 10px;
+    margin-bottom: 0;
     @include default-text($text-color--black-oil, 17px, 166%, -0.03em, 400);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
 
     span {
       font-weight: 700

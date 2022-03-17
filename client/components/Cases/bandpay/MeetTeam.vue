@@ -3,13 +3,20 @@
     <h3 class="case_title_h2 m-24_bottom">
       Meet the team
     </h3>
-    <ListTeam class="m-72_bottom media-m-41_bottom">
-      <ListTeamItem
-        v-for="member in teamBandpay"
-        :key="member.name"
-        v-bind="member"
-      />
-    </ListTeam>
+    <div
+      ref="meetTheTeamList"
+    >
+      <ListTeam
+        v-if="intoView"
+        class="m-72_bottom media-m-41_bottom"
+      >
+        <ListTeamItem
+          v-for="member in teamBandpay"
+          :key="member.name"
+          v-bind="member"
+        />
+      </ListTeam>
+    </div>
   </section>
 </template>
 <script>
@@ -27,7 +34,26 @@ export default {
   data() {
     return {
       teamBandpay,
+      intoView: false,
     }
+  },
+
+  mounted() {
+    this.mountWhenVisible()
+  },
+
+  methods: {
+    mountWhenVisible() {
+      const Observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.intoView = true
+            observer.unobserve(entry.target)
+          }
+        })
+      })
+      Observer.observe(this.$refs.meetTheTeamList)
+    },
   },
 }
 </script>

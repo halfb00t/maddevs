@@ -108,16 +108,8 @@ export default {
 .case {
   &_header-bandpay {
     background: rgba(255, 191, 11, 0.9);
-  }
-  &-bandpay__header-wrapper {
-    position: relative;
     &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 150px;
+      height: 175px !important;
       background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.991353) 6.67%,
         rgba(0, 0, 0, 0.96449) 13.33%,
         rgba(0, 0, 0, 0.91834) 20%,
@@ -133,6 +125,7 @@ export default {
         rgba(0, 0, 0, 0.03551) 86.67%,
         rgba(0, 0, 0, 0.0086472) 93.33%,
         rgba(0, 0, 0, 0) 100%);
+      opacity: 0.3;
     }
   }
 
@@ -171,5 +164,8 @@ export default {
 
 .case .case_footer::before {
   background-color: transparent !important;
+}
+.case_title-sjmc {
+  font-size: 51.88px;
 }
 </style>
