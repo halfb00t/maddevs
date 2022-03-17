@@ -372,6 +372,7 @@ export default {
       position: absolute;
       bottom: -15px;
       left: 0px;
+      width: 100%;
 
       @media screen and (max-width: 1012px) {
         top: 70px;
