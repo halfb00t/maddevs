@@ -1,5 +1,5 @@
 <template>
-  <section class="container_regular m-48_bottom">
+  <section class="container_regular m-48_bottom integrating-online">
     <h3 class="case_title_h2 m-12_bottom">
       Integrating online payment processing
     </h3>
@@ -44,6 +44,7 @@
         :key="listItem"
         data-aos="fade-up"
         data-aos-anchor-placement="bottom"
+        class="integrating-online__list-item"
       >
         <img
           v-lazy-load
@@ -98,16 +99,6 @@ export default {
     }
   }
 
-  &_card {
-    &__stripe {
-      position: relative;
-      padding-left: 50px;
-      @media screen and (max-width: 920px) {
-        padding: 29px 29px 139px 29px !important;
-      }
-    }
-  }
-
   &_card-title {
     margin-bottom: 5px;
     color: $text-color--white-primary;
@@ -141,16 +132,28 @@ export default {
   }
 }
 
-::v-deep .list-item_box {
-  padding-left: 16.78px;
-  background-color: $bgcolor--silver;
-  display: flex;
-  &::before {
-    content: '';
-    display: none;
+.integrating-online {
+  & .integrating-online__list-item {
+    padding-left: 16.78px;
+    background-color: $bgcolor--silver;
+    display: flex;
+
+    &::before {
+      content: '';
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 8px 8.5px;
+    }
   }
-  @media screen and (max-width: 768px) {
-    padding: 8px 8.5px !important;
+
+  & .case_card__stripe {
+    position: relative;
+    padding-left: 50px;
+    @media screen and (max-width: 920px) {
+      padding: 29px 29px 139px 29px;
+    }
   }
 }
 
