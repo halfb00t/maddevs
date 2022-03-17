@@ -160,6 +160,9 @@ export default {
     content: '';
     display: none;
   }
+  @media screen and (max-width: 768px) {
+    padding-left: 8.5px;
+  }
 }
 
 .list-item__box-icon {

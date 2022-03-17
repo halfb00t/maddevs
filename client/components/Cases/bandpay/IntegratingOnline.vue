@@ -15,7 +15,7 @@
       <Card
         v-for="card in integratingOnlineCards"
         :key="card.title"
-        :class="`case_card background-color-${card.color}`"
+        :class="`case_card case_card__stripe background-color-${card.color}`"
       >
         <h4 class="case_title_h5 case_card-title">
           {{ card.title }}
@@ -99,10 +99,12 @@ export default {
   }
 
   &_card {
-    position: relative;
-    padding-left: 50px;
-    @media screen and (max-width: 920px) {
-      padding: 29px 29px 139px 29px;
+    &__stripe {
+      position: relative;
+      padding-left: 50px;
+      @media screen and (max-width: 920px) {
+        padding: 29px 29px 139px 29px;
+      }
     }
   }
 
@@ -146,6 +148,9 @@ export default {
   &::before {
     content: '';
     display: none;
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 8.5px;
   }
 }
 
