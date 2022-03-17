@@ -11,6 +11,7 @@
         v-bind="slice"
         :data-aos="slice.primary.animation"
         data-testid="technologies-grid-variation"
+        :slice="slice"
       />
     </LazyHydrate>
     <LazyHydrate
