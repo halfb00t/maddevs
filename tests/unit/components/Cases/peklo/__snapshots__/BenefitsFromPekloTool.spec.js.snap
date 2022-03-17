@@ -19,7 +19,7 @@ exports[`BenefitsFromPekloTool component should render correctly 1`] = `
       class="colored-cards card-grid-type--two-one"
     >
       <div
-        class="colored-card colored-card--1 background-color-black"
+        class="colored-card colored-card--1 background-color-black "
       >
         <div
           class="colored-card__image-wrapper"
@@ -57,9 +57,11 @@ exports[`BenefitsFromPekloTool component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
       <div
-        class="colored-card colored-card--2 background-color-gray"
+        class="colored-card colored-card--2 background-color-gray "
       >
         <div
           class="colored-card__image-wrapper"
@@ -97,9 +99,11 @@ exports[`BenefitsFromPekloTool component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
       <div
-        class="colored-card colored-card--3 background-color-yellow"
+        class="colored-card colored-card--3 background-color-yellow "
       >
         <!---->
          
@@ -125,6 +129,8 @@ exports[`BenefitsFromPekloTool component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
     </div>
   </section>

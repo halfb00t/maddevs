@@ -17,7 +17,7 @@ exports[`PhaseFixingDatabaseOutages component should render correctly 1`] = `
       class="colored-cards card-grid-type--two-two"
     >
       <div
-        class="colored-card colored-card--1 background-color-silver"
+        class="colored-card colored-card--1 background-color-silver "
       >
         <!---->
          
@@ -47,9 +47,11 @@ exports[`PhaseFixingDatabaseOutages component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
       <div
-        class="colored-card colored-card--2 background-color-blue-light"
+        class="colored-card colored-card--2 background-color-blue-light "
       >
         <!---->
          
@@ -79,6 +81,8 @@ exports[`PhaseFixingDatabaseOutages component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
     </div>
      

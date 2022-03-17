@@ -14,6 +14,8 @@
       :image="card.image"
       :colors="card.colors"
       :card-index="index+1"
+      :picture-right="pictureRight"
+      :centered-title="card.centered"
     />
   </div>
 </template>
@@ -36,6 +38,11 @@ export default {
     gridType: { // available types: one-one, two-one, two-two, one-left-two-right
       type: String,
       required: true,
+    },
+
+    pictureRight: {
+      type: Boolean,
+      default: false,
     },
   },
 

@@ -40,7 +40,7 @@ exports[`WhyCityCam component should render correctly 1`] = `
       class="colored-cards m-24_bottom card-grid-type--two-one"
     >
       <div
-        class="colored-card colored-card--1 background-color-yellow-dark"
+        class="colored-card colored-card--1 background-color-yellow-dark "
       >
         <div
           class="colored-card__image-wrapper"
@@ -78,9 +78,11 @@ exports[`WhyCityCam component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
       <div
-        class="colored-card colored-card--2 background-color-blue-darkened"
+        class="colored-card colored-card--2 background-color-blue-darkened "
       >
         <div
           class="colored-card__image-wrapper"
@@ -118,9 +120,11 @@ exports[`WhyCityCam component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
       <div
-        class="colored-card colored-card--3 background-color-blue-dark"
+        class="colored-card colored-card--3 background-color-blue-dark "
       >
         <!---->
          
@@ -146,6 +150,8 @@ exports[`WhyCityCam component should render correctly 1`] = `
           </p>
            
         </div>
+         
+        <!---->
       </div>
     </div>
      

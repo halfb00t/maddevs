@@ -233,7 +233,7 @@ exports[`ClusterisationAlgorithm component should render correctly 1`] = `
         class="colored-cards m-72_bottom media-m-48_bottom card-grid-type--two-one"
       >
         <div
-          class="colored-card colored-card--1 background-color-black"
+          class="colored-card colored-card--1 background-color-black "
         >
           <!---->
            
@@ -259,9 +259,11 @@ exports[`ClusterisationAlgorithm component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--2 background-color-gray"
+          class="colored-card colored-card--2 background-color-gray "
         >
           <!---->
            
@@ -287,9 +289,11 @@ exports[`ClusterisationAlgorithm component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--3 background-color-yellow"
+          class="colored-card colored-card--3 background-color-yellow "
         >
           <!---->
            
@@ -315,6 +319,8 @@ exports[`ClusterisationAlgorithm component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
       </div>
     </div>

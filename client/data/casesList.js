@@ -169,7 +169,7 @@ export const casesList = [
       alt: 'nambataxi logo',
     },
   }, {
-    width: 'full',
+    width: 'big',
     id: 'guardrails',
     link: '/case-studies/guardrails/',
     video: '/videos/guardrails-banner.mp4',
@@ -183,6 +183,23 @@ export const casesList = [
       folder: 'guardrails',
       file: 'guardrails-logo',
       alt: 'Guardrails logo',
+    },
+  },
+  {
+    width: 'small',
+    id: 'bandpay',
+    link: '/case-studies/bandpay/',
+    video: '/videos/bandpay-banner.mp4',
+    subtitle: 'B2B',
+    title: 'BandPay: A tool to run business',
+    desc: 'Mad Devs created a complete B2B payment management solution that enables freelancers to promote their business, make agreements, and get paid quickly and securely.',
+    poster: '/images/Cases/bandpay/jpg/bandpay-banner.jpg',
+    logo: {
+      width: 105,
+      height: 67,
+      folder: 'bandpay',
+      file: 'bandpay-logo',
+      alt: 'BandPay logo',
     },
   },
 ]
