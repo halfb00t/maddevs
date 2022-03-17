@@ -74,6 +74,7 @@ import LazyHydrate from 'vue-lazy-hydration'
 import { steps } from '@/data/quickProjectStart'
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'ProjectStartSlice',
@@ -106,21 +107,9 @@ export default {
       steps,
       title: this.slice.primary.title,
       animation: this.slice.primary.animation,
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
+      colorTheme: (this.slice.primary.colorTheme === 'black') ? 'black' : 'white',
     }
-  },
-
-  computed: {
-    sliceBackground() {
-      if (this.slice.primary.background === 'white') return '#fff'
-      if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      if (this.slice.primary.background === 'black') return '#111213'
-      return null
-    },
-
-    colorTheme() {
-      if (this.slice.primary.colorTheme === 'black') return 'black'
-      return 'white'
-    },
   },
 
   methods: {

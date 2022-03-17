@@ -38,6 +38,7 @@
 <script>
 import LazyHydrate from 'vue-lazy-hydration'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'ToolsGridMain',
@@ -68,13 +69,10 @@ export default {
     },
   },
 
-  computed: {
-    sliceBackground() {
-      if (this.slice?.primary?.background === 'white') return '#ffffff'
-      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
-    },
+  data() {
+    return {
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
+    }
   },
 }
 </script>
