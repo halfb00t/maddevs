@@ -161,7 +161,7 @@ export default {
     display: none;
   }
   @media screen and (max-width: 768px) {
-    padding-left: 8.5px;
+    padding: 8px 8.5px;
   }
 }
 
