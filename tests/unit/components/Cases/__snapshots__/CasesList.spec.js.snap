@@ -214,7 +214,26 @@ exports[`CasesList component should render correctly 1`] = `
           title="Enhancing the GuardRails solution"
           title-tag="h3"
           video-file-name="/videos/guardrails-banner.mp4"
-          width="full"
+          width="big"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_bandpay"
+          data-testid="test-case-card"
+          desc="Mad Devs created a complete B2B payment management solution that enables freelancers to promote their business, make agreements, and get paid quickly and securely."
+          item="[object Object]"
+          link="/case-studies/bandpay/"
+          logo="[object Object]"
+          poster-link="/images/Cases/bandpay/jpg/bandpay-banner.jpg"
+          subtitle="B2B"
+          title="BandPay: A tool to run business"
+          title-tag="h3"
+          video-file-name="/videos/bandpay-banner.mp4"
+          width="small"
         />
       </lazyhydrate-stub>
     </section>

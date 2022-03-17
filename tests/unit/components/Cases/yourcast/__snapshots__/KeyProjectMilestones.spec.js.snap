@@ -33,7 +33,7 @@ exports[`KeyProjectMilestones component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     2016
@@ -63,7 +63,7 @@ exports[`KeyProjectMilestones component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     2017
@@ -98,7 +98,7 @@ exports[`KeyProjectMilestones component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     2018
@@ -128,7 +128,7 @@ exports[`KeyProjectMilestones component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     2019
@@ -158,7 +158,7 @@ exports[`KeyProjectMilestones component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     2020
