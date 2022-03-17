@@ -42,6 +42,7 @@
 
 <script>
 import changeSectionTextOpacityMixin from '@/mixins/changeSectionTextOpacityMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'StartScreen',
@@ -57,29 +58,21 @@ export default {
   },
 
   data() {
+    let sliceColor = ''
+    if (this.slice?.primary?.gradientColor === 'white') sliceColor = 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #ffffff)'
+    if (this.slice?.primary?.gradientColor === 'grey') sliceColor = 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #f5f7f9)'
+    if (this.slice?.primary?.gradientColor === 'black') sliceColor = 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #111213)'
+
     return {
       imageOpacity: this.slice?.primary?.imageOpacity,
       image: this.slice?.primary?.image,
       title: this.slice?.primary?.title,
       subtitle: this.slice?.primary?.subtitle,
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
+      sliceGradient: sliceColor,
     }
   },
 
-  computed: {
-    sliceBackground() {
-      if (this.slice?.primary?.background === 'white') return '#ffffff'
-      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
-    },
-
-    sliceGradient() {
-      if (this.slice?.primary?.gradientColor === 'white') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #ffffff)'
-      if (this.slice?.primary?.gradientColor === 'grey') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #f5f7f9)'
-      if (this.slice?.primary?.gradientColor === 'black') return 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #111213)'
-      return null
-    },
-  },
 }
 </script>
 
