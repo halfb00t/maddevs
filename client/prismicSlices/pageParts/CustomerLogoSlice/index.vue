@@ -30,10 +30,19 @@
 </template>
 
 <script>
+import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'CustomerLogoSlice',
+
+  mixins: [animateOnScrollMixin({
+    offset: 200,
+    delay: 50,
+    anchorPlacement: 'top-center',
+    duration: 1000,
+    once: true,
+  })],
 
   props: {
     slice: {
