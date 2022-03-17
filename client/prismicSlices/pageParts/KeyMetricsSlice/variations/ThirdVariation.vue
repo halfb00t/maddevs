@@ -40,11 +40,10 @@ export default {
     },
   },
 
-  computed: {
-    colorThemeOption() {
-      if (this.colorTheme === 'black') return 'black'
-      return 'white'
-    },
+  data() {
+    return {
+      colorThemeOption: this.colorTheme === 'black' ? 'black' : 'white',
+    }
   },
 }
 </script>

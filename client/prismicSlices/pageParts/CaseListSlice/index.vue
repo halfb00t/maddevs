@@ -27,6 +27,7 @@
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 import CasesListItem from '@/components/Cases/CasesListItem'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'CaseListSlice',
@@ -53,16 +54,8 @@ export default {
     return {
       items: this.slice.items,
       animation: this.slice.primary.animation,
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
     }
-  },
-
-  computed: {
-    sliceBackground() {
-      if (this.slice?.primary?.background === 'white') return '#ffffff'
-      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
-    },
   },
 
   mounted() {

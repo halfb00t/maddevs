@@ -46,6 +46,7 @@
 <script>
 import { countries, industriesEntries } from '@/data/projectsFor'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'CreateProjectsSlice',
@@ -73,17 +74,10 @@ export default {
       countries,
       industriesEntries,
       animation: this.slice.primary.animation,
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
     }
   },
 
-  computed: {
-    sliceBackground() {
-      if (this.slice.primary.background === 'white') return '#fff'
-      if (this.slice.primary.background === 'grey') return '#f5f7f9'
-      if (this.slice.primary.background === 'black') return '#111213'
-      return null
-    },
-  },
 }
 </script>
 
@@ -92,6 +86,7 @@ export default {
   @media screen and (max-width: 576px) {
     background-color: $bgcolor--white !important;
   }
+
   &__content {
     padding: 0 45px 45px;
     text-align: center;
@@ -105,13 +100,16 @@ export default {
       text-align: left;
     }
   }
+
   &__title {
     @include h2-title;
     padding-top: 40px;
     margin-bottom: 23px;
+
     br {
       display: none;
     }
+
     @media screen and (max-width: 1024px) {
       br {
         display: block;
@@ -132,6 +130,7 @@ export default {
       }
     }
   }
+
   &__projects {
     margin-bottom: 63px;
     @media screen and (max-width: 1040px) {
@@ -153,9 +152,11 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 26px;
   }
+
   &__item {
     width: 100%;
     box-sizing: border-box;
+
     &-paragraph {
       @include font('Inter', 18px, 400);
       letter-spacing: -0.02em;
@@ -187,16 +188,19 @@ export default {
     grid-template-columns: repeat(11, max-content);
     grid-row-gap: 19px;
   }
+
   &__item {
     display: block;
     width: 32px;
     height: 23px;
+
     img {
       display: block;
       width: 32px;
       height: 23px;
       transition: opacity 0.3s ease-in;
     }
+
     @media screen and (max-width: 1040px) {
       &,
       img {

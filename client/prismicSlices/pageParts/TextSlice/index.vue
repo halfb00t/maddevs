@@ -59,6 +59,7 @@ import Paragraph from './variations/Paragraph'
 import FlexibleParagraph from './variations/FlexibleParagraph'
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'TextSlice',
@@ -92,21 +93,9 @@ export default {
   data() {
     return {
       size: 'size-md',
+      sliceBackground: setSliceBackground(this.slice?.primary?.colorTheme),
+      colorThemeClass: (this.slice?.primary?.colorTheme === 'black') ? 'text-slice--black-theme' : 'text-slice--white-theme',
     }
-  },
-
-  computed: {
-    colorThemeClass() {
-      if (this.slice?.primary?.colorTheme === 'black') return 'text-slice--black-theme'
-      return 'text-slice--white-theme'
-    },
-
-    sliceBackground() {
-      if (this.slice?.primary?.colorTheme === 'white') return '#ffffff'
-      if (this.slice?.primary?.colorTheme === 'silver') return '#f5f7f9'
-      if (this.slice?.primary?.colorTheme === 'black') return '#111213'
-      return null
-    },
   },
 
   mounted() {

@@ -65,6 +65,7 @@ import UIButton from '@/components/shared/UIButton'
 import UIOutlinedButton from '@/components/shared/UIOutlinedButton'
 import UILinkButton from '@/components/shared/UILinkButton'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'ButtonSlice',
@@ -101,17 +102,11 @@ export default {
       text: this.slice?.primary?.text,
       color: this.slice?.primary?.color,
       animation: this.slice?.primary?.animation,
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
     }
   },
 
   computed: {
-    sliceBackground() {
-      if (this.slice?.primary?.background === 'white') return '#ffffff'
-      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
-    },
-
     sliceAlignment() {
       if (this.slice?.primary?.alignment === 'center') return 'center'
       if (this.slice?.primary?.alignment === 'right') return 'right'

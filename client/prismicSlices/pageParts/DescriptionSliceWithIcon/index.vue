@@ -39,6 +39,7 @@
 </template>
 <script>
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'DescriptionSlice',
@@ -69,21 +70,9 @@ export default {
       title: this.slice.primary.title,
       animation: this.slice.primary.animation,
       maxWidth: this.slice.primary.maxWidth,
+      colorTheme: (this.slice?.primary?.colorTheme === 'black') ? 'black' : 'white',
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
     }
-  },
-
-  computed: {
-    sliceBackground() {
-      if (this.slice?.primary?.background === 'white') return '#ffffff'
-      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
-    },
-
-    colorTheme() {
-      if (this.slice.primary.colorTheme === 'black') return 'black'
-      return 'white'
-    },
   },
 }
 </script>
@@ -118,7 +107,7 @@ export default {
   }
   &:last-child {
     padding-bottom: 0;
-    border-bottom: 0px;
+    border-bottom: 0;
   }
 
   @media screen and (max-width: 960px) {

@@ -3,12 +3,14 @@
     class="spacer-slice"
     :style="{
       height,
-      backgroundColor,
+      backgroundColor: sliceBackground,
     }"
   />
 </template>
 
 <script>
+import setSliceBackground from '@/helpers/setSliceBackground'
+
 export default {
   name: 'SpacerSlice',
   props: {
@@ -24,16 +26,8 @@ export default {
   data() {
     return {
       height: this.slice.primary.height,
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
     }
-  },
-
-  computed: {
-    backgroundColor() {
-      if (this.slice?.primary?.background === 'white') return '#ffffff'
-      if (this.slice?.primary?.background === 'silver') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
-    },
   },
 
   mounted() {
