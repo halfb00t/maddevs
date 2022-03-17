@@ -103,7 +103,10 @@ export default {
       position: relative;
       padding-left: 50px;
       @media screen and (max-width: 920px) {
-        padding: 29px 29px 139px 29px;
+        padding: 29px 29px 139px 29px !important;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 8px 8.5px !important;
       }
     }
   }
@@ -150,7 +153,7 @@ export default {
     display: none;
   }
   @media screen and (max-width: 768px) {
-    padding-left: 8.5px;
+    padding-left: 8.5px !important;
   }
 }
 
