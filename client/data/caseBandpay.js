@@ -141,7 +141,7 @@ export const coloredCardsItems = [
       card: 'selective-yellow',
       title: 'white',
     },
-    centered: true,
+    verticalCenteredTitle: true,
   },
   {
     title: 'Automate invoicing',
@@ -149,7 +149,7 @@ export const coloredCardsItems = [
       card: 'maastricht-blue',
       title: 'white',
     },
-    centered: true,
+    verticalCenteredTitle: true,
   },
 ]
 

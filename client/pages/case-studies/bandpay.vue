@@ -167,5 +167,8 @@ export default {
 }
 .case_title-sjmc {
   font-size: 51.88px;
+  @media screen and (max-width: 768px) {
+    font-size: 25.63px;
+  }
 }
 </style>

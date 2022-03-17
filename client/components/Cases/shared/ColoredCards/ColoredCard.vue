@@ -20,7 +20,7 @@
 
     <div
       class="colored-card__footer"
-      :class="`${centeredTitle ? 'colored-card__footer--centered' : ''}`"
+      :class="`${verticalCenteredTitle ? 'colored-card__footer--centered' : ''}`"
     >
       <span
         v-if="preTitle"
@@ -141,7 +141,7 @@ export default {
       default: false,
     },
 
-    centeredTitle: {
+    verticalCenteredTitle: {
       type: Boolean,
       default: false,
     },
