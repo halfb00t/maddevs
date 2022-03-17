@@ -1,5 +1,5 @@
 <template>
-  <section class="m-96_bottom media-m-48_bottom">
+  <section class="m-96_bottom media-m-48_bottom what-is-backend">
     <div class="container_regular m-48_bottom">
       <h3 class="case_title_h2 m-12_bottom">
         What is in the backend?
@@ -111,14 +111,6 @@ export default {
     }
   }
 
-  &_card {
-    position: relative;
-    padding-left: 50px;
-    @media screen and (max-width: 920px) {
-      padding: 29px 29px 139px 29px !important;
-    }
-  }
-
   &_card-title {
     margin-bottom: 5px;
     color: $text-color--white-primary;
@@ -152,16 +144,27 @@ export default {
   }
 }
 
-::v-deep .list-item_box {
-  padding-left: 16.78px;
-  background-color: $bgcolor--silver;
-  display: flex;
-  &::before {
-    content: '';
-    display: none;
+.what-is-backend {
+  & .list-item_box {
+    padding-left: 16.78px;
+    background-color: $bgcolor--silver;
+    display: flex;
+
+    &::before {
+      content: '';
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 8px 8.5px;
+    }
   }
-  @media screen and (max-width: 768px) {
-    padding: 8px 8.5px !important;
+  & .case_card {
+    position: relative;
+    padding-left: 50px;
+    @media screen and (max-width: 920px) {
+      padding: 29px 29px 139px 29px;
+    }
   }
 }
 
