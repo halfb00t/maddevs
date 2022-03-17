@@ -1,9 +1,11 @@
+import dotenv from 'dotenv'
 import getRoutes, { getSitemapRoutes, CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
+import getPlugins from './utils/getPlugins'
 
-require('dotenv').config()
+dotenv.config()
 
-module.exports = {
+export default () => ({
   render: {
     resourceHints: false,
   },
@@ -120,7 +122,7 @@ module.exports = {
       },
     },
     optimization: {
-      minimize: true,
+      minimize: process.env.FF_ENVIRONMENT !== 'development',
     },
     filenames: {
       app: ({ isDev, isModern }) => (isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`),
@@ -134,15 +136,7 @@ module.exports = {
   /*
   ** Plugins
   */
-  plugins: [
-    '~/plugins/vuelidate.js',
-    '~/plugins/vue-social-sharing.js',
-    '~/plugins/get-media-from-s3.js',
-    '~/plugins/header-handler.js',
-    '~/plugins/feature-flags.js',
-    '~/plugins/google-tag-manager-debug.js',
-    { src: '~/plugins/sentry.js', mode: 'client' },
-  ],
+  plugins: getPlugins(process.env.FF_ENVIRONMENT === 'production'),
   /*
   ** Nuxt Modules
   */
@@ -254,4 +248,4 @@ module.exports = {
       '~/assets/styles/_mixins.scss',
     ],
   },
-}
+})
