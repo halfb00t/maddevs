@@ -4,7 +4,6 @@ exports[`Card Grid slice should correctly render CardGrid component 1`] = `
 <div>
   <section
     class="grid-lottie"
-    style="background-color: rgb(17, 18, 19);"
   >
     <lazyhydrate-stub
       idletimeout="2000"
@@ -24,7 +23,6 @@ exports[`Card Grid slice should correctly render CardGridWithIcon component 1`] 
 <div>
   <section
     class="grid-lottie"
-    style="background-color: rgb(17, 18, 19);"
   >
     <lazyhydrate-stub
       idletimeout="2000"

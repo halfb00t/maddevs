@@ -10,7 +10,7 @@ exports[`Custom logo slice should render correctly with data 1`] = `
       class="container"
     >
       <div
-        class="customer-logo-slice_list aos-init aos-animate"
+        class="customer-logo-slice_list"
         data-aos="fade-up"
         data-testid="customer-logo-slice-container"
       >
