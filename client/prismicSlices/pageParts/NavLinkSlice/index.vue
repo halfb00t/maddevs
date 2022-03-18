@@ -34,6 +34,7 @@
 
 <script>
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'TextSlice',
@@ -85,21 +86,9 @@ export default {
         : 'none',
 
       animation: this.slice.primary.animation,
+      sliceBackground: setSliceBackground(this.slice?.primary?.background),
+      colorThemeClass: (this.slice?.primary?.background === 'black') ? 'nav-link-slice__link-black' : 'nav-link-slice__link-white',
     }
-  },
-
-  computed: {
-    colorThemeClass() {
-      if (this.slice?.primary?.background === 'black') return 'nav-link-slice__link-black'
-      return 'nav-link-slice__link-white'
-    },
-
-    sliceBackground() {
-      if (this.slice?.primary?.background === 'white') return '#ffffff'
-      if (this.slice?.primary?.background === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.background === 'black') return '#111213'
-      return null
-    },
   },
 }
 </script>

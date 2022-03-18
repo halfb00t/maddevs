@@ -2,7 +2,7 @@
   <section
     class="customer-logo-slice"
     :class="colorThemeClass"
-    :style="{ backgroundColor: sliceBackground }"
+    :style="{ 'background-color': sliceBackground }"
   >
     <div
       class="container"
@@ -31,6 +31,7 @@
 
 <script>
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'CustomerLogoSlice',
@@ -56,28 +57,10 @@ export default {
   data() {
     return {
       animation: this.slice.primary.animation,
-      title: this.slice.primary.title,
-      description: this.slice.primary.description,
       customers: this.slice.items,
-      button: {
-        link: this.slice.primary.buttonLink,
-        text: this.slice.primary.buttonText,
-      },
+      colorThemeClass: (this.slice?.primary?.colorTheme === 'black') ? 'customer-logo-slice--black-theme' : 'customer-logo-slice--white-theme',
+      sliceBackground: setSliceBackground(this.slice?.primary?.colorTheme),
     }
-  },
-
-  computed: {
-    colorThemeClass() {
-      if (this.slice?.primary?.colorTheme === 'black') return 'customer-logo-slice--black-theme'
-      return 'customer-logo-slice--white-theme'
-    },
-
-    sliceBackground() {
-      if (this.slice?.primary?.colorTheme === 'white') return '#ffffff'
-      if (this.slice?.primary?.colorTheme === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.colorTheme === 'black') return '#111213'
-      return null
-    },
   },
 }
 </script>
@@ -93,7 +76,7 @@ export default {
   &_list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
 
     @media only screen and (max-width: 1300px) {
@@ -156,13 +139,16 @@ export default {
     display: block;
     width: 100%;
     margin-top: 50px;
+
     /deep/ .ui-button {
       padding: 25px;
       line-height: 20px;
+
       &:hover {
         background-color: lighten($bgcolor--red, 10%) !important;
       }
     }
+
     @media screen and (max-width: 1024px) {
       margin-top: 32px;
       /deep/ .ui-button {
@@ -180,14 +166,17 @@ export default {
       }
     }
   }
+
   &--black-theme {
     /deep/ .customer-logo-slice {
       &_title {
         color: $text-color--white-primary;
       }
+
       &_description {
         color: $text-color--white;
       }
+
       &_logo {
         background-color: $bgcolor--eerie-black;
       }

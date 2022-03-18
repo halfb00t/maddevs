@@ -21,6 +21,7 @@
 
 <script>
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import setSliceBackground from '@/helpers/setSliceBackground'
 
 export default {
   name: 'ImageSlice',
@@ -46,16 +47,8 @@ export default {
     return {
       animation: this.slice.primary.animation,
       image: this.slice.primary.image,
+      sliceBackground: setSliceBackground(this.slice?.primary?.colorTheme),
     }
-  },
-
-  computed: {
-    sliceBackground() {
-      if (this.slice?.primary?.colorTheme === 'white') return '#ffffff'
-      if (this.slice?.primary?.colorTheme === 'grey') return '#f5f7f9'
-      if (this.slice?.primary?.colorTheme === 'black') return '#111213'
-      return null
-    },
   },
 }
 </script>

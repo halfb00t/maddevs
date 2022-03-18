@@ -100,17 +100,13 @@ export default {
       logoWidth: this.slice?.primary?.logoWidth,
       logoHeight: this.slice?.primary?.logoHeight,
       alt: this.slice?.primary?.alt,
-      colorTheme: this.slice?.primary?.colorTheme,
       animation: this.slice?.primary?.animation,
       description: this.slice?.primary?.description,
+      colorThemeClass: (this.slice?.primary?.colorTheme === 'black') ? 'black' : 'white',
     }
   },
 
   computed: {
-    colorThemeClass() {
-      if (this.colorTheme === 'black') return 'black'
-      return 'white'
-    },
   },
 
   mounted() {
