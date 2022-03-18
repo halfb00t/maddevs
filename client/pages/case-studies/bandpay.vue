@@ -1,5 +1,5 @@
 <template>
-  <main class="case">
+  <main class="case case_bandpay">
     <div class="case-bandpay__header-wrapper">
       <CaseHeader
         :logo="logo"
@@ -9,7 +9,7 @@
       >
         <h1
           slot="title"
-          class="case_header-title"
+          class="case_header-title case_bandpay__header-title"
         >
           BandPay: A tool
           <br>
@@ -17,7 +17,7 @@
         </h1>
         <p
           slot="description"
-          class="case_header-description"
+          class="case_header-description case_bandpay__header-description"
         >
           Mad Devs created a complete B2B payment management solution
           <br>
@@ -29,22 +29,20 @@
     </div>
     <Main />
     <Footer
-      link="/case-studies/sir-john-monash-centre/"
-      class-name="sjmc"
+      link="/case-studies/guardrails/"
+      class-name="guardrails"
     >
       <img
         slot="icon"
         v-lazy-load
-        :data-src="require(`@/assets/img/Studies/svg/sjmc-footer.svg`)"
-        width="253"
+        :data-src="require(`@/assets/img/Studies/svg/guardrails-footer.svg`)"
+        width="230"
         height="113"
-        alt="SJMC"
-        class="case_logotype-sjmc"
+        alt="Guardrails"
+        class="case_logotype-guardrails"
       >
-      The maintenance <br class="case_mobile-break-sjmc">
-      of memory: <br>
-      Sir John Monash <br class="case_mobile-break-sjmc">
-      Centre
+      Enhancing the GuardRails <br>
+      solution
     </Footer>
   </main>
 </template>
@@ -129,24 +127,6 @@ export default {
     }
   }
 
-  &_header {
-    &-title {
-      width: 700px;
-      margin-bottom: 16px;
-      color: $text-color--black-oil !important;
-      @media screen and (max-width: 655px) {
-        margin-bottom: 0;
-        width: 320px;
-      }
-      @media screen and (max-width: 370px) {
-        width: 250px;
-      }
-    }
-    &-description {
-      color: $text-color--black-oil;
-    }
-  }
-
   &_bandpay-logo {
     width: 383px;
     height: 114px;
@@ -162,13 +142,32 @@ export default {
   }
 }
 
-.case .case_footer::before {
-  background-color: transparent !important;
+.case_bandpay {
+  & section.case_footer::before {
+    background-color: transparent;
+  }
+  & h1.case_bandpay__header-title {
+    width: 700px;
+    margin-bottom: 16px;
+    color: $text-color--black-oil;
+    @media screen and (max-width: 655px) {
+      margin-bottom: 0;
+      width: 320px;
+    }
+    @media screen and (max-width: 370px) {
+      width: 250px;
+    }
+  }
+  & .case_bandpay__header-description {
+    color: $text-color--black-oil;
+  }
 }
-.case_title-sjmc {
-  font-size: 51.88px;
+
+.case_logotype-guardrails {
+  margin-bottom: 35px;
   @media screen and (max-width: 768px) {
-    font-size: 25.63px;
+    width: 180px;
+    height: 87.35px;
   }
 }
 </style>

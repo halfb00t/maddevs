@@ -4,13 +4,11 @@
       Opportunities with BandPay
     </h3>
     <ColoredCards
-      picture-right
       :cards-data="coloredCardsItems.slice(0, 3)"
       grid-type="two-one"
       class="m-24_bottom"
     />
     <ColoredCards
-      picture-right
       :cards-data="coloredCardsItems.slice(3)"
       grid-type="one-left-two-right"
     />

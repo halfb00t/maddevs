@@ -76,13 +76,9 @@ export const coloredCardsItems = [
       width: 160,
       height: 302,
       folder: 'bandpay',
-      file: 'message-desktop',
+      file: 'message-new',
       alt: 'Promote business across the web and via SMS',
-      mobileImage: {
-        width: 130,
-        height: 140,
-        file: 'message-mobile',
-      },
+      extension: 'jpg',
     },
     colors: {
       card: 'prussian-blue',
@@ -96,13 +92,9 @@ export const coloredCardsItems = [
       width: 160,
       height: 302,
       folder: 'bandpay',
-      file: 'laptop-desktop',
+      file: 'laptop-new',
       alt: 'Automate invoicing',
-      mobileImage: {
-        width: 130,
-        height: 140,
-        file: 'laptop-mobile',
-      },
+      extension: 'jpg',
     },
     colors: {
       card: 'midnight-blue',
@@ -122,13 +114,9 @@ export const coloredCardsItems = [
       width: 160,
       height: 302,
       folder: 'bandpay',
-      file: 'laptop-desktop-with-girl',
+      file: 'laptop-new',
       alt: 'Deposit funds to start projects',
-      mobileImage: {
-        width: 130,
-        height: 140,
-        file: 'laptop-mobile-with-girl',
-      },
+      extension: 'jpg',
     },
     colors: {
       card: 'rich-black',
@@ -303,7 +291,7 @@ export const whatIsBackendCards = [
 
 export const bandPayAppCards = [
   {
-    title: 'Activity/Fragment',
+    title: 'Activity / Fragment',
     descriptions:
       'Handles UI events',
     icon: 'activity-fragment',
@@ -312,7 +300,7 @@ export const bandPayAppCards = [
     iconHeight: 51.94,
   },
   {
-    title: 'ViewModel',
+    title: 'View model',
     descriptions: 'Stores logic with related features and uses (Repository/Service)',
     icon: 'view-model',
     folder: 'bandpay',
@@ -320,7 +308,7 @@ export const bandPayAppCards = [
     iconHeight: 51.94,
   },
   {
-    title: 'Repository/Service',
+    title: 'Repository / Service',
     descriptions: 'Sends requests related to the feature group (Profile, Agreement, Chat, Sign In/Sign Up)',
     icon: 'repository-service',
     folder: 'bandpay',
@@ -328,7 +316,7 @@ export const bandPayAppCards = [
     iconHeight: 51.94,
   },
   {
-    title: 'NetworkModule',
+    title: 'Network module',
     descriptions: 'Makes requests, initiates connections, adds tokens to headers, and handles expired tokens',
     icon: 'network-module',
     folder: 'bandpay',

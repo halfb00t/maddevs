@@ -43,12 +43,38 @@ export default {
       width: 52px;
     }
 
+    .retrofit {
+      width: 55px;
+      height: 55px;
+      margin-top: -10px;
+      margin-bottom: 0;
+    }
+
+    .moya {
+      width: 62px;
+      margin-top: -3px;
+      margin-bottom: 8px;
+    }
+
     @media screen and (max-width: 768px) {
       p {
         font-size: 8px;
       }
       .stripe {
         width: 30px;
+      }
+
+      .retrofit {
+        width: 33px;
+        height: 33px;
+        margin-top: -5px;
+        margin-bottom: 0;
+      }
+
+      .moya {
+        width: 30px;
+        margin-top: 0;
+        margin-bottom: 8px;
       }
     }
   }

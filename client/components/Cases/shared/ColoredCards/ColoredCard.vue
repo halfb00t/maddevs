@@ -13,7 +13,7 @@
           :file="cardImage.file"
           :alt="cardImage.alt || 'Image'"
           :folder="cardImage.folder"
-          extension="png"
+          :extension="cardImage.extension ? cardImage.extension : 'png'"
         />
       </div>
     </template>
@@ -74,7 +74,7 @@
           :file="cardImage.file"
           :alt="cardImage.alt || 'Image'"
           :folder="cardImage.folder"
-          extension="png"
+          :extension="cardImage.extension ? cardImage.extension : 'png'"
         />
         <Picture
           v-if="isMobile"
@@ -85,7 +85,7 @@
           :file="cardImage.mobileImage.file"
           :alt="cardImage.alt || 'Image'"
           :folder="cardImage.folder"
-          extension="png"
+          :extension="cardImage.extension ? cardImage.extension : 'png'"
         />
       </div>
     </template>
@@ -162,6 +162,7 @@ export default {
         folder: this.image?.folder,
         file: this.image?.file,
         alt: this.image?.alt,
+        extension: this.image?.extension,
         mobileImage: {
           width: this.image?.mobileImage?.width,
           height: this.image?.mobileImage?.height,
