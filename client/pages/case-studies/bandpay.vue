@@ -29,22 +29,20 @@
     </div>
     <Main />
     <Footer
-      link="/case-studies/sir-john-monash-centre/"
-      class-name="sjmc"
+      link="/case-studies/guardrails/"
+      class-name="guardrails"
     >
       <img
         slot="icon"
         v-lazy-load
-        :data-src="require(`@/assets/img/Studies/svg/sjmc-footer.svg`)"
-        width="253"
+        :data-src="require(`@/assets/img/Studies/svg/guardrails-footer.svg`)"
+        width="230"
         height="113"
-        alt="SJMC"
-        class="case_logotype-sjmc"
+        alt="Guardrails"
+        class="case_logotype-guardrails"
       >
-      The maintenance <br class="case_mobile-break-sjmc">
-      of memory: <br>
-      Sir John Monash <br class="case_mobile-break-sjmc">
-      Centre
+      Enhancing the GuardRails <br>
+      solution
     </Footer>
   </main>
 </template>
@@ -164,10 +162,12 @@ export default {
     color: $text-color--black-oil;
   }
 }
-.case_title-sjmc {
-  font-size: 51.88px;
+
+.case_logotype-guardrails {
+  margin-bottom: 35px;
   @media screen and (max-width: 768px) {
-    font-size: 25.63px;
+    width: 180px;
+    height: 87.35px;
   }
 }
 </style>

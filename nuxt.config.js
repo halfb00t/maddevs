@@ -123,7 +123,7 @@ export default () => ({
       },
     },
     optimization: {
-      minimize: process.env.NODE_ENV !== 'development',
+      minimize: process.env.FF_ENVIRONMENT !== 'development',
       splitChunks: {
         chunks: 'all',
       },
