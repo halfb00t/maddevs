@@ -8,6 +8,7 @@ dotenv.config()
 export default () => ({
   render: {
     resourceHints: false,
+    asyncScripts: true,
   },
   buildModule: ['nuxt-compress'],
   srcDir: 'client/',
@@ -122,7 +123,10 @@ export default () => ({
       },
     },
     optimization: {
-      minimize: process.env.FF_ENVIRONMENT !== 'development',
+      minimize: process.env.NODE_ENV !== 'development',
+      splitChunks: {
+        chunks: 'all',
+      },
     },
     filenames: {
       app: ({ isDev, isModern }) => (isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`),

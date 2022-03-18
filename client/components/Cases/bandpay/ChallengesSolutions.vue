@@ -42,3 +42,10 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+::v-deep .parallax_cards {
+  & .case_paragraph {
+    color: $text-color--quote-box;
+  }
+}
+</style>

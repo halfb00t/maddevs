@@ -28,7 +28,7 @@
       <TextParagraph class="m-96_bottom media-m-48_bottom">
         While working on the BandPay solution, we managed to simplify onboarding and improve project visibility.
       </TextParagraph>
-      <h4 class="case_title_h5 m-12_bottom">
+      <h4 class="case_title_h4 m-12_bottom">
         Easy onboarding
       </h4>
       <TextParagraph class="m-24_bottom media-m-12_bottom">
@@ -41,7 +41,7 @@
         Consequently, it takes around 2 days to onboard a new team member in the BandPay project,
         while in other projects, the onboarding process may last up to 2 weeks.
       </TextParagraph>
-      <h4 class="case_title_h5 m-12_bottom">
+      <h4 class="case_title_h4 m-12_bottom">
         Increased project visibility
       </h4>
       <TextParagraph class="m-24_bottom media-m-12_bottom">
@@ -77,7 +77,7 @@
             :width="1028"
             :height="595.81"
             folder="bandpay"
-            file="project-visibility"
+            file="project-visibility-new"
             extension="png"
             alt="Project visibility"
           />
@@ -114,8 +114,8 @@
             :width="1028"
             :height="476.81"
             folder="bandpay"
-            file="sentry-errors"
-            extension="png"
+            file="sentry-errors-new"
+            extension="jpg"
             alt="Project sentry"
           />
         </div>
