@@ -14,7 +14,7 @@ describe('Crumbs component', () => {
       stubs,
     })
 
-    expect(wrapper.vm.crumbs).toEqual([{ to: '/blog/', title: 'Blog' }, { to: '/undefined/best-time-tracking-tools/', title: 'Best-time-tracking-tools' }])
+    expect(wrapper.vm.crumbs).toEqual([{ to: '/blog/', title: 'Blog' }, { to: '/undefined/best-time-tracking-tools/', title: 'Best time tracking tools' }])
     expect(wrapper).toMatchSnapshot()
   })
 
