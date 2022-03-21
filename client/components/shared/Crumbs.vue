@@ -93,10 +93,10 @@ li {
 }
 
 li:after {
-  content: ' » ';
+  content: ' > ';
   display: inline;
   font-size: 12px;
-  color: $text-color--grey-pale;
+  color: $text-color--quote-box;
   padding: 0 0.0725em 0 0.15em;
 }
 
@@ -107,18 +107,16 @@ li:last-child:after {
 li a,
 li span {
   text-decoration: none;
-  color: $text-color--grey-pale;
   font-size: 12px;
   line-height: 166%;
   letter-spacing: -0.1px;
 }
 
 li span {
- color: $text-color--gainsboro;
- pointer-events: none;
+ color: $text-color--quote-box;
 }
 
-li a:hover {
-  text-decoration: underline;
+li span:hover {
+  color: $text-color--grey-pale;
 }
 </style>
