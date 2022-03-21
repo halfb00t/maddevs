@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bandpay _uid component should render correctly 1`] = `
+<div>
+  <main
+    class="case case_bandpay"
+  >
+    <div
+      class="case-bandpay__header-wrapper"
+    >
+      <section
+        class="case_header case_header-bandpay"
+        id="transparent-header-area"
+      >
+        <img
+          alt="case video fallback"
+          class="case_main-video_fallback"
+          data-src="img.jpg"
+        />
+         
+        <!---->
+         
+        <div
+          class="case_header-content"
+        >
+          <div
+            class="case_header-text"
+            style="opacity: 1;"
+          >
+            <div
+              class="case_case-study-item"
+            >
+              
+        Case Study
+      
+            </div>
+             
+            <h1
+              class="case_header-title case_bandpay__header-title"
+            >
+              
+        BandPay: A tool
+        
+              <br />
+              
+        to run business
+      
+            </h1>
+             
+            <p
+              class="case_header-description case_bandpay__header-description"
+            >
+              
+        Mad Devs created a complete B2B payment management solution
+        
+              <br />
+              
+        that enables freelancers to promote their business, make
+        
+              <br />
+              
+        agreements, and get paid quickly and securely.
+      
+            </p>
+             
+          </div>
+           
+          <img
+            alt="bandpay logo"
+            class="case_header-logo case_bandpay-logo"
+            height="114"
+            src="img.jpg"
+            style="opacity: 1;"
+            width="383"
+          />
+        </div>
+      </section>
+    </div>
+     
+    <main-stub />
+     
+    <section
+      class="case_footer container_full"
+    >
+      <img
+        alt="Guardrails"
+        class="case_logotype-guardrails"
+        data-src="[object Object]"
+        height="113"
+        width="230"
+      />
+       
+      <h2
+        class="case_title case_title_h2 case_title-guardrails"
+      >
+        
+    Enhancing the GuardRails 
+        <br />
+        
+    solution
+  
+      </h2>
+       
+      <nuxtlink-stub
+        class="case_next-project-button"
+        to="/case-studies/guardrails/"
+      >
+        
+    Read next project
+  
+      </nuxtlink-stub>
+    </section>
+  </main>
+</div>
+`;

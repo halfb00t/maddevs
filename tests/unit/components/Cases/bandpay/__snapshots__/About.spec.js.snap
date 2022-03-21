@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay About component should render correctly 1`] = `
+<div>
+  <section
+    class="m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular m-48_top m-96_bottom media-m-48_bottom"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      Many freelancers and small businesses have little knowledge of how to write contracts and arrange payments.
+      Still, it is essential to guarantee that the work will be paid in full and on time.
+      BandPay intended to take charge of legal and financial matters,
+      thus allowing people to focus entirely on their work.
+      Mad Devs helped BandPay turn their idea into a valuable tool used for project-based partnerships
+      to automate agreements, process payments, and fulfil other functions.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full background-color-silver p-72_bottom media-p-24_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <h2
+          class="case_title_h2 case_title p-62_top media-p-41_top media-m-24_bottom"
+        >
+          
+        Achievements in figures
+      
+        </h2>
+         
+        <div
+          class="lottie-container case_lottie"
+          style="--height: 399px; --width: 100%;"
+        />
+         
+        <div
+          class="m-48_top case_statistics-container case_statistics-container-4"
+        >
+          <div
+            class="case_statistics-item"
+            id="about-item-0"
+          >
+            <!---->
+             
+            <img
+              alt="payments"
+              class="case_statistics-item_icon m-21_bottom"
+              data-src="img.jpg"
+              data-testid="test-icon"
+              height="30px"
+              width="30px"
+            />
+             
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(255, 183, 0);"
+            >
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                
+              </span>
+              <span
+                data-end-value="1"
+                data-start-value="1"
+                id="statistics-about-0"
+                style="color: rgb(255, 183, 0);"
+              >
+                1
+              </span>
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                M
+              </span>
+            </h3>
+             
+            <p
+              class="case_paragraph case_statistics-item_description"
+            >
+              
+    volume of payments processed
+  
+            </p>
+          </div>
+          <div
+            class="case_statistics-item"
+            id="about-item-1"
+          >
+            <!---->
+             
+            <img
+              alt="accounts"
+              class="case_statistics-item_icon m-21_bottom"
+              data-src="img.jpg"
+              data-testid="test-icon"
+              height="30px"
+              width="30px"
+            />
+             
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(255, 183, 0);"
+            >
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                +
+              </span>
+              <span
+                data-end-value="15"
+                data-start-value="15"
+                id="statistics-about-1"
+                style="color: rgb(255, 183, 0);"
+              >
+                15
+              </span>
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                K
+              </span>
+            </h3>
+             
+            <p
+              class="case_paragraph case_statistics-item_description"
+            >
+              
+    number of accounts
+  
+            </p>
+          </div>
+          <div
+            class="case_statistics-item"
+            id="about-item-2"
+          >
+            <!---->
+             
+            <img
+              alt="transactions"
+              class="case_statistics-item_icon m-21_bottom"
+              data-src="img.jpg"
+              data-testid="test-icon"
+              height="30px"
+              width="30px"
+            />
+             
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(255, 183, 0);"
+            >
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                +
+              </span>
+              <span
+                data-end-value="75"
+                data-start-value="75"
+                id="statistics-about-2"
+                style="color: rgb(255, 183, 0);"
+              >
+                75
+              </span>
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                K
+              </span>
+            </h3>
+             
+            <p
+              class="case_paragraph case_statistics-item_description"
+            >
+              
+    active users transactions
+  
+            </p>
+          </div>
+          <div
+            class="case_statistics-item"
+            id="about-item-3"
+          >
+            <!---->
+             
+            <img
+              alt="users"
+              class="case_statistics-item_icon m-21_bottom"
+              data-src="img.jpg"
+              data-testid="test-icon"
+              height="30px"
+              width="30px"
+            />
+             
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(255, 183, 0);"
+            >
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                
+              </span>
+              <span
+                data-end-value="2.5"
+                data-start-value="2.5"
+                id="statistics-about-3"
+                style="color: rgb(255, 183, 0);"
+              >
+                2.5
+              </span>
+              <span
+                style="color: rgb(255, 183, 0);"
+              >
+                K
+              </span>
+            </h3>
+             
+            <p
+              class="case_paragraph case_statistics-item_description"
+            >
+              
+    monthly active users
+  
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

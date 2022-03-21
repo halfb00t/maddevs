@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay WhatIsBackend component should render correctly 1`] = `
+<div>
+  <section
+    class="m-96_bottom media-m-48_bottom what-is-backend"
+  >
+    <div
+      class="container_regular m-48_bottom"
+    >
+      <h3
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      What is in the backend?
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-12_bottom"
+      >
+        
+      To build the backend, we opted for Go, which offered the following benefits for the project:
+    
+      </p>
+       
+      <ul
+        class="case_list m-24_bottom"
+      >
+        <li
+          class="list-item_box"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
+          <img
+            alt="Speed is one of the main advantages of this language: having a small footprint, Go allowed us to create a lightweight application that can run fast and have low CPU usage"
+            class="list-item__box-icon"
+            data-src="img.jpg"
+            height="23.44"
+            width="23.44"
+          />
+          
+        Speed is one of the main advantages of this language: having a small footprint, Go allowed us to create a lightweight application that can run fast and have low CPU usage
+      
+        </li>
+        <li
+          class="list-item_box"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
+          <img
+            alt="The other important advantages of the Go language are concurrency and scalability, which enable the BandPay app to process multiple tasks and have many users online simultaneously"
+            class="list-item__box-icon"
+            data-src="img.jpg"
+            height="23.44"
+            width="23.44"
+          />
+          
+        The other important advantages of the Go language are concurrency and scalability, which enable the BandPay app to process multiple tasks and have many users online simultaneously
+      
+        </li>
+        <li
+          class="list-item_box"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
+          <img
+            alt="Although the language is relatively new, it has a great community of developers and therefore its own high standards. These standards help developers to code instead of arguing with one another about the format of the language, which significantly improves the project onboarding"
+            class="list-item__box-icon"
+            data-src="img.jpg"
+            height="23.44"
+            width="23.44"
+          />
+          
+        Although the language is relatively new, it has a great community of developers and therefore its own high standards. These standards help developers to code instead of arguing with one another about the format of the language, which significantly improves the project onboarding
+      
+        </li>
+        <li
+          class="list-item_box"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
+          <img
+            alt="Go is great for writing unit and integration tests, so we increased code coverage for the project from the very beginning "
+            class="list-item__box-icon"
+            data-src="img.jpg"
+            height="23.44"
+            width="23.44"
+          />
+          
+        Go is great for writing unit and integration tests, so we increased code coverage for the project from the very beginning 
+      
+        </li>
+        <li
+          class="list-item_box"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
+          <img
+            alt="All the necessary integrations had Go libraries with the communities that support and develop them, so finding an existing library was not a problem"
+            class="list-item__box-icon"
+            data-src="img.jpg"
+            height="23.44"
+            width="23.44"
+          />
+          
+        All the necessary integrations had Go libraries with the communities that support and develop them, so finding an existing library was not a problem
+      
+        </li>
+        <li
+          class="list-item_box"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom"
+        >
+          <img
+            alt="Go is a statically-typed language, which is always a preferred option for fintech projects"
+            class="list-item__box-icon"
+            data-src="img.jpg"
+            height="23.44"
+            width="23.44"
+          />
+          
+        Go is a statically-typed language, which is always a preferred option for fintech projects
+      
+        </li>
+      </ul>
+       
+      <div
+        class="case_cards-list m-24_bottom"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <div
+          class="case_card case_card background-color-gray"
+        >
+          <h4
+            class="case_title_h5 case_card-title"
+          >
+            
+          A great choice for efficient backend
+        
+          </h4>
+           
+          <p
+            class="case_paragraph case_card-description"
+          >
+            
+          We maximized the potential of Go to develop high-performance backend for the BandPay app
+        
+          </p>
+           
+          <img
+            alt="A great choice for efficient backend"
+            class="case_card-icon"
+            data-src="img.jpg"
+            height="124"
+            width="242"
+          />
+        </div>
+      </div>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      The BandPay backend interacts with various platforms and services intended for email and text messaging,
+      handling marketing activities, error tracking, crash monitoring and fixing, data storage, and many other functions
+      and features. The scheme below shows the environment and services involved in the BandPay backend functionality
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full background-color-silver m-48_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <div
+          class="lottie-container case_lottie"
+          style="--height: 401px; --width: 100%;"
+        />
+      </div>
+    </div>
+     
+    <div
+      class="container_regular"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      To enable the app to communicate with the database in an easy and effective way, we refactored the heavy
+      database interface, making it more readable, convenient, and failproof.
+    
+      </p>
+    </div>
+  </section>
+</div>
+`;

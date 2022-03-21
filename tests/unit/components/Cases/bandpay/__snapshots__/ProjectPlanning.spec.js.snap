@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay ProjectPlanning component should render correctly 1`] = `
+<div>
+  <section
+    class="m-96_bottom media-m-48_bottom"
+  >
+    <section
+      class="container_regular m-48_bottom media-m-24_bottom"
+    >
+      <h3
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      Project planning and management
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      The size of the development team changed throughout the whole project. The group was relatively small initially,
+      but it scaled up sharply as we moved forward with the project and onboarded new team members, such as frontend,
+      backend, and mobile developers. At that time, we used the Agile Scrum methodology, that is, divided the project
+      into incremental phases or 2-week sprints and held regular demo and retrospective sessions.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      After the active development phase changed for the support phase, the team size decreased, and we switched
+      to Kanban. This methodology has no fixed sprints and timeframes, and it focuses more on the flow of the project.
+      By applying Kanban, we prioritised tasks by pulling them into the workflow from the backlog.
+    
+      </p>
+    </section>
+     
+    <section
+      class="container_middle"
+    >
+      <div
+        class="case_image-wrapper m-48_top media-m-24_top case_box-shadow"
+      >
+        <picture>
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Project Planning"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="16.45"
+            width="1026"
+          />
+        </picture>
+         
+        <div
+          class="container_middle__main-image"
+        >
+          <picture>
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Project Planning"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="474.71"
+              width="944"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
+`;

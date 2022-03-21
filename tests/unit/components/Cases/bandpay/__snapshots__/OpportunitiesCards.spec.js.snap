@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay OpportunitiesCards component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular m-96_bottom media-m-48_bottom"
+  >
+    <h3
+      class="case_title_h2 case_title m-12_bottom"
+    >
+      
+    Opportunities with BandPay
+  
+    </h3>
+     
+    <div
+      class="colored-cards m-24_bottom card-grid-type--two-one"
+    >
+      <div
+        class="colored-card colored-card--1 background-color-prussian-blue "
+      >
+        <div
+          class="colored-card__image-wrapper"
+        >
+          <picture
+            class="colored-card__image colored-card-image-message-new"
+          >
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Promote business across the web and via SMS"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="200"
+              width="396"
+            />
+          </picture>
+        </div>
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Promote business across the web and via SMS
+    
+          </h3>
+           
+          <!---->
+           
+        </div>
+         
+        <!---->
+      </div>
+      <div
+        class="colored-card colored-card--2 background-color-midnight-blue "
+      >
+        <div
+          class="colored-card__image-wrapper"
+        >
+          <picture
+            class="colored-card__image colored-card-image-laptop-new"
+          >
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Receive payments automatically"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="200"
+              width="396"
+            />
+          </picture>
+        </div>
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Receive payments automatically
+    
+          </h3>
+           
+          <!---->
+           
+        </div>
+         
+        <!---->
+      </div>
+      <div
+        class="colored-card colored-card--3 background-color-heat-wave "
+      >
+        <!---->
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Set the timeline, amount, and deliverables for each project milestone
+    
+          </h3>
+           
+          <!---->
+           
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+     
+    <div
+      class="colored-cards card-grid-type--one-left-two-right"
+    >
+      <div
+        class="colored-card colored-card--1 background-color-rich-black "
+      >
+        <div
+          class="colored-card__image-wrapper"
+        >
+          <picture
+            class="colored-card__image colored-card-image-laptop-with-girl-new"
+          >
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Deposit funds to start projects"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="200"
+              width="396"
+            />
+          </picture>
+        </div>
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Deposit funds to start projects
+    
+          </h3>
+           
+          <!---->
+           
+        </div>
+         
+        <!---->
+      </div>
+      <div
+        class="colored-card colored-card--2 background-color-selective-yellow "
+      >
+        <!---->
+         
+        <div
+          class="colored-card__footer colored-card__footer--centered"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Create agreements
+    
+          </h3>
+           
+          <!---->
+           
+        </div>
+         
+        <!---->
+      </div>
+      <div
+        class="colored-card colored-card--3 background-color-maastricht-blue "
+      >
+        <!---->
+         
+        <div
+          class="colored-card__footer colored-card__footer--centered"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Automate invoicing
+    
+          </h3>
+           
+          <!---->
+           
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+  </section>
+</div>
+`;
