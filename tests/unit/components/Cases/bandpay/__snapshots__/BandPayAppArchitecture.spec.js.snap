@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay BandPayAppArchitecture component should render correctly 1`] = `
+<div>
+  <section
+    class="m-48_bottom media-m-24_bottom"
+  >
+    <div
+      class="container_regular m-24_bottom"
+    >
+      <h3
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      BandPay app architecture
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-48_bottom media-m-24_bottom"
+      >
+        
+      When building mobile apps for the BandPay project, we first released the versions for internal testing.
+      Once the successful test results were achieved, we released the apps to production. Both iOS and Android
+      applications have similar architectures, which include the following components:
+    
+      </p>
+       
+      <div
+        class="parallax_cards m-48_bottom media-m-24_bottom"
+      >
+        <div
+          class="parallax_cards__item"
+        >
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom parallax-title"
+            >
+              
+    Activity / Fragment
+  
+            </h4>
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Handles UI events
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom parallax-title"
+            >
+              
+    View model
+  
+            </h4>
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Stores logic with related features and uses (Repository/Service)
+    
+            </p>
+             
+          </div>
+        </div>
+         
+        <div
+          class="parallax_cards__item"
+        >
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom parallax-title"
+            >
+              
+    Repository / Service
+  
+            </h4>
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Sends requests related to the feature group (Profile, Agreement, Chat, Sign In/Sign Up)
+    
+            </p>
+             
+          </div>
+          <div
+            class="card-content background-color-silver"
+            iconheight="51.94"
+            iconwidth="51.94"
+          >
+            <img
+              alt="Icon"
+              class="card-content_icon"
+              data-src="img.jpg"
+              height="51.94"
+              width="51.94"
+            />
+             
+            <h4
+              class="case_title_h4 m-10-bottom parallax-title"
+            >
+              
+    Network module
+  
+            </h4>
+             
+            <p
+              class="case_paragraph"
+            >
+              
+      Makes requests, initiates connections, adds tokens to headers, and handles expired tokens
+    
+            </p>
+             
+          </div>
+        </div>
+      </div>
+       
+      <h4
+        class="case_title_h5"
+      >
+        
+      Below are the integrations of the iOS and Android apps.
+    
+      </h4>
+    </div>
+     
+    <div
+      class="container_full background-color-silver p-48_top p-48_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <div
+          class="lottie-container case_lottie"
+          style="--height: 326px; --width: 100%;"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

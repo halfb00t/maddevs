@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay Main component should render correctly 1`] = `
+<div>
+  <section>
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <about-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <opportunitiescards-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <benefitmostbandpay-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <challengessolutions-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <lookingatthefrontend-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <integratingonline-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <twosmartphones-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <whatisbackend-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <bandpayapparchitecture-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <implementingpipelines-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <buyerregistration-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <projectdevelopment-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <projectplanning-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <keyachievements-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <technologiesstack-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <meetteam-stub />
+    </lazyhydrate-stub>
+  </section>
+</div>
+`;
