@@ -36,9 +36,9 @@
         :event="(crumbs.length - 1) === i ? '' : 'click'"
         class="title"
         itemprop="item"
-        :title="crumb.title"
+        :title="(crumbs.length - 1) === i ? getTitle : crumb.title"
       >
-        <span itemprop="name">{{ crumb.title }}</span>
+        <span itemprop="name">{{ (crumbs.length - 1) === i ? getTitle : crumb.title }}</span>
         <meta
           itemprop="position"
           content="i + 1"
@@ -53,6 +53,10 @@ export default {
   name: 'Crumbs',
 
   computed: {
+    getTitle() {
+      return document.title
+    },
+
     crumbs() {
       const { fullPath } = this.$route
       const pathArray = fullPath.startsWith('/')
@@ -64,7 +68,7 @@ export default {
           to: breadcrumbArray[idx - 1]
             ? `/${breadcrumbArray[idx - 1].path}/${path}${path.endsWith('/') ? '' : '/'}`
             : `/${path}${path.endsWith('/') ? '' : '/'}`,
-          title: path.charAt(0).toUpperCase() + path.substr(1),
+          title: (path.charAt(0).toUpperCase() + path.substr(1)).replace(/-/gm, ' '),
         })
         return breadcrumbArray
       }, [])
@@ -96,7 +100,7 @@ li:after {
   content: ' > ';
   display: inline;
   font-size: 12px;
-  color: $text-color--quote-box;
+  color: $text-color--grey-20-percent;
   padding: 0 0.0725em 0 0.15em;
 }
 
@@ -113,10 +117,10 @@ li span {
 }
 
 li span {
- color: $text-color--quote-box;
+ color: $text-color--grey-20-percent;
 }
 
 li span:hover {
-  color: $text-color--grey-pale;
+  color: $text-color--cultured;
 }
 </style>
