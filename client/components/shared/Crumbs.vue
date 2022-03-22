@@ -36,9 +36,9 @@
         :event="(crumbs.length - 1) === i ? '' : 'click'"
         class="title"
         itemprop="item"
-        :title="(crumbs.length - 1) === i ? getTitle : crumb.title"
+        :title="(crumbs.length - 1) === i ? title : crumb.title"
       >
-        <span itemprop="name">{{ (crumbs.length - 1) === i ? getTitle : crumb.title }}</span>
+        <span itemprop="name">{{ (crumbs.length - 1) === i ? title : crumb.title }}</span>
         <meta
           itemprop="position"
           content="i + 1"
@@ -52,11 +52,13 @@
 export default {
   name: 'Crumbs',
 
-  computed: {
-    getTitle() {
-      return document.title
-    },
+  data() {
+    return {
+      title: document.title,
+    }
+  },
 
+  computed: {
     crumbs() {
       const { fullPath } = this.$route
       const pathArray = fullPath.startsWith('/')
@@ -81,6 +83,12 @@ export default {
 
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
+  },
+
+  mounted() {
+    new MutationObserver(() => {
+      this.title = document.title
+    }).observe(document.querySelector('title'), { childList: true })
   },
 }
 </script>
