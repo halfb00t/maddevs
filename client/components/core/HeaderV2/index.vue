@@ -16,7 +16,7 @@
       >
         <div class="header__content">
           <div
-            v-if="logoTextIsActive"
+            v-if="logoTextIsActive && showCrumbs"
             class="header__content-crumbs"
           >
             <Crumbs />
@@ -194,6 +194,15 @@ export default {
   },
 
   computed: {
+    showCrumbs() {
+      const { fullPath } = this.$route
+      const pathArray = (fullPath.startsWith('/')
+        ? fullPath.substring(1).split('/')
+        : fullPath.split('/')).filter(url => url)
+
+      return !pathArray.includes('ebooks')
+    },
+
     ...mapGetters(['headerTransparentArea', 'headerTransparent']),
 
     isBlogPage() {
