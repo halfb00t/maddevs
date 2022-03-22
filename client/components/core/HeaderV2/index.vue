@@ -196,11 +196,14 @@ export default {
   computed: {
     showCrumbs() {
       const { fullPath } = this.$route
-      const pathArray = (fullPath.startsWith('/')
-        ? fullPath.substring(1).split('/')
-        : fullPath.split('/')).filter(url => url)
+      if (fullPath !== undefined) {
+        const pathArray = (fullPath.startsWith('/')
+          ? fullPath.substring(1).split('/')
+          : fullPath.split('/')).filter(url => url)
 
-      return !pathArray.includes('ebooks')
+        return !pathArray.includes('ebooks')
+      }
+      return null
     },
 
     ...mapGetters(['headerTransparentArea', 'headerTransparent']),
