@@ -32,13 +32,13 @@
       itemtype="https://schema.org/ListItem"
     >
       <NuxtLink
-        :to="crumb.to"
+        :to="crumb.title === 'Author' ? '/blog/' : crumb.to"
         :event="(crumbs.length - 1) === i ? '' : 'click'"
         class="title"
         itemprop="item"
-        :title="(crumbs.length - 1) === i ? getTitle : crumb.title"
+        :title="(crumbs.length - 1) === i ? title : crumb.title"
       >
-        <span itemprop="name">{{ (crumbs.length - 1) === i ? getTitle : crumb.title }}</span>
+        <span itemprop="name">{{ (crumbs.length - 1) === i ? title : crumb.title }}</span>
         <meta
           itemprop="position"
           content="i + 1"
@@ -52,24 +52,27 @@
 export default {
   name: 'Crumbs',
 
-  computed: {
-    getTitle() {
-      return document.title
-    },
+  data() {
+    return {
+      title: null,
+    }
+  },
 
+  computed: {
     crumbs() {
       const { fullPath } = this.$route
-      const pathArray = fullPath.startsWith('/')
+      const pathArray = (fullPath.startsWith('/')
         ? fullPath.substring(1).split('/')
-        : fullPath.split('/')
+        : fullPath.split('/')).filter(url => url)
 
       const breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
         breadcrumbArray.push({
-          to: breadcrumbArray[idx - 1]
-            ? `/${breadcrumbArray[idx - 1].path}/${path}${path.endsWith('/') ? '' : '/'}`
+          to: pathArray[idx - 1]
+            ? `/${pathArray[idx - 1]}/${path}${path.endsWith('/') ? '' : '/'}`
             : `/${path}${path.endsWith('/') ? '' : '/'}`,
           title: (path.charAt(0).toUpperCase() + path.substr(1)).replace(/-/gm, ' '),
         })
+
         return breadcrumbArray
       }, [])
 
@@ -81,6 +84,13 @@ export default {
 
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
+  },
+
+  mounted() {
+    this.title = document.title
+    new MutationObserver(() => {
+      this.title = document.title
+    }).observe(document.querySelector('title'), { childList: true })
   },
 }
 </script>

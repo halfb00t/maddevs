@@ -184,17 +184,17 @@ exports[`CasesList component should render correctly 1`] = `
         whenvisible="true"
       >
         <caseslistitem-stub
-          class="cases-list_nambataxi"
+          class="cases-list_bandpay"
           data-testid="test-case-card"
-          desc="The system that took urban transport in Bishkek, Kyrgyzstan to the next level in 2013 by making taxi ordering fast, efficient and convenient and continues to function today."
+          desc="Mad Devs created a complete B2B payment management solution that enables freelancers to promote their business, make agreements, and get paid quickly and securely."
           item="[object Object]"
-          link="/case-studies/namba-taxi/"
+          link="/case-studies/bandpay/"
           logo="[object Object]"
-          poster-link="/images/Cases/nambataxi/png/nambataxi-banner.png"
-          subtitle="Transportation"
-          title="Namba Taxi: Modernising transport"
+          poster-link="/images/Cases/bandpay/jpg/bandpay-banner.jpg"
+          subtitle="B2B"
+          title="BandPay: A tool to run business"
           title-tag="h3"
-          video-file-name="/videos/namba-taxi-banner.mp4#t=1"
+          video-file-name="/videos/bandpay-banner.mp4"
           width="full"
         />
       </lazyhydrate-stub>
@@ -222,17 +222,17 @@ exports[`CasesList component should render correctly 1`] = `
         whenvisible="true"
       >
         <caseslistitem-stub
-          class="cases-list_bandpay"
+          class="cases-list_nambataxi"
           data-testid="test-case-card"
-          desc="Mad Devs created a complete B2B payment management solution that enables freelancers to promote their business, make agreements, and get paid quickly and securely."
+          desc="The system that took urban transport in Bishkek, Kyrgyzstan to the next level in 2013 by making taxi ordering fast, efficient and convenient and continues to function today."
           item="[object Object]"
-          link="/case-studies/bandpay/"
+          link="/case-studies/namba-taxi/"
           logo="[object Object]"
-          poster-link="/images/Cases/bandpay/jpg/bandpay-banner.jpg"
-          subtitle="B2B"
-          title="BandPay: A tool to run business"
+          poster-link="/images/Cases/nambataxi/png/nambataxi-banner.png"
+          subtitle="Transportation"
+          title="Namba Taxi: Modernising transport"
           title-tag="h3"
-          video-file-name="/videos/bandpay-banner.mp4"
+          video-file-name="/videos/namba-taxi-banner.mp4#t=1"
           width="small"
         />
       </lazyhydrate-stub>
