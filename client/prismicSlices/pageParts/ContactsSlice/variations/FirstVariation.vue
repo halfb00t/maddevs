@@ -10,6 +10,9 @@
 </template>
 
 <script>
+/* temporary commented messengers at the request of
+  the task https://maddevs.atlassian.net/browse/MAR-3062 */
+
 import ContactFields from '../components/ContactFields'
 // import Messengers from '../components/Messengers'
 import Socials from '../components/Socials'
