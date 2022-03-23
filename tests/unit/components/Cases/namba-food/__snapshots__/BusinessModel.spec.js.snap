@@ -108,7 +108,7 @@ exports[`BusinessModel component should render correctly 1`] = `
         class="colored-cards card-grid-type--one-left-two-right"
       >
         <div
-          class="colored-card colored-card--1 background-color-silver"
+          class="colored-card colored-card--1 background-color-silver "
         >
           <div
             class="colored-card__image-wrapper"
@@ -146,9 +146,11 @@ exports[`BusinessModel component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--2 background-color-turquoise"
+          class="colored-card colored-card--2 background-color-turquoise "
         >
           <!---->
            
@@ -174,9 +176,11 @@ exports[`BusinessModel component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--3 background-color-berry"
+          class="colored-card colored-card--3 background-color-berry "
         >
           <!---->
            
@@ -202,9 +206,11 @@ exports[`BusinessModel component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--4 background-color-silver"
+          class="colored-card colored-card--4 background-color-silver "
         >
           <!---->
            
@@ -230,6 +236,8 @@ exports[`BusinessModel component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
       </div>
     </div>

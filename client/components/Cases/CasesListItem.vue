@@ -354,6 +354,15 @@ export default {
   }
 }
 
+.cases-list_bandpay {
+  &::before {
+    background-color: rgba(255, 191, 11, 0.9);
+  }
+  & .cases-list_item-info {
+    color: $text-color--black-oil;
+  }
+}
+
 .is-mobile {
   .cases-list_item-info {
     p {

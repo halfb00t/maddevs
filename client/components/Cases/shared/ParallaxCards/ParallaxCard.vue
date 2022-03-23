@@ -11,7 +11,7 @@
     >
     <h4
       v-if="title"
-      class="case_title_h4 m-10-bottom"
+      class="case_title_h4 m-10-bottom parallax-title"
     >
       {{ title }}
     </h4>

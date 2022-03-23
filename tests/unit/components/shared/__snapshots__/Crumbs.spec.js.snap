@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crumbs component should correctly hide data, when length of array less than 2 1`] = `
+<ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+  <!---->
+</ol>
+`;
+
+exports[`Crumbs component should correctly return data, when length of array greater or equal 2 1`] = `
+<ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" class="item">
+    <nuxtlink-stub to="/" itemprop="item" title="Mad Devs" class="title"><span itemprop="name">Mad Devs</span>
+      <meta itemprop="position" content="0">
+    </nuxtlink-stub>
+  </li>
+  <li itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem" class="item">
+    <nuxtlink-stub to="/blog/" event="click" itemprop="item" title="Blog" class="title"><span itemprop="name">Blog</span>
+      <meta itemprop="position" content="i + 1">
+    </nuxtlink-stub>
+  </li>
+  <li itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem" class="item">
+    <nuxtlink-stub to="/blog/best-time-tracking-tools/" event="" itemprop="item" class="title"><span itemprop="name"></span>
+      <meta itemprop="position" content="i + 1">
+    </nuxtlink-stub>
+  </li>
+</ol>
+`;

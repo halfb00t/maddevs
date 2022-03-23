@@ -17,6 +17,8 @@ exports[`Header component should render correctly 1`] = `
         <div
           class="header__content"
         >
+          <!---->
+           
           <div
             class="header__content-left"
           >
