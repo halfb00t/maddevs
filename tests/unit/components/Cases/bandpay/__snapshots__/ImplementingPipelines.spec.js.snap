@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay ImplementingPipelines component should render correctly 1`] = `
+<div>
+  <section
+    class="m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular m-48_bottom media-m-24_bottom"
+    >
+      <h3
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      Implementing CI/CD pipelines
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-12_bottom"
+      >
+        
+      The Mad Devs developers set up CI/CD pipelines to automate the delivery of the BandPay mobile apps using
+      Fastlane and GitLab CI. The CI/CD pipelines we implemented include a range of automated procedures, such as:
+    
+      </p>
+       
+      <ol
+        class="case_advantages-list"
+      >
+        <li
+          class="case_advantages-item"
+        >
+          <span>
+            Linting -
+          </span>
+           Checks the code for programmatic and stylistic errors
+      
+        </li>
+         
+        <li
+          class="case_advantages-item"
+        >
+          <span>
+            Unit testing -
+          </span>
+           Verifies the individual components of the app
+      
+        </li>
+         
+        <li
+          class="case_advantages-item"
+        >
+          <span>
+            Integration testing -
+          </span>
+           Checks how different components of the app work together
+      
+        </li>
+         
+        <li
+          class="case_advantages-item"
+        >
+          <span>
+            End-to-end testing -
+          </span>
+           Verifies the entire flow of the app from start to finish
+      
+        </li>
+         
+        <li
+          class="case_advantages-item"
+        >
+          <span>
+            Code coverage reporting -
+          </span>
+           Shows how much of the code is tested
+      
+        </li>
+         
+        <li
+          class="case_advantages-item"
+        >
+          <span>
+            Build & deployment -
+          </span>
+           Builds and deploys the code to staging and production
+      
+        </li>
+      </ol>
+    </div>
+     
+    <div
+      class="container_full background-color-silver p-24_top p-24_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <div
+          class="lottie-container case_lottie"
+          style="--height: 326px; --width: 100%;"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

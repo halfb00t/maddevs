@@ -15,6 +15,12 @@
         class="header__container container"
       >
         <div class="header__content">
+          <div
+            v-if="logoTextIsActive && showCrumbs"
+            class="header__content-crumbs"
+          >
+          <!-- <Crumbs />-->
+          </div>
           <div class="header__content-left">
             <NuxtLink
               to="/"
@@ -110,12 +116,6 @@
           </div>
         </div>
       </div>
-      <div
-        v-if="logoTextIsActive"
-        class="header__container-crumbs"
-      >
-        <Crumbs />
-      </div>
     </header>
     <HeaderMobile
       v-if="isActiveMobileMenu"
@@ -140,7 +140,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import Crumbs from '@/components/shared/Crumbs'
+// import Crumbs from '@/components/shared/Crumbs'
 import scrollOnBody from '@/mixins/scrollOnBody'
 import ModalSearch from '@/components/core/modals/ModalSearch'
 import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
@@ -175,7 +175,7 @@ export default {
     HeaderNavigation,
     HeaderMobile,
     ModalSearch,
-    Crumbs,
+    // Crumbs,
     ModalContactMe: () => import('@/components/core/modals/ModalContactMe'),
   },
 
@@ -194,6 +194,18 @@ export default {
   },
 
   computed: {
+    showCrumbs() {
+      const { fullPath } = this.$route
+      if (fullPath !== undefined) {
+        const pathArray = (fullPath.startsWith('/')
+          ? fullPath.substring(1).split('/')
+          : fullPath.split('/')).filter(url => url)
+
+        return !pathArray.includes('ebooks')
+      }
+      return null
+    },
+
     ...mapGetters(['headerTransparentArea', 'headerTransparent']),
 
     isBlogPage() {
@@ -352,20 +364,9 @@ export default {
   &__container {
     position: relative;
 
-    &-crumbs {
-      position: absolute;
-      bottom: -10px;
-      left: 90px;
-    }
-
     @media screen and (max-width: 1012px) {
       padding: 0 10px 0 25px;
       max-width: 100%;
-
-      &-crumbs {
-        top: 70px;
-        left: 26px;
-      }
     }
   }
 
@@ -378,9 +379,27 @@ export default {
     justify-content: space-between;
     align-items: stretch;
     color: $text-color--white-primary;
+
+    &-crumbs {
+      position: absolute;
+      bottom: -15px;
+      left: 0px;
+      width: 100%;
+
+      @media screen and (max-width: 1012px) {
+        top: 70px;
+        left: 0px;
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
     @media screen and (max-width: 1012px) {
       height: 48px;
     }
+
     a {
       color: $text-color--white-primary;
     }

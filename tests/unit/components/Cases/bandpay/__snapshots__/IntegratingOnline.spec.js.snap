@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay About component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular m-48_bottom integrating-online"
+  >
+    <h3
+      class="case_title_h2 m-12_bottom"
+    >
+      
+    Integrating online payment processing
+  
+    </h3>
+     
+    <p
+      class="case_paragraph m-24_bottom"
+    >
+      
+    Payment processing is an integral part of the BandPay solution. So one of the essential project tasks
+    was integrating with a payment processor to accept and send payments online.
+  
+    </p>
+     
+    <div
+      class="case_cards-list m-24_bottom"
+      data-aos="fade-up"
+      data-aos-anchor-placement="bottom"
+    >
+      <div
+        class="case_card case_card case_card__stripe background-color-gray"
+      >
+        <h4
+          class="case_title_h5 case_card-title"
+        >
+          
+        Payment processor for businesses
+      
+        </h4>
+         
+        <p
+          class="case_paragraph case_card-description"
+        >
+          
+        We used Stripe to enable BandPay users to easily and quickly accept payments and send payouts
+      
+        </p>
+         
+        <img
+          alt="Payment processor for businesses"
+          class="case_card-icon"
+          data-src="img.jpg"
+          height="124"
+          width="298"
+        />
+      </div>
+    </div>
+     
+    <p
+      class="case_paragraph m-48_bottom media-m-24_bottom"
+    >
+      
+    Stripe is a top-ranked payment processing platform that enables businesses to accept payments quickly and safely.
+    By granting access to its infrastructure through APIs (application programming interfaces), the platform assists
+    in launching bespoke financial services. We chose Stripe for the BandPay project based on the following advantages:
+  
+    </p>
+     
+    <ul
+      class="case_list m-48_bottom media-m-24_bottom"
+    >
+      <li
+        class="list-item_box integrating-online__list-item"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <img
+          alt="It is easy to use and customise"
+          class="list-item__box-icon"
+          data-src="img.jpg"
+          height="23.44"
+          width="23.44"
+        />
+        
+      It is easy to use and customise
+    
+      </li>
+      <li
+        class="list-item_box integrating-online__list-item"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <img
+          alt="It is quick and scalable"
+          class="list-item__box-icon"
+          data-src="img.jpg"
+          height="23.44"
+          width="23.44"
+        />
+        
+      It is quick and scalable
+    
+      </li>
+      <li
+        class="list-item_box integrating-online__list-item"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <img
+          alt="It accepts all major credit and debit cards"
+          class="list-item__box-icon"
+          data-src="img.jpg"
+          height="23.44"
+          width="23.44"
+        />
+        
+      It accepts all major credit and debit cards
+    
+      </li>
+      <li
+        class="list-item_box integrating-online__list-item"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <img
+          alt="It detects and prevents fraudulent transactions"
+          class="list-item__box-icon"
+          data-src="img.jpg"
+          height="23.44"
+          width="23.44"
+        />
+        
+      It detects and prevents fraudulent transactions
+    
+      </li>
+    </ul>
+     
+    <p
+      class="case_paragraph"
+    >
+      
+    In addition to taking payments from buyers, BandPay was supposed to send payouts to sellers.
+    Mad Devs met this challenge using Stripe Connect—a solution provided by the Stripe platform.
+    By integrating Stripe Connect into the project, we made it possible to collect payments from buyers and route
+    funds to sellers’ bank accounts. Now, BandPay is an official Stripe Partner.
+  
+    </p>
+  </section>
+</div>
+`;

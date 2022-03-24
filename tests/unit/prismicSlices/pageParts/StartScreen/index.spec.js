@@ -143,7 +143,7 @@ describe('StartScreen slice', () => {
         }),
       })
 
-      expect(wrapper.vm.sliceGradient).toBeNull()
+      expect(wrapper.vm.sliceGradient).toBe('')
     })
   })
 })

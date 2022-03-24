@@ -40,6 +40,7 @@ exports[`Technologies and Tools Grid slice should correctly render TechnologiesA
         data-aos="fade-up"
         data-testid="technologies-grid-variation"
         primary="[object Object]"
+        slice="[object Object]"
         variation="default-slice"
       />
     </lazyhydrate-stub>

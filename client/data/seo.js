@@ -166,6 +166,13 @@ export const meta = {
     url: 'https://maddevs.io/case-studies/guardrails/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "breadcrumb": "Projects > Case Studies > Transportation Solutions", "name": "Mad Devs Case Study: Namba Taxi - Leading Taxi Service in Bishkek", "description": "Transportation Industry Case Study: How to develop software for taxi services from scratch? Read Namba Taxi\'s story of creating a taxi app to revolutionise the way people move around in a modern city.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group LTD"}}',
   },
+  bandpay: {
+    title: 'Mad Devs Case Study: Bandpay - Payment Management Solution for Freelancers and Small Businesses',
+    description:
+      'FinTech Case Study: Why freelancers don\'t receive payment on time, and how to avoid it? Read Bandpay\'s stories of creating a milestone-based platform to manage the payments process for freelancers.',
+    url: 'https://maddevs.io/case-studies/bandpay/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Bandpay - Payment Management Solution for Freelancers and Small Businesses", "description": "FinTech Case Study: Why freelancers don\'t receive payment on time, and how to avoid it? Read Bandpay\'s stories of creating a milestone-based platform to manage the payments process for freelancers.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
+  },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
     url: 'https://maddevs.io/blog/',

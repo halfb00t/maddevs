@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay LookingAtTheFrontend component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular m-96_bottom media-m-48_bottom"
+  >
+    <h3
+      class="case_title_h2 m-12_bottom"
+    >
+      
+    Looking at the frontend
+  
+    </h3>
+     
+    <p
+      class="case_paragraph m-48_bottom media-m-24_bottom"
+    >
+      
+    We chose React.js to develop the frontend of the BandPay solution,
+    taking advantage of the library’s opportunities, such as the following:
+  
+    </p>
+     
+    <div
+      class="colored-cards m-24_bottom card-grid-type--two-one"
+    >
+      <div
+        class="colored-card colored-card--1 background-color-black "
+      >
+        <div
+          class="colored-card__image-wrapper"
+        >
+          <picture
+            class="colored-card__image colored-card-image-high-performance"
+          >
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="High performance"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="200"
+              width="396"
+            />
+          </picture>
+        </div>
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      High performance
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description text-color-white"
+          >
+            
+        React.js uses Virtual DOM (Document Object Model) to render and update UI quickly and efficiently
+      
+          </p>
+           
+        </div>
+         
+        <!---->
+      </div>
+      <div
+        class="colored-card colored-card--2 background-color-gray "
+      >
+        <div
+          class="colored-card__image-wrapper"
+        >
+          <picture
+            class="colored-card__image colored-card-image-flexibility"
+          >
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Flexibility"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="200"
+              width="396"
+            />
+          </picture>
+        </div>
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Flexibility
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description text-color-white"
+          >
+            
+        Due to the modular structure of the code, the React frontends are easy to maintain, update, and scale
+      
+          </p>
+           
+        </div>
+         
+        <!---->
+      </div>
+      <div
+        class="colored-card colored-card--3 background-color-selective-yellow "
+      >
+        <!---->
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Reusability
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description text-color-white"
+          >
+            
+        React components are independent pieces with their own logic that can be reused later in the project
+      
+          </p>
+           
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+     
+    <div
+      class="colored-cards m-48_bottom media-m-24_bottom card-grid-type--two-one"
+    >
+      <div
+        class="colored-card colored-card--1 background-color-black-primary-bg "
+      >
+        <!---->
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      Stability
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description text-color-white"
+          >
+            
+        React uses downward data flow so the changes made in child structures don’t affect parent structures
+      
+          </p>
+           
+        </div>
+         
+        <!---->
+      </div>
+      <div
+        class="colored-card colored-card--2 background-color-maastricht-blue "
+      >
+        <!---->
+         
+        <div
+          class="colored-card__footer"
+        >
+          <!---->
+           
+          <h3
+            class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+          >
+            
+      SEO-friendliness
+    
+          </h3>
+           
+          <p
+            class="case_paragraph colored-card__description text-color-white"
+          >
+            
+        The React library supports all modern browsers, offering quick page loading and rendering
+      
+          </p>
+           
+        </div>
+         
+        <!---->
+      </div>
+    </div>
+     
+    <p
+      class="case_paragraph"
+    >
+      
+    We used Stripe.js and Stripe elements to integrate Stripe in the BandPay
+    React app and create custom payment forms. The Mad Devs engineers made it possible to send an
+    agreement via email with an inserted link that leads to the payment form UI.
+  
+    </p>
+  </section>
+</div>
+`;

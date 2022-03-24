@@ -33,7 +33,7 @@ exports[`DevelopmentGoals component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     GPS
@@ -63,7 +63,7 @@ exports[`DevelopmentGoals component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Payment method
@@ -105,7 +105,7 @@ exports[`DevelopmentGoals component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Online time-tables & live location tracking
@@ -135,7 +135,7 @@ exports[`DevelopmentGoals component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Referrals
@@ -165,7 +165,7 @@ exports[`DevelopmentGoals component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     The best possible routes

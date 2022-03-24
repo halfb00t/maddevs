@@ -145,7 +145,7 @@ exports[`Swift component should render correctly 1`] = `
         class="colored-cards m-72_bottom media-m-48_bottom card-grid-type--two-two"
       >
         <div
-          class="colored-card colored-card--1 background-color-silver"
+          class="colored-card colored-card--1 background-color-silver "
         >
           <!---->
            
@@ -165,9 +165,11 @@ exports[`Swift component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--2 background-color-silver"
+          class="colored-card colored-card--2 background-color-silver "
         >
           <!---->
            
@@ -187,9 +189,11 @@ exports[`Swift component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--3 background-color-silver"
+          class="colored-card colored-card--3 background-color-silver "
         >
           <!---->
            
@@ -209,9 +213,11 @@ exports[`Swift component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
         <div
-          class="colored-card colored-card--4 background-color-silver"
+          class="colored-card colored-card--4 background-color-silver "
         >
           <!---->
            
@@ -231,6 +237,8 @@ exports[`Swift component should render correctly 1`] = `
             </p>
              
           </div>
+           
+          <!---->
         </div>
       </div>
        

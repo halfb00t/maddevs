@@ -19,7 +19,7 @@ exports[`Crumbs component should correctly return data, when length of array gre
     </nuxtlink-stub>
   </li>
   <li itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem" class="item">
-    <nuxtlink-stub to="/undefined/best-time-tracking-tools/" event="" itemprop="item" title="Best-time-tracking-tools" class="title"><span itemprop="name">Best-time-tracking-tools</span>
+    <nuxtlink-stub to="/blog/best-time-tracking-tools/" event="" itemprop="item" class="title"><span itemprop="name"></span>
       <meta itemprop="position" content="i + 1">
     </nuxtlink-stub>
   </li>

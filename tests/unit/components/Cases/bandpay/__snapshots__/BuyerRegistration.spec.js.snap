@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay BuyerRegistration component should render correctly 1`] = `
+<div>
+  <section
+    class="m-80_bottom media-m-48_bottom"
+  >
+    <section
+      class="container_regular m-24_bottom"
+    >
+      <h3
+        class="case_title_h2 m-34_bottom"
+      >
+        
+      Buyer registration
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      Registration with BandPay takes place only in the mobile application. However,
+      the buyer and the seller can start cooperating via a webform, too.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      For example, the buyer can go to the seller’s public profile and create a project request.
+      With that, the system will ask the buyer to add contact information. The confirmation link will
+      then be sent to the buyer’s email address for verification. The buyer then becomes a registered user.
+      After that, the seller sees the request and creates an agreement.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      Alternatively, the seller can create an instant deposit in the app and notify the buyer via email.
+      At the same time, BandPay will send an invoice to the buyer’s email address.
+      After paying the invoice, the buyer becomes a registered user.
+    
+      </p>
+    </section>
+     
+    <section
+      class="container_middle"
+    >
+      <div
+        class="case_image-wrapper"
+      >
+        <picture>
+          <source
+            class="image"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Buyer Registration"
+            class="image"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="612"
+            width="1028"
+          />
+        </picture>
+      </div>
+    </section>
+  </section>
+</div>
+`;

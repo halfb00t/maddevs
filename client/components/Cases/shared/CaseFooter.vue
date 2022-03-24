@@ -79,6 +79,14 @@ export default {
     margin-bottom: 51px;
   }
 
+  &_title-guardrails {
+    margin-bottom: 25px;
+    font-size: 51.88px;
+    @media screen and (max-width: 768px) {
+      font-size: 21.25px;
+    }
+  }
+
   &_mobile-break-namba-food {
     display: none;
 

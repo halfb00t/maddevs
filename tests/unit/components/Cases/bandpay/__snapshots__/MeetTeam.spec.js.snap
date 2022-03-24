@@ -1,0 +1,1013 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay MeetTeam component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h3
+      class="case_title_h2 m-24_bottom"
+    >
+      
+    Meet the team
+  
+    </h3>
+     
+    <div>
+      <ul
+        class="case_list-team m-72_bottom media-m-41_bottom"
+      >
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Tamara Mun"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Tamara Mun
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Delivery Manager
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Samat Jukeshov"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Samat Jukeshov
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Project Manager
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Pavel Zverev"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Pavel Zverev
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Tech Lead
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Mikhail Efimenko"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Mikhail Efimenko
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Designer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Alex Krivov"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Alex Krivov
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Designer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Maksim Gachevsky"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Maksim Gachevsky
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Frontend Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Altynai Baitulakova"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Altynai Baitulakova
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Backend Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Anatoliy Fedorenko"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Anatoliy Fedorenko
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Backend Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Oleg Katkov"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Oleg Katkov
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Backend Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Dastan Mamyrov"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Dastan Mamyrov
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Android Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Aisalkyn Tashmatova"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Aisalkyn Tashmatova
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Android Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Aibek Nogoev"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Aibek Nogoev
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      iOS Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Ksenia Zharikova"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Ksenia Zharikova
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      iOS Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Oksana Budnikova"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Oksana Budnikova
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      QA Engineer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Meerim Zhanuzakova"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Meerim Zhanuzakova
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      QA Engineer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Dmitrii Khalezin"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Dmitrii Khalezin
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      DevOps Engineer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Ruslan Kasymov"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Ruslan Kasymov
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Project Manager
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Kirill Kotyunin"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Kirill Kotyunin
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Frontend Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Nikita Karpukhin"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Nikita Karpukhin
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Backend Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Anton Kozlov"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Anton Kozlov
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Backend Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Bogdan Telepov"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Bogdan Telepov
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      Android Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Altynai Toktomuratova"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Altynai Toktomuratova
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      iOS Developer
+    
+            </p>
+          </div>
+        </li>
+        <li
+          class="case_team-item"
+        >
+          <picture
+            class="case_team-item__image"
+          >
+            <source
+              class="image grey-background"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Vladimir Pan"
+              class="image grey-background"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="50"
+              width="50"
+            />
+          </picture>
+           
+          <div
+            class="case_team-item__info"
+          >
+            <p
+              class="case_team-item__name"
+            >
+              
+      Vladimir Pan
+    
+            </p>
+             
+            <p
+              class="case_team-item__position"
+            >
+              
+      QA Engineer
+    
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+`;

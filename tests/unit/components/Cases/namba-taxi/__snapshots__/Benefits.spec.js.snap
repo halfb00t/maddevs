@@ -63,7 +63,7 @@ exports[`Benefits component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Sharing economy
@@ -93,7 +93,7 @@ exports[`Benefits component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Transparency
@@ -128,7 +128,7 @@ exports[`Benefits component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Quick service
@@ -158,7 +158,7 @@ exports[`Benefits component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Mobile transformation
@@ -188,7 +188,7 @@ exports[`Benefits component should render correctly 1`] = `
           />
            
           <h4
-            class="case_title_h4 m-10-bottom"
+            class="case_title_h4 m-10-bottom parallax-title"
           >
             
     Quality control
