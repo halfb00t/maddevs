@@ -189,7 +189,7 @@ export default () => ({
   sentry: {
     Vue,
     lazy: true,
-    disabled: process.env.FF_ENVIRONMENT !== 'staging',
+    disabled: process.env.FF_ENVIRONMENT !== 'production',
     dsn: process.env.NODE_SENTRY_DSN_FRONT,
     tracesSampleRate: 0.02,
     vueOptions: {
@@ -205,15 +205,7 @@ export default () => ({
         tracingOrigins: ['maddevs.io'],
       })],
     },
-    publishRelease: {
-      authToken: process.env.SENTRY_AUTH_TOKEN,
-      org: process.env.SENTRY_ORG,
-      project: process.env.SENTRY_PROJECT,
-      // Attach commits to the release (requires that the build triggered within a git repository).
-      setCommits: {
-        auto: true,
-      },
-    },
+    publishRelease: true,
     ignoreErrors: [
       'ResizeObserver loop limit exceeded', // https://stackoverflow.com/questions/49384120/resizeobserver-loop-limit-exceeded#comment86691361_49384120
       'ResizeObserver loop completed with undelivered notifications.', // ^
