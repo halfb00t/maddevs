@@ -177,7 +177,7 @@ export default () => ({
   sentry: {
     Vue,
     lazy: true,
-    disabled: process.env.FF_ENVIRONMENT !== 'production',
+    disabled: process.env.FF_ENVIRONMENT !== 'staging',
     dsn: process.env.NODE_SENTRY_DSN_FRONT,
     tracesSampleRate: 0.02,
     vueOptions: {
