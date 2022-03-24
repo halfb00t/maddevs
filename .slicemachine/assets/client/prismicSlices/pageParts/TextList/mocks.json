@@ -1,0 +1,50 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "text_list",
+    "items": [
+      {
+        "listText": "architect impactful users"
+      },
+      {
+        "listText": "visualize e-business users"
+      },
+      {
+        "listText": "reintermediate front-end convergence"
+      },
+      {
+        "listText": "optimize end-to-end architectures"
+      },
+      {
+        "listText": "enable web-enabled infrastructures"
+      }
+    ],
+    "primary": {
+      "title": "benchmark cross-media experiences"
+    }
+  },
+  {
+    "variation": "twoColumnsList",
+    "name": "Two Columns List",
+    "slice_type": "text_list",
+    "items": [
+      {
+        "listText": "optimize distributed portals"
+      },
+      {
+        "listText": "generate cutting-edge networks"
+      },
+      {
+        "listText": "transform holistic functionalities"
+      },
+      {
+        "listText": "extend bleeding-edge web-readiness"
+      }
+    ],
+    "primary": {
+      "listItemsBackground": "#e54e22",
+      "title": "reintermediate frictionless portals"
+    }
+  }
+]
