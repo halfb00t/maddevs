@@ -8,6 +8,7 @@ const DEV_PLUGINS = [
 
 const THIRD_PARTY_PLUGINS = [
   '~/plugins/google-tag-manager-debug.js',
+  { src: '~/plugins/sentry.js', mode: 'client' },
 ]
 
 const getPlugins = isProd => (isProd ? [...DEV_PLUGINS, ...THIRD_PARTY_PLUGINS] : DEV_PLUGINS)
