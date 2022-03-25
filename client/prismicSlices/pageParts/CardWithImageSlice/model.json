@@ -1,0 +1,68 @@
+{
+  "id": "card_with_image_slice",
+  "type": "SharedSlice",
+  "name": "CardWithImageSlice",
+  "description": "CardWithImageSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CardWithImageSlice",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "image": {
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "backgroundColor": {
+          "config": {
+            "label": "Background",
+            "placeholder": "",
+            "options": [
+              "silver",
+              "red",
+              "blue",
+              "yellow",
+              "purple",
+              "green"
+            ],
+            "default_value": "silver"
+          },
+          "type": "Select"
+        },
+        "textColor": {
+          "config": {
+            "label": "Text Color",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white"
+            ],
+            "default_value": "black"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
+    }
+  ]
+}
