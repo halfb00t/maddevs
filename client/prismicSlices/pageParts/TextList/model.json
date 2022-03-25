@@ -36,13 +36,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TextList",
       "primary": {
-        "listItemsBackground": {
-          "config": {
-            "label": "Background",
-            "placeholder": "#F4F4F4"
-          },
-          "type": "Color"
-        },
         "title": {
           "config": {
             "label": "Title",

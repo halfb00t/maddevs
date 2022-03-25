@@ -1,4 +1,6 @@
 import dotenv from 'dotenv'
+import Vue from 'vue'
+import { Integrations } from '@sentry/tracing'
 import getRoutes, { getSitemapRoutes, CUSTOM_PAGE_ROUTES } from './utils/getRoutes'
 import getRobots from './utils/getRobots'
 import getPlugins from './utils/getPlugins'
@@ -152,13 +154,13 @@ export default () => ({
     '@nuxtjs/sitemap',
     '@nuxtjs/gtm',
     '@nuxtjs/style-resources',
+    '@nuxtjs/sentry',
     ['nuxt-lazy-load', {
       defaultImage: '/DoNotRemove/nuxt-lazy-load-fallback.svg',
       directiveOnly: true,
     },
     ],
-    [
-      '@nuxtjs/i18n',
+    ['@nuxtjs/i18n',
       {
         strategy: 'prefix_except_default',
         defaultLocale: 'en',
@@ -171,12 +173,9 @@ export default () => ({
         parsePages: false,
       },
     ],
-    ['@nuxtjs/prismic', {
-      endpoint: process.env.NODE_PRISMIC_API,
-    }],
+    ['@nuxtjs/prismic', { endpoint: process.env.NODE_PRISMIC_API }],
     ['nuxt-sm'],
-    [
-      'nuxt-compress',
+    ['nuxt-compress',
       {
         gzip: {
           threshold: 8192,
@@ -187,6 +186,66 @@ export default () => ({
       },
     ],
   ],
+  sentry: {
+    Vue,
+    lazy: true,
+    disabled: process.env.FF_ENVIRONMENT !== 'production',
+    dsn: process.env.NODE_SENTRY_DSN_FRONT,
+    tracesSampleRate: 0.02,
+    vueOptions: {
+      tracing: true,
+      tracingOptions: {
+        hooks: ['mount', 'update'],
+        timeout: 2000,
+        trackComponents: true,
+      },
+    },
+    browserOptions: {
+      integrations: [new Integrations.BrowserTracing({
+        tracingOrigins: ['maddevs.io'],
+      })],
+    },
+    publishRelease: true,
+    ignoreErrors: [
+      'ResizeObserver loop limit exceeded', // https://stackoverflow.com/questions/49384120/resizeobserver-loop-limit-exceeded#comment86691361_49384120
+      'ResizeObserver loop completed with undelivered notifications.', // ^
+      'Non-Error promise rejection captured', // https://forum.sentry.io/t/unhandledrejection-non-error-promise-rejection-captured-with-value/14062/14
+      'Non-Error exception captured', // ^
+      // Prismic
+      'Failed to init Prismic API, preventing app fatal error.',
+      'TypeError: Network request failed.',
+      'ChunkLoadError: Loading chunk',
+      // Facebook borked
+      'fb_xd_fragment',
+      // [Safari] Error playing video with muted
+      'AbortError: The operation was aborted.',
+      // [Safari] Error PiP when scrolling page
+      'The request is not triggered by a user activation.',
+      // Video error
+      'AbortError: The play() request was interrupted by a call to pause().',
+    ],
+    denyUrls: [
+      // Prismic
+      /SuperPuperTest\.cdn\.prismic\.io/i,
+      // Facebook flakiness
+      /graph\.facebook\.com/i,
+      // Facebook blocked
+      /connect\.facebook\.net\/en_US\/all\.js/i,
+      // Google Tag Manager
+      /(https?:\/\/www\.googletagmanager\.com)/i,
+      // Google flakiness
+      /\/(gtm|ga|analytics)\.js/i,
+      /(https?:\/\/www\.google-analytics\.com)/,
+      // Chrome extensions
+      /extensions\//i,
+      /^chrome:\/\//i,
+      // Firefox extensions
+      /^resource:\/\//i,
+      // Other plugins
+      /webappstoolbarba\.texthelp\.com\//i,
+      /metrics\.itunes\.apple\.com\.edgesuite\.net\//i,
+    ],
+  },
   sitemap: {
     hostname: 'https://maddevs.io',
     gzip: false,

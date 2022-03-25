@@ -618,6 +618,9 @@
       "default-slice": {
         "items": {},
         "primary": {}
+      },
+      "twoColumnsList": {
+        "primary": {}
       }
     },
     "CardWithImageSlice": {
