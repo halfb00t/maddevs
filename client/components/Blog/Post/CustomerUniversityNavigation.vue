@@ -4,51 +4,54 @@
     class="cluster-navigation"
   >
     <div class="container">
-      <div class="cluster-navigation__title">
-        {{ $prismic.asText(cluster.primary.read_more_text) }}
-      </div>
-      <div class="cluster-navigation__inner">
-        <ol class="cluster-navigation__column cluster-navigation__column--left">
-          <NuxtLink
-            v-for="(post, index) in leftColumnPosts"
-            :key="post.cu_post.id"
-            :to="`/customer-university/${post.cu_post.uid}/`"
-            :class="isCurrent(post)"
-            class="cluster-navigation__nav-item"
+      <div
+        class="cluster-navigation__list"
+      >
+        <template v-if="posts">
+          <section
+            v-for="post in posts.slice(n, n + 3)"
+            :key="post.id"
+            :post="post"
+            class="cluster-navigation__list-item"
           >
-            <div class="index">
-              {{ ++index }}.
-            </div>
-            <div class="label">
-              {{ $prismic.asText(post.chapter_name) }}
-            </div>
-          </NuxtLink>
-        </ol>
-        <ol
-          :start="leftColumnPosts.length + 1"
-          class="cluster-navigation__column cluster-navigation__column--right"
-        >
-          <NuxtLink
-            v-for="(post, index) in rightColumnPosts"
-            :key="post.cu_post.id"
-            :to="`/customer-university/${post.cu_post.uid}/`"
-            :class="isCurrent(post)"
-            class="cluster-navigation__nav-item"
+            <PostCard
+              :post="post"
+              :is-show-post-tags="false"
+              text-color="#707072"
+              :limit="70"
+            />
+          </section>
+        </template>
+        <template v-else>
+          <section
+            v-for="i in slice.items"
+            :key="i"
+            class="cluster-navigation__list-item"
           >
-            <span class="index">{{ ++index + leftColumnPosts.length }}.</span>
-            <div class="label">
-              {{ $prismic.asText(post.chapter_name) }}
-            </div>
-          </NuxtLink>
-        </ol>
+            <SkeletonBlogWidget />
+          </section>
+        </template>
       </div>
+      <NextPreviewButtons
+        @next="getNextPosts"
+        @preview="getPrevPosts"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import PostCard from '@/components/Blog/shared/PostCard'
+import NextPreviewButtons from '@/components/shared/NextPreviewButtons.vue'
+
 export default {
   name: 'CustomerUniversityNavigation',
+
+  components: {
+    PostCard,
+    NextPreviewButtons,
+  },
+
   props: {
     clusterPosts: {
       type: Array,
@@ -59,26 +62,38 @@ export default {
       type: Object,
       required: true,
     },
-
-    id: {
-      type: String,
-      required: true,
-    },
   },
 
-  computed: {
-    leftColumnPosts() {
-      return this.clusterPosts.slice(0, Math.ceil(this.clusterPosts.length / 2))
-    },
+  data() {
+    return {
+      posts: [],
+      n: 0,
+    }
+  },
 
-    rightColumnPosts() {
-      return this.clusterPosts.slice(Math.ceil(this.clusterPosts.length / 2))
-    },
+  async mounted() {
+    const postIDs = this.clusterPosts.map(item => item.cu_post.id)
+    if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
   },
 
   methods: {
-    isCurrent(post) {
-      return post.cu_post.id === this.id ? 'current' : ''
+    async getPrismicData(ids) {
+      const response = await this.$prismic.api.getByIDs(ids)
+      return response.results
+    },
+
+    getNextPosts(value) {
+      this.n += value
+      if (this.n >= this.posts.length) {
+        this.n = this.posts.length - 1
+      }
+    },
+
+    getPrevPosts() {
+      this.n -= 3
+      if (this.n < 0) {
+        this.n = 0
+      }
     },
   },
 }
@@ -87,79 +102,39 @@ export default {
 <style scoped lang="scss">
 .cluster-navigation {
   background: $bgcolor--silver;
-  padding: 77px 0 85px;
-  margin-top: 72px;
+  padding: 60px 0 71px;
 
   .container {
     max-width: 924px;
   }
 
-  &__title {
-    @include font('Poppins', 26px, 600);
-    line-height: 130%;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: -0.04em;
-    color: $text-color--tech-label-black;
-    margin-bottom: 21px;
-  }
-
-  &__column {
-    width: 49.46%;
-  }
-
-  &__inner {
+  &__list {
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: 0 -10px 40px -10px;
   }
 
-  &__nav-item {
-    @include font('Inter', 16px, 400);
-    text-decoration: none;
-    color: $text-color--black-oil;
-    display: flex;
-    background: $bgcolor--white-primary;
-    border-radius: 8px;
-    line-height: 151%;
-    letter-spacing: -0.035em;
-    margin-bottom: 11px;
-    padding: 16px;
-    min-height: 48px;
-
-    &.current {
-      opacity: 0.5;
-      cursor: default;
-    }
-
-    .index {
-      margin-right: 10px;
-    }
-
-    .label {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
+  &__list-item {
+    box-sizing: border-box;
+    width: 33.3333%;
+    padding: 0 10px;
+    margin-bottom: 103px;
+    @media only screen and (min-width: 991px) {
+      &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+      }
     }
   }
-}
 
-@media screen and (max-width: 1024px) {
-  .cluster-navigation {
-    padding: 32px 0 39px;
+  @media only screen and (max-width: 991px) {
+    padding: 34px 0 60px;
 
-    &__title {
-      margin-bottom: 22px;
-    }
-
-    &__inner {
-      display: block;
-    }
-
-    &__column {
+    &__list-item {
       width: 100%;
-      padding: 0;
+      margin-bottom: 56px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

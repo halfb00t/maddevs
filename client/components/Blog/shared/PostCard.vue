@@ -34,6 +34,7 @@
         </h2>
         <p
           class="post-card__paragraph"
+          :style="'color: ' + textColor"
           data-testid="test-post-card"
           v-html="firstParagraph"
         />
@@ -41,7 +42,7 @@
       <div class="post-card__meta">
         <LazyHydrate when-visible>
           <PostTag
-            v-if="post.tags && post.tags.length"
+            v-if="isShowPostTags && post.tags && post.tags.length"
             :tag="tag || post.tags[0]"
             :disabled="disableTagLink"
             :theme="theme"
@@ -81,6 +82,16 @@ export default {
       required: true,
     },
 
+    textColor: {
+      type: String,
+      default: '',
+    },
+
+    isShowPostTags: {
+      type: Boolean,
+      default: true,
+    },
+
     author: {
       type: Object,
       default: null,
@@ -105,6 +116,11 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    limit: {
+      type: Number,
+      default: 150,
+    },
   },
 
   computed: {
@@ -117,9 +133,8 @@ export default {
     },
 
     firstParagraph() {
-      const limit = 150
       const slices = this.post.data.body
-      return getFirstParagraph(slices, limit)
+      return getFirstParagraph(slices, this.limit)
     },
 
     shortTitle() {
