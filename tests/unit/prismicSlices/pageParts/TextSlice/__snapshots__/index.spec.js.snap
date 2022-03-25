@@ -3,7 +3,7 @@
 exports[`Spacer slice renders correctly 1`] = `
 <section
   class="text-slice text-slice--white-theme"
-  style="background-color: rgb(245, 247, 249);"
+  style="background-color: rgb(244, 244, 244);"
 >
   <div
     class="container"
@@ -26,7 +26,7 @@ exports[`TextSlice slice should correctly render SimpleText component 1`] = `
 <div>
   <section
     class="text-slice text-slice--white-theme"
-    style="background-color: rgb(245, 247, 249);"
+    style="background-color: rgb(244, 244, 244);"
   >
     <div
       class="container"
@@ -58,7 +58,7 @@ exports[`TextSlice slice should correctly render Title component 1`] = `
 <div>
   <section
     class="text-slice text-slice--white-theme"
-    style="background-color: rgb(245, 247, 249);"
+    style="background-color: rgb(244, 244, 244);"
   >
     <div
       class="container"
@@ -91,7 +91,7 @@ exports[`TextSlice slice should correctly render TitleText component 1`] = `
 <div>
   <section
     class="text-slice text-slice--white-theme"
-    style="background-color: rgb(245, 247, 249);"
+    style="background-color: rgb(244, 244, 244);"
   >
     <div
       class="container"
@@ -123,7 +123,7 @@ exports[`TextSlice slice should correctly render flexibleParagraph component 1`]
 <div>
   <section
     class="text-slice text-slice--white-theme"
-    style="background-color: rgb(245, 247, 249);"
+    style="background-color: rgb(244, 244, 244);"
   >
     <div
       class="container"
@@ -156,7 +156,7 @@ exports[`TextSlice slice should correctly render paragraph component 1`] = `
 <div>
   <section
     class="text-slice text-slice--white-theme"
-    style="background-color: rgb(245, 247, 249);"
+    style="background-color: rgb(244, 244, 244);"
   >
     <div
       class="container"
@@ -189,7 +189,7 @@ exports[`TextSlice slice should correctly render titleTextButton component 1`] =
 <div>
   <section
     class="text-slice text-slice--white-theme"
-    style="background-color: rgb(245, 247, 249);"
+    style="background-color: rgb(244, 244, 244);"
   >
     <div
       class="container"

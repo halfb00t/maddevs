@@ -220,7 +220,7 @@ describe('TextSlice slice', () => {
         }),
       })
 
-      expect(wrapper.vm.sliceBackground).toBe('#f5f7f9')
+      expect(wrapper.vm.sliceBackground).toBe('#f4f4f4')
       expect(wrapper.vm.colorThemeClass).toBe('text-slice--white-theme')
     })
 
