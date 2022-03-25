@@ -19,7 +19,7 @@
             v-if="logoTextIsActive && showCrumbs"
             class="header__content-crumbs"
           >
-          <!-- <Crumbs />-->
+            <Crumbs />
           </div>
           <div class="header__content-left">
             <NuxtLink
@@ -140,7 +140,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-// import Crumbs from '@/components/shared/Crumbs'
+import Crumbs from '@/components/shared/Crumbs'
 import scrollOnBody from '@/mixins/scrollOnBody'
 import ModalSearch from '@/components/core/modals/ModalSearch'
 import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
@@ -175,7 +175,7 @@ export default {
     HeaderNavigation,
     HeaderMobile,
     ModalSearch,
-    // Crumbs,
+    Crumbs,
     ModalContactMe: () => import('@/components/core/modals/ModalContactMe'),
   },
 
