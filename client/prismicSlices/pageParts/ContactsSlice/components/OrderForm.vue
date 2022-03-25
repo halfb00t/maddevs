@@ -141,8 +141,7 @@ export default {
 
     /deep/ .field-item {
       margin-bottom: 12px;
-      &:nth-child(2),
-      &:nth-child(3) {
+      &:nth-child(2) {
         display: inline-block;
         width: calc(50% - 7px);
         vertical-align: top;
