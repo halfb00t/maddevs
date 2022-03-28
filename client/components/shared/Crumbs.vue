@@ -32,7 +32,7 @@
       itemtype="https://schema.org/ListItem"
     >
       <NuxtLink
-        :to="crumb.title === 'Author' ? '/blog/' : crumb.to"
+        :to="crumb.title === 'Author' ? '/blog/' : 'Customer university' ? '/blog/#customer-university' : crumb.to"
         :event="(crumbs.length - 1) === i || title === '...' ? '' : 'click'"
         class="title"
         itemprop="item"
