@@ -33,7 +33,7 @@
     >
       <NuxtLink
         :to="crumb.title === 'Author' ? '/blog/' : crumb.to"
-        :event="(crumbs.length - 1) === i ? '' : 'click'"
+        :event="(crumbs.length - 1) === i || title === '...' ? '' : 'click'"
         class="title"
         itemprop="item"
         :title="(crumbs.length - 1) === i ? title : crumb.title"
@@ -81,16 +81,21 @@ export default {
           breadcrumbs.splice(i, 1)
         }
       }
-
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
   },
 
   mounted() {
-    this.title = document.title
-    new MutationObserver(() => {
+    const titleNodeElement = document.querySelector('title')
+    if (titleNodeElement && titleNodeElement.nodeType === Node.ELEMENT_NODE) {
       this.title = document.title
-    }).observe(document.querySelector('title'), { childList: true })
+
+      new MutationObserver(() => {
+        this.title = document.title
+      }).observe(document.querySelector('title'), { childList: true })
+    } else {
+      this.title = '...'
+    }
   },
 }
 </script>

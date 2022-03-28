@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import setSliceBackground from '@/helpers/setSliceBackground'
+
 export default {
   name: 'CardWithImageSlice',
   props: {
@@ -59,8 +61,8 @@ export default {
     return {
       title: this.slice?.primary?.title,
       description: this.slice?.primary?.description,
-      background: this.slice?.primary?.backgroundColor,
-      textColor: this.slice?.primary?.textColor,
+      background: setSliceBackground(this.slice?.primary?.backgroundColor),
+      textColor: this.slice?.primary?.textColor === 'white' ? '#ffffff' : '#101113',
       image: this.slice?.primary?.image,
     }
   },
@@ -127,6 +129,9 @@ export default {
   &__image-box {
     width: 36%;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     @media screen and (max-width: 768px) {
       position: absolute;
       top: 0;
@@ -144,11 +149,11 @@ export default {
     }
   }
   &__image {
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
-    position: absolute;
-    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
     @media screen and (max-width: 676px) {
       position: relative;
       bottom: -10px;

@@ -1,9 +1,12 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="title">
+      <h4
+        v-if="title"
+        class="title"
+      >
         {{ title }}
-      </h2>
+      </h4>
       <ul
         v-if="slice.variation === 'default-slice'"
         class="list"

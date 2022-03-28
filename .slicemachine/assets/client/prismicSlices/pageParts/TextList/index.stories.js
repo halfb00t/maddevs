@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_list","items":[{"listText":"architect impactful users"},{"listText":"visualize e-business users"},{"listText":"reintermediate front-end convergence"},{"listText":"optimize end-to-end architectures"},{"listText":"enable web-enabled infrastructures"}],"primary":{"title":"benchmark cross-media experiences"},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"text_list","items":[{"listText":"utilize cross-platform e-markets"},{"listText":"syndicate back-end synergies"},{"listText":"cultivate cutting-edge networks"}],"primary":{"title":"leverage visionary paradigms"},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -37,7 +37,7 @@ export const _TwoColumnsList = () => ({
   },
   data() {
     return {
-      mock: {"variation":"twoColumnsList","name":"Two Columns List","slice_type":"text_list","items":[{"listText":"optimize distributed portals"},{"listText":"generate cutting-edge networks"},{"listText":"transform holistic functionalities"},{"listText":"extend bleeding-edge web-readiness"}],"primary":{"listItemsBackground":"#e54e22","title":"reintermediate frictionless portals"},"id":"_TwoColumnsList"}
+      mock: {"variation":"twoColumnsList","name":"Two Columns List","slice_type":"text_list","items":[{"listText":"evolve customized models"},{"listText":"reinvent innovative architectures"},{"listText":"envisioneer sticky portals"},{"listText":"grow synergistic e-tailers"}],"primary":{"title":"integrate e-business solutions"},"id":"_TwoColumnsList"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
