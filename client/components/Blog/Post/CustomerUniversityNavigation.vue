@@ -91,6 +91,7 @@ export default {
     if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
     window.addEventListener('resize', this.calcOffsetWidth)
     this.calcOffsetWidth()
+    console.log(this.cluster)
   },
 
   destroyed() {

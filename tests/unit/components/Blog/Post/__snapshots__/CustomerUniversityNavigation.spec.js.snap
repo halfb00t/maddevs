@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`cuNavigation is a Vue instance 1`] = `
+exports[`Customer university navigation is a Vue instance 1`] = `
 <div>
   <div
     class="cluster-navigation"
@@ -9,36 +9,50 @@ exports[`cuNavigation is a Vue instance 1`] = `
     <div
       class="container"
     >
+      <h4
+        class="cluster-navigation__title"
+      >
+        
+      Custom software development pricing strategies
+    
+      </h4>
+       
       <div
         class="cluster-navigation__list"
       />
        
-      <section
-        style="background-color: rgb(244, 244, 244);"
+      <nextpreviewbuttons-stub
+        left="true"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Customer university navigation is a Vue instance with equal id 1`] = `
+<div>
+  <div
+    class="cluster-navigation"
+    id="YAGi7REAACMAgV8d"
+  >
+    <div
+      class="container"
+    >
+      <h4
+        class="cluster-navigation__title"
       >
-        <div
-          class="container"
-          data-testid="nav-link__container"
-        >
-          <div
-            class="nav-link-slice__links nav-link-slice__links-center"
-          >
-            <p
-              class="nav-link-slice__link nav-link-slice__link-active"
-              target="_self"
-            >
-              Previous
-            </p>
-             
-            <p
-              class="nav-link-slice__link nav-link-slice__link-active"
-              target="_self"
-            >
-              Next
-            </p>
-          </div>
-        </div>
-      </section>
+        
+      Custom software development pricing strategies
+    
+      </h4>
+       
+      <div
+        class="cluster-navigation__list"
+      />
+       
+      <nextpreviewbuttons-stub
+        left="true"
+      />
     </div>
   </div>
 </div>
