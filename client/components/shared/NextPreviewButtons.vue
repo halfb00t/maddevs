@@ -13,14 +13,16 @@
         <Component
           :is="'p'"
           target="_self"
-          class="nav-link-slice__link nav-link-slice__link-white"
+          class="nav-link-slice__link nav-link-slice__link-active"
+          :class="leftButton ? 'nav-link-slice__link-not-active' : ''"
           @click="clickPreviewButton"
           v-html="prevButtonText"
         />
         <Component
           :is="'p'"
           target="_self"
-          class="nav-link-slice__link nav-link-slice__link-white"
+          class="nav-link-slice__link nav-link-slice__link-active"
+          :class="rightButton ? 'nav-link-slice__link-not-active' : ''"
           @click="clickNextButton"
           v-html="nextButtonText"
         />
@@ -34,23 +36,41 @@ export default {
   name: 'NextPreviewButtons',
 
   props: {
+    right: {
+      type: Boolean,
+      required: true,
+    },
+
+    left: {
+      type: Boolean,
+      required: true,
+    },
   },
 
   data() {
     return {
       prevButtonText: 'Previous',
       nextButtonText: 'Next',
-      disabledLink: 'none',
     }
+  },
+
+  computed: {
+    rightButton() {
+      return this.right
+    },
+
+    leftButton() {
+      return this.left
+    },
   },
 
   methods: {
     clickNextButton() {
-      this.$emit('next', 3)
+      this.$emit('next')
     },
 
     clickPreviewButton() {
-      this.$emit('preview', 3)
+      this.$emit('preview')
     },
   },
 }
@@ -75,11 +95,6 @@ export default {
       justify-content: flex-end;
     }
 
-    p {
-      cursor: default;
-      color: $text-color--grey-opacity-20-percent;
-    }
-
     a {
       transition: all .15s ease;
       &:hover {
@@ -101,10 +116,17 @@ export default {
     text-align: center;
     position: relative;
 
-    &-white {
-      color: $text-color--black-lighter;
+    &-active {
+      color: $text-color--black-oil;
       &:first-child {
         border-right: 1px solid $text-color--black-lighter;
+      }
+    }
+
+    &-not-active {
+      color: $text-color--grey-20-percent !important;
+      &:hover {
+        pointer-events: none;
       }
     }
 

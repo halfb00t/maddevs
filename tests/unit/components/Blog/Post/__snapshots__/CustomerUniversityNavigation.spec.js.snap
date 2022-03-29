@@ -4,70 +4,41 @@ exports[`cuNavigation is a Vue instance 1`] = `
 <div>
   <div
     class="cluster-navigation"
+    id="123qweasd"
   >
     <div
       class="container"
     >
       <div
-        class="cluster-navigation__title"
-      >
-        
-      
-    
-      </div>
+        class="cluster-navigation__list"
+      />
        
-      <div
-        class="cluster-navigation__inner"
+      <section
+        style="background-color: rgb(244, 244, 244);"
       >
-        <ol
-          class="cluster-navigation__column cluster-navigation__column--left"
+        <div
+          class="container"
+          data-testid="nav-link__container"
         >
-          <nuxtlink-stub
-            class="cluster-navigation__nav-item"
-            to="/customer-university/cu-test/"
+          <div
+            class="nav-link-slice__links nav-link-slice__links-center"
           >
-            <div
-              class="index"
+            <p
+              class="nav-link-slice__link nav-link-slice__link-active"
+              target="_self"
             >
-              
-            1.
-          
-            </div>
+              Previous
+            </p>
              
-            <div
-              class="label"
+            <p
+              class="nav-link-slice__link nav-link-slice__link-active"
+              target="_self"
             >
-              
-            Chapter 1
-          
-            </div>
-          </nuxtlink-stub>
-        </ol>
-         
-        <ol
-          class="cluster-navigation__column cluster-navigation__column--right"
-          start="2"
-        >
-          <nuxtlink-stub
-            class="cluster-navigation__nav-item"
-            to="/customer-university/cu-test-2/"
-          >
-            <span
-              class="index"
-            >
-              2.
-            </span>
-             
-            <div
-              class="label"
-            >
-              
-            Chapter 2
-          
-            </div>
-          </nuxtlink-stub>
-        </ol>
-      </div>
+              Next
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

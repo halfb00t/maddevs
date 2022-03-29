@@ -4,15 +4,23 @@
     class="cluster-navigation"
   >
     <div class="container">
+      <h4
+        v-if="title"
+        class="cluster-navigation__title"
+      >
+        {{ title }}
+      </h4>
       <div
+        ref="clusterNavigationList"
         class="cluster-navigation__list"
       >
         <template v-if="posts">
           <section
-            v-for="post in posts.slice(n, n + 3)"
+            v-for="post in posts"
             :key="post.id"
             :post="post"
             class="cluster-navigation__list-item"
+            :style="{ transition: 'all .5s', transform: `translateX(${transformWidth}px)` }"
           >
             <PostCard
               :post="post"
@@ -33,6 +41,8 @@
         </template>
       </div>
       <NextPreviewButtons
+        :right="right"
+        :left="left"
         @next="getNextPosts"
         @preview="getPrevPosts"
       />
@@ -67,13 +77,24 @@ export default {
   data() {
     return {
       posts: [],
-      n: 0,
+      transformWidth: 0,
+      offset: 1,
+      offsetSize: 0,
+      title: this.cluster?.primary?.cluster_name[0]?.text,
+      right: false,
+      left: true,
     }
   },
 
   async mounted() {
     const postIDs = this.clusterPosts.map(item => item.cu_post.id)
     if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
+    window.addEventListener('resize', this.calcOffsetWidth)
+    this.calcOffsetWidth()
+  },
+
+  destroyed() {
+    window.removeEventListener('resize', this.calcOffsetWidth)
   },
 
   methods: {
@@ -82,17 +103,35 @@ export default {
       return response.results
     },
 
-    getNextPosts(value) {
-      this.n += value
-      if (this.n >= this.posts.length) {
-        this.n = this.posts.length - 1
-      }
+    getNextPosts() {
+      if ((this.offset + this.offsetSize) >= this.posts.length) this.right = true
+      if ((this.offset + this.offsetSize) > this.posts.length) return
+      this.left = false
+      this.offset += this.offsetSize
+      this.transformWidth -= this.$refs.clusterNavigationList.getBoundingClientRect().width
     },
 
     getPrevPosts() {
-      this.n -= 3
-      if (this.n < 0) {
-        this.n = 0
+      if ((this.offset - this.offsetSize) <= 1) this.left = true
+      if ((this.offset - this.offsetSize) < 1) {
+        return
+      }
+      this.right = false
+      this.offset -= this.offsetSize
+      this.transformWidth += this.$refs.clusterNavigationList.getBoundingClientRect().width
+    },
+
+    calcOffsetWidth() {
+      this.right = false
+      this.left = true
+      if (window.innerWidth <= 991) {
+        this.offsetSize = 1
+        this.transformWidth = 0
+        this.offset = 1
+      } else {
+        this.offsetSize = 3
+        this.transformWidth = 0
+        this.offset = 1
       }
     },
   },
@@ -104,37 +143,39 @@ export default {
   background: $bgcolor--silver;
   padding: 60px 0 71px;
 
+  &__title {
+    font-family: 'Poppins';
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: -0.04em;
+    color: $text-color--tech-label-black;
+    margin-bottom: 37px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+    }
+  }
+
   .container {
     max-width: 924px;
   }
 
   &__list {
     display: flex;
-    flex-flow: row wrap;
-    margin: 0 -10px 40px -10px;
+    margin: 0 -10px 20px -10px;
+    overflow: hidden;
   }
 
   &__list-item {
     box-sizing: border-box;
-    width: 33.3333%;
+    flex: 1 0 33.33%;
     padding: 0 10px;
-    margin-bottom: 103px;
-    @media only screen and (min-width: 991px) {
-      &:nth-last-child(-n+3) {
-        margin-bottom: 0;
-      }
-    }
-  }
 
-  @media only screen and (max-width: 991px) {
-    padding: 34px 0 60px;
-
-    &__list-item {
-      width: 100%;
-      margin-bottom: 56px;
-      &:last-child {
-        margin-bottom: 0;
-      }
+    @media only screen and (max-width: 991px) {
+      flex: 1 0 100%;
     }
   }
 }
