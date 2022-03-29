@@ -214,12 +214,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -228,12 +224,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -242,15 +234,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -259,15 +244,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -276,15 +254,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -293,15 +264,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -310,15 +274,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -327,15 +284,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -344,15 +294,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -361,15 +304,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -378,15 +314,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -395,15 +324,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -412,15 +334,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
         <section
@@ -429,15 +344,8 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
-<<<<<<< Updated upstream
-=======
-            height="217"
-            isshowposttags="true"
-            limit="150"
->>>>>>> Stashed changes
             post="[object Object]"
             theme="light"
-            width="400"
           />
         </section>
       </div>
