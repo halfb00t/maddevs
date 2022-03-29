@@ -106,11 +106,11 @@ export default {
     },
 
     getNextPosts() {
-      if ((this.offset + this.offsetSize) >= this.posts.length) this.right = true
       if ((this.offset + this.offsetSize) > this.posts.length) return
       this.left = false
       this.offset += this.offsetSize
       this.transformWidth -= this.$refs.clusterNavigationList.getBoundingClientRect().width
+      if ((this.offset + this.offsetSize) > this.posts.length) this.right = true
     },
 
     getPrevPosts() {
