@@ -8,8 +8,8 @@
         v-lazy-load
         :data-src="post.data.featured_image.url"
         :alt="post.data.featured_image.alt || 'Feature image'"
-        width="400"
-        height="217"
+        :width="width"
+        :height="height"
       >
     </NuxtLink>
     <div class="post-card__info">
@@ -80,6 +80,16 @@ export default {
     post: {
       type: Object,
       required: true,
+    },
+
+    width: {
+      type: Number,
+      default: 400,
+    },
+
+    height: {
+      type: Number,
+      default: 217,
     },
 
     textColor: {

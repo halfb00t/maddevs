@@ -27,6 +27,8 @@
               :is-show-post-tags="false"
               text-color="#707072"
               :limit="70"
+              :width="288"
+              :height="177"
             />
           </section>
         </template>
@@ -91,7 +93,6 @@ export default {
     if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
     window.addEventListener('resize', this.calcOffsetWidth)
     this.calcOffsetWidth()
-    console.log(this.cluster)
   },
 
   destroyed() {
@@ -114,9 +115,7 @@ export default {
 
     getPrevPosts() {
       if ((this.offset - this.offsetSize) <= 1) this.left = true
-      if ((this.offset - this.offsetSize) < 1) {
-        return
-      }
+      if ((this.offset - this.offsetSize) < 1) return
       this.right = false
       this.offset -= this.offsetSize
       this.transformWidth += this.$refs.clusterNavigationList.getBoundingClientRect().width
