@@ -3,7 +3,7 @@
 exports[`NewCustomerUniversitySection component should render correctly with no data 1`] = `
 <section class="customer-university">
   <div class="container">
-    <customeruniversitytitle-stub title="Customer" subtitle="University" id=""></customeruniversitytitle-stub>
+    <customeruniversitytitle-stub title="Customer" subtitle="University" id="customer-university"></customeruniversitytitle-stub>
     <p class="customer-university__text">
       Many businesses still hesitate to hire an IT company to develop a technical solution or
       enhance an existing product because they aren’t aware of many processes and have more
