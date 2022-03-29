@@ -7,12 +7,14 @@ exports[`slice block component should render correctly 1`] = `
       class=""
       data-testid="test-slice-post"
     >
-      <lazyhydrate-stub
-        idletimeout="2000"
-        whenvisible="true"
+      <div
+        class="post-part single"
       >
-        <!---->
-      </lazyhydrate-stub>
+        <prismicrichtext-stub
+          class="textslice"
+          field="[object Object]"
+        />
+      </div>
     </section>
     <section
       class="quote"
