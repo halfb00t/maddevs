@@ -366,7 +366,6 @@ describe('Post component copyAnchorLink', () => {
 
       const SectionIdSlice = await container.vm.$options.components.SectionIdSlice.call()
       const QuoteSlice = await container.vm.$options.components.QuoteSlice.call()
-      const TextSlice = await container.vm.$options.components.TextSlice.call()
       const ImageCaptionSlice = await container.vm.$options.components.ImageCaptionSlice.call()
       const EmbedSlice = await container.vm.$options.components.EmbedSlice.call()
       const DividerSlice = await container.vm.$options.components.DividerSlice.call()
@@ -380,7 +379,6 @@ describe('Post component copyAnchorLink', () => {
 
       expect(SectionIdSlice.default.name).toBe('SectionIdSlice')
       expect(QuoteSlice.default.name).toBe('QuoteSlice')
-      expect(TextSlice.default.name).toBe('TextSlice')
       expect(ImageCaptionSlice.default.name).toBe('ImageCaptionSlice')
       expect(EmbedSlice.default.name).toBe('EmbedSlice')
       expect(DividerSlice.default.name).toBe('Divider')

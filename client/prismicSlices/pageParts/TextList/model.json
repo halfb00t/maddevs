@@ -1,0 +1,58 @@
+{
+  "id": "text_list",
+  "type": "SharedSlice",
+  "name": "TextList",
+  "description": "TextList",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextList",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {
+        "listText": {
+          "config": {
+            "label": "List item text",
+            "placeholder": "Item text"
+          },
+          "type": "Text"
+        }
+      }
+    },
+    {
+      "id": "twoColumnsList",
+      "name": "Two Columns List",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextList",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "items": {
+        "listText": {
+          "config": {
+            "label": "List item text",
+            "placeholder": "Item text"
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

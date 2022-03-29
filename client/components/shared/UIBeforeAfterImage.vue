@@ -26,14 +26,13 @@
       >
     </div>
     <input
+      v-model="compareWidth"
       class="img-wrapper__compare-range"
       type="range"
       min="0"
       max="100"
       :step="step"
-      :value="compareWidth"
       tabindex="-1"
-      @input="handleInput"
     >
     <div
       class="img-wrapper__handle-wrap"
@@ -117,10 +116,6 @@ export default {
   },
 
   methods: {
-    handleInput(e) {
-      this.compareWidth = e.target.value
-    },
-
     resizeHandler() {
       this.width = this.$refs.imageWrapper.getBoundingClientRect().width
     },

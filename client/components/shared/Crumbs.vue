@@ -32,8 +32,8 @@
       itemtype="https://schema.org/ListItem"
     >
       <NuxtLink
-        :to="crumb.title === 'Author' ? '/blog/' : crumb.to"
-        :event="(crumbs.length - 1) === i ? '' : 'click'"
+        :to="crumb.to"
+        :event="(crumbs.length - 1) === i || title === '...' ? '' : 'click'"
         class="title"
         itemprop="item"
         :title="(crumbs.length - 1) === i ? title : crumb.title"
@@ -61,6 +61,7 @@ export default {
   computed: {
     crumbs() {
       const { fullPath } = this.$route
+      if (fullPath === '/') return []
       const pathArray = (fullPath.startsWith('/')
         ? fullPath.substring(1).split('/')
         : fullPath.split('/')).filter(url => url)
@@ -82,15 +83,24 @@ export default {
         }
       }
 
+      if (breadcrumbs[0]?.title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
+      if (breadcrumbs[0]?.title === 'Author') breadcrumbs[0].to = '/blog/'
+
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
   },
 
   mounted() {
-    this.title = document.title
-    new MutationObserver(() => {
+    const titleNodeElement = document.querySelector('title')
+    if (titleNodeElement && titleNodeElement.nodeType === Node.ELEMENT_NODE) {
       this.title = document.title
-    }).observe(document.querySelector('title'), { childList: true })
+
+      new MutationObserver(() => {
+        this.title = document.title
+      }).observe(document.querySelector('title'), { childList: true })
+    } else {
+      this.title = '...'
+    }
   },
 }
 </script>

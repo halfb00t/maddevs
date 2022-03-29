@@ -1,0 +1,43 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "text_list",
+    "items": [
+      {
+        "listText": "utilize cross-platform e-markets"
+      },
+      {
+        "listText": "syndicate back-end synergies"
+      },
+      {
+        "listText": "cultivate cutting-edge networks"
+      }
+    ],
+    "primary": {
+      "title": "leverage visionary paradigms"
+    }
+  },
+  {
+    "variation": "twoColumnsList",
+    "name": "Two Columns List",
+    "slice_type": "text_list",
+    "items": [
+      {
+        "listText": "evolve customized models"
+      },
+      {
+        "listText": "reinvent innovative architectures"
+      },
+      {
+        "listText": "envisioneer sticky portals"
+      },
+      {
+        "listText": "grow synergistic e-tailers"
+      }
+    ],
+    "primary": {
+      "title": "integrate e-business solutions"
+    }
+  }
+]
