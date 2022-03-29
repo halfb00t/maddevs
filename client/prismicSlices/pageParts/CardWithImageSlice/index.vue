@@ -35,6 +35,7 @@
             class="card-with-image__image"
             :width="image.dimensions.width"
             :height="image.dimensions.height"
+            data-testid="card-with-image__image"
           >
         </div>
       </div>
@@ -70,8 +71,8 @@ export default {
 
   computed: {
     serializer() {
-      const types = ['title_and_paragraph_slice']
-      if (types.includes(this.slice.slice_type)) return this.htmlSerializer
+      const types = ['card_with_image_slice']
+      if (types.includes(this.slice?.slice_type)) return this.htmlSerializer
       return null
     },
   },
@@ -80,17 +81,11 @@ export default {
     htmlSerializer(type, element, content, children) {
       const { Elements } = this.$prismic.dom.RichText
       let text = children.join('')
-
-      if (type === Elements.preformatted) {
+      text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
         // the second parameter of function excludes tags
-        text = convertTagsToText(text, ['br'])
-      } else {
-        text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
-          // the second parameter of function excludes tags
-          const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
-          return `<code class="inline-code">${formattedCode}</code>`
-        })
-      }
+        const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
+        return `<code class="inline-code">${formattedCode}</code>`
+      })
 
       switch (type) {
         case Elements.heading1: return `<h1>${text}</h1>`
