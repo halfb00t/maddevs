@@ -32,7 +32,7 @@
       itemtype="https://schema.org/ListItem"
     >
       <NuxtLink
-        :to="crumb.title === 'Author' ? '/blog/' : 'Customer university' ? '/blog/#customer-university' : crumb.to"
+        :to="crumb.to"
         :event="(crumbs.length - 1) === i || title === '...' ? '' : 'click'"
         class="title"
         itemprop="item"
@@ -81,6 +81,10 @@ export default {
           breadcrumbs.splice(i, 1)
         }
       }
+
+      if (breadcrumbs[0].title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
+      if (breadcrumbs[0].title === 'Author') breadcrumbs[0].to = '/blog/'
+
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
   },
