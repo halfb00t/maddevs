@@ -61,6 +61,7 @@ export default {
   computed: {
     crumbs() {
       const { fullPath } = this.$route
+      if (fullPath === '/') return []
       const pathArray = (fullPath.startsWith('/')
         ? fullPath.substring(1).split('/')
         : fullPath.split('/')).filter(url => url)
@@ -82,8 +83,8 @@ export default {
         }
       }
 
-      if (breadcrumbs[0].title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
-      if (breadcrumbs[0].title === 'Author') breadcrumbs[0].to = '/blog/'
+      if (breadcrumbs[0]?.title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
+      if (breadcrumbs[0]?.title === 'Author') breadcrumbs[0].to = '/blog/'
 
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
