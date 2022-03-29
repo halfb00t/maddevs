@@ -9,13 +9,13 @@
           class="card-with-image__text-content"
           :class="Object.keys(image).length === 0 && 'card-with-image__text-content-full'"
         >
-          <h4
+          <PrismicRichText
             v-if="title"
+            :field="slice.primary.title"
             class="card-with-image__title"
+            :html-serializer="serializer"
             :style="{color: textColor || '#111'}"
-          >
-            {{ title }}
-          </h4>
+          />
           <p
             v-if="description"
             class="card-with-image__description"
@@ -35,6 +35,7 @@
             class="card-with-image__image"
             :width="image.dimensions.width"
             :height="image.dimensions.height"
+            data-testid="card-with-image__image"
           >
         </div>
       </div>
@@ -44,6 +45,7 @@
 
 <script>
 import setSliceBackground from '@/helpers/setSliceBackground'
+import convertTagsToText from '@/helpers/convertTagsToText'
 
 export default {
   name: 'CardWithImageSlice',
@@ -65,6 +67,36 @@ export default {
       textColor: this.slice?.primary?.textColor === 'white' ? '#ffffff' : '#101113',
       image: this.slice?.primary?.image,
     }
+  },
+
+  computed: {
+    serializer() {
+      const types = ['card_with_image_slice']
+      if (types.includes(this.slice?.slice_type)) return this.htmlSerializer
+      return null
+    },
+  },
+
+  methods: {
+    htmlSerializer(type, element, content, children) {
+      const { Elements } = this.$prismic.dom.RichText
+      let text = children.join('')
+      text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
+        // the second parameter of function excludes tags
+        const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
+        return `<code class="inline-code">${formattedCode}</code>`
+      })
+
+      switch (type) {
+        case Elements.heading1: return `<h1>${text}</h1>`
+        case Elements.heading2: return `<h2>${text}</h2>`
+        case Elements.heading3: return `<h3>${text}</h3>`
+        case Elements.heading4: return `<h4>${text}</h4>`
+        case Elements.heading5: return `<h5>${text}</h5>`
+        case Elements.heading6: return `<h6>${text}</h6>`
+        default: return null
+      }
+    },
   },
 }
 </script>
@@ -111,14 +143,25 @@ export default {
     }
   }
   &__title {
-    @include font('Inter', 20px, 700);
-    line-height: 26px;
+    @include font('Inter', 28px, 700);
+    line-height: 32px;
     letter-spacing: -0.4px;
     margin-bottom: 10px;
+    width: 135%;
+    @media screen and (max-width: 980px) {
+      width: 170%;
+    }
+    @media screen and (max-width: 820px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
     @media screen and (max-width: 576px) {
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 14px;
+      white-space: initial;
     }
   }
   &__description {

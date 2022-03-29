@@ -625,7 +625,14 @@
     },
     "CardWithImageSlice": {
       "default-slice": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   },
