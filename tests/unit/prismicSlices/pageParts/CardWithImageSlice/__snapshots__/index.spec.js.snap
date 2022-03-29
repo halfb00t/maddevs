@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardWithImageSlice component should render correctly with data 1`] = `
+<section class="section card-with-image">
+  <div class="container">
+    <div class="card-with-image__item" style="background-color: rgb(244, 244, 244);">
+      <div class="card-with-image__text-content">
+        <prismicrichtext-stub field="[object Object]" html-serializer="function () { [native code] }" class="card-with-image__title" style="color: rgb(16, 17, 19);"></prismicrichtext-stub>
+        <p class="card-with-image__description" style="color: rgb(16, 17, 19);">
+          Test description
+        </p>
+      </div>
+      <div class="card-with-image__image-box"><img data-src="https://via.placeholder.com/150" alt="test image" width="150" height="150" data-testid="card-with-image__image" class="card-with-image__image"></div>
+    </div>
+  </div>
+</section>
+`;

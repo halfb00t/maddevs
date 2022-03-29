@@ -14,9 +14,11 @@
         "title": {
           "config": {
             "label": "Title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6"
           },
-          "type": "Text"
+          "type": "StructuredText"
         },
         "description": {
           "config": {
