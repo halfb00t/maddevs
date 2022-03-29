@@ -1,11 +1,15 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="title">
+      <h4
+        v-if="title"
+        class="title"
+      >
         {{ title }}
-      </h2>
+      </h4>
       <ul
         v-if="slice.variation === 'default-slice'"
+        data-testid="default-list"
         class="list"
       >
         <li
@@ -18,6 +22,7 @@
       </ul>
       <ul
         v-else-if="slice.variation === 'twoColumnsList'"
+        data-testid="two-columns"
         class="list_two_columns"
       >
         <li

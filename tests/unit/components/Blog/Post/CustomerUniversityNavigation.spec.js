@@ -1,93 +1,80 @@
 import { render } from '@testing-library/vue'
 import CustomerUniversityNavigation from '@/components/Blog/Post/CustomerUniversityNavigation'
 
-describe('cuNavigation', () => {
-  const clusterPosts = [
-    {
-      chapter_name: [
-        {
-          spans: [],
-          text: 'Chapter 1',
-          type: 'heading1',
-        },
-      ],
-      cu_post: {
-        id: 'YAGi7REAACMAgV8d',
-        isBroken: false,
-        lang: 'en-us',
-        link_type: 'Document',
-        slug: 'adadadad',
-        tags: [],
-        type: 'customer_university',
-        uid: 'cu-test',
+const stubs = ['NuxtLink', 'SkeletonBlogWidget', 'PostCard', 'NextPreviewButtons']
+const mocks = {
+  getNextPosts: jest.fn(),
+  getPrevPosts: jest.fn(),
+  calcOffsetWidth: jest.fn(),
+  getPrismicData: jest.fn(),
+}
+const clusterPosts = [
+  {
+    chapter_name: [
+      {
+        spans: [],
+        text: 'Chapter 1',
+        type: 'heading1',
       },
+    ],
+    cu_post: {
+      id: 'YAGi7REAACMAgV8d',
+      isBroken: false,
+      lang: 'en-us',
+      link_type: 'Document',
+      slug: 'adadadad',
+      tags: [],
+      type: 'customer_university',
+      uid: 'cu-test',
     },
-    {
-      chapter_name: [
-        {
-          spans: [],
-          text: 'Chapter 2',
-          type: 'heading1',
-        },
-      ],
-      cu_post: {
-        id: 'YAGi7REAACMAgV8d',
-        isBroken: false,
-        lang: 'en-us',
-        link_type: 'Document',
-        slug: 'adadadadaa',
-        tags: [],
-        type: 'customer_university',
-        uid: 'cu-test-2',
+  },
+  {
+    chapter_name: [
+      {
+        spans: [],
+        text: 'Chapter 2',
+        type: 'heading1',
       },
+    ],
+    cu_post: {
+      id: 'YAGi7REAACMAgV8d',
+      isBroken: false,
+      lang: 'en-us',
+      link_type: 'Document',
+      slug: 'adadadadaa',
+      tags: [],
+      type: 'customer_university',
+      uid: 'cu-test-2',
     },
-  ]
+  },
+]
+const props = {
+  clusterPosts,
+  cluster: {
+    items: clusterPosts,
+    primary: {
+      cluster_name: [{ text: 'Custom software development pricing strategies' }],
+    },
+  },
+}
 
+describe('Customer university navigation', () => {
   it('is a Vue instance', () => {
-    const { container, html } = render(CustomerUniversityNavigation, {
-      stubs: ['NuxtLink'],
-      props: {
-        clusterPosts,
-        cluster: {
-          items: clusterPosts,
-          primary: {
-            cluster_name: 'Pricing strategies in custom software development',
-            read_more_text: 'Read more about pricing strategies',
-          },
-        },
-        id: '123qweasd',
-      },
-      mocks: {
-        $prismic: {
-          asText: text => text[0].text,
-        },
-      },
+    const { container } = render(CustomerUniversityNavigation, {
+      stubs,
+      props,
+      mocks,
     })
 
-    expect(html()).not.toContain('current')
     expect(container).toMatchSnapshot()
   })
 
   it('is a Vue instance with equal id', () => {
-    const { html } = render(CustomerUniversityNavigation, {
-      stubs: ['NuxtLink'],
-      props: {
-        clusterPosts,
-        cluster: {
-          items: clusterPosts,
-          primary: {
-            cluster_name: 'Pricing strategies in custom software development',
-            read_more_text: 'Read more about pricing strategies',
-          },
-        },
-        id: 'YAGi7REAACMAgV8d',
-      },
-      mocks: {
-        $prismic: {
-          asText: text => text[0].text,
-        },
-      },
+    const { container } = render(CustomerUniversityNavigation, {
+      stubs,
+      props,
+      mocks,
     })
-    expect(html()).toContain('current')
+    expect(container).toMatchSnapshot()
   })
 })

@@ -14,9 +14,11 @@
         "title": {
           "config": {
             "label": "Title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6"
           },
-          "type": "Text"
+          "type": "StructuredText"
         },
         "description": {
           "config": {
@@ -35,17 +37,31 @@
         },
         "backgroundColor": {
           "config": {
-            "label": "Background Color",
-            "placeholder": ""
+            "label": "Background",
+            "placeholder": "",
+            "options": [
+              "silver",
+              "red",
+              "blue",
+              "yellow",
+              "purple",
+              "green"
+            ],
+            "default_value": "silver"
           },
-          "type": "Color"
+          "type": "Select"
         },
         "textColor": {
           "config": {
-            "label": "Text color",
-            "placeholder": ""
+            "label": "Text Color",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white"
+            ],
+            "default_value": "black"
           },
-          "type": "Color"
+          "type": "Select"
         }
       },
       "items": {}

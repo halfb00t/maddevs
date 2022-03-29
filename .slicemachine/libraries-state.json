@@ -1511,9 +1511,11 @@
                 "title": {
                   "config": {
                     "label": "Title",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6"
                   },
-                  "type": "Text"
+                  "type": "StructuredText"
                 },
                 "description": {
                   "config": {
@@ -1532,17 +1534,31 @@
                 },
                 "backgroundColor": {
                   "config": {
-                    "label": "Background Color",
-                    "placeholder": ""
+                    "label": "Background",
+                    "placeholder": "",
+                    "options": [
+                      "silver",
+                      "red",
+                      "blue",
+                      "yellow",
+                      "purple",
+                      "green"
+                    ],
+                    "default_value": "silver"
                   },
-                  "type": "Color"
+                  "type": "Select"
                 },
                 "textColor": {
                   "config": {
-                    "label": "Text color",
-                    "placeholder": ""
+                    "label": "Text Color",
+                    "placeholder": "",
+                    "options": [
+                      "black",
+                      "white"
+                    ],
+                    "default_value": "black"
                   },
-                  "type": "Color"
+                  "type": "Select"
                 }
               },
               "items": {}
@@ -1556,8 +1572,14 @@
             "slice_type": "card_with_image_slice",
             "items": [],
             "primary": {
-              "title": "reinvent dot-com e-commerce",
-              "description": "deliver dot-com web-readiness",
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Visualize plug-and-play bandwidth",
+                  "spans": []
+                }
+              ],
+              "description": "synergize interactive methodologies",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -1565,10 +1587,10 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=900&h=500&fit=crop"
               },
-              "backgroundColor": "#2ff821",
-              "textColor": "#140214"
+              "backgroundColor": "purple",
+              "textColor": "white"
             }
           }
         },
@@ -5725,13 +5747,6 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "TextList",
               "primary": {
-                "listItemsBackground": {
-                  "config": {
-                    "label": "Background",
-                    "placeholder": "#F4F4F4"
-                  },
-                  "type": "Color"
-                },
                 "title": {
                   "config": {
                     "label": "Title",
@@ -5759,23 +5774,17 @@
             "slice_type": "text_list",
             "items": [
               {
-                "listText": "architect impactful users"
+                "listText": "utilize cross-platform e-markets"
               },
               {
-                "listText": "visualize e-business users"
+                "listText": "syndicate back-end synergies"
               },
               {
-                "listText": "reintermediate front-end convergence"
-              },
-              {
-                "listText": "optimize end-to-end architectures"
-              },
-              {
-                "listText": "enable web-enabled infrastructures"
+                "listText": "cultivate cutting-edge networks"
               }
             ],
             "primary": {
-              "title": "benchmark cross-media experiences"
+              "title": "leverage visionary paradigms"
             }
           },
           "twoColumnsList": {
@@ -5784,21 +5793,20 @@
             "slice_type": "text_list",
             "items": [
               {
-                "listText": "optimize distributed portals"
+                "listText": "evolve customized models"
               },
               {
-                "listText": "generate cutting-edge networks"
+                "listText": "reinvent innovative architectures"
               },
               {
-                "listText": "transform holistic functionalities"
+                "listText": "envisioneer sticky portals"
               },
               {
-                "listText": "extend bleeding-edge web-readiness"
+                "listText": "grow synergistic e-tailers"
               }
             ],
             "primary": {
-              "listItemsBackground": "#e54e22",
-              "title": "reintermediate frictionless portals"
+              "title": "integrate e-business solutions"
             }
           }
         },

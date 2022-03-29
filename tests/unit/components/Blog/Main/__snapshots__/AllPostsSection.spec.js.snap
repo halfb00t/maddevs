@@ -214,7 +214,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -224,7 +227,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -234,7 +240,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -244,7 +253,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -254,7 +266,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -264,7 +279,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -274,7 +292,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -284,7 +305,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -294,7 +318,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -304,7 +331,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -314,7 +344,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -324,7 +357,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -334,7 +370,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>
@@ -344,7 +383,10 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
           post="[object Object]"
         >
           <postcard-stub
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
           />
         </section>

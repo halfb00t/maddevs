@@ -1,73 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`cuNavigation is a Vue instance 1`] = `
+exports[`Customer university navigation is a Vue instance 1`] = `
 <div>
   <div
     class="cluster-navigation"
+    id="123qweasd"
   >
     <div
       class="container"
     >
-      <div
+      <h4
         class="cluster-navigation__title"
       >
         
-      
+      Custom software development pricing strategies
     
-      </div>
+      </h4>
        
       <div
-        class="cluster-navigation__inner"
+        class="cluster-navigation__list"
+      />
+       
+      <nextpreviewbuttons-stub
+        left="true"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Customer university navigation is a Vue instance with equal id 1`] = `
+<div>
+  <div
+    class="cluster-navigation"
+    id="YAGi7REAACMAgV8d"
+  >
+    <div
+      class="container"
+    >
+      <h4
+        class="cluster-navigation__title"
       >
-        <ol
-          class="cluster-navigation__column cluster-navigation__column--left"
-        >
-          <nuxtlink-stub
-            class="cluster-navigation__nav-item"
-            to="/customer-university/cu-test/"
-          >
-            <div
-              class="index"
-            >
-              
-            1.
-          
-            </div>
-             
-            <div
-              class="label"
-            >
-              
-            Chapter 1
-          
-            </div>
-          </nuxtlink-stub>
-        </ol>
-         
-        <ol
-          class="cluster-navigation__column cluster-navigation__column--right"
-          start="2"
-        >
-          <nuxtlink-stub
-            class="cluster-navigation__nav-item"
-            to="/customer-university/cu-test-2/"
-          >
-            <span
-              class="index"
-            >
-              2.
-            </span>
-             
-            <div
-              class="label"
-            >
-              
-            Chapter 2
-          
-            </div>
-          </nuxtlink-stub>
-        </ol>
-      </div>
+        
+      Custom software development pricing strategies
+    
+      </h4>
+       
+      <div
+        class="cluster-navigation__list"
+      />
+       
+      <nextpreviewbuttons-stub
+        left="true"
+      />
     </div>
   </div>
 </div>

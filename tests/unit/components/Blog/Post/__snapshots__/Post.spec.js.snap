@@ -60,7 +60,10 @@ exports[`Post component should render correctly with default props 1`] = `
             post="[object Object]"
           >
             <postcard-stub
+              isshowposttags="true"
+              limit="150"
               post="[object Object]"
+              textcolor=""
               theme="white"
             />
           </section>
@@ -70,7 +73,10 @@ exports[`Post component should render correctly with default props 1`] = `
             post="[object Object]"
           >
             <postcard-stub
+              isshowposttags="true"
+              limit="150"
               post="[object Object]"
+              textcolor=""
               theme="white"
             />
           </section>
@@ -80,7 +86,10 @@ exports[`Post component should render correctly with default props 1`] = `
             post="[object Object]"
           >
             <postcard-stub
+              isshowposttags="true"
+              limit="150"
               post="[object Object]"
+              textcolor=""
               theme="white"
             />
           </section>
