@@ -32,17 +32,9 @@
             />
           </section>
         </template>
-        <template v-else>
-          <section
-            v-for="i in slice.items"
-            :key="i"
-            class="cluster-navigation__list-item"
-          >
-            <SkeletonBlogWidget />
-          </section>
-        </template>
       </div>
       <NextPreviewButtons
+        ref="buttons"
         :right="right"
         :left="left"
         @next="getNextPosts"
@@ -89,7 +81,7 @@ export default {
   },
 
   async mounted() {
-    const postIDs = this.clusterPosts.map(item => item.cu_post.id)
+    const postIDs = this.clusterPosts?.map(item => item?.cu_post?.id)
     if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
     window.addEventListener('resize', this.calcOffsetWidth)
     this.calcOffsetWidth()
@@ -102,7 +94,7 @@ export default {
   methods: {
     async getPrismicData(ids) {
       const response = await this.$prismic.api.getByIDs(ids)
-      return response.results
+      return response?.results
     },
 
     getNextPosts() {

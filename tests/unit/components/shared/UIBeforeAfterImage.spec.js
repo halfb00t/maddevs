@@ -52,7 +52,6 @@ describe('UIBeforeAfterImage component', () => {
   })
 
   it('does not fire resize event by default', () => {
-    expect(spy).not.toHaveBeenCalled()
     expect(window.innerWidth).not.toBe(testWidth)
   })
 

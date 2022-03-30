@@ -61,12 +61,14 @@ exports[`TagPostsSection component should render correctly 1`] = `
         >
           <postcard-stub
             disabletaglink="true"
+            height="217"
             isshowposttags="true"
             limit="150"
             post="[object Object]"
             tag="Blog tag"
             textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -75,12 +77,14 @@ exports[`TagPostsSection component should render correctly 1`] = `
         >
           <postcard-stub
             disabletaglink="true"
+            height="217"
             isshowposttags="true"
             limit="150"
             post="[object Object]"
             tag="Blog tag"
             textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -89,12 +93,14 @@ exports[`TagPostsSection component should render correctly 1`] = `
         >
           <postcard-stub
             disabletaglink="true"
+            height="217"
             isshowposttags="true"
             limit="150"
             post="[object Object]"
             tag="Blog tag"
             textcolor=""
             theme="light"
+            width="400"
           />
         </section>
       </div>
