@@ -97,7 +97,6 @@
       </div>
       <CustomerUniversityNavigation
         v-if="clusterPosts && cluster"
-        :cluster="cluster"
         :cluster-posts="clusterPosts"
       />
     </div>
@@ -493,6 +492,7 @@ export default {
 
   &__comments {
     margin-top: 70px;
+    margin-bottom: 50px;
   }
 
   &__back-to-list {
