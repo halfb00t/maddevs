@@ -1,13 +1,17 @@
 <template>
-  <SliceZone
-    type="page"
-    :slices="customPage.slices"
-  />
+  <div>
+    <SliceZone
+      type="page"
+      :slices="customPage.slices"
+    />
+    <ChatIcon />
+  </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 import SliceZone from 'vue-slicezone'
+import ChatIcon from '@/components/core/chat'
 import { buildHead } from '@/data/seo'
 import headerMixin from '@/mixins/headerMixin'
 import getRoutePrefix from '@/helpers/getRoutePrefix'
@@ -15,6 +19,7 @@ import getRoutePrefix from '@/helpers/getRoutePrefix'
 export default {
   components: {
     SliceZone,
+    ChatIcon,
   },
 
   mixins: [headerMixin('.start-screen-slice')],

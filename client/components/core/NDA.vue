@@ -1,5 +1,7 @@
 <template>
-  <section id="nda">
+  <section
+    id="nda"
+  >
     <div class="container">
       <div class="nda__header">
         <h1 class="nda__title">
@@ -56,11 +58,20 @@
         </p>
       </div>
     </div>
+    <div class="chat">
+      <ChatIcon />
+    </div>
   </section>
 </template>
 <script>
+import ChatIcon from '@/components/core/chat'
+
 export default {
   name: 'NDA',
+
+  components: {
+    ChatIcon,
+  },
 }
 </script>
 
@@ -175,5 +186,12 @@ export default {
       display: none;
     }
   }
+}
+
+.chat {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  transform: translate(50%, 50%);
 }
 </style>
