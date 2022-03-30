@@ -6,7 +6,7 @@
     "items": [],
     "primary": {
       "background": "black",
-      "gradientColor": "white",
+      "gradientColor": "black",
       "image": {
         "dimensions": {
           "width": 900,
@@ -19,6 +19,55 @@
       "imageOpacity": 1,
       "title": "Mad Devs Engineering Your Growth",
       "subtitle": "Without empty words, here at Mad Devs we partner with projects where our teams thrive. Innovating solutions, carrying ownership, delivering sustainable value and celebrating successes — make a happy workplace, where things get done. "
+    }
+  },
+  {
+    "variation": "startScreenImageRightAndButton",
+    "name": "StartScreenImageRightAndButton",
+    "slice_type": "start_screen",
+    "items": [],
+    "primary": {
+      "background": "white",
+      "gradientColor": "white",
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+      },
+      "rightImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+      },
+      "imageOpacity": 382,
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Enhance innovative applications",
+          "spans": []
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "paragraph",
+          "text": "Ullamco adipisicing irure voluptate. Ad elit ex deserunt.",
+          "spans": []
+        }
+      ],
+      "btnText": "e-enable scalable architectures",
+      "btnLink": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "modal": "order-project"
     }
   }
 ]

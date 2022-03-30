@@ -66,6 +66,109 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "startScreenImageRightAndButton",
+      "name": "StartScreenImageRightAndButton",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "StartScreen",
+      "primary": {
+        "background": {
+          "config": {
+            "label": "Slice background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "grey"
+            ]
+          },
+          "type": "Select"
+        },
+        "gradientColor": {
+          "config": {
+            "label": "Gradient color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black",
+              "grey"
+            ]
+          },
+          "type": "Select"
+        },
+        "image": {
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "rightImage": {
+          "config": {
+            "label": "RIght Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "imageOpacity": {
+          "config": {
+            "label": "Image opacity",
+            "placeholder": "0.8"
+          },
+          "type": "Number"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+          },
+          "type": "StructuredText"
+        },
+        "subtitle": {
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "btnText": {
+          "config": {
+            "label": "Button text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "btnLink": {
+          "config": {
+            "label": "Button Link (optional)",
+            "placeholder": "Button will be a link instead of a modal window",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "modal": {
+          "config": {
+            "label": "Modal window (optional)",
+            "placeholder": "Select modal window that will open",
+            "options": [
+              "download-pdf",
+              "contact-me",
+              "order-project"
+            ],
+            "default_value": "download-pdf"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
     }
   ]
 }

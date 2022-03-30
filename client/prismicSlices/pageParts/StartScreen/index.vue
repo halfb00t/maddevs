@@ -1,5 +1,6 @@
 <template>
   <section
+    v-if="slice.variation === 'default-slice'"
     id="transparent-header-area"
     data-testid="start-screen-slice"
     class="start-screen-slice"
@@ -38,14 +39,24 @@
       </div>
     </div>
   </section>
+  <StartScreenImageRightAndButton
+    v-else-if="slice.variation === 'startScreenImageRightAndButton'"
+    :slice="slice"
+  />
 </template>
 
 <script>
 import changeSectionTextOpacityMixin from '@/mixins/changeSectionTextOpacityMixin'
 import setSliceBackground from '@/helpers/setSliceBackground'
+import StartScreenImageRightAndButton
+  from '@/prismicSlices/pageParts/StartScreen/variations/StartScreenImageRightAndButton/StartScreenImageRightAndButton'
 
 export default {
   name: 'StartScreen',
+  components: {
+    StartScreenImageRightAndButton,
+  },
+
   mixins: [changeSectionTextOpacityMixin('sectionText')],
   props: {
     slice: {

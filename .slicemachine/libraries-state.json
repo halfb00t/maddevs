@@ -4905,6 +4905,79 @@
                 }
               },
               "items": {}
+            },
+            {
+              "id": "singleImageTwo",
+              "name": "SingleImageTwo",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SingleImage",
+              "primary": {
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "subtitle": {
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {
+                      "width": 1240,
+                      "height": 607
+                    },
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "testField": {
+                  "config": {
+                    "label": "testField",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                }
+              },
+              "items": {}
             }
           ]
         },
@@ -4915,9 +4988,9 @@
             "slice_type": "single_image",
             "items": [],
             "primary": {
-              "title": "deliver impactful interfaces",
-              "text": "streamline frictionless ROI",
-              "subtitle": "recontextualize value-added web services",
+              "title": "grow global architectures",
+              "text": "unleash bleeding-edge platforms",
+              "subtitle": "brand bleeding-edge methodologies",
               "image": {
                 "dimensions": {
                   "width": 1240,
@@ -4925,9 +4998,31 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=1240&h=607&fit=crop"
+                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=1240&h=607&fit=crop"
               },
-              "animation": "fade-up-left"
+              "animation": "zoom-in-right"
+            }
+          },
+          "singleImageTwo": {
+            "variation": "singleImageTwo",
+            "name": "SingleImageTwo",
+            "slice_type": "single_image",
+            "items": [],
+            "primary": {
+              "title": "monetize plug-and-play e-business",
+              "text": "utilize real-time communities",
+              "subtitle": "engineer compelling e-business",
+              "image": {
+                "dimensions": {
+                  "width": 1240,
+                  "height": 607
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=1240&h=607&fit=crop"
+              },
+              "animation": "zoom-in-right",
+              "testField": true
             }
           }
         },
@@ -5115,6 +5210,109 @@
                 }
               },
               "items": {}
+            },
+            {
+              "id": "startScreenImageRightAndButton",
+              "name": "StartScreenImageRightAndButton",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "StartScreen",
+              "primary": {
+                "background": {
+                  "config": {
+                    "label": "Slice background",
+                    "placeholder": "",
+                    "options": [
+                      "black",
+                      "white",
+                      "grey"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "gradientColor": {
+                  "config": {
+                    "label": "Gradient color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "grey"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "rightImage": {
+                  "config": {
+                    "label": "RIght Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "imageOpacity": {
+                  "config": {
+                    "label": "Image opacity",
+                    "placeholder": "0.8"
+                  },
+                  "type": "Number"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+                  },
+                  "type": "StructuredText"
+                },
+                "subtitle": {
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                },
+                "btnText": {
+                  "config": {
+                    "label": "Button text",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "btnLink": {
+                  "config": {
+                    "label": "Button Link (optional)",
+                    "placeholder": "Button will be a link instead of a modal window",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                },
+                "modal": {
+                  "config": {
+                    "label": "Modal window (optional)",
+                    "placeholder": "Select modal window that will open",
+                    "options": [
+                      "download-pdf",
+                      "contact-me",
+                      "order-project"
+                    ],
+                    "default_value": "download-pdf"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {}
             }
           ]
         },
@@ -5126,7 +5324,7 @@
             "items": [],
             "primary": {
               "background": "black",
-              "gradientColor": "white",
+              "gradientColor": "black",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -5140,6 +5338,55 @@
               "title": "Mad Devs Engineering Your Growth",
               "subtitle": "Without empty words, here at Mad Devs we partner with projects where our teams thrive. Innovating solutions, carrying ownership, delivering sustainable value and celebrating successes — make a happy workplace, where things get done. "
             }
+          },
+          "startScreenImageRightAndButton": {
+            "variation": "startScreenImageRightAndButton",
+            "name": "StartScreenImageRightAndButton",
+            "slice_type": "start_screen",
+            "items": [],
+            "primary": {
+              "background": "white",
+              "gradientColor": "white",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+              },
+              "rightImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+              },
+              "imageOpacity": 382,
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Enhance innovative applications",
+                  "spans": []
+                }
+              ],
+              "subtitle": [
+                {
+                  "type": "paragraph",
+                  "text": "Ullamco adipisicing irure voluptate. Ad elit ex deserunt.",
+                  "spans": []
+                }
+              ],
+              "btnText": "e-enable scalable architectures",
+              "btnLink": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "modal": "order-project"
+            }
           }
         },
         "meta": {
@@ -5152,6 +5399,11 @@
             "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/StartScreen/default-slice/preview.png",
             "width": 2880,
             "height": 1492
+          },
+          "startScreenImageRightAndButton": {
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/StartScreen/startScreenImageRightAndButton/preview.png",
+            "width": 790,
+            "height": 417
           }
         }
       },
