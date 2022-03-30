@@ -97,10 +97,8 @@
       </div>
       <CustomerUniversityNavigation
         v-if="clusterPosts && cluster"
-        :id="id"
         :cluster="cluster"
         :cluster-posts="clusterPosts"
-        :date="date"
       />
     </div>
     <button
