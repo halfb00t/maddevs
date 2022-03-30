@@ -5,10 +5,9 @@
   >
     <div class="container">
       <h4
-        v-if="title"
         class="cluster-navigation__title"
       >
-        {{ title }}
+        Explore the chapters
       </h4>
       <div
         ref="clusterNavigationList"
@@ -61,11 +60,6 @@ export default {
       type: Array,
       required: true,
     },
-
-    cluster: {
-      type: Object,
-      required: true,
-    },
   },
 
   data() {
@@ -74,7 +68,6 @@ export default {
       transformWidth: 0,
       offset: 1,
       offsetSize: 0,
-      title: this.cluster?.primary?.cluster_name[0]?.text,
       right: false,
       left: true,
     }

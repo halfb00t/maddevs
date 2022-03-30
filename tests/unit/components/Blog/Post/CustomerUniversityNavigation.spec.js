@@ -45,12 +45,6 @@ const clusterPosts = [
 ]
 const props = {
   clusterPosts,
-  cluster: {
-    items: clusterPosts,
-    primary: {
-      cluster_name: [{ text: 'Custom software development pricing strategies' }],
-    },
-  },
 }
 
 const mocks = {
