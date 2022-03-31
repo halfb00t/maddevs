@@ -86,7 +86,9 @@ describe('Custom page module mutations', () => {
       show_footer: false,
       meta_title: 'Meta title',
       meta_description: 'Meta description',
-      og_image: 'url',
+      og_image: {
+        url: 'url',
+      },
       schema_org_snippets: [],
     },
   }
@@ -102,7 +104,7 @@ describe('Custom page module mutations', () => {
       showFooter: false,
       metaTitle: 'Meta title',
       metaDescription: 'Meta description',
-      ogImage: '',
+      ogImage: 'url',
       schemaOrgSnippet: schema,
     }
 

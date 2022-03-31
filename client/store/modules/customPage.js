@@ -14,7 +14,7 @@ const extractCustomPageData = page => {
     slices: page.data?.body,
     metaTitle: page.data?.meta_title,
     metaDescription: page.data?.meta_description,
-    ogImage: page.data?.og_image?.url || '',
+    ogImage: page.data?.og_image?.url,
     schemaOrgSnippet: extractSchemaOrg(page.data?.schema_org_snippets),
   }
 }

@@ -68,7 +68,7 @@ export default {
       title: this.customPage.metaTitle || '',
       description: this.customPage.metaDescription || '',
       jsonLd: this.customPage.schemaOrgSnippet,
-      image: this.customPage.ogImage || '',
+      image: this.customPage.ogImage,
     })
   },
 
