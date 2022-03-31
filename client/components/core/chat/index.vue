@@ -2,7 +2,7 @@
   <div>
     <div
       class="chat-wrapper"
-      @click="openModal"
+      @click.stop="openModal"
     >
       <div class="chat-wrapper__message" />
       <div class="chat-wrapper__arrow" />
@@ -11,7 +11,9 @@
       v-if="isShow"
       class="chat-modal"
     >
-      <ChatModal @close="closeModal" />
+      <ChatModal
+        @close="closeModal"
+      />
     </div>
   </div>
 </template>
@@ -32,13 +34,27 @@ export default {
     }
   },
 
+  beforeMount() {
+    document.addEventListener('keydown', this.onKeydown)
+  },
+
+  destroyed() {
+    document.removeEventListener('keydown', this.onKeydown)
+  },
+
   methods: {
     openModal() {
       this.isShow = true
     },
 
-    closeModal(event) {
-      this.isShow = event
+    closeModal() {
+      this.isShow = false
+    },
+
+    onKeydown(e) {
+      if (e.keyCode === 27) {
+        this.closeModal()
+      }
     },
   },
 }
@@ -84,7 +100,7 @@ export default {
 
 .chat-modal {
   position: absolute;
-  right: 60px;
-  bottom: 80px;
+  right: 80px;
+  bottom: -10px;
 }
 </style>
