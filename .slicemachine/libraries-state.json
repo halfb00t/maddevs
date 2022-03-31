@@ -3058,6 +3058,93 @@
           }
         }
       },
+      "form_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "form_slice",
+        "name": "FormSlice",
+        "description": "FormSlice",
+        "model": {
+          "id": "form_slice",
+          "type": "SharedSlice",
+          "name": "FormSlice",
+          "description": "FormSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FormSlice",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6"
+                  }
+                },
+                "image": {
+                  "config": {
+                    "label": "Book image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "bookPath": {
+                  "config": {
+                    "label": "Ebook Path on AWS S3",
+                    "placeholder": "Example: pdf/ebook-name.pdf"
+                  },
+                  "type": "Text"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "form_slice",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Visualize robust infrastructures",
+                  "spans": []
+                }
+              ],
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
+              },
+              "bookPath": "orchestrate visionary synergies"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/FormSlice/default-slice/preview.png",
+            "width": 807,
+            "height": 465
+          }
+        }
+      },
       "grid_lottie_slice": {
         "library": "client/prismicSlices/pageParts",
         "id": "grid_lottie_slice",

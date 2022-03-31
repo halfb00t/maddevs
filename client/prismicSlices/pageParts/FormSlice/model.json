@@ -1,0 +1,42 @@
+{
+  "id": "form_slice",
+  "type": "SharedSlice",
+  "name": "FormSlice",
+  "description": "FormSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FormSlice",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6"
+          }
+        },
+        "image": {
+          "config": {
+            "label": "Book image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "bookPath": {
+          "config": {
+            "label": "Ebook Path on AWS S3",
+            "placeholder": "Example: pdf/ebook-name.pdf"
+          },
+          "type": "Text"
+        }
+      },
+      "items": {}
+    }
+  ]
+}
