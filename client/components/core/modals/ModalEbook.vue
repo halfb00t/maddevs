@@ -19,9 +19,10 @@
         alt="Pricing strategies"
       >
       <h2 class="modal-content__title">
-        Get your copy of “Custom Software Development: Pricing Strategies”
+        Get your copy of “{{ ebookName }}”
       </h2>
       <ReadForm
+        :ebook-path="ebookPath"
         @form-sended="handleSendedForm"
       />
     </div>
@@ -54,6 +55,16 @@ export default {
     },
 
     location: {
+      type: String,
+      default: '',
+    },
+
+    ebookName: {
+      type: String,
+      default: '',
+    },
+
+    ebookPath: {
       type: String,
       default: '',
     },

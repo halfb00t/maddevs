@@ -47,6 +47,11 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    ebookPath: {
+      type: String,
+      default: '',
+    },
   },
 
   data() {
@@ -82,7 +87,7 @@ export default {
       const params = {
         region: 'eu-west-1',
         bucket: 'maddevsio',
-        file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
+        file: this.ebookPath,
         expiresIn: 86400, // sec -> 24h
       }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)

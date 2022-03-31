@@ -166,6 +166,13 @@
             "default_value": "download-pdf"
           },
           "type": "Select"
+        },
+        "bookPath": {
+          "config": {
+            "label": "Ebook Path on AWS S3",
+            "placeholder": "Example: pdf/ebook-name.pdf"
+          },
+          "type": "Text"
         }
       },
       "items": {}

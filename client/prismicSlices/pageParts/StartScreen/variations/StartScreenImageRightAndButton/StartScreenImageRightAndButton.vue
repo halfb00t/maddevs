@@ -2,7 +2,7 @@
   <section
     id="transparent-header-area"
     data-testid="start-screen-slice"
-    class="start-screen-slice"
+    class="start-screen-slice start-screen-slice-with-image"
     :style="{ background: sliceGradient }"
   >
     <img
@@ -76,6 +76,8 @@
     <ModalEbook
       id="sent-ebook"
       ref="modalEbook"
+      :ebook-name="title[0].text"
+      :ebook-path="ebookPath"
     />
   </section>
 </template>
@@ -119,6 +121,7 @@ export default {
       btnText: this.slice?.primary?.btnText,
       btnLink: this.slice?.primary?.btnLink,
       modal: this.slice?.primary?.modal,
+      ebookPath: this.slice?.primary?.bookPath,
     }
   },
 
@@ -210,17 +213,12 @@ export default {
 
 <style lang="scss" scoped>
 .start-screen-slice {
-  position: relative;
-  height: 100vh;
-  min-height: 568px;
   background: linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #111213);
   overflow: hidden;
-
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding-top: 207px;
+  height: auto;
+  @media screen and (max-width: 768px) {
+    padding-top: 147px;
   }
 
   &__image {
@@ -238,14 +236,22 @@ export default {
   &__title {
     color: $text-color--white-primary;
     margin-bottom: 70px;
-    ::v-deep h1, h2, h3, h4, h5, h6 {
+    max-width: 650px;
+    @media screen and (max-width: 580px) {
+      margin-bottom: 32px;
+    }
+    ::v-deep h1,
+    ::v-deep h2,
+    ::v-deep h3,
+    ::v-deep h4,
+    ::v-deep h5,
+    ::v-deep h6 {
       @include font('Inter', 64px, 700);
       line-height: 72px;
       letter-spacing: -2px;
       @media screen and (max-width: 580px) {
         @include font('Inter', 42px, 600);
         line-height: 48px;
-        margin-bottom: 32px;
       }
     }
   }
@@ -269,8 +275,8 @@ export default {
     }
 
     @media screen and (max-width: 580px) {
-      font-size: 21px;
-      line-height: 30px;
+      font-size: 24px;
+      line-height: 35px;
     }
   }
 
@@ -283,18 +289,33 @@ export default {
   &__flex-wrapper {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__content {
-    width: 75%;
-    //margin-left: -70px;
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__img-box {
     width: 25%;
+    @media screen and (max-width: 1024px) {
+      width: 45%;
+    }
+    @media screen and (max-width: 768px) {
+      width: 211px;
+      margin-bottom: 83px;
+    }
+    @media screen and (max-width: 580px) {
+      margin-bottom: 47px;
+    }
   }
 
   &__img-box-image {
@@ -320,6 +341,9 @@ export default {
       align-items: center;
       padding: 14px 132.5px;
       margin-right: 32px;
+      @media screen and (max-width: 580px) {
+        padding: 14px 24px;
+      }
 
       img {
         margin-left: 7px;

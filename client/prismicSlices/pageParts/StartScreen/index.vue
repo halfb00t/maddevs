@@ -213,4 +213,8 @@ export default {
     }
   }
 }
+
+.start-screen-slice-with-image {
+  height: auto;
+}
 </style>

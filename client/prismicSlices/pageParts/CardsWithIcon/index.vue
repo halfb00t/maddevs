@@ -1,0 +1,195 @@
+<template>
+  <section class="section cards-with-icons">
+    <div class="cards-with-icons__wrapper container">
+      <div
+        v-for="(item, i) of items"
+        :key="i"
+        class="cards-with-icons__item"
+      >
+        <img
+          v-lazy-load
+          :data-src="item.iconImage.url"
+          width="54"
+          height="54"
+          :alt="item.alt || 'Icon image'"
+          class="cards-with-icons__item-icon"
+        >
+        <PrismicRichText
+          v-if="item.title"
+          :field="item.title"
+          data-testid="cards-with-icons__item-title"
+          class="cards-with-icons__item-title"
+          :html-serializer="serializer"
+        />
+        <p class="cards-with-icons__item-description">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+import convertTagsToText from '@/helpers/convertTagsToText'
+import linkResolver from '@/plugins/link-resolver'
+
+export default {
+  name: 'CardsWithIcon',
+  props: {
+    slice: {
+      type: Object,
+      required: true,
+      default() {
+        return {}
+      },
+    },
+  },
+
+  data() {
+    return {
+      items: this.slice?.items,
+    }
+  },
+
+  computed: {
+    serializer() {
+      const types = ['cards_with_icon']
+      if (types.includes(this.slice?.slice_type)) return this.htmlSerializer
+      return null
+    },
+  },
+
+  methods: {
+    htmlSerializer(type, element, content, children) {
+      const { Elements } = this.$prismic.dom.RichText
+      const { Link } = this.$prismic.dom
+      let text = children.join('')
+
+      if (type === Elements.preformatted) {
+        // the second parameter of function excludes tags
+        text = convertTagsToText(text, ['br'])
+      } else {
+        text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
+          // the second parameter of function excludes tags
+          const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
+          return `<code class="inline-code">${formattedCode}</code>`
+        })
+      }
+
+      switch (type) {
+        case Elements.heading1: return `<h1>${text}</h1>`
+        case Elements.heading2: return `<h2>${text}</h2>`
+        case Elements.heading3: return `<h3>${text}</h3>`
+        case Elements.heading4: return `<h4>${text}</h4>`
+        case Elements.heading5: return `<h5>${text}</h5>`
+        case Elements.heading6: return `<h6>${text}</h6>`
+        case Elements.paragraph: return `<p>${text}</p>`
+        case Elements.preformatted: return `<pre>${text}</pre>`
+        case Elements.strong: return `<strong>${text}</strong>`
+        case Elements.em: return `<em>${text}</em>`
+        case Elements.listItem: return `<li>${text}</li>`
+        case Elements.oListItem: return `<li>${text}</li>`
+        case Elements.list: return `<ul>${text}</ul>`
+        case Elements.oList: return `<ol>${text}</ol>`
+        case Elements.image:
+          // eslint-disable-next-line
+          const linkUrl = element.linkTo ? Link.url(element.linkTo, linkResolver) : null
+          // eslint-disable-next-line
+          const linkTarget = element.linkTo && element.linkTo.target ? `target="${element.linkTo.target}" rel="noopener"` : ''
+          // eslint-disable-next-line
+          const wrapperClassList = [element.label || '', 'block-img']
+          // eslint-disable-next-line
+          const img = `<img src="${element.url}" alt="${element.alt || 'Image'}" copyright="${element.copyright || ''}">`
+          return (`
+            <p class="${wrapperClassList.join(' ')}">
+              ${linkUrl ? `<a ${linkTarget} href="${linkUrl}">${img}</a>` : img}
+            </p>
+          `)
+        case Elements.embed:
+          return (`
+            <div data-oembed="${element.oembed.embed_url}"
+              data-oembed-type="${element.oembed.type}"
+              data-oembed-provider="${element.oembed.provider_name}"
+            >
+              ${element.oembed.html}
+            </div>
+          `)
+        case Elements.hyperlink:
+          // eslint-disable-next-line
+          const target = element.data.target ? `target="${element.data.target}" rel="noopener"` : ''
+          // eslint-disable-next-line
+          const url = Link.url(element.data, linkResolver)
+          return `<a ${target} href="${url}">${text}</a>`
+        case Elements.label:
+          // eslint-disable-next-line
+          const label = element.data.label ? ` class="${element.data.label}"` : ''
+          return `<span ${label}>${text}</span>`
+        case Elements.span: return content ? content.replace(/\n/g, '<br />') : ''
+        default: return null
+      }
+    },
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+.cards-with-icons {
+  &__wrapper {
+    @include grid(repeat(3, 1fr), auto, 30px, 30px);
+
+    @media screen and (max-width: 768px) {
+      @include grid(repeat(2, 1fr), auto, 30px, 30px);
+    }
+
+    @media screen and (max-width: 540px) {
+      @include grid(repeat(1, 1fr), auto, 0, 30px);
+    }
+  }
+
+  &__item {
+    background-color: $bgcolor--black-pale;
+    padding: 56px 54px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @media screen and (max-width: 1024px) {
+      padding: 24px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 21px;
+    color: $text-color--white-primary;
+    line-height: 32.5px;
+    letter-spacing: -0.013em;
+    ::v-deep h1,
+    ::v-deep h2,
+    ::v-deep h3,
+    ::v-deep h4,
+    ::v-deep h5,
+    ::v-deep h6 {
+      @include font('Inter', 28px, 600);
+      @media screen and (max-width: 1024px) {
+        @include font('Inter', 21px, 600);
+        line-height: 24px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+  &__item-description {
+    @include font('Inter', 16px, 400);
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: $text-color--grey-20-percent;
+  }
+
+  &__item-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 36px;
+  }
+}
+</style>
