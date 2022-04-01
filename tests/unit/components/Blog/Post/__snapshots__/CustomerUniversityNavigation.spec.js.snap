@@ -1,74 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`cuNavigation is a Vue instance 1`] = `
-<div>
-  <div
-    class="cluster-navigation"
-  >
-    <div
-      class="container"
-    >
-      <div
-        class="cluster-navigation__title"
-      >
-        
-      
-    
-      </div>
-       
-      <div
-        class="cluster-navigation__inner"
-      >
-        <ol
-          class="cluster-navigation__column cluster-navigation__column--left"
-        >
-          <nuxtlink-stub
-            class="cluster-navigation__nav-item"
-            to="/customer-university/cu-test/"
-          >
-            <div
-              class="index"
-            >
-              
-            1.
-          
-            </div>
-             
-            <div
-              class="label"
-            >
-              
-            Chapter 1
-          
-            </div>
-          </nuxtlink-stub>
-        </ol>
-         
-        <ol
-          class="cluster-navigation__column cluster-navigation__column--right"
-          start="2"
-        >
-          <nuxtlink-stub
-            class="cluster-navigation__nav-item"
-            to="/customer-university/cu-test-2/"
-          >
-            <span
-              class="index"
-            >
-              2.
-            </span>
-             
-            <div
-              class="label"
-            >
-              
-            Chapter 2
-          
-            </div>
-          </nuxtlink-stub>
-        </ol>
-      </div>
+exports[`Customer university navigation should render correctly with props 1`] = `
+<div class="cluster-navigation">
+  <div class="container">
+    <h4 class="cluster-navigation__title">
+      Explore the chapters
+    </h4>
+    <div class="cluster-navigation__list">
+      <section post="[object Object]" class="cluster-navigation__list-item" style="transition: all .5s; transform: translateX(0px);">
+        <postcard-stub post="[object Object]" width="288" height="177" textcolor="#707072" theme="light" limit="70"></postcard-stub>
+      </section>
     </div>
+    <nextpreviewbuttons-stub left="true"></nextpreviewbuttons-stub>
   </div>
 </div>
 `;
