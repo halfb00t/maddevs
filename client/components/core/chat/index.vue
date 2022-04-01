@@ -101,6 +101,7 @@ export default {
 .chat-modal {
   position: absolute;
   right: 80px;
-  bottom: -10px;
+  bottom: 0;
+  width: 339px;
 }
 </style>

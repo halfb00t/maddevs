@@ -54,7 +54,7 @@ export default {
   },
 
   props: {
-    featured_image: {
+    featuredImage: {
       type: Object,
       default: () => ({}),
     },

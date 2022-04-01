@@ -5,7 +5,7 @@
         class="message-body__photo--image"
         width="31"
         height="31"
-        :src="require('@/components/core/chat/images/anatoly.jpg')"
+        :src="require('@/components/core/chat/images/anatoliy.jpg')"
         alt="Fedorenko"
       >
     </div>

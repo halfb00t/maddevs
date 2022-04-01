@@ -1,37 +1,71 @@
 <template>
-  <div class="chat-body">
-    <div class="chat-body__header">
-      <ChatHeader />
+  <section>
+    <div class="chat-header">
+      <div class="chat-header__message">
+        <img
+          class="chat-header__message-icon"
+          :src="require('@/components/core/chat/images/shape.jpg')"
+          alt="Shape"
+          width="14"
+          height="13"
+        >
+        <div class="chat-header__message-arrow" />
+      </div>
+      <p class="chat-header__paragraph">
+        Hey there, 👋<br>Welcome to Mad Devs website!
+      </p>
+      <div
+        class="chat-header__close"
+        @click.self="onClose"
+      />
     </div>
-    <div class="chat-body__dm-message">
-      <DmMessage />
+    <div v-if="showMainBody">
+      <MainBody @changeModal="changeModal" />
     </div>
-    <div class="chat-body__my-message">
-      <MyMessage />
+    <div
+      v-else-if="showSWDevelopmentBody"
+    >
+      <SWDevelopment :is-company="isCompany" />
     </div>
-    <div class="chat-body__buttons">
-      <ChatButtons />
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import DmMessage from '@/components/core/chat/modal/DmMessage'
-import MyMessage from '@/components/core/chat/modal/MyMessage'
-import ChatButtons from '@/components/core/chat/modal/ChatButtons'
+import MainBody from '@/components/core/chat/modal/MainBody'
+import SWDevelopment from '@/components/core/chat/modal/SWDevelopmentBody'
 
 export default {
   name: 'ChatModal',
 
   components: {
-    DmMessage,
-    MyMessage,
-    ChatButtons,
+    MainBody,
+    SWDevelopment,
+  },
+
+  data() {
+    return {
+      showMainBody: true,
+      showSWDevelopmentBody: false,
+      isCompany: null,
+    }
   },
 
   methods: {
     onClose() {
       this.$emit('close')
+    },
+
+    changeModal(e) {
+      if (+e.target.id === 1) {
+        this.showMainBody = false
+        this.showSWDevelopmentBody = true
+        this.isCompany = true
+      }
+      if (+e.target.id === 2) {
+        this.showMainBody = false
+        this.showSWDevelopmentBody = true
+        this.isCompany = false
+      }
     },
   },
 }
@@ -45,7 +79,7 @@ export default {
   border-top-right-radius: 10px;
   display: flex;
   align-items: center;
-  min-width: 300px;
+  border: 1px solid $border-color--grey-pale;
 
   &__message {
     position: relative;
@@ -117,24 +151,6 @@ export default {
     &:after {
       transform: rotate(-45deg);
     }
-  }
-}
-
-.chat-body {
-  padding: 78px 20px 40px;
-  background-color: $bgcolor--white-primary;
-  max-width: 300px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
-  &__dm-message {
-    margin-bottom: 60px;
-  }
-
-  &__my-message {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 60px;
   }
 }
 </style>
