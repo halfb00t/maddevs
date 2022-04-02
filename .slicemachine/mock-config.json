@@ -537,6 +537,16 @@
       "default-slice": {
         "primary": {},
         "items": {}
+      },
+      "ebookPostsSectionSlice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "ImageSlice": {

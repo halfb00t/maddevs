@@ -8,6 +8,13 @@
         "theme": "light",
         "data": {
           "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "theme": "dark",
+        "data": {
+          "link_type": "Web",
           "url": "https://prismic.io"
         }
       },
@@ -17,10 +24,76 @@
           "link_type": "Web",
           "url": "http://twitter.com"
         }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "theme": "dark",
+        "data": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
       }
     ],
     "primary": {
-      "animation": "zoom-in"
+      "animation": "fade-up"
+    }
+  },
+  {
+    "variation": "ebookPostsSectionSlice",
+    "name": "EbookPostsSectionSlice",
+    "slice_type": "posts_section_slice",
+    "items": [
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ],
+    "primary": {
+      "animation": "fade-up",
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Brand sticky functionalities",
+          "spans": []
+        }
+      ]
     }
   }
 ]

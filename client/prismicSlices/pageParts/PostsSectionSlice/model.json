@@ -60,6 +60,72 @@
           "type": "Link"
         }
       }
+    },
+    {
+      "id": "ebookPostsSectionSlice",
+      "name": "EbookPostsSectionSlice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PostsSectionSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-right",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-down",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ],
+            "default_value": "fade-up"
+          },
+          "type": "Select"
+        },
+        "title": {
+          "config": {
+            "label": "Main Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "theme": {
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "light",
+              "dark"
+            ],
+            "default_value": "light"
+          },
+          "type": "Select"
+        },
+        "data": {
+          "config": {
+            "label": "LinkToArticle",
+            "select": "document",
+            "customtypes": [
+              "post",
+              "customer_university"
+            ]
+          },
+          "type": "Link"
+        }
+      }
     }
   ]
 }

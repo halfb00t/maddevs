@@ -1,5 +1,8 @@
 <template>
-  <div class="tag-posts">
+  <div
+    v-if="slice.variation === 'default-slice'"
+    class="tag-posts"
+  >
     <div class="container">
       <div
         class="tag-posts__list"
@@ -32,6 +35,10 @@
       </div>
     </div>
   </div>
+  <EbookPostsSectionSlice
+    v-else-if="slice.variation === 'ebookPostsSectionSlice'"
+    :slice="slice"
+  />
 </template>
 
 <script>
@@ -39,10 +46,12 @@ import SkeletonBlogWidget from '@/components/Blog/skeletons/SkeletonBlogWidget'
 import PostCard from '@/components/Blog/shared/PostCard'
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import extractAuthorData from '@/helpers/extractAuthorData'
+import EbookPostsSectionSlice from '@/prismicSlices/pageParts/PostsSectionSlice/variations/EbookPostsSectionSlice'
 
 export default {
   name: 'PostsSectionSlice',
   components: {
+    EbookPostsSectionSlice,
     SkeletonBlogWidget,
     PostCard,
   },
@@ -78,7 +87,7 @@ export default {
   },
 
   async mounted() {
-    const postIDs = this.slice.items?.map(item => item.data.id)
+    const postIDs = this.slice?.items?.map(item => item.data.id)
     if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
   },
 
