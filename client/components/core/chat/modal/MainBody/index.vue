@@ -1,12 +1,22 @@
 <template>
   <div class="main-body">
     <div class="main-body__dm-message">
-      <DmMessage />
+      <DmMessage
+        text="Hello! How can we help you?"
+      />
     </div>
     <div class="main-body__my-message">
       <MyMessage />
     </div>
-    <div class="main-body__buttons">
+    <div v-if="isShowDmMessage">
+      <DmMessage
+        :text="text"
+      />
+    </div>
+    <div
+      v-else
+      class="main-body__buttons"
+    >
       <ChatButtons />
     </div>
   </div>
@@ -24,6 +34,19 @@ export default {
     DmMessage,
     ChatButtons,
     MyMessage,
+  },
+
+  props: {
+    isShowDmMessage: {
+      type: Boolean,
+      default: false,
+    },
+  },
+
+  data() {
+    return {
+      text: 'On the <a href="https://maddevs.io/careers/">page</a> you will find information on all current vacancies at Mad Devs',
+    }
   },
 }
 </script>

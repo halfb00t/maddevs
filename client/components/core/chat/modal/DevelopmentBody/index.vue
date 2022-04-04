@@ -36,7 +36,7 @@ import createLeadMixin from '@/mixins/createLeadMixin'
 import FormSuccess from '@/components/core/chat/modal/FormSuccess'
 
 export default {
-  name: 'SWDevelopment',
+  name: 'Development',
 
   components: {
     BaseForm,

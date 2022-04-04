@@ -25,6 +25,13 @@
 <script>
 export default {
   name: 'DmMessage',
+
+  props: {
+    text: {
+      type: String,
+      default: '',
+    },
+  },
 }
 </script>
 

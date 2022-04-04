@@ -2,6 +2,7 @@
   <div>
     <div
       class="chat-wrapper"
+      :class="{ active: !isShow }"
       @click.stop="openModal"
     >
       <MessageIcon v-if="!isShow" />
@@ -78,6 +79,10 @@ export default {
     background-color: $text-color--ruddy;
     transition: all .2s;
   }
+}
+
+.active {
+  background-color: $bgcolor--maximum-red;
 }
 
 .chat-modal {

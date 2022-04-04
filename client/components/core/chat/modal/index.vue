@@ -20,26 +20,29 @@
       />
     </div>
     <div v-if="showMainBody">
-      <MainBody @changeModal="changeModal" />
+      <MainBody
+        :is-show-dm-message="isShowDmMessage"
+        @changeModal="changeModal"
+      />
     </div>
     <div
       v-else-if="showSWDevelopmentBody"
     >
-      <SWDevelopment :is-company="isCompany" />
+      <Development :is-company="isCompany" />
     </div>
   </section>
 </template>
 
 <script>
 import MainBody from '@/components/core/chat/modal/MainBody'
-import SWDevelopment from '@/components/core/chat/modal/SWDevelopmentBody'
+import Development from '@/components/core/chat/modal/DevelopmentBody'
 
 export default {
   name: 'ChatModal',
 
   components: {
     MainBody,
-    SWDevelopment,
+    Development,
   },
 
   data() {
@@ -47,6 +50,7 @@ export default {
       showMainBody: true,
       showSWDevelopmentBody: false,
       isCompany: null,
+      isShowDmMessage: null,
     }
   },
 
@@ -64,6 +68,12 @@ export default {
       if (+e.target.id === 2) {
         this.showMainBody = false
         this.showSWDevelopmentBody = true
+        this.isCompany = false
+      }
+      if (+e.target.id === 3) {
+        this.showMainBody = true
+        this.isShowDmMessage = true
+        this.showSWDevelopmentBody = false
         this.isCompany = false
       }
     },
