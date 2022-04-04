@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <section>
     <div
       class="chat-wrapper"
       :class="{ active: !isShow }"
       @click.stop="openModal"
     >
       <MessageIcon v-if="!isShow" />
-      <CloseIcon v-else-if="isShow" />
+      <CloseIcon v-else />
     </div>
     <div
       v-if="isShow"
@@ -16,7 +16,7 @@
         @close="closeModal"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

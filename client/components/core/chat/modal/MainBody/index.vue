@@ -5,14 +5,17 @@
         text="Hello! How can we help you?"
       />
     </div>
+
     <div class="main-body__my-message">
       <MyMessage />
     </div>
+
     <div v-if="isShowDmMessage">
       <DmMessage
         :text="text"
       />
     </div>
+
     <div
       v-else
       class="main-body__buttons"

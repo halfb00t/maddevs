@@ -19,6 +19,7 @@
         @click.self="onClose"
       />
     </div>
+
     <div v-if="showMainBody">
       <MainBody
         :is-show-dm-message="isShowDmMessage"
@@ -26,9 +27,12 @@
       />
     </div>
     <div
-      v-else-if="showSWDevelopmentBody"
+      v-else-if="showDevelopmentBody"
     >
-      <Development :is-company="isCompany" />
+      <Development
+        :is-company="isCompany"
+        :is-partnership="isPartnership"
+      />
     </div>
   </section>
 </template>
@@ -48,9 +52,10 @@ export default {
   data() {
     return {
       showMainBody: true,
-      showSWDevelopmentBody: false,
-      isCompany: null,
-      isShowDmMessage: null,
+      showDevelopmentBody: false,
+      isCompany: false,
+      isShowDmMessage: false,
+      isPartnership: false,
     }
   },
 
@@ -60,21 +65,27 @@ export default {
     },
 
     changeModal(e) {
+      // checking first button ('Software development')
       if (+e.target.id === 1) {
         this.showMainBody = false
-        this.showSWDevelopmentBody = true
+        this.showDevelopmentBody = true
         this.isCompany = true
+        this.isPartnership = false
       }
+      // checking second button ('Partnership')
       if (+e.target.id === 2) {
         this.showMainBody = false
-        this.showSWDevelopmentBody = true
+        this.showDevelopmentBody = true
         this.isCompany = false
+        this.isPartnership = true
       }
+      // checking third button ('getting link')
       if (+e.target.id === 3) {
         this.showMainBody = true
         this.isShowDmMessage = true
-        this.showSWDevelopmentBody = false
+        this.showDevelopmentBody = false
         this.isCompany = false
+        this.isPartnership = false
       }
     },
   },

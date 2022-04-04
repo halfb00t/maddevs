@@ -13,13 +13,10 @@
       class-name="chat-form"
       button-label="Contact me"
       :use-company="isCompany"
-      :use-labels="true"
-      :use-description="false"
-      :use-interest-radio-input="false"
-      :interest-radio-input-required="false"
-      :default-interest-radio-input="false"
+      :default-interest-radio-input="true"
       button-class-name="ui-button--transparent-bgc ui-button_submit-button-footer"
       button-id-name="chat_button"
+      :is-partnership="isPartnership"
       @submit="handleSubmit"
     />
     <div
@@ -43,12 +40,17 @@ export default {
     FormSuccess,
   },
 
-  mixins: [createLeadMixin(305480, 'Contact Me')],
+  mixins: [createLeadMixin(763813, 'Chat Form')],
 
   props: {
     isCompany: {
       type: Boolean,
       required: true,
+    },
+
+    isPartnership: {
+      type: Boolean,
+      default: () => false,
     },
   },
 
@@ -62,7 +64,6 @@ export default {
   methods: {
     handleSubmit(formData) {
       const recaptcha = window.grecaptcha
-
       recaptcha.ready(() => {
         recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(token => {
           const variables = {
