@@ -80,6 +80,11 @@ export default {
   display: flex;
   align-items: center;
   border: 1px solid $border-color--grey-pale;
+  user-select: none; /* standard syntax */
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
 
   &__message {
     position: relative;
@@ -129,9 +134,6 @@ export default {
 
     &:hover {
       cursor: pointer;
-      .chat-header__close:before, .chat-header__close:after {
-        background-color: $bgcolor--grey-selected;
-      }
     }
 
     &:before, &:after {

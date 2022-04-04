@@ -4,8 +4,8 @@
       class="chat-wrapper"
       @click.stop="openModal"
     >
-      <div class="chat-wrapper__message" />
-      <div class="chat-wrapper__arrow" />
+      <MessageIcon v-if="!isShow" />
+      <CloseIcon v-else-if="isShow" />
     </div>
     <div
       v-if="isShow"
@@ -20,12 +20,16 @@
 
 <script>
 import ChatModal from '@/components/core/chat/modal'
+import MessageIcon from '@/components/core/chat/MessageIcon'
+import CloseIcon from '@/components/core/chat/CloseIcon.vue'
 
 export default {
   name: 'ChatIcon',
 
   components: {
     ChatModal,
+    MessageIcon,
+    CloseIcon,
   },
 
   data() {
@@ -44,11 +48,11 @@ export default {
 
   methods: {
     openModal() {
-      this.isShow = true
+      this.isShow = !this.isShow
     },
 
     closeModal() {
-      this.isShow = false
+      this.isShow = !this.isShow
     },
 
     onKeydown(e) {
@@ -73,28 +77,6 @@ export default {
   &:hover {
     background-color: $text-color--ruddy;
     transition: all .2s;
-  }
-
-  &__message {
-    width: 28px;
-    height: 22px;
-    background: $bgcolor--white-primary;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 3px;
-  }
-
-  &__arrow {
-    width: 0;
-    height: 0;
-    border-top: 12px solid transparent;
-    border-bottom: 11px solid transparent;
-    border-right: 15px solid $border-color--white;
-    position: absolute;
-    top: 42%;
-    left: 35%;
   }
 }
 
