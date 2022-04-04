@@ -2902,6 +2902,161 @@
           }
         }
       },
+      "ebook_page_cards_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "ebook_page_cards_slice",
+        "name": "EbookPageCardsSlice",
+        "description": "EbookPageCardsSlice",
+        "model": {
+          "id": "ebook_page_cards_slice",
+          "type": "SharedSlice",
+          "name": "EbookPageCardsSlice",
+          "description": "EbookPageCardsSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "EbookPageCardsSlice",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+                  }
+                },
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
+                "btnText": {
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "btnLink": {
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container Size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "data": {
+                  "config": {
+                    "label": "Link to Ebook Page",
+                    "customtypes": [
+                      "custom_page"
+                    ],
+                    "select": "document"
+                  },
+                  "type": "Link"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "ebook_page_cards_slice",
+            "items": [
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Synergize leading-edge blockchains",
+                  "spans": []
+                }
+              ],
+              "animation": "fade-left",
+              "btnText": "aggregate turn-key e-tailers",
+              "btnLink": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              },
+              "containerSize": "1026"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/EbookPageCardsSlice/default-slice/preview.png",
+            "width": 696,
+            "height": 449
+          }
+        }
+      },
       "embed_slice": {
         "library": "client/prismicSlices/pageParts",
         "id": "embed_slice",
