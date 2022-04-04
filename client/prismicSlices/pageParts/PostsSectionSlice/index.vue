@@ -38,6 +38,7 @@
   <EbookPostsSectionSlice
     v-else-if="slice.variation === 'ebookPostsSectionSlice'"
     :slice="slice"
+    :posts="posts"
   />
 </template>
 
@@ -78,7 +79,7 @@ export default {
 
   watch: {
     async posts() {
-      if (this.posts && this.posts.length) {
+      if (this.posts && this.posts.length && this.slice?.variation !== 'ebookPostsSectionSlice') {
         const authorIDs = this.posts.map(result => result.data.post_author.id)
         const postsAuthors = await this.getPrismicData(authorIDs)
         this.authors = postsAuthors.map(author => extractAuthorData(author))

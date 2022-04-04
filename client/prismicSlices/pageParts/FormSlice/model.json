@@ -34,6 +34,13 @@
             "placeholder": "Example: pdf/ebook-name.pdf"
           },
           "type": "Text"
+        },
+        "bookName": {
+          "config": {
+            "label": "Book Name For Email",
+            "placeholder": "Like: Pricing Strategies"
+          },
+          "type": "Text"
         }
       },
       "items": {}

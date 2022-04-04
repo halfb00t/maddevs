@@ -19,10 +19,11 @@
         alt="Pricing strategies"
       >
       <h2 class="modal-content__title">
-        Get your copy of “{{ ebookName }}”
+        Get your copy of “{{ ebookTitle }}”
       </h2>
       <ReadForm
         :ebook-path="ebookPath"
+        :book-name="bookName"
         @form-sended="handleSendedForm"
       />
     </div>
@@ -59,12 +60,17 @@ export default {
       default: '',
     },
 
-    ebookName: {
+    ebookTitle: {
       type: String,
       default: '',
     },
 
     ebookPath: {
+      type: String,
+      default: '',
+    },
+
+    bookName: {
       type: String,
       default: '',
     },

@@ -11,6 +11,7 @@
         <EbookForm
           class="form-slice__item"
           :ebook-path="bookPath"
+          :book-name="bookName"
         />
         <div class="form-slice__item-img">
           <img
@@ -52,6 +53,7 @@ export default {
       title: this.slice?.primary?.title,
       image: this.slice?.primary?.image,
       bookPath: this.slice?.primary?.bookPath,
+      bookName: this.slice?.primary?.bookName,
     }
   },
 

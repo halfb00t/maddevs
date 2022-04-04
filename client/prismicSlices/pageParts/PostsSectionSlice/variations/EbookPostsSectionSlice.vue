@@ -17,7 +17,7 @@
         >
           <div
             v-for="(post, i) in posts.slice(0, 6)"
-            :key="i"
+            :key="`${post.data.title[0].text}-${i}`"
             class="ebook-posts__item"
           >
             <PostCard
@@ -32,7 +32,7 @@
           >
             <div
               v-for="(post, i) in posts.slice(6)"
-              :key="i"
+              :key="`${post.data.title[0].text}-${i}`"
               class="ebook-posts__item"
             >
               <PostCard
@@ -89,13 +89,17 @@ export default {
       required: true,
       default: () => ({}),
     },
+
+    posts: {
+      type: Array,
+      default: () => ([]),
+    },
   },
 
   data() {
     return {
       title: this.slice?.primary?.title,
       animation: this.slice?.primary?.animation,
-      posts: [],
       showMore: false,
     }
   },
@@ -108,16 +112,7 @@ export default {
     },
   },
 
-  async mounted() {
-    const postIDs = this.slice.items?.map(item => item.data.id)
-    if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
-  },
-
   methods: {
-    async getPrismicData(ids) {
-      const response = await this.$prismic.api.getByIDs(ids)
-      return response.results
-    },
 
     htmlSerializer(type, element, content, children) {
       const { Elements } = this.$prismic.dom.RichText

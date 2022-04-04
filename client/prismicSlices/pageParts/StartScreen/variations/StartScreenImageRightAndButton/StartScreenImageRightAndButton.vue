@@ -29,7 +29,7 @@
         >
           <div class="start-screen-slice__titles-wrapper">
             <PrismicRichText
-              v-if="title"
+              v-if="title[0].text"
               :field="title"
               data-testid="start-screen-slice__title"
               class="start-screen-slice__title"
@@ -37,7 +37,7 @@
             />
           </div>
           <PrismicRichText
-            v-if="subtitle"
+            v-if="subtitle[0].text"
             data-testid="start-screen-slice__subtitle"
             class="start-screen-slice__subtitle"
             :field="subtitle"
@@ -76,8 +76,9 @@
     <ModalEbook
       id="sent-ebook"
       ref="modalEbook"
-      :ebook-name="title[0].text"
+      :ebook-title="title[0].text"
       :ebook-path="ebookPath"
+      :book-name="bookName"
     />
   </section>
 </template>
@@ -122,6 +123,7 @@ export default {
       btnLink: this.slice?.primary?.btnLink,
       modal: this.slice?.primary?.modal,
       ebookPath: this.slice?.primary?.bookPath,
+      bookName: this.slice?.primary?.bookName,
     }
   },
 
