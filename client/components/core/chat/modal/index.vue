@@ -19,25 +19,29 @@
         @click.self="onClose"
       />
     </div>
-
-    <div v-if="showMainBody">
+    <Simplebar
+      v-if="showMainBody"
+      class="modal_content"
+    >
       <MainBody
         :is-show-dm-message="isShowDmMessage"
         @changeModal="changeModal"
       />
-    </div>
-    <div
+    </Simplebar>
+    <Simplebar
       v-else-if="showDevelopmentBody"
+      class="modal_content"
     >
       <Development
         :is-company="isCompany"
         :is-partnership="isPartnership"
       />
-    </div>
+    </Simplebar>
   </section>
 </template>
 
 <script>
+import Simplebar from 'simplebar-vue'
 import MainBody from '@/components/core/chat/modal/MainBody'
 import Development from '@/components/core/chat/modal/DevelopmentBody'
 
@@ -47,6 +51,7 @@ export default {
   components: {
     MainBody,
     Development,
+    Simplebar,
   },
 
   data() {
@@ -175,5 +180,11 @@ export default {
       transform: rotate(-45deg);
     }
   }
+}
+
+.modal_content {
+  max-height: calc(80vh - 150px);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 </style>
