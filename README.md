@@ -28,7 +28,6 @@
 - [🏳️ Feature Flags](#%EF%B8%8F-feature-flags)
 - [🔥 SEO-Analyzer](#-seo-analyzer)
 - [🗄 Prismic](#-prismic)
-- [📻 Radiator](#-radiator)
 - [👐 Additional docs](#-additional-docs)
 
 ## ⚡️ Quick development start
@@ -530,23 +529,6 @@ npm run storybook
 [Edit code of created slice in the project filesystem](https://prismic.io/docs/technologies/update-and-style-components-nuxtjs)
 
 [Push created slice to prismic from slices builder dashboard](https://prismic.io/docs/technologies/send-slices-screenshots-prismic-nuxtjs)
-
-## 📻 Radiator
-
-Advanced tool for collect core metrics from analytics and pagespeed and send it to our slack/telegram channels.
-
-### Configure
-
-For configure a radiator you need to go to the `server/radiator/index.js` file and change some configurations or create your own.
-Additional info about configuration you can see in the [official radiator repo](https://github.com/maddevsio/mad-radiator)
-
-### Running
-
-Radiator runs on staging by default(using Feature Flags) but you can run it manually using the following command:
-
-```bash
-node server/radiator
-```
 
 ## 👐 Additional docs
 
