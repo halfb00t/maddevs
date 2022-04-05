@@ -28,7 +28,6 @@
 - [🏳️ Feature Flags](#%EF%B8%8F-feature-flags)
 - [🔥 SEO-Analyzer](#-seo-analyzer)
 - [🗄 Prismic](#-prismic)
-- [📻 Radiator](#-radiator)
 - [👐 Additional docs](#-additional-docs)
 
 ## ⚡️ Quick development start
@@ -163,26 +162,6 @@ A list of environment variables that needed to start the project(required)
 | RECAPTCHA_SECRET_KEY                 | ReCaptcha secret key                                |
 
 All of these variables must be added to the Heroku hosting
-
-### For radiator
-
-Not required in dev mode
-
-| NAME                       | DESCRIPTION       |
-| -------------------------- | ----------------- |
-| RADIATOR_AUTH_TYPE         | Google auth key   |
-| RADIATOR_PROJECT_ID        | Google auth key   |
-| RADIATOR_PRIVATE_KEY_ID    | Google auth key   |
-| RADIATOR_PRIVATE_KEY       | Google auth key   |
-| RADIATOR_CLIENT_EMAIL      | Google auth key   |
-| RADIATOR_CLIENT_ID         | Google auth key   |
-| RADIATOR_AUTH_URI          | Google auth key   |
-| RADIATOR_TOKEN_URI         | Google auth key   |
-| RADIATOR_PROVIDER_CERT_URL | Google auth key   |
-| RADIATOR_CLIENT_CERT_URL   | Google auth key   |
-| RADIATOR_WEBHOOK_URL       | Slack webhook url |
-| RADIATOR_GOOGLEAPIS_KEY    | Googleapis key    |
-| RADIATOR_TELEGRAM_TOKEN    | Telegram token    |
 
 ## ✍️ Code review
 
@@ -530,23 +509,6 @@ npm run storybook
 [Edit code of created slice in the project filesystem](https://prismic.io/docs/technologies/update-and-style-components-nuxtjs)
 
 [Push created slice to prismic from slices builder dashboard](https://prismic.io/docs/technologies/send-slices-screenshots-prismic-nuxtjs)
-
-## 📻 Radiator
-
-Advanced tool for collect core metrics from analytics and pagespeed and send it to our slack/telegram channels.
-
-### Configure
-
-For configure a radiator you need to go to the `server/radiator/index.js` file and change some configurations or create your own.
-Additional info about configuration you can see in the [official radiator repo](https://github.com/maddevsio/mad-radiator)
-
-### Running
-
-Radiator runs on staging by default(using Feature Flags) but you can run it manually using the following command:
-
-```bash
-node server/radiator
-```
 
 ## 👐 Additional docs
 
