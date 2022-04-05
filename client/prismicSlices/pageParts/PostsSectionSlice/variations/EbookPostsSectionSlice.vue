@@ -1,8 +1,11 @@
 <template>
   <section class="ebook-posts">
-    <div class="container">
+    <div
+      class="container"
+      :style="`max-width: ${containerSize || '1026'}px`"
+    >
       <PrismicRichText
-        v-if="title"
+        v-if="$prismic.asText(title)"
         :field="slice.primary.title"
         class="ebook-posts__title"
         :html-serializer="serializer"
@@ -10,10 +13,10 @@
       />
       <div
         class="ebook-posts__wrapper"
-        :data-aos="animation"
+        :data-aos="animation || 'fade-up'"
       >
         <template
-          v-if="posts"
+          v-if="posts.length"
         >
           <div
             v-for="(post, i) in posts.slice(0, 6)"
@@ -101,6 +104,7 @@ export default {
       title: this.slice?.primary?.title,
       animation: this.slice?.primary?.animation,
       showMore: false,
+      containerSize: this.slice?.primary?.containerSize,
     }
   },
 

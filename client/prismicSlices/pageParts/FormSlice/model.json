@@ -20,6 +20,41 @@
             "single": "heading1,heading2,heading3,heading4,heading5,heading6"
           }
         },
+        "containerSize": {
+          "config": {
+            "label": "Container size",
+            "placeholder": "",
+            "options": [
+              "1026",
+              "1240"
+            ],
+            "default_value": "1026"
+          },
+          "type": "Select"
+        },
+        "animation": {
+          "config": {
+            "label": "Animation List",
+            "placeholder": "",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-right",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-down",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ],
+            "default_value": "fade-up"
+          },
+          "type": "Select"
+        },
         "image": {
           "config": {
             "label": "Book image",

@@ -1,13 +1,20 @@
 <template>
   <section class="form-slice">
-    <div class="container">
+    <div
+      class="container"
+      :style="`max-width: ${containerSize || '1026'}px`"
+    >
       <PrismicRichText
-        v-if="title"
+        v-if="$prismic.asText(title)"
         :field="slice.primary.title"
         class="form-slice__title"
         :html-serializer="serializer"
+        :data-aos="animation || 'fade-up'"
       />
-      <div class="form-slice__items">
+      <div
+        class="form-slice__items"
+        :data-aos="animation || 'fade-up'"
+      >
         <EbookForm
           class="form-slice__item"
           :ebook-path="bookPath"
@@ -30,7 +37,7 @@
 
 <script>
 import convertTagsToText from '@/helpers/convertTagsToText'
-import EbookForm from '@/prismicSlices/pageParts/FormSlice/variations/EbookForm'
+import EbookForm from '@/components/slices/EbookForm'
 
 export default {
   name: 'FormSlice',
@@ -54,6 +61,8 @@ export default {
       image: this.slice?.primary?.image,
       bookPath: this.slice?.primary?.bookPath,
       bookName: this.slice?.primary?.bookName,
+      animation: this.slice?.primary.animation,
+      containerSize: this.slice?.primary?.containerSize,
     }
   },
 

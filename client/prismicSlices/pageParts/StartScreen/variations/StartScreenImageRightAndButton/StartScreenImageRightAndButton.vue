@@ -29,7 +29,7 @@
         >
           <div class="start-screen-slice__titles-wrapper">
             <PrismicRichText
-              v-if="title[0].text"
+              v-if="$prismic.asText(title)"
               :field="title"
               data-testid="start-screen-slice__title"
               class="start-screen-slice__title"
@@ -37,7 +37,7 @@
             />
           </div>
           <PrismicRichText
-            v-if="subtitle[0].text"
+            v-if="$prismic.asText(subtitle)"
             data-testid="start-screen-slice__subtitle"
             class="start-screen-slice__subtitle"
             :field="subtitle"
@@ -76,7 +76,7 @@
     <ModalEbook
       id="sent-ebook"
       ref="modalEbook"
-      :ebook-title="title[0].text"
+      :ebook-title="$prismic.asText(title)"
       :ebook-path="ebookPath"
       :book-name="bookName"
     />

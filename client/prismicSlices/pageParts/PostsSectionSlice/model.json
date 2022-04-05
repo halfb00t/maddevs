@@ -99,6 +99,18 @@
             "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
           },
           "type": "StructuredText"
+        },
+        "containerSize": {
+          "config": {
+            "label": "Container size",
+            "placeholder": "",
+            "options": [
+              "1026",
+              "1240"
+            ],
+            "default_value": "1026"
+          },
+          "type": "Select"
         }
       },
       "items": {

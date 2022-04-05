@@ -1,12 +1,17 @@
 <template>
   <section class="section cards-with-icons">
-    <div class="cards-with-icons__wrapper container">
+    <div
+      class="cards-with-icons__wrapper container"
+      :data-aos="animation || 'fade-up'"
+      :style="`max-width: ${containerSize || '1240'}px`"
+    >
       <div
         v-for="(item, i) of items"
         :key="i"
         class="cards-with-icons__item"
       >
         <img
+          v-if="item.iconImage.url"
           v-lazy-load
           :data-src="item.iconImage.url"
           width="54"
@@ -15,7 +20,7 @@
           class="cards-with-icons__item-icon"
         >
         <PrismicRichText
-          v-if="item.title"
+          v-if="$prismic.asText(item.title)"
           :field="item.title"
           data-testid="cards-with-icons__item-title"
           class="cards-with-icons__item-title"
@@ -48,6 +53,8 @@ export default {
   data() {
     return {
       items: this.slice?.items,
+      animation: this.slice?.primary?.animation,
+      containerSize: this.slice?.primary?.containerSize,
     }
   },
 

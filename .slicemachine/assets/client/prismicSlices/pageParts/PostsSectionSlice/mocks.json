@@ -8,11 +8,18 @@
         "theme": "light",
         "data": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://slicemachine.dev"
         }
       },
       {
-        "theme": "dark",
+        "theme": "light",
+        "data": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "theme": "light",
         "data": {
           "link_type": "Web",
           "url": "https://prismic.io"
@@ -29,14 +36,7 @@
         "theme": "light",
         "data": {
           "link_type": "Web",
-          "url": "https://prismic.io"
-        }
-      },
-      {
-        "theme": "dark",
-        "data": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
+          "url": "http://twitter.com"
         }
       }
     ],
@@ -53,14 +53,14 @@
         "theme": "light",
         "data": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
         }
       },
       {
         "theme": "light",
         "data": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
         }
       },
       {
@@ -69,31 +69,18 @@
           "link_type": "Web",
           "url": "https://prismic.io"
         }
-      },
-      {
-        "theme": "light",
-        "data": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "theme": "light",
-        "data": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
       }
     ],
     "primary": {
-      "animation": "fade-up",
+      "animation": "fade-right",
       "title": [
         {
           "type": "heading1",
-          "text": "Brand sticky functionalities",
+          "text": "Strategize turn-key networks",
           "spans": []
         }
-      ]
+      ],
+      "containerSize": "1026"
     }
   }
 ]

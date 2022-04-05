@@ -1624,7 +1624,43 @@
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
               "description": "CardsWithIcon",
-              "primary": {},
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation List",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container Size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
+                }
+              },
               "items": {
                 "iconImage": {
                   "config": {
@@ -1668,16 +1704,16 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
                 },
                 "title": [
                   {
                     "type": "heading1",
-                    "text": "Integrate proactive metrics",
+                    "text": "Deliver strategic deliverables",
                     "spans": []
                   }
                 ],
-                "description": "envisioneer interactive synergies"
+                "description": "grow front-end schemas"
               },
               {
                 "iconImage": {
@@ -1687,19 +1723,79 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
                 },
                 "title": [
                   {
                     "type": "heading1",
-                    "text": "Engage B2B platforms",
+                    "text": "Seize best-of-breed e-commerce",
                     "spans": []
                   }
                 ],
-                "description": "cultivate real-time e-commerce"
+                "description": "brand sexy markets"
+              },
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Extend viral web-readiness",
+                    "spans": []
+                  }
+                ],
+                "description": "integrate dynamic blockchains"
+              },
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Transform interactive niches",
+                    "spans": []
+                  }
+                ],
+                "description": "extend ubiquitous networks"
+              },
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Aggregate next-generation vortals",
+                    "spans": []
+                  }
+                ],
+                "description": "innovate customized portals"
               }
             ],
-            "primary": {}
+            "primary": {
+              "animation": "zoom-in",
+              "containerSize": "1240"
+            }
           }
         },
         "meta": {
@@ -3240,6 +3336,41 @@
                     "single": "heading1,heading2,heading3,heading4,heading5,heading6"
                   }
                 },
+                "containerSize": {
+                  "config": {
+                    "label": "Container size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
+                },
+                "animation": {
+                  "config": {
+                    "label": "Animation List",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
                 "image": {
                   "config": {
                     "label": "Book image",
@@ -3277,10 +3408,12 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Grow end-to-end architectures",
+                  "text": "Incubate next-generation architectures",
                   "spans": []
                 }
               ],
+              "containerSize": "1026",
+              "animation": "zoom-in",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -3288,10 +3421,10 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
               },
-              "bookPath": "strategize integrated content",
-              "bookName": "generate open-source solutions"
+              "bookPath": "extend dot-com methodologies",
+              "bookName": "engineer best-of-breed interfaces"
             }
           }
         },
@@ -4474,6 +4607,18 @@
                     "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
                   },
                   "type": "StructuredText"
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
                 }
               },
               "items": {
@@ -4514,11 +4659,18 @@
                 "theme": "light",
                 "data": {
                   "link_type": "Web",
-                  "url": "http://google.com"
+                  "url": "https://slicemachine.dev"
                 }
               },
               {
-                "theme": "dark",
+                "theme": "light",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "theme": "light",
                 "data": {
                   "link_type": "Web",
                   "url": "https://prismic.io"
@@ -4535,14 +4687,7 @@
                 "theme": "light",
                 "data": {
                   "link_type": "Web",
-                  "url": "https://prismic.io"
-                }
-              },
-              {
-                "theme": "dark",
-                "data": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
+                  "url": "http://twitter.com"
                 }
               }
             ],
@@ -4559,14 +4704,14 @@
                 "theme": "light",
                 "data": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://twitter.com"
                 }
               },
               {
                 "theme": "light",
                 "data": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://twitter.com"
                 }
               },
               {
@@ -4575,31 +4720,18 @@
                   "link_type": "Web",
                   "url": "https://prismic.io"
                 }
-              },
-              {
-                "theme": "light",
-                "data": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                }
-              },
-              {
-                "theme": "light",
-                "data": {
-                  "link_type": "Web",
-                  "url": "http://google.com"
-                }
               }
             ],
             "primary": {
-              "animation": "fade-up",
+              "animation": "fade-right",
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Brand sticky functionalities",
+                  "text": "Strategize turn-key networks",
                   "spans": []
                 }
-              ]
+              ],
+              "containerSize": "1026"
             }
           }
         },
