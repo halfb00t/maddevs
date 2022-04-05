@@ -1,22 +1,97 @@
 /* eslint-disable no-shadow */
+import { getFooterContent } from '@/api/footer'
+
+const extractFooterSection = async (prismic, footerContent = {}, navSection) => {
+  let menus = []
+
+  // Get blog post data for Footer sections
+  const getLink = () => {
+    const link = footerContent.body
+      .find(item => item.primary?.nav_section.toLowerCase() === navSection)
+    return link?.primary?.link[0]?.text
+  }
+
+  menus = footerContent.body
+    .filter(slice => slice.primary?.nav_section.toLowerCase() === navSection)
+    .map(slice => ({
+      name: slice.primary?.name,
+      routes: slice.items,
+    }))
+
+  return {
+    name: navSection,
+    link: getLink(),
+    menus,
+  }
+}
+
 export const state = () => ({
-  showFooter: true,
+  footerMainNavigation: {},
+  footerContacts: {},
+  footerIsLoaded: false,
 })
 
 export const mutations = {
-  SHOW_FOOTER(state, data) {
-    state.showFooter = data
+  SET_FOOTER_MAIN_NAVIGATION(state, footerContent) {
+    state.footerMainNavigation = footerContent
+    console.log('SET_FOOTER_MAIN_NAVIGATION')
+  },
+  SET_FOOTER_CONTACTS(state, footerContent) {
+    state.footerContacts = footerContent
+  },
+  SET_FOOTER_STATUS(state) {
+    state.footerIsLoaded = true
+    console.log('SET_FOOTER_STATUS')
   },
 }
 
 export const actions = {
-  showFooter({ commit }, data) {
-    commit('SHOW_FOOTER', data)
+  async getFooterContent({ commit }) {
+    const footerContent = await getFooterContent(this.$prismic)
+    const company = await extractFooterSection(this.$prismic, footerContent, 'company')
+    const services = await extractFooterSection(this.$prismic, footerContent, 'services')
+    const industries = await extractFooterSection(this.$prismic, footerContent, 'industries')
+    const clients = await extractFooterSection(this.$prismic, footerContent, 'clients')
+    const insights = await extractFooterSection(this.$prismic, footerContent, 'insights')
+    const contacts = {
+      email: footerContent.email,
+      emailTitle: footerContent.emailTitle,
+      phoneNumber: footerContent.phoneNumber,
+      phoneNumberTitle: footerContent.phoneNumberTitle,
+    }
+
+    commit('SET_FOOTER_MAIN_NAVIGATION', {
+      company,
+      services,
+      industries,
+      clients,
+      insights,
+    })
+
+    commit('SET_FOOTER_CONTACTS', {
+      ...contacts,
+    })
+
+    commit('SET_FOOTER_STATUS')
+    console.log('end getters methods')
   },
+  // setFooterContacts({ commit }, contacts) {
+  //   commit('SET_FOOTER_CONTACTS', contacts)
+  // }, todo delete this
 }
 
 export const getters = {
-  showFooter(state) {
-    return state.showFooter
+  footerContacts(state) {
+    console.log('getter footer content')
+
+    return state.footerContacts
+  },
+  footerMainNavigation(state) {
+    console.log('get footer main navigations')
+    return state.footerMainNavigation
+  },
+  footerIsLoaded(state) {
+    console.log('get footer status')
+    return state.footerIsLoaded
   },
 }

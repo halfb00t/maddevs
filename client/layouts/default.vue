@@ -1,26 +1,29 @@
 <template>
   <div class="default-layout">
-    <HeaderV2 />
-    <Nuxt class="main-section" />
-    <ClientOnly>
-      <CookieNotice />
-    </ClientOnly>
-    <Footer v-if="showFooter" />
+    <!--    <HeaderV2 />-->
+    <!--    <Nuxt class="main-section" />-->
+    <!--    <ClientOnly>-->
+    <!--      <CookieNotice />-->
+    <!--    </ClientOnly>-->
+    <!--    todo undo this changes -->
+    <div style="height: 300px; background: white;">
+      spacer
+    </div>
+    <Footer
+      v-if="true"
+      style=" border: 3px solid red"
+    />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import HeaderV2 from '@/components/core/HeaderV2'
-import Footer from '@/components/core/Footer/Footer'
-import CookieNotice from '@/components/core/CookieNotice'
+import Footer from '@/components/core/FooterV2/Footer'
 import { getNotAllowedRoutes } from '../../utils/getNotAllowedRoutes'
 
 export default {
   name: 'Default',
   components: {
-    CookieNotice,
-    HeaderV2,
     Footer,
   },
 
