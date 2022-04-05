@@ -163,26 +163,6 @@ A list of environment variables that needed to start the project(required)
 
 All of these variables must be added to the Heroku hosting
 
-### For radiator
-
-Not required in dev mode
-
-| NAME                       | DESCRIPTION       |
-| -------------------------- | ----------------- |
-| RADIATOR_AUTH_TYPE         | Google auth key   |
-| RADIATOR_PROJECT_ID        | Google auth key   |
-| RADIATOR_PRIVATE_KEY_ID    | Google auth key   |
-| RADIATOR_PRIVATE_KEY       | Google auth key   |
-| RADIATOR_CLIENT_EMAIL      | Google auth key   |
-| RADIATOR_CLIENT_ID         | Google auth key   |
-| RADIATOR_AUTH_URI          | Google auth key   |
-| RADIATOR_TOKEN_URI         | Google auth key   |
-| RADIATOR_PROVIDER_CERT_URL | Google auth key   |
-| RADIATOR_CLIENT_CERT_URL   | Google auth key   |
-| RADIATOR_WEBHOOK_URL       | Slack webhook url |
-| RADIATOR_GOOGLEAPIS_KEY    | Googleapis key    |
-| RADIATOR_TELEGRAM_TOKEN    | Telegram token    |
-
 ## ✍️ Code review
 
 We're have a special "Code Review Regulation" document that help us to review our code more better and professional.
