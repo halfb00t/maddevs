@@ -12,6 +12,9 @@
       @mouseenter="setActiveColumn(navigation[0].name)"
       @mouseleave="setActiveColumn()"
     >
+      <!--      <li class="footer-sub-navigation__separator-list-item">-->
+      <!--        <hr class="footer-sub-navigation__separator">-->
+      <!--      </li>-->
       <li
         v-for="{name, label} in navigation"
         :key="label"
@@ -19,10 +22,13 @@
         :class="[ `footer-navigation__column-${name}`]"
       >
         <span
+          class="footer-main-navigation__column-title"
           @click="goTo(name)"
         >
           {{ name }}
         </span>
+        <hr class="footer-sub-navigation__separator">
+
         <FooterNavbarColumn
           v-if="footerMainNavigation[name]"
           v-bind="footerMainNavigation[name]"
@@ -78,12 +84,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer-navbar{
-  display: flex;
-  justify-content: space-between;
-}
-.footer-main-navigation {
-  display: flex;
-  flex-direction: column;
+
+.footer{
+  &-navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+  &-main-navigation {
+    display: flex;
+    flex-direction: column;
+    &__column-title{
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+  }
+  &-sub-navigation{
+    &__separator{
+      border: 1px none white;
+      border-top-style: solid;
+      margin: 15px 0;
+
+    }
+  }
 }
 </style>

@@ -60,10 +60,6 @@ export default {
   computed: {
     ...mapGetters(['footerContacts']),
   },
-
-  mounted() {
-    setInterval(console.log('mounted', this), 1000)
-  },
 }
 </script>
 

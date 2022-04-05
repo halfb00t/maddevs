@@ -3,12 +3,12 @@
     v-if="menuRoutes && menuRoutes.length"
     class="footer-menu"
   >
-    <p
+    <h5
       v-if="menuName"
       class="footer-menu__name"
     >
       {{ menuName }}
-    </p>
+    </h5>
     <ul class="footer-menu__list">
       <li
         v-for="{ label, link } in menuRoutes"
@@ -62,7 +62,6 @@ export default {
     extractMenuLink,
 
     goToPage() {
-      console.log('go to page')
       this.$root.$emit('changed-page')
     },
   },
@@ -70,5 +69,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.footer-menu__item a {
+  color: $text-color--white-primary;
+  font-size: 12px;
+  text-transform: capitalize;
+}
 
+.footer-menu {
+  margin-bottom: 20px;
+  &__name {
+    color: $text-color--grey-pale;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    font-weight: normal;
+  }
+}
 </style>

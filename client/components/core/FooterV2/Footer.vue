@@ -1,8 +1,9 @@
-<template v-if="footerStatus">
+<template>
   <footer :class="`footer ${pageName}`">
     <div class="container">
       <div
         id="footer__top-line"
+        class="footer__top-line"
       />
       <div class="footer__animated-icons">
         <div
@@ -111,15 +112,13 @@ export default {
 
   watch: {
     footerIsLoaded(enabled, disabled) {
-      console.log('\n\n\n\n\n\n\n\n')
       if (enabled) {
-        setTimeout(() => { // todo это какой то ебаный пиздец.
+        setTimeout(() => {
           this.createIcon()
-        }, 1500) // todo это какой то ебаный пиздец.
+        }, 0)
       } else {
         console.log(disabled)
       }
-      console.log('\n\n\n\n\n\n\n\n')
     },
   },
 
@@ -135,16 +134,12 @@ export default {
     ...mapActions(['getFooterContent']),
 
     createIcon() {
-      console.log('icon created')
       const company = document.querySelector('.footer-nav-column-company')
       const services = document.querySelector('.footer-nav-column-services')
       const clients = document.querySelector('.footer-nav-column-clients')
       this.footerAnimation.companyPosition = company.getBoundingClientRect()
       this.footerAnimation.servicesPosition = services.getBoundingClientRect()
       this.footerAnimation.clientsPosition = clients.getBoundingClientRect()
-      // console.log('company position left', companyPosition.left)
-      // console.log('services position left', servicesPosition.left)
-      // console.log('clients position left', clientsPosition.left)
       const blackBlock = document.querySelector('#footer__animated-black-block')
       const fire = document.querySelector('#footer__animated-icon--fire')
       const diamond = document.querySelector('#footer__animated-icon--diamond')
@@ -152,7 +147,6 @@ export default {
       fire.style.left = `${this.footerAnimation.companyPosition.left}px`
       diamond.style.left = `${this.footerAnimation.servicesPosition.left}px`
       lightning.style.left = `${this.footerAnimation.clientsPosition.left}px`
-      // console.log(`${clientsPosition.left}px`)
       blackBlock.style.left = `${this.footerAnimation.companyPosition.left - 15}px`
     },
 
@@ -162,26 +156,18 @@ export default {
         column.classList.remove('active')
         column.classList.remove('active-unselected')
       })
-      // const element = document.querySelector(`.footer-nav-column-${columnName}`)
-
       const blackBlock = document.querySelector('#footer__animated-black-block')
-      console.log(blackBlock)
       const fireIcon = document.querySelector('#footer__animated-icon--fire')
       const diamondIcon = document.querySelector('#footer__animated-icon--diamond')
       const lightning = document.querySelector('#footer__animated-icon--lightning')
-      // this.footerAnimation.companyPosition.left
-      // this.footerAnimation.servicesPosition.left
-      // this.footerAnimation.clientsPosition.left
       switch (columnName) {
         case 'company':
           fireIcon.classList.add('active')
           blackBlock.style.left = `${this.footerAnimation.companyPosition.left - 15}px`
-          console.log(this.footerAnimation.companyPosition.left - 15)
           break
         case 'services':
           diamondIcon.classList.add('active')
           blackBlock.style.left = `${this.footerAnimation.servicesPosition.left - 11}px`
-          console.log(this.footerAnimation.servicesPosition.left - 15)
           break
         case 'clients':
         case 'insights':
@@ -208,6 +194,13 @@ export default {
     padding-top: 48px;
     padding-bottom: 46px;
   }
+  &__top-line {
+    width: 100%;
+    margin: 8px 0 55px;
+    height: 1px;
+    border: 1px none rgba(236, 28, 36, .5);
+    border-top-style: solid;
+  }
 
   &__content {
     &-wrapper {
@@ -224,47 +217,43 @@ export default {
       border-left: 1px solid rgba(236, 28, 36, .5);
     }
   }
+
+  &__animated {
+    &-black-block {
+      background-color: #111213;
+      position: absolute;
+      top: 63px;
+      width: 68px;
+      height: 20px;
+      z-index: 666;
+      transition-timing-function: cubic-bezier(1, 0, .52, 1.65);
+      transition-duration: 0.7s;
+
+    }
+
+    &-icon {
+      z-index: 999;
+      transition: all .2s;
+      position: absolute;
+      top: 44px;
+      visibility: hidden;
+      opacity: 0;
+      &.active-unselected path {
+        fill: #ffffff;
+        transition: all .2s;
+      }
+
+      & path {
+        transition: all .2s;
+      }
+      &.active,
+      &.active-unselected {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.4s;
+      }
+    }
+  }
 }
 
-#footer__top-line{
-  width: 100%;
-  margin: 8px 0 55px;
-  height: 1px;
-  border: 1px none rgba(236, 28, 36, .5);
-  border-top-style: solid;
-}
-
-.footer__animated-black-block{
-  background-color: #111213;
-  position: absolute;
-  top: 63px;
-  width: 68px;
-  height: 20px;
-  z-index: 666;
-  transition-timing-function: cubic-bezier(1,0,.52,1.65);
-  transition-duration: 0.7s;
-
-}
-.footer__animated-icon path{
-  transition: all .2s;
-}
-.footer__animated-icon.active-unselected path{
-  fill: #ffffff;
-  transition: all .2s;
-}
-
-.footer__animated-icon.active,
-.footer__animated-icon.active-unselected {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0.4s;
-}
-.footer__animated-icon{
-  z-index: 999;
-  transition: all .2s;
-  position: absolute;
-  top: 44px;
-  visibility: hidden;
-  opacity: 0;
-}
 </style>

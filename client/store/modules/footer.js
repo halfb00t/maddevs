@@ -34,14 +34,12 @@ export const state = () => ({
 export const mutations = {
   SET_FOOTER_MAIN_NAVIGATION(state, footerContent) {
     state.footerMainNavigation = footerContent
-    console.log('SET_FOOTER_MAIN_NAVIGATION')
   },
   SET_FOOTER_CONTACTS(state, footerContent) {
     state.footerContacts = footerContent
   },
   SET_FOOTER_STATUS(state) {
     state.footerIsLoaded = true
-    console.log('SET_FOOTER_STATUS')
   },
 }
 
@@ -73,7 +71,6 @@ export const actions = {
     })
 
     commit('SET_FOOTER_STATUS')
-    console.log('end getters methods')
   },
   // setFooterContacts({ commit }, contacts) {
   //   commit('SET_FOOTER_CONTACTS', contacts)
@@ -82,16 +79,12 @@ export const actions = {
 
 export const getters = {
   footerContacts(state) {
-    console.log('getter footer content')
-
     return state.footerContacts
   },
   footerMainNavigation(state) {
-    console.log('get footer main navigations')
     return state.footerMainNavigation
   },
   footerIsLoaded(state) {
-    console.log('get footer status')
     return state.footerIsLoaded
   },
 }
