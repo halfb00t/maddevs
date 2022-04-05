@@ -1,45 +1,6 @@
 import axios from 'axios'
 import { getNotAllowedRoutes } from './getNotAllowedRoutes'
 
-const EXCLUDE_ROUTES = {
-  '/': 1,
-  '/gdpr': 0.7,
-  '/nda': 0.7,
-  '/privacy': 0.7,
-  '/faq': 0.7,
-}
-
-const IGNORE_ROUTES = [
-  '/tag/featured-post',
-  '/tag/copywriter',
-  '/tag/marketing',
-  '/tag/it',
-  '/tag/python',
-  '/tag/django',
-  '/tag/go',
-  '/tag/golang',
-  '/tag/ios',
-  '/tag/hr',
-  '/tag/assistant',
-  '/tag/hr-department',
-  '/tag/assistant-delivery-manager',
-  '/tag/software-features',
-  '/blog/mad-devs-devops',
-  '/blog/middle-python-developer',
-  '/blog/vue-vuetify-middle-v-saas-proekt',
-  '/blog/senior-android-developer',
-  '/blog/project-manager-v-finteh-proekt',
-  '/blog/middle-ios-developer',
-  '/blog/golang-middle-senior-developer-v-finteh-proekt',
-  '/blog/senior-ios-developer',
-  '/blog/mad-devs-ishet-senior-python-developer-v-proekt-clutch',
-  '/blog/middle-android-developer',
-  '/blog/ios-middle-senior-developer-v-finteh-proekt',
-  '/blog/it-recruiter-middle-maddevs',
-  '/blog/mad-devs-ishet-golang-razrabotchika',
-  '/mad-devs-ishet-golang-razrabotchika',
-]
-
 export const CUSTOM_PAGE_ROUTES = [
   {
     name: 'custom-page-one-slug',
@@ -83,8 +44,8 @@ const convertToSlug = text => {
 const getRoutePrefix = routePrefix => {
   if (typeof routePrefix !== 'string' || !routePrefix) return ''
   let prefix = routePrefix
-  if (prefix.charAt(prefix.length - 1) === '/') prefix = prefix.slice(0, prefix.length - 1)
-  if (prefix.charAt(0) === '/') prefix = prefix.slice(1)
+  if (prefix.endsWith('/')) prefix = prefix.slice(0, prefix.length - 1)
+  if (prefix.startsWith('/')) prefix = prefix.slice(1)
   return prefix
 }
 
@@ -96,7 +57,7 @@ const filterNotAllowedRoutes = routes => {
   return routes
 }
 
-const getRoutes = async () => {
+const getDynamicRoutes = async () => {
   // Getting data from prismic
   const prismicData = await axios.get(process.env.NODE_PRISMIC_API)
   const prismicTags = prismicData.data.tags
@@ -130,62 +91,61 @@ const getRoutes = async () => {
     .filter(post => post.type === 'custom_page' && post.data.released === true)
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
-  const routes = [
-    '/',
-    '/services',
-    '/careers',
-    '/ru/careers',
-    '/gdpr',
-    '/nda',
-    '/privacy',
-    '/faq',
-    '/case-studies/namba-food',
-    '/case-studies/sir-john-monash-centre',
-    '/case-studies/godee',
-    '/case-studies/yourcast',
-    '/case-studies/veeqo',
-    '/case-studies/clutch',
-    '/blog',
-    ...careerPageRoutes,
-    ...blogPageRoutes,
-    ...cuPageRoutes,
-    ...authorPageRoutes,
-    ...tagPageRoutes,
-    ...customPageRoutes,
-  ]
-  return filterNotAllowedRoutes(routes)
-}
-
-export default getRoutes
-
-/** The priority of the route depends on the nesting. More nesting has a lower priority
- Nesting is equal to minus 0.1 unit. Consistent with Seo * */
-const getRoutePriority = path => 1 - (((path.split('/').length) - 1) * 0.1)
-
-const generateRoute = name => {
-  if (IGNORE_ROUTES.includes(name)) return null
-
-  const priority = EXCLUDE_ROUTES[name] || getRoutePriority(name)
-
   return {
-    priority,
-    url: `${name}/`,
-    changefreq: 'daily',
-    lastmod: new Date().toISOString()
-      .split('T')[0],
+    blogPageRoutes,
+    cuPageRoutes,
+    authorPageRoutes,
+    careerPageRoutes,
+    tagPageRoutes,
+    customPageRoutes,
+  }
+}
+export const getStructuredRoutes = async () => {
+  const dynamicRoutes = await getDynamicRoutes()
+  return {
+    main: [
+      '/',
+      '/services',
+      '/careers',
+      '/ru/careers',
+      '/gdpr',
+      '/nda',
+      '/privacy',
+      '/faq',
+      '/blog',
+    ],
+    caseStudies: [
+      '/case-studies/namba-food',
+      '/case-studies/sir-john-monash-centre',
+      '/case-studies/godee',
+      '/case-studies/yourcast',
+      '/case-studies/veeqo',
+      '/case-studies/clutch',
+    ],
+    insights: [
+      '/ebooks/pricing-strategies',
+      '/open-source/',
+      ...dynamicRoutes.cuPageRoutes,
+    ],
+    blog: [
+      ...dynamicRoutes.blogPageRoutes,
+      ...dynamicRoutes.tagPageRoutes,
+    ],
+    authors: [
+      ...dynamicRoutes.authorPageRoutes,
+    ],
+    careers: [
+      ...dynamicRoutes.careerPageRoutes,
+    ],
+    services: [
+      ...dynamicRoutes.customPageRoutes,
+    ],
   }
 }
 
-export const getSitemapRoutes = async () => {
-  const sitemap = []
-  const routes = await getRoutes()
-
-  routes.forEach(route => {
-    const sitemapRoute = generateRoute(route.trim())
-    if (sitemapRoute) {
-      sitemap.push(sitemapRoute)
-    }
-  })
-
-  return sitemap
+const getRoutes = async () => {
+  const structuredRoutes = await getStructuredRoutes()
+  return filterNotAllowedRoutes(Object.values(structuredRoutes).flat())
 }
+
+export default getRoutes
