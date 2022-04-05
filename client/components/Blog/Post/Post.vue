@@ -97,10 +97,7 @@
       </div>
       <CustomerUniversityNavigation
         v-if="clusterPosts && cluster"
-        :id="id"
-        :cluster="cluster"
         :cluster-posts="clusterPosts"
-        :date="date"
       />
     </div>
     <button
@@ -495,6 +492,7 @@ export default {
 
   &__comments {
     margin-top: 70px;
+    margin-bottom: 50px;
   }
 
   &__back-to-list {

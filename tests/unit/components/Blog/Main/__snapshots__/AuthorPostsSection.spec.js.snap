@@ -30,8 +30,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -41,8 +46,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -52,8 +62,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -63,8 +78,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -74,8 +94,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -85,8 +110,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -96,8 +126,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -107,8 +142,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -118,8 +158,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -129,8 +174,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -140,8 +190,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -151,8 +206,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
         <section
@@ -162,8 +222,13 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
           <postcard-stub
             author="[object Object]"
             disableauthorlink="true"
+            height="217"
+            isshowposttags="true"
+            limit="150"
             post="[object Object]"
+            textcolor=""
             theme="light"
+            width="400"
           />
         </section>
       </div>

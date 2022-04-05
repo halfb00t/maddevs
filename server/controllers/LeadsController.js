@@ -39,7 +39,7 @@ async function create(req, res) {
   }
 
   await sendMailFromVariables(body)
-  const response = await createLead(req)
+  const response = await createLead(body)
 
   return res.json(response)
 }
