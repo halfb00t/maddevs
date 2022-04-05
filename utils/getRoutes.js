@@ -115,7 +115,11 @@ export const getStructuredRoutes = async () => {
       '/blog',
     ],
     caseStudies: [
+      '/case-studies/peklo',
       '/case-studies/namba-food',
+      '/case-studies/namba-taxi',
+      '/case-studies/citycam',
+      '/case-studies/R4TCA-web-application',
       '/case-studies/sir-john-monash-centre',
       '/case-studies/godee',
       '/case-studies/yourcast',
