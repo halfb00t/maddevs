@@ -2,8 +2,6 @@
 import { getFooterContent } from '@/api/footer'
 
 const extractFooterSection = async (prismic, footerContent = {}, navSection) => {
-  let menus = []
-
   // Get blog post data for Footer sections
   const getLink = () => {
     const link = footerContent.body
@@ -11,7 +9,7 @@ const extractFooterSection = async (prismic, footerContent = {}, navSection) => 
     return link?.primary?.link[0]?.text
   }
 
-  menus = footerContent.body
+  const menus = footerContent.body
     .filter(slice => slice.primary?.nav_section.toLowerCase() === navSection)
     .map(slice => ({
       name: slice.primary?.name,
@@ -29,6 +27,7 @@ export const state = () => ({
   footerMainNavigation: {},
   footerContacts: {},
   footerIsLoaded: false,
+  showFooter: true,
 })
 
 export const mutations = {
@@ -40,6 +39,9 @@ export const mutations = {
   },
   SET_FOOTER_STATUS(state) {
     state.footerIsLoaded = true
+  },
+  SHOW_FOOTER(state, data) {
+    state.showFooter = data
   },
 }
 
@@ -75,6 +77,9 @@ export const actions = {
   // setFooterContacts({ commit }, contacts) {
   //   commit('SET_FOOTER_CONTACTS', contacts)
   // }, todo delete this
+  showFooter({ commit }, data) {
+    commit('SHOW_FOOTER', data)
+  },
 }
 
 export const getters = {
@@ -86,5 +91,8 @@ export const getters = {
   },
   footerIsLoaded(state) {
     return state.footerIsLoaded
+  },
+  showFooter(state) {
+    return state.showFooter
   },
 }

@@ -1,17 +1,15 @@
 <template>
-  <div class="footer-navbar">
-    <p class="footer-navbar__company-name">
+  <div class="footer-subnavbar">
+    <p class="footer-subnavbar__company-name">
       © Mad Devs - {{ currentYear }}
     </p>
-    <div
-      v-for="item in staticsPagesLinks"
-      :key="item.link"
-      class="footer-navbar__nav-list"
-    >
+    <div class="footer-subnavbar__nav-list">
       <NuxtLink
+        v-for="item in staticsPagesLinks"
+        :key="item.link"
         :to="item.link"
+        class="footer-subnavbar__nav-list-item"
         target="_blank"
-        class="footer-navbar__nav-item"
       >
         {{ item.title }}
       </NuxtLink>
@@ -34,40 +32,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@mixin social-network-list-grid {
-  .footerSocialNetworkList {
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
+.footer-subnavbar {
 
-    &__social-network-link-wrapper {
-      margin: 0 -8px;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  &__company-name {
+    opacity: 0.7;
+    font-size: 12px;
+    color: #96969C;
+    @media screen and (min-width: 992px) {
+      margin-top: 105px;
+      @include font('inter', 14px, 400);
     }
   }
-}
 
-.footerSocialNetworkList {
-  display: flex;
-  justify-content: space-between;
+  &__nav {
+    &-list {
+      @media screen and (min-width: 992px) {
+        margin-top: 30px;
+      }
+    }
 
-  &__social-network-link {
-    width: 42px;
-    height: 42px;
-    display: block;
-
-    img {
-      width: 42px;
-      height: 42px;
+    &-list-item {
+      color: #96969C;
       display: block;
-      overflow: hidden;
+      @include font('inter', 14px, 400);
+      opacity: 0.7;
+
+      @media screen and (max-width: 1320px) {
+        font-size: 12px;
+      }
     }
   }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  @include social-network-list-grid;
-}
-
-@media screen and (max-width: 640px) {
-  @include social-network-list-grid;
 }
 </style>

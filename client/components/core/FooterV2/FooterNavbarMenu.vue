@@ -76,13 +76,16 @@ export default {
 }
 
 .footer-menu {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   &__name {
     color: $text-color--grey-pale;
     font-size: 12px;
     margin-bottom: 15px;
     text-transform: capitalize;
     font-weight: normal;
+  }
+  &__item{
+    margin-bottom: 8px;
   }
 }
 </style>

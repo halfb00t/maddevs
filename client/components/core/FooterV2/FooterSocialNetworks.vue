@@ -65,10 +65,6 @@ export default {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  @include social-network-list-grid;
-}
-
 @media screen and (max-width: 640px) {
   @include social-network-list-grid;
 }

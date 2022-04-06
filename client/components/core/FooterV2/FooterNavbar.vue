@@ -7,14 +7,13 @@
     <ul
       v-for="(navigation, index) in navigations"
       :key="index"
+      :ref="index === 0 ? 'footersukablya': null"
       class="footer-main-navigation"
+      :data-columnName="navigation[0].name"
       :class="`footer-nav-column-${navigation[0].name}`"
-      @mouseenter="setActiveColumn(navigation[0].name)"
-      @mouseleave="setActiveColumn()"
+      @mouseenter="setActiveColumn($event, navigation[0].name)"
+      @mouseleave="setActiveColumn($event)"
     >
-      <!--      <li class="footer-sub-navigation__separator-list-item">-->
-      <!--        <hr class="footer-sub-navigation__separator">-->
-      <!--      </li>-->
       <li
         v-for="{name, label} in navigation"
         :key="label"
@@ -68,8 +67,8 @@ export default {
   },
 
   methods: {
-    setActiveColumn(ColumnName = '') {
-      this.$emit('changed-active-column', ColumnName)
+    setActiveColumn($event, ColumnName) {
+      this.$emit('changed-active-column', $event, ColumnName)
     },
 
     goTo(name) {
@@ -85,26 +84,41 @@ export default {
 
 <style lang="scss" scoped>
 
-.footer{
+.footer {
   &-navbar {
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
   }
+
   &-main-navigation {
     display: flex;
     flex-direction: column;
-    &__column-title{
+
+    &__column-title {
       font-size: 18px;
       text-transform: capitalize;
     }
   }
-  &-sub-navigation{
-    &__separator{
-      border: 1px none white;
-      border-top-style: solid;
-      margin: 15px 0;
 
+  &-sub-navigation {
+    &__column:hover{
+      .footer-sub-navigation__separator{
+      border: 1px none rgba(236, 28, 36, .5);
+      border-top-style: solid;
+
+    }
+      .footer-main-navigation__column-title{
+        color: red;
+        transition: color .2s;
+      }
+
+    }
+    &__separator {
+      border: 1px none #707072;
+      border-top-style: solid;
+      margin: 6px 0 15px;
+      transition: border 0.2s;
     }
   }
 }

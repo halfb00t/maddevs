@@ -67,7 +67,7 @@ export default {
 
 .footer-contacts {
   &__head-content {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     flex-direction: column;
   }
 
@@ -145,7 +145,7 @@ export default {
 @media only screen and (max-width: 1320px) {
   .footer-contacts {
     &__contact-link {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
 }
@@ -199,10 +199,6 @@ export default {
 
 @media screen and (max-width: 767px) {
   .footer-contacts {
-    &__social-network-list-desktop {
-      display: none;
-    }
-
     &__contact-item {
       &:last-child {
         margin-top: 0;
@@ -231,6 +227,15 @@ export default {
 
 @media screen and (max-width: 600px) {
   .footer-contacts {
+    &__head-content {
+      flex-direction: column;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    &__lists-wrapper {
+      max-width: 100%;
+    }
     &__messengers-list {
       width: max-content;
       display: grid;

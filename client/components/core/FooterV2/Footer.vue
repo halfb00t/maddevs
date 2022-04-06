@@ -1,4 +1,4 @@
-<template>
+<template v-if="footerStatus">
   <footer :class="`footer ${pageName}`">
     <div class="container">
       <div
@@ -12,7 +12,8 @@
         />
         <div
           id="footer__animated-icon--fire"
-          class="footer__animated-icon active-unselected"
+          class="footer__animated-icon footer__animated-icon--fire"
+          :class="{ active: activeIcon === 'fire', 'active-unselected': !activeIcon }"
         >
           <svg
             width="38"
@@ -32,6 +33,7 @@
         <div
           id="footer__animated-icon--diamond"
           class="footer__animated-icon"
+          :class="{ active: activeIcon === 'diamond' }"
         >
           <svg
             width="48"
@@ -51,6 +53,7 @@
         <div
           id="footer__animated-icon--lightning"
           class="footer__animated-icon"
+          :class="{ active: activeIcon === 'lightning' }"
         >
           <svg
             width="29"
@@ -102,23 +105,17 @@ export default {
     return {
       pageName: '',
       mainNavigations,
-      footerAnimation: {},
+      activeIcon: '',
     }
   },
 
   computed: {
-    ...mapGetters(['footerMainNavigation', 'footerIsLoaded']),
-  },
+    ...mapGetters(['footerMainNavigation']),
 
-  watch: {
-    footerIsLoaded(enabled, disabled) {
-      if (enabled) {
-        setTimeout(() => {
-          this.createIcon()
-        }, 0)
-      } else {
-        console.log(disabled)
-      }
+    iconIndent() {
+      if (this.activeIcon === 'diamond') return 10
+      if (this.activeIcon === 'lightning') return 20
+      return 10
     },
   },
 
@@ -126,58 +123,29 @@ export default {
     this.getFooterContent()
   },
 
-  beforeMount() {
-    this.createIcon()
-  },
-
   methods: {
     ...mapActions(['getFooterContent']),
 
-    createIcon() {
-      const company = document.querySelector('.footer-nav-column-company')
-      const services = document.querySelector('.footer-nav-column-services')
-      const clients = document.querySelector('.footer-nav-column-clients')
-      this.footerAnimation.companyPosition = company.getBoundingClientRect()
-      this.footerAnimation.servicesPosition = services.getBoundingClientRect()
-      this.footerAnimation.clientsPosition = clients.getBoundingClientRect()
-      const blackBlock = document.querySelector('#footer__animated-black-block')
-      const fire = document.querySelector('#footer__animated-icon--fire')
-      const diamond = document.querySelector('#footer__animated-icon--diamond')
-      const lightning = document.querySelector('#footer__animated-icon--lightning')
-      fire.style.left = `${this.footerAnimation.companyPosition.left}px`
-      diamond.style.left = `${this.footerAnimation.servicesPosition.left}px`
-      lightning.style.left = `${this.footerAnimation.clientsPosition.left}px`
-      blackBlock.style.left = `${this.footerAnimation.companyPosition.left - 15}px`
+    getActiveIconByColumnName(columnName) {
+      if (!columnName) return ''
+      if (columnName === 'company') return 'fire'
+      if (columnName === 'services') return 'diamond'
+      return 'lightning'
     },
 
-    onChangeColumn(columnName) {
-      const allColumns = document.querySelectorAll('.footer__animated-icon')
-      allColumns.forEach(column => {
-        column.classList.remove('active')
-        column.classList.remove('active-unselected')
-      })
+    onChangeColumn(event, columnName) {
+      this.activeIcon = this.getActiveIconByColumnName(columnName)
       const blackBlock = document.querySelector('#footer__animated-black-block')
-      const fireIcon = document.querySelector('#footer__animated-icon--fire')
-      const diamondIcon = document.querySelector('#footer__animated-icon--diamond')
-      const lightning = document.querySelector('#footer__animated-icon--lightning')
-      switch (columnName) {
-        case 'company':
-          fireIcon.classList.add('active')
-          blackBlock.style.left = `${this.footerAnimation.companyPosition.left - 15}px`
-          break
-        case 'services':
-          diamondIcon.classList.add('active')
-          blackBlock.style.left = `${this.footerAnimation.servicesPosition.left - 11}px`
-          break
-        case 'clients':
-        case 'insights':
-        case 'industries':
-          lightning.classList.add('active')
-          blackBlock.style.left = `${this.footerAnimation.clientsPosition.left - 20}px`
-          break
-        default:
-          fireIcon.classList.add('active-unselected')
-          blackBlock.style.left = `${this.footerAnimation.companyPosition.left - 15}px`
+      const icon = document.querySelector(`#footer__animated-icon--${this.activeIcon}`)
+
+      if (columnName) {
+        const columnPositions = event.target.getBoundingClientRect()
+        blackBlock.style.left = `${columnPositions.left}px`
+        icon.style.left = `${columnPositions.left}px`
+      } else {
+        const firstColumn = document.querySelector('.footer-nav-column-company')
+        const { left } = firstColumn.getBoundingClientRect()
+        blackBlock.style.left = `${left}px`
       }
     },
   },
@@ -194,27 +162,42 @@ export default {
     padding-top: 48px;
     padding-bottom: 46px;
   }
+
   &__top-line {
     width: 100%;
     margin: 8px 0 55px;
     height: 1px;
     border: 1px none rgba(236, 28, 36, .5);
     border-top-style: solid;
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
   }
 
   &__content {
     &-wrapper {
       display: flex;
-    }
+      @media screen and (max-width: 991px) {
+        display: block;
+      }
+      }
 
     &--left-section {
       width: 66.66%;
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
     }
 
     &--right-section {
-      width: 33.33%;
-      padding-left: 60px;
-      border-left: 1px solid rgba(236, 28, 36, .5);
+      @media screen and (min-width: 992px) {
+        width: 33.33%;
+        padding-left: 60px;
+        border-left: 1px solid #A4A8B4;
+      }
+      @media screen and (min-width: 993px)  and (max-width: 1320px)  {
+        padding-left: 25px;
+      }
     }
   }
 
@@ -228,16 +211,27 @@ export default {
       z-index: 666;
       transition-timing-function: cubic-bezier(1, 0, .52, 1.65);
       transition-duration: 0.7s;
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
+    }
 
+    &-icons {
+      @media only screen and (max-width: 991px) {
+        display: none;
+      }
     }
 
     &-icon {
+      width: 68px;
       z-index: 999;
       transition: all .2s;
       position: absolute;
       top: 44px;
-      visibility: hidden;
       opacity: 0;
+      display: flex;
+      justify-content: center;
+
       &.active-unselected path {
         fill: #ffffff;
         transition: all .2s;
@@ -246,9 +240,9 @@ export default {
       & path {
         transition: all .2s;
       }
+
       &.active,
       &.active-unselected {
-        visibility: visible;
         opacity: 1;
         transition-delay: 0.4s;
       }
