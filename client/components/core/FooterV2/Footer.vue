@@ -136,20 +136,19 @@ export default {
     onChangeColumn(event, columnName) {
       this.activeIcon = this.getActiveIconByColumnName(columnName)
       const topLineSeparator = document.querySelector('#footer__animated-top-line-separator')
-      const icon = document.querySelector(`#footer__animated-icon--${this.activeIcon}`)
 
       if (columnName) {
         const columnPositions = event.target.getBoundingClientRect()
+        const icon = document.querySelector(`#footer__animated-icon--${this.activeIcon}`)
         topLineSeparator.style.left = `${columnPositions.left}px`
         icon.style.left = `${columnPositions.left}px`
       } else {
         const firstColumn = document.querySelector('.footer-nav-column-company')
-        const firstIcon = document.querySelector('#footer__animated-icon--fire')
         const { left } = firstColumn.getBoundingClientRect()
         topLineSeparator.style.left = `${left}px`
-        if (firstIcon) {
-          firstIcon.style.left = `${left}px`
-        }
+        // Handle resize case
+        const firstIcon = document.querySelector('#footer__animated-icon--fire')
+        if (firstIcon) firstIcon.style.left = `${left}px`
       }
     },
   },

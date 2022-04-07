@@ -61,8 +61,8 @@ export default {
   },
 
   methods: {
-    setActiveColumn($event, ColumnName) {
-      this.$emit('changed-active-column', $event, ColumnName)
+    setActiveColumn($event, columnName) {
+      this.$emit('changed-active-column', $event, columnName)
     },
 
     goTo(name) {
