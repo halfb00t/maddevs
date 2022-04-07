@@ -7,13 +7,13 @@
       />
       <div class="footer__animated-icons">
         <div
-          id="footer__animated-black-block"
-          class="footer__animated-black-block"
+          id="footer__animated-top-line-separator"
+          class="footer__animated-top-line-separator"
         />
         <div
           id="footer__animated-icon--fire"
           class="footer__animated-icon footer__animated-icon--fire"
-          :class="{ active: activeIcon === 'fire', 'active-unselected': !activeIcon }"
+          :class="{ 'footer__animated-icon--active': activeIcon === 'fire', 'footer__animated-icon--active-unselected': !activeIcon }"
         >
           <svg
             width="38"
@@ -33,7 +33,7 @@
         <div
           id="footer__animated-icon--diamond"
           class="footer__animated-icon"
-          :class="{ active: activeIcon === 'diamond' }"
+          :class="{ 'footer__animated-icon--active': activeIcon === 'diamond'}"
         >
           <svg
             width="48"
@@ -53,7 +53,7 @@
         <div
           id="footer__animated-icon--lightning"
           class="footer__animated-icon"
-          :class="{ active: activeIcon === 'lightning' }"
+          :class="{ 'footer__animated-icon--active': activeIcon === 'lightning'}"
         >
           <svg
             width="29"
@@ -135,17 +135,17 @@ export default {
 
     onChangeColumn(event, columnName) {
       this.activeIcon = this.getActiveIconByColumnName(columnName)
-      const blackBlock = document.querySelector('#footer__animated-black-block')
+      const topLineSeparator = document.querySelector('#footer__animated-top-line-separator')
       const icon = document.querySelector(`#footer__animated-icon--${this.activeIcon}`)
 
       if (columnName) {
         const columnPositions = event.target.getBoundingClientRect()
-        blackBlock.style.left = `${columnPositions.left}px`
+        topLineSeparator.style.left = `${columnPositions.left}px`
         icon.style.left = `${columnPositions.left}px`
       } else {
         const firstColumn = document.querySelector('.footer-nav-column-company')
         const { left } = firstColumn.getBoundingClientRect()
-        blackBlock.style.left = `${left}px`
+        topLineSeparator.style.left = `${left}px`
       }
     },
   },
@@ -202,7 +202,7 @@ export default {
   }
 
   &__animated {
-    &-black-block {
+    &-top-line-separator {
       background-color: $bgcolor--black;
       position: absolute;
       top: 63px;
@@ -232,7 +232,7 @@ export default {
       display: flex;
       justify-content: center;
 
-      &.active-unselected path {
+      &--active-unselected path {
         fill: $bgcolor--white-primary;
         transition: all .2s;
       }
@@ -241,8 +241,8 @@ export default {
         transition: all .2s;
       }
 
-      &.active,
-      &.active-unselected {
+      &--active,
+      &--active-unselected {
         opacity: 1;
         transition-delay: 0.4s;
       }

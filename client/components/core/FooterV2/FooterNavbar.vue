@@ -5,9 +5,7 @@
     <ul
       v-for="(navigation, index) in navigations"
       :key="index"
-      :ref="index === 0 ? 'footersukablya': null"
       class="footer-main-navigation"
-      :data-columnName="navigation[0].name"
       :class="`footer-nav-column-${navigation[0].name}`"
       @mouseenter="setActiveColumn($event, navigation[0].name)"
       @mouseleave="setActiveColumn($event)"
@@ -96,6 +94,7 @@ export default {
     &__column-title {
       font-size: 18px;
       text-transform: capitalize;
+      color: $text-color--white-primary;
     }
   }
 
