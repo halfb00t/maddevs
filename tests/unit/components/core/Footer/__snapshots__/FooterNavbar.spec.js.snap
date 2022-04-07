@@ -15,44 +15,7 @@ exports[`FooterNavbar component should render correctly 1`] = `
      
     <div
       class="footer-navbar__nav-list"
-    >
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/gdpr/"
-      >
-        
-      GDPR Compliance Commitment
-    
-      </nuxtlink-stub>
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/nda/"
-      >
-        
-      Non-Disclosure Agreement (NDA)
-    
-      </nuxtlink-stub>
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/privacy/"
-      >
-        
-      Privacy Policy
-    
-      </nuxtlink-stub>
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/faq/"
-      >
-        
-      FAQ
-    
-      </nuxtlink-stub>
-    </div>
+    />
   </div>
 </div>
 `;
