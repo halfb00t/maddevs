@@ -3,6 +3,14 @@ import Crumbs from '@/components/shared/Crumbs'
 
 const stubs = ['NuxtLink']
 
+/* eslint-disable class-methods-use-this */
+
+global.MutationObserver = class MutationObserver {
+  observe() {
+    return null
+  }
+}
+
 describe('Crumbs component', () => {
   it('should correctly return data, when length of array greater or equal 2', () => {
     const wrapper = shallowMount(Crumbs, {
@@ -14,7 +22,7 @@ describe('Crumbs component', () => {
       stubs,
     })
 
-    expect(wrapper.vm.crumbs).toEqual([{ to: '/blog/', title: 'Blog' }, { to: '/undefined/best-time-tracking-tools/', title: 'Best-time-tracking-tools' }])
+    expect(wrapper.vm.crumbs).toEqual([{ to: '/blog/', title: 'Blog' }, { to: '/blog/best-time-tracking-tools/', title: 'Best time tracking tools' }])
     expect(wrapper).toMatchSnapshot()
   })
 

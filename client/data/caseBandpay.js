@@ -87,13 +87,13 @@ export const coloredCardsItems = [
     },
   },
   {
-    title: 'Automate invoicing',
+    title: 'Receive payments automatically',
     image: {
       width: 160,
       height: 302,
       folder: 'bandpay',
       file: 'laptop-new',
-      alt: 'Automate invoicing',
+      alt: 'Receive payments automatically',
       extension: 'jpg',
     },
     colors: {
@@ -114,7 +114,7 @@ export const coloredCardsItems = [
       width: 160,
       height: 302,
       folder: 'bandpay',
-      file: 'laptop-new',
+      file: 'laptop-with-girl-new',
       alt: 'Deposit funds to start projects',
       extension: 'jpg',
     },

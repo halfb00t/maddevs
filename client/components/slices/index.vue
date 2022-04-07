@@ -11,12 +11,10 @@
       <!-- Text slice template -->
       <template v-if="slice.slice_type === 'text'">
         <!-- Here :slice="slice" passes the data to the component -->
-        <LazyHydrate when-visible>
-          <TextSlice
-            :slice="slice"
-            :html-serializer="serializer"
-          />
-        </LazyHydrate>
+        <TextSlice
+          :slice="slice"
+          :html-serializer="serializer"
+        />
       </template>
       <!-- Quote slice template -->
       <template v-else-if="slice.slice_type === 'quote'">
@@ -103,16 +101,17 @@ import linkResolver from '@/plugins/link-resolver'
 import mainMixins from '@/mixins/mainMixins'
 import convertTagsToText from '@/helpers/convertTagsToText'
 import CodeBlockSlice from '@/components/slices/CodeBlockSlice/'
+import TextSlice from '@/components/slices/TextSlice.vue'
 
 export default {
   name: 'SlicesBlock',
 
   components: {
     LazyHydrate,
+    TextSlice,
     CodeBlockSlice,
     SectionIdSlice: () => import('@/components/slices/SectionIdSlice'),
     QuoteSlice: () => import('@/components/slices/QuoteSlice.vue'),
-    TextSlice: () => import('@/components/slices/TextSlice.vue'),
     ImageCaptionSlice: () => import('@/components/slices/ImageCaptionSlice.vue'),
     EmbedSlice: () => import('@/components/slices/EmbedSlice.vue'),
     DividerSlice: () => import('@/components/slices/DividerSlice'),

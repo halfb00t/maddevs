@@ -33,12 +33,12 @@
     >
       <NuxtLink
         :to="crumb.to"
-        :event="(crumbs.length - 1) === i ? '' : 'click'"
+        :event="(crumbs.length - 1) === i || title === '...' ? '' : 'click'"
         class="title"
         itemprop="item"
-        :title="crumb.title"
+        :title="(crumbs.length - 1) === i ? title : crumb.title"
       >
-        <span itemprop="name">{{ crumb.title }}</span>
+        <span itemprop="name">{{ (crumbs.length - 1) === i ? title : crumb.title }}</span>
         <meta
           itemprop="position"
           content="i + 1"
@@ -52,20 +52,28 @@
 export default {
   name: 'Crumbs',
 
+  data() {
+    return {
+      title: null,
+    }
+  },
+
   computed: {
     crumbs() {
       const { fullPath } = this.$route
-      const pathArray = fullPath.startsWith('/')
+      if (fullPath === '/') return []
+      const pathArray = (fullPath.startsWith('/')
         ? fullPath.substring(1).split('/')
-        : fullPath.split('/')
+        : fullPath.split('/')).filter(url => url)
 
       const breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
         breadcrumbArray.push({
-          to: breadcrumbArray[idx - 1]
-            ? `/${breadcrumbArray[idx - 1].path}/${path}${path.endsWith('/') ? '' : '/'}`
+          to: pathArray[idx - 1]
+            ? `/${pathArray[idx - 1]}/${path}${path.endsWith('/') ? '' : '/'}`
             : `/${path}${path.endsWith('/') ? '' : '/'}`,
-          title: path.charAt(0).toUpperCase() + path.substr(1),
+          title: (path.charAt(0).toUpperCase() + path.substr(1)).replace(/-/gm, ' '),
         })
+
         return breadcrumbArray
       }, [])
 
@@ -75,8 +83,24 @@ export default {
         }
       }
 
+      if (breadcrumbs[0]?.title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
+      if (breadcrumbs[0]?.title === 'Author') breadcrumbs[0].to = '/blog/'
+
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
+  },
+
+  mounted() {
+    const titleNodeElement = document.querySelector('title')
+    if (titleNodeElement && titleNodeElement.nodeType === Node.ELEMENT_NODE) {
+      this.title = document.title
+
+      new MutationObserver(() => {
+        this.title = document.title
+      }).observe(document.querySelector('title'), { childList: true })
+    } else {
+      this.title = '...'
+    }
   },
 }
 </script>
@@ -93,10 +117,10 @@ li {
 }
 
 li:after {
-  content: ' » ';
+  content: ' > ';
   display: inline;
   font-size: 12px;
-  color: $text-color--grey-pale;
+  color: $text-color--grey-20-percent;
   padding: 0 0.0725em 0 0.15em;
 }
 
@@ -107,18 +131,16 @@ li:last-child:after {
 li a,
 li span {
   text-decoration: none;
-  color: $text-color--grey-pale;
   font-size: 12px;
   line-height: 166%;
   letter-spacing: -0.1px;
 }
 
 li span {
- color: $text-color--gainsboro;
- pointer-events: none;
+ color: $text-color--grey-20-percent;
 }
 
-li a:hover {
-  text-decoration: underline;
+li span:hover {
+  color: $text-color--cultured;
 }
 </style>

@@ -14,8 +14,8 @@
         v-lazy-load
         :data-src="authorImage.url"
         :alt="authorImage.alt || 'Image'"
-        width="40"
-        height="40"
+        width="70"
+        height="70"
       >
     </div>
     <div
@@ -28,9 +28,6 @@
         :title="name"
       >
         {{ shortTitle }}
-        <span
-          class="post-author__divider"
-        > / </span>
         <span
           class="post-author__position"
           :title="position"
@@ -139,6 +136,8 @@ export default {
       }
       &__name {
         color: $text-color--white;
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -150,6 +149,8 @@ export default {
       }
       &__name {
         color: $text-color--black;
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -160,9 +161,9 @@ export default {
     img {
       display: block;
       position: relative;
-      width: 40px;
-      min-width: 40px;
-      height: 40px;
+      width: 70px;
+      min-width: 70px;
+      height: 70px;
       border-radius: 9.4px;
     }
   }

@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay ChallengesSolutions component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="m-48_bottom"
+    >
+      <h3
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      Challenges & solutions
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      An enhanced user experience makes a product more compelling and valuable for its users.
+      That is why building an intuitive dashboard was instrumental in giving a boost to the GuardRails solution.
+      The data dashboard developed by Mad Devs from scratch allowed the app users to have a look inside their
+      code and visualize its vulnerabilities. While working on this project, we created two versions of the dashboard.
+    
+      </p>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      Freelancers had problems getting paid for their work. For their part,
+      freelancers’ clients wanted to pay in installments and transfer money only when the work is completed.
+      Both parties required a fast and transparent way of cooperation and needed to feel secure when working with
+      one another. Moreover, clients and freelancers wanted to send and receive money quickly and conveniently.
+    
+      </p>
+    </div>
+     
+    <div
+      class="parallax_cards"
+    >
+      <div
+        class="parallax_cards__item"
+      >
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <!---->
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      Mad Devs ensured timely payments directly to freelancers’ bank accounts by integrating BandPay with a reliable payment processor
+    
+          </p>
+           
+        </div>
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <!---->
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      Our engineers developed full-featured Android and iOS applications where users can complete profiles, send project requests, negotiate terms, and communicate via chat
+    
+          </p>
+           
+        </div>
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <!---->
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      The Mad Devs team implemented instant deposits so that freelancers could send invoices over emails to any potential partner
+    
+          </p>
+           
+        </div>
+      </div>
+       
+      <div
+        class="parallax_cards__item"
+      >
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <!---->
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      We divided projects into milestones and adjusted the payment procedure so that the money could be transferred after the completing and approval of each milestone
+    
+          </p>
+           
+        </div>
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <!---->
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      Users wanted to feel secWe implemented BandPay’s own KYC (Know Your Customer) procedures to verify identities and protect users from fraud ure when working with one another
+    
+          </p>
+           
+        </div>
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <!---->
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      We enabled freelancers to get paid in 1-2 business days by adding a non-prepaid US debit card
+    
+          </p>
+           
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

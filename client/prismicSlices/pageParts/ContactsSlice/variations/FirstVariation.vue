@@ -2,7 +2,7 @@
   <div class="container contacts-slice__content">
     <div class="contacts-slice__content-info">
       <ContactFields class="contacts-slice__content-fields" />
-      <Messengers class="contacts-slice__content-messengers" />
+      <!-- <Messengers class="contacts-slice__content-messengers" /> -->
       <Socials class="contacts-slice__content-socials" />
     </div>
     <OrderForm class="contacts-slice__content-form" />
@@ -10,8 +10,11 @@
 </template>
 
 <script>
+/* temporary commented messengers at the request of
+  the task https://maddevs.atlassian.net/browse/MAR-3062 */
+
 import ContactFields from '../components/ContactFields'
-import Messengers from '../components/Messengers'
+// import Messengers from '../components/Messengers'
 import Socials from '../components/Socials'
 import OrderForm from '../components/OrderForm'
 
@@ -19,7 +22,7 @@ export default {
   name: 'FirstVariation',
   components: {
     ContactFields,
-    Messengers,
+    // Messengers,
     Socials,
     OrderForm,
   },
@@ -48,12 +51,12 @@ export default {
       padding-right: 0;
     }
   }
-  &-messengers {
-    margin-top: 73px;
-    @media screen and (max-width: 1024px) {
-      margin-top: 50px;
-    }
-  }
+  // &-messengers {
+  //   margin-top: 73px;
+  //   @media screen and (max-width: 1024px) {
+  //     margin-top: 50px;
+  //   }
+  // }
   &-socials {
     margin-top: 57px;
     @media screen and (max-width: 1024px) {

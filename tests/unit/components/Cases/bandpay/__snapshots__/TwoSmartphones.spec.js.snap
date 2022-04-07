@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay TwoSmartphones component should render correctly 1`] = `
+<div>
+  <section
+    class="container_full background-color-silver p-48_top p-48_bottom m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular"
+    >
+      <p
+        class="case_paragraph m-48_bottom two-smartphones__paragraph"
+      >
+        
+      To deposit funds and start a project, a buyer should open the app and enter the card details.
+      The funds will be deposited to the seller’s BandPay account. To receive the payment,
+      the seller should add a valid US non-prepaid debit card. Once the milestone is completed
+      and approved by the buyer, the money will be sent to the seller automatically.
+      The seller will see the amount and the number of the milestone and agreement.
+    
+      </p>
+       
+      <div
+        class="two-smartphones__image-wrapper"
+      >
+        <picture>
+          <source
+            class="image"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="The BandPay Mobile Applications."
+            class="image"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="652"
+            width="669"
+          />
+        </picture>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay ProjectDevelopment component should render correctly 1`] = `
+<div>
+  <section
+    class="m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular m-48_bottom media-m-24_bottom"
+    >
+      <h3
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      Project development workflow
+    
+      </h3>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      Transparency is the fundamental principle that Mad Devs applies in project development and communication
+      either within the internal team or in customer relationships. By combining transparency with the agile method,
+      we keep the project team continually engaged and allow for relevant adjustments at the right
+      time and at any stage of the project.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full background-color-silver p-12_top p-12_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <div
+          class="lottie-container case_lottie"
+          style="--height: 437px; --width: 100%;"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

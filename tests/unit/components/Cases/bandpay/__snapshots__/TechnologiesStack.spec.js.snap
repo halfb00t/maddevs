@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BandPay TechnologiesStack component should render correctly 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h3
+      class="case_title_h2 m-24_bottom media-m-12_bottom"
+    >
+      
+    Technology stack
+  
+    </h3>
+     
+    <ul
+      class="case_list-technologies m-96_bottom media-m-48_bottom"
+    >
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Swift"
+          class="case_technologies-item__tech-icon case_technologies-item__swift swift"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-swift"
+        >
+          
+    Swift
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Kotlin"
+          class="case_technologies-item__tech-icon case_technologies-item__kotlin kotlin"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-kotlin"
+        >
+          
+    Kotlin
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Go"
+          class="case_technologies-item__tech-icon case_technologies-item__go go"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-go"
+        >
+          
+    Go
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="React.js"
+          class="case_technologies-item__tech-icon case_technologies-item__react react"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-react"
+        >
+          
+    React.js
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Twilio"
+          class="case_technologies-item__tech-icon case_technologies-item__twilio twilio"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-twilio"
+        >
+          
+    Twilio
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Slack"
+          class="case_technologies-item__tech-icon case_technologies-item__slack slack"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-slack"
+        >
+          
+    Slack
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Firebase"
+          class="case_technologies-item__tech-icon case_technologies-item__firebase firebase"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-firebase"
+        >
+          
+    Firebase
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Stripe"
+          class="case_technologies-item__tech-icon case_technologies-item__stripe stripe"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-stripe"
+        >
+          
+    Stripe
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Heroku"
+          class="case_technologies-item__tech-icon case_technologies-item__heroku heroku"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-heroku"
+        >
+          
+    Heroku
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="SimpleTexting"
+          class="case_technologies-item__tech-icon case_technologies-item__simpletexting simpletexting"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-simpletexting"
+        >
+          
+    SimpleTexting
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="PostgreSQL"
+          class="case_technologies-item__tech-icon case_technologies-item__postgresql postgresql"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-postgresql"
+        >
+          
+    PostgreSQL
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Redis"
+          class="case_technologies-item__tech-icon case_technologies-item__redis redis"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-redis"
+        >
+          
+    Redis
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Docker"
+          class="case_technologies-item__tech-icon case_technologies-item__docker docker"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-docker"
+        >
+          
+    Docker
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Retrofit"
+          class="case_technologies-item__tech-icon case_technologies-item__retrofit retrofit"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-retrofit"
+        >
+          
+    Retrofit
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Moya"
+          class="case_technologies-item__tech-icon case_technologies-item__moya moya"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-moya"
+        >
+          
+    Moya
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Fastlane"
+          class="case_technologies-item__tech-icon case_technologies-item__fastlane fastlane"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-fastlane"
+        >
+          
+    Fastlane
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="GitLab CI"
+          class="case_technologies-item__tech-icon case_technologies-item__gitlab gitlab"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-gitlab"
+        >
+          
+    GitLab CI
+  
+        </p>
+      </li>
+    </ul>
+  </section>
+</div>
+`;

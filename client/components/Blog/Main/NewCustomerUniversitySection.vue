@@ -2,6 +2,7 @@
   <section class="customer-university">
     <div class="container">
       <CustomerUniversityTitle
+        id="customer-university"
         title="Customer"
         subtitle="University"
       />
