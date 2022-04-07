@@ -26,11 +26,44 @@ const apiData = {
   subtitle: 'StartScreen subtitle',
 }
 
+const startScreenEbookData = {
+  slice: {
+    primary: {
+      imageOpacity: 0.9,
+      image: {
+        url: 'img.jpg',
+        alt: 'img',
+      },
+      title: 'Test title',
+      subtitle: 'Test subtitle',
+      background: backgrounds.black,
+      gradientColor: gradients.black,
+      rightImage: {
+        url: 'img.jpg',
+        alt: 'img',
+      },
+      btnText: 'Test text',
+      btnLink: '',
+      modal: 'download-pdf',
+      ebookPath: 'pdf/test-ebook.pdf',
+      bookName: 'test-ebook',
+    },
+    variation: 'startScreenImageRightAndButton',
+  },
+}
+
+const mocks = {
+  $prismic: {
+    asText: text => text[0].text,
+  },
+}
+
 const getProps = params => ({
   slice: {
     primary: {
       ...params,
     },
+    variation: 'default-slice',
   },
 })
 
@@ -145,5 +178,27 @@ describe('StartScreen slice', () => {
 
       expect(wrapper.vm.sliceGradient).toBe('')
     })
+  })
+
+  it('should correctly render StartScreenImageRightAndButton component', () => {
+    const { container } = render(StartScreen, {
+      propsData: startScreenEbookData,
+      mocks,
+    })
+
+    expect(screen.queryByTestId('start-screen-slice')).toBeNull()
+    expect(screen.queryByTestId('start-screen-slice-with-image')).not.toBeNull()
+    expect(container).toMatchSnapshot()
+  })
+
+  it('should return empty object from slice props', () => {
+    const wrapper = shallowMount(StartScreen, {
+      propsData: getProps({
+        ...apiData,
+        gradientColor: 'black',
+      }),
+    })
+
+    expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
   })
 })

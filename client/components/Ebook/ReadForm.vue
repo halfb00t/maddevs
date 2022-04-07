@@ -47,6 +47,16 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    ebookPath: {
+      type: String,
+      default: '',
+    },
+
+    bookName: {
+      type: String,
+      default: '',
+    },
   },
 
   data() {
@@ -82,17 +92,18 @@ export default {
       const params = {
         region: 'eu-west-1',
         bucket: 'maddevsio',
-        file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
+        file: this.ebookPath,
         expiresIn: 86400, // sec -> 24h
       }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
       const requestSender = {
         body: {
           email: {
-            templateId: 348595, // Required
+            templateId: 763889, // Required
             variables: {
-              subject: 'Your Pricing Strategies Ebook by Mad Devs',
+              subject: `Your ${this.bookName} Ebook by Mad Devs`,
               emailTo: this.email,
+              bookName: this.bookName,
               pdfUrl,
             },
 

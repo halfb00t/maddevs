@@ -1,5 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`StartScreen slice should correctly render StartScreenImageRightAndButton component 1`] = `
+<div>
+  <section
+    class="start-screen-slice start-screen-slice-with-image"
+    data-testid="start-screen-slice-with-image"
+    id="transparent-header-area"
+  >
+    <img
+      alt="img"
+      class="start-screen-slice__image"
+      data-testid="start-screen-slice__image"
+      height="969"
+      src="img.jpg"
+      style="opacity: 0.9;"
+      width="1680"
+    />
+     
+    <div
+      class="container"
+    >
+      <div
+        class="start-screen-slice__flex-wrapper"
+        style="opacity: 1;"
+      >
+        <div
+          class="start-screen-slice__content"
+        >
+          <div
+            class="start-screen-slice__titles-wrapper"
+          >
+            <!---->
+          </div>
+           
+          <!---->
+           
+          <div
+            class="start-screen-slice__btn-box"
+          >
+            <button
+              class="ui-button start-screen-slice__btn"
+              style="position: relative; overflow: hidden;"
+            >
+              
+            Test text
+            
+              <img
+                alt="Arrow"
+                height="20"
+                src="@/assets/img/common/arrow-up-right.svg"
+                width="20"
+              />
+              <div
+                class="wave"
+              />
+            </button>
+          </div>
+        </div>
+         
+        <div
+          class="start-screen-slice__img-box"
+        >
+          <img
+            alt="img"
+            class="start-screen-slice__img-box-image"
+            data-testid="right-image"
+            height="380.25"
+            src="img.jpg"
+            width="259.69"
+          />
+        </div>
+      </div>
+    </div>
+     
+    <transition-stub
+      class="modal-ebook"
+      mode="out-in"
+      name="main-fade"
+    >
+      <!---->
+    </transition-stub>
+  </section>
+</div>
+`;
+
 exports[`StartScreen slice should render correctly with data 1`] = `
 <div>
   <section

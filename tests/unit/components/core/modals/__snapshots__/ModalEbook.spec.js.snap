@@ -4,9 +4,9 @@ exports[`ModalEbook component should render correctly with no data 1`] = `
 <modal-stub id="" modaltitle="" modalbackground="black" whereiscalled="" class="modal-ebook">
   <div class="modal-content"><img width="110" height="155" data-src="@/assets/img/Ebook/book.svg" alt="Pricing strategies" class="modal-content__img">
     <h2 class="modal-content__title">
-      Get your copy of “Custom Software Development: Pricing Strategies”
+      Get your copy of “”
     </h2>
-    <readform-stub></readform-stub>
+    <readform-stub ebookpath="" bookname=""></readform-stub>
   </div>
 </modal-stub>
 `;
