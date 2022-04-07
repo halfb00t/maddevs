@@ -1,9 +1,7 @@
 <template>
   <div
     class="footer-navbar"
-    style="color: white"
   >
-    <!--  todo delete color-->
     <ul
       v-for="(navigation, index) in navigations"
       :key="index"
@@ -115,7 +113,7 @@ export default {
 
     }
     &__separator {
-      border: 1px none #707072;
+      border: 1px none $border-color--grey-05-opacity;
       border-top-style: solid;
       margin: 6px 0 15px;
       transition: border 0.2s;

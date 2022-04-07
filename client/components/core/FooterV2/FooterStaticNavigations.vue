@@ -44,7 +44,7 @@ export default {
   &__company-name {
     opacity: 0.7;
     font-size: 12px;
-    color: #96969C;
+    color: $text-color--grey;
     @media screen and (min-width: 992px) {
       margin-top: 105px;
       @include font('inter', 14px, 400);
@@ -59,7 +59,7 @@ export default {
     }
 
     &-list-item {
-      color: #96969C;
+      color: $text-color--grey;
       display: block;
       @include font('inter', 14px, 400);
       opacity: 0.7;

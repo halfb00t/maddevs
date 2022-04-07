@@ -167,7 +167,7 @@ export default {
     width: 100%;
     margin: 8px 0 55px;
     height: 1px;
-    border: 1px none rgba(236, 28, 36, .5);
+    border: 1px none $border-color--red-opacity;
     border-top-style: solid;
     @media only screen and (max-width: 991px) {
       display: none;
@@ -193,7 +193,7 @@ export default {
       @media screen and (min-width: 992px) {
         width: 33.33%;
         padding-left: 60px;
-        border-left: 1px solid #A4A8B4;
+        border-left: 1px solid $border-color--grey-05-opacity;
       }
       @media screen and (min-width: 993px)  and (max-width: 1320px)  {
         padding-left: 25px;
@@ -203,7 +203,7 @@ export default {
 
   &__animated {
     &-black-block {
-      background-color: #111213;
+      background-color: $bgcolor--black;
       position: absolute;
       top: 63px;
       width: 68px;
@@ -233,7 +233,7 @@ export default {
       justify-content: center;
 
       &.active-unselected path {
-        fill: #ffffff;
+        fill: $bgcolor--white-primary;
         transition: all .2s;
       }
 

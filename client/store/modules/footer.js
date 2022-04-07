@@ -74,9 +74,6 @@ export const actions = {
 
     commit('SET_FOOTER_STATUS')
   },
-  // setFooterContacts({ commit }, contacts) {
-  //   commit('SET_FOOTER_CONTACTS', contacts)
-  // }, todo delete this
   showFooter({ commit }, data) {
     commit('SHOW_FOOTER', data)
   },
