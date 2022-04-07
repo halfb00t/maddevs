@@ -5,7 +5,7 @@
     <ClientOnly>
       <CookieNotice />
     </ClientOnly>
-    <FooterV2
+    <Footer
       v-if="showFooter"
     />
   </div>
@@ -13,13 +13,17 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { Footer as FooterV2 } from '@/components/core/FooterV2/Footer'
+import HeaderV2 from '@/components/core/HeaderV2'
+import CookieNotice from '@/components/core/CookieNotice'
+import Footer from '@/components/core/FooterV2/Footer'
 import { getNotAllowedRoutes } from '../../utils/getNotAllowedRoutes'
 
 export default {
   name: 'Default',
   components: {
-    FooterV2,
+    CookieNotice,
+    HeaderV2,
+    Footer,
   },
 
   /**
