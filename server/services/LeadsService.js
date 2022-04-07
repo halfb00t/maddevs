@@ -35,6 +35,12 @@ function buildPayload({ variables }) {
       customfield_10166: variables.interest ? { value: variables.interest } : null,
       customfield_10064: 'maddevs.io',
       customfield_10066: 'https://megadocnotprovided.com',
+      customfield_10183: variables.formLocation,
+      customfield_10184: variables.geoIp,
+      customfield_10185: variables.pageUrl,
+      customfield_10186: variables.userBrowser,
+      customfield_10187: variables.userOS,
+      customfield_10188: variables.userPlatform,
       description: {
         type: 'doc',
         version: 1,
@@ -54,7 +60,7 @@ function buildPayload({ variables }) {
   }
 }
 
-async function createLead({ body }) {
+async function createLead(body) {
   try {
     const token = generateToken(ATLASSIAN_AUTH_TOKEN)
     const payload = buildPayload(body)
