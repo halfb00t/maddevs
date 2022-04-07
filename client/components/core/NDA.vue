@@ -193,5 +193,13 @@ export default {
   bottom: 60px;
   right: 60px;
   transform: translate(50%, 50%);
+
+  @media screen and (max-width: 480px) {
+    bottom: 0;
+    top: 40px;
+    left: 0;
+    right: 0;
+    transform: translate(0);
+  }
 }
 </style>

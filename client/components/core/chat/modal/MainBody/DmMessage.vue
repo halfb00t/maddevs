@@ -11,7 +11,10 @@
     </div>
     <div class="message-body__message">
       <div class="message-body__message--text">
-        <span class="message-body__message--greeting">Hello! How can we help you?</span>
+        <span
+          class="message-body__message--greeting"
+          v-html="text"
+        />
         <div class="message-body__arrow-up" />
       </div>
       <div class="message-body__message--info">
@@ -60,6 +63,7 @@ export default {
     background-color: $bgcolor--chinese-white;
     border-radius: 10px;
     position: relative;
+    max-width: 190px;
   }
 
   &__message--greeting {

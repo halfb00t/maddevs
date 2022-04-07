@@ -1,5 +1,8 @@
 <template>
-  <section>
+  <section
+    @mouseover.stop="disableScrolling"
+    @mouseout="enableScrolling"
+  >
     <div class="chat-header">
       <div class="chat-header__message">
         <img
@@ -19,24 +22,32 @@
         @click.self="onClose"
       />
     </div>
-    <Simplebar
+    <div
       v-if="showMainBody"
-      class="modal_content"
+      class="modal-wrapper"
     >
-      <MainBody
-        :is-show-dm-message="isShowDmMessage"
-        @changeModal="changeModal"
-      />
-    </Simplebar>
-    <Simplebar
+      <Simplebar
+        class="modal_content"
+      >
+        <MainBody
+          :is-show-dm-message="isShowDmMessage"
+          @changeModal="changeModal"
+        />
+      </Simplebar>
+    </div>
+    <div
       v-else-if="showDevelopmentBody"
-      class="modal_content"
+      class="modal-wrapper"
     >
-      <Development
-        :is-company="isCompany"
-        :is-partnership="isPartnership"
-      />
-    </Simplebar>
+      <Simplebar
+        class="modal_content"
+      >
+        <Development
+          :is-company="isCompany"
+          :is-partnership="isPartnership"
+        />
+      </Simplebar>
+    </div>
   </section>
 </template>
 
@@ -65,27 +76,38 @@ export default {
   },
 
   methods: {
-    onClose() {
-      this.$emit('close')
+    disableScrolling() {
+      const x = window.scrollX
+      const y = window.scrollY
+      window.onscroll = () => window.scrollTo(x, y)
     },
 
-    changeModal(e) {
+    enableScrolling() {
+      window.onscroll = () => {}
+    },
+
+    onClose() {
+      this.$emit('close')
+      this.enableScrolling()
+    },
+
+    changeModal({ target: { id } }) {
       // checking first button ('Software development')
-      if (+e.target.id === 1) {
+      if (Number(id) === 0) {
         this.showMainBody = false
         this.showDevelopmentBody = true
         this.isCompany = true
         this.isPartnership = false
       }
       // checking second button ('Partnership')
-      if (+e.target.id === 2) {
+      if (Number(id) === 1) {
         this.showMainBody = false
         this.showDevelopmentBody = true
         this.isCompany = false
         this.isPartnership = true
       }
       // checking third button ('getting link')
-      if (+e.target.id === 3) {
+      if (Number(id) === 2) {
         this.showMainBody = true
         this.isShowDmMessage = true
         this.showDevelopmentBody = false
@@ -150,13 +172,13 @@ export default {
     font-size: 15px;
     line-height: 128.5%;
     letter-spacing: -0.02em;
-    margin-right: 30px;
   }
 
   &__close {
     position: relative;
     width: 13px;
     height: 13px;
+    margin-left: auto;
 
     &:hover {
       cursor: pointer;
@@ -183,8 +205,22 @@ export default {
 }
 
 .modal_content {
-  max-height: calc(80vh - 150px);
+  max-height: calc(100vh - 200px);
+
+  @media screen and (max-width: 480px) {
+    max-height: calc(100vh - 120px);
+  }
+}
+
+.modal-wrapper {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  overflow: hidden;
+
+  &:hover {
+    body {
+      overflow: hidden;
+    }
+  }
 }
 </style>

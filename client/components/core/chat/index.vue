@@ -79,6 +79,13 @@ export default {
     background-color: $text-color--ruddy;
     transition: all .2s;
   }
+
+  @media screen and (max-width: 480px) {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: -1;
+  }
 }
 
 .active {
@@ -90,5 +97,13 @@ export default {
   right: 80px;
   bottom: 0;
   width: 339px;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 }
 </style>

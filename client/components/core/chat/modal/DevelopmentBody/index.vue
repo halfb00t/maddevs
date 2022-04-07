@@ -73,7 +73,6 @@ export default {
             formLocation: 'Chat component',
           }
           this.submitLead(variables)
-          this.showModal = false
           this.showSuccessModal = true
         })
       })
@@ -81,6 +80,7 @@ export default {
 
     reset() {
       this.$refs.baseForm.reset()
+      this.showModal = false
     },
   },
 }

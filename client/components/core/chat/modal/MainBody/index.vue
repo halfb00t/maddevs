@@ -48,7 +48,7 @@ export default {
 
   data() {
     return {
-      text: 'On the <a href="https://maddevs.io/careers/">page</a> you will find information on all current vacancies at Mad Devs',
+      text: 'On the <a href="https://maddevs.io/careers/" style="color: red">page</a> you will find information on all current vacancies at Mad Devs',
     }
   },
 }

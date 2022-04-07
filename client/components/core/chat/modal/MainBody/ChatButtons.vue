@@ -19,9 +19,9 @@ export default {
   data() {
     return {
       buttons: [
-        { text: 'Software development', id: 1 },
-        { text: 'Partnership', id: 2 },
-        { text: 'Employment', id: 3 },
+        { text: 'Software development', id: 0 },
+        { text: 'Partnership', id: 1 },
+        { text: 'Employment', id: 2 },
       ],
     }
   },

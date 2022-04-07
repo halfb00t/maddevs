@@ -170,5 +170,29 @@ exports[`nDA renders correctly 1`] = `
       </p>
     </div>
   </div>
+   
+  <div
+    class="chat"
+  >
+    <section>
+      <div
+        class="chat-wrapper active"
+      >
+        <section
+          class="message"
+        >
+          <div
+            class="message__icon"
+          />
+           
+          <div
+            class="message__arrow"
+          />
+        </section>
+      </div>
+       
+      <!---->
+    </section>
+  </div>
 </section>
 `;
