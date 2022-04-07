@@ -8,6 +8,7 @@
         v-if="$prismic.asText(title)"
         :field="slice.primary.title"
         class="ebook-posts__title"
+        data-testid="ebook-posts__title"
         :html-serializer="serializer"
         data-aos="fade-up"
       />

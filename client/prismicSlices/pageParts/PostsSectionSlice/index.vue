@@ -6,6 +6,7 @@
     <div class="container">
       <div
         class="tag-posts__list"
+        data-testid="tag-posts__list"
         :data-aos="animation"
       >
         <template v-if="posts">

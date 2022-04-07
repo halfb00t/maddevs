@@ -16,7 +16,7 @@
           :data-src="item.iconImage.url"
           width="54"
           height="54"
-          :alt="item.alt || 'Icon image'"
+          :alt="item.iconImage.alt || 'Icon image'"
           class="cards-with-icons__item-icon"
         >
         <PrismicRichText
@@ -36,7 +36,6 @@
 
 <script>
 import convertTagsToText from '@/helpers/convertTagsToText'
-import linkResolver from '@/plugins/link-resolver'
 
 export default {
   name: 'CardsWithIcon',
@@ -69,19 +68,12 @@ export default {
   methods: {
     htmlSerializer(type, element, content, children) {
       const { Elements } = this.$prismic.dom.RichText
-      const { Link } = this.$prismic.dom
       let text = children.join('')
-
-      if (type === Elements.preformatted) {
+      text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
         // the second parameter of function excludes tags
-        text = convertTagsToText(text, ['br'])
-      } else {
-        text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
-          // the second parameter of function excludes tags
-          const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
-          return `<code class="inline-code">${formattedCode}</code>`
-        })
-      }
+        const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
+        return `<code class="inline-code">${formattedCode}</code>`
+      })
 
       switch (type) {
         case Elements.heading1: return `<h1>${text}</h1>`
@@ -90,48 +82,7 @@ export default {
         case Elements.heading4: return `<h4>${text}</h4>`
         case Elements.heading5: return `<h5>${text}</h5>`
         case Elements.heading6: return `<h6>${text}</h6>`
-        case Elements.paragraph: return `<p>${text}</p>`
-        case Elements.preformatted: return `<pre>${text}</pre>`
         case Elements.strong: return `<strong>${text}</strong>`
-        case Elements.em: return `<em>${text}</em>`
-        case Elements.listItem: return `<li>${text}</li>`
-        case Elements.oListItem: return `<li>${text}</li>`
-        case Elements.list: return `<ul>${text}</ul>`
-        case Elements.oList: return `<ol>${text}</ol>`
-        case Elements.image:
-          // eslint-disable-next-line
-          const linkUrl = element.linkTo ? Link.url(element.linkTo, linkResolver) : null
-          // eslint-disable-next-line
-          const linkTarget = element.linkTo && element.linkTo.target ? `target="${element.linkTo.target}" rel="noopener"` : ''
-          // eslint-disable-next-line
-          const wrapperClassList = [element.label || '', 'block-img']
-          // eslint-disable-next-line
-          const img = `<img src="${element.url}" alt="${element.alt || 'Image'}" copyright="${element.copyright || ''}">`
-          return (`
-            <p class="${wrapperClassList.join(' ')}">
-              ${linkUrl ? `<a ${linkTarget} href="${linkUrl}">${img}</a>` : img}
-            </p>
-          `)
-        case Elements.embed:
-          return (`
-            <div data-oembed="${element.oembed.embed_url}"
-              data-oembed-type="${element.oembed.type}"
-              data-oembed-provider="${element.oembed.provider_name}"
-            >
-              ${element.oembed.html}
-            </div>
-          `)
-        case Elements.hyperlink:
-          // eslint-disable-next-line
-          const target = element.data.target ? `target="${element.data.target}" rel="noopener"` : ''
-          // eslint-disable-next-line
-          const url = Link.url(element.data, linkResolver)
-          return `<a ${target} href="${url}">${text}</a>`
-        case Elements.label:
-          // eslint-disable-next-line
-          const label = element.data.label ? ` class="${element.data.label}"` : ''
-          return `<span ${label}>${text}</span>`
-        case Elements.span: return content ? content.replace(/\n/g, '<br />') : ''
         default: return null
       }
     },

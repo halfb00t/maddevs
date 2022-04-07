@@ -1,7 +1,7 @@
 <template>
   <section
     id="transparent-header-area"
-    data-testid="start-screen-slice"
+    data-testid="start-screen-slice-with-image"
     class="start-screen-slice start-screen-slice-with-image"
     :style="{ background: sliceGradient }"
   >
@@ -129,7 +129,7 @@ export default {
 
   computed: {
     serializer() {
-      const types = ['card_with_image_slice']
+      const types = ['start_screen_slice']
       if (types.includes(this.slice?.slice_type)) return this.htmlSerializer
       return null
     },

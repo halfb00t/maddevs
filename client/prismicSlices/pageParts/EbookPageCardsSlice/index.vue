@@ -5,9 +5,10 @@
       :style="`max-width: ${containerSize ? containerSize : '1026'}px`"
     >
       <PrismicRichText
-        v-if="title[0].text"
+        v-if="$prismic.asText(title)"
         :field="slice.primary.title"
         class="ebook-cards__title"
+        data-testid="ebook-cards__title"
         :html-serializer="serializer"
         :data-aos="animation || 'fade-up'"
       />

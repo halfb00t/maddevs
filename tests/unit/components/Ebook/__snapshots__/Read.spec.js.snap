@@ -11,7 +11,7 @@ exports[`Read component should render correctly with no data 1`] = `
       <h2 class="ebook-read__form-title">
         Get your copy of “Custom Software Development: Pricing Strategies”
       </h2>
-      <readform-stub></readform-stub>
+      <readform-stub ebookpath="" bookname=""></readform-stub>
     </div>
   </div>
   <div id="read-success-modal" modal-background="black"></div>

@@ -127,26 +127,26 @@ export default {
 
         base64: null,
       }
-      // const requestMarketing = {
-      //   body: {
-      //     email: {
-      //       templateId: 624246, // Required
-      //       variables: {
-      //         subject: 'Request a PDF file from the Ebook page',
-      //         senderName: this.name,
-      //         emailTo: process.env.emailMarketing,
-      //         fromSender: this.email,
-      //         page: window.location.href,
-      //       },
-      //
-      //       attachment: null,
-      //     },
-      //   },
-      //
-      //   base64: '',
-      // }
+      const requestMarketing = {
+        body: {
+          email: {
+            templateId: 624246, // Required
+            variables: {
+              subject: 'Request a PDF file from the Ebook page',
+              senderName: this.name,
+              emailTo: process.env.emailMarketing,
+              fromSender: this.email,
+              page: window.location.href,
+            },
+
+            attachment: null,
+          },
+        },
+
+        base64: '',
+      }
       sendEmail(this.$axios, requestSender) // Send email to sender
-      // sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
+      sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.resetForm()
       this.successMessage = `

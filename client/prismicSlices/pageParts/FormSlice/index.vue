@@ -8,6 +8,7 @@
         v-if="$prismic.asText(title)"
         :field="slice.primary.title"
         class="form-slice__title"
+        data-testid="form-slice__title"
         :html-serializer="serializer"
         :data-aos="animation || 'fade-up'"
       />
