@@ -1,13 +1,8 @@
-import { render } from '@testing-library/vue'
+import 'regenerator-runtime'
+import { shallowMount } from '@vue/test-utils'
 import CustomerUniversityNavigation from '@/components/Blog/Post/CustomerUniversityNavigation'
 
-const stubs = ['NuxtLink', 'SkeletonBlogWidget', 'PostCard', 'NextPreviewButtons']
-const mocks = {
-  getNextPosts: jest.fn(),
-  getPrevPosts: jest.fn(),
-  calcOffsetWidth: jest.fn(),
-  getPrismicData: jest.fn(),
-}
+const stubs = ['PostCard', 'NextPreviewButtons']
 const clusterPosts = [
   {
     chapter_name: [
@@ -50,31 +45,73 @@ const clusterPosts = [
 ]
 const props = {
   clusterPosts,
-  cluster: {
-    items: clusterPosts,
-    primary: {
-      cluster_name: [{ text: 'Custom software development pricing strategies' }],
-    },
-  },
 }
 
+const mocks = {
+  $prismic: {
+    api: {
+      getByIDs: jest.fn(() => new Promise(resolve => resolve({ results: [{ id: 'Test ID' }] }))),
+    },
+  },
+  getNextPosts: jest.fn(),
+  getPrevPosts: jest.fn(),
+}
+
+const resizeWindow = width => {
+  global.innerWidth = width
+  window.dispatchEvent(new Event('resize'))
+}
+
+jest.spyOn(window, 'removeEventListener').mockImplementation()
+const nextPosts = jest.spyOn(CustomerUniversityNavigation.methods, 'getNextPosts')
+const prevPosts = jest.spyOn(CustomerUniversityNavigation.methods, 'getPrevPosts')
+
 describe('Customer university navigation', () => {
-  it('is a Vue instance', () => {
-    const { container } = render(CustomerUniversityNavigation, {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallowMount(CustomerUniversityNavigation, {
+      propsData: props,
       stubs,
-      props,
       mocks,
     })
-
-    expect(container).toMatchSnapshot()
   })
 
-  it('is a Vue instance with equal id', () => {
-    const { container } = render(CustomerUniversityNavigation, {
-      stubs,
-      props,
-      mocks,
-    })
-    expect(container).toMatchSnapshot()
+  it('should render correctly with props', async () => {
+    expect(wrapper.props()).toEqual(props)
+    expect(wrapper.is(CustomerUniversityNavigation)).toBe(true)
+    expect(wrapper.vm.posts).toEqual([{ id: 'Test ID' }])
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  it('should correctly change options when window has resize', () => {
+    resizeWindow(768)
+    expect(wrapper.vm.offsetSize).toBe(1)
+
+    resizeWindow(1200)
+    expect(wrapper.vm.offsetSize).toBe(3)
+  })
+
+  it('should call calcOffsetWidth when component has destroyed', async () => {
+    await wrapper.destroy()
+    expect(window.removeEventListener).toHaveBeenCalledTimes(1)
+  })
+
+  it('should call next posts method when button next has clicked', async () => {
+    wrapper.vm.posts.push({ id: 'second id' }, { id: 'third id' }, { id: 'fourth id' })
+    wrapper.vm.$refs.buttons.$emit('next')
+    expect(nextPosts).toHaveBeenCalledTimes(1)
+    wrapper.vm.$refs.buttons.$emit('preview')
+    expect(prevPosts).toHaveBeenCalledTimes(1)
+  })
+
+  it('should return from function if posts ended', async () => {
+    wrapper.vm.posts.push({ id: 'second id' }, { id: 'third id' }, { id: 'fourth id' })
+    wrapper.vm.$refs.buttons.$emit('next')
+    wrapper.vm.$refs.buttons.$emit('next')
+    expect(nextPosts).toHaveBeenCalledTimes(3)
+    wrapper.vm.$refs.buttons.$emit('preview')
+    wrapper.vm.$refs.buttons.$emit('preview')
+    expect(prevPosts).toHaveBeenCalledTimes(3)
   })
 })

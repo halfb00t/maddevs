@@ -25,20 +25,26 @@ describe('Leads service', () => {
           phoneNumber: 'phoneNumber',
           interest: 'Partnership',
           projectDescription: 'Description',
+          formLocation: '\'Contact me\' button, header component',
+          geoIp: 'Country: -, City: -',
+          pageUrl: 'url',
+          userBrowser: 'Name: Chrome, Version: 99.0.4844.84',
+          userOS: 'user os',
+          userPlatform: 'Type: desktop, Vendor: Unknown',
         },
       },
     }
   })
 
   it('should correctly return data from response', async () => {
-    const data = await createLead(req)
+    const data = await createLead(req.body)
     expect(data).toBe('some data')
   })
 
   it('should correctly return error if axios failed', async () => {
     axios.post.mockImplementation(() => Promise.reject('error'))
 
-    const error = await createLead(req)
+    const error = await createLead(req.body)
     expect(error).toBe('error')
   })
 
@@ -83,7 +89,7 @@ describe('Leads service', () => {
       ...variables,
     }
 
-    await createLead(req)
+    await createLead(req.body)
 
     const expectedPayload = {
       fields: {
@@ -94,6 +100,12 @@ describe('Leads service', () => {
         customfield_10064: 'maddevs.io',
         customfield_10066: 'https://megadocnotprovided.com',
         customfield_10166: { value: 'Partnership' },
+        customfield_10183: '\'Contact me\' button, header component',
+        customfield_10184: 'Country: -, City: -',
+        customfield_10185: 'url',
+        customfield_10186: 'Name: Chrome, Version: 99.0.4844.84',
+        customfield_10187: 'user os',
+        customfield_10188: 'Type: desktop, Vendor: Unknown',
         issuetype: {
           id: '10082',
         },

@@ -4,9 +4,6 @@ const cors = require('cors')
 // sentry
 const { configureSentry } = require('./sentry')
 
-// radiator
-const runRadiator = require('./radiator')
-
 // custom middlewares
 const applyXFrame = require('./middlewares/applyXFrame')
 const redirectToValidLink = require('./middlewares/redirectToValidLink')
@@ -56,9 +53,6 @@ function bootstrap() {
 
   // Errors handler
   app.use(Sentry.Handlers.errorHandler())
-
-  // radiator running
-  runRadiator()
 
   return app
 }

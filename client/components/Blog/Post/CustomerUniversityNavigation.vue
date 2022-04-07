@@ -5,10 +5,9 @@
   >
     <div class="container">
       <h4
-        v-if="title"
         class="cluster-navigation__title"
       >
-        {{ title }}
+        Explore the chapters
       </h4>
       <div
         ref="clusterNavigationList"
@@ -32,17 +31,9 @@
             />
           </section>
         </template>
-        <template v-else>
-          <section
-            v-for="i in slice.items"
-            :key="i"
-            class="cluster-navigation__list-item"
-          >
-            <SkeletonBlogWidget />
-          </section>
-        </template>
       </div>
       <NextPreviewButtons
+        ref="buttons"
         :right="right"
         :left="left"
         @next="getNextPosts"
@@ -69,11 +60,6 @@ export default {
       type: Array,
       required: true,
     },
-
-    cluster: {
-      type: Object,
-      required: true,
-    },
   },
 
   data() {
@@ -82,14 +68,13 @@ export default {
       transformWidth: 0,
       offset: 1,
       offsetSize: 0,
-      title: this.cluster?.primary?.cluster_name[0]?.text,
       right: false,
       left: true,
     }
   },
 
   async mounted() {
-    const postIDs = this.clusterPosts.map(item => item.cu_post.id)
+    const postIDs = this.clusterPosts?.map(item => item?.cu_post?.id)
     if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
     window.addEventListener('resize', this.calcOffsetWidth)
     this.calcOffsetWidth()
@@ -102,7 +87,7 @@ export default {
   methods: {
     async getPrismicData(ids) {
       const response = await this.$prismic.api.getByIDs(ids)
-      return response.results
+      return response?.results
     },
 
     getNextPosts() {
