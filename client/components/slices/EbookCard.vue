@@ -1,6 +1,7 @@
 <template>
   <div
     class="ebook-card"
+    data-testid="ebook-card"
   >
     <NuxtLink
       :to="`/ebooks/${link}`"
