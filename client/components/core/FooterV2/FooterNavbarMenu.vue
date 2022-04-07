@@ -77,6 +77,7 @@ export default {
 
 .footer-menu {
   margin-bottom: 30px;
+
   &__name {
     color: $text-color--grey-pale;
     font-size: 12px;
@@ -84,7 +85,8 @@ export default {
     text-transform: capitalize;
     font-weight: normal;
   }
-  &__item{
+
+  &__item {
     margin-bottom: 8px;
   }
 }

@@ -52,14 +52,12 @@ export default {
     },
   },
 
-  data() {
-    return {
-      currentYear: new Date().getFullYear(),
-    }
-  },
-
   computed: {
     ...mapGetters(['footerMainNavigation', 'footerIsLoaded']),
+  },
+
+  mounted() {
+    window.addEventListener('resize', this.setActiveColumn)
   },
 
   methods: {
@@ -99,18 +97,18 @@ export default {
   }
 
   &-sub-navigation {
-    &__column:hover{
-      .footer-sub-navigation__separator{
-      border: 1px none rgba(236, 28, 36, .5);
-      border-top-style: solid;
+    &__column:hover {
+      .footer-sub-navigation__separator {
+        border: 1px none rgba(236, 28, 36, .5);
+        border-top-style: solid;
+      }
 
-    }
-      .footer-main-navigation__column-title{
+      .footer-main-navigation__column-title {
         color: red;
         transition: color .2s;
       }
-
     }
+
     &__separator {
       border: 1px none $border-color--grey-05-opacity;
       border-top-style: solid;
