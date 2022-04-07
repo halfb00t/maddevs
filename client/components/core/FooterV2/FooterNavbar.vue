@@ -106,6 +106,7 @@ export default {
       .footer-main-navigation__column-title {
         color: red;
         transition: color .2s;
+        cursor: pointer;
       }
     }
 

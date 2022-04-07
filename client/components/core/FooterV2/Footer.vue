@@ -144,10 +144,10 @@ export default {
         icon.style.left = `${columnPositions.left}px`
       } else {
         const firstColumn = document.querySelector('.footer-nav-column-company')
-        const firstIcon = document.querySelector('#animated-icon--fire')
-        if (firstColumn && firstIcon) {
-          const { left } = firstColumn.getBoundingClientRect()
-          topLineSeparator.style.left = `${left}px`
+        const firstIcon = document.querySelector('#footer__animated-icon--fire')
+        const { left } = firstColumn.getBoundingClientRect()
+        topLineSeparator.style.left = `${left}px`
+        if (firstIcon) {
           firstIcon.style.left = `${left}px`
         }
       }
@@ -229,7 +229,7 @@ export default {
     &-icon {
       width: 68px;
       z-index: 5;
-      transition: all .2s;
+      transition: opacity .2s;
       position: absolute;
       top: 44px;
       opacity: 0;

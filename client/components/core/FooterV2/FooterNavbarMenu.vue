@@ -22,6 +22,7 @@
             v-if="!extractMenuLink(link).isExternalLink"
             :to="extractMenuLink(link).url"
             data-testid="menu-item-internal-link"
+            class="footer-menu__item-link"
             @click.native="goToPage"
           >
             {{ label }}
@@ -88,6 +89,14 @@ export default {
 
   &__item {
     margin-bottom: 8px;
+
+    &-link {
+      transition: color .2s;
+
+      &:hover {
+        color: $text-color--red;
+      }
+    }
   }
 }
 </style>
