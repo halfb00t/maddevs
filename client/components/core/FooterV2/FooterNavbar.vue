@@ -1,6 +1,7 @@
 <template>
   <div
     class="footer-navbar"
+    @mouseleave="setActiveColumn($event)"
   >
     <ul
       v-for="(navigation, index) in navigations"
@@ -8,7 +9,6 @@
       class="footer-main-navigation"
       :class="`footer-nav-column-${navigation[0].name}`"
       @mouseenter="setActiveColumn($event, navigation[0].name)"
-      @mouseleave="setActiveColumn($event)"
     >
       <li
         v-for="{name, label} in navigation"

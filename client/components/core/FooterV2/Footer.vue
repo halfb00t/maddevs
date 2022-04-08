@@ -213,6 +213,7 @@ export default {
       width: 68px;
       height: 20px;
       z-index: 4;
+      transition: all;
       transition-timing-function: cubic-bezier(1, 0, .52, 1.65);
       transition-duration: 0.7s;
       @media only screen and (max-width: 991px) {
