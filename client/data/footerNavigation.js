@@ -20,10 +20,6 @@ export const navigationsSections = [
       name: 'insights',
       label: 'Insights',
     },
-    {
-      name: 'industries',
-      label: 'Industries',
-    },
   ],
 ]
 
