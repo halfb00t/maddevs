@@ -269,6 +269,22 @@
             "content": "black"
           }
         }
+      },
+      "startScreenImageRightAndButton": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "subtitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "KeyMetricsSlice": {
@@ -521,6 +537,16 @@
       "default-slice": {
         "primary": {},
         "items": {}
+      },
+      "ebookPostsSectionSlice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "ImageSlice": {
@@ -633,6 +659,44 @@
             }
           }
         }
+      }
+    },
+    "CardsWithIcon": {
+      "default-slice": {
+        "primary": {},
+        "items": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "FormSlice": {
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "EbookPageCardsSlice": {
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
       }
     }
   },

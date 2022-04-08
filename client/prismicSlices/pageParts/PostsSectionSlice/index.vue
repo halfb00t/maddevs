@@ -1,8 +1,12 @@
 <template>
-  <div class="tag-posts">
+  <div
+    v-if="slice.variation === 'default-slice'"
+    class="tag-posts"
+  >
     <div class="container">
       <div
         class="tag-posts__list"
+        data-testid="tag-posts__list"
         :data-aos="animation"
       >
         <template v-if="posts">
@@ -32,6 +36,11 @@
       </div>
     </div>
   </div>
+  <EbookPostsSectionSlice
+    v-else-if="slice.variation === 'ebookPostsSectionSlice'"
+    :slice="slice"
+    :posts="posts"
+  />
 </template>
 
 <script>
@@ -39,10 +48,12 @@ import SkeletonBlogWidget from '@/components/Blog/skeletons/SkeletonBlogWidget'
 import PostCard from '@/components/Blog/shared/PostCard'
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import extractAuthorData from '@/helpers/extractAuthorData'
+import EbookPostsSectionSlice from '@/prismicSlices/pageParts/PostsSectionSlice/variations/EbookPostsSectionSlice'
 
 export default {
   name: 'PostsSectionSlice',
   components: {
+    EbookPostsSectionSlice,
     SkeletonBlogWidget,
     PostCard,
   },
@@ -69,7 +80,7 @@ export default {
 
   watch: {
     async posts() {
-      if (this.posts && this.posts.length) {
+      if (this.posts && this.posts.length && this.slice?.variation !== 'ebookPostsSectionSlice') {
         const authorIDs = this.posts.map(result => result.data.post_author.id)
         const postsAuthors = await this.getPrismicData(authorIDs)
         this.authors = postsAuthors.map(author => extractAuthorData(author))
@@ -78,7 +89,7 @@ export default {
   },
 
   async mounted() {
-    const postIDs = this.slice.items?.map(item => item.data.id)
+    const postIDs = this.slice?.items?.map(item => item.data.id)
     if (postIDs && postIDs.length) this.posts = await this.getPrismicData(postIDs)
   },
 

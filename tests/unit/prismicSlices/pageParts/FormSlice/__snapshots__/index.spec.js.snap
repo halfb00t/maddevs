@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormSlice component should correctly render FormSlice component 1`] = `
+<div>
+  <section
+    class="form-slice"
+  >
+    <div
+      class="container"
+      style="max-width: 1026px;"
+    >
+      <prismicrichtext-stub
+        class="form-slice__title"
+        data-aos="fade-up"
+        data-testid="form-slice__title"
+        field="[object Object]"
+        html-serializer="function () { [native code] }"
+      />
+       
+      <div
+        class="form-slice__items"
+        data-aos="fade-up"
+      >
+        <ebookform-stub
+          bookname="Test book"
+          class="form-slice__item"
+          ebookpath="pdf/test-book.pdf"
+        />
+         
+        <div
+          class="form-slice__item-img"
+        >
+          <img
+            alt="Test img"
+            class="form-slice__image"
+            data-src="img.jpg"
+            height="423.34"
+            width="349.51"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
