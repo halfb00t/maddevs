@@ -59,28 +59,27 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 A list of main technologies that we use for build our application
 
 | Technology | Version | Description                                                             |
-| ---------- | ------- | ----------------------------------------------------------------------- |
-| Node       | 14.10.1 | For the correct launch of the project, use this version of the node     |
-| Vue        | ^2.15.4 | Progressive framework for building a modern user interfaces             |
+| ---------- |---------| ----------------------------------------------------------------------- |
+| Node       | 16.x    | For the correct launch of the project, use this version of the node     |
+| Vue        | ^2.6.12 | Progressive framework for building a modern user interfaces             |
 | Nuxt       | ^2.15.8 | Server-side rendering framework for VueJS                               |
 | Axios      | ^0.21.3 | Promise based HTTP client for the browser and node.js                   |
 | Express    | ^4.17.1 | Web-framework for nodeJS                                                |
 | Vuelidate  | ^0.7.6  | A VueJS modern validating library                                       |
 | Prismic    | ^1.3.1  | Content-Management system                                               |
-| Lottie     | ^0.2.1  | Lightweight, scalable animations                                        |
-| Lottie-web | ^5.7.13 | The mobile library for Web animations                                   |
+| Lottie-web | ^5.8.1  | The mobile library for Web animations                                   |
 
 #### Additional tools
 
 A list of additional tools that we use for make our codebase better
 
 | Technology      | Version  | Description                                                                 |
-| --------------- | -------- | --------------------------------------------------------------------------- |
+| --------------- |----------| --------------------------------------------------------------------------- |
 | Jest            | ^26.6.3  | Delightful JavaScript Testing Framework with a focus on simplicity.         |
 | ESLint          | ^7.24.0  | Pluggable JavaScript linter                                                 |
 | testing-library | ^5.6.1   | Simple and complete testing utilities that encourage good testing practices |
 | Cypress         | ^7.7.0   | E2E testing framework on JavaScript                                         |
-| Sentry          | ^6.3.1   | Application monitoring and error tracking                                   |
+| Sentry          | ^6.18.2  | Application monitoring and error tracking                                   |
 | Snyk            | ^1.717.0 | Tool for find and fix security vulnerabilities                              |
 
 ### Project structure
@@ -135,11 +134,13 @@ A list of additional tools that we use for make our codebase better
 A list of environment variables that needed to start the project(required)
 
 | NAME                                 | DESCRIPTION                                         |
-| ------------------------------------ | --------------------------------------------------- |
+|--------------------------------------|-----------------------------------------------------|
 | NODE_SENDPULSE_API_USER_ID           | Sendpulse api user id                               |
 | NODE_SENDPULSE_API_KEY               | Sendpulse api key                                   |
 | NODE_EMAIL_HR                        | Email to send messages(cv) to HR department         |
 | NODE_EMAIL_CONTACT                   | Email to send messages(from leads) to DM department |
+| NODE_EMAIL_MARKETING                 | Email to send messages to Marketing department      |
+| NODE_EMAIL_CV                        | Email to send messages to CV department             |
 | NODE_PRISMIC_API                     | Prismic api key                                     |
 | NODE_ATLASSIAN_TOKEN                 | Jira auth token                                     |
 | NODE_ATLASSIAN_EMAIL                 | Jira auth email                                     |
@@ -149,6 +150,9 @@ A list of environment variables that needed to start the project(required)
 | NODE_PAGESPEED_SLACK_WEBHOOK_URL     | Slack webhook to send pagespeed info                |
 | NODE_SENTRY_DSN                      | Sentry DSN                                          |
 | NODE_SENTRY_DSN_FRONT                | Sentry DSN for client                               |
+| SENTRY_ORG                           | Sentry Organization name                            |
+| SENTRY_PROJECT                       | Sentry project name                                 |
+| SENTRY_AUTH_TOKEN                    | Sentry auth token                                   |
 | NODE_DOMAIN                          | Domain                                              |
 | FF_ENVIRONMENT                       | Feature flags environment                           |
 | NODE_HUNTFLOW_API_URL                | Huntflow api url                                    |
@@ -158,6 +162,7 @@ A list of environment variables that needed to start the project(required)
 | NODE_CYPRESS_BASE_URL                | Cypress url                                         |
 | NODE_AWS_URL                         | AWS url                                             |
 | NODE_S3_PUBLIC_URL                   | S3 url                                              |
+| NODE_S3_SECRET_ACCESS_KEY            | S3 secret key                                       |
 | RECAPTCHA_SITE_KEY                   | ReCaptcha site key                                  |
 | RECAPTCHA_SECRET_KEY                 | ReCaptcha secret key                                |
 
@@ -175,11 +180,11 @@ Before start working with our team you need to read the document.
 
 ### Staging
 
-To send changes to the staging server, you should merge your branch to the **develop** branch
+To send changes to the staging server, you should merge your branch to the **staging** branch
 
 ### Production
 
-To send changes to the staging server, you should merge **develop** branch into **master** branch
+To send changes to the staging server, you should merge **staging** branch into **master** branch
 
 ## 🚓 Testing
 
