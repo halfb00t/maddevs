@@ -121,6 +121,7 @@ export default {
   methods: {
     getPostPath(type, uid) {
       if (type === 'post' && uid) return `/blog/${uid}/`
+      if (type === 'customer_university' && uid) return `/customer-university/${uid}/`
       return '/'
     },
 
