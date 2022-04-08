@@ -10,10 +10,6 @@ export default {
 
 <style lang="scss" scoped>
 .close {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background: transparent;
   width: 16px;
   height: 16px;

@@ -1,20 +1,19 @@
 <template>
-  <ul class="buttons">
-    <li
+  <div class="chat-actions">
+    <button
       v-for="button in buttons"
-      :id="button.id"
       :key="button.text"
-      class="buttons__button"
-      @click="changeModal"
+      class="chat-actions__btn"
+      @click="changeModal(button.id)"
     >
       {{ button.text }}
-    </li>
-  </ul>
+    </button>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'ChatButtons',
+  name: 'ChatActions',
 
   data() {
     return {
@@ -27,16 +26,16 @@ export default {
   },
 
   methods: {
-    changeModal(e) {
-      this.$parent.$emit('changeModal', e)
+    changeModal(id) {
+      this.$parent.$emit('changeModal', id)
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.buttons {
-  &__button {
+.chat-actions {
+  &__btn {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -50,6 +49,7 @@ export default {
     margin-bottom: 14px;
     opacity: .5;
     transition: all 0.3s ease;
+    width: 100%;
 
     &:last-child {
       margin-bottom: 0;

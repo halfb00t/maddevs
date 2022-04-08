@@ -1,13 +1,13 @@
 <template>
   <section>
-    <div
+    <button
       class="chat-wrapper"
       :class="{ active: !isShow }"
-      @click.stop="openModal"
+      @click="openModal"
     >
       <MessageIcon v-if="!isShow" />
       <CloseIcon v-else />
-    </div>
+    </button>
     <div
       v-if="isShow"
       class="chat-modal"
@@ -57,7 +57,7 @@ export default {
     },
 
     onKeydown(e) {
-      if (e.keyCode === 27) {
+      if (e.key === 'Escape') {
         this.closeModal()
       }
     },
@@ -67,13 +67,15 @@ export default {
 
 <style lang="scss" scoped>
 .chat-wrapper {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   background-color: $bgcolor--venetian-red;
   border-radius: 50%;
-  cursor: pointer;
   transition: all .2s;
+  border: none;
 
   &:hover {
     background-color: $text-color--ruddy;

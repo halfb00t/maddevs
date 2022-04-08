@@ -1,6 +1,8 @@
 <template>
   <section class="message">
-    <div class="message__icon" />
+    <div class="message__icon">
+      <slot />
+    </div>
     <div class="message__arrow" />
   </section>
 </template>
@@ -13,15 +15,19 @@ export default {
 
 <style lang="scss" scoped>
 .message {
+  position: relative;
+  width: 28px;
+  height: 22px;
+  border-radius: 3px;
+  background: $bgcolor--white-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &__icon {
-    width: 28px;
-    height: 22px;
-    background: $bgcolor--white-primary;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 3px;
+    width: 14px;
+    height: 14px;
+    z-index: 1;
   }
 
   &__arrow {
@@ -31,8 +37,9 @@ export default {
     border-bottom: 11px solid transparent;
     border-right: 15px solid $border-color--white;
     position: absolute;
-    top: 42%;
-    left: 35%;
+    top: 6px;
+    left: 7px;
+    z-index: 0;
   }
 }
 </style>

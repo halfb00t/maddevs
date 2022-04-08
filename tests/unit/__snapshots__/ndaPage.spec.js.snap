@@ -178,7 +178,7 @@ exports[`nda page renders correctly 1`] = `
       class="chat"
     >
       <section>
-        <div
+        <button
           class="chat-wrapper active"
         >
           <section
@@ -192,7 +192,7 @@ exports[`nda page renders correctly 1`] = `
               class="message__arrow"
             />
           </section>
-        </div>
+        </button>
          
         <!---->
       </section>

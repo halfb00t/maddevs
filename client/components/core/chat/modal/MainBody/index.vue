@@ -1,19 +1,40 @@
 <template>
   <div class="main-body">
     <div class="main-body__dm-message">
-      <DmMessage
-        text="Hello! How can we help you?"
-      />
+      <Message
+        position="left"
+        author-name="Anatoliy Fedorenko"
+        author-spec="Delivery Manager"
+        logo-name="anatoliy.jpg"
+        alt-logo="Anatoly"
+      >
+        <p>Hello! How can we help you?</p>
+      </Message>
     </div>
 
     <div class="main-body__my-message">
-      <MyMessage />
+      <Message
+        position="right"
+      >
+        <p>I'm interested in ...</p>
+      </Message>
     </div>
 
-    <div v-if="isShowDmMessage">
-      <DmMessage
-        :text="text"
-      />
+    <div v-if="isShowMessage">
+      <Message
+        position="left"
+        author-name="Anatoliy Fedorenko"
+        author-spec="Delivery Manager"
+        logo-name="anatoliy.jpg"
+        alt-logo="Anatoly"
+      >
+        <p>
+          On the <a
+            href="https://maddevs.io/careers/"
+            style="color: red"
+          >page</a> you will find information on all current vacancies at Mad Devs
+        </p>
+      </Message>
     </div>
 
     <div
@@ -26,30 +47,22 @@
 </template>
 
 <script>
-import DmMessage from '@/components/core/chat/modal/MainBody/DmMessage'
 import ChatButtons from '@/components/core/chat/modal/MainBody/ChatButtons'
-import MyMessage from '@/components/core/chat/modal/MainBody/MyMessage'
+import Message from '@/components/core/chat/modal/MainBody/Message'
 
 export default {
   name: 'MainBody',
 
   components: {
-    DmMessage,
     ChatButtons,
-    MyMessage,
+    Message,
   },
 
   props: {
-    isShowDmMessage: {
+    isShowMessage: {
       type: Boolean,
       default: false,
     },
-  },
-
-  data() {
-    return {
-      text: 'On the <a href="https://maddevs.io/careers/" style="color: red">page</a> you will find information on all current vacancies at Mad Devs',
-    }
   },
 }
 </script>

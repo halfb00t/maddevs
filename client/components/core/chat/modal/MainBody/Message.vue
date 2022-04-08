@@ -1,25 +1,36 @@
 <template>
   <div class="message-body">
-    <div class="message-body__photo">
+    <div
+      v-if="logoName"
+      class="message-body__photo"
+    >
       <img
         class="message-body__photo--image"
         width="31"
         height="31"
-        :src="require('@/components/core/chat/images/anatoliy.jpg')"
-        alt="Fedorenko"
+        :src="require(`@/components/core/chat/images/${logoName}`)"
+        :alt="altLogo"
       >
     </div>
     <div class="message-body__message">
       <div class="message-body__message--text">
         <span
           class="message-body__message--greeting"
-          v-html="text"
+        >
+          <slot />
+        </span>
+        <div
+          v-if="position"
+          class="message-body__arrow-up"
+          :class="`message-body__arrow-${position}`"
         />
-        <div class="message-body__arrow-up" />
       </div>
-      <div class="message-body__message--info">
-        <span class="message-body__message--name">Anatoliy Fedorenko / </span>
-        <span class="message-body__message--spec">Delivery Manager</span>
+      <div
+        v-if="authorName || authorSpec"
+        class="message-body__message--info"
+      >
+        <span class="message-body__message--name">{{ authorName }} /</span>
+        <span class="message-body__message--spec">{{ authorSpec }}</span>
       </div>
     </div>
   </div>
@@ -27,12 +38,32 @@
 
 <script>
 export default {
-  name: 'DmMessage',
+  name: 'Message',
 
   props: {
-    text: {
+    position: {
       type: String,
       default: '',
+    },
+
+    authorName: {
+      type: String,
+      default: '',
+    },
+
+    authorSpec: {
+      type: String,
+      default: '',
+    },
+
+    logoName: {
+      type: String,
+      default: '',
+    },
+
+    altLogo: {
+      type: String,
+      default: 'Logo',
     },
   },
 }
@@ -42,11 +73,11 @@ export default {
 .message-body {
   display: flex;
   align-items: flex-end;
+  justify-content: space-around;
 
   &__arrow-up {
     position: absolute;
     bottom: 0;
-    left: -15px;
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
@@ -54,8 +85,23 @@ export default {
     border-bottom: 15px solid $bgcolor--chinese-white;
   }
 
-  &__photo--image {
-    margin-right: 22px;
+  &__arrow-left {
+    left: -15px;
+  }
+
+  &__arrow-right {
+    right: -15px;
+  }
+
+  &__photo {
+    width: 31px;
+    height: 31px;
+    margin-bottom: 8px;
+
+    &--image {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__message--text {
@@ -82,7 +128,7 @@ export default {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    line-height: 20px;
+    line-height: 27px;
   }
 
   &__message--name {

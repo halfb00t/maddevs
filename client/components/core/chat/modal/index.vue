@@ -4,22 +4,17 @@
     @mouseout="enableScrolling"
   >
     <div class="chat-header">
-      <div class="chat-header__message">
-        <img
-          class="chat-header__message-icon"
-          :src="require('@/components/core/chat/images/shape.jpg')"
-          alt="Shape"
-          width="14"
-          height="13"
-        >
-        <div class="chat-header__message-arrow" />
+      <div class="chat-header__logo">
+        <MessageIcon>
+          <HeaderLogo :show-text="false" />
+        </MessageIcon>
       </div>
       <p class="chat-header__paragraph">
         Hey there, 👋<br>Welcome to Mad Devs website!
       </p>
-      <div
+      <button
         class="chat-header__close"
-        @click.self="onClose"
+        @click="onClose"
       />
     </div>
     <div
@@ -30,7 +25,7 @@
         class="modal_content"
       >
         <MainBody
-          :is-show-dm-message="isShowDmMessage"
+          :is-show-message="isShowMessage"
           @changeModal="changeModal"
         />
       </Simplebar>
@@ -55,6 +50,8 @@
 import Simplebar from 'simplebar-vue'
 import MainBody from '@/components/core/chat/modal/MainBody'
 import Development from '@/components/core/chat/modal/DevelopmentBody'
+import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
+import MessageIcon from '@/components/core/chat/MessageIcon'
 
 export default {
   name: 'ChatModal',
@@ -63,6 +60,8 @@ export default {
     MainBody,
     Development,
     Simplebar,
+    HeaderLogo,
+    MessageIcon,
   },
 
   data() {
@@ -70,7 +69,7 @@ export default {
       showMainBody: true,
       showDevelopmentBody: false,
       isCompany: false,
-      isShowDmMessage: false,
+      isShowMessage: false,
       isPartnership: false,
     }
   },
@@ -91,7 +90,7 @@ export default {
       this.enableScrolling()
     },
 
-    changeModal({ target: { id } }) {
+    changeModal(id) {
       // checking first button ('Software development')
       if (Number(id) === 0) {
         this.showMainBody = false
@@ -109,7 +108,7 @@ export default {
       // checking third button ('getting link')
       if (Number(id) === 2) {
         this.showMainBody = true
-        this.isShowDmMessage = true
+        this.isShowMessage = true
         this.showDevelopmentBody = false
         this.isCompany = false
         this.isPartnership = false
@@ -134,34 +133,9 @@ export default {
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
 
-  &__message {
-    position: relative;
-    width: 28px;
-    height: 22px;
-    background: $bgcolor--white-primary;
-    border-radius: 3px;
-    z-index: 999;
-    margin-right: 10px;
+  &__logo {
+    margin-right: 8px;
     margin-top: -8px;
-
-    &-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 999;
-    }
-
-    &-arrow {
-      width: 0;
-      height: 0;
-      border-top: 12px solid transparent;
-      border-bottom: 11px solid transparent;
-      border-right: 15px solid $border-color--white;
-      position: absolute;
-      top: 29%;
-      left: 20%;
-    }
   }
 
   &__paragraph {
@@ -179,27 +153,25 @@ export default {
     width: 13px;
     height: 13px;
     margin-left: auto;
-
-    &:hover {
-      cursor: pointer;
-    }
+    background: transparent;
+    border: none;
 
     &:before, &:after {
       position: absolute;
-      left: 6px;
+      left: 50%;
       content: ' ';
       height: 13px;
       width: 2px;
-      top: 1px;
+      top: 50%;
       background-color: $bgcolor--grey-selected;
     }
 
     &:before {
-      transform: rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
     }
 
     &:after {
-      transform: rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }
