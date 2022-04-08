@@ -96,7 +96,7 @@ export default {
 
 .chat-modal {
   position: absolute;
-  right: 80px;
+  right: 75px;
   bottom: 0;
   width: 339px;
 

@@ -83,3 +83,30 @@ main {
 .blue {
   color: #5159f6;
 }
+
+// ------------ Disable scroll body ------------- //
+// .disableScroll {
+//   position: fixed;
+//   overflow: hidden;
+//   inset: 0;
+
+//   /*FireFox*/
+//   scrollbar-width: none;
+//   /*IE10+*/
+//   -ms-overflow-style: -ms-autohiding-scrollbar;
+// }
+
+// /* Hide scrollbar for Chrome, Safari and Opera */
+// .disableScroll::-webkit-scrollbar {
+//   display: none;
+// }
+
+// .disableScroll::-webkit-scrollbar {
+//   -webkit-appearance: none;
+// }
+
+// /* Hide scrollbar for IE, Edge add Firefox */
+// .disableScroll {
+// -ms-overflow-style: none;
+// scrollbar-width: none; /* Firefox */
+// }

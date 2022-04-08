@@ -1,7 +1,7 @@
 <template>
   <section
-    @mouseover.stop="disableScrolling"
-    @mouseout="enableScrolling"
+    @mouseover="disableScrolling"
+    @mouseleave="enableScrolling"
   >
     <div class="chat-header">
       <div class="chat-header__logo">
@@ -76,13 +76,13 @@ export default {
 
   methods: {
     disableScrolling() {
-      const x = window.scrollX
-      const y = window.scrollY
-      window.onscroll = () => window.scrollTo(x, y)
+      document.body.addEventListener('scroll', e => {
+        e.preventDefault()
+      })
     },
 
     enableScrolling() {
-      window.onscroll = () => {}
+      document.body.style.cssText = 'padding-right: 0; overflow: auto;'
     },
 
     onClose() {
