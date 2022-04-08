@@ -1,0 +1,78 @@
+{
+  "id": "cards_with_icon",
+  "type": "SharedSlice",
+  "name": "CardsWithIcon",
+  "description": "CardsWithIcon",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CardsWithIcon",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation List",
+            "placeholder": "",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-right",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-down",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ],
+            "default_value": "fade-up"
+          },
+          "type": "Select"
+        },
+        "containerSize": {
+          "config": {
+            "label": "Container Size",
+            "placeholder": "",
+            "options": [
+              "1026",
+              "1240"
+            ],
+            "default_value": "1026"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "iconImage": {
+          "config": {
+            "label": "Icon",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

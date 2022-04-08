@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EbookCard component should correctly render component 1`] = `
+<div>
+  <div
+    class="ebook-card"
+    data-testid="ebook-card"
+  >
+    <a
+      class="ebook-card__image"
+      to="/ebooks/pricing-strategies"
+    />
+     
+    <div
+      class="ebook-card__info"
+    >
+      <a
+        to="/ebooks/pricing-strategies"
+      />
+    </div>
+  </div>
+</div>
+`;

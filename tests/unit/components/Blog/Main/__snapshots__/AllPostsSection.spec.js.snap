@@ -221,6 +221,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -236,6 +237,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -251,6 +253,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -266,6 +269,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -281,6 +285,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -296,6 +301,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -311,6 +317,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -326,6 +333,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -341,6 +349,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -356,6 +365,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -371,6 +381,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -386,6 +397,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -401,6 +413,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
         <section
@@ -416,6 +429,7 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
             textcolor=""
             theme="light"
             width="400"
+            withauthor="true"
           />
         </section>
       </div>
