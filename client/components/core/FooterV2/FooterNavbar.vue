@@ -83,6 +83,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
+    align-items: flex-start;
   }
 
   &-main-navigation {
