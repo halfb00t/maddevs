@@ -13,7 +13,10 @@
       >
     </NuxtLink>
     <div class="post-card__info">
-      <NuxtLink :to="link">
+      <NuxtLink
+        :to="link"
+        class="post-card__info-text"
+      >
         <h2
           class="post-card__title post-card__title--short"
           :title="$prismic.asText(post.data.title)"
