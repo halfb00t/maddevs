@@ -50,6 +50,7 @@ export default {
     opacity: .5;
     transition: all 0.3s ease;
     width: 100%;
+    background: $bgcolor--white-primary;
 
     &:last-child {
       margin-bottom: 0;

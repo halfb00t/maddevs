@@ -196,7 +196,7 @@ export default {
 
   @media screen and (max-width: 480px) {
     bottom: 0;
-    top: 40px;
+    top: 0;
     left: 0;
     right: 0;
     transform: translate(0);

@@ -97,5 +97,9 @@ export default {
   margin-top: -62px !important;
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 480px) {
+    position: static;
+  }
 }
 </style>

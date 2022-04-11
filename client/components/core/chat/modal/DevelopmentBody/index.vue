@@ -94,6 +94,10 @@ export default {
   border-bottom-right-radius: 10px;
   min-height: 477px;
 
+  @media screen and (max-width: 480px) {
+    min-height: 100vh;
+  }
+
   &__title {
     font-family: 'Inter';
     font-style: normal;

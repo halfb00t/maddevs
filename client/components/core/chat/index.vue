@@ -53,7 +53,7 @@ export default {
     },
 
     closeModal() {
-      this.isShow = !this.isShow
+      this.isShow = false
     },
 
     onKeydown(e) {

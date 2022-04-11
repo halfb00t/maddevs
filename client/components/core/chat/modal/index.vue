@@ -1,8 +1,5 @@
 <template>
-  <section
-    @mouseover="disableScrolling"
-    @mouseleave="enableScrolling"
-  >
+  <section>
     <div class="chat-header">
       <div class="chat-header__logo">
         <MessageIcon>
@@ -75,19 +72,8 @@ export default {
   },
 
   methods: {
-    disableScrolling() {
-      document.body.addEventListener('scroll', e => {
-        e.preventDefault()
-      })
-    },
-
-    enableScrolling() {
-      document.body.style.cssText = 'padding-right: 0; overflow: auto;'
-    },
-
     onClose() {
       this.$emit('close')
-      this.enableScrolling()
     },
 
     changeModal(id) {
@@ -132,6 +118,11 @@ export default {
   -moz-user-select: none; /* mozilla browsers */
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
+
+  @media screen and (max-width: 480px) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
   &__logo {
     margin-right: 8px;
@@ -180,7 +171,7 @@ export default {
   max-height: calc(100vh - 200px);
 
   @media screen and (max-width: 480px) {
-    max-height: calc(100vh - 120px);
+    min-height: 100vh;
   }
 }
 
@@ -188,11 +179,5 @@ export default {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
-
-  &:hover {
-    body {
-      overflow: hidden;
-    }
-  }
 }
 </style>

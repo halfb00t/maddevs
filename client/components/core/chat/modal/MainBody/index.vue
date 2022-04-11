@@ -71,13 +71,15 @@ export default {
 .main-body {
   padding: 50px 20px 40px;
   background-color: $bgcolor--white-primary;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   user-select: none; /* standard syntax */
   -webkit-user-select: none; /* webkit (safari, chrome) browsers */
   -moz-user-select: none; /* mozilla browsers */
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
+
+  @media screen and (max-width: 480px) {
+    height: 100vh;
+  }
 
   &__dm-message {
     margin-bottom: 60px;
