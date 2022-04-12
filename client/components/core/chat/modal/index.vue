@@ -119,11 +119,6 @@ export default {
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
 
-  @media screen and (max-width: 480px) {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-
   &__logo {
     margin-right: 8px;
     margin-top: -8px;
@@ -146,6 +141,7 @@ export default {
     margin-left: auto;
     background: transparent;
     border: none;
+    cursor: pointer;
 
     &:before, &:after {
       position: absolute;
@@ -169,10 +165,6 @@ export default {
 
 .modal_content {
   max-height: calc(100vh - 200px);
-
-  @media screen and (max-width: 480px) {
-    min-height: 100vh;
-  }
 }
 
 .modal-wrapper {

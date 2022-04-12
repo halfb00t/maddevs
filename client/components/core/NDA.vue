@@ -190,16 +190,8 @@ export default {
 
 .chat {
   position: fixed;
-  bottom: 60px;
-  right: 60px;
-  transform: translate(50%, 50%);
-
-  @media screen and (max-width: 480px) {
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translate(0);
-  }
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
 }
 </style>

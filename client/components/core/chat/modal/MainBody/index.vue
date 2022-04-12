@@ -77,10 +77,6 @@ export default {
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
 
-  @media screen and (max-width: 480px) {
-    height: 100vh;
-  }
-
   &__dm-message {
     margin-bottom: 60px;
   }
