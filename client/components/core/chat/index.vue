@@ -1,41 +1,33 @@
 <template>
   <section>
-    <button
-      class="chat-wrapper"
-      :class="{ active: !isShow }"
-      @click="openModal"
-    >
-      <MessageIcon v-if="!isShow" />
-      <CloseIcon v-else />
-    </button>
-    <div
-      v-if="isShow"
-      class="chat-modal"
-    >
-      <ChatModal
-        @close="closeModal"
+    <section @click="openModal">
+      <ChatIcon
+        :is-visible="isVisible"
       />
-    </div>
+    </section>
+    <ChatModal
+      v-if="isVisible"
+      class="modal"
+      @close="closeModal"
+    />
   </section>
 </template>
 
 <script>
-import ChatModal from '@/components/core/chat/modal'
-import MessageIcon from '@/components/core/chat/MessageIcon'
-import CloseIcon from '@/components/core/chat/CloseIcon.vue'
+import ChatIcon from '@/components/core/chat/ChatIcon'
+import ChatModal from '@/components/core/chat/ChatModal'
 
 export default {
-  name: 'ChatIcon',
+  name: 'Chat',
 
   components: {
+    ChatIcon,
     ChatModal,
-    MessageIcon,
-    CloseIcon,
   },
 
   data() {
     return {
-      isShow: false,
+      isVisible: false,
     }
   },
 
@@ -49,11 +41,11 @@ export default {
 
   methods: {
     openModal() {
-      this.isShow = !this.isShow
+      this.isVisible = !this.isVisible
     },
 
     closeModal() {
-      this.isShow = false
+      this.isVisible = false
     },
 
     onKeydown(e) {
@@ -66,32 +58,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.chat-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  background-color: $bgcolor--venetian-red;
-  border-radius: 50%;
-  transition: all .2s;
-  border: none;
-  cursor: pointer;
+.modal {
+  position: fixed;
+  right: 25px;
+  bottom: 80px;
+  width: 350px;
+  -webkit-box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.53);
+  box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.53);
+  border-radius: 10px;
+  overflow: hidden;
 
-  &:hover {
-    background-color: $text-color--ruddy;
-    transition: all .2s;
+  @media screen and (max-width: 420px) {
+    inset: 0;
+    background: $bgcolor--white-primary;
+    width: 100%;
+    border-radius: 0;
   }
-}
-
-.active {
-  background-color: $bgcolor--maximum-red;
-}
-
-.chat-modal {
-  position: absolute;
-  right: 75px;
-  bottom: 0;
-  width: 339px;
 }
 </style>

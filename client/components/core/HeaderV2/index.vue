@@ -194,6 +194,7 @@ export default {
   },
 
   computed: {
+    // need to refactoring
     showCrumbs() {
       const { fullPath } = this.$route
       if (fullPath !== undefined) {

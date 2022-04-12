@@ -47,8 +47,8 @@
 </template>
 
 <script>
-import ChatButtons from '@/components/core/chat/modal/MainBody/ChatButtons'
-import Message from '@/components/core/chat/modal/MainBody/Message'
+import ChatButtons from '@/components/core/chat/ChatModal/MainBody/ChatButtons'
+import Message from '@/components/core/chat/ChatModal/MainBody/Message'
 
 export default {
   name: 'MainBody',

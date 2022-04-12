@@ -45,10 +45,10 @@
 
 <script>
 import Simplebar from 'simplebar-vue'
-import MainBody from '@/components/core/chat/modal/MainBody'
-import Development from '@/components/core/chat/modal/DevelopmentBody'
-import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
-import MessageIcon from '@/components/core/chat/MessageIcon'
+import MainBody from '@/components/core/chat/ChatModal/MainBody'
+import Development from '@/components/core/chat/ChatModal/DevelopmentBody'
+import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo'
+import MessageIcon from '@/components/core/chat/ChatIcon/MessageIcon'
 
 export default {
   name: 'ChatModal',
@@ -108,8 +108,6 @@ export default {
 .chat-header {
   padding: 20px;
   background-color: $bgcolor--chinese-black;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   display: flex;
   align-items: center;
   border: 1px solid $border-color--grey-pale;
@@ -164,12 +162,10 @@ export default {
 }
 
 .modal_content {
-  max-height: calc(100vh - 200px);
-}
+  max-height: calc(100vh - 250px);
 
-.modal-wrapper {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  overflow: hidden;
+  @media screen and (max-width: 420px) {
+    max-height: calc(100vh - 100px);
+  }
 }
 </style>

@@ -30,7 +30,7 @@
 <script>
 import BaseForm from '@/components/core/forms/BaseForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
-import FormSuccess from '@/components/core/chat/modal/FormSuccess'
+import FormSuccess from '@/components/core/chat/ChatModal/FormSuccess'
 
 export default {
   name: 'Development',

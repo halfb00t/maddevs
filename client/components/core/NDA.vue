@@ -58,20 +58,11 @@
         </p>
       </div>
     </div>
-    <div class="chat">
-      <ChatIcon />
-    </div>
   </section>
 </template>
 <script>
-import ChatIcon from '@/components/core/chat'
-
 export default {
   name: 'NDA',
-
-  components: {
-    ChatIcon,
-  },
 }
 </script>
 
@@ -186,12 +177,5 @@ export default {
       display: none;
     }
   }
-}
-
-.chat {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
 }
 </style>
