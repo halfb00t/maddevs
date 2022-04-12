@@ -1,6 +1,6 @@
 <template>
   <section>
-    <section @click="openModal">
+    <section @click="toggleModal">
       <ChatIcon
         :is-visible="isVisible"
       />
@@ -8,7 +8,7 @@
     <ChatModal
       v-if="isVisible"
       class="modal"
-      @close="closeModal"
+      @close="toggleModal"
     />
   </section>
 </template>
@@ -40,17 +40,13 @@ export default {
   },
 
   methods: {
-    openModal() {
+    toggleModal() {
       this.isVisible = !this.isVisible
-    },
-
-    closeModal() {
-      this.isVisible = false
     },
 
     onKeydown(e) {
       if (e.key === 'Escape') {
-        this.closeModal()
+        this.isVisible = false
       }
     },
   },
