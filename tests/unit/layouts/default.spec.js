@@ -8,7 +8,8 @@ localVue.use(Vuex)
 
 let push = jest.fn()
 
-const stubs = ['Header', 'Nuxt', 'Footer', 'ClientOnly']
+const stubs = ['Header', 'Nuxt', 'Footer', 'ClientOnly', 'Chat']
+
 let mocks = {
   $nextTick: jest.fn(callback => {
     if (typeof callback === 'function') {
@@ -121,9 +122,6 @@ describe('Default layout', () => {
       .toHaveBeenCalledWith({ block: 'start' })
   })
 
-  it('should be redirected to 404 if the route is Not allowed', () => {
-    expect(push).toHaveBeenCalledWith('/404/')
-  })
   it('should be Not redirected to 404 if the route is allowed', () => {
     push = jest.fn()
 

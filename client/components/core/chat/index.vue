@@ -1,13 +1,16 @@
 <template>
-  <section>
-    <section @click="toggleModal">
+  <section class="chat">
+    <button
+      class="chat__button"
+      @click="toggleModal"
+    >
       <ChatIcon
         :is-visible="isVisible"
       />
-    </section>
+    </button>
     <ChatModal
       v-if="isVisible"
-      class="modal"
+      class="chat__modal"
       @close="toggleModal"
     />
   </section>
@@ -31,7 +34,7 @@ export default {
     }
   },
 
-  beforeMount() {
+  mounted() {
     document.addEventListener('keydown', this.onKeydown)
   },
 
@@ -54,21 +57,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.modal {
-  position: fixed;
-  right: 25px;
-  bottom: 80px;
-  width: 350px;
-  -webkit-box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.53);
-  box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.53);
-  border-radius: 10px;
-  overflow: hidden;
+.chat {
+  &__modal {
+    position: fixed;
+    right: 25px;
+    bottom: 80px;
+    width: 350px;
+    -webkit-box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.53);
+    box-shadow: 0px 0px 28px 5px rgba(0,0,0,0.53);
+    border-radius: 10px;
+    overflow: hidden;
 
-  @media screen and (max-width: 420px) {
-    inset: 0;
-    background: $bgcolor--white-primary;
-    width: 100%;
-    border-radius: 0;
+    @media screen and (max-width: 420px) {
+      inset: 0;
+      background: $bgcolor--white-primary;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
   }
 }
 </style>

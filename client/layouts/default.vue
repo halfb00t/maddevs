@@ -2,7 +2,7 @@
   <div class="default-layout">
     <HeaderV2 />
     <Nuxt class="main-section" />
-    <Chat class="chat" />
+    <Chat class="modal-chat" />
     <ClientOnly>
       <CookieNotice />
     </ClientOnly>
@@ -91,7 +91,7 @@ export default {
 .default-layout {
   background-color: $bgcolor--black;
 
-  .chat {
+  .modal-chat {
     position: fixed;
     bottom: 10px;
     right: 25px;
