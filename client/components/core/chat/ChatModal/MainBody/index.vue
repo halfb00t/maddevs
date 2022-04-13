@@ -20,7 +20,10 @@
       </Message>
     </div>
 
-    <div v-if="isShowMessage">
+    <div
+      v-if="isShowMessage"
+      data-testid="test-message"
+    >
       <Message
         position="left"
         author-name="Anatoliy Fedorenko"
@@ -41,20 +44,20 @@
       v-else
       class="main-body__buttons"
     >
-      <ChatButtons />
+      <ChatActions />
     </div>
   </div>
 </template>
 
 <script>
-import ChatButtons from '@/components/core/chat/ChatModal/MainBody/ChatButtons'
+import ChatActions from '@/components/core/chat/ChatModal/MainBody/ChatActions'
 import Message from '@/components/core/chat/ChatModal/MainBody/Message'
 
 export default {
   name: 'MainBody',
 
   components: {
-    ChatButtons,
+    ChatActions,
     Message,
   },
 

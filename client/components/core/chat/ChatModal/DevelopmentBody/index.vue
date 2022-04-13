@@ -50,7 +50,7 @@ export default {
 
     isPartnership: {
       type: Boolean,
-      default: () => false,
+      default: false,
     },
   },
 

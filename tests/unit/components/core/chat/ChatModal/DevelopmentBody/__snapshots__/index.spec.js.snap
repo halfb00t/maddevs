@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Development component should render correctly 1`] = `
+<section class="software-body">
+  <p class="software-body__title">
+    Please, leave your contacts. We will contact you soon.
+  </p>
+  <baseform-stub buttonlabel="Contact me" buttonclassname="ui-button--transparent-bgc ui-button_submit-button-footer" buttonidname="chat_button" additionalvalid="true" classname="chat-form" id="chat-form" usephone="true" usecompany="true" uselabels="true" fullnamerequired="true" emailrequired="true" fullnameplaceholder="John Smith" companyplaceholder="My Awesome Company, Inc." emailplaceholder="your@mail.com" phoneplaceholder="Phone number" descriptionplaceholder="Describe your project..." defaultinterestradioinput="true" interestradiolabel="I'm interested in ..." interestradiochoices="Software development,Partnership"></baseform-stub>
+</section>
+`;

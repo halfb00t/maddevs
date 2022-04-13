@@ -1,8 +1,8 @@
 <template>
-  <button class="chat-wrapper">
+  <section class="chat-wrapper">
     <CloseIcon v-if="isVisible" />
     <MessageIcon v-else />
-  </button>
+  </section>
 </template>
 
 <script>
