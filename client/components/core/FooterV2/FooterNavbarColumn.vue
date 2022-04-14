@@ -1,7 +1,7 @@
 <template>
   <div
     class="footer-section"
-    :class="`footer-section-${name}`"
+    :class="`footer-section--${name}`"
   >
     <div class="footer-section__content">
       <div class="footer-section__menus">

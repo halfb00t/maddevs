@@ -1,14 +1,14 @@
 <template>
   <div
     class="footer-navbar"
-    @mouseleave="setActiveColumn($event)"
+    @mouseleave="$emit('leave-columns', $event)"
   >
     <ul
       v-for="(navigation, index) in navigations"
       :key="index"
       class="footer-main-navigation"
       :class="`footer-nav-column-${navigation[0].name}`"
-      @mouseenter="setActiveColumn($event, navigation[0].name)"
+      @mouseenter="$emit('enter-column', $event, navigation[0].name)"
     >
       <li
         v-for="{name, label} in navigation"
@@ -56,15 +56,7 @@ export default {
     ...mapGetters(['footerMainNavigation', 'footerIsLoaded']),
   },
 
-  mounted() {
-    window.addEventListener('resize', this.setActiveColumn)
-  },
-
   methods: {
-    setActiveColumn($event, columnName) {
-      this.$emit('changed-active-column', $event, columnName)
-    },
-
     goTo(name) {
       const path = this.footerMainNavigation[name]?.link
       if (!path) return

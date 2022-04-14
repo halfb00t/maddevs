@@ -9,11 +9,13 @@
         <div
           id="footer__animated-top-line-separator"
           class="footer__animated-top-line-separator"
+          :style="{ left: `${topLineSeparatorIndent}px` }"
         />
         <div
           id="footer__animated-icon--fire"
           class="footer__animated-icon footer__animated-icon--fire"
           :class="{ 'footer__animated-icon--active': activeIcon === 'fire', 'footer__animated-icon--active-unselected': !activeIcon }"
+          :style="{ left: iconIndent ? `${iconIndent}px` : 'auto' }"
         >
           <svg
             width="38"
@@ -34,6 +36,7 @@
           id="footer__animated-icon--diamond"
           class="footer__animated-icon"
           :class="{ 'footer__animated-icon--active': activeIcon === 'diamond'}"
+          :style="{ left: `${iconIndent ? `${iconIndent}px` : 'auto'}` }"
         >
           <svg
             width="48"
@@ -54,6 +57,7 @@
           id="footer__animated-icon--lightning"
           class="footer__animated-icon"
           :class="{ 'footer__animated-icon--active': activeIcon === 'lightning'}"
+          :style="{ left: `${iconIndent ? `${iconIndent}px` : 'auto'}` }"
         >
           <svg
             width="29"
@@ -74,7 +78,8 @@
         <div class="footer__content footer__content--left-section">
           <FooterNavbar
             :navigations="mainNavigations"
-            @changed-active-column="onChangeColumn"
+            @enter-column="onEnterColumn"
+            @leave-columns="onLeaveColumns"
           />
         </div>
         <div class="footer__content footer__content--right-section">
@@ -106,21 +111,21 @@ export default {
       pageName: '',
       mainNavigations,
       activeIcon: '',
+      topLineSeparatorIndent: null,
+      iconIndent: null,
     }
   },
 
   computed: {
     ...mapGetters(['footerMainNavigation']),
-
-    iconIndent() {
-      if (this.activeIcon === 'diamond') return 10
-      if (this.activeIcon === 'lightning') return 20
-      return 10
-    },
   },
 
   created() {
     this.getFooterContent()
+  },
+
+  mounted() {
+    window.addEventListener('resize', this.onResize)
   },
 
   methods: {
@@ -133,23 +138,40 @@ export default {
       return 'lightning'
     },
 
-    onChangeColumn(event, columnName) {
-      this.activeIcon = this.getActiveIconByColumnName(columnName)
-      const topLineSeparator = document.querySelector('#footer__animated-top-line-separator')
+    getColumnPositions(column) {
+      const { left } = column.getBoundingClientRect()
 
-      if (columnName) {
-        const columnPositions = event.target.getBoundingClientRect()
-        const icon = document.querySelector(`#footer__animated-icon--${this.activeIcon}`)
-        topLineSeparator.style.left = `${columnPositions.left}px`
-        icon.style.left = `${columnPositions.left}px`
-      } else {
-        const firstColumn = document.querySelector('.footer-nav-column-company')
-        const { left } = firstColumn.getBoundingClientRect()
-        topLineSeparator.style.left = `${left}px`
-        // Handle resize case
-        const firstIcon = document.querySelector('#footer__animated-icon--fire')
-        if (firstIcon) firstIcon.style.left = `${left}px`
+      return {
+        topLineSeparatorIndent: left,
+        iconIndent: left,
       }
+    },
+
+    onResize() {
+      const positions = this.getFirstColumnPositions()
+      this.topLineSeparatorIndent = positions.topLineSeparatorIndent
+      this.iconIndent = positions.iconIndent
+    },
+
+    onEnterColumn(event, columnName) {
+      const positions = this.getColumnPositions(event.target)
+
+      this.startAnimation(positions, columnName)
+    },
+
+    onLeaveColumns(event, columnName) {
+      const firstColumn = document.querySelector('.footer-nav-column-company')
+      const positions = this.getColumnPositions(firstColumn)
+
+      this.startAnimation(positions, columnName)
+    },
+
+    startAnimation(positions, columnName) {
+      this.activeIcon = this.getActiveIconByColumnName(columnName)
+      this.topLineSeparatorIndent = positions.topLineSeparatorIndent
+      // setTimeout is needed to prevent icon animation blinking
+      // 200ms is a default icon transition(from styles)
+      setTimeout(() => { this.iconIndent = positions.iconIndent }, 200)
     },
   },
 
@@ -157,6 +179,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .footer {
   position: relative;
   padding-top: 65px;
