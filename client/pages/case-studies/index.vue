@@ -33,7 +33,6 @@ export default {
   head() {
     return buildHead({
       ...getMetadata('caseStudies'),
-      image: 'https://maddevs.io/case-studies.png',
     })
   },
 }
