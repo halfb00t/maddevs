@@ -39,6 +39,7 @@ export const meta = {
     description:
       'We deliver software engineering and mobile app development services, DevOps and IT consulting services to businesses of any size.',
     url: 'https://maddevs.io/services/',
+    image: 'https://maddevs.io/sw-development.png',
   },
   caseStudies: {
     title: 'Mad Devs Custom Software Development Company',

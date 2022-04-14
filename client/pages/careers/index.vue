@@ -22,9 +22,10 @@ export default {
       ...buildHead(
         {
           ...getMetadata('careers'),
-          url: `https://maddevs.io${this.$route.path}/`,
+          url: `https://maddevs.io${this.$route.path}`,
           title: this.$t('careers.meta.title'),
           description: this.$t('careers.meta.description'),
+          image: `https://maddevs.io/careers-${this.$route.path.startsWith('/ru') ? 'ru' : 'en'}.png`,
         }, // meta tags
         [], // scripts
         [

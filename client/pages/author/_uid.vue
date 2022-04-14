@@ -60,7 +60,7 @@ export default {
       description: this.blogAuthor.metaDescription || '',
       url: this.openGraphUrl,
       jsonLd: this.blogAuthor.schemaOrgSnippet,
-      image: 'https://maddevs.io/blog.png',
+      image: 'https://maddevs.io/md-blog.png',
     })
   },
 

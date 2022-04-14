@@ -42,7 +42,7 @@ export default {
       metaTitle: metaData.title || `Top articles about ${this.blogTag} | Mad Devs Blog`,
       description: metaData.description || `Discover articles about ${this.blogTag}. Quality content curated by Mad Devs.`,
       url: this.openGraphUrl,
-      image: 'https://maddevs.io/blog.png',
+      image: 'http://192.168.0.103:3000/md-blog.png',
     })
   },
 

@@ -26,7 +26,7 @@ export default {
       metaTitle: 'Blog',
       description: 'Page for search result',
       url: 'https://maddevs.io/blog/search-result/?searchBy=Mad/',
-      image: 'https://maddevs.io/blog.png',
+      image: 'https://maddevs.io/md-blog.png',
     })
   },
 

@@ -31,7 +31,10 @@ export default {
   nuxtI18n: false,
 
   head() {
-    return buildHead(getMetadata('caseStudies'))
+    return buildHead({
+      ...getMetadata('caseStudies'),
+      image: 'https://maddevs.io/case-studies.png',
+    })
   },
 }
 </script>
