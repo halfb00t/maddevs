@@ -19,18 +19,14 @@
       </div>
       <div class="author-posts__list">
         <template v-if="authorPostsLoaded">
-          <section
+          <PostCard
             v-for="post in authorPostsToShow"
             :key="post.id"
             :post="post"
+            :author="blogAuthor"
+            :disable-author-link="true"
             class="author-posts__list-item"
-          >
-            <PostCard
-              :post="post"
-              :author="blogAuthor"
-              :disable-author-link="true"
-            />
-          </section>
+          />
         </template>
         <template v-else>
           <section
@@ -114,24 +110,38 @@ export default {
       }
     }
 
+    ::v-deep .post-card {
+      display: flex;
+      flex-direction: column;
+      &__info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      &__info-text{
+        margin-bottom: 16px;
+      }
+    }
+
     &__list {
       display: flex;
       flex-flow: row wrap;
       margin: 0 -10px;
+      row-gap: 103px;
     }
 
     &__list-item {
       box-sizing: border-box;
       width: 33.3333%;
       padding: 0 10px;
-      margin-bottom: 103px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      ::v-deep .post-card__meta {
+        margin: auto 0 16px;
+      }
       &:first-of-type {
         display: none;
-      }
-      @media only screen and (min-width: 991px) {
-        &:nth-last-child(-n+3) {
-          margin-bottom: 0;
-        }
       }
     }
 
@@ -147,14 +157,14 @@ export default {
         margin-bottom: 56px;
       }
 
+      &__list {
+        row-gap: 56px;
+      }
+
       &__list-item {
         width: 100%;
-        margin-bottom: 56px;
         &:first-of-type {
           display: block;
-        }
-        &:last-child {
-          margin-bottom: 0;
         }
       }
 
