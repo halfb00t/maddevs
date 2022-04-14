@@ -1,27 +1,31 @@
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue } from '@vue/test-utils'
+import { render } from '@testing-library/vue'
+import Vuex from 'vuex'
 import Development from '@/components/core/chat/ChatModal/DevelopmentBody'
-import createLeadMixin from '@/mixins/createLeadMixin'
+import formBaseProps from '../../../../../__mocks__/formBaseProps'
 
+const localVue = createLocalVue()
+localVue.use(Vuex)
+
+const store = {
+  actions: {
+    sendLead: jest.fn(),
+  },
+}
+const mocks = formBaseProps
 const props = {
   isCompany: true,
   isPartnership: false,
 }
-const stubs = ['BaseForm', 'FormSuccess']
-const mocks = {
-  $recaptcha: jest.fn(),
-}
 
 describe('Development component', () => {
   it('should render correctly', () => {
-    const wrapper = shallowMount(Development, {
-      propsData: props,
-      stubs,
-      mixins: [createLeadMixin(763813, 'Chat Form')],
+    const { container } = render(Development, {
       mocks,
+      store,
+      props,
     })
 
-    console.log(wrapper.vm.$options)
-
-    expect(wrapper).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 })

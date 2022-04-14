@@ -116,6 +116,13 @@ export default {
   -moz-user-select: none; /* mozilla browsers */
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  @media screen and (max-width: 420px) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
   &__logo {
     margin-right: 8px;
