@@ -1,8 +1,10 @@
 <template>
-  <SliceZone
-    type="page"
-    :slices="customPage.slices"
-  />
+  <div>
+    <SliceZone
+      type="page"
+      :slices="customPage.slices"
+    />
+  </div>
 </template>
 
 <script>
