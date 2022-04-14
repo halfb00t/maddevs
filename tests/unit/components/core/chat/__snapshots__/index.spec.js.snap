@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat component should render correctly 1`] = `
+<div>
+  <section
+    class="chat"
+  >
+    <button
+      class="chat__button"
+    >
+      <chaticon-stub />
+    </button>
+     
+    <!---->
+  </section>
+</div>
+`;
