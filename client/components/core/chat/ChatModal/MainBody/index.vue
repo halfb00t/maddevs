@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 .main-body {
-  padding: 50px 20px 40px;
+  padding: 22px;
   background-color: $bgcolor--white-primary;
   user-select: none; /* standard syntax */
   -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -80,14 +80,14 @@ export default {
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
 
-  &__dm-message {
-    margin-bottom: 60px;
+  &__dm-message,
+  &__my-message {
+    margin-bottom: 40px;
   }
 
   &__my-message {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 60px;
   }
 }
 </style>

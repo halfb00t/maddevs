@@ -92,11 +92,7 @@ export default {
   background-color: $bgcolor--white-primary;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  min-height: 477px;
-
-  @media screen and (max-width: 480px) {
-    min-height: 100vh;
-  }
+  min-height: 400px;
 
   &__title {
     font-family: 'Inter';
