@@ -17,7 +17,10 @@ export default {
   nuxtI18n: false,
 
   head() {
-    return buildHead(getMetadata('privacy'))
+    return buildHead({
+      ...getMetadata('privacy'),
+      image: 'https://maddevs.io/privacy-policy.png',
+    })
   },
 }
 </script>
