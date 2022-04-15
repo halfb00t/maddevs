@@ -51,6 +51,7 @@ export default {
           }
 
           // from mixin
+          console.log(variables)
           this.submitLead(variables)
         })
       })
