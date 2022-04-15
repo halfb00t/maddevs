@@ -52,7 +52,6 @@ describe('Index page', () => {
     const actual = wrapper.vm.$options.head.call(wrapper.vm)
 
     expect(actual.meta).toHaveLength(Object.keys(META_DATA).length)
-    console.log(actual.meta)
     actual.meta.forEach(meta => {
       expect(META_DATA[meta.name] || META_DATA[meta.property]).toBe(meta.content)
     })
