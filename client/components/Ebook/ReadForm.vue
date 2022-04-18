@@ -66,7 +66,6 @@ export default {
     return {
       name: '',
       email: '',
-      formLocation: 'Ebook Pricing Strategies',
     }
   },
 
@@ -125,7 +124,7 @@ export default {
         fullName: this.name,
         email: this.email,
         page: window.location.href,
-        formLocation: this.formLocation,
+        formLocation: this.bookName,
       }
       // from mixin
       this.submitLead(variables)
