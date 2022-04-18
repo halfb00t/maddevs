@@ -3,7 +3,7 @@ name: Deploy staging
 on:
   push:
     branches:
-      - feature/deploy-with-heroku-cli # Changing the branch here would also work
+      - staging # Changing the branch here would also work
 
 jobs:
   build:
@@ -16,4 +16,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME_STAGING}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          branch: "feature/deploy-with-heroku-cli"
+          branch: "staging"
