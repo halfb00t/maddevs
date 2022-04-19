@@ -106,7 +106,6 @@ describe('Leads service', () => {
         customfield_10186: 'Name: Chrome, Version: 99.0.4844.84',
         customfield_10187: 'user os',
         customfield_10188: 'Type: desktop, Vendor: Unknown',
-        customfield_10190: 'url',
         issuetype: {
           id: '10082',
         },

@@ -63,19 +63,12 @@ export default {
 
   methods: {
     handleSubmit(formData) {
-      const recaptcha = window.grecaptcha
-      recaptcha.ready(() => {
-        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(token => {
-          const variables = {
-            fromId: 'chat-form',
-            token,
-            ...formData,
-            formLocation: 'Chat component',
-          }
-          this.submitLead(variables)
-          this.showSuccessModal = true
-        })
-      })
+      const variables = {
+        ...formData,
+        formLocation: 'Chat component',
+      }
+      this.submitLead(variables)
+      this.showSuccessModal = true
     },
 
     reset() {
