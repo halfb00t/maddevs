@@ -16,7 +16,7 @@ function extractSchemaOrg(schemaOrgSnippets, fallback) {
     '@type': 'Article',
     headline: fallback?.data?.title[0]?.text || 'Mad Devs: Software & Mobile App Development Company | Blog',
     alternativeHeadline: fallback?.data?.title[0]?.text || 'Mad Devs: Software & Mobile App Development Company | Blog',
-    image: fallback?.data?.featured_image?.url || 'https://maddevs.io/blog.png',
+    image: fallback?.data?.featured_image?.url || 'https://maddevs.io/md-blog.png',
     genre: 'IT',
     publisher: {
       '@type': 'Organization',

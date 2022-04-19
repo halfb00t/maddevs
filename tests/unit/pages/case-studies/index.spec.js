@@ -9,13 +9,13 @@ const META_DATA = {
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Custom Software Development Company',
   'og:description': 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
-  'og:image': 'https://maddevs.io/Open-Graph.png',
+  'og:image': 'https://maddevs.io/case-studies.png',
   'og:image:width': '1200',
   'og:image:height': '630',
   'twitter:card': 'summary_large_image',
   'twitter:text:title': 'Mad Devs Custom Software Development Company',
   'twitter:description': 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
-  'twitter:image:src': 'https://maddevs.io/Open-Graph.png',
+  'twitter:image:src': 'https://maddevs.io/case-studies.png',
   'twitter:url': 'https://maddevs.io/case-studies/',
 }
 

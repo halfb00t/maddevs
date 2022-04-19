@@ -1,5 +1,7 @@
 <template>
-  <section id="nda">
+  <section
+    id="nda"
+  >
     <div class="container">
       <div class="nda__header">
         <h1 class="nda__title">

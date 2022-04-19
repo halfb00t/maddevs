@@ -15,13 +15,13 @@ const META_DATA = {
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs: Software & Mobile App Development Company | Blog',
   'og:description': DESCRIPTION,
-  'og:image': 'https://maddevs.io/blog.png',
+  'og:image': 'https://maddevs.io/md-blog.png',
   'og:image:width': '1200',
   'og:image:height': '630',
   'twitter:card': 'summary_large_image',
   'twitter:text:title': 'Mad Devs: Software & Mobile App Development Company | Blog',
   'twitter:description': DESCRIPTION,
-  'twitter:image:src': 'https://maddevs.io/blog.png',
+  'twitter:image:src': 'https://maddevs.io/md-blog.png',
   'twitter:url': 'https://maddevs.io/blog/',
 }
 
