@@ -41,7 +41,6 @@ function buildPayload({ variables }) {
       customfield_10186: variables.userBrowser,
       customfield_10187: variables.userOS,
       customfield_10188: variables.userPlatform,
-      customfield_10190: variables.pageUrl,
       description: {
         type: 'doc',
         version: 1,
