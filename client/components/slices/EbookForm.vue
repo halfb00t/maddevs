@@ -51,6 +51,7 @@ import BaseInput from '@/components/core/forms/BaseInput'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import { getLinkWithLifeTime } from '@/api/s3'
 import { sendEmail } from '@/api/email'
+import createLeadMixin from '@/mixins/createLeadMixin'
 
 export default {
   name: 'EbookForm',
@@ -58,6 +59,8 @@ export default {
     BaseInput,
     SuccessMessage,
   },
+
+  mixins: [createLeadMixin(624246, 'Request a PDF file from the Ebook page')],
 
   props: {
     ebookPath: {
@@ -77,6 +80,7 @@ export default {
       email: '',
       successMessage: null,
       formSended: false,
+      type: 'ebook-form',
     }
   },
 
@@ -110,6 +114,7 @@ export default {
         expiresIn: 86400, // sec -> 24h
       }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
+
       const requestSender = {
         body: {
           email: {
@@ -127,28 +132,20 @@ export default {
 
         base64: null,
       }
-      const requestMarketing = {
-        body: {
-          email: {
-            templateId: 624246, // Required
-            variables: {
-              subject: 'Request a PDF file from the Ebook page',
-              senderName: this.name,
-              emailTo: process.env.emailMarketing,
-              fromSender: this.email,
-              page: window.location.href,
-            },
 
-            attachment: null,
-          },
-        },
-
-        base64: '',
-      }
       sendEmail(this.$axios, requestSender) // Send email to sender
-      sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
+
+      const variables = {
+        type: this.type,
+        fullName: this.name,
+        email: this.email,
+        page: window.location.href,
+        formLocation: this.bookName,
+      }
+      // from mixin
+      this.submitLead(variables)
+
       this.$emit('form-sended', { email: this.email, name: this.name })
-      this.resetForm()
       this.successMessage = `
         The letter with the PDF file was successfully sent to mail ${this.email}.
         <br><br> Please check your email.
@@ -156,7 +153,7 @@ export default {
       this.formSended = true
     },
 
-    resetForm() {
+    reset() {
       this.$v.$reset() // Reset validation form
       this.name = ''
       this.email = ''
