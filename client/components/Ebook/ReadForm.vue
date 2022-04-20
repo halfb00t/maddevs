@@ -66,6 +66,7 @@ export default {
     return {
       name: '',
       email: '',
+      type: 'ebook-form',
     }
   },
 
@@ -121,6 +122,7 @@ export default {
       sendEmail(this.$axios, requestSender) // Send email to sender
 
       const variables = {
+        type: this.type,
         fullName: this.name,
         email: this.email,
         page: window.location.href,
