@@ -161,7 +161,7 @@ export default {
         @include grid(repeat(2, 1fr), auto, 50px, 45px);
       }
 
-      @media screen and (max-width: 580px) {
+      @media screen and (max-width: 768px) {
         @include grid(repeat(1, 1fr), auto, 0px, 48px);
       }
     }
