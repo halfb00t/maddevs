@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EbooksCard component should correctly render component 1`] = `
+<div>
+  <div
+    class="ebook-card"
+  >
+    <nuxtlink-stub
+      class="ebook-card__image-box"
+      to="/ebooks/test-link"
+    >
+      <img
+        alt="img"
+        data-src="img.jpg"
+        height="228"
+        width="270"
+      />
+    </nuxtlink-stub>
+     
+    <nuxtlink-stub
+      class="ebook-card__content"
+      to="/ebooks/test-link"
+    >
+      <h4
+        class="ebook-card__title"
+      >
+        
+      Test
+    
+      </h4>
+       
+      <p
+        class="ebook-card__subtitle"
+      >
+        
+      Subtitle
+    
+      </p>
+    </nuxtlink-stub>
+     
+    <nuxtlink-stub
+      class="ebook-card__link"
+      to="/ebooks/test-link"
+    >
+      
+    Read now
+  
+    </nuxtlink-stub>
+  </div>
+</div>
+`;

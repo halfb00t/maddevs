@@ -6,6 +6,7 @@
     <button
       class="filter__title filter__title--btn"
       type="button"
+      data-testid="openFilter"
       aria-label="Open filter"
       title="Click to open filter"
       @click="openFilter"
@@ -34,6 +35,7 @@
         <li class="filter__list-item">
           <input
             id="allEbooks"
+            data-testid="allEbooks"
             type="radio"
             name="Tag"
             class="filter__list-item-radio"
@@ -57,6 +59,7 @@
             :id="item.category"
             type="radio"
             name="Tag"
+            data-testid="allEbooks"
             class="filter__list-item-radio"
             :value="item.category"
             :checked="ebookCategory === item.category"

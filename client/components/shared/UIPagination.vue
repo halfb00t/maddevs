@@ -54,6 +54,7 @@
       <li class="pagination__list-item">
         <button
           class="pagination__list-arrow-btn"
+          data-testid="text-next-btn"
           :disabled="isInLastPage"
           :title="isInLastPage && 'No pages'"
           aria-label="Go to next page"

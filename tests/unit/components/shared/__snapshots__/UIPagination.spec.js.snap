@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UIPagination component should correctly render component 1`] = `
+<div>
+  <div
+    class="pagination"
+  >
+    <ul
+      class="pagination__list"
+    >
+      <li
+        class="pagination__list-item"
+      >
+        <button
+          aria-label="Go to previous page"
+          class="pagination__list-arrow-btn"
+          disabled="disabled"
+          title="No pages"
+        >
+          
+        &lt;--- Prev
+      
+        </button>
+      </li>
+       
+      <li>
+        <button
+          aria-label="Go to page number 1"
+          class="pagination__list-pages-btn pagination__list-pages-btn--active"
+          disabled="disabled"
+          title="This is current page"
+          type="button"
+        >
+          
+        1
+      
+        </button>
+      </li>
+      <li>
+        <button
+          aria-label="Go to page number 2"
+          class="pagination__list-pages-btn"
+          type="button"
+        >
+          
+        2
+      
+        </button>
+      </li>
+      <li>
+        <button
+          aria-label="Go to page number 3"
+          class="pagination__list-pages-btn"
+          type="button"
+        >
+          
+        3
+      
+        </button>
+      </li>
+       
+      <li>
+        <span
+          class="pagination__list-pages-btn"
+          style="cursor: default;"
+        >
+          
+        ...
+      
+        </span>
+      </li>
+       
+      <li>
+        <button
+          aria-label="Go to page number 4"
+          class="pagination__list-pages-btn"
+          type="button"
+        >
+          
+        4
+      
+        </button>
+      </li>
+       
+      <li
+        class="pagination__list-item"
+      >
+        <button
+          aria-label="Go to next page"
+          class="pagination__list-arrow-btn"
+          data-testid="text-next-btn"
+        >
+          
+        Next ---&gt;
+      
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

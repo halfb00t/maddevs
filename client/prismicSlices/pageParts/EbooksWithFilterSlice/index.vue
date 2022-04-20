@@ -26,6 +26,7 @@
               v-for="(item, i) in ebooks"
               :key="i"
               v-bind="item"
+              data-testid="ebooksCards"
             />
             <template
               v-if="!ebooks.length"
