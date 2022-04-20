@@ -698,6 +698,12 @@
         },
         "items": {}
       }
+    },
+    "EbooksWithFilterSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
