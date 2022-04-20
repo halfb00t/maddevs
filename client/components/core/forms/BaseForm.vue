@@ -322,9 +322,10 @@ export default {
         agreeToGetMadDevsDiscountOffers: this.agreeToGetMadDevsDiscountOffers,
       }
       if (
-        this.useCompany
+        (this.useCompany
         && this.useInterestRadioInput
-        && this.interestChoice !== 'Software development'
+        && this.interestChoice !== 'Software development')
+        || !this.useCompany
       ) {
         formData.company = 'Field was hidden'
       }

@@ -54,6 +54,7 @@ export default {
   },
 
   props: {
+    // eslint-disable-next-line vue/prop-name-casing
     featured_image: {
       type: Object,
       default: () => ({}),

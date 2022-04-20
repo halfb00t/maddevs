@@ -30,7 +30,10 @@ export default {
   ],
 
   head() {
-    return buildHead(getMetadata('openSource'))
+    return buildHead({
+      ...getMetadata('openSource'),
+      image: 'https://maddevs.io/open-source.png',
+    })
   },
 }
 </script>
