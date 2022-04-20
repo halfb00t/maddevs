@@ -10,7 +10,8 @@
           class="footer-contacts__contact-link footer-contacts__contact-mail"
         >{{
           footerContacts.email
-        }}</a>
+        }}
+        </a>
       </div>
       <div class="footer-contacts__contact-item">
         <div class="footer-contacts__contact-title-wrapper">
@@ -236,6 +237,7 @@ export default {
     &__lists-wrapper {
       max-width: 100%;
     }
+
     &__messengers-list {
       width: max-content;
       display: grid;

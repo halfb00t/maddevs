@@ -1,0 +1,88 @@
+{
+  "id": "ebook_page_cards_slice",
+  "type": "SharedSlice",
+  "name": "EbookPageCardsSlice",
+  "description": "EbookPageCardsSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "EbookPageCardsSlice",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+          }
+        },
+        "animation": {
+          "config": {
+            "label": "Animation list",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-right",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-down",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ],
+            "default_value": "fade-up"
+          },
+          "type": "Select"
+        },
+        "btnText": {
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "btnLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false
+          },
+          "type": "Link"
+        },
+        "containerSize": {
+          "config": {
+            "label": "Container Size",
+            "placeholder": "",
+            "options": [
+              "1026",
+              "1240"
+            ],
+            "default_value": "1026"
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "data": {
+          "config": {
+            "label": "Link to Ebook Page",
+            "customtypes": [
+              "custom_page"
+            ],
+            "select": "document"
+          },
+          "type": "Link"
+        }
+      }
+    }
+  ]
+}

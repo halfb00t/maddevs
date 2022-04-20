@@ -136,16 +136,19 @@ export default {
     onChangeColumn(event, columnName) {
       this.activeIcon = this.getActiveIconByColumnName(columnName)
       const topLineSeparator = document.querySelector('#footer__animated-top-line-separator')
-      const icon = document.querySelector(`#footer__animated-icon--${this.activeIcon}`)
 
       if (columnName) {
         const columnPositions = event.target.getBoundingClientRect()
+        const icon = document.querySelector(`#footer__animated-icon--${this.activeIcon}`)
         topLineSeparator.style.left = `${columnPositions.left}px`
         icon.style.left = `${columnPositions.left}px`
       } else {
         const firstColumn = document.querySelector('.footer-nav-column-company')
         const { left } = firstColumn.getBoundingClientRect()
         topLineSeparator.style.left = `${left}px`
+        // Handle resize case
+        const firstIcon = document.querySelector('#footer__animated-icon--fire')
+        if (firstIcon) firstIcon.style.left = `${left}px`
       }
     },
   },
@@ -180,7 +183,7 @@ export default {
       @media screen and (max-width: 991px) {
         display: block;
       }
-      }
+    }
 
     &--left-section {
       width: 66.66%;
@@ -195,7 +198,7 @@ export default {
         padding-left: 60px;
         border-left: 1px solid $border-color--grey-05-opacity;
       }
-      @media screen and (min-width: 993px)  and (max-width: 1320px)  {
+      @media screen and (min-width: 993px) and (max-width: 1320px) {
         padding-left: 25px;
       }
     }
@@ -208,7 +211,8 @@ export default {
       top: 63px;
       width: 68px;
       height: 20px;
-      z-index: 666;
+      z-index: 4;
+      transition: all;
       transition-timing-function: cubic-bezier(1, 0, .52, 1.65);
       transition-duration: 0.7s;
       @media only screen and (max-width: 991px) {
@@ -224,8 +228,8 @@ export default {
 
     &-icon {
       width: 68px;
-      z-index: 999;
-      transition: all .2s;
+      z-index: 5;
+      transition: opacity .2s;
       position: absolute;
       top: 44px;
       opacity: 0;

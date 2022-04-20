@@ -27,7 +27,7 @@ const fallback = {
       },
     ],
     featured_image: {
-      url: 'https://maddevs.io/blog.png',
+      url: 'https://maddevs.io/md-blog.png',
     },
     date: 'N/A',
   },

@@ -67,6 +67,7 @@ exports[`Post component should render correctly with default props 1`] = `
               textcolor=""
               theme="white"
               width="400"
+              withauthor="true"
             />
           </section>
           <section
@@ -82,6 +83,7 @@ exports[`Post component should render correctly with default props 1`] = `
               textcolor=""
               theme="white"
               width="400"
+              withauthor="true"
             />
           </section>
           <section
@@ -97,6 +99,7 @@ exports[`Post component should render correctly with default props 1`] = `
               textcolor=""
               theme="white"
               width="400"
+              withauthor="true"
             />
           </section>
         </div>

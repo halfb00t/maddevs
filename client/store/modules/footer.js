@@ -50,7 +50,6 @@ export const actions = {
     const footerContent = await getFooterContent(this.$prismic)
     const company = await extractFooterSection(this.$prismic, footerContent, 'company')
     const services = await extractFooterSection(this.$prismic, footerContent, 'services')
-    const industries = await extractFooterSection(this.$prismic, footerContent, 'industries')
     const clients = await extractFooterSection(this.$prismic, footerContent, 'clients')
     const insights = await extractFooterSection(this.$prismic, footerContent, 'insights')
     const contacts = {
@@ -63,7 +62,6 @@ export const actions = {
     commit('SET_FOOTER_MAIN_NAVIGATION', {
       company,
       services,
-      industries,
       clients,
       insights,
     })

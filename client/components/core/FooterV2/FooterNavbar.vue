@@ -1,6 +1,7 @@
 <template>
   <div
     class="footer-navbar"
+    @mouseleave="setActiveColumn($event)"
   >
     <ul
       v-for="(navigation, index) in navigations"
@@ -8,7 +9,6 @@
       class="footer-main-navigation"
       :class="`footer-nav-column-${navigation[0].name}`"
       @mouseenter="setActiveColumn($event, navigation[0].name)"
-      @mouseleave="setActiveColumn($event)"
     >
       <li
         v-for="{name, label} in navigation"
@@ -52,19 +52,17 @@ export default {
     },
   },
 
-  data() {
-    return {
-      currentYear: new Date().getFullYear(),
-    }
-  },
-
   computed: {
     ...mapGetters(['footerMainNavigation', 'footerIsLoaded']),
   },
 
+  mounted() {
+    window.addEventListener('resize', this.setActiveColumn)
+  },
+
   methods: {
-    setActiveColumn($event, ColumnName) {
-      this.$emit('changed-active-column', $event, ColumnName)
+    setActiveColumn($event, columnName) {
+      this.$emit('changed-active-column', $event, columnName)
     },
 
     goTo(name) {
@@ -85,6 +83,7 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
+    align-items: flex-start;
   }
 
   &-main-navigation {
@@ -99,18 +98,19 @@ export default {
   }
 
   &-sub-navigation {
-    &__column:hover{
-      .footer-sub-navigation__separator{
-      border: 1px none rgba(236, 28, 36, .5);
-      border-top-style: solid;
-
-    }
-      .footer-main-navigation__column-title{
-        color: red;
-        transition: color .2s;
+    &__column:hover {
+      .footer-sub-navigation__separator {
+        border: 1px none rgba(236, 28, 36, .5);
+        border-top-style: solid;
       }
 
+      .footer-main-navigation__column-title {
+        color: red;
+        transition: color .2s;
+        cursor: pointer;
+      }
     }
+
     &__separator {
       border: 1px none $border-color--grey-05-opacity;
       border-top-style: solid;

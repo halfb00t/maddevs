@@ -13,7 +13,10 @@
       >
     </NuxtLink>
     <div class="post-card__info">
-      <NuxtLink :to="link">
+      <NuxtLink
+        :to="link"
+        class="post-card__info-text"
+      >
         <h2
           class="post-card__title post-card__title--short"
           :title="$prismic.asText(post.data.title)"
@@ -39,7 +42,10 @@
           v-html="firstParagraph"
         />
       </NuxtLink>
-      <div class="post-card__meta">
+      <div
+        v-if="withAuthor"
+        class="post-card__meta"
+      >
         <LazyHydrate when-visible>
           <PostTag
             v-if="isShowPostTags && post.tags && post.tags.length"
@@ -49,7 +55,10 @@
           />
         </LazyHydrate>
       </div>
-      <LazyHydrate when-visible>
+      <LazyHydrate
+        v-if="withAuthor"
+        when-visible
+      >
         <PostAuthor
           v-bind="author"
           :disabled="disableAuthorLink"
@@ -130,6 +139,11 @@ export default {
     limit: {
       type: Number,
       default: 150,
+    },
+
+    withAuthor: {
+      type: Boolean,
+      default: true,
     },
   },
 

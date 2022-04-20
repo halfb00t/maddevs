@@ -12,9 +12,6 @@ describe('ReadForm component', () => {
   beforeEach(() => {
     wrapper = shallowMount(ReadForm, {
       stubs: {
-        Learn: {
-          render(h) { return h('div') },
-        },
         BaseInput: {
           render(h) { return h('div') },
         },
@@ -34,10 +31,5 @@ describe('ReadForm component', () => {
 
   it('should render correctly with no data', () => {
     expect(wrapper.html()).toMatchSnapshot()
-  })
-
-  it('should generate $emit event when submit button is clicked', () => {
-    wrapper.find('button').trigger('click')
-    expect(wrapper.emitted()).toBeTruthy()
   })
 })

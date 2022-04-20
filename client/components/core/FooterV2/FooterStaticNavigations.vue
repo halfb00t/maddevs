@@ -53,6 +53,12 @@ export default {
 
   &__nav {
     &-list {
+      &-item{
+        transition: color .2s;
+        &:hover{
+          color: $text-color--red;
+        }
+      }
       @media screen and (min-width: 992px) {
         margin-top: 30px;
       }

@@ -22,6 +22,7 @@
             v-if="!extractMenuLink(link).isExternalLink"
             :to="extractMenuLink(link).url"
             data-testid="menu-item-internal-link"
+            class="footer-menu__item-link"
             @click.native="goToPage"
           >
             {{ label }}
@@ -77,6 +78,7 @@ export default {
 
 .footer-menu {
   margin-bottom: 30px;
+
   &__name {
     color: $text-color--grey-pale;
     font-size: 12px;
@@ -84,8 +86,17 @@ export default {
     text-transform: capitalize;
     font-weight: normal;
   }
-  &__item{
+
+  &__item {
     margin-bottom: 8px;
+
+    &-link {
+      transition: color .2s;
+
+      &:hover {
+        color: $text-color--red;
+      }
+    }
   }
 }
 </style>

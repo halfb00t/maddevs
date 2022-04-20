@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EbookPageCardsSlice component should correctly render component 1`] = `
+<div>
+  <section
+    class="section ebook-cards"
+  >
+    <div
+      class="container"
+      style="max-width: 1026px;"
+    >
+      <prismicrichtext-stub
+        class="ebook-cards__title"
+        data-aos="fade-up"
+        data-testid="ebook-cards__title"
+        field="[object Object]"
+        html-serializer="function () { [native code] }"
+      />
+       
+      <!---->
+       
+      <div
+        class="ebook-cards__btn-box"
+      >
+        <uibutton-stub
+          class="ebook-cards__btn"
+          islink="true"
+          to="/"
+        >
+          
+        Test text
+      
+        </uibutton-stub>
+      </div>
+    </div>
+  </section>
+</div>
+`;

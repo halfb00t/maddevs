@@ -32,7 +32,7 @@ export default {
     return buildHead({
       ...getMetadata('blog'),
       description: this.homePageContent.description || '',
-      image: 'https://maddevs.io/blog.png',
+      image: 'https://maddevs.io/md-blog.png',
     })
   },
 
