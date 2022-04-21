@@ -4,6 +4,7 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
 <div>
   <section
     class="ebooks"
+    slice="[object Object]"
   >
     <div
       class="container"
@@ -83,25 +84,6 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
                 </label>
               </li>
                
-              <li
-                class="filter__list-item"
-              >
-                <input
-                  class="filter__list-item-radio"
-                  data-testid="allEbooks"
-                  name="Tag"
-                  type="radio"
-                  value=""
-                />
-                 
-                <label
-                  class="filter__list-item-label"
-                >
-                  
-          
-        
-                </label>
-              </li>
             </ul>
           </div>
         </div>
@@ -118,7 +100,7 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
             >
               <nuxtlink-stub
                 class="ebook-card__image-box"
-                to="/ebooks/test-link"
+                to="/ebooks/test-link/"
               >
                 <img
                   alt="test"
@@ -130,7 +112,7 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
                
               <nuxtlink-stub
                 class="ebook-card__content"
-                to="/ebooks/test-link"
+                to="/ebooks/test-link/"
               >
                 <h4
                   class="ebook-card__title"
@@ -151,7 +133,7 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
                
               <nuxtlink-stub
                 class="ebook-card__link"
-                to="/ebooks/test-link"
+                to="/ebooks/test-link/"
               >
                 
     Read now
@@ -164,7 +146,7 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
             >
               <nuxtlink-stub
                 class="ebook-card__image-box"
-                to="/ebooks/test-link-two"
+                to="/ebooks/test-link-two/"
               >
                 <img
                   alt="test"
@@ -176,7 +158,7 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
                
               <nuxtlink-stub
                 class="ebook-card__content"
-                to="/ebooks/test-link-two"
+                to="/ebooks/test-link-two/"
               >
                 <h4
                   class="ebook-card__title"
@@ -197,7 +179,7 @@ exports[`EbooksWithFilterSlice component should correctly render component 1`] =
                
               <nuxtlink-stub
                 class="ebook-card__link"
-                to="/ebooks/test-link-two"
+                to="/ebooks/test-link-two/"
               >
                 
     Read now

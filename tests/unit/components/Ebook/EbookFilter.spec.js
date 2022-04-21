@@ -4,12 +4,8 @@ import EbookFilter from '@/components/Ebook/EbookFilter'
 
 const props = {
   categories: [
-    {
-      category: 'Analytics',
-    },
-    {
-      category: 'Agency',
-    },
+    'Analytics',
+    'Agency',
   ],
 }
 

@@ -11,7 +11,7 @@
         class="ebooks__items"
       >
         <EbookFilter
-          :categories="categories"
+          :categories="ebookCategories"
           :ebook-category="ebookCategory"
           @onChangeCategory="onChangeCategoryHandler"
         />
@@ -68,24 +68,15 @@ export default {
     SkeletonBlogWidget,
   },
 
-  props: {
-    slice: {
-      type: Object,
-      required: true,
-      default() {
-        return {}
-      },
-    },
-  },
-
-  data() {
-    return {
-      categories: this.slice?.items,
-    }
-  },
-
   computed: {
-    ...mapGetters(['ebooks', 'ebookCategory', 'totalPages', 'perPage', 'page']),
+    ...mapGetters([
+      'ebooks',
+      'ebookCategory',
+      'totalPages',
+      'perPage',
+      'page',
+      'ebookCategories',
+    ]),
   },
 
   mounted() {
@@ -93,14 +84,18 @@ export default {
   },
 
   methods: {
-    ...mapActions(['getEbooksAction', 'changeCategory']),
+    ...mapActions(['getEbooksAction', 'changeCategory', 'changePage']),
 
     onChangeCategoryHandler(category) {
       this.changeCategory(category)
+      this.$refs.ebooksTitle.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      })
     },
 
     onChangePage(page) {
-      this.getEbooksAction(page)
+      this.changePage(page)
       this.$refs.ebooksTitle.scrollIntoView({
         block: 'start',
         behavior: 'smooth',
@@ -157,7 +152,7 @@ export default {
       @include grid(repeat(3, 1fr), auto, 50px, 45px);
       margin-bottom: 50px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1110px) {
         @include grid(repeat(2, 1fr), auto, 50px, 45px);
       }
 

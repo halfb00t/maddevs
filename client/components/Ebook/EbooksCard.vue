@@ -3,7 +3,7 @@
     class="ebook-card"
   >
     <NuxtLink
-      :to="`/ebooks/${link}`"
+      :to="`/ebooks/${link}/`"
       class="ebook-card__image-box"
     >
       <img
@@ -15,7 +15,7 @@
       >
     </NuxtLink>
     <NuxtLink
-      :to="`/ebooks/${link}`"
+      :to="`/ebooks/${link}/`"
       class="ebook-card__content"
     >
       <h4 class="ebook-card__title">
@@ -26,7 +26,7 @@
       </p>
     </NuxtLink>
     <NuxtLink
-      :to="`/ebooks/${link}`"
+      :to="`/ebooks/${link}/`"
       class="ebook-card__link"
     >
       Read now
