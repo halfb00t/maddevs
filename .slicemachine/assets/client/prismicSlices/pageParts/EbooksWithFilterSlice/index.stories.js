@@ -18,7 +18,7 @@ export const _DefaultSlice = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default-slice","name":"Default slice","slice_type":"ebooks_with_filter_slice","items":[{"category":"engineer cross-platform e-markets"},{"category":"incentivize holistic solutions"},{"category":"incentivize impactful schemas"},{"category":"drive ubiquitous architectures"},{"category":"maximize proactive mindshare"},{"category":"reinvent innovative markets"}],"primary":{},"id":"_DefaultSlice"}
+      mock: {"variation":"default-slice","name":"Default slice","slice_type":"ebooks_with_filter_slice","items":[],"primary":{},"id":"_DefaultSlice"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

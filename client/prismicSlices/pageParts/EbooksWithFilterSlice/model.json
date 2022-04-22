@@ -11,15 +11,7 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "EbooksWithFilterSlice",
       "primary": {},
-      "items": {
-        "category": {
-          "config": {
-            "label": "Category Name",
-            "placeholder": ""
-          },
-          "type": "Text"
-        }
-      }
+      "items": {}
     }
   ]
 }

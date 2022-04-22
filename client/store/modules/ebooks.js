@@ -4,16 +4,18 @@ import { getEbooks } from '@/api/ebooks'
 import textEllipsis from '@/helpers/textEllipsis'
 
 export const state = () => ({
+  ebooksDefault: [],
   ebooks: [],
   page: 1,
   ebookCategory: 'Ebooks',
+  ebookCategories: [],
   totalPages: null,
-  perPage: null,
+  perPage: 6,
 })
 
 export const mutations = {
   SET_EBOOKS(state, data) {
-    state.ebooks = data.results.map(ebook => ({
+    state.ebooksDefault = data.results.map(ebook => ({
       title: textEllipsis(this.$prismic.asText(ebook.data.body[0].primary.title), {
         limit: 42,
         trimToSpace: false,
@@ -24,25 +26,49 @@ export const mutations = {
       }),
       image: ebook.data.body[0].primary.rightImage,
       link: ebook.uid,
+      tags: ebook.tags,
     }))
-    state.totalPages = data.total_pages
-    state.perPage = data.results_per_page
+    state.ebooks = state.ebooksDefault.slice((data.page - 1) * state.perPage, data.page * state.perPage)
+    state.totalPages = Math.ceil(state.ebooksDefault.length / state.perPage)
     state.page = data.page
+    state.ebookCategory = 'Ebooks'
   },
-  SET_CATEGORY(state, category) {
-    state.ebookCategory = category
+  SET_CATEGORY(state, changedCategory) {
+    state.ebookCategory = changedCategory.category
+    state.page = 1
+    state.ebooks = changedCategory.ebooks
+    state.totalPages = changedCategory.totalPages
+  },
+  SET_CATEGORIES(state, categories) {
+    state.ebookCategories = categories
+  },
+  SET_CHANGE_PAGE(state, changedPage) {
+    state.ebooks = changedPage.newEbooksPage
+    state.page = changedPage.page
   },
 }
 
 export const actions = {
-  async getEbooksAction({ commit, state }, page) {
-    const ebooks = await getEbooks(this.$prismic, state.ebookCategory, page)
+  async getEbooksAction({ commit }) {
+    const ebooks = await getEbooks(this.$prismic)
+    const categories = [...new Set(ebooks.results.map(ebook => ebook.tags).flat().filter(tag => tag !== 'Ebooks'))]
     commit('SET_EBOOKS', ebooks)
+    commit('SET_CATEGORIES', categories)
   },
-  async changeCategory({ commit }, category) {
-    const ebooks = await getEbooks(this.$prismic, category)
-    commit('SET_EBOOKS', ebooks)
-    commit('SET_CATEGORY', category)
+  async changeCategory({ commit, state }, category) {
+    const ebooks = state.ebooksDefault.filter(ebook => ebook.tags.includes(category))
+    const changedCategory = {
+      ebooks: ebooks.slice(0, 6),
+      category,
+      totalPages: Math.ceil(ebooks.length / state.perPage),
+    }
+    commit('SET_CATEGORY', changedCategory)
+  },
+  changePage({ commit, state }, page) {
+    const newEbooksPage = state.ebooksDefault
+      .filter(ebook => ebook.tags.includes(state.ebookCategory))
+      .slice((page - 1) * state.perPage, page * state.perPage)
+    commit('SET_CHANGE_PAGE', { newEbooksPage, page })
   },
 }
 
@@ -52,6 +78,9 @@ export const getters = {
   },
   ebookCategory(state) {
     return state.ebookCategory
+  },
+  ebookCategories(state) {
+    return state.ebookCategories
   },
   totalPages(state) {
     return state.totalPages

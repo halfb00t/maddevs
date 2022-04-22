@@ -7,7 +7,7 @@
         :image="$getMediaFromS3(`/images/CTABanner/Anatoliy.png`)"
         image-alt-text="Anatoliy Fedorenko"
         man-name="Anatoliy Fedorenko"
-        man-position="Delivery Manager"
+        man-position="Head of Delivery"
       >
         <UIButton
           class="build-dev-team__button"

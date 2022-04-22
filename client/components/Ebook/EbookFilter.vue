@@ -52,24 +52,24 @@
         </li>
         <li
           v-for="(item, i) in categories"
-          :key="item.category + i"
+          :key="item + i"
           class="filter__list-item"
         >
           <input
-            :id="item.category"
+            :id="item"
             type="radio"
             name="Tag"
             data-testid="allEbooks"
             class="filter__list-item-radio"
-            :value="item.category"
-            :checked="ebookCategory === item.category"
+            :value="item"
+            :checked="ebookCategory === item"
             @change="onChangeCategoryHandler"
           >
           <label
-            :for="item.category"
+            :for="item"
             class="filter__list-item-label"
           >
-            {{ item.category }}
+            {{ item }}
           </label>
         </li>
       </ul>
@@ -123,7 +123,7 @@ export default {
     top: unset;
     padding-top: 0;
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 50px;
   }
 
   &__title {
