@@ -123,7 +123,7 @@ export default {
     top: unset;
     padding-top: 0;
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 50px;
   }
 
   &__title {

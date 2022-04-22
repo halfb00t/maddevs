@@ -133,18 +133,20 @@ export default {
       color: $text-color--tech-label-black;
       text-align: center;
       position: relative;
-      margin-bottom: 48px;
+      margin-bottom: 68px;
       margin-left: 24%;
+      scroll-margin-block-start: 90px;
 
       @media screen and (max-width: 768px) {
         font-size: 28px;
         line-height: 32px;
         letter-spacing: -1px;
-        margin-bottom: 32px;
+        margin-bottom: 60px;
       }
 
       @media screen and (max-width: 580px) {
         margin-left: 0;
+        margin-bottom: 32px;
       }
     }
 
