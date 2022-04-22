@@ -49,6 +49,7 @@ const store = {
   actions: {
     getEbooksAction: jest.fn(),
     changeCategory: jest.fn(),
+    changePage: jest.fn(),
   },
 }
 
@@ -89,6 +90,7 @@ describe('EbooksWithFilterSlice component', () => {
   })
 
   it('should correct work change ebook category', async () => {
+    Element.prototype.scrollIntoView = () => {}
     render(EbooksWithFilterSlice, {
       localVue,
       mocks,
@@ -112,6 +114,6 @@ describe('EbooksWithFilterSlice component', () => {
 
     const nextBtn = screen.getByTestId('text-next-btn')
     await fireEvent.click(nextBtn)
-    expect(store.actions.getEbooksAction).toHaveBeenCalledTimes(2)
+    expect(store.actions.getEbooksAction).toHaveBeenCalledTimes(1)
   })
 })

@@ -27,6 +27,7 @@ const fakeData = {
       }],
     },
     uid: 'test-uid',
+    tags: ['Ebooks'],
   }],
   total_pages: 1,
   results_per_page: 6,
@@ -34,6 +35,18 @@ const fakeData = {
 }
 
 const formattedFakeData = {
+  ebooksDefault: [
+    {
+      title: 'Test',
+      subtitle: 'Test subtitle',
+      image: {
+        url: 'img.jpg',
+        alt: 'Image',
+      },
+      link: 'test-uid',
+      tags: ['Ebooks'],
+    },
+  ],
   ebooks: [
     {
       title: 'Test',
@@ -43,21 +56,24 @@ const formattedFakeData = {
         alt: 'Image',
       },
       link: 'test-uid',
+      tags: ['Ebooks'],
     },
   ],
   page: 1,
   ebookCategory: 'Ebooks',
+  ebookCategories: [],
   totalPages: 1,
   perPage: 6,
 }
 
 jest.mock('@/api/ebooks', () => ({
-  getEbooks: jest.fn(() => []),
+  getEbooks: jest.fn(() => ({ results: [{ tags: ['Ebooks'] }] })),
 }))
 
 describe('Ebooks module state', () => {
   it('should correct returns default state', () => {
     const state = defaultState()
+    expect(state.ebooksDefault).toEqual([])
     expect(state.ebooks)
       .toEqual([])
     expect(state.page)
@@ -67,7 +83,7 @@ describe('Ebooks module state', () => {
     expect(state.totalPages)
       .toBeNull()
     expect(state.perPage)
-      .toBeNull()
+      .toBe(6)
   })
 })
 
@@ -82,14 +98,39 @@ describe('Ebooks module mutations', () => {
 
   it('should correct mutate state after calling SET_CATEGORY mutation', () => {
     const state = defaultState()
-    const ebookCategory = 'Analytics'
+    const ebookCategory = {
+      category: formattedFakeData.ebookCategory,
+      ebooks: formattedFakeData.ebooks,
+      totalPages: formattedFakeData.totalPages,
+    }
 
     mutations.SET_CATEGORY(state, ebookCategory)
 
+    delete ebookCategory.category
     expect(state).toEqual({
       ...defaultState(),
-      ebookCategory,
+      ...ebookCategory,
     })
+  })
+
+  it('should correct mutate state after calling SET_CATEGORIES mutation', () => {
+    const state = defaultState()
+    const categories = ['Ebooks']
+    mutations.SET_CATEGORIES(state, categories)
+
+    expect(state.ebookCategories).toEqual(categories)
+  })
+
+  it('should correct mutate state after calling SET_CHANGE_PAGE mutation', () => {
+    const state = defaultState()
+    const changedPage = {
+      newEbooksPage: [{ title: 'test' }],
+      page: 1,
+    }
+    mutations.SET_CHANGE_PAGE(state, changedPage)
+
+    expect(state.ebooks).toEqual(changedPage.newEbooksPage)
+    expect(state.page).toBe(changedPage.page)
   })
 })
 
@@ -97,26 +138,54 @@ describe('Ebooks module actions', () => {
   it('should correctly called getEbookAction', async () => {
     const store = {
       commit: jest.fn(),
-      state: {
-        ebookCategory: defaultState().ebookCategory,
-      },
     }
 
-    await actions.getEbooksAction(store, 1)
+    await actions.getEbooksAction(store)
     expect(getEbooks).toHaveBeenCalledTimes(1)
-    expect(store.commit).toHaveBeenCalledWith('SET_EBOOKS', [])
+    expect(store.commit).toHaveBeenCalledWith('SET_EBOOKS', { results: [{ tags: ['Ebooks'] }] })
+    expect(store.commit).toHaveBeenCalledWith('SET_CATEGORIES', [])
     jest.clearAllMocks()
   })
 
   it('should correctly called changeCategory', async () => {
+    const state = {
+      ebooksDefault: [{ tags: ['Ebooks'] }],
+      totalPages: 1,
+      category: 'Ebooks',
+    }
     const store = {
       commit: jest.fn(),
+      state: {
+        ...state,
+        perPage: 6,
+      },
     }
 
-    await actions.changeCategory(store, 'Analytics')
-    expect(getEbooks).toHaveBeenCalledTimes(1)
-    expect(store.commit).toHaveBeenCalledWith('SET_EBOOKS', [])
-    expect(store.commit).toHaveBeenCalledWith('SET_CATEGORY', 'Analytics')
+    await actions.changeCategory(store, 'Ebooks')
+    expect(store.commit).toHaveBeenCalledWith('SET_CATEGORY', {
+      ebooks: [{ tags: ['Ebooks'] }],
+      totalPages: 1,
+      category: 'Ebooks',
+    })
+  })
+
+  it('should correctly called changePage', async () => {
+    const store = {
+      commit: jest.fn(),
+      state: {
+        ebooksDefault: [{ tags: ['Ebooks'] }],
+        ebookCategory: 'Ebooks',
+        perPage: 6,
+      },
+    }
+
+    await actions.changePage(store, 1)
+    expect(store.commit).toHaveBeenCalledWith('SET_CHANGE_PAGE',
+      {
+        newEbooksPage: [{ tags: ['Ebooks'] }],
+        page: 1,
+      })
+    jest.clearAllMocks()
   })
 })
 
@@ -129,6 +198,10 @@ describe('Ebooks module getters', () => {
 
   it('ebookCategory', () => {
     expect(getters.ebookCategory(state)).toBe(state.ebookCategory)
+  })
+
+  it('ebookCategories', () => {
+    expect(getters.ebookCategories(state)).toBe(state.ebookCategories)
   })
 
   it('totalPages', () => {

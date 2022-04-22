@@ -7,7 +7,7 @@ exports[`EbooksCard component should correctly render component 1`] = `
   >
     <nuxtlink-stub
       class="ebook-card__image-box"
-      to="/ebooks/test-link"
+      to="/ebooks/test-link/"
     >
       <img
         alt="img"
@@ -19,7 +19,7 @@ exports[`EbooksCard component should correctly render component 1`] = `
      
     <nuxtlink-stub
       class="ebook-card__content"
-      to="/ebooks/test-link"
+      to="/ebooks/test-link/"
     >
       <h4
         class="ebook-card__title"
@@ -40,7 +40,7 @@ exports[`EbooksCard component should correctly render component 1`] = `
      
     <nuxtlink-stub
       class="ebook-card__link"
-      to="/ebooks/test-link"
+      to="/ebooks/test-link/"
     >
       
     Read now
