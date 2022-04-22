@@ -1,0 +1,12 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "authors_list_slice",
+    "items": [],
+    "primary": {
+      "animation": "fade-left",
+      "background": "black"
+    }
+  }
+]
