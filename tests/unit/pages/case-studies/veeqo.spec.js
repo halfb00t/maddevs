@@ -34,7 +34,7 @@ const META_DATA = {
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Veeqo an Inventory Management Platform for E-commerce", "description": "Infrastructure Case Study: How to optimize and reduce infrastructure costs? Read Veeqo’s story of optimizing the costs along with improving the system’s performance.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
-  image: 'https://maddevs.io/blog.png',
+  image: 'https://maddevs.io/md-blog.png',
 }
 
 const stubs = ['NuxtLink', 'Main', 'CaseVeeqo', 'CaseHeader']

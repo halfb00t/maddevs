@@ -16,6 +16,7 @@ const createLeadMixin = (templateId, title = 'Individuals', subject = 'Marketing
       const baseTitle = 'Mad Devs Website Forms'
       const payload = {
         templateId,
+        type: variables.type,
         variables: {
           emailTo: process.env.emailContact,
           subject,

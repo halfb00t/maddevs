@@ -26,6 +26,8 @@
       </h2>
       <ReadForm
         :fullsize-button="true"
+        ebook-path="pdf/custom-software-development-pricing-strategies-ebook.pdf"
+        book-name="Pricing Strategies"
         @form-sended="handleSendedForm"
       />
     </div>

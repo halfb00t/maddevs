@@ -699,6 +699,12 @@
         "items": {}
       }
     },
+    "EbooksWithFilterSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    },
     "AuthorsListSlice": {
       "default-slice": {
         "primary": {}

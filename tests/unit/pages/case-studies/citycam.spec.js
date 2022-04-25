@@ -28,7 +28,7 @@ const META_DATA = {
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
-  image: 'https://maddevs.io/blog.png',
+  image: 'https://maddevs.io/md-blog.png',
 }
 
 const mocks = {

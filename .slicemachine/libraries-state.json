@@ -3229,6 +3229,44 @@
           }
         }
       },
+      "ebooks_with_filter_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "ebooks_with_filter_slice",
+        "name": "EbooksWithFilterSlice",
+        "description": "EbooksWithFilterSlice",
+        "model": {
+          "id": "ebooks_with_filter_slice",
+          "type": "SharedSlice",
+          "name": "EbooksWithFilterSlice",
+          "description": "EbooksWithFilterSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "EbooksWithFilterSlice",
+              "primary": {},
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "ebooks_with_filter_slice",
+            "items": [],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "embed_slice": {
         "library": "client/prismicSlices/pageParts",
         "id": "embed_slice",

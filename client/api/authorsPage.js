@@ -1,15 +1,16 @@
 export const getAllAuthors = async prismic => {
-  const graphQuery = `{
-    author {
-      name
-    }
-  }`
+  // const graphQuery = `{
+  //   author {
+  //     name
+  //     position
+  //   }
+  // }`
   try {
     const response = await prismic.api.query(
       prismic.predicates.at('document.type', 'author'),
       {
         pageSize: 100,
-        graphQuery,
+        // graphQuery,
       },
     )
     return response.results
@@ -24,6 +25,9 @@ export async function getAllPostsAuthors(prismic, currentPageOffset = 1) {
     {
       post {
         post_author {
+          uid
+        }
+        post_coauthor {
           uid
         }
       }
