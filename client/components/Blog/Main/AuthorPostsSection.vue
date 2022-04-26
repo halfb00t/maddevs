@@ -71,7 +71,7 @@ export default {
 
   data() {
     return {
-      pageSize: 13,
+      pageSize: 7,
     }
   },
 
@@ -113,6 +113,11 @@ export default {
     ::v-deep .post-card {
       display: flex;
       flex-direction: column;
+      width: 33.3333%;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
       &__info {
         display: flex;
         flex-direction: column;
@@ -147,6 +152,9 @@ export default {
 
     &__load-more {
       margin-top: 75px;
+      ::v-deep .load-more-button {
+        width: 100%;
+      }
     }
 
     @media only screen and (max-width: 991px) {
