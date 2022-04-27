@@ -29,7 +29,7 @@ const storeObj = {
 }
 
 const META_DATA = {
-  title: 'Mad Devs: Oleg Puzanov',
+  title: 'Oleg Puzanov',
   metaTitle: 'Blog',
   description: '',
   url: '',
