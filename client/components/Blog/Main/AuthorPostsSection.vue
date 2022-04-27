@@ -80,7 +80,7 @@ export default {
 
     authorPostsToShow() {
       if (this.authorPosts && !this.authorPosts.length) return []
-      return this.authorPosts.slice(0, this.authorsPerPage * this.authorPostsPage)
+      return this.authorPosts.slice(0, this.authorPostsPage === 2 ? this.authorPosts.length : this.authorsPerPage * this.authorPostsPage)
     },
 
     totalPages() {
