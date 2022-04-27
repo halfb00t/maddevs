@@ -71,7 +71,7 @@ export default {
 
   data() {
     return {
-      pageSize: 13,
+      authorsPerPage: 7,
     }
   },
 
@@ -80,11 +80,11 @@ export default {
 
     authorPostsToShow() {
       if (this.authorPosts && !this.authorPosts.length) return []
-      return this.authorPosts.slice(0, this.pageSize * this.authorPostsPage)
+      return this.authorPosts.slice(0, this.authorPostsPage === 2 ? this.authorPosts.length : this.authorsPerPage * this.authorPostsPage)
     },
 
     totalPages() {
-      return Math.ceil(this.authorPosts.length / this.pageSize)
+      return Math.ceil(this.authorPosts.length / this.authorsPerPage)
     },
   },
 
@@ -113,6 +113,11 @@ export default {
     ::v-deep .post-card {
       display: flex;
       flex-direction: column;
+      width: 33.3333%;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
       &__info {
         display: flex;
         flex-direction: column;
@@ -147,6 +152,9 @@ export default {
 
     &__load-more {
       margin-top: 75px;
+      ::v-deep .load-more-button {
+        width: 100%;
+      }
     }
 
     @media only screen and (max-width: 991px) {
