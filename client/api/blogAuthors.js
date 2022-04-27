@@ -38,7 +38,7 @@ export const getAuthorPosts = async (prismic, payload) => {
     const response = await getAuthorPostsHelper(prismic, 'post_author', payload)
     const responseCoAuthor = await getAuthorPostsHelper(prismic, 'post_coauthor', payload)
 
-    response.results = [...new Set(response.results.concat(responseCoAuthor.results))]
+    response.results = Array.from(new Set(response.results.concat(responseCoAuthor.results)))
       .sort((a, b) => new Date(b.first_publication_date) - new Date(a.first_publication_date))
 
     return response.results
