@@ -43,6 +43,7 @@
 
 <script>
 import extractMenuLink from '@/helpers/extractMenuLink'
+import { headerClickEvent } from '@/analytics/events'
 
 export default {
   name: 'HeaderMenu',
@@ -63,6 +64,7 @@ export default {
     extractMenuLink,
 
     goToPage() {
+      headerClickEvent.send()
       this.$emit('changed-page')
     },
   },

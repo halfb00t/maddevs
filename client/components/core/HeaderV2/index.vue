@@ -54,6 +54,7 @@
             <a
               href="tel:+442039848555"
               class="header__phone"
+              @click="sendPhoneClickEvent"
             >
               <img
                 width="18"
@@ -147,6 +148,7 @@ import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
 import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
 import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
 import { isMobile } from '@/helpers/isMobileDeviceDetect'
+import { phoneClickEvent } from '@/analytics/events'
 
 // TODO: Need to transfer this constant to @/data/navigation.js
 const navigation = [
@@ -246,11 +248,15 @@ export default {
   },
 
   methods: {
+    ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
+
+    sendPhoneClickEvent() {
+      phoneClickEvent.send()
+    },
+
     showBurgerMenu() {
       this.isMobile = isMobile()
     },
-
-    ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
 
     showModal() {
       if (!this.$refs?.modalContactMe?.show) return
