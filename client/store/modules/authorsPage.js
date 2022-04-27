@@ -17,12 +17,6 @@ export const actions = {
     const authors = await getAllAuthors(this.$prismic)
     const posts = await getAllPostsAuthors(this.$prismic)
     const authorsWithPostsData = setAuthorsPostsData(authors, posts)
-    authorsWithPostsData.forEach(aut => {
-      if (!aut.data.position) {
-        console.log(aut)
-      }
-    })
-    console.log(authorsWithPostsData)
     commit('SET_ALL_AUTHORS_WITH_POSTS_COUNT', authorsWithPostsData)
   },
 }

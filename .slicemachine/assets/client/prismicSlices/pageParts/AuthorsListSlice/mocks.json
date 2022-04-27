@@ -5,8 +5,7 @@
     "slice_type": "authors_list_slice",
     "items": [],
     "primary": {
-      "animation": "fade-left",
-      "background": "black"
+      "animation": "zoom-in-right"
     }
   }
 ]

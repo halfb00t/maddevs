@@ -31,19 +31,6 @@
             ]
           },
           "type": "Select"
-        },
-        "background": {
-          "config": {
-            "label": "Slice background",
-            "placeholder": "",
-            "options": [
-              "black",
-              "white",
-              "grey"
-            ],
-            "default_value": "black"
-          },
-          "type": "Select"
         }
       },
       "items": {}

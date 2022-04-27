@@ -5,7 +5,7 @@ export const setAuthorsPostsData = (authors, posts) => {
     if ('uid' in post.data?.post_coauthor) {
       const { uid } = post.data.post_coauthor
       const { tags = [], count = 0 } = authorsAdditionalData.get(uid) || {}
-      authorsAdditionalData.set(uid, { tags: new Set([...tags, ...post.tags]), count: count + 1 }) // todo need to optimize this?
+      authorsAdditionalData.set(uid, { tags: new Set([...tags, ...post.tags]), count: count + 1 })
     }
     const { uid } = post.data.post_author
     const { tags = [], count = 0 } = authorsAdditionalData.get(uid) || {}
@@ -22,8 +22,11 @@ export const setAuthorsPostsData = (authors, posts) => {
     .sort((firstAuthor, secondAuthor) => {
       const firstAuthorStatus = firstAuthor.data.position.startsWith('ex')
       const secondAuthorStatus = secondAuthor.data.position.startsWith('ex')
+      if (firstAuthorStatus && secondAuthorStatus) {
+        return secondAuthor.post_count - firstAuthor.post_count // sort by count for ex
+      }
       if (firstAuthorStatus) return 1
       if (secondAuthorStatus) return -1
-      return secondAuthor.post_count - firstAuthor.post_count // todo not work for ex positions
+      return secondAuthor.post_count - firstAuthor.post_count // sort by count for non ex
     })
 }
