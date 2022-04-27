@@ -71,7 +71,7 @@ export default {
 
   data() {
     return {
-      pageSize: 7,
+      authorsPerPage: 7,
     }
   },
 
@@ -80,11 +80,11 @@ export default {
 
     authorPostsToShow() {
       if (this.authorPosts && !this.authorPosts.length) return []
-      return this.authorPosts.slice(0, this.pageSize * this.authorPostsPage)
+      return this.authorPosts.slice(0, this.authorsPerPage * this.authorPostsPage)
     },
 
     totalPages() {
-      return Math.ceil(this.authorPosts.length / this.pageSize)
+      return Math.ceil(this.authorPosts.length / this.authorsPerPage)
     },
   },
 

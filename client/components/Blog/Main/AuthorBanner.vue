@@ -55,13 +55,13 @@ export default {
       if (this.blogAuthor?.image) {
         return this.blogAuthor.image.header
       }
-      return {}
+      return { url: '', alt: '' }
     },
 
     tags() {
-      const ignoreTags = ['Featured post', 'Editors pick', 'Python']
+      const tagsToIgnore = ['Featured post', 'Editors pick', 'Python']
       if (!this.authorPosts.length) return []
-      return [...new Set(this.authorPosts.map(post => post.tags).flat())].filter(tag => !ignoreTags.includes(tag))
+      return Array.from(new Set(this.authorPosts.flatMap(post => post.tags))).filter(tag => !tagsToIgnore.includes(tag))
     },
   },
 }
