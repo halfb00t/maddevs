@@ -17,8 +17,7 @@
           @mouseleave="(expert.isHover && hoverCount >= 3) ? toggleImageHanlde() : {}"
         >
           <img
-            v-lazy-load
-            :data-src="expert.isHover && !toggleImage ? expert.hoverImage.url : expert.image.url"
+            :src="expert.isHover && !toggleImage ? expert.hoverImage.url : expert.image.url"
             :alt="expert.image.alt || 'Image'"
             width="295"
             height="401"
@@ -125,7 +124,7 @@ export default {
     margin: 7px;
     border-color: transparent;
     transition: all .2s ease;
-    background-color: #F5F7F9;
+    background-color: $bgcolor--cultured;
     @media screen and (max-width: 1300px) {
       flex: 0 0 calc(24.66% - 14px);
     }

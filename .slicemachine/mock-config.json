@@ -531,6 +531,9 @@
             "content": "devops-audit"
           }
         }
+      },
+      "gridWithAnimationOptionSlice": {
+        "items": {}
       }
     },
     "PostsSectionSlice": {
@@ -703,6 +706,11 @@
       "default-slice": {
         "primary": {},
         "items": {}
+      }
+    },
+    "AuthorsListSlice": {
+      "default-slice": {
+        "primary": {}
       }
     }
   },

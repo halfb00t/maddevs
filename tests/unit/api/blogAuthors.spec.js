@@ -3,6 +3,7 @@ import * as api from '@/api/blogAuthors'
 
 describe('BlogAuthors api methods', () => {
   const error = new Error('error')
+  const typeError = new TypeError('Cannot read properties of undefined (reading \'concat\')')
   const success = jest.fn(() => Promise.resolve({ data: 'data', results: 'results' }))
   const failure = jest.fn(() => Promise.reject(error))
 
@@ -51,12 +52,12 @@ describe('BlogAuthors api methods', () => {
 
   it('getAuthorPosts success', async () => {
     const data = await api.getAuthorPosts(prismic)
-    expect(data).toBe('results')
-    expect(prismic.api.query).toHaveBeenCalledTimes(3)
+    expect(data.join('')).toBe('result')
+    expect(prismic.api.query).toHaveBeenCalledTimes(4)
   })
 
   it('getAuthorPosts failure', async () => {
     const data = await api.getAuthorPosts(prismicFailure)
-    expect(data).toBe(error)
+    expect(data).toEqual(typeError)
   })
 })

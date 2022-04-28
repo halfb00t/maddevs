@@ -52,6 +52,7 @@ export const actions = {
     const services = await extractFooterSection(this.$prismic, footerContent, 'services')
     const clients = await extractFooterSection(this.$prismic, footerContent, 'clients')
     const insights = await extractFooterSection(this.$prismic, footerContent, 'insights')
+    const industries = await extractFooterSection(this.$prismic, footerContent, 'industries')
     const contacts = {
       email: footerContent.email,
       emailTitle: footerContent.emailTitle,
@@ -64,6 +65,7 @@ export const actions = {
       services,
       clients,
       insights,
+      industries,
     })
 
     commit('SET_FOOTER_CONTACTS', {
