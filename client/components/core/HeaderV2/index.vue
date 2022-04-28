@@ -159,6 +159,10 @@ const navigation = [
     label: 'Services',
   },
   {
+    name: 'industries',
+    label: 'Industries',
+  },
+  {
     name: 'clients',
     label: 'Clients',
   },
