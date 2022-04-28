@@ -18,14 +18,15 @@
         />
       </div>
       <div class="author-posts__list">
-        <template v-if="authorPostsLoaded">
+        <template v-if="authorPosts.length">
           <PostCard
-            v-for="post in authorPostsToShow"
+            v-for="post in authorPosts.slice(0, authorsPerPage)"
             :key="post.id"
             :post="post"
             :author="blogAuthor"
             :disable-author-link="true"
             class="author-posts__list-item"
+            data-testid="author-posts__list-item"
           />
         </template>
         <template v-else>
@@ -39,11 +40,11 @@
         </template>
       </div>
       <div
-        v-if="totalPages > authorPostsPage"
+        v-if="showButton && authorPosts.length > authorsPerPage"
         class="author-posts__load-more"
       >
         <LoadMoreButton
-          @click="getMoreAuthorPosts"
+          @click="showMorePosts"
         />
       </div>
     </div>
@@ -51,7 +52,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import FeaturedPost from '@/components/Blog/shared/FeaturedPost'
 import SkeletonFeaturedPost from '@/components/Blog/skeletons/SkeletonFeaturedPost'
 import SkeletonBlogWidget from '@/components/Blog/skeletons/SkeletonBlogWidget'
@@ -72,20 +73,12 @@ export default {
   data() {
     return {
       authorsPerPage: 7,
+      showButton: true,
     }
   },
 
   computed: {
-    ...mapGetters(['blogAuthor', 'authorPosts', 'authorPostsLoaded', 'authorPostsPage']),
-
-    authorPostsToShow() {
-      if (this.authorPosts && !this.authorPosts.length) return []
-      return this.authorPosts.slice(0, this.authorPostsPage === 2 ? this.authorPosts.length : this.authorsPerPage * this.authorPostsPage)
-    },
-
-    totalPages() {
-      return Math.ceil(this.authorPosts.length / this.authorsPerPage)
-    },
+    ...mapGetters(['blogAuthor', 'authorPosts', 'authorPostsLoaded']),
   },
 
   updated() {
@@ -93,7 +86,10 @@ export default {
   },
 
   methods: {
-    ...mapActions(['getMoreAuthorPosts']),
+    showMorePosts() {
+      this.showButton = false
+      this.authorsPerPage = this.authorPosts.length
+    },
   },
 }
 </script>

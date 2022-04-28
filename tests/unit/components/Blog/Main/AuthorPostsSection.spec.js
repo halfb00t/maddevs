@@ -1,4 +1,4 @@
-import { render } from '@testing-library/vue'
+import { render, screen, fireEvent } from '@testing-library/vue'
 import { createLocalVue, mount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import AuthorPostsSection from '@/components/Blog/Main/AuthorPostsSection'
@@ -37,13 +37,19 @@ jest.mock('@/helpers/lazyLoad', () => ({
 }))
 
 describe('AuthorPostsSection component', () => {
-  it('should render correctly', () => {
-    const { container } = render(AuthorPostsSection, {
+  it('should render correctly', async () => {
+    const initLazyLoadMock = jest.spyOn(initializeLazyLoad, 'initializeLazyLoad').mockImplementation(() => {})
+    const nextTick = jest.fn(() => initLazyLoadMock())
+    mocks.$nextTick = nextTick
+    const { container, getAllByTestId } = render(AuthorPostsSection, {
       stubs,
       mocks,
       store,
     })
 
+    const button = screen.getByTestId('test-load-more-button')
+    await fireEvent.click(button)
+    expect(getAllByTestId('author-posts__list-item')).toHaveLength(14)
     expect(container).toMatchSnapshot()
   })
 
@@ -60,8 +66,6 @@ describe('AuthorPostsSection component', () => {
       localVue,
     })
 
-    expect(wrapper.vm.authorPostsToShow)
-      .toEqual([])
     expect(wrapper.exists()).toBe(true)
     await wrapper.vm.$forceUpdate()
     await wrapper.vm.$nextTick(() => {
