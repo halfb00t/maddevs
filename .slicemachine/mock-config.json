@@ -531,6 +531,9 @@
             "content": "devops-audit"
           }
         }
+      },
+      "gridWithAnimationOptionSlice": {
+        "items": {}
       }
     },
     "PostsSectionSlice": {
