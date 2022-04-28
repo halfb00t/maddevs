@@ -8,11 +8,14 @@
 <script>
 import SliceZone from 'vue-slicezone'
 import getRoutePrefix from '@/helpers/getRoutePrefix'
+import headerMixin from '@/mixins/headerMixin'
 
 export default {
   components: {
     SliceZone,
   },
+
+  mixins: [headerMixin('.start-screen-slice')],
 
   beforeRouteEnter(to, from, next) {
     next(vm => {
