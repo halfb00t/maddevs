@@ -110,6 +110,7 @@ export default {
       display: flex;
       flex-direction: column;
       width: 33.3333%;
+      height: auto;
 
       @media screen and (max-width: 991px) {
         width: 100%;
