@@ -61,7 +61,7 @@ export default {
     tags() {
       const tagsToIgnore = ['Featured post', 'Editors pick', 'Python']
       if (!this.authorPosts.length) return []
-      return Array.from(new Set(this.authorPosts.flatMap(post => post.tags))).filter(tag => !tagsToIgnore.includes(tag))
+      return Array.from(new Set(this.authorPosts.flatMap(post => post.tags[0]))).filter(tag => !tagsToIgnore.includes(tag))
     },
   },
 }

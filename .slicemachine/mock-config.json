@@ -707,6 +707,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "AuthorsListSlice": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
