@@ -150,6 +150,54 @@ exports[`Header component should render correctly 1`] = `
                   </div>
                 </li>
                 <li
+                  class="header-navigation__item header-navigation__item-industries"
+                  data-testid="navigation__item"
+                >
+                  <span
+                    data-testid="test-navigation-link"
+                  >
+                    
+      Industries
+    
+                  </span>
+                   
+                  <div
+                    class="header-section header-section-industries"
+                    link="https://maddevs.io/"
+                  >
+                    <div
+                      class="container"
+                    >
+                      <div
+                        class="header-section__content"
+                      >
+                        <div
+                          class="header-section__menus"
+                        >
+                          <!---->
+                        </div>
+                         
+                        <hr
+                          class="header-section__divider"
+                        />
+                         
+                        <div
+                          class="header-section__post"
+                        >
+                          <headerpost-stub
+                            date="01.01.01"
+                            featuredimage="[object Object]"
+                            post-author="[object Object]"
+                            tags=""
+                            title="test"
+                            uid="1"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
                   class="header-navigation__item header-navigation__item-clients"
                   data-testid="navigation__item"
                 >
