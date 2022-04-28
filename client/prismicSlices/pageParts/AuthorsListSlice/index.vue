@@ -2,7 +2,7 @@
   <section
     class="authors-slice-wrapper"
   >
-    <div class="container">
+    <div class="container container--1026">
       <div class="authors">
         <div class="authors__list">
           <div
@@ -100,6 +100,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container--1026{
+  max-width: 1026px;
+}
 .authors {
   &-slice-wrapper {
     background-color: $bgcolor--white-primary;
