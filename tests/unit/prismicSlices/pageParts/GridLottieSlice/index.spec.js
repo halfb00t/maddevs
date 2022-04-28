@@ -50,9 +50,11 @@ describe('Card Grid slice', () => {
 
       const GridLottieLink = await container.vm.$options.components.GridLottieLink.call()
       const GridLottie = await container.vm.$options.components.GridLottie.call()
+      const GridWithAnimationOptionSlice = await container.vm.$options.components.GridWithAnimationOptionSlice.call()
 
       expect(GridLottieLink.default.name).toBe('GridLottieLink')
       expect(GridLottie.default.name).toBe('GridLottie')
+      expect(GridWithAnimationOptionSlice.default.name).toBe('GridWithAnimationOptionSlice')
     })
   })
 })

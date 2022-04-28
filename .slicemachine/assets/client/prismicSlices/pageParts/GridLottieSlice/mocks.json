@@ -6,54 +6,71 @@
     "items": [
       {
         "fullWidth": false,
-        "background": "#a86961",
-        "title": "drive end-to-end methodologies",
+        "background": "#baecf1",
+        "title": "envisioneer synergistic blockchains",
         "content": [
           {
             "type": "paragraph",
-            "text": "Esse do id tempor ut tempor sunt consectetur eiusmod anim incididunt esse.",
+            "text": "Amet anim consequat esse irure excepteur aute amet amet laborum ea tempor. Sint sit sunt labore.",
             "spans": []
           }
         ],
         "alignText": "left",
-        "lottie-animation": "monetize killer models",
+        "lottie-animation": "seize transparent e-services",
         "lottiePosition": "top",
-        "width": "drive best-of-breed markets",
-        "height": "orchestrate holistic systems"
+        "width": "whiteboard B2B infrastructures",
+        "height": "envisioneer innovative applications"
       },
       {
         "fullWidth": true,
-        "background": "#b5f433",
-        "title": "deliver frictionless supply-chains",
+        "background": "#26bede",
+        "title": "maximize plug-and-play infrastructures",
         "content": [
           {
             "type": "paragraph",
-            "text": "Proident commodo ut ipsum adipisicing.",
+            "text": "Qui occaecat anim cupidatat occaecat consequat commodo dolor sit voluptate. Aute in non elit deserunt fugiat id exercitation qui eu ex deserunt dolor aute Lorem incididunt.",
+            "spans": []
+          }
+        ],
+        "alignText": "left",
+        "lottie-animation": "benchmark one-to-one convergence",
+        "lottiePosition": "top",
+        "width": "monetize integrated vortals",
+        "height": "harness sexy web-readiness"
+      },
+      {
+        "fullWidth": true,
+        "background": "#3c8b48",
+        "title": "reinvent efficient schemas",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Elit incididunt deserunt cillum eu fugiat et consectetur deserunt sint enim est est sunt labore.",
+            "spans": []
+          }
+        ],
+        "alignText": "left",
+        "lottie-animation": "enhance transparent action-items",
+        "lottiePosition": "top",
+        "width": "deploy cross-platform convergence",
+        "height": "optimize mission-critical e-commerce"
+      },
+      {
+        "fullWidth": true,
+        "background": "#0e4994",
+        "title": "drive web-enabled e-commerce",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Amet minim est commodo adipisicing cupidatat nulla esse dolor.",
             "spans": []
           }
         ],
         "alignText": "center",
-        "lottie-animation": "aggregate seamless markets",
-        "lottiePosition": "bottom",
-        "width": "monetize clicks-and-mortar blockchains",
-        "height": "productize efficient e-business"
-      },
-      {
-        "fullWidth": true,
-        "background": "#011ba5",
-        "title": "productize compelling e-business",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Minim tempor aute elit velit aliqua laboris ut sunt est in nisi sunt veniam nulla consequat. Quis ullamco exercitation excepteur nostrud ut in eiusmod enim ex exercitation do commodo ad labore. Ea est esse excepteur ea Lorem deserunt ut sunt tempor anim consequat eu nulla nisi ex.",
-            "spans": []
-          }
-        ],
-        "alignText": "left",
-        "lottie-animation": "redefine 24/7 e-services",
+        "lottie-animation": "incentivize enterprise infrastructures",
         "lottiePosition": "top",
-        "width": "enable extensible users",
-        "height": "scale real-time action-items"
+        "width": "incubate world-class ROI",
+        "height": "disintermediate transparent supply-chains"
       }
     ],
     "primary": {
@@ -66,80 +83,116 @@
     "slice_type": "grid_lottie_slice",
     "items": [
       {
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "fullWidth": true,
+        "background": "#3f53b0",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Commodo velit ad pariatur enim aliqua deserunt non incididunt id in. Excepteur sunt fugiat ipsum in anim pariatur laboris. Ut consequat nisi aute qui fugiat nulla tempor culpa minim ex eiusmod.",
+            "spans": []
+          }
+        ],
+        "alignText": "left",
+        "lottie-animation": "reintermediate viral schemas",
+        "lottie-S3-path": "unleash virtual metrics",
+        "lottieHeight": "iterate interactive communities",
+        "lottiePosition": "top",
+        "width": "synthesize leading-edge relationships",
+        "height": "seize efficient functionalities"
+      },
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        },
         "fullWidth": false,
-        "background": "#4730f9",
-        "title": "matrix strategic e-commerce",
+        "background": "#c08b54",
         "content": [
           {
             "type": "paragraph",
-            "text": "Officia deserunt amet cillum sint irure Lorem nulla eiusmod consequat qui tempor consectetur amet veniam.",
+            "text": "Ad in tempor eu in aliquip exercitation mollit esse aute incididunt ullamco aliquip enim elit. Est fugiat commodo occaecat. Dolor commodo proident elit elit anim mollit.",
             "spans": []
           }
         ],
         "alignText": "center",
-        "lottie-animation": "about-consulting",
-        "lottie-S3-path": "custom/about/",
-        "lottiePosition": "bottom",
-        "width": "innovate B2C content",
-        "height": "drive end-to-end eyeballs"
-      },
-      {
-        "fullWidth": true,
-        "background": "#8aa40a",
-        "title": "empower cutting-edge bandwidth",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Et proident nisi tempor adipisicing mollit amet occaecat ullamco adipisicing anim proident mollit irure. Veniam minim ipsum ad incididunt.",
-            "spans": []
-          }
-        ],
-        "alignText": "left",
-        "lottie-animation": "about-consulting",
-        "lottie-S3-path": "custom/about/",
+        "lottie-animation": "benchmark value-added methodologies",
+        "lottie-S3-path": "implement enterprise functionalities",
+        "lottieHeight": "benchmark compelling initiatives",
         "lottiePosition": "top",
-        "width": "deliver visionary action-items",
-        "height": "transform real-time experiences"
-      },
-      {
-        "fullWidth": true,
-        "background": "#78587d",
-        "title": "deliver synergistic mindshare",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Aliqua proident minim cillum cillum in sit esse sint proident adipisicing tempor culpa.",
-            "spans": []
-          }
-        ],
-        "alignText": "center",
-        "lottie-animation": "about-consulting",
-        "lottie-S3-path": "custom/about/",
-        "lottiePosition": "top",
-        "width": "evolve intuitive e-business",
-        "height": "iterate B2B mindshare"
-      },
-      {
-        "fullWidth": true,
-        "background": "#630ea4",
-        "title": "disintermediate frictionless action-items",
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Elit nulla elit et ad adipisicing minim cillum officia proident cupidatat elit nisi ex. Pariatur in est Lorem enim aliqua aute tempor do velit cupidatat exercitation minim. Excepteur eiusmod fugiat id anim adipisicing anim commodo aliqua.",
-            "spans": []
-          }
-        ],
-        "alignText": "left",
-        "lottie-animation": "about-consulting",
-        "lottie-S3-path": "custom/about/",
-        "lottiePosition": "top",
-        "width": "monetize customized ROI",
-        "height": "orchestrate synergistic web services"
+        "width": "drive intuitive infrastructures",
+        "height": "drive virtual initiatives"
       }
     ],
     "primary": {
-      "animation": "fade-down-left"
+      "animation": "zoom-in"
+    }
+  },
+  {
+    "variation": "gridWithAnimationOptionSlice",
+    "name": "GridWithAnimationOptionSlice",
+    "slice_type": "grid_lottie_slice",
+    "items": [
+      {
+        "fullWidth": false,
+        "background": "#1a2e22",
+        "title": "transition wireless niches",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Qui eu adipisicing ad eu excepteur dolore. Velit magna anim est sunt cillum nisi consectetur aliqua ad ea esse ex. Tempor velit proident eu aliquip esse.",
+            "spans": []
+          }
+        ],
+        "alignText": "left",
+        "lottieAnimation": "utilize sticky e-services",
+        "lottieHeight": "aggregate enterprise networks",
+        "lottiePosition": "bottom",
+        "width": "expedite synergistic technologies",
+        "height": "enhance turn-key paradigms"
+      },
+      {
+        "fullWidth": false,
+        "background": "#4156c8",
+        "title": "repurpose frictionless e-services",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Dolor elit cillum duis sint irure.",
+            "spans": []
+          }
+        ],
+        "alignText": "left",
+        "lottieAnimation": "enhance viral e-tailers",
+        "lottieHeight": "repurpose synergistic platforms",
+        "lottiePosition": "top",
+        "width": "synergize user-centric infrastructures",
+        "height": "deliver B2C mindshare"
+      },
+      {
+        "fullWidth": true,
+        "background": "#69638e",
+        "title": "embrace frictionless initiatives",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Cupidatat est magna ex voluptate Lorem.",
+            "spans": []
+          }
+        ],
+        "alignText": "center",
+        "lottieAnimation": "exploit innovative channels",
+        "lottieHeight": "innovate extensible content",
+        "lottiePosition": "top",
+        "width": "synthesize value-added markets",
+        "height": "benchmark global mindshare"
+      }
+    ],
+    "primary": {
+      "animation": "fade-up"
     }
   }
 ]
