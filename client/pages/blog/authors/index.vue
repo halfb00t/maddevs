@@ -9,6 +9,7 @@
 import SliceZone from 'vue-slicezone'
 import getRoutePrefix from '@/helpers/getRoutePrefix'
 import headerMixin from '@/mixins/headerMixin'
+import { buildHead } from '@/data/seo'
 
 export default {
   components: {
@@ -53,5 +54,15 @@ export default {
     }
   },
 
+  head() {
+    return buildHead({
+      url: this.openGraphUrl,
+      title: 'Authors',
+      metaTitle: this.customPage.metaTitle || '',
+      description: this.customPage.metaDescription || '',
+      jsonLd: this.customPage.schemaOrgSnippet,
+      image: this.customPage.ogImage,
+    })
+  },
 }
 </script>
