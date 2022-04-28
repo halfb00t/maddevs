@@ -11,6 +11,7 @@ localVue.use(Vuex)
 const actions = {
   setHeaderTransparentArea: () => {},
   setHeaderTransparent: () => {},
+  getHeaderContent: () => {},
 }
 
 const getters = {
