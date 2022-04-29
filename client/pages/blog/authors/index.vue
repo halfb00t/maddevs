@@ -28,7 +28,7 @@ export default {
        * https://community.prismic.io/t/when-does-cache-expire-uid-history/874 - about this issue
        */
       if (params.uid !== customPage.uid && typeof customPage.uid === 'string') {
-        next({ path: `/${customPage.routePrefix}/${customPage.uid}/` })
+        next({ path: `/blog/${customPage.uid}/` })
       } else {
         next()
       }
@@ -51,6 +51,7 @@ export default {
 
     return {
       customPage,
+      openGraphUrl: `${process.env.domain}/blog/${customPage.uid}/`,
     }
   },
 
