@@ -43,7 +43,6 @@ export default () => ({
     script: [
       { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', defer: true, body: true },
       { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, defer: true, body: true },
-      { src: 'https://www.googletagmanager.com/gtag/js?id=G-SWHTFYT6M8', async: true },
     ],
   },
   /*

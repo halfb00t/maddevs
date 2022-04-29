@@ -1,5 +1,11 @@
 /* eslint-disable no-console, class-methods-use-this, no-underscore-dangle */
+import uniqid from 'uniqid'
 import { getContentGroupByPath } from './constants'
+
+export const addUserType = type => {
+  // TYPE: 'hr_candidate' | 'lead' | 'download_ebook'
+  localStorage.setItem('GA_USER_TYPE', type)
+}
 
 export class AnalyticsEvent {
   constructor(action, strict = true) {
@@ -9,6 +15,21 @@ export class AnalyticsEvent {
     this.strict = strict
     this.action = action
     this.properties = {}
+    this._applyUser()
+  }
+
+  _applyUser() {
+    if ('window' in global) {
+      const existId = localStorage.getItem('GA_USER_ID')
+      const type = localStorage.getItem('GA_USER_TYPE')
+
+      const userId = existId || uniqid()
+
+      localStorage.setItem('GA_USER_ID', userId)
+
+      this.properties.user_id = userId
+      this.properties.user_type = type
+    }
   }
 
   _handleError(message) {

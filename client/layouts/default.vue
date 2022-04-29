@@ -1,6 +1,5 @@
 <template>
   <div class="default-layout">
-    <AnalyticsConnect />
     <HeaderV2 />
     <Nuxt class="main-section" />
     <Chat class="modal-chat" />
@@ -20,12 +19,10 @@ import HeaderV2 from '@/components/core/HeaderV2'
 import CookieNotice from '@/components/core/CookieNotice'
 import Footer from '@/components/core/FooterV2/Footer'
 import { getNotAllowedRoutes } from '../../utils/getNotAllowedRoutes'
-import AnalyticsConnect from '@/analytics/AnalyticsConnect'
 
 export default {
   name: 'Default',
   components: {
-    AnalyticsConnect,
     CookieNotice,
     HeaderV2,
     Footer,
