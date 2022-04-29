@@ -6,6 +6,7 @@
     :cover-image-alt-text="featuredImage.alt"
     :cover-image-width="featuredImage.dimensions.width"
     :cover-image-height="featuredImage.dimensions.height"
+    :date="date"
   >
     <template #afterTitle>
       <div class="blog-post__post-info">
@@ -13,12 +14,10 @@
           class="blog-post__post-info-author"
           v-bind="blogAuthor"
           theme="dark"
-          :date="date"
         />
         <PostAuthor
           v-bind="blogCoAuthor"
           theme="dark"
-          :date="date"
         />
         <div class="blog-post__tag">
           <PostTag
@@ -89,8 +88,7 @@ export default {
     margin-top: 7px;
     margin-bottom: 43px;
     text-decoration: none;
-    width: 923px;
-    margin-left: -52px;
+    width: 100%;
 
     a {
       text-decoration: none;
