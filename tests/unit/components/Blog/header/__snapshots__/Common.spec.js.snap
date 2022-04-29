@@ -7,6 +7,8 @@ exports[`header Common is a Vue instance 1`] = `
     id="introduction-container"
   >
      
+    <!---->
+     
     <h1
       class="blog-post__blog-title title"
       id="some-title"

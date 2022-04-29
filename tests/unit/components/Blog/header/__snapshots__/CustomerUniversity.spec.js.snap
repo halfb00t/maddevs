@@ -4,6 +4,7 @@ exports[`customer university header component should render correctly with defau
 <div>
   <commonheader-stub
     coverimageurl="https://images.prismic.io/superpupertest/82f90d05-8c22-49c1-bf1e-8721a0e3eda6_Constructing+a+Map+in+the+Mercator+Projection+for+Android.png?auto=compress,format"
+    date=""
     subtitle="subtitle"
     title="title"
   >
