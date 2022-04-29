@@ -30,8 +30,3 @@ export const ANALYTICS_IDS = {
   GA4: process.env.analytics4Key,
   UNIVERSAL: process.env.analyticsUniversalKey,
 }
-
-export const getContentGroupByPath = (path = '') => {
-  if (path === '/') return CONTENT_GROUPS.HOME
-  return undefined
-}

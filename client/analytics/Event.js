@@ -1,10 +1,14 @@
 /* eslint-disable no-console, class-methods-use-this, no-underscore-dangle */
-import uniqid from 'uniqid'
-import { getContentGroupByPath } from './constants'
+import uniqid from '~/helpers/generatorUid'
+
+const LOCAL_STORAGE_KEYS = {
+  ID: 'GA_USER_ID',
+  TYPE: 'GA_USER_TYPE',
+}
 
 export const addUserType = type => {
-  // TYPE: 'hr_candidate' | 'lead' | 'download_ebook'
-  localStorage.setItem('GA_USER_TYPE', type)
+  // TYPE: 'hr_candidate' | 'lead' | 'download_ebook' | undefined
+  localStorage.setItem(LOCAL_STORAGE_KEYS.TYPE, type)
 }
 
 export class AnalyticsEvent {
@@ -20,12 +24,12 @@ export class AnalyticsEvent {
 
   _applyUser() {
     if ('window' in global) {
-      const existId = localStorage.getItem('GA_USER_ID')
-      const type = localStorage.getItem('GA_USER_TYPE')
+      const existId = localStorage.getItem(LOCAL_STORAGE_KEYS.ID)
+      const type = localStorage.getItem(LOCAL_STORAGE_KEYS.TYPE)
 
       const userId = existId || uniqid()
 
-      localStorage.setItem('GA_USER_ID', userId)
+      localStorage.setItem(LOCAL_STORAGE_KEYS.ID, userId)
 
       this.properties.user_id = userId
       this.properties.user_type = type
@@ -45,17 +49,6 @@ export class AnalyticsEvent {
     return this
   }
 
-  setContentGroup(contentGroup) {
-    if (!contentGroup) {
-      const autoContentGroup = getContentGroupByPath(window.location.pathname)
-      if (!autoContentGroup) return this
-      this.properties.page_type = autoContentGroup
-      return this
-    }
-    this.properties.page_type = contentGroup
-    return this
-  }
-
   setField(name, value) {
     if (!name || !(value !== undefined && value !== null)) {
       this._handleError('AnalyticsEvent.setField() method is failed. Please add name or values params')
@@ -64,7 +57,7 @@ export class AnalyticsEvent {
     return this
   }
 
-  setPath() {
+  _setPath() {
     this.properties.path = window.location.pathname
   }
 
@@ -76,18 +69,24 @@ export class AnalyticsEvent {
     return Array.from(new Set(keys))
   }
 
+  _log(analyticsKeys) {
+    const msg = [
+      '<------- ANALYTICS EVENT SENDING -------->',
+      `EVENT: ${this.action}`,
+      `PROPS: ${JSON.stringify(this.properties)}`,
+      `ANALYTICS: ${JSON.stringify(analyticsKeys)}`,
+    ]
+
+    console.log(msg.join('\n'))
+  }
+
   send() {
-    this.setContentGroup()
-    this.setPath()
+    this._setPath()
 
     const analyticsKeys = this._collectGoogleAnalyticsKeys()
 
     if (process.env.NODE_ENV === 'development') {
-      console.log(`<------- ANALYTICS EVENT SENDING -------->
-          EVENT: ${this.action}
-          PROPS: ${JSON.stringify(this.properties)}
-          ANALYTICS: ${JSON.stringify(analyticsKeys)}
-        `)
+      this._log(analyticsKeys)
     }
 
     analyticsKeys.forEach(analyticsId => {
