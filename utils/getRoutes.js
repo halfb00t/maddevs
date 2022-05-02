@@ -116,7 +116,7 @@ const getRoutes = async () => {
 
   const authorPageRoutes = prismicPosts
     .filter(post => post.type === 'author')
-    .map(author => `/author/${author.uid}`)
+    .map(author => `/blog/authors/${author.uid}`)
 
   const careerPageRoutes = prismicPosts
     .filter(post => post.type === 'vacancy')
@@ -145,6 +145,12 @@ const getRoutes = async () => {
     '/case-studies/yourcast',
     '/case-studies/veeqo',
     '/case-studies/clutch',
+    '/case-studies/peklo',
+    '/case-studies/R4TCA-web-application',
+    '/case-studies/citycam',
+    '/case-studies/bandpay',
+    '/case-studies/guardrails',
+    '/case-studies/namba-taxi',
     '/blog',
     ...careerPageRoutes,
     ...blogPageRoutes,
