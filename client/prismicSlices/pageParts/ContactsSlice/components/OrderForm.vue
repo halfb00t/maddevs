@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import BaseForm from '@/components/core/forms/BaseForm'
 import ModalSuccess from '@/components/core/modals/ModalSuccess'
 import createLeadMixin from '@/mixins/createLeadMixin'
@@ -47,18 +48,19 @@ export default {
   mixins: [createLeadMixin(304632, 'Tell Us About Your Project'), scrollOnBody],
 
   methods: {
-    handleSubmit(formData) {
+    ...mapActions(['setFilledLeadForm']),
+
+    async handleSubmit(formData) {
       const variables = {
         ...exceptKeys(formData, 'description'),
         projectDescription: formData.description,
         formLocation: '\'Order a project now\' button, prismic ContactsSlice component',
       }
-
       // from mixin
-      this.submitLead(variables)
+      await this.submitLead(variables)
 
-      this.disableScrollOnBody()
-      this.$refs.successModal.show()
+      this.setFilledLeadForm()
+      await this.$router.push({ path: '/test-anton-prismic-slices/' })
     },
 
     reset() {
