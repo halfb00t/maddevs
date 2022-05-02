@@ -172,7 +172,7 @@ describe('Author _uid component', () => {
 
     expect(callObject.next).toHaveBeenCalledTimes(2)
     expect(callObject.next).toHaveBeenLastCalledWith(
-      { path: `/${vm.$store.state.blogAuthors.author.uid}/` },
+      { path: `/blog/authors/${vm.$store.state.blogAuthors.author.uid}/` },
     )
   })
 
