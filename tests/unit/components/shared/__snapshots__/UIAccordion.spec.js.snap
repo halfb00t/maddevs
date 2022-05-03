@@ -44,22 +44,18 @@ exports[`UIAccordion component should correctly render component 1`] = `
       </h4>
     </div>
      
-    <transition-stub
-      name="fade"
+    <div
+      aria-labelledby="test-accordion"
+      class="accordion__answer"
+      id="section-1"
+      style="display: none;"
     >
       <div
-        aria-labelledby="test-accordion"
-        class="accordion__answer"
-        id="section-1"
-        style="display: none;"
+        class="prismic-html-tags"
       >
-        <div
-          class="prismic-html-tags"
-        >
-          Test answer
-        </div>
+        Test answer
       </div>
-    </transition-stub>
+    </div>
   </div>
 </div>
 `;

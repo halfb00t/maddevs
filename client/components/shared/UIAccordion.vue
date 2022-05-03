@@ -34,22 +34,20 @@
         </button>
       </h4>
     </div>
-    <transition name="fade">
+    <div
+      v-show="expanded"
+      :id="`section-${sectionId}`"
+      ref="accordionAnswer"
+      :aria-labelledby="`${accordId}`"
+      class="accordion__answer"
+    >
       <div
-        v-show="expanded"
-        :id="`section-${sectionId}`"
-        ref="accordionAnswer"
-        :aria-labelledby="`${accordId}`"
-        class="accordion__answer"
-      >
-        <div
-          v-if="isPrismic"
-          class="prismic-html-tags"
-          v-html="answer"
-        />
-        <slot v-else />
-      </div>
-    </transition>
+        v-if="isPrismic"
+        class="prismic-html-tags"
+        v-html="answer"
+      />
+      <slot v-else />
+    </div>
   </div>
 </template>
 
@@ -101,13 +99,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// This styles need for animation in transition tag
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
 .accordion {
   margin-bottom: 48px;
   padding-bottom: 32px;

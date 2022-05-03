@@ -41,11 +41,11 @@ export default {
   methods: {
     ...mapActions(['setFilledLeadForm']),
 
-    async handleSubmit(formData) {
+    handleSubmit(formData) {
       const recaptcha = window.grecaptcha
 
       recaptcha.ready(() => {
-        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(async token => {
+        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(token => {
           const variables = {
             token,
             ...formData,
@@ -54,16 +54,16 @@ export default {
           }
 
           // from mixin
-          await this.submitLead(variables)
-          this.$emit('triggerClose')
-          this.setFilledLeadForm()
-          await this.$router.push('/success-and-faq/')
+          this.submitLead(variables)
         })
       })
+      this.setFilledLeadForm()
+      this.$router.push('/success-and-faq/')
     },
 
     reset() {
       this.$refs.baseForm.reset()
+      this.$emit('triggerClose')
     },
   },
 }

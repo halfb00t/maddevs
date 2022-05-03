@@ -58,20 +58,16 @@ exports[`AccordionSlice component should correctly render component 1`] = `
           </h4>
         </div>
          
-        <transition-stub
-          name="fade"
+        <div
+          aria-labelledby="test-question"
+          class="accordion__answer"
+          id="section-0"
+          style="display: none;"
         >
           <div
-            aria-labelledby="test-question"
-            class="accordion__answer"
-            id="section-0"
-            style="display: none;"
-          >
-            <div
-              class="prismic-html-tags"
-            />
-          </div>
-        </transition-stub>
+            class="prismic-html-tags"
+          />
+        </div>
       </div>
     </div>
   </section>
