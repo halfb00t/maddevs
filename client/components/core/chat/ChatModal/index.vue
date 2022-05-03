@@ -37,6 +37,7 @@
         <Development
           :is-company="isCompany"
           :is-partnership="isPartnership"
+          @close="onClose"
         />
       </Simplebar>
     </div>

@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import BaseForm from '@/components/core/forms/BaseForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
 
@@ -38,11 +39,13 @@ export default {
   },
 
   methods: {
+    ...mapActions(['setFilledLeadForm']),
+
     async handleSubmit(formData) {
       const recaptcha = window.grecaptcha
 
       recaptcha.ready(() => {
-        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(token => {
+        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(async token => {
           const variables = {
             token,
             ...formData,
@@ -51,7 +54,10 @@ export default {
           }
 
           // from mixin
-          this.submitLead(variables)
+          await this.submitLead(variables)
+          this.$emit('triggerClose')
+          this.setFilledLeadForm()
+          await this.$router.push('/success-and-faq/')
         })
       })
     },
