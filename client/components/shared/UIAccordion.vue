@@ -8,6 +8,7 @@
           :aria-expanded="expanded.toString()"
           :aria-controls="`section-${sectionId}`"
           class="accordion__question"
+          data-testid="accordionBtn"
           @click="showAnswer"
         >
           <span class="accordion__question-text">{{ question }}</span>
@@ -85,7 +86,7 @@ export default {
   data() {
     return {
       expanded: false,
-      accordId: this.accordionId.replace(/ /g, '-'),
+      accordId: this.accordionId.replace(/ /g, '-').toLowerCase(),
     }
   },
 

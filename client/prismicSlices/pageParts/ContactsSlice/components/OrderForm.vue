@@ -60,7 +60,7 @@ export default {
       await this.submitLead(variables)
 
       this.setFilledLeadForm()
-      await this.$router.push({ path: '/test-anton-prismic-slices/' })
+      await this.$router.push({ path: '/success-and-faq/' })
     },
 
     reset() {

@@ -50,7 +50,7 @@ export default {
       await this.submitLead(variables)
       this.$emit('triggerClose')
       this.setFilledLeadForm()
-      await this.$router.push('/test-anton-prismic-slices/')
+      await this.$router.push('/success-and-faq/')
     },
 
     reset() {

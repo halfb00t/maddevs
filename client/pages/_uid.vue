@@ -39,13 +39,13 @@ export default {
   },
 
   beforeRouteUpdate(to, from, next) {
-    if (from.path === '/test-anton-prismic-slices/') this.setDefaultValue()
+    if (from.path === '/success-and-faq/') this.setUnfilledLeadForm()
     next()
   },
 
   beforeRouteLeave(to, from, next) {
     this.showFooter(true)
-    if (from.path === '/test-anton-prismic-slices/') this.setDefaultValue()
+    if (from.path === '/success-and-faq/') this.setUnfilledLeadForm()
     next()
   },
 
@@ -83,7 +83,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['showFooter', 'setDefaultValue']),
+    ...mapActions(['showFooter', 'setUnfilledLeadForm']),
   },
 }
 </script>
