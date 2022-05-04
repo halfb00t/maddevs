@@ -37,6 +37,7 @@ import createLeadMixin from '@/mixins/createLeadMixin'
 import scrollOnBody from '@/mixins/scrollOnBody'
 
 import exceptKeys from '@/helpers/exceptKeys'
+import { footerFormSubmitEvent } from '@/analytics/events'
 
 export default {
   name: 'OrderForm',
@@ -60,6 +61,7 @@ export default {
       await this.submitLead(variables)
 
       this.setFilledLeadForm()
+      footerFormSubmitEvent.send()
       await this.$router.push({ path: '/success-and-faq/' })
     },
 

@@ -23,7 +23,7 @@
             v-if="!extractMenuLink(link).isExternalLink"
             :to="extractMenuLink(link).url"
             data-testid="menu-item-internal-link"
-            @click.native="goToPage"
+            @click.native="goToPage($event)"
           >
             {{ label }}
           </NuxtLink>
@@ -43,7 +43,7 @@
 
 <script>
 import extractMenuLink from '@/helpers/extractMenuLink'
-import { headerClickEvent } from '@/analytics/events'
+import { blockClickEvent, contactsClickEvent, headerClickEvent } from '@/analytics/events'
 
 export default {
   name: 'HeaderMenu',
@@ -63,7 +63,9 @@ export default {
   methods: {
     extractMenuLink,
 
-    goToPage() {
+    goToPage(event) {
+      if (event.target.pathname === '/contact-us/') contactsClickEvent.send()
+      if (event.target.pathname === '/blog/') blockClickEvent.send()
       headerClickEvent.send()
       this.$emit('changed-page')
     },
