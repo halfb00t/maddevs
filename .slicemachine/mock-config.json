@@ -531,6 +531,9 @@
             "content": "devops-audit"
           }
         }
+      },
+      "gridWithAnimationOptionSlice": {
+        "items": {}
       }
     },
     "PostsSectionSlice": {
@@ -703,6 +706,31 @@
       "default-slice": {
         "primary": {},
         "items": {}
+      }
+    },
+    "AuthorsListSlice": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "AccordionSlice": {
+      "default-slice": {
+        "primary": {
+          "mainTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "answer": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   },

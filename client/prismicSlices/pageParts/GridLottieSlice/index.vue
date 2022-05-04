@@ -20,6 +20,16 @@
         data-testid="card-lottie-link"
       />
     </LazyHydrate>
+    <LazyHydrate
+      v-else-if="slice.variation === 'gridWithAnimationOptionSlice'"
+      when-visible
+    >
+      <GridWithAnimationOptionSlice
+        :items="slice.items"
+        :data-aos="slice.primary.animation"
+        data-testid="card-lottie"
+      />
+    </LazyHydrate>
   </section>
 </template>
 
@@ -34,6 +44,7 @@ export default {
     LazyHydrate,
     GridLottie: () => import('./variations/GridLottie'),
     GridLottieLink: () => import('./variations/GridLottieLink'),
+    GridWithAnimationOptionSlice: () => import('./variations/GridWithAnimationOptionSlice'),
   },
 
   mixins: [animateOnScrollMixin({

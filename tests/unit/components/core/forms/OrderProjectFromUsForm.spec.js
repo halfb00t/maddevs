@@ -12,9 +12,15 @@ localVue.use(Vuex)
 const store = {
   actions: {
     sendLead: jest.fn(),
+    setFilledLeadForm: jest.fn(),
   },
 }
-const mocks = formBaseProps
+const mocks = {
+  ...formBaseProps,
+  $router: {
+    push: jest.fn(),
+  },
+}
 
 describe('OrderProjectFromUsForm component', () => {
   it('should render correctly', () => {

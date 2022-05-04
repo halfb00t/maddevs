@@ -36,7 +36,7 @@ export default {
        * https://community.prismic.io/t/when-does-cache-expire-uid-history/874 - about this issue
        */
       if (params.uid !== author.uid && typeof author.uid === 'string') {
-        next({ path: `/author/${author.uid}/` })
+        next({ path: `/blog/authors/${author.uid}/` })
       }
     })
   },
@@ -45,7 +45,7 @@ export default {
     try {
       await store.dispatch('getBlogAuthor', params.uid)
       return {
-        openGraphUrl: `${process.env.domain}/author/${params.uid}/`,
+        openGraphUrl: `${process.env.domain}/blog/authors/${params.uid}/`,
       }
     } catch (e) {
       // Returns error page
@@ -55,7 +55,7 @@ export default {
 
   head() {
     return buildHead({
-      title: `Mad Devs: ${this.blogAuthor.name}`,
+      title: `${this.blogAuthor.name}`,
       metaTitle: this.blogAuthor.metaTitle || `${this.blogAuthor.name} | Blog`,
       description: this.blogAuthor.metaDescription || '',
       url: this.openGraphUrl,

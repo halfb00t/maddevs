@@ -32,7 +32,7 @@ describe('link resolver function', () => {
   })
 
   it('should return author blog path if type author', () => {
-    const RESULT = '/author/'
+    const RESULT = '/blog/authors/'
     const DOC = {
       isBroken: false,
       type: 'author',

@@ -9,7 +9,9 @@ import * as careers from './modules/careers'
 import * as customPage from './modules/customPage'
 import * as header from './modules/header'
 import * as footer from './modules/footer'
+import * as authors from './modules/authorsPage'
 import * as ebooks from './modules/ebooks'
+import * as successAndFaq from './modules/successAndFaq'
 
 export default {
   modules: {
@@ -25,5 +27,7 @@ export default {
     header,
     footer,
     ebooks,
+    authors,
+    successAndFaq,
   },
 }

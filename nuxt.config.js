@@ -75,6 +75,7 @@ export default () => ({
    ** Server middlewares
    */
   serverMiddleware: [{ path: '/', handler: '~/../server/index.js' }],
+  middleware: 'redirectToHomePage',
   /*
    ** Build configuration
    */
