@@ -58,6 +58,7 @@
         <a
           href="tel:+442039848555"
           class="contacts-slice-fields__item-value"
+          @click="sendPhoneClickEvent"
         >
           +44 20 3984 8555
         </a>
@@ -67,6 +68,8 @@
 </template>
 
 <script>
+import { phoneClickEvent } from '@/analytics/events'
+
 export default {
   name: 'ContactFields',
 
@@ -74,6 +77,12 @@ export default {
     return {
       mailLink: process.env.emailContact,
     }
+  },
+
+  methods: {
+    sendPhoneClickEvent() {
+      phoneClickEvent.send()
+    },
   },
 }
 </script>
