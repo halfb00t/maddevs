@@ -58,12 +58,9 @@ export default {
         })
       })
       this.setFilledLeadForm()
-      this.$router.push('/success-and-faq/')
-    },
-
-    reset() {
       this.$refs.baseForm.reset()
       this.$emit('triggerClose')
+      this.$router.push('/success-and-faq/')
     },
   },
 }
