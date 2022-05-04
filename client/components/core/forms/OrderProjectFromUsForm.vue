@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import BaseForm from '@/components/core/forms/BaseForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
 
@@ -36,7 +37,9 @@ export default {
   },
 
   methods: {
-    handleSubmit(formData) {
+    ...mapActions(['setFilledLeadForm']),
+
+    async handleSubmit(formData) {
       const variables = {
         ...exceptKeys(formData, 'description'),
         projectDescription: formData.description,
@@ -44,7 +47,10 @@ export default {
       }
 
       // from mixin
-      this.submitLead(variables)
+      await this.submitLead(variables)
+      this.$emit('triggerClose')
+      this.setFilledLeadForm()
+      await this.$router.push('/success-and-faq/')
     },
 
     reset() {

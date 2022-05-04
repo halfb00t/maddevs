@@ -25,7 +25,7 @@
     "test:unit": "node ./jest",
     "test:unit:node": "node ./jest -- --test=node",
     "test:unit:browser": "node ./jest -- --test=browser",
-    "test:staging": "node ./jest && node ./jest/utils/sendCoverageToSlack.js",
+    "test:staging": "node ./jest && node ./jest/utils/sendCoverageToSlack.js && npm run generate:coverage-badges",
     "test:e2e": "cypress run",
     "test:update:snapshot": "npm run test:unit -- -u",
     "generate:coverage-badges": "node ./jest/utils/generateCoverageBadges.js -output './client/static'",

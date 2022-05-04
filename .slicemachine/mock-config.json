@@ -712,6 +712,26 @@
       "default-slice": {
         "primary": {}
       }
+    },
+    "AccordionSlice": {
+      "default-slice": {
+        "primary": {
+          "mainTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "answer": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {

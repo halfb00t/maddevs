@@ -4,7 +4,10 @@
     :id="id"
     ref="modalOrderProjectFromUs"
   >
-    <OrderProjectFromUsForm :form-location="location" />
+    <OrderProjectFromUsForm
+      :form-location="location"
+      @triggerClose="close"
+    />
   </Modal>
 </template>
 
