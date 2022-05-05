@@ -82,6 +82,7 @@ export class AnalyticsEvent {
 
   send() {
     this._setPath()
+    this._applyUser()
 
     const analyticsKeys = this._collectGoogleAnalyticsKeys()
 

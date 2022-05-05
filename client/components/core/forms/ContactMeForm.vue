@@ -18,6 +18,7 @@ import { mapActions } from 'vuex'
 import BaseForm from '@/components/core/forms/BaseForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
 import { contactMeSubmitEvent } from '@/analytics/events'
+import { addUserType } from '@/analytics/Event'
 
 export default {
   name: 'ContactMeForm',
@@ -60,6 +61,7 @@ export default {
       })
       this.setFilledLeadForm()
       this.$refs.baseForm.reset()
+      addUserType('lead')
       contactMeSubmitEvent.send()
       this.$emit('triggerClose')
       this.$router.push('/success-and-faq/')

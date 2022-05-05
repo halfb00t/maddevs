@@ -24,3 +24,17 @@ export const blockClickEvent = new AnalyticsEvent('blog_click').setCategory(EVEN
 export const categoryPageClickEvent = new AnalyticsEvent('category_click').setCategory(EVENT_CATEGORIES.CLICK)
 
 export const pressCenterClickEvent = new AnalyticsEvent('press_click').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const linkedinUserClickEvent = new AnalyticsEvent('linkedin_user_click').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const careersClickEvent = new AnalyticsEvent('careers_click').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const hrSiteClickEvent = new AnalyticsEvent('hr_site_click').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const githubClickEvent = new AnalyticsEvent('github_click').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const ebookSubmitFormEvent = new AnalyticsEvent('submit_ebook_form').setCategory(EVENT_CATEGORIES.SUBMIT)
+
+export const writeUsClickEvent = new AnalyticsEvent('write_us_click').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const submitCvFormEvent = new AnalyticsEvent('submit_cv').setCategory(EVENT_CATEGORIES.SUBMIT)
