@@ -2,6 +2,8 @@ import 'regenerator-runtime'
 import { shallowMount } from '@vue/test-utils'
 import ReadForm from '@/components/Ebook/ReadForm'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ReadForm component', () => {
   let wrapper = null
 

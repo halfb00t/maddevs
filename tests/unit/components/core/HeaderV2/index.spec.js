@@ -8,6 +8,8 @@ import headerContent from '../../../__mocks__/headerContent'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
+jest.mock('~/helpers/generatorUid')
+
 const actions = {
   setHeaderTransparentArea: () => {},
   setHeaderTransparent: () => {},

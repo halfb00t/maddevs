@@ -14,17 +14,7 @@ exports[`CTABanner component should render correctly 1`] = `
       title="Build your product <br /> with Mad Devs"
     />
      
-    <modal-stub
-      id="contact-me-modal"
-      modalbackground="white"
-      modaltitle=""
-      whereiscalled=""
-    >
-      <contactmeform-stub
-        formlocation="'Estimate your project' button, delivery models page"
-        id="contact-me-modal"
-      />
-    </modal-stub>
+    <!---->
   </div>
 </div>
 `;

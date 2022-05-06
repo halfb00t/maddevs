@@ -22,6 +22,8 @@ const props = {
   },
 }
 
+jest.mock('~/helpers/generatorUid')
+
 const stubs = ['PrismicRichText', 'EbookForm']
 
 const mocks = {

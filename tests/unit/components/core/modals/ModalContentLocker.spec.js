@@ -5,6 +5,8 @@ import {
 import { shallowMount } from '@vue/test-utils'
 import ModalContentLocker from '@/components/core/modals/ModalContentLocker'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalContentLocker component', () => {
   let wrapper
   let mockShow

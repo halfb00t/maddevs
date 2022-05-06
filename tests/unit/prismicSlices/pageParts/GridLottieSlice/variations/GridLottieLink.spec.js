@@ -8,6 +8,8 @@ const mocks = {
   },
 }
 
+jest.mock('~/helpers/generatorUid')
+
 const props = {
   items: [
     {

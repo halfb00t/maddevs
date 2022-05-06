@@ -6,6 +6,8 @@ import 'regenerator-runtime'
 const stubs = ['ChatIcon', 'ChatModal']
 const mockToggleMethod = jest.spyOn(Chat.methods, 'toggleModal')
 
+jest.mock('~/helpers/generatorUid')
+
 describe('Chat component', () => {
   it('should render correctly', () => {
     const { container } = render(Chat, { stubs })

@@ -8,6 +8,8 @@ const fileWithLongName = new File(
 )
 const MAX_FILE_LENGTH = 25
 
+jest.mock('~/helpers/generatorUid')
+
 describe('FileInput component', () => {
   beforeEach(() => {
     jest.spyOn(console, 'warn').mockImplementation(() => {})

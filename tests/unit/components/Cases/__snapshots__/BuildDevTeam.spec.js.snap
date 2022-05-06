@@ -16,12 +16,7 @@ exports[`BuildDevTeam renders correctly 1`] = `
       title="Let’s build or scale up your development team?"
     />
      
-    <transition-stub
-      mode="out-in"
-      name="main-fade"
-    >
-      <!---->
-    </transition-stub>
+    <!---->
   </div>
 </div>
 `;

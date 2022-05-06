@@ -43,6 +43,8 @@ const getProps = params => ({
   },
 })
 
+jest.mock('~/helpers/generatorUid')
+
 describe('TeamCards slice', () => {
   it('should render correctly', () => {
     const { container } = render(TeamCards, {
