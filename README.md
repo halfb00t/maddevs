@@ -58,17 +58,17 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 
 A list of main technologies that we use for build our application
 
-| Technology | Version | Description                                                             |
-| ---------- | ------- | ----------------------------------------------------------------------- |
-| Node       | 14.10.1 | For the correct launch of the project, use this version of the node     |
-| Vue        | ^2.15.4 | Progressive framework for building a modern user interfaces             |
-| Nuxt       | ^2.15.8 | Server-side rendering framework for VueJS                               |
-| Axios      | ^0.21.3 | Promise based HTTP client for the browser and node.js                   |
-| Express    | ^4.17.1 | Web-framework for nodeJS                                                |
-| Vuelidate  | ^0.7.6  | A VueJS modern validating library                                       |
-| Prismic    | ^1.3.1  | Content-Management system                                               |
-| Lottie     | ^0.2.1  | Lightweight, scalable animations                                        |
-| Lottie-web | ^5.7.13 | The mobile library for Web animations                                   |
+| Technology | Version | Description                                                         |
+| ---------- | ------- | ------------------------------------------------------------------- |
+| Node       | 14.10.1 | For the correct launch of the project, use this version of the node |
+| Vue        | ^2.15.4 | Progressive framework for building a modern user interfaces         |
+| Nuxt       | ^2.15.8 | Server-side rendering framework for VueJS                           |
+| Axios      | ^0.21.3 | Promise based HTTP client for the browser and node.js               |
+| Express    | ^4.17.1 | Web-framework for nodeJS                                            |
+| Vuelidate  | ^0.7.6  | A VueJS modern validating library                                   |
+| Prismic    | ^1.3.1  | Content-Management system                                           |
+| Lottie     | ^0.2.1  | Lightweight, scalable animations                                    |
+| Lottie-web | ^5.7.13 | The mobile library for Web animations                               |
 
 #### Additional tools
 
@@ -187,10 +187,10 @@ To send changes to the staging server, you should merge **develop** branch into 
 
 ### Coverage(unit)
 
-![Coverage statements](client/static/badge-statements.svg)
-![Coverage branches](client/static/badge-branches.svg)
-![Coverage functions](client/static/badge-functions.svg)
-![Coverage lines](client/static/badge-lines.svg)
+![Coverage statements](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-statements.svg)
+![Coverage branches](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-branches.svg)
+![Coverage functions](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-functions.svg)
+![Coverage lines](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-lines.svg)
 
 ### Commands
 
