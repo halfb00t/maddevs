@@ -18,6 +18,7 @@
             v-if="button.link"
             is-link
             :to="button.link"
+            @click="sendCareersLinkClickEvent"
           >
             {{ button.text }}
             <img
@@ -63,6 +64,7 @@
 import CTAModal from './components/CTAModal'
 import UIButton from '@/components/shared/UIButton'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import { careersClickEvent } from '@/analytics/events'
 
 export default {
   name: 'CtaBannerSlice',
@@ -109,6 +111,10 @@ export default {
     showModal() {
       if (!this.$refs?.CTAModalRef?.show) return
       this.$refs.CTAModalRef.show()
+    },
+
+    sendCareersLinkClickEvent() {
+      if (this.$route.path === '/team/') careersClickEvent.send()
     },
   },
 }

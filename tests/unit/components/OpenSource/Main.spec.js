@@ -4,6 +4,8 @@ import Main from '@/components/OpenSource/Main'
 
 const stubs = ['Banner', 'ParagraphSection', 'FeaturedProjects', 'Boilerplates', 'CTABanner']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('Main component', () => {
   it('should render correctly', () => {
     const { container } = render(Main, {

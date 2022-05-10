@@ -52,6 +52,8 @@ import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import { getLinkWithLifeTime } from '@/api/s3'
 import { sendEmail } from '@/api/email'
 import createLeadMixin from '@/mixins/createLeadMixin'
+import { ebookSubmitFormEvent } from '@/analytics/events'
+import { addUserType } from '@/analytics/Event'
 
 export default {
   name: 'EbookForm',
@@ -144,6 +146,9 @@ export default {
       }
       // from mixin
       this.submitLead(variables)
+
+      addUserType('download_ebook')
+      ebookSubmitFormEvent.send()
 
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.successMessage = `

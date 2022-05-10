@@ -32,6 +32,8 @@ import { mapActions } from 'vuex'
 import BaseForm from '@/components/core/forms/BaseForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
 import FormSuccess from '@/components/core/chat/ChatModal/FormSuccess'
+import { addUserType } from '@/analytics/Event'
+import { contactMeSubmitEvent } from '@/analytics/events'
 
 export default {
   name: 'Development',
@@ -71,6 +73,8 @@ export default {
         formLocation: 'Chat component',
       }
       await this.submitLead(variables)
+      addUserType('lead')
+      contactMeSubmitEvent.send()
       this.showSuccessModal = true
       this.$emit('close')
       this.setFilledLeadForm()

@@ -32,6 +32,7 @@
         <a
           :href="`mailto:${mailLink}`"
           class="contacts-slice-fields__item-value"
+          @click="sendEvent('email')"
         >
           {{ mailLink }}
         </a>
@@ -58,6 +59,7 @@
         <a
           href="tel:+442039848555"
           class="contacts-slice-fields__item-value"
+          @click="sendEvent('phone')"
         >
           +44 20 3984 8555
         </a>
@@ -67,6 +69,8 @@
 </template>
 
 <script>
+import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
+
 export default {
   name: 'ContactFields',
 
@@ -74,6 +78,13 @@ export default {
     return {
       mailLink: process.env.emailContact,
     }
+  },
+
+  methods: {
+    sendEvent(type) {
+      if (type === 'email') emailClickEvent.send()
+      if (type === 'phone') phoneClickEvent.send()
+    },
   },
 }
 </script>

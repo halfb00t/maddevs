@@ -9,6 +9,7 @@
         :href="network.url"
         class="contacts-slice-socials__item-link"
         target="_blank"
+        @click="sendSocialClickEvent"
       >
         <img
           :src="require(`@/assets/img/Footer/svg/${network.key}.svg`)"
@@ -24,6 +25,7 @@
 
 <script>
 import { socialNetworks } from '@/data/socialNetworks'
+import { socialNetworkClickEvent } from '@/analytics/events'
 
 export default {
   name: 'Socials',
@@ -32,6 +34,12 @@ export default {
     return {
       socialNetworks,
     }
+  },
+
+  methods: {
+    sendSocialClickEvent() {
+      socialNetworkClickEvent.send()
+    },
   },
 }
 </script>

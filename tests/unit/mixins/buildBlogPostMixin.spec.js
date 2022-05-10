@@ -7,6 +7,8 @@ import buildBlogPostMixin from '@/mixins/buildBlogPostMixin'
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
+jest.mock('~/helpers/generatorUid')
+
 const blogPost = {
   type: 'post',
   id: 'id',

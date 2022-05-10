@@ -22,6 +22,8 @@ jest.mock('bowser', () => ({
   }),
 }))
 
+jest.mock('~/helpers/generatorUid')
+
 Object.defineProperty(global.window, 'location', { value: { href: 'pageUrl' }, writable: true })
 
 const localVue = createLocalVue()

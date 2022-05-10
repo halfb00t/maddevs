@@ -108,6 +108,8 @@ const store = {
 
 const stubs = ['NuxtLink']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('AuthorSlice component', () => {
   it('should render correctly', () => {
     const { container } = render(AuthorSlice, {

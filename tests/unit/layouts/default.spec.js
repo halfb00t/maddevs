@@ -10,6 +10,8 @@ let push = jest.fn()
 
 const stubs = ['Header', 'Nuxt', 'Footer', 'ClientOnly', 'Chat']
 
+jest.mock('~/helpers/generatorUid')
+
 let mocks = {
   $nextTick: jest.fn(callback => {
     if (typeof callback === 'function') {

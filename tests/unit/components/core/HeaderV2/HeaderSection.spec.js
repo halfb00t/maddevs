@@ -13,6 +13,8 @@ const props = {
   postAuthor: {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('HeaderSection component', () => {
   it('should render correctly', () => {
     const { container } = render(HeaderSection, { stubs, props })

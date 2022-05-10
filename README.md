@@ -135,7 +135,7 @@ A list of additional tools that we use for make our codebase better
 A list of environment variables that needed to start the project(required)
 
 | NAME                                 | DESCRIPTION                                         |
-| ------------------------------------ | --------------------------------------------------- |
+|--------------------------------------|-----------------------------------------------------|
 | NODE_SENDPULSE_API_USER_ID           | Sendpulse api user id                               |
 | NODE_SENDPULSE_API_KEY               | Sendpulse api key                                   |
 | NODE_EMAIL_HR                        | Email to send messages(cv) to HR department         |
@@ -160,6 +160,8 @@ A list of environment variables that needed to start the project(required)
 | NODE_S3_PUBLIC_URL                   | S3 url                                              |
 | RECAPTCHA_SITE_KEY                   | ReCaptcha site key                                  |
 | RECAPTCHA_SECRET_KEY                 | ReCaptcha secret key                                |
+| NODE_GA4_KEY                         | GA4 MEASUREMENT ID                                  |
+| NODE_ANALYTICS_UNIVERSAL_KEY         | Universal Analytics Tracking ID                     |
 
 All of these variables must be added to the Heroku hosting
 

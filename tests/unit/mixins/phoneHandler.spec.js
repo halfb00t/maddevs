@@ -13,6 +13,8 @@ const OUTPUT_VALUE = '+1 2345-678-90'
 
 const createEvent = value => ({ target: { value }, preventDefault: jest.fn() })
 
+jest.mock('~/helpers/generatorUid')
+
 describe('Phone Handler Mixin', () => {
   let wrapper
 

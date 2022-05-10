@@ -15,6 +15,8 @@ const getProps = params => ({
   },
 })
 
+jest.mock('~/helpers/generatorUid')
+
 const stubs = ['GridLottieLink', 'LazyHydrate', 'GridLottie']
 
 describe('Card Grid slice', () => {

@@ -28,6 +28,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import HeaderSection from '@/components/core/HeaderV2/HeaderSection'
+import { categoryPageClickEvent } from '@/analytics/events'
 
 export default {
   name: 'HeaderNavigation',
@@ -63,6 +64,7 @@ export default {
     goTo(name) {
       const path = this.headerContent[name]?.link
       if (!path) return
+      categoryPageClickEvent.send()
       this.$router.push({ path })
     },
 
