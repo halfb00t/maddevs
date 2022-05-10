@@ -2,6 +2,8 @@ import { shallowMount } from '@vue/test-utils'
 import { render } from '@testing-library/vue'
 import SlicesBlock from '@/components/slices'
 
+jest.mock('~/helpers/generatorUid')
+
 const stubs = [
   'PrismicImage',
   'PrismicRichText',

@@ -44,6 +44,7 @@
               <a
                 :href="network.link.url"
                 :target="network.link.target"
+                @click="sendLinkedinClickEvent(network.title)"
               >
                 <img
                   v-lazy-load
@@ -103,6 +104,7 @@
               <a
                 :href="network.link.url"
                 :target="network.link.target"
+                @click="sendLinkedinClickEvent(network.title)"
               >
                 <img
                   v-lazy-load
@@ -161,6 +163,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import linkResolver from '@/plugins/link-resolver'
+import { linkedinUserClickEvent } from '@/analytics/events'
 
 export default {
   name: 'AuthorSlice',
@@ -201,6 +204,12 @@ export default {
 
   created() {
     this.contributors = this.slice.items.filter(contributor => (contributor.image && contributor.image.url))
+  },
+
+  methods: {
+    sendLinkedinClickEvent(network) {
+      if (network === 'Linkedin') linkedinUserClickEvent.send()
+    },
   },
 }
 </script>
