@@ -143,11 +143,20 @@ export default {
     }
   }
   &__title {
-    @include font('Inter', 28px, 700);
-    line-height: 32px;
-    letter-spacing: -0.4px;
     margin-bottom: 10px;
     width: 135%;
+    position: relative;
+    z-index: 2;
+    ::v-deep h1,
+    ::v-deep h2,
+    ::v-deep h3,
+    ::v-deep h4,
+    ::v-deep h5,
+    ::v-deep h6 {
+      @include font('Inter', 32px, 700);
+      line-height: 130%;
+      letter-spacing: -0.4px;
+    }
     @media screen and (max-width: 980px) {
       width: 170%;
     }
@@ -155,13 +164,27 @@ export default {
       width: 100%;
     }
     @media screen and (max-width: 768px) {
-      font-size: 20px;
+      ::v-deep h1,
+      ::v-deep h2,
+      ::v-deep h3,
+      ::v-deep h4,
+      ::v-deep h5,
+      ::v-deep h6 {
+        font-size: 20px;
+      }
     }
     @media screen and (max-width: 576px) {
-      font-size: 18px;
-      line-height: 22px;
+      ::v-deep h1,
+      ::v-deep h2,
+      ::v-deep h3,
+      ::v-deep h4,
+      ::v-deep h5,
+      ::v-deep h6 {
+        font-size: 18px;
+        line-height: 22px;
+        white-space: initial;
+      }
       margin-bottom: 14px;
-      white-space: initial;
     }
   }
   &__description {
