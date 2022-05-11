@@ -2,4 +2,4 @@
 const { DevRadiator } = require('./devRadiator')
 
 const radiator = new DevRadiator()
-radiator.run().catch(error => console.log(error))
+radiator.run().catch(console.log)

@@ -6,17 +6,14 @@ const { getCoverageMessage } = require('./utils/Coverage')
 const { getEslintReport } = require('./utils/EslintReport')
 const { getDeploysCount } = require('./utils/DeploysCount')
 const { getGoalSuccessMessage } = require('./helpers/getGoalSuccessMessage')
-const { RADIATOR_SLACK_WEBHOOK } = require('../../config')
+const { RADIATOR_SLACK_WEBHOOK, RADIATOR_CRON_STRING  } = require('../../config')
 
 
 class DevRadiator {
-  constructor() {
-  }
 
   schedule() {
-    const cronString = '0 * 4-13 * 1-5'
-    schedule.scheduleJob(cronString, () => {
-      this.run()
+    schedule.scheduleJob(RADIATOR_CRON_STRING, () => {
+      this.run().catch(console.log)
     })
   }
 
@@ -41,7 +38,6 @@ class DevRadiator {
     const coverageData = await getCoverageMessage()
     const deploysCount = await getDeploysCount()
     const eslintErrorsCount = await getEslintReport()
-
     const requestData = {
       title: 'Dev Radiator:',
       blocks: [
@@ -113,11 +109,9 @@ class DevRadiator {
         },
       ],
     }
-
     await this.sendToSlack(requestData)
   }
 }
-
 
 module.exports = { DevRadiator }
 
