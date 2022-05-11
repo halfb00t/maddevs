@@ -43,6 +43,10 @@ const PRISMIC_API = process.env.NODE_PRISMIC_API
 // reCaptcha key
 const RECAPTCHA_KEY = process.env.RECAPTCHA_SECRET_KEY
 
+// Radiator
+const RADIATOR_SLACK_WEBHOOK = process.env.NODE_RADIATOR_SLACK_WEBHOOK
+const RADIATOR_GH_TOKEN = process.env.NODE_RADIATOR_GH_TOKEN
+
 module.exports = {
   ATLASSIAN_TOKEN,
   ATLASSIAN_EMAIL,
@@ -67,4 +71,6 @@ module.exports = {
   TEST_EMAIL,
   PRISMIC_API,
   RECAPTCHA_KEY,
+  RADIATOR_SLACK_WEBHOOK,
+  RADIATOR_GH_TOKEN,
 }
