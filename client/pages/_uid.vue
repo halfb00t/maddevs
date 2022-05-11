@@ -38,10 +38,18 @@ export default {
     })
   },
 
-  beforeRouteLeave(to, from, next) {
-    this.showFooter(true)
+  beforeRouteUpdate(to, from, next) {
+    if (from.path === '/success-and-faq/') this.setUnfilledLeadForm()
     next()
   },
+
+  beforeRouteLeave(to, from, next) {
+    this.showFooter(true)
+    if (from.path === '/success-and-faq/') this.setUnfilledLeadForm()
+    next()
+  },
+
+  middleware: 'redirectToHomePage',
 
   async asyncData({
     error, params, store, route,
@@ -75,7 +83,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['showFooter']),
+    ...mapActions(['showFooter', 'setUnfilledLeadForm']),
   },
 }
 </script>

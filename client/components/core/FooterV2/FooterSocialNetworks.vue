@@ -9,6 +9,7 @@
         :href="network.url"
         class="footer__social-network-link"
         target="_blank"
+        @click="sendSocialClickEvent"
       >
         <img
           v-lazy-load
@@ -24,6 +25,7 @@
 
 <script>
 import { socialNetworks } from '@/data/socialNetworks'
+import { socialNetworkClickEvent } from '@/analytics/events'
 
 export default {
   name: 'FooterSocialNetworkList',
@@ -31,6 +33,12 @@ export default {
     return {
       socialNetworks,
     }
+  },
+
+  methods: {
+    sendSocialClickEvent() {
+      socialNetworkClickEvent.send()
+    },
   },
 }
 </script>

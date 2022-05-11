@@ -18,6 +18,7 @@
           <a
             href="https://novosibirsk.hh.ru/employer/2861993/"
             target="_blank"
+            @click="sendHrSiteLickEvent"
           >
             Headhunter
           </a>
@@ -26,6 +27,7 @@
           <a
             href="https://career.habr.com/companies/maddevs/cp/vacancies/"
             target="_blank"
+            @click="sendHrSiteLickEvent"
           >
             Habr.com
           </a>
@@ -34,6 +36,7 @@
           <a
             href="https://www.linkedin.com/company/mad-devs/"
             target="_blank"
+            @click="sendHrSiteLickEvent"
           >
             Linkedin
           </a>
@@ -45,6 +48,7 @@
 
 <script>
 import UIBanner from '@/components/shared/UIBanner'
+import { hrSiteClickEvent } from '@/analytics/events'
 
 export default {
   name: 'CTABanner',
@@ -55,6 +59,12 @@ export default {
   computed: {
     mailTo() {
       return `mailto:${process.env.emailCV}`
+    },
+  },
+
+  methods: {
+    sendHrSiteLickEvent() {
+      hrSiteClickEvent.send()
     },
   },
 }

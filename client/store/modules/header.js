@@ -59,14 +59,14 @@ export const actions = {
     const headerContent = await getHeaderContent(this.$prismic)
     const company = await extractHeaderSection(this.$prismic, headerContent, 'company')
     const services = await extractHeaderSection(this.$prismic, headerContent, 'services')
-    // const industries = await extractHeaderSection(this.$prismic, headerContent, 'industries')
+    const industries = await extractHeaderSection(this.$prismic, headerContent, 'industries')
     const clients = await extractHeaderSection(this.$prismic, headerContent, 'clients')
     const insights = await extractHeaderSection(this.$prismic, headerContent, 'insights')
 
     commit('SET_HEADER_CONTENT', {
       company,
       services,
-      // industries,
+      industries,
       clients,
       insights,
     })

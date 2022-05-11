@@ -8,21 +8,29 @@ exports[`TagBanner component should render correctly 1`] = `
     <div
       class="current-tag"
     >
-      <h1
-        class="current-tag__title"
+      <div
+        class="current-tag__info"
       >
+        <h1
+          class="current-tag__title"
+        >
+          
         
       
-    
-      </h1>
+        </h1>
+         
+        <!---->
+         
+        <p
+          class="current-tag__posts-count"
+        >
+          
+        A collection of 0 posts
+      
+        </p>
+      </div>
        
-      <p
-        class="current-tag__posts-count"
-      >
-        
-      A collection of 0 posts
-    
-      </p>
+      <!---->
     </div>
   </div>
 </div>

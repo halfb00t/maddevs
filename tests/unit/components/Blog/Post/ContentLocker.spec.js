@@ -13,6 +13,8 @@ const directives = {
   'lazy-load': () => { },
 }
 
+jest.mock('~/helpers/generatorUid')
+
 const store = {
   getters: {
     showContentLocker: () => true,

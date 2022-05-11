@@ -8,11 +8,15 @@
 <script>
 import SliceZone from 'vue-slicezone'
 import getRoutePrefix from '@/helpers/getRoutePrefix'
+import headerMixin from '@/mixins/headerMixin'
+import { buildHead } from '@/data/seo'
 
 export default {
   components: {
     SliceZone,
   },
+
+  mixins: [headerMixin('.start-screen-slice')],
 
   beforeRouteEnter(to, from, next) {
     next(vm => {
@@ -24,7 +28,7 @@ export default {
        * https://community.prismic.io/t/when-does-cache-expire-uid-history/874 - about this issue
        */
       if (params.uid !== customPage.uid && typeof customPage.uid === 'string') {
-        next({ path: `/${customPage.routePrefix}/${customPage.uid}/` })
+        next({ path: `/blog/${customPage.uid}/` })
       } else {
         next()
       }
@@ -47,8 +51,19 @@ export default {
 
     return {
       customPage,
+      openGraphUrl: `${process.env.domain}/blog/${customPage.uid}/`,
     }
   },
 
+  head() {
+    return buildHead({
+      url: this.openGraphUrl,
+      title: 'Authors',
+      metaTitle: this.customPage.metaTitle || '',
+      description: this.customPage.metaDescription || '',
+      jsonLd: this.customPage.schemaOrgSnippet,
+      image: this.customPage.ogImage,
+    })
+  },
 }
 </script>

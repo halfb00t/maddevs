@@ -75,6 +75,7 @@ export default () => ({
    ** Server middlewares
    */
   serverMiddleware: [{ path: '/', handler: '~/../server/index.js' }],
+  middleware: 'redirectToHomePage',
   /*
    ** Build configuration
    */
@@ -152,7 +153,6 @@ export default () => ({
     '@nuxtjs/robots',
     '@nuxtjs/prismic',
     '@nuxtjs/sitemap',
-    '@nuxtjs/gtm',
     '@nuxtjs/style-resources',
     '@nuxtjs/sentry',
     ['nuxt-lazy-load', {
@@ -270,18 +270,6 @@ export default () => ({
     htmlSerializer: '@/plugins/html-serializer',
     preview: false,
   },
-  gtm: {
-    enabled: true,
-    id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
-    // crossOrigin: true,
-    scriptDefer: true,
-    pageTracking: true,
-  },
-  publicRuntimeConfig: {
-    gtm: {
-      id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
-    },
-  },
 
   ignore: ['**/*.stories.js'],
   env: {
@@ -298,6 +286,8 @@ export default () => ({
     prismicApi: process.env.NODE_PRISMIC_API,
     ipInfoToken: process.env.NODE_IP_INFO_TOKEN,
     reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
+    analyticsUniversalKey: process.env.NODE_ANALYTICS_UNIVERSAL_KEY,
+    analytics4Key: process.env.NODE_GA4_KEY,
   },
   router: {
     trailingSlash: true,

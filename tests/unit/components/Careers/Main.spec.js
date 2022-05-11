@@ -16,6 +16,8 @@ const store = new Vuex.Store({
   actions,
 })
 
+jest.mock('~/helpers/generatorUid')
+
 describe('Main component', () => {
   it('should render correctly', () => {
     const { container } = render(Main, {

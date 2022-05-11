@@ -13,6 +13,10 @@ export const navigationsSections = [
   ],
   [
     {
+      name: 'industries',
+      label: 'Industries',
+    },
+    {
       name: 'clients',
       label: 'Clients',
     },
@@ -31,9 +35,5 @@ export const staticsPagesLinks = [
   {
     title: 'Non-Disclosure Agreement (NDA)',
     link: '/nda/',
-  },
-  {
-    title: 'FAQ',
-    link: '/faq/',
   },
 ]

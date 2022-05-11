@@ -158,6 +158,8 @@ import ModalSuccess from '@/components/core/modals/ModalSuccess'
 
 import { fileSizeValidation, fileExt } from '@/helpers/validators'
 import parseUserAgentForLeads from '@/helpers/parseUserAgentForLeads'
+import { submitCvFormEvent } from '@/analytics/events'
+import { addUserType } from '@/analytics/Event'
 
 export default {
   name: 'PositionForm',
@@ -332,6 +334,8 @@ export default {
           this.$refs.successModal.show()
         })
       })
+      addUserType('hr_candidate')
+      submitCvFormEvent.send()
       this.resetForm()
     },
 

@@ -9,6 +9,14 @@ exports[`header Blog is a Vue instance 1`] = `
     id="introduction-container"
   >
      
+    <span
+      class="blog-post__date"
+    >
+      
+    Mar 23, 2021
+  
+    </span>
+     
     <h1
       class="blog-post__blog-title title"
       id="title"

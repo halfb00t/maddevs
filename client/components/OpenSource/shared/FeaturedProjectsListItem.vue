@@ -4,6 +4,7 @@
       :href="link"
       target="_blank"
       class="featured-projects-list__item-link"
+      @click="sendGithubClickEvent"
     >
       <div class="featured-projects-list__item-info">
         <img
@@ -23,6 +24,7 @@
 
 <script>
 import UIArrowButton from '@/components/shared/UIArrowButton'
+import { githubClickEvent } from '@/analytics/events'
 
 export default {
   name: 'FeaturedProjectsListItem',
@@ -54,6 +56,12 @@ export default {
     link: {
       type: String,
       default: '',
+    },
+  },
+
+  methods: {
+    sendGithubClickEvent() {
+      githubClickEvent.send()
     },
   },
 }
