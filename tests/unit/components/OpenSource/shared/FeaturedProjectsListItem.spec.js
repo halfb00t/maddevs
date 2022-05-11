@@ -20,6 +20,8 @@ const directives = {
   'lazy-load': () => {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('FeaturedProjectsListItem component', () => {
   it('should render correctly', () => {
     const { container } = render(FeaturedProjectsListItem, {

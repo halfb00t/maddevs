@@ -23,6 +23,7 @@
       <a
         href="tel:+442039848555"
         class="header-mobile-contacts__field-link"
+        @click="sendPhoneClickEvent"
       >
         +44 20 3984 8555
       </a>
@@ -56,6 +57,7 @@
 
 <script>
 import { messengers } from '@/data/messengers'
+import { phoneClickEvent } from '@/analytics/events'
 
 export default {
   name: 'HeaderMobileContacts',
@@ -65,6 +67,12 @@ export default {
       messengers,
       mailLink: process.env.emailContact,
     }
+  },
+
+  methods: {
+    sendPhoneClickEvent() {
+      phoneClickEvent.send()
+    },
   },
 }
 </script>

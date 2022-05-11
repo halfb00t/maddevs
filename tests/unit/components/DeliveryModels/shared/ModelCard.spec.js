@@ -15,6 +15,8 @@ const mocks = {
 
 const stubs = ['NuxtLink']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModelCard component', () => {
   it('should render correctly', () => {
     const { container } = render(ModelCard, {

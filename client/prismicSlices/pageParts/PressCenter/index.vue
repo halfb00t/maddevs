@@ -23,6 +23,7 @@
                 :href="link.url"
                 class="ps-main-card__link"
                 target="_blank"
+                @click="sendPressCenterPostEvent"
               >
                 <span class="ps-main-card__link-label">
                   {{ linkLabel }}
@@ -89,6 +90,7 @@
                     :href="item.link.url"
                     class="ps-sub-card__link"
                     target="_blank"
+                    @click="sendPressCenterPostEvent"
                   >
                     <span class="ps-sub-card__link-label">
                       {{ item.linkLabel }}
@@ -109,6 +111,7 @@
 <script>
 import textEllipsis from '@/helpers/textEllipsis'
 import formatDate from '@/helpers/formatDate'
+import { pressCenterClickEvent } from '@/analytics/events'
 
 export default {
   name: 'PressCenter',
@@ -141,6 +144,10 @@ export default {
   },
 
   methods: {
+    sendPressCenterPostEvent() {
+      pressCenterClickEvent.send()
+    },
+
     shortDescription(text) {
       const limit = 150
       return textEllipsis(text, { limit })

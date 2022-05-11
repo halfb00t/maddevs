@@ -47,6 +47,7 @@
             :href="expert.linkedin.url"
             rel="nofollow"
             target="_blank"
+            @click="sendLinkedinClickEvent($event)"
           >{{ expert.name }}</a>
         </div>
       </div>
@@ -56,6 +57,7 @@
 
 <script>
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import { linkedinUserClickEvent } from '@/analytics/events'
 
 export default {
   name: 'TeamCards',
@@ -89,6 +91,10 @@ export default {
   },
 
   methods: {
+    sendLinkedinClickEvent(event) {
+      if (event.target.href) linkedinUserClickEvent.send()
+    },
+
     toggleImageHanlde() {
       this.alreadyAnimated = true
       this.hoverCount += 1

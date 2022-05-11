@@ -14,6 +14,8 @@ const gradients = {
   grey: 'linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #f5f7f9)',
 }
 
+jest.mock('~/helpers/generatorUid')
+
 const apiData = {
   background: 'black',
   gradientColor: 'black',

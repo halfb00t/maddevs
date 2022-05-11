@@ -4,7 +4,6 @@ on: [pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -12,15 +11,29 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run test:staging
-      env:
-        NODE_JEST_COVERAGE_SLACK_WEBHOOK_URL: ${{ secrets.JEST_COVERAGE_SLACK_WEBHOOK_URL }}
-        NODE_CYPRESS_BASE_URL: http://localhost:3000
-        CI: true
-        NODE_ENV: test
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run test:staging
+        env:
+          NODE_JEST_COVERAGE_SLACK_WEBHOOK_URL: ${{ secrets.JEST_COVERAGE_SLACK_WEBHOOK_URL }}
+          NODE_CYPRESS_BASE_URL: http://localhost:3000
+          CI: true
+          NODE_ENV: test
+      - name: "Generate coverage badges"
+        if: ${{ github.base_ref == 'master' }}
+        run: npm run generate:coverage-badges
+      - name: "Upload badges on S3"
+        if: ${{ github.base_ref == 'master' }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: |
+          aws s3 cp client/static/badge-statements.svg s3://maddevsio/coverage-badges/badge-statements.svg --acl public-read
+          aws s3 cp client/static/badge-branches.svg s3://maddevsio/coverage-badges/badge-branches.svg --acl public-read
+          aws s3 cp client/static/badge-functions.svg s3://maddevsio/coverage-badges/badge-functions.svg --acl public-read
+          aws s3 cp client/static/badge-lines.svg s3://maddevsio/coverage-badges/badge-lines.svg --acl public-read

@@ -12,6 +12,8 @@ const store = {
   },
 }
 
+jest.mock('~/helpers/generatorUid')
+
 const mocks = {
   $prismic: {
     asText: () => 'text',

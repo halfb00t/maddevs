@@ -5,6 +5,8 @@ const directives = {
   'lazy-load': () => {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('HeaderMobileContacts component', () => {
   it('should render correctly', () => {
     const { container } = shallowMount(HeaderMobileContacts, {

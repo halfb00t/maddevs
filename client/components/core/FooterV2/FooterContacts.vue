@@ -8,6 +8,7 @@
         <a
           :href="`mailto:${footerContacts.email}`"
           class="footer-contacts__contact-link footer-contacts__contact-mail"
+          @click="sendEvent('email')"
         >{{
           footerContacts.email
         }}
@@ -29,8 +30,9 @@
           </p>
         </div>
         <a
-          :href="'tel:' + footerContacts.phoneNumber"
+          :href="`tel:${footerContacts.phoneNumber}`"
           class="footer-contacts__contact-link footer-contacts__contact-phone-number"
+          @click="sendEvent('phone')"
         >{{ footerContacts.phoneNumber }}</a>
       </div>
     </div>
@@ -44,6 +46,7 @@
 import { mapGetters } from 'vuex'
 import { messengers } from '@/data/messengers'
 import FooterSocialNetworks from '@/components/core/FooterV2/FooterSocialNetworks'
+import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
 
 export default {
   name: 'FooterContacts',
@@ -60,6 +63,13 @@ export default {
 
   computed: {
     ...mapGetters(['footerContacts']),
+  },
+
+  methods: {
+    sendEvent(type) {
+      if (type === 'email') emailClickEvent.send()
+      if (type === 'phone') phoneClickEvent.send()
+    },
   },
 }
 </script>

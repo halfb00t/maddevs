@@ -58,17 +58,17 @@ For detailed explanation on how things work, checkout the [Nuxt.js docs](https:/
 
 A list of main technologies that we use for build our application
 
-| Technology | Version | Description                                                             |
-| ---------- | ------- | ----------------------------------------------------------------------- |
-| Node       | 14.10.1 | For the correct launch of the project, use this version of the node     |
-| Vue        | ^2.15.4 | Progressive framework for building a modern user interfaces             |
-| Nuxt       | ^2.15.8 | Server-side rendering framework for VueJS                               |
-| Axios      | ^0.21.3 | Promise based HTTP client for the browser and node.js                   |
-| Express    | ^4.17.1 | Web-framework for nodeJS                                                |
-| Vuelidate  | ^0.7.6  | A VueJS modern validating library                                       |
-| Prismic    | ^1.3.1  | Content-Management system                                               |
-| Lottie     | ^0.2.1  | Lightweight, scalable animations                                        |
-| Lottie-web | ^5.7.13 | The mobile library for Web animations                                   |
+| Technology | Version | Description                                                         |
+| ---------- | ------- | ------------------------------------------------------------------- |
+| Node       | 14.10.1 | For the correct launch of the project, use this version of the node |
+| Vue        | ^2.15.4 | Progressive framework for building a modern user interfaces         |
+| Nuxt       | ^2.15.8 | Server-side rendering framework for VueJS                           |
+| Axios      | ^0.21.3 | Promise based HTTP client for the browser and node.js               |
+| Express    | ^4.17.1 | Web-framework for nodeJS                                            |
+| Vuelidate  | ^0.7.6  | A VueJS modern validating library                                   |
+| Prismic    | ^1.3.1  | Content-Management system                                           |
+| Lottie     | ^0.2.1  | Lightweight, scalable animations                                    |
+| Lottie-web | ^5.7.13 | The mobile library for Web animations                               |
 
 #### Additional tools
 
@@ -135,7 +135,7 @@ A list of additional tools that we use for make our codebase better
 A list of environment variables that needed to start the project(required)
 
 | NAME                                 | DESCRIPTION                                         |
-| ------------------------------------ | --------------------------------------------------- |
+|--------------------------------------|-----------------------------------------------------|
 | NODE_SENDPULSE_API_USER_ID           | Sendpulse api user id                               |
 | NODE_SENDPULSE_API_KEY               | Sendpulse api key                                   |
 | NODE_EMAIL_HR                        | Email to send messages(cv) to HR department         |
@@ -160,6 +160,8 @@ A list of environment variables that needed to start the project(required)
 | NODE_S3_PUBLIC_URL                   | S3 url                                              |
 | RECAPTCHA_SITE_KEY                   | ReCaptcha site key                                  |
 | RECAPTCHA_SECRET_KEY                 | ReCaptcha secret key                                |
+| NODE_GA4_KEY                         | GA4 MEASUREMENT ID                                  |
+| NODE_ANALYTICS_UNIVERSAL_KEY         | Universal Analytics Tracking ID                     |
 
 All of these variables must be added to the Heroku hosting
 
@@ -185,10 +187,10 @@ To send changes to the staging server, you should merge **develop** branch into 
 
 ### Coverage(unit)
 
-![Coverage statements](client/static/badge-statements.svg)
-![Coverage branches](client/static/badge-branches.svg)
-![Coverage functions](client/static/badge-functions.svg)
-![Coverage lines](client/static/badge-lines.svg)
+![Coverage statements](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-statements.svg)
+![Coverage branches](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-branches.svg)
+![Coverage functions](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-functions.svg)
+![Coverage lines](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-lines.svg)
 
 ### Commands
 

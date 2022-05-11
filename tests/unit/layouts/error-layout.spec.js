@@ -4,6 +4,8 @@ import Error from '@/layouts/error-layout'
 
 const stubs = ['Nuxt']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('Error layout', () => {
   let wrapper
 

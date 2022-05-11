@@ -4,6 +4,8 @@ import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
 
 const stubs = ['HeaderSection']
 
+jest.mock('~/helpers/generatorUid')
+
 const store = {
   getters: {
     headerContent: () => (

@@ -3,6 +3,8 @@ import FeaturedProjectsList from '@/components/OpenSource/shared/FeaturedProject
 
 const stubs = ['FeaturedProjectsListItem']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('FeaturedProjectsList component', () => {
   it('should render correctly', () => {
     const { container } = render(FeaturedProjectsList, {

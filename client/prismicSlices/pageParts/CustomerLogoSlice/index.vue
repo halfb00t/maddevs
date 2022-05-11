@@ -75,42 +75,19 @@ export default {
 
   &_list {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
-
-    @media only screen and (max-width: 1300px) {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    @media only screen and (max-width: 1160px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 
     @media only screen and (max-width: 1024px) {
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 14px;
-    }
-
-    @media only screen and (max-width: 834px) {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    @media only screen and (max-width: 640px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media only screen and (max-width: 520px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media only screen and (max-width: 360px) {
-      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
   }
 
   &_logo {
-    width: 100%;
+    width: 16%;
+    max-width: 190px;
     min-height: 111px;
     display: flex;
     flex-direction: column;
@@ -125,13 +102,34 @@ export default {
       display: block;
     }
 
+    @media only screen and (max-width: 1160px) {
+      width: 19%;
+    }
+
     @media only screen and (max-width: 1024px) {
+      width: 15%;
       min-height: 81px;
 
       img {
         width: 75px;
         height: 33px;
       }
+    }
+
+    @media only screen and (max-width: 834px) {
+      width: 18%;
+    }
+
+    @media only screen and (max-width: 640px) {
+      width: 22.99%;
+    }
+
+    @media only screen and (max-width: 520px) {
+      width: 29%;
+    }
+
+    @media only screen and (max-width: 360px) {
+      width: 45%;
     }
   }
 

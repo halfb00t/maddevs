@@ -4,6 +4,8 @@ import 'regenerator-runtime'
 
 const stubs = ['MainBody', 'Development', 'Simplebar', 'HeaderLogo', 'MessageIcon']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ChatModal component', () => {
   it('should render correctly', () => {
     const { container } = shallowMount(ChatModal, {

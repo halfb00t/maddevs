@@ -14,6 +14,8 @@ const store = {
   },
 }
 
+jest.mock('~/helpers/generatorUid')
+
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
   $t: () => 'translated',
