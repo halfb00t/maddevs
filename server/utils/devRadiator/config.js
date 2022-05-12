@@ -34,6 +34,14 @@ const goals = {
       type: '>',
     },
   },
+  performanceDesktop: {
+    value: 85,
+    type: '>',
+  },
+  performanceMobile: {
+    value: 40,
+    type: '>',
+  },
 }
 
 const messagesText = {

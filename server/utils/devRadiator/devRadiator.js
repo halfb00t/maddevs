@@ -5,6 +5,7 @@ const { goals, messagesText } = require('./config.js')
 const { getCoverageMessage } = require('./utils/Coverage')
 const { getEslintReport } = require('./utils/EslintReport')
 const { getDeploysCount } = require('./utils/DeploysCount')
+const { getPageSpeedMetric } = require('./utils/PageSpeed')
 const { getGoalSuccessMessage } = require('./helpers/getGoalSuccessMessage')
 const { RADIATOR_SLACK_WEBHOOK, RADIATOR_CRON_STRING  } = require('../../config')
 
@@ -38,6 +39,8 @@ class DevRadiator {
     const coverageData = await getCoverageMessage()
     const deploysCount = await getDeploysCount()
     const eslintErrorsCount = await getEslintReport()
+    const pageSpeedMetricDesktop = await getPageSpeedMetric('desktop')
+    const pageSpeedMetricMobile = await getPageSpeedMetric('mobile')
     const requestData = {
       title: 'Dev Radiator:',
       blocks: [
@@ -106,6 +109,32 @@ class DevRadiator {
             type: "mrkdwn",
             text: this.createMessage('Eslint errors count', eslintErrorsCount, goals.eslint)
           }
+        },
+        {
+          type: "divider"
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: this.createMessage('Desktop total performance',
+              pageSpeedMetricDesktop.total,
+              goals.performanceDesktop,
+              `:computer:\n Pages: ${pageSpeedMetricDesktop.pages.map(page => `<${page.page.url}|${page.page.text}> (${page.average}) `).join('')}`)
+          },
+        },
+        {
+          type: "divider"
+        },
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: this.createMessage('Mobile total performance',
+              pageSpeedMetricMobile.total,
+              goals.performanceMobile,
+              `:iphone:\n Pages: ${pageSpeedMetricMobile.pages.map(page => `<${page.page.url}|${page.page.text}> (${page.average}) `).join('')}`)
+          },
         },
       ],
     }
