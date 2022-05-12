@@ -3,7 +3,7 @@ name: Seo Analyzer CI
 on:
   push:
     branches:
-      - '*',
+      - '*'
       - '!master'
 
 jobs:
