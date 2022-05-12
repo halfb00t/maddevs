@@ -1,0 +1,32 @@
+name: Seo Analyzer CI
+
+on:
+  push:
+    branches:
+      - '*',
+      - '!master'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run build
+      - run: npm run generate
+        env:
+          NODE_PRISMIC_API: ${{ secrets.NODE_PRISMIC_API }}
+          RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
+          RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
+          CI: true
+      - run: node ./SEOAnalyzer/index.js
