@@ -7,7 +7,9 @@ const { getEslintReport } = require('./utils/EslintReport')
 const { getDeploysCount } = require('./utils/DeploysCount')
 const { getPageSpeedMetric } = require('./utils/PageSpeed')
 const { getGoalSuccessMessage } = require('./helpers/getGoalSuccessMessage')
-const { RADIATOR_SLACK_WEBHOOK, RADIATOR_CRON_STRING  } = require('../../config')
+const { RADIATOR_SLACK_WEBHOOK, RADIATOR_CRON_STRING, RADIATOR_MONGO  } = require('../../config')
+const Metrics = require('./models/Metrics')
+const mongoose = require('mongoose')
 
 
 class DevRadiator {
@@ -34,6 +36,9 @@ class DevRadiator {
 
 
   async run() {
+    const mongoConnection = await mongoose.connect(RADIATOR_MONGO)
+    console.log('MongoDB connected to MONGO')
+
     console.log(messagesText.run)
 
     const coverageData = await getCoverageMessage()
@@ -138,7 +143,20 @@ class DevRadiator {
         },
       ],
     }
-    await this.sendToSlack(requestData)
+
+    const metrics = new Metrics({
+      pageSpeed: {
+        desktop: pageSpeedMetricDesktop,
+        mobile: pageSpeedMetricMobile,
+      },
+      coverage: coverageData,
+      deploys: deploysCount,
+      eslintErrors: eslintErrorsCount,
+    })
+
+    await metrics.save()
+    await mongoConnection.disconnect()
+    // await this.sendToSlack(requestData)
   }
 }
 
