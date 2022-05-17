@@ -81,22 +81,24 @@ export class AnalyticsEvent {
   }
 
   send() {
-    this._setPath()
-    this._applyUser()
+    if (process.env.domain === 'https://maddevs.io' || process.env.domain === 'https://maddevs.co') {
+      this._setPath()
+      this._applyUser()
 
-    const analyticsKeys = this._collectGoogleAnalyticsKeys()
+      const analyticsKeys = this._collectGoogleAnalyticsKeys()
 
-    if (process.env.NODE_ENV === 'development') {
-      this._log(analyticsKeys)
-    }
-
-    analyticsKeys.forEach(analyticsId => {
-      const properties = { ...this.properties, send_to: analyticsId }
-      try {
-        window.gtag('event', this.action, properties)
-      } catch (error) {
-        this._handleError(error)
+      if (process.env.NODE_ENV === 'development') {
+        this._log(analyticsKeys)
       }
-    })
+
+      analyticsKeys.forEach(analyticsId => {
+        const properties = { ...this.properties, send_to: analyticsId }
+        try {
+          window.gtag('event', this.action, properties)
+        } catch (error) {
+          this._handleError(error)
+        }
+      })
+    }
   }
 }

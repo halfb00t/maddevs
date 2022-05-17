@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CTAModal component should correclty render component 1`] = `
+<div>
+  <div
+    class="cta-banner-slice__modal"
+  >
+    <!---->
+  </div>
+</div>
+`;
