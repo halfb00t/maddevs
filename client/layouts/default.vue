@@ -60,7 +60,6 @@ export default {
 
   mounted() {
     this.initHashLinks()
-    if (this?.$ga?.enable) this.$ga.enable()
   },
 
   methods: {

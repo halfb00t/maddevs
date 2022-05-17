@@ -5,7 +5,6 @@ const DEV_PLUGINS = [
   '~/plugins/header-handler.js',
   '~/plugins/feature-flags.js',
   '~/plugins/gtag.js',
-  '~/plugins/vue-google-analytics',
 ]
 
 const getPlugins = isProd => (isProd ? [...DEV_PLUGINS] : DEV_PLUGINS)
