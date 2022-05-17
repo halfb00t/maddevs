@@ -25,6 +25,11 @@
         :validation="$v.email"
         label="Email"
       />
+      <UIFormCheckbox
+        id="form"
+        ref="checkbox"
+        @change="handleCheckboxChange"
+      />
       <button
         :id="isValid ? 'sent_ebook_button': ''"
         class="ebook-form__button"
@@ -54,12 +59,14 @@ import { sendEmail } from '@/api/email'
 import createLeadMixin from '@/mixins/createLeadMixin'
 import { ebookSubmitFormEvent } from '@/analytics/events'
 import { addUserType } from '@/analytics/Event'
+import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 
 export default {
   name: 'EbookForm',
   components: {
     BaseInput,
     SuccessMessage,
+    UIFormCheckbox,
   },
 
   mixins: [createLeadMixin(624246, 'Request a PDF file from the Ebook page')],
@@ -83,6 +90,7 @@ export default {
       successMessage: null,
       formSended: false,
       type: 'ebook-form',
+      isAgree: true,
     }
   },
 
@@ -107,6 +115,10 @@ export default {
   },
 
   methods: {
+    handleCheckboxChange({ isAgree }) {
+      this.isAgree = isAgree
+    },
+
     async submit() {
       if (!this.isValid) return
       const params = {
@@ -141,6 +153,7 @@ export default {
         type: this.type,
         fullName: this.name,
         email: this.email,
+        consent_to_mailing: this.isAgree ? 'Yes' : 'No',
         page: window.location.href,
         formLocation: this.bookName,
       }
@@ -160,6 +173,7 @@ export default {
 
     reset() {
       this.$v.$reset() // Reset validation form
+      this.$refs.checkbox.reset()
       this.name = ''
       this.email = ''
     },
