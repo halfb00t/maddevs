@@ -17,6 +17,11 @@
         :required="true"
         :validation="$v.email"
       />
+      <UIFormCheckbox
+        :id="id"
+        ref="checkbox"
+        @change="handleCheckboxChange"
+      />
       <button
         :id="isValid ? 'sent_ebook_button': ''"
         class="read-form__button"
@@ -40,10 +45,14 @@ import createLeadMixin from '@/mixins/createLeadMixin'
 import { getLinkWithLifeTime } from '@/api/s3'
 import { ebookSubmitFormEvent } from '@/analytics/events'
 import { addUserType } from '@/analytics/Event'
+import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 
 export default {
   name: 'ReadForm',
-  components: { BaseInput },
+  components: {
+    BaseInput,
+    UIFormCheckbox,
+  },
 
   mixins: [createLeadMixin(624246, 'Request a PDF file from the Ebook page')],
 
@@ -62,6 +71,11 @@ export default {
       type: String,
       default: '',
     },
+
+    id: {
+      type: String,
+      required: true,
+    },
   },
 
   data() {
@@ -69,6 +83,7 @@ export default {
       name: '',
       email: '',
       type: 'ebook-form',
+      isAgree: true,
     }
   },
 
@@ -93,6 +108,10 @@ export default {
   },
 
   methods: {
+    handleCheckboxChange({ isAgree }) {
+      this.isAgree = isAgree
+    },
+
     async submit() {
       if (!this.isValid) return
       const params = {
@@ -127,6 +146,7 @@ export default {
         type: this.type,
         fullName: this.name,
         email: this.email,
+        consent_to_mailing: this.isAgree ? 'Yes' : 'No',
         page: window.location.href,
         formLocation: this.bookName,
       }
@@ -141,6 +161,7 @@ export default {
 
     reset() {
       this.$v.$reset() // Reset validation form
+      this.$refs.checkbox.reset()
       this.name = ''
       this.email = ''
     },
