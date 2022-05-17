@@ -27,7 +27,7 @@
       <ReadForm
         id="modal-content-locker"
         :fullsize-button="true"
-        ebook-path="pdf/custom-software-development-pricing-strategies-ebook.pdf"
+        ebook-path="pdf/custom-software-development-pricing-strategies-ebook-new.pdf"
         book-name="Pricing Strategies"
         @form-sended="handleSendedForm"
       />
