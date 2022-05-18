@@ -24,6 +24,7 @@ const createLeadMixin = (templateId, title = 'Individuals', subject = 'Marketing
           projectDescriber: variables.description,
           agreeToGetMadDevsDiscountOffers: variables.agreeToGetMadDevsDiscountOffers ? 'Yes' : 'No',
           agreeWithPrivacyPolicy: variables.agreeWithPrivacyPolicy ? 'Yes' : 'No',
+          consent_to_mailing: variables.consent_to_mailing,
           formLocation: variables.formLocation,
           interest: variables.interest,
           pageUrl: (window && window.location.href) || 'Unknown',

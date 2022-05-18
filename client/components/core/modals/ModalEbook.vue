@@ -22,6 +22,7 @@
         Get your copy of “{{ ebookTitle }}”
       </h2>
       <ReadForm
+        id="modal-ebook"
         :ebook-path="ebookPath"
         :book-name="bookName"
         @form-sended="handleSendedForm"
