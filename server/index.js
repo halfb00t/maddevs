@@ -57,9 +57,11 @@ function bootstrap() {
   // Errors handler
   app.use(Sentry.Handlers.errorHandler())
 
-  const radiator = new DevRadiator()
-  // eslint-disable-next-line no-console
-  radiator.schedule()
+  if (process.env.FF_ENVIRONMENT === 'production') {
+    const radiator = new DevRadiator()
+    // eslint-disable-next-line no-console
+    radiator.schedule()
+  }
 
   return app
 }
