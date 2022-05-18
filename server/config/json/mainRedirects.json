@@ -1393,6 +1393,86 @@
     "to": "https://maddevs.io/blog/authors/vlada-arevkova/"
   },
   {
+    "pageType": "Author without nesting",
+    "from": "/andrew-sapozhnikov",
+    "to": "https://maddevs.io/blog/authors/andrew-sapozhnikov/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/vladislav-kochkin",
+    "to": "https://maddevs.io/blog/authors/vladislav-kochkin/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/karen-tovmasyan",
+    "to": "https://maddevs.io/blog/authors/karen-tovmasyan/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/alena-timokhovets",
+    "to": "https://maddevs.io/blog/authors/alena-timokhovets/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/samat-jukeshov",
+    "to": "https://maddevs.io/blog/authors/samat-jukeshov/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/altynai-n-alamanova",
+    "to": "https://maddevs.io/blog/authors/altynai-n-alamanova/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/cholpon-dobulbekova",
+    "to": "https://maddevs.io/blog/authors/cholpon-dobulbekova/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/alla-klimenko",
+    "to": "https://maddevs.io/blog/authors/alla-klimenko/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/anna-petrova",
+    "to": "https://maddevs.io/blog/authors/anna-petrova/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/tamara-mun",
+    "to": "https://maddevs.io/blog/authors/tamara-mun/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/altynai-toktomuratova",
+    "to": "https://maddevs.io/blog/authors/altynai-toktomuratova/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/oleg-katkov",
+    "to": "https://maddevs.io/blog/authors/oleg-katkov/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/aleksandros-topalidis",
+    "to": "https://maddevs.io/blog/authors/aleksandros-topalidis/"
+  },
+  {
+    "pageType": "Author without nesting",
+    "from": "/nuradil-alymkulov",
+    "to": "https://maddevs.io/blog/authors/nuradil-alymkulov/"
+  },
+  {
+    "pageType": "Wrong service page",
+    "from": "/blog/project-management",
+    "to": "https://maddevs.io/project-management/"
+  },
+  {
+    "pageType": "Wrong blog page",
+    "from": "/blog/blog/code-refactoring",
+    "to": "https://maddevs.io/blog/code-refactoring/"
+  },
+  {
     "pageType": "Posts-CU - из старых редиректов",
     "from": "/blog/why-it-projects-are-late-and-exceed-budgets",
     "to": "https://maddevs.io/customer-university/why-it-projects-are-late-and-exceed-budgets/"

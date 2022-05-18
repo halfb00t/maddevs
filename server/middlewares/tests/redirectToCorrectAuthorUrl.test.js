@@ -28,12 +28,12 @@ describe('redirectToCorrectAuthorUrl middleware', () => {
 
     redirectToCorrectAuthorUrl(req, res, next)
 
-    expect(res.redirect).toHaveBeenCalledWith(301, '/author/test/')
+    expect(res.redirect).toHaveBeenCalledWith(301, '/blog/authors/test/')
     expect(next).not.toHaveBeenCalled()
   })
 
   it('should not call redirect to author page url if req.path does not contains /blog/author', () => {
-    req.url = '/author/test/'
+    req.url = '/blog/test/'
 
     redirectToCorrectAuthorUrl(req, res, next)
 
