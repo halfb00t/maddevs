@@ -1004,6 +1004,11 @@
   },
   {
     "pageType": "Blog/из старых редиректов",
+    "from": "/ru/blog/authors",
+    "to": "https://maddevs.io/blog/authors/"
+  },
+  {
+    "pageType": "Blog/из старых редиректов",
     "from": "blog.maddevs.io",
     "to": "https://maddevs.io/blog/"
   },
