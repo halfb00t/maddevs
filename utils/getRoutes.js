@@ -38,6 +38,7 @@ const IGNORE_ROUTES = [
   '/blog/it-recruiter-middle-maddevs',
   '/blog/mad-devs-ishet-golang-razrabotchika',
   '/mad-devs-ishet-golang-razrabotchika',
+  '//success-and-faq',
 ]
 
 export const CUSTOM_PAGE_ROUTES = [

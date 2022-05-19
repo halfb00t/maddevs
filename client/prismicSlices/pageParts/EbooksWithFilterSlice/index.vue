@@ -40,7 +40,7 @@
             </template>
           </div>
           <UIPagination
-            v-if="ebooks.length"
+            v-if="ebooks.length > 6"
             :total-pages="totalPages"
             :per-page="perPage"
             :current-page="page"
