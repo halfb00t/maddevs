@@ -27,6 +27,86 @@ const ebooksPages = [
       alt: 'test',
     },
     link: 'test-link-two',
+  }, {
+    title: 'Test',
+    subtitle: 'Test subtitle',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link',
+  }, {
+    title: 'Test 2',
+    subtitle: 'Test subtitle 2',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link-two',
+  }, {
+    title: 'Test',
+    subtitle: 'Test subtitle',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link',
+  }, {
+    title: 'Test 2',
+    subtitle: 'Test subtitle 2',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link-two',
+  }, {
+    title: 'Test',
+    subtitle: 'Test subtitle',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link',
+  }, {
+    title: 'Test 2',
+    subtitle: 'Test subtitle 2',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link-two',
+  }, {
+    title: 'Test',
+    subtitle: 'Test subtitle',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link',
+  }, {
+    title: 'Test 2',
+    subtitle: 'Test subtitle 2',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link-two',
+  }, {
+    title: 'Test',
+    subtitle: 'Test subtitle',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link',
+  }, {
+    title: 'Test 2',
+    subtitle: 'Test subtitle 2',
+    image: {
+      url: 'img.jpg',
+      alt: 'test',
+    },
+    link: 'test-link-two',
   }]
 
 const mocks = {
