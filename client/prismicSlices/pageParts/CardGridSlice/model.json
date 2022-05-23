@@ -11,15 +11,14 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Card Grid slice",
       "primary": {
-        "colorTheme": {
+        "background": {
           "config": {
-            "label": "Theme color",
+            "label": "Background",
             "placeholder": "",
             "options": [
               "white",
               "black"
-            ],
-            "default_value": "white"
+            ]
           },
           "type": "Select"
         },
@@ -54,6 +53,18 @@
           },
           "type": "Text"
         },
+        "titleWeight": {
+          "config": {
+            "label": "Title Weight",
+            "placeholder": "",
+            "options": [
+              "bold",
+              "normal"
+            ],
+            "default_value": "bold"
+          },
+          "type": "Select"
+        },
         "description": {
           "config": {
             "label": "Description",
@@ -81,6 +92,15 @@
         "fullWidth": {
           "config": {
             "label": "100% or 50%",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
+        "paddingBottom": {
+          "config": {
+            "label": "Bottom padding after image",
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": false
