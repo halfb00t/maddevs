@@ -15,14 +15,17 @@ exports[`CardGridSlice - CardGrid variation should render correctly with data 1`
       >
         <a
           class="card-grid-slice__item-link"
+          href="maddevs.io"
           target="_blank"
         >
           <div
             class="card-grid-slice__item-info"
           >
-            <span>
+            <h3
+              style="font-weight: bold;"
+            >
               First item title
-            </span>
+            </h3>
              
             <p>
               First item description
@@ -53,14 +56,17 @@ exports[`CardGridSlice - CardGrid variation should render correctly with data 1`
       >
         <a
           class="card-grid-slice__item-link"
+          href="maddevs.io"
           target="_blank"
         >
           <div
             class="card-grid-slice__item-info"
           >
-            <span>
+            <h3
+              style="font-weight: bold;"
+            >
               second item title
-            </span>
+            </h3>
              
             <p>
               second item description
@@ -91,14 +97,17 @@ exports[`CardGridSlice - CardGrid variation should render correctly with data 1`
       >
         <a
           class="card-grid-slice__item-link"
+          href="maddevs.io"
           target="_blank"
         >
           <div
             class="card-grid-slice__item-info"
           >
-            <span>
+            <h3
+              style="font-weight: bold;"
+            >
               third item title
-            </span>
+            </h3>
              
             <p>
               third item description
