@@ -47,8 +47,9 @@ class DevRadiator {
     }
   }
 
-  createMessage(text, value, goal, description = '') {
+  createMessage(text, value, goal, description = '', lastWeekValue = '') {
     const goalSuccess = getGoalSuccessMessage(value, goal)
+    if (lastWeekValue) return goalSuccess.emoji + `   ${text}: ${lastWeekValue} -> *${value}* ${description}` + goalSuccess.message
     return goalSuccess.emoji + `   ${text}: ${value} ${description}` + goalSuccess.message
   }
 
@@ -85,7 +86,6 @@ class DevRadiator {
           old: 0,
           new: 0
         },
-        pages: {}
       },
       coverage: {
         old: 0,
@@ -137,9 +137,7 @@ class DevRadiator {
       const deploysCount = await getDeploysCount()
       const eslintErrorsCount = await getEslintReport()
       const pageSpeedMetricDesktop = await getPageSpeedMetric('desktop')
-      console.log(pageSpeedMetricDesktop)
       const pageSpeedMetricMobile = await getPageSpeedMetric('mobile')
-      console.log(pageSpeedMetricMobile)
       const metrics = new Metrics({
         pageSpeed: {
           desktop: pageSpeedMetricDesktop,
@@ -158,9 +156,6 @@ class DevRadiator {
   }
 
   async getMetricsFromDB() {
-
-    const metrics = {}
-
     const mongoConnection = await mongoose.connect(DEV_RADIATOR_MONGO)
     console.log('MongoDB connected to MONGO')
 
@@ -182,7 +177,7 @@ class DevRadiator {
     })
       .sort({ created_at: -1 })
 
-    console.log('количество метрик за прошлую неделю: ', prevWeekMetrics.length)
+    console.log('Количество метрик за прошлую неделю: ', prevWeekMetrics.length)
 
     const currentWeekFirstDay = moment()
       .weekday(1)
@@ -202,59 +197,73 @@ class DevRadiator {
     })
       .sort({ created_at: -1 })
 
-    console.log('количество метрик за эту неделю: ', currentWeekMetrics.length)
+    console.log('Количество метрик за эту неделю: ', currentWeekMetrics.length)
 
-
-    const reportMetrics = (await Metrics.find({
+    const reportMetrics = (await Metrics.findOne({
       created_at: {
         $gte: currentWeekFirstDay.toISOString(),
         $lt: currentWeekLastDay.toISOString()
       }
     })
       .sort({ created_at: -1 })
-      .limit(1))
+      .lean())
 
     console.log(chalk.hex('#2fd0ff')('end of request query'))
     await mongoConnection.disconnect()
     console.log('MongoDB connection closed')
-
     const comparedData = await this.compareResults(currentWeekMetrics, prevWeekMetrics)
-    return reportMetrics
+    if (prevWeekMetrics.length === 0) {
+      return reportMetrics
+    }
+    return {
+      ...reportMetrics,
+      comparedData
+    }
   }
 
   async sendMetricsToSlack() {
     console.log(messagesText.run)
+    await this.collectMetrics()
+
+    function timeout(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms))
+    }
+    await timeout(3000)
     const metrics = await this.getMetricsFromDB()
 
-    console.log(metrics)
+    if (!metrics.hasOwnProperty('comparedData')) {
+      console.log(chalk.hex('#ff0000')('!HAS NO DATA FROM LAST WEEK!'))
+      return
+    }
 
-    // const pageSpeedDesktopDescription = `:computer:\n Pages: ${metrics.pageSpeedMetricDesktop.pages.map(page => `<${page.page.url}|${page.page.text}> (${page.average}) `)
-    //   .join('')}`
-    // const pageSpeedMobileDescription = `:iphone:\n Pages: ${metrics.pageSpeedMetricMobile.pages.map(page => `<${page.page.url}|${page.page.text}> (${page.average}) `)
-    //   .join('')}`
+    const coverageDescription = `${(metrics.comparedData.coverage.new < metrics.comparedData.coverage.old) ? `\n \`Total performance decreased by ${(metrics.comparedData.coverage.old - metrics.comparedData.coverage.new).toFixed(2)} points\`\n` : ''}`
 
-    // const requestData = {
-    //   title: 'Dev Radiator:',
-    //   blocks: [
-    //     this.createMessageBlock('header', 'Отчет радиатора по исполнению целей команды разработчиков проекта маркетинг'),
-    //     this.createMessageBlock('divider'),
-    //     this.createMessageBlock('section', this.createMessage('Coverage', metrics.coverageData.total, goals.coverage.total, '(total)')),
-    //     this.createMessageBlock('section', this.createMessage('Branches', metrics.coverageData.branches, goals.coverage.branches)),
-    //     this.createMessageBlock('section', this.createMessage('Functions', metrics.coverageData.functions, goals.coverage.functions)),
-    //     this.createMessageBlock('section', this.createMessage('Lines', metrics.coverageData.lines, goals.coverage.lines)),
-    //     this.createMessageBlock('section', this.createMessage('Statements', metrics.coverageData.statements, goals.coverage.statements)),
-    //     this.createMessageBlock('divider'),
-    //     this.createMessageBlock('section', this.createMessage('Deploys count', metrics.deploysCount, goals.deploys)),
-    //     this.createMessageBlock('divider'),
-    //     this.createMessageBlock('section', this.createMessage('Eslint errors count', metrics.eslintErrorsCount, goals.eslint)),
-    //     this.createMessageBlock('divider'),
-    //     this.createMessageBlock('section', this.createMessage('Desktop total performance', metrics.pageSpeedMetricDesktop.total, goals.performanceDesktop, pageSpeedDesktopDescription)),
-    //     this.createMessageBlock('divider'),
-    //     this.createMessageBlock('section', this.createMessage('Mobile total performance', metrics.pageSpeedMetricMobile.total, goals.performanceMobile, pageSpeedMobileDescription)),
-    //   ],
-    // }
+    const pageSpeedDesktopDescription = `:iphone:\n Today's pages performance: ${metrics.pageSpeed.desktop.map(page => `<${page.url}|${page.name}> (${page.total}) `)
+      .join('')}`
+    const pageSpeedMobileDescription = `:iphone:\n Today's pages performance: ${metrics.pageSpeed.mobile.map(page => `<${page.url}|${page.name}> (${page.total}) `)
+      .join('')}`
 
-    // await this.sendToSlack(requestData)
+    const requestData = {
+      title: 'Dev Radiator:',
+      blocks: [
+        this.createMessageBlock('header', 'Отчет радиатора по исполнению целей команды разработчиков проекта маркетинг'),
+        this.createMessageBlock('divider'),
+        this.createMessageBlock('section', this.createMessage('Total coverage', metrics.coverage.total, goals.coverage.total, coverageDescription, metrics.comparedData.coverage.old)),
+        this.createMessageBlock('section', this.createMessage('Branches', metrics.coverage.branches, goals.coverage.branches)),
+        this.createMessageBlock('section', this.createMessage('Functions', metrics.coverage.functions, goals.coverage.functions)),
+        this.createMessageBlock('section', this.createMessage('Lines', metrics.coverage.lines, goals.coverage.lines)),
+        this.createMessageBlock('section', this.createMessage('Statements', metrics.coverage.statements, goals.coverage.statements)),
+        this.createMessageBlock('divider'),
+        this.createMessageBlock('section', this.createMessage('Weekly deploys count', metrics.deploys, goals.deploys)),
+        this.createMessageBlock('divider'),
+        this.createMessageBlock('section', this.createMessage('Eslint errors count', metrics.eslintErrors, goals.eslint)),
+        this.createMessageBlock('divider'),
+        this.createMessageBlock('section', this.createMessage('Weekly total performance (Desktop)', metrics.comparedData.pageSpeed.desktop.new, goals.performanceDesktop, pageSpeedDesktopDescription, metrics.comparedData.pageSpeed.desktop.old)),
+        this.createMessageBlock('divider'),
+        this.createMessageBlock('section', this.createMessage('Weekly total performance (Mobile)', metrics.comparedData.pageSpeed.mobile.new, goals.performanceMobile, pageSpeedMobileDescription, metrics.comparedData.pageSpeed.mobile.old)),
+      ],
+    }
+    await this.sendToSlack(requestData)
   }
 }
 

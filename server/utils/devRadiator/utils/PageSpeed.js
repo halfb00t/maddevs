@@ -40,7 +40,7 @@ const getPageSpeedMetric = async (platform = 'desktop') => {
 
 
   const allPagesMetric = []
-
+  const measureCount = DEV_RADIATOR_PAGESPEED_MEASUREMENTS_COUNT || 3 //default value if
   for (const page of testedPages) {
     const pageMetrics = {
       name: page.text,
@@ -48,12 +48,11 @@ const getPageSpeedMetric = async (platform = 'desktop') => {
       metrics: [],
       total: 0
     }
-    for (let i = 0; i < DEV_RADIATOR_PAGESPEED_MEASUREMENTS_COUNT; i++) {
+    for (let i = 0; i < measureCount; i++) {
       console.log(chalk.hex('#6134FD')
         (`Getting metrics for ${page.url} page`))
       const searchParams = buildSearchParams(page.url, platform)
       const { data } = await axios.get(`${pageSpeedUrl}?${searchParams}`)
-      // console.log(data.lighthouseResult.categories)
       pageMetrics.metrics.push(Math.ceil(
         data.lighthouseResult.categories.performance.score * 100)
       )

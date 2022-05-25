@@ -5,7 +5,7 @@ const fields = ['branches', 'functions', 'lines', 'statements']
 
 function getStatFromSVG(svg) {
   const regex = /<text.*>(.+?)<\/text>/
-  return parseFloat(svg.match(regex)[1].toFixed(2))
+  return parseFloat(svg.match(regex)[1])
 }
 
 function getTotalCoverage(coverage) {
