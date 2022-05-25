@@ -15,6 +15,9 @@ const props = {
           height: '100%',
         },
       },
+      btnLink: {
+        url: 'maddevs.io',
+      },
     },
     {
       title: 'second item title',
@@ -27,6 +30,9 @@ const props = {
           height: '100%',
         },
       },
+      btnLink: {
+        url: 'maddevs.io',
+      },
     },
     {
       title: 'third item title',
@@ -38,6 +44,9 @@ const props = {
           width: '100%',
           height: '100%',
         },
+      },
+      btnLink: {
+        url: 'maddevs.io',
       },
     },
   ],

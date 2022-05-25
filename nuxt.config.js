@@ -59,6 +59,7 @@ export default () => ({
   generate: {
     routes: getRoutes,
     fallback: '404.html',
+    exclude: [/^((?!\/ru\/careers).)*$/],
     // TODO enable crawler after removing old levels for urls
     crawler: false,
   },

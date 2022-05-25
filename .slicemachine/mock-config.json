@@ -30,7 +30,8 @@
           "animation": {
             "content": "none"
           }
-        }
+        },
+        "items": {}
       },
       "cardGridWithIcon": {
         "primary": {},
