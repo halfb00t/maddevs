@@ -60,7 +60,9 @@ function bootstrap() {
   if (process.env.FF_ENVIRONMENT === 'production') {
     const radiator = new DevRadiator()
     // eslint-disable-next-line no-console
-    radiator.schedule()
+    console.log('Run Dev Radiator schedulers')
+    radiator.scheduleCollectMetrics()
+    radiator.scheduleSendMetrics()
   }
 
   return app
