@@ -53,7 +53,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['footerMainNavigation', 'footerIsLoaded']),
+    ...mapGetters(['footerMainNavigation']),
   },
 
   mounted() {

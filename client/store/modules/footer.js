@@ -26,7 +26,6 @@ const extractFooterSection = async (prismic, footerContent = {}, navSection) => 
 export const state = () => ({
   footerMainNavigation: {},
   footerContacts: {},
-  footerIsLoaded: false,
   showFooter: true,
 })
 
@@ -36,9 +35,6 @@ export const mutations = {
   },
   SET_FOOTER_CONTACTS(state, footerContent) {
     state.footerContacts = footerContent
-  },
-  SET_FOOTER_STATUS(state) {
-    state.footerIsLoaded = true
   },
   SHOW_FOOTER(state, data) {
     state.showFooter = data
@@ -85,9 +81,6 @@ export const getters = {
   },
   footerMainNavigation(state) {
     return state.footerMainNavigation
-  },
-  footerIsLoaded(state) {
-    return state.footerIsLoaded
   },
   showFooter(state) {
     return state.showFooter
