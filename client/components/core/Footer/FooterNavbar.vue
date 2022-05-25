@@ -1,104 +1,121 @@
 <template>
-  <div class="footer-navbar">
-    <p class="footer-navbar__company-name">
-      © Mad Devs - {{ currentYear }}
-    </p>
-    <div class="footer-navbar__nav-list">
-      <NuxtLink
-        v-for="item in navigation"
-        :key="item.link"
-        :to="item.link"
-        target="_blank"
-        class="footer-navbar__nav-item"
+  <div
+    class="footer-navbar"
+    @mouseleave="setActiveColumn($event)"
+  >
+    <ul
+      v-for="(navigation, index) in navigations"
+      :key="index"
+      class="footer-main-navigation"
+      :class="`footer-nav-column-${navigation[0].name}`"
+      @mouseenter="setActiveColumn($event, navigation[0].name)"
+    >
+      <li
+        v-for="{name, label} in navigation"
+        :key="label"
+        class="footer-sub-navigation__column"
+        :class="[ `footer-navigation__column-${name}`]"
       >
-        {{ item.title }}
-      </NuxtLink>
-    </div>
+        <span
+          class="footer-main-navigation__column-title"
+          @click="goTo(name)"
+        >
+          {{ name }}
+        </span>
+        <hr class="footer-sub-navigation__separator">
+
+        <FooterNavbarColumn
+          v-if="footerMainNavigation[name]"
+          v-bind="footerMainNavigation[name]"
+        />
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-import { footerNavigation as navigation } from '@/data/navigation'
+import { mapGetters } from 'vuex'
+import FooterNavbarColumn from '@/components/core/Footer/FooterNavbarColumn'
 
 export default {
   name: 'FooterNavbar',
-  data() {
-    return {
-      navigation,
-      currentYear: new Date().getFullYear(),
-    }
+
+  components: {
+    FooterNavbarColumn,
   },
+
+  props: {
+    navigations: {
+      type: Array,
+      default: () => ([]),
+      required: true,
+    },
+  },
+
+  computed: {
+    ...mapGetters(['footerMainNavigation', 'footerIsLoaded']),
+  },
+
+  mounted() {
+    window.addEventListener('resize', this.setActiveColumn)
+  },
+
+  methods: {
+    setActiveColumn($event, columnName) {
+      this.$emit('changed-active-column', $event, columnName)
+    },
+
+    goTo(name) {
+      const path = this.footerMainNavigation[name]?.link
+      if (!path) return
+      this.$router.push({ path })
+    },
+
+  },
+
 }
 </script>
 
 <style lang="scss" scoped>
-.footer-navbar {
-  width: max-content;
-  margin-top: 64px;
 
-  &__nav-list {
+.footer {
+  &-navbar {
     display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    align-items: flex-start;
   }
 
-  &__nav-item,
-  &__company-name {
-    @include font('Inter', 16px, 400);
-    line-height: 24px;
-    color: $text-color--grey;
-    letter-spacing: -0.013em;
-  }
+  &-main-navigation {
+    display: flex;
+    flex-direction: column;
 
-  &__company-name {
-    margin-bottom: 6px;
-  }
-
-  &__nav-item {
-    margin-right: 26px;
-    text-decoration: underline;
-    text-decoration-color: $footer--text-decoration-color;
-
-    &:last-child {
-      margin-right: 0;
+    &__column-title {
+      font-size: 18px;
+      text-transform: capitalize;
+      color: $text-color--white-primary;
     }
   }
-}
 
-@media only screen and (max-width: 1320px) {
-  .footer-navbar {
-    width: initial;
-    margin-top: 40px;
-
-    &__nav-list {
-      flex-wrap: wrap;
-    }
-
-    &__nav-item,
-    &__company-name {
-      margin-bottom: 3px;
-    }
-
-    &__nav-item {
-      &:nth-child(1) {
-        width: 100%;
+  &-sub-navigation {
+    &__column:hover {
+      .footer-sub-navigation__separator {
+        border: 1px none rgba(236, 28, 36, .5);
+        border-top-style: solid;
       }
 
-      &:nth-child(2),
-      &:nth-child(3) {
-        margin-right: 15px;
-      }
-
-      &:nth-child(4) {
-        margin-left: 0;
-        margin-bottom: 0;
+      .footer-main-navigation__column-title {
+        color: red;
+        transition: color .2s;
+        cursor: pointer;
       }
     }
-  }
-}
 
-@media only screen and (max-width: 991px) {
-  .footer-navbar {
-    &__nav-list {
-      flex-direction: column;
+    &__separator {
+      border: 1px none $border-color--grey-05-opacity;
+      border-top-style: solid;
+      margin: 6px 0 15px;
+      transition: border 0.2s;
     }
   }
 }

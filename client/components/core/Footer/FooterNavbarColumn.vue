@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import FooterNavbarMenu from '@/components/core/FooterV2/FooterNavbarMenu'
+import FooterNavbarMenu from '@/components/core/Footer/FooterNavbarMenu'
 
 export default {
   name: 'FooterNavbarColumn',

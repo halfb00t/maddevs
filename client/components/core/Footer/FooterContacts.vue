@@ -3,14 +3,16 @@
     <div class="footer-contacts__head-content">
       <div class="footer-contacts__contact-item">
         <p class="footer-contacts__contact-title">
-          Text us:
+          {{ footerContacts.emailTitle }}
         </p>
         <a
-          :href="`mailto:${mailLink}`"
+          :href="`mailto:${footerContacts.email}`"
           class="footer-contacts__contact-link footer-contacts__contact-mail"
+          @click="sendEvent('email')"
         >{{
-          mailLink
-        }}</a>
+          footerContacts.email
+        }}
+        </a>
       </div>
       <div class="footer-contacts__contact-item">
         <div class="footer-contacts__contact-title-wrapper">
@@ -24,47 +26,27 @@
             >
           </div>
           <p class="footer-contacts__contact-title">
-            Call us:
+            {{ footerContacts.phoneNumberTitle }}
           </p>
         </div>
         <a
-          href="tel:+442039848555"
+          :href="`tel:${footerContacts.phoneNumber}`"
           class="footer-contacts__contact-link footer-contacts__contact-phone-number"
-        >+44 20 3984 8555</a>
+          @click="sendEvent('phone')"
+        >{{ footerContacts.phoneNumber }}</a>
       </div>
     </div>
     <div class="footer-contacts__lists-wrapper">
-      <ul class="footer-contacts__messengers-list">
-        <li
-          v-for="messenger in messengers"
-          :key="messenger.key"
-        >
-          <a
-            :href="messenger.url"
-            target="_blank"
-            class="footer-contacts__messenger-item-wrapper"
-          >
-            <img
-              v-lazy-load
-              :data-src="require(`@/assets/img/Footer/svg/${messenger.key}.svg`)"
-              width="42"
-              height="42"
-              :alt="messenger.label || 'Image'"
-            >
-            <p class="footer-contacts__messenger-name">{{ messenger.label }}</p>
-          </a>
-        </li>
-      </ul>
-      <div class="footer-contacts__social-network-list-desktop">
-        <FooterSocialNetworks />
-      </div>
+      <FooterSocialNetworks />
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import { messengers } from '@/data/messengers'
 import FooterSocialNetworks from '@/components/core/Footer/FooterSocialNetworks'
+import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
 
 export default {
   name: 'FooterContacts',
@@ -78,32 +60,30 @@ export default {
       mailLink: process.env.emailContact,
     }
   },
+
+  computed: {
+    ...mapGetters(['footerContacts']),
+  },
+
+  methods: {
+    sendEvent(type) {
+      if (type === 'email') emailClickEvent.send()
+      if (type === 'phone') phoneClickEvent.send()
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-@mixin contacts-head-content {
-  &__head-content {
-    flex-direction: column;
-    margin-bottom: 31px;
-  }
-}
-
-@mixin messenger-list-grid {
-  &__messenger-item-wrapper {
-    justify-content: flex-start;
-  }
-
-  &__messenger-item-wrapper {
-    &:nth-child(3) {
-      margin-left: -8px;
-    }
-  }
-}
 
 .footer-contacts {
   &__head-content {
-    margin-bottom: 68px;
+    margin-bottom: 40px;
+    flex-direction: column;
+  }
+
+  &__contact-item {
+    margin-bottom: 30px;
   }
 
   &__head-content,
@@ -171,17 +151,12 @@ export default {
     color: $text-color--grey;
   }
 
-  &__social-network-list-desktop {
-    margin-top: 53px;
-    padding-top: 53px;
-    border-top: 1px solid $border-color--grey-dark-transparent;
-  }
 }
 
 @media only screen and (max-width: 1320px) {
   .footer-contacts {
     &__contact-link {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
 }
@@ -201,9 +176,6 @@ export default {
       margin-top: 35px;
       padding-top: 40px;
     }
-
-    @include contacts-head-content;
-    @include messenger-list-grid;
   }
 }
 
@@ -238,10 +210,6 @@ export default {
 
 @media screen and (max-width: 767px) {
   .footer-contacts {
-    &__social-network-list-desktop {
-      display: none;
-    }
-
     &__contact-item {
       &:last-child {
         margin-top: 0;
@@ -257,9 +225,6 @@ export default {
 
 @media only screen and (max-width: 640px) {
   .footer-contacts {
-    @include contacts-head-content;
-    @include messenger-list-grid;
-
     &__contact-item {
       margin-bottom: 33px;
     }
@@ -273,6 +238,16 @@ export default {
 
 @media screen and (max-width: 600px) {
   .footer-contacts {
+    &__head-content {
+      flex-direction: column;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    &__lists-wrapper {
+      max-width: 100%;
+    }
+
     &__messengers-list {
       width: max-content;
       display: grid;
