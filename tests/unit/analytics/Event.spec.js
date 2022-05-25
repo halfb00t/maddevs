@@ -97,7 +97,8 @@ describe('AnalyticsEvent class', () => {
   })
 
   it('should throw error when called send method', () => {
-    window.gtag = 'undefined'
+    window.gtag = ''
+    process.env.domain = 'https://maddevs.co'
     const testEvent = new AnalyticsEvent('test_event').setCategory('TEST')
     expect(() => testEvent.send()).toThrow('window.gtag is not a function')
   })

@@ -126,8 +126,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit",
-      "pre-push": "npm run seo-analyze"
+      "pre-commit": "npm run precommit"
     }
   },
   "snyk": true

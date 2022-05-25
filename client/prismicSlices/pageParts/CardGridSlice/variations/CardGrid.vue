@@ -9,12 +9,16 @@
         data-testid="card-grid-item"
       >
         <a
-          :href="item.btnLink"
+          :href="item.btnLink.url && item.btnLink.url"
           target="_blank"
           class="card-grid-slice__item-link"
+          :class="{'card-grid-slice__item-link--bottom-padding' : item.paddingBottom }"
         >
           <div class="card-grid-slice__item-info">
-            <span v-html="item.title" />
+            <h3
+              :style="{ fontWeight: item.titleWeight || 'bold' }"
+              v-html="item.title"
+            />
             <p v-html="item.description" />
             <UIArrowButton
               color="black"
@@ -22,6 +26,7 @@
             />
           </div>
           <img
+            v-if="item.image.url"
             class="card-grid-slice__item-logo"
             :src="item.image && item.image.url"
             :alt="item.image && item.image.alt || 'Image'"
@@ -100,13 +105,13 @@ export default {
         }
       }
       &-info {
-        span {
+        h3 {
           font-size: 56px;
           line-height: 60px;
           letter-spacing: -0.013em;
         }
         p {
-          margin-top: 31px;
+          margin: 31px auto 0;
           font-size: 20px;
           line-height: 29px;
           letter-spacing: -0.013em;
