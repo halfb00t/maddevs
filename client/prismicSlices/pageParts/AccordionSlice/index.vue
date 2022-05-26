@@ -12,8 +12,8 @@
         :html-serializer="serializer"
       />
       <UIAccordion
-        v-for="(faq, i) in questions"
-        :key="`${faq.question}-${i}`"
+        v-for="(faq, index) in questions"
+        :key="`${faq.question}-${index}`"
         :question="faq.question"
         :answer="$prismic.asHtml(faq.answer)"
         is-prismic

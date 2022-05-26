@@ -3,7 +3,7 @@
     <div class="container">
       <div
         class="card-with-image__item"
-        :style="{backgroundColor: background || '#f4f4f4'}"
+        :style="{ backgroundColor: background || '#f4f4f4' }"
       >
         <div
           class="card-with-image__text-content"
@@ -19,7 +19,7 @@
           <p
             v-if="description"
             class="card-with-image__description"
-            :style="{color: textColor || '#111'}"
+            :style="{ color: textColor || '#111' }"
           >
             {{ description }}
           </p>
@@ -103,7 +103,7 @@ export default {
 
 <style lang="scss" scoped>
 .section {
-  background: #fff;
+  background: $bgcolor--white-primary;
 }
 
 .container {

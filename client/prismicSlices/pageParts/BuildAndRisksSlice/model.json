@@ -1,0 +1,137 @@
+{
+  "id": "build_and_risks_slice",
+  "type": "SharedSlice",
+  "name": "BuildAndRisksSlice",
+  "description": "BuildAndRisksSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BuildAndRisksSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animation List",
+            "placeholder": "Select the AOS animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-right",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-down",
+              "zoom-in-left",
+              "zoom-in-right"
+            ]
+          },
+          "type": "Select"
+        },
+        "outerBgColor": {
+          "config": {
+            "label": "Outer background color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black",
+              "silver",
+              "grey",
+              "red",
+              "blue",
+              "yellow",
+              "purple",
+              "green"
+            ]
+          },
+          "type": "Select"
+        },
+        "BackgroundColor": {
+          "config": {
+            "label": "BackgroundColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "grey",
+              "silver",
+              "black",
+              "red",
+              "blue",
+              "yellow",
+              "purple",
+              "green"
+            ]
+          },
+          "type": "Select"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "Title",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,heading4,heading5,heading6"
+          },
+          "type": "StructuredText"
+        },
+        "titleColor": {
+          "config": {
+            "label": "Text color for title",
+            "placeholder": "#000000"
+          },
+          "type": "Color"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "buttonText": {
+          "config": {
+            "label": "Button Text",
+            "placeholder": "Read Ebook"
+          },
+          "type": "Text"
+        },
+        "buttonLink": {
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "buttonBgColor": {
+          "type": "Select",
+          "config": {
+            "label": "Button background color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black",
+              "red"
+            ]
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

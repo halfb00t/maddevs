@@ -57,7 +57,8 @@
                   },
                   "type": "StructuredText"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -122,12 +123,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/AccordionSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/AccordionSlice/default-slice/preview.png",
             "width": 729,
             "height": 381
           }
@@ -173,7 +173,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -190,7 +191,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {}
@@ -257,7 +257,8 @@
                   },
                   "type": "Image"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -320,7 +321,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {}
@@ -416,7 +416,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -446,10 +447,206 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {}
+      },
+      "build_and_risks_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "build_and_risks_slice",
+        "name": "BuildAndRisksSlice",
+        "description": "BuildAndRisksSlice",
+        "model": {
+          "id": "build_and_risks_slice",
+          "type": "SharedSlice",
+          "name": "BuildAndRisksSlice",
+          "description": "BuildAndRisksSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "BuildAndRisksSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation List",
+                    "placeholder": "Select the AOS animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "outerBgColor": {
+                  "config": {
+                    "label": "Outer background color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "silver",
+                      "grey",
+                      "red",
+                      "blue",
+                      "yellow",
+                      "purple",
+                      "green"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "BackgroundColor": {
+                  "config": {
+                    "label": "BackgroundColor",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "grey",
+                      "silver",
+                      "black",
+                      "red",
+                      "blue",
+                      "yellow",
+                      "purple",
+                      "green"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Title",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,heading4,heading5,heading6"
+                  },
+                  "type": "StructuredText"
+                },
+                "titleColor": {
+                  "config": {
+                    "label": "Text color for title",
+                    "placeholder": "#000000"
+                  },
+                  "type": "Color"
+                },
+                "description": {
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                },
+                "buttonText": {
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": "Read Ebook"
+                  },
+                  "type": "Text"
+                },
+                "buttonLink": {
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  },
+                  "type": "Link"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "buttonBgColor": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Button background color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "red"
+                    ]
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "build_and_risks_slice",
+            "items": [],
+            "primary": {
+              "animation": "fade-up-right",
+              "outerBgColor": "red",
+              "BackgroundColor": "red",
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Incentivize robust communities",
+                  "spans": []
+                }
+              ],
+              "titleColor": "#dea3a3",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Nulla velit eiusmod amet pariatur ullamco culpa cupidatat laboris duis minim cillum id adipisicing aliqua laboris. Eu ipsum deserunt dolore eu ipsum fugiat dolor. Tempor ut magna magna magna incididunt in fugiat excepteur occaecat labore irure enim tempor aliqua esse.",
+                  "spans": []
+                }
+              ],
+              "buttonText": "engage leading-edge networks",
+              "buttonLink": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              },
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+              },
+              "buttonBgColor": "red"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/BuildAndRisksSlice/default-slice/preview.png",
+            "width": 1640,
+            "height": 880
+          }
+        }
       },
       "button_slice": {
         "library": "client/prismicSlices/pageParts",
@@ -550,7 +747,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "outlinedButton",
@@ -653,7 +851,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "linkButton",
@@ -756,7 +955,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -820,22 +1020,21 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ButtonSlice/default-slice/preview.png",
             "width": 703,
             "height": 147
           },
           "outlinedButton": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/outlinedButton/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ButtonSlice/outlinedButton/preview.png",
             "width": 703,
             "height": 72
           },
           "linkButton": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/linkButton/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ButtonSlice/linkButton/preview.png",
             "width": 703,
             "height": 72
           }
@@ -955,7 +1154,8 @@
                   },
                   "type": "Boolean"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "cardGridWithIcon",
@@ -1052,7 +1252,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "richTextCards",
@@ -1129,7 +1330,8 @@
                   },
                   "type": "Select"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "richTextCardsAnimation",
@@ -1237,7 +1439,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "richTextCardsBottomAnimation",
@@ -1341,7 +1544,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1672,17 +1876,16 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "richTextCardsAnimation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsAnimation/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardGridSlice/richTextCardsAnimation/preview.png",
             "width": 847,
             "height": 667
           },
           "richTextCardsBottomAnimation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsBottomAnimation/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardGridSlice/richTextCardsBottomAnimation/preview.png",
             "width": 880,
             "height": 437
           }
@@ -1759,7 +1962,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1794,12 +1998,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardWithImageSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardWithImageSlice/default-slice/preview.png",
             "width": 844,
             "height": 348
           }
@@ -1884,7 +2087,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1998,12 +2202,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardsWithIcon/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardsWithIcon/default-slice/preview.png",
             "width": 589,
             "height": 418
           }
@@ -2155,7 +2358,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -2216,12 +2420,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CaseListSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CaseListSlice/default-slice/preview.png",
             "width": 561,
             "height": 553
           }
@@ -2314,7 +2517,8 @@
                   },
                   "type": "Select"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -2353,12 +2557,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CasesListSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CasesListSlice/default-slice/preview.png",
             "width": 443,
             "height": 599
           }
@@ -2405,7 +2608,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -2422,12 +2626,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/ContactsSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/.slicemachine/assets/client/prismicSlices/pageParts/ContactsSlice/default-slice/preview.png",
             "width": 1200,
             "height": 858
           }
@@ -2487,7 +2690,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -2505,12 +2709,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/CreateProjectsSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/.slicemachine/assets/client/prismicSlices/pageParts/CreateProjectsSlice/default-slice/preview.png",
             "width": 1200,
             "height": 428
           }
@@ -2605,7 +2808,8 @@
                   "config": {
                     "label": "Button link (optional)",
                     "placeholder": "Button will be a link instead of a modal window",
-                    "allowTargetBlank": true
+                    "allowTargetBlank": true,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -2622,7 +2826,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -2658,12 +2863,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CtaBannerSlice/default/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CtaBannerSlice/default/preview.png",
             "width": 703,
             "height": 356
           }
@@ -2735,11 +2939,13 @@
                   "config": {
                     "label": "Link",
                     "placeholder": "",
-                    "allowTargetBlank": true
+                    "allowTargetBlank": true,
+                    "select": null
                   },
                   "type": "Link"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -2803,12 +3009,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerLogoSlice/default/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerLogoSlice/default/preview.png",
             "width": 351,
             "height": 381
           }
@@ -2870,7 +3075,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -2900,12 +3106,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerRatesSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerRatesSlice/default-slice/preview.png",
             "width": 854,
             "height": 381
           }
@@ -2959,7 +3164,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "testimonialsSecondVariation",
@@ -2998,7 +3204,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -3026,17 +3233,16 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerTestimonials/default-slice/preview.png",
             "width": 778,
             "height": 463
           },
           "testimonialsSecondVariation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/testimonialsSecondVariation/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerTestimonials/testimonialsSecondVariation/preview.png",
             "width": 1037,
             "height": 616
           }
@@ -3138,7 +3344,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -3185,12 +3392,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/DescriptionSliceWithIcon/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/DescriptionSliceWithIcon/default-slice/preview.png",
             "width": 1014,
             "height": 528
           }
@@ -3257,7 +3463,8 @@
                   "config": {
                     "label": "Button Link",
                     "placeholder": "",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -3285,7 +3492,8 @@
                   },
                   "type": "Link"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -3340,12 +3548,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/EbookPageCardsSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/EbookPageCardsSlice/default-slice/preview.png",
             "width": 696,
             "height": 449
           }
@@ -3369,7 +3576,8 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "EbooksWithFilterSlice",
               "primary": {},
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -3384,7 +3592,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {}
@@ -3429,7 +3636,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -3534,12 +3742,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/EmbedSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/EmbedSlice/default-slice/preview.png",
             "width": 1438,
             "height": 438
           }
@@ -3630,7 +3837,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -3666,12 +3874,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/FormSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/FormSlice/default-slice/preview.png",
             "width": 807,
             "height": 465
           }
@@ -3796,7 +4003,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "gridLottieLink",
@@ -3922,7 +4130,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "gridWithAnimationOptionSlice",
@@ -4039,7 +4248,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -4243,22 +4453,21 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/GridLottieSlice/default-slice/preview.png",
             "width": 630,
             "height": 782
           },
           "gridLottieLink": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/gridLottieLink/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/GridLottieSlice/gridLottieLink/preview.png",
             "width": 361,
             "height": 653
           },
           "gridWithAnimationOptionSlice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/gridWithAnimationOptionSlice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/GridLottieSlice/gridWithAnimationOptionSlice/preview.png",
             "width": 752,
             "height": 556
           }
@@ -4328,7 +4537,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -4355,7 +4565,6 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {}
@@ -4406,7 +4615,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -4433,12 +4643,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ImageWithCaption/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ImageWithCaption/default-slice/preview.png",
             "width": 1313,
             "height": 707
           }
@@ -4513,7 +4722,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "secondVariation",
@@ -4585,7 +4795,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "thirdVariation",
@@ -4657,7 +4868,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -4738,22 +4950,21 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/KeyMetricsSlice/default-slice/preview.png",
             "width": 937,
             "height": 719
           },
           "secondVariation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/secondVariation/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/KeyMetricsSlice/secondVariation/preview.png",
             "width": 517,
             "height": 360
           },
           "thirdVariation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/thirdVariation/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/KeyMetricsSlice/thirdVariation/preview.png",
             "width": 517,
             "height": 360
           }
@@ -4870,7 +5081,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -4901,12 +5113,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/NavLinkSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/NavLinkSlice/default-slice/preview.png",
             "width": 323,
             "height": 38
           }
@@ -4978,7 +5189,8 @@
                   },
                   "type": "Link"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "ebookPostsSectionSlice",
@@ -5056,7 +5268,8 @@
                   },
                   "type": "Link"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -5148,17 +5361,16 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PostsSectionSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/PostsSectionSlice/default-slice/preview.png",
             "width": 1291,
             "height": 544
           },
           "ebookPostsSectionSlice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PostsSectionSlice/ebookPostsSectionSlice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/PostsSectionSlice/ebookPostsSectionSlice/preview.png",
             "width": 596,
             "height": 539
           }
@@ -5312,7 +5524,8 @@
                   },
                   "type": "Image"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -5440,12 +5653,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PressCenter/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/PressCenter/default-slice/preview.png",
             "width": 2574,
             "height": 1116
           }
@@ -5556,7 +5768,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -5647,12 +5860,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ProgressSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ProgressSlice/default-slice/preview.png",
             "width": 1502,
             "height": 557
           }
@@ -5731,7 +5943,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -5751,12 +5964,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ProjectStartSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ProjectStartSlice/default-slice/preview.png",
             "width": 836,
             "height": 740
           }
@@ -5835,7 +6047,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -5865,12 +6078,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/QuickProjectStart/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/QuickProjectStart/default-slice/preview.png",
             "width": 836,
             "height": 740
           }
@@ -5949,7 +6161,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "singleImageTwo",
@@ -6022,7 +6235,8 @@
                   "type": "Boolean"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -6073,12 +6287,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/SingleImage/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/SingleImage/default-slice/preview.png",
             "width": 797,
             "height": 391
           }
@@ -6149,7 +6362,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -6171,12 +6385,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/SpacerSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/SpacerSlice/default-slice/preview.png",
             "width": 200,
             "height": 200
           }
@@ -6254,7 +6467,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "startScreenImageRightAndButton",
@@ -6339,7 +6553,8 @@
                   "config": {
                     "label": "Button Link (optional)",
                     "placeholder": "Button will be a link instead of a modal window",
-                    "allowTargetBlank": false
+                    "allowTargetBlank": false,
+                    "select": null
                   },
                   "type": "Link"
                 },
@@ -6371,7 +6586,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -6452,17 +6668,16 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/StartScreen/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/StartScreen/default-slice/preview.png",
             "width": 2880,
             "height": 1492
           },
           "startScreenImageRightAndButton": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/StartScreen/startScreenImageRightAndButton/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/StartScreen/startScreenImageRightAndButton/preview.png",
             "width": 790,
             "height": 417
           }
@@ -6558,7 +6773,8 @@
                   },
                   "type": "Image"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -6630,12 +6846,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TeamCards/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TeamCards/default-slice/preview.png",
             "width": 1247,
             "height": 845
           }
@@ -6702,7 +6917,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "toolsGrid",
@@ -6766,7 +6982,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "existingToolsGrid",
@@ -6823,7 +7040,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -6924,17 +7142,16 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechnologiesAndTools/default-slice/preview.png",
             "width": 1294,
             "height": 756
           },
           "toolsGrid": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/toolsGrid/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechnologiesAndTools/toolsGrid/preview.png",
             "width": 1259,
             "height": 245
           }
@@ -6988,7 +7205,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -7006,12 +7224,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechnologiesSlice/default-slice/preview.png",
             "width": 1294,
             "height": 756
           }
@@ -7051,7 +7268,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "twoColumnsList",
@@ -7076,7 +7294,8 @@
                   },
                   "type": "Text"
                 }
-              }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -7125,17 +7344,16 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextList/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextList/default-slice/preview.png",
             "width": 822,
             "height": 454
           },
           "twoColumnsList": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextList/twoColumnsList/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextList/twoColumnsList/preview.png",
             "width": 867,
             "height": 401
           }
@@ -7208,7 +7426,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "title",
@@ -7376,7 +7595,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "titleText",
@@ -7441,7 +7661,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "titleTextButton",
@@ -7522,7 +7743,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "paragraph",
@@ -7678,7 +7900,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             },
             {
               "id": "flexibleParagraph",
@@ -7783,14 +8006,14 @@
                     "label": "Font weight",
                     "placeholder": "400, 600, 700 ...",
                     "options": [
-                      100,
-                      200,
-                      300,
-                      400,
-                      500,
-                      600,
-                      700,
-                      800
+                      "100",
+                      "200",
+                      "300",
+                      "400",
+                      "500",
+                      "600",
+                      "700",
+                      "800"
                     ]
                   },
                   "type": "Select"
@@ -7879,7 +8102,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -7991,22 +8215,21 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "title": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/title/preview.jpeg",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextSlice/title/preview.jpeg",
             "width": 413,
             "height": 98
           },
           "paragraph": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/paragraph/preview.jpeg",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextSlice/paragraph/preview.jpeg",
             "width": 484,
             "height": 105
           },
           "flexibleParagraph": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/flexibleParagraph/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextSlice/flexibleParagraph/preview.png",
             "width": 1166,
             "height": 292
           }
@@ -8056,7 +8279,8 @@
                   "type": "Text"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -8087,12 +8311,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TitleAndParagraphSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TitleAndParagraphSlice/default-slice/preview.png",
             "width": 1478,
             "height": 646
           }
@@ -8241,7 +8464,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -8271,12 +8495,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/VideoSlice/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/VideoSlice/default-slice/preview.png",
             "width": 1089,
             "height": 538
           }
@@ -8336,7 +8559,8 @@
                   "type": "Select"
                 }
               },
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -8366,12 +8590,11 @@
         },
         "meta": {
           "fileName": "index",
-          "isDirectory": true,
           "extension": "vue"
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/WeCreateProjectsFor/default-slice/preview.png",
+            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/.slicemachine/assets/client/prismicSlices/pageParts/WeCreateProjectsFor/default-slice/preview.png",
             "width": 1200,
             "height": 428
           }
