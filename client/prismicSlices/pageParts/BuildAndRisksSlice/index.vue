@@ -31,6 +31,7 @@
               height="477"
               :src="slice.primary.image.url"
               :alt="slice.primary.image.alt"
+              data-testid="main-block__img-block-image"
               class="main-block__img-block-image"
             >
           </figure>

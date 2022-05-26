@@ -24,7 +24,7 @@ exports[`AccordionSlice component should correctly render component 1`] = `
         >
           <h4>
             <button
-              aria-controls="section-0"
+              aria-controls="section-undefined"
               aria-expanded="false"
               class="accordion__question"
               data-testid="accordionBtn"
@@ -61,7 +61,7 @@ exports[`AccordionSlice component should correctly render component 1`] = `
         <div
           aria-labelledby="test-question"
           class="accordion__answer"
-          id="section-0"
+          id="section-undefined"
           style="display: none;"
         >
           <div
