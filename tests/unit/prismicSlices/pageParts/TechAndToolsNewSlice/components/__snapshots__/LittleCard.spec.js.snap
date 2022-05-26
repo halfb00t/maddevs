@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BigCard component should correctly render component 1`] = `
+<div>
+  <div
+    class="technologies__little-card"
+    data-testid="tech-little-card"
+  >
+    <img
+      alt="Icon"
+      class="technologies__little-card-icon"
+      data-src="img.jpg"
+      height="45"
+      width="45"
+    />
+     
+    <h3
+      class="technologies__little-card-title"
+    >
+      
+    Test
+  
+    </h3>
+  </div>
+</div>
+`;

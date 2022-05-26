@@ -734,6 +734,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "BuildAndRisksSlice": {
       "default-slice": {
         "primary": {
@@ -750,6 +751,11 @@
             }
           }
         },
+=======
+    "TechAndToolsNewSlice": {
+      "default-slice": {
+        "primary": {},
+>>>>>>> a7c722b20ef75f5f5ae6615a6bee53747e620f6a
         "items": {}
       }
     }
