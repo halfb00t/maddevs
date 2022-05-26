@@ -21,6 +21,9 @@ const config = require('./config')
 const webRouter = require('./routes/web')
 const apiRouter = require('./routes/api')
 
+// Dev Radiator
+const { DevRadiator } = require('./utils/devRadiator/devRadiator')
+
 function bootstrap() {
   const app = express()
   const Sentry = configureSentry(app)
@@ -53,6 +56,14 @@ function bootstrap() {
 
   // Errors handler
   app.use(Sentry.Handlers.errorHandler())
+
+  if (process.env.FF_ENVIRONMENT === 'production') {
+    const radiator = new DevRadiator()
+    // eslint-disable-next-line no-console
+    console.log('Run Dev Radiator schedulers')
+    radiator.scheduleCollectMetrics()
+    radiator.scheduleSendMetrics()
+  }
 
   return app
 }

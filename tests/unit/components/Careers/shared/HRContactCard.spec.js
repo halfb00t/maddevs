@@ -10,6 +10,8 @@ const directives = {
   'lazy-load': () => {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('HRContactCard', () => {
   it('is a Vue instance', () => {
     const { container } = render(HRContactCard, {

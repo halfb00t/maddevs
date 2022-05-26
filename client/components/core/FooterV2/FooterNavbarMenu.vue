@@ -23,7 +23,7 @@
             :to="extractMenuLink(link).url"
             data-testid="menu-item-internal-link"
             class="footer-menu__item-link"
-            @click.native="goToPage"
+            @click.native="goToPage($event)"
           >
             {{ label }}
           </NuxtLink>
@@ -43,6 +43,7 @@
 
 <script>
 import extractMenuLink from '@/helpers/extractMenuLink'
+import { blockClickEvent, contactsClickEvent } from '@/analytics/events'
 
 export default {
   name: 'FooterNavbarMenu',
@@ -62,7 +63,9 @@ export default {
   methods: {
     extractMenuLink,
 
-    goToPage() {
+    goToPage(event) {
+      if (event.target.pathname === '/contact-us/') contactsClickEvent.send()
+      if (event.target.pathname === '/blog/') blockClickEvent.send()
       this.$root.$emit('changed-page')
     },
   },

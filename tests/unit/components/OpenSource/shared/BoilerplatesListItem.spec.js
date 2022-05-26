@@ -23,6 +23,8 @@ const directives = {
   'lazy-load': () => {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('BoilerplatesListItem component', () => {
   it('should render correctly', () => {
     const { container } = render(BoilerplatesListItem, {

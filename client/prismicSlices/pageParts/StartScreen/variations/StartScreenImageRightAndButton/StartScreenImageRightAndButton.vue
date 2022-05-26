@@ -217,7 +217,7 @@ export default {
 .start-screen-slice {
   background: linear-gradient(180deg, rgba(17, 18, 19, 0) 60%, #111213);
   overflow: hidden;
-  padding-top: 207px;
+  padding-top: 268px;
   height: auto;
   @media screen and (max-width: 768px) {
     padding-top: 147px;

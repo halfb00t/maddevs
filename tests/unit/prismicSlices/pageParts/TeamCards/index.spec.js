@@ -43,6 +43,8 @@ const getProps = params => ({
   },
 })
 
+jest.mock('~/helpers/generatorUid')
+
 describe('TeamCards slice', () => {
   it('should render correctly', () => {
     const { container } = render(TeamCards, {
@@ -64,6 +66,6 @@ describe('TeamCards slice', () => {
       }),
     })
     const img = screen.getAllByTestId('item-img')[0]
-    expect(img.getAttribute('data-src')).toEqual('https://google.com/')
+    expect(img.getAttribute('src')).toEqual('https://google.com/')
   })
 })

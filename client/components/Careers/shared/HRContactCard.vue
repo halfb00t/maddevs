@@ -13,7 +13,10 @@
       </p>
       <p class="hr-contact__description">
         {{ $t('careers.detailPage.hr.description') }}
-        <a :href="`mailto:${mailCV}`">
+        <a
+          :href="`mailto:${mailCV}`"
+          @click="sendEmailClickEvent"
+        >
           <img
             src="@/assets/img/common/gmail.svg"
             width="20"
@@ -28,11 +31,19 @@
 </template>
 
 <script>
+import { emailClickEvent } from '@/analytics/events'
+
 export default {
   name: 'CareersAuthorCard',
   computed: {
     mailCV() {
       return process.env.emailCV
+    },
+  },
+
+  methods: {
+    sendEmailClickEvent() {
+      emailClickEvent.send()
     },
   },
 }

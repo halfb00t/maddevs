@@ -165,6 +165,8 @@ A list of environment variables that needed to start the project(required)
 | NODE_S3_SECRET_ACCESS_KEY            | S3 secret key                                       |
 | RECAPTCHA_SITE_KEY                   | ReCaptcha site key                                  |
 | RECAPTCHA_SECRET_KEY                 | ReCaptcha secret key                                |
+| NODE_GA4_KEY                         | GA4 MEASUREMENT ID                                  |
+| NODE_ANALYTICS_UNIVERSAL_KEY         | Universal Analytics Tracking ID                     |
 
 All of these variables must be added to the Heroku hosting
 
@@ -190,10 +192,10 @@ To send changes to the staging server, you should merge **staging** branch into 
 
 ### Coverage(unit)
 
-![Coverage statements](client/static/badge-statements.svg)
-![Coverage branches](client/static/badge-branches.svg)
-![Coverage functions](client/static/badge-functions.svg)
-![Coverage lines](client/static/badge-lines.svg)
+![Coverage statements](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-statements.svg)
+![Coverage branches](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-branches.svg)
+![Coverage functions](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-functions.svg)
+![Coverage lines](https://maddevsio.s3.eu-west-1.amazonaws.com/coverage-badges/badge-lines.svg)
 
 ### Commands
 

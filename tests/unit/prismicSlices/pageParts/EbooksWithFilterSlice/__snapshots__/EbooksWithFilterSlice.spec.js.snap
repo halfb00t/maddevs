@@ -1,0 +1,714 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EbooksWithFilterSlice component should correctly render component 1`] = `
+<div>
+  <section
+    class="ebooks"
+    slice="[object Object]"
+  >
+    <div
+      class="container"
+    >
+      <h3
+        class="ebooks__cards-title"
+      >
+        
+      All Ebooks
+    
+      </h3>
+       
+      <div
+        class="ebooks__items"
+      >
+        <div
+          class="filter"
+        >
+          <h5
+            class="filter__title"
+          >
+            
+    Topics
+  
+          </h5>
+           
+          <button
+            aria-label="Open filter"
+            class="filter__title filter__title--btn"
+            data-testid="openFilter"
+            title="Click to open filter"
+            type="button"
+          >
+            
+    Topics
+    
+            <svg
+              class="filter__title-arrow"
+              fill="none"
+              height="7"
+              viewBox="0 0 11 7"
+              width="11"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.2638 6.2726C10.1232 6.4132 9.93243 6.49219 9.73356 6.49219C9.53469 6.49219 9.34396 6.4132 9.20331 6.2726L5.49081 2.5601L1.77831 6.2726C1.63686 6.40922 1.44741 6.48481 1.25076 6.4831C1.05412 6.48139 0.866006 6.40252 0.726951 6.26346C0.587894 6.12441 0.509018 5.9363 0.50731 5.73965C0.505601 5.543 0.581197 5.35355 0.717815 5.2121L4.96056 0.969347C5.10121 0.828744 5.29194 0.749757 5.49081 0.749757C5.68968 0.749757 5.88042 0.828744 6.02106 0.969347L10.2638 5.2121C10.4044 5.35274 10.4834 5.54347 10.4834 5.74235C10.4834 5.94122 10.4044 6.13195 10.2638 6.2726Z"
+                fill="#111111"
+              />
+            </svg>
+          </button>
+           
+          <div
+            class="filter__box"
+          >
+            <ul
+              class="filter__list"
+            >
+              <li
+                class="filter__list-item"
+              >
+                <input
+                  class="filter__list-item-radio"
+                  data-testid="allEbooks"
+                  id="allEbooks"
+                  name="Tag"
+                  type="radio"
+                  value="Ebooks"
+                />
+                 
+                <label
+                  class="filter__list-item-label"
+                  for="allEbooks"
+                >
+                  
+          All ebooks
+        
+                </label>
+              </li>
+               
+            </ul>
+          </div>
+        </div>
+         
+        <div
+          class="ebooks__cards"
+        >
+          <div
+            class="ebooks__cards-grid"
+          >
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link-two/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link-two/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test 2
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle 2
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link-two/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link-two/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link-two/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test 2
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle 2
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link-two/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link-two/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link-two/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test 2
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle 2
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link-two/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link-two/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link-two/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test 2
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle 2
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link-two/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link-two/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link-two/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test 2
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle 2
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link-two/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+            <div
+              class="ebook-card"
+              data-testid="ebooksCards"
+            >
+              <nuxtlink-stub
+                class="ebook-card__image-box"
+                to="/ebooks/test-link-two/"
+              >
+                <img
+                  alt="test"
+                  data-src="img.jpg"
+                  height="228"
+                  width="270"
+                />
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__content"
+                to="/ebooks/test-link-two/"
+              >
+                <h4
+                  class="ebook-card__title"
+                >
+                  
+      Test 2
+    
+                </h4>
+                 
+                <p
+                  class="ebook-card__subtitle"
+                >
+                  
+      Test subtitle 2
+    
+                </p>
+              </nuxtlink-stub>
+               
+              <nuxtlink-stub
+                class="ebook-card__link"
+                to="/ebooks/test-link-two/"
+              >
+                
+    Read now
+  
+              </nuxtlink-stub>
+            </div>
+             
+            <!---->
+          </div>
+           
+          <div
+            class="pagination"
+          >
+            <ul
+              class="pagination__list pagination__list--few-items"
+            >
+              <li
+                class="pagination__list-item"
+              >
+                <button
+                  aria-label="Go to previous page"
+                  class="pagination__list-arrow-btn"
+                  disabled="disabled"
+                  title="No pages"
+                >
+                  
+        &lt;--- Prev
+      
+                </button>
+              </li>
+               
+              <li>
+                <button
+                  aria-label="Go to page number 1"
+                  class="pagination__list-pages-btn pagination__list-pages-btn--active"
+                  disabled="disabled"
+                  title="This is current page"
+                  type="button"
+                >
+                  
+        1
+      
+                </button>
+              </li>
+               
+              <!---->
+               
+              <!---->
+               
+              <li
+                class="pagination__list-item"
+              >
+                <button
+                  aria-label="Go to next page"
+                  class="pagination__list-arrow-btn"
+                  data-testid="text-next-btn"
+                  disabled="disabled"
+                  title="No pages"
+                >
+                  
+        Next ---&gt;
+      
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

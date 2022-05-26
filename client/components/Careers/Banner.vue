@@ -34,16 +34,6 @@
         class="careers-banner_btn"
         @click="changeLocale"
       >
-        <img
-          v-if="currentLanguage === 'en'"
-          src="@/assets/img/Careers/svg/russian-flag.svg"
-          alt="Russian flag"
-        >
-        <img
-          v-if="currentLanguage === 'ru'"
-          src="@/assets/img/Careers/svg/uk-flag.svg"
-          alt="UK flag"
-        >
         {{ $t('careers.section-1.btn') }}
       </button>
     </div>

@@ -4,6 +4,8 @@ import ModelsGrid from '@/components/DeliveryModels/ModelsGrid'
 
 const stubs = ['ModelCard', 'LazyHydrate']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModelsGrid component', () => {
   it('should render correctly', () => {
     const { container } = render(ModelsGrid, {

@@ -19,21 +19,57 @@ exports[`AuthorBanner component should render correctly 1`] = `
         />
       </div>
        
-      <h1
-        class="current-author__name"
+      <div
+        class="current-author__info"
       >
-        
-      Maddevs
-    
-      </h1>
-       
-      <p
-        class="current-author__position"
-      >
+        <h1
+          class="current-author__name"
+        >
+          
+        Maddevs
+      
+        </h1>
+         
+        <p
+          class="current-author__position"
+        >
+          
         
       
-    
-      </p>
+        </p>
+      </div>
+       
+      <div
+        class="current-author__count"
+      >
+        <p
+          class="current-author__count-posts"
+        >
+          
+        1 Posts
+      
+        </p>
+         
+        <hr
+          class="current-author__count-red-line"
+        />
+      </div>
+       
+      <div
+        class="current-author__tags"
+      >
+        <ul
+          class="current-author__tags-list"
+        >
+          <li
+            class="current-author__tags-item"
+          >
+            
+          Tag
+        
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

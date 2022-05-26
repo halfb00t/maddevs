@@ -8,6 +8,7 @@
       target="_blank"
       class="boilerplates-list__item-link"
       :class="paddingClass"
+      @click="sendGithubClickEvent"
     >
       <div class="boilerplates-list__item-info">
         <h3
@@ -35,6 +36,7 @@
 
 <script>
 import UIArrowButton from '@/components/shared/UIArrowButton.vue'
+import { githubClickEvent } from '@/analytics/events'
 
 export default {
   name: 'BoilerplatesListItem',
@@ -81,6 +83,12 @@ export default {
 
     paddingClass() {
       return this.bottomPadding ? 'boilerplates-list__item-link--bottom-padding' : null
+    },
+  },
+
+  methods: {
+    sendGithubClickEvent() {
+      githubClickEvent.send()
     },
   },
 }

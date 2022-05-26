@@ -25,6 +25,11 @@
         :validation="$v.email"
         label="Email"
       />
+      <UIFormCheckbox
+        id="form"
+        ref="checkbox"
+        @change="handleCheckboxChange"
+      />
       <button
         :id="isValid ? 'sent_ebook_button': ''"
         class="ebook-form__button"
@@ -51,13 +56,20 @@ import BaseInput from '@/components/core/forms/BaseInput'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import { getLinkWithLifeTime } from '@/api/s3'
 import { sendEmail } from '@/api/email'
+import createLeadMixin from '@/mixins/createLeadMixin'
+import { ebookSubmitFormEvent } from '@/analytics/events'
+import { addUserType } from '@/analytics/Event'
+import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 
 export default {
   name: 'EbookForm',
   components: {
     BaseInput,
     SuccessMessage,
+    UIFormCheckbox,
   },
+
+  mixins: [createLeadMixin(624246, 'Request a PDF file from the Ebook page')],
 
   props: {
     ebookPath: {
@@ -77,6 +89,8 @@ export default {
       email: '',
       successMessage: null,
       formSended: false,
+      type: 'ebook-form',
+      isAgree: true,
     }
   },
 
@@ -101,6 +115,10 @@ export default {
   },
 
   methods: {
+    handleCheckboxChange({ isAgree }) {
+      this.isAgree = isAgree
+    },
+
     async submit() {
       if (!this.isValid) return
       const params = {
@@ -110,6 +128,7 @@ export default {
         expiresIn: 86400, // sec -> 24h
       }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
+
       const requestSender = {
         body: {
           email: {
@@ -127,28 +146,24 @@ export default {
 
         base64: null,
       }
-      const requestMarketing = {
-        body: {
-          email: {
-            templateId: 624246, // Required
-            variables: {
-              subject: 'Request a PDF file from the Ebook page',
-              senderName: this.name,
-              emailTo: process.env.emailMarketing,
-              fromSender: this.email,
-              page: window.location.href,
-            },
 
-            attachment: null,
-          },
-        },
-
-        base64: '',
-      }
       sendEmail(this.$axios, requestSender) // Send email to sender
-      sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
+
+      const variables = {
+        type: this.type,
+        fullName: this.name,
+        email: this.email,
+        consent_to_mailing: this.isAgree ? 'Yes' : 'No',
+        page: window.location.href,
+        formLocation: this.bookName,
+      }
+      // from mixin
+      this.submitLead(variables)
+
+      addUserType('download_ebook')
+      ebookSubmitFormEvent.send()
+
       this.$emit('form-sended', { email: this.email, name: this.name })
-      this.resetForm()
       this.successMessage = `
         The letter with the PDF file was successfully sent to mail ${this.email}.
         <br><br> Please check your email.
@@ -156,8 +171,9 @@ export default {
       this.formSended = true
     },
 
-    resetForm() {
+    reset() {
       this.$v.$reset() // Reset validation form
+      this.$refs.checkbox.reset()
       this.name = ''
       this.email = ''
     },

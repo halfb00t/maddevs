@@ -6,6 +6,8 @@ const directives = {
   'lazy-load': () => {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalEbook component', () => {
   let wrapper = null
   let mockShow = null

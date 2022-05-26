@@ -1,5 +1,12 @@
 // ---------- Background  ------------ //
+$bgcolor--cultured: #F5F7F9;
+$bgcolor--chinese-white: #e0e0e0;
+$bgcolor--venetian-red: #EC1C24;
+$bgcolor--philippine-gray: #8A8A8A;
 $bgcolor--eerie-black: #191A1B;
+$bgcolor--grey-selected: #707072;
+$bgcolor--chinese-black: #111111;
+$bgcolor--venetian-red: #ec1c24;
 $bgcolor--quote-box: #404143;
 $bgcolor--black-primary: #000000;
 $bgcolor--apple: #62ba56;
@@ -50,6 +57,7 @@ $bgcolor--dark-purple05-opacity: rgba(45, 25, 86, 0.5);
 $bgcolor--dark-purple04-opacity: rgba(45, 25, 86, 0.4);
 
 // ---------- Text ------------ //
+$text-color--philippine-gray: #8A8A8A;
 $text-color--venetian-red: #EC1C24;
 $text-color--dark-gray: #aaaaaa;
 $text-color--grey-20-percent: #cfcfd0;
@@ -94,6 +102,7 @@ $text-stroke--white: 1.5px #f2f2f2;
 $text-stroke--red: 1.5px #ec1c24;
 
 // ---------- Border ------------ //
+$border-color--venetian-red: #EC1C24;
 $border-color--grey: #96969c;
 $border-color--grey-pale: #404143;
 $border-color--grey-selected: #707072;
@@ -121,6 +130,7 @@ $border-color--white-03-opacity: rgba(255, 255, 255, 0.3);
 $border-color--grey-input: #404143;
 $border-color--black-border-03-opacity: rgba(16, 17, 19, 0.3);
 $border-color--black-border-05-opacity: rgba(16, 17, 19, 0.5);
+$border-color--platinum: #E5E5E5;
 
 // ---------- Border radius ------------ //
 $form-border-radius: 7px;

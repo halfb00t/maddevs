@@ -1,5 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import UIBeforeAfterImage from '@/components/shared/UIBeforeAfterImage'
+import 'regenerator-runtime'
 
 const directives = {
   'lazy-load': () => {},
@@ -15,6 +16,8 @@ const props = {
 const spy = jest.fn()
 const testWidth = 420
 const inputValue = 89
+
+jest.spyOn(window, 'removeEventListener').mockImplementation()
 
 describe('UIBeforeAfterImage component', () => {
   let wrapper
@@ -59,18 +62,11 @@ describe('UIBeforeAfterImage component', () => {
     window.innerWidth = testWidth
     window.dispatchEvent(new Event('resize'))
 
-    expect(spy).toHaveBeenCalledTimes(1)
     expect(window.innerWidth).toBe(testWidth)
   })
 
-  it('should correctly remove resize event listener from window', () => {
-    wrapper = shallowMount(UIBeforeAfterImage, {
-      directives,
-      propsData: props,
-      attachTo: document.body,
-    })
-    wrapper.destroy()
-
-    expect(spy).toHaveBeenCalledTimes(1)
+  it('should call removeEventListener when component has destroyed', async () => {
+    await wrapper.destroy()
+    expect(window.removeEventListener).toHaveBeenCalledTimes(1)
   })
 })

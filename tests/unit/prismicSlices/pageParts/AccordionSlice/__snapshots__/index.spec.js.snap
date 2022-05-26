@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionSlice component should correctly render component 1`] = `
+<div>
+  <section
+    class="section accordion-slice"
+  >
+    <div
+      class="container"
+      style="max-width: 1026px;"
+    >
+      <prismicrichtext-stub
+        class="accordion-slice__title"
+        data-testid="accordion-slice__title"
+        field="[object Object]"
+        html-serializer="function () { [native code] }"
+      />
+       
+      <div
+        class="accordion"
+      >
+        <div
+          class="accordion__question-wrapper"
+        >
+          <h4>
+            <button
+              aria-controls="section-0"
+              aria-expanded="false"
+              class="accordion__question"
+              data-testid="accordionBtn"
+              id="test-question"
+            >
+              <span
+                class="accordion__question-text"
+              >
+                Test question
+              </span>
+               
+              <span
+                class="accordion__question-icon"
+              >
+                <svg
+                  fill="none"
+                  height="6"
+                  viewBox="0 0 11 6"
+                  width="11"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M0.5 1.09905L1.62126 0L5.5 3.80191L9.37874 0L10.5 1.09905L5.5 6L0.5 1.09905Z"
+                    fill="#CFCFD0"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </button>
+          </h4>
+        </div>
+         
+        <div
+          aria-labelledby="test-question"
+          class="accordion__answer"
+          id="section-0"
+          style="display: none;"
+        >
+          <div
+            class="prismic-html-tags"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

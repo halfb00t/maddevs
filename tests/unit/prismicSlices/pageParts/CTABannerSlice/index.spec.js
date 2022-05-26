@@ -6,6 +6,8 @@ const props = {
   slice: {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('CtaBannerSlice component', () => {
   let wrapper
   let mockShow

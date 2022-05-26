@@ -20,7 +20,10 @@ export default {
   nuxtI18n: false,
 
   head() {
-    return buildHead(getMetadata('delivery-models'))
+    return buildHead({
+      ...getMetadata('delivery-models'),
+      image: 'https://maddevs.io/delivery-models.png',
+    })
   },
 }
 </script>

@@ -11,13 +11,13 @@ const META_DATA = {
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Collaboration Approaches and Delivery Models | Mad Devs',
   'og:description': 'Expand your development capabilities by choosing proper delivery models for your IT project. Manage your product growth through an effective collaboration model.',
-  'og:image': 'https://maddevs.io/Open-Graph.png',
+  'og:image': 'https://maddevs.io/delivery-models.png',
   'og:image:width': '1200',
   'og:image:height': '630',
   'twitter:card': 'summary_large_image',
   'twitter:text:title': 'Collaboration Approaches and Delivery Models | Mad Devs',
   'twitter:description': 'Expand your development capabilities by choosing proper delivery models for your IT project. Manage your product growth through an effective collaboration model.',
-  'twitter:image:src': 'https://maddevs.io/Open-Graph.png',
+  'twitter:image:src': 'https://maddevs.io/delivery-models.png',
   'twitter:url': 'https://maddevs.io/delivery-models/',
 }
 

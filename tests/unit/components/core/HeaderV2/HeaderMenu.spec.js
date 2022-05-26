@@ -20,6 +20,8 @@ const props = {
   }],
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('HeaderMenu component', () => {
   it('should render correctly', () => {
     const { container } = render(HeaderMenu, {

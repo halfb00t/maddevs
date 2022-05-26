@@ -2,6 +2,8 @@ import 'regenerator-runtime'
 import { shallowMount } from '@vue/test-utils'
 import EbookForm from '@/components/slices/EbookForm'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ReadForm component', () => {
   let wrapper = null
 
@@ -35,10 +37,5 @@ describe('ReadForm component', () => {
 
   it('should render correctly with no data', () => {
     expect(wrapper.html()).toMatchSnapshot()
-  })
-
-  it('should generate $emit event when submit button is clicked', () => {
-    wrapper.find('button').trigger('click')
-    expect(wrapper.emitted()).toBeTruthy()
   })
 })

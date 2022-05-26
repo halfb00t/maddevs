@@ -16,6 +16,8 @@ const mocks = {
   $t: () => 'translated',
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('PositionHeader component', () => {
   it('should render correctly', () => {
     const { container } = render(PositionHeader, {

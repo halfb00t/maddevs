@@ -15,6 +15,7 @@
         class="card-item"
         data-testid="grid-lottie-animation-item"
         :style="{ backgroundColor: item.background || null }"
+        @click="sendClickCardEvent"
       >
         <div
           v-if="item['lottie-animation']"
@@ -47,6 +48,7 @@
 <script>
 import LottieMad from '@/components/shared/LottieMad'
 import UIArrowButton from '@/components/shared/UIArrowButton'
+import { cardClickEvent } from '@/analytics/events'
 
 export default {
   name: 'GridLottieLink',
@@ -70,6 +72,10 @@ export default {
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
+    },
+
+    sendClickCardEvent() {
+      cardClickEvent.send()
     },
   },
 }
