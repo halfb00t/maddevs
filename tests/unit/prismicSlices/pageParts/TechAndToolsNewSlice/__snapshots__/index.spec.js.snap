@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TechAndToolsNewSlice component should correctly render component 1`] = `
+<div>
+  <section
+    class="technologies"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="four-big-cards"
+        data-aos="fade-up"
+      >
+        <div
+          class="four-big-cards__big-cards"
+        >
+          <bigcard-stub
+            description="A library for GPS and Accelerometer data \\"fusion\\" with Kalman filter.A library for GPS and Accelerometer data \\"fusion\\" with Kalman filter."
+            icon="[object Object]"
+            isbig="true"
+            title="Gitlab"
+          />
+        </div>
+         
+        <div
+          class="four-big-cards__little-cards"
+        >
+          <littlecard-stub
+            icon="[object Object]"
+            title="Gitlab"
+          />
+        </div>
+      </div>
+       
+      <!---->
+       
+      <!---->
+       
+      <!---->
+    </div>
+  </section>
+</div>
+`;
