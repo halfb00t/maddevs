@@ -733,6 +733,12 @@
           }
         }
       }
+    },
+    "TechAndToolsNewSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
