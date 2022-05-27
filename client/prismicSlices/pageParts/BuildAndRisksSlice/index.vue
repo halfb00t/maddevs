@@ -17,9 +17,7 @@
             :html-serializer="serializer"
             :style="textContentColor"
           />
-          <div
-            class="main-block__description"
-          >
+          <div class="main-block__description">
             <p
               :style="textContentColor"
               v-html="$prismic.asHtml(description)"
@@ -27,6 +25,7 @@
           </div>
           <figure class="main-block__small-screen-image">
             <img
+              v-lazy-load
               width="338"
               height="477"
               :src="slice.primary.image.url"
@@ -46,6 +45,7 @@
         </div>
         <figure class="main-block__img-block">
           <img
+            v-lazy-load
             width="338"
             height="477"
             :src="slice.primary.image.url"
@@ -233,9 +233,11 @@ export default {
 
   &__img-block {
     width: 30%;
+
     @media screen and (max-width: 1024px) {
       width: 45%;
     }
+
     @media screen and (max-width: 920px) {
       display: none;
     }
