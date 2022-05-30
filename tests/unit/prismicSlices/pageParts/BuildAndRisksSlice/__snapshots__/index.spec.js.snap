@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuildAndRisksSlice component should render correctly with data 1`] = `
+<section data-aos="fade-up" class="main-block-wrapper" style="background-color: rgb(17, 18, 19);">
+  <section class="container">
+    <article class="main-block" style="background-color: rgb(244, 244, 244);">
+      <div class="main-block__text-content">
+        <prismicrichtext-stub field="[object Object]" html-serializer="function () { [native code] }" class="main-block__title" style="color: rgb(255, 255, 255);"></prismicrichtext-stub>
+        <div class="main-block__description">
+          <p style="color: rgb(255, 255, 255);"></p>
+        </div>
+        <figure class="main-block__small-screen-image"><img width="338" height="477" data-src="https://via.placeholder.com/150" alt="test image" data-testid="main-block__img-block-image" class="main-block__img-block-image"></figure> <a href="https://google.com/" target="_blank" class="main-block__button" style="background-color: rgb(255, 255, 255);">
+          Read Ebook
+        </a>
+      </div>
+      <figure class="main-block__img-block"><img width="338" height="477" data-src="https://via.placeholder.com/150" alt="test image" class="main-block__img-block-image"></figure>
+    </article>
+  </section>
+</section>
+`;
