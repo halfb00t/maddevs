@@ -63,7 +63,7 @@ describe('BuildAndRisksSlice component', () => {
     })
 
     const image = screen.getByTestId('main-block__img-block-image')
-    expect(image.getAttribute('src')).toBe(props.slice.primary.image.url)
+    expect(image.getAttribute('data-src')).toBe(props.slice.primary.image.url)
     expect(image.getAttribute('alt')).toBe(props.slice.primary.image.alt)
     expect(Number(image.getAttribute('width'))).toBe(338)
     expect(Number(image.getAttribute('height'))).toBe(477)

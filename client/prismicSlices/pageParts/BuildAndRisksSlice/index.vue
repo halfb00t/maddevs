@@ -28,7 +28,7 @@
               v-lazy-load
               width="338"
               height="477"
-              :src="slice.primary.image.url"
+              :data-src="slice.primary.image.url"
               :alt="slice.primary.image.alt"
               data-testid="main-block__img-block-image"
               class="main-block__img-block-image"
@@ -48,7 +48,7 @@
             v-lazy-load
             width="338"
             height="477"
-            :src="slice.primary.image.url"
+            :data-src="slice.primary.image.url"
             :alt="slice.primary.image.alt"
             class="main-block__img-block-image"
           >
