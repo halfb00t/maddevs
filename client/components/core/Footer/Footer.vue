@@ -143,7 +143,7 @@ export default {
         topLineSeparator.style.left = `${columnPositions.left}px`
         icon.style.left = `${columnPositions.left}px`
       } else {
-        const firstColumn = document.querySelector('.footer-nav-column-company')
+        const firstColumn = document.querySelector('.footer-nav-column--company')
         const { left } = firstColumn.getBoundingClientRect()
         topLineSeparator.style.left = `${left}px`
         // Handle resize case
@@ -161,7 +161,7 @@ export default {
   position: relative;
   padding-top: 65px;
   padding-bottom: 130px;
-  @media only screen and (max-width: 991px) {
+  @media screen and (max-width: 991px) {
     padding-top: 48px;
     padding-bottom: 46px;
   }
@@ -172,7 +172,7 @@ export default {
     height: 1px;
     border: 1px none $border-color--red-opacity;
     border-top-style: solid;
-    @media only screen and (max-width: 991px) {
+    @media screen and (max-width: 991px) {
       display: none;
     }
   }
@@ -215,13 +215,17 @@ export default {
       transition: all;
       transition-timing-function: cubic-bezier(1, 0, .52, 1.65);
       transition-duration: 0.7s;
-      @media only screen and (max-width: 991px) {
+      left: 90px;
+      @media screen and (max-width: 991px) {
         display: none;
+      }
+      @media screen and (min-width: 1420px) {
+        left: calc((100vw - 1240px) / 2);
       }
     }
 
     &-icons {
-      @media only screen and (max-width: 991px) {
+      @media screen and (max-width: 991px) {
         display: none;
       }
     }

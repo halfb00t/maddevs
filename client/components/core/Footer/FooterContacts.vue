@@ -153,7 +153,7 @@ export default {
 
 }
 
-@media only screen and (max-width: 1320px) {
+@media screen and (max-width: 1320px) {
   .footer-contacts {
     &__contact-link {
       font-size: 20px;
@@ -161,7 +161,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .footer-contacts {
     &__contact-item {
       margin-bottom: 42px;
@@ -188,7 +188,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .footer-contacts {
     &__head-content {
       flex-direction: row;
@@ -223,7 +223,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .footer-contacts {
     &__contact-item {
       margin-bottom: 33px;

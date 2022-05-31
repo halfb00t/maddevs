@@ -1,27 +1,6 @@
 /* eslint-disable no-shadow */
 import { getFooterContent } from '@/api/footer'
-
-const extractFooterSection = async (prismic, footerContent = {}, navSection) => {
-  // Get blog post data for Footer sections
-  const getLink = () => {
-    const link = footerContent.body
-      .find(item => item.primary?.nav_section.toLowerCase() === navSection)
-    return link?.primary?.link[0]?.text
-  }
-
-  const menus = footerContent.body
-    .filter(slice => slice.primary?.nav_section.toLowerCase() === navSection)
-    .map(slice => ({
-      name: slice.primary?.name,
-      routes: slice.items,
-    }))
-
-  return {
-    name: navSection,
-    link: getLink(),
-    menus,
-  }
-}
+import { extractFooterNavigation } from '@/store/modules/helpers/extractFooterSectionData'
 
 export const state = () => ({
   footerMainNavigation: {},
@@ -44,32 +23,20 @@ export const mutations = {
 export const actions = {
   async getFooterContent({ commit }) {
     const footerContent = await getFooterContent(this.$prismic)
-    const company = await extractFooterSection(this.$prismic, footerContent, 'company')
-    const services = await extractFooterSection(this.$prismic, footerContent, 'services')
-    const clients = await extractFooterSection(this.$prismic, footerContent, 'clients')
-    const insights = await extractFooterSection(this.$prismic, footerContent, 'insights')
-    const industries = await extractFooterSection(this.$prismic, footerContent, 'industries')
+    const navigationsDepartments = ['company', 'services', 'clients', 'insights', 'industries']
+    const footerNavigationData = extractFooterNavigation(this.$prismic, footerContent, navigationsDepartments)
     const contacts = {
       email: footerContent.email,
       emailTitle: footerContent.emailTitle,
       phoneNumber: footerContent.phoneNumber,
       phoneNumberTitle: footerContent.phoneNumberTitle,
     }
-
-    commit('SET_FOOTER_MAIN_NAVIGATION', {
-      company,
-      services,
-      clients,
-      insights,
-      industries,
-    })
-
+    commit('SET_FOOTER_MAIN_NAVIGATION', footerNavigationData)
     commit('SET_FOOTER_CONTACTS', {
       ...contacts,
     })
-
-    commit('SET_FOOTER_STATUS')
   },
+
   showFooter({ commit }, data) {
     commit('SHOW_FOOTER', data)
   },

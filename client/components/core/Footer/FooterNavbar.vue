@@ -6,15 +6,15 @@
     <ul
       v-for="(navigation, index) in navigations"
       :key="index"
-      class="footer-main-navigation"
-      :class="`footer-nav-column-${navigation[0].name}`"
+      class="footer-main-navigation footer-nav-column"
+      :class="`footer-nav-column--${navigation[0].name}`"
       @mouseenter="setActiveColumn($event, navigation[0].name)"
     >
       <li
         v-for="{name, label} in navigation"
         :key="label"
         class="footer-sub-navigation__column"
-        :class="[ `footer-navigation__column-${name}`]"
+        :class="[ `footer-navigation__column--${name}`]"
       >
         <span
           class="footer-main-navigation__column-title"
