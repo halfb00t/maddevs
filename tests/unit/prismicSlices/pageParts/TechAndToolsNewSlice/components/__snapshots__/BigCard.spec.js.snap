@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BigCard component should correctly render component 1`] = `
+<div>
+  <div
+    class="technologies__big-card technologies__big-card--one-big-cards"
+    data-testid="tech-big-card"
+  >
+    <div
+      class="technologies__big-card-icon-wrapper"
+    >
+      <img
+        alt="Icon"
+        class="technologies__big-card-icon"
+        data-src="img.jpg"
+        height="45"
+        width="45"
+      />
+    </div>
+     
+    <div
+      class="technologies__big-card-info"
+    >
+      <h3
+        class="technologies__big-card-title"
+      >
+        
+      Test
+    
+      </h3>
+       
+      <p
+        class="technologies__big-card-description"
+      >
+        
+      Test description
+    
+      </p>
+    </div>
+  </div>
+</div>
+`;
