@@ -27,6 +27,24 @@ export const navigationsSections = [
   ],
 ]
 
+export const staticsPDFLinks = [
+  {
+    title: 'About Us.pdf',
+    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/about-mad-devs.pdf',
+  },
+  {
+    title: 'Work process.pdf',
+    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-work-process.pdf',
+  },
+  {
+    title: 'Cooperation models.pdf',
+    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-cooperation-models.pdf',
+  },
+  {
+    title: 'Brand Book.pdf',
+    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-brand-book.pdf',
+  },
+]
 export const staticsPagesLinks = [
   {
     title: 'GDPR Compliance Commitment',
