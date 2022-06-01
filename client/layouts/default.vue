@@ -17,7 +17,7 @@ import { mapGetters } from 'vuex'
 import Chat from '@/components/core/chat'
 import HeaderV2 from '@/components/core/HeaderV2'
 import CookieNotice from '@/components/core/CookieNotice'
-import Footer from '@/components/core/FooterV2/Footer'
+import Footer from '@/components/core/Footer/Footer'
 import { getNotAllowedRoutes } from '../../utils/getNotAllowedRoutes'
 
 export default {

@@ -1,7 +1,7 @@
 <template>
   <div
     class="footer-section"
-    :class="`footer-section-${name}`"
+    :class="`footer-section--${name}`"
   >
     <div class="footer-section__content">
       <div class="footer-section__menus">
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import FooterNavbarMenu from '@/components/core/FooterV2/FooterNavbarMenu'
+import FooterNavbarMenu from '@/components/core/Footer/FooterNavbarMenu'
 
 export default {
   name: 'FooterNavbarColumn',
@@ -46,6 +46,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss" scoped>
-</style>
