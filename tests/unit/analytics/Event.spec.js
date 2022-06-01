@@ -24,24 +24,33 @@ const storageMock = () => {
 }
 
 window.localStorage = storageMock()
-window.location.pathname = '/'
-window.dataLayer = [
-  [
-    'config',
-    'G-SWHTFYT6M8',
-    {
-      send_page_view: false,
-      _ee: true,
-    },
+
+Object.defineProperty(window, 'dataLayer', {
+  value: [
+    [
+      'config',
+      'G-SWHTFYT6M8',
+      {
+        send_page_view: false,
+        _ee: true,
+      },
+    ],
+    [
+      'config',
+      'UA-83208754-9',
+      {
+        send_page_view: false,
+      },
+    ],
   ],
-  [
-    'config',
-    'UA-83208754-9',
-    {
-      send_page_view: false,
-    },
-  ],
-]
+})
+
+Object.defineProperty(window, 'location', {
+  value: {
+    hostname: 'maddevs.co',
+    pathname: '/',
+  },
+})
 
 jest.mock('~/helpers/generatorUid')
 
@@ -98,7 +107,6 @@ describe('AnalyticsEvent class', () => {
 
   it('should throw error when called send method', () => {
     window.gtag = ''
-    process.env.domain = 'https://maddevs.co'
     const testEvent = new AnalyticsEvent('test_event').setCategory('TEST')
     expect(() => testEvent.send()).toThrow('window.gtag is not a function')
   })

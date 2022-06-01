@@ -4,7 +4,7 @@ const DEV_PLUGINS = [
   '~/plugins/get-media-from-s3.js',
   '~/plugins/header-handler.js',
   '~/plugins/feature-flags.js',
-  '~/plugins/gtag.js',
+  { src: '~/plugins/gtag.js', mode: 'client' },
 ]
 
 const getPlugins = isProd => (isProd ? [...DEV_PLUGINS] : DEV_PLUGINS)
