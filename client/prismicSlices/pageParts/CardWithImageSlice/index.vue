@@ -103,7 +103,7 @@ export default {
 
 <style lang="scss" scoped>
 .section {
-  background: #fff;
+  background: $bgcolor--white-primary;
 }
 
 .container {

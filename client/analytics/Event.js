@@ -81,7 +81,11 @@ export class AnalyticsEvent {
   }
 
   send() {
-    if (process.env.domain === 'https://maddevs.io' || process.env.domain === 'https://maddevs.co') {
+    if (window.location.hostname === 'maddevs.io'
+      || window.location.hostname === 'maddevs.co'
+      || window.location.origin === 'https://maddevs.co'
+      || window.location.origin === 'https://maddevs.io'
+    ) {
       this._setPath()
       this._applyUser()
 
