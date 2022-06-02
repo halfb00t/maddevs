@@ -26,11 +26,6 @@ export default {
   },
 
   props: {
-    isActive: {
-      type: Boolean,
-      default: false,
-    },
-
     name: {
       type: String,
       default: '',
