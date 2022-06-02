@@ -26,12 +26,12 @@ export const navigationsSections = [
     },
   ],
 ]
-
+// About Us needs to be temporarily removed from the page
 export const staticsPDFLinks = [
-  {
-    title: 'About Us.pdf',
-    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/about-mad-devs.pdf',
-  },
+  // {
+  //   title: 'About Us.pdf',
+  //   link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/about-mad-devs.pdf',
+  // },
   {
     title: 'Work process.pdf',
     link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-work-process.pdf',
