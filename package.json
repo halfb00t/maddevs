@@ -5,7 +5,7 @@
   "author": "Mad Devs",
   "private": true,
   "engines": {
-    "node": "16.x"
+    "node": "16.15.0"
   },
   "scripts": {
     "dev": "nuxt",
@@ -21,7 +21,6 @@
     "heroku-postbuild": "npm run build",
     "heroku-cleanup": "cd ./client; ls | grep -v static | grep -v modules | xargs rm -rfv",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect",
     "test": "npm run test:unit",
     "test:unit": "node ./jest",
     "test:unit:node": "node ./jest -- --test=node",
