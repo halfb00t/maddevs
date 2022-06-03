@@ -44,7 +44,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { messengers } from '@/data/messengers'
 import FooterSocialNetworks from '@/components/core/Footer/FooterSocialNetworks'
 import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
 
@@ -56,7 +55,6 @@ export default {
 
   data() {
     return {
-      messengers,
       mailLink: process.env.emailContact,
     }
   },

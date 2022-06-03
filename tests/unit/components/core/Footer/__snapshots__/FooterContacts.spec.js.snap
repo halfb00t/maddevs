@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterNavbarColumn should correct render component 1`] = `
+<div>
+  <div
+    class="footer-contacts"
+  >
+    <div
+      class="footer-contacts__head-content"
+    >
+      <div
+        class="footer-contacts__contact-item"
+      >
+        <p
+          class="footer-contacts__contact-title"
+        >
+          
+        email@email.com
+      
+        </p>
+         
+        <a
+          class="footer-contacts__contact-link footer-contacts__contact-mail"
+          href="mailto:sdf"
+        >
+          sdf
+      
+        </a>
+      </div>
+       
+      <div
+        class="footer-contacts__contact-item"
+      >
+        <div
+          class="footer-contacts__contact-title-wrapper"
+        >
+          <div
+            class="footer-contacts__contact-title-flag"
+          >
+            <img
+              alt="United Kingdom"
+              data-src="[object Object]"
+              height="14"
+              width="19"
+            />
+          </div>
+           
+          <p
+            class="footer-contacts__contact-title"
+          >
+            
+          sdf
+        
+          </p>
+        </div>
+         
+        <a
+          class="footer-contacts__contact-link footer-contacts__contact-phone-number"
+          href="tel:324324"
+        >
+          324324
+        </a>
+      </div>
+    </div>
+     
+    <div
+      class="footer-contacts__lists-wrapper"
+    >
+      <footersocialnetworks-stub />
+    </div>
+  </div>
+</div>
+`;
