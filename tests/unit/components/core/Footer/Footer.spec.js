@@ -6,18 +6,7 @@ import FooterNavbar from '@/components/core/Footer/FooterNavbar'
 import { footerNavigation } from './footerNavigationFixture'
 
 Object.defineProperty(global.document, 'querySelector', {
-  value: jest.fn(selector => {
-    if (selector === 'fire') {
-      return document.createElement('div')
-    }
-    if (selector === 'fire') {
-      return document.createElement('div')
-    }
-    if (selector === 'fire') {
-      return document.createElement('div')
-    }
-    return document.createElement('div')
-  }),
+  value: jest.fn(() => document.createElement('div')),
 })
 
 jest.mock('~/helpers/generatorUid')
