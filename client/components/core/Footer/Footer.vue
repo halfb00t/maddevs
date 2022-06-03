@@ -1,4 +1,4 @@
-<template v-if="footerStatus">
+<template>
   <footer :class="`footer ${pageName}`">
     <div class="container">
       <div
@@ -111,12 +111,6 @@ export default {
 
   computed: {
     ...mapGetters(['footerMainNavigation']),
-
-    iconIndent() {
-      if (this.activeIcon === 'diamond') return 10
-      if (this.activeIcon === 'lightning') return 20
-      return 10
-    },
   },
 
   created() {
