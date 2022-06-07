@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterNavbarColumn should correct render footer navbar 1`] = `
+<div>
+  <div
+    class="footer-menu"
+  >
+    <h5
+      class="footer-menu__name"
+    >
+      
+    Company
+  
+    </h5>
+     
+    <ul
+      class="footer-menu__list"
+    >
+      <li
+        class="footer-menu__item"
+      >
+        <div>
+          <nuxtlink-stub
+            class="footer-menu__item-link"
+            data-testid="menu-item-internal-link"
+            to="/about/"
+          >
+            
+          About Mad Devs
+        
+          </nuxtlink-stub>
+        </div>
+      </li>
+      <li
+        class="footer-menu__item"
+      >
+        <div>
+          <nuxtlink-stub
+            class="footer-menu__item-link"
+            data-testid="menu-item-internal-link"
+            to="/team/"
+          >
+            
+          Team
+        
+          </nuxtlink-stub>
+        </div>
+      </li>
+      <li
+        class="footer-menu__item"
+      >
+        <div>
+          <nuxtlink-stub
+            class="footer-menu__item-link"
+            data-testid="menu-item-internal-link"
+            to="/careers/"
+          >
+            
+          Careers
+        
+          </nuxtlink-stub>
+        </div>
+      </li>
+      <li
+        class="footer-menu__item"
+      >
+        <div>
+          <nuxtlink-stub
+            class="footer-menu__item-link"
+            data-testid="menu-item-internal-link"
+            to="/contact-us/"
+          >
+            
+          Contacts
+        
+          </nuxtlink-stub>
+        </div>
+      </li>
+      <li
+        class="footer-menu__item"
+      >
+        <div>
+          <nuxtlink-stub
+            class="footer-menu__item-link"
+            data-testid="menu-item-internal-link"
+            to="/faq/"
+          >
+            
+          FAQ
+        
+          </nuxtlink-stub>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
