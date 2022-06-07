@@ -9,8 +9,8 @@ exports[`BuildDevTeam renders correctly 1`] = `
   >
     <div
       image="img.png"
-      image-alt-text="Anatoliy Fedorenko"
-      man-name="Anatoliy Fedorenko"
+      image-alt-text="Tony Fedorenko"
+      man-name="Tony Fedorenko"
       man-position="Head of Delivery"
       text="Book a call with us and we’ll guide you through a structured process to assess the right solution for your business. You'll be talking to technical experts, not account managers."
       title="Let’s build or scale up your development team?"
