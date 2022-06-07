@@ -41,7 +41,7 @@ describe('FooterNavbarColumn', () => {
     expect(wrapper.vm.$options.props.menuName.default)
       .toEqual('')
   })
-  it('should correct send event from contact-us to analytic', async () => {
+  it('should correct send event to analytic (click to contact-us page)', async () => {
     render(FooterNavbarMenu, {
       propsData: props,
       stubs: {
@@ -53,7 +53,7 @@ describe('FooterNavbarColumn', () => {
     expect(contactsClick)
       .toHaveBeenCalledTimes(1)
   })
-  it('should correct send event from blog to analytic', async () => {
+  it('should correct send event to analytic (click to blog page)', async () => {
     render(FooterNavbarMenu, {
       propsData: props,
       stubs: {

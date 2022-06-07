@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FooterNavbarColumn should correct render footer navbar 1`] = `
+exports[`FooterNavbarColumn should correct render footer navbar menu 1`] = `
 <div>
   <div
     class="footer-menu"

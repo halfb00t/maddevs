@@ -116,7 +116,7 @@ describe('FooterNavbar component', () => {
   })
 
   it('should not redirect to oth page', async () => {
-    wrapper.vm.goTo('kek')
+    wrapper.vm.goTo('nonamepage')
     expect(mocks.$router.push)
       .toHaveBeenCalledTimes(0)
   })

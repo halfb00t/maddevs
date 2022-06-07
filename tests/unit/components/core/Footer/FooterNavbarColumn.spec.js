@@ -13,7 +13,7 @@ const props = {
   name: footerNavigation.company.name,
 }
 describe('FooterNavbarColumn', () => {
-  it('should correct render footer navbar', () => {
+  it('should correct render footer navbar column', () => {
     const { container } = render(FooterNavbarColumn, {
       stubs,
       props,
@@ -21,7 +21,7 @@ describe('FooterNavbarColumn', () => {
     expect(container)
       .toMatchSnapshot()
   })
-  it('should correct render without data', () => {
+  it('should correct render footer navbar column without data', () => {
     const wrapper = shallowMount(FooterNavbarColumn, {
       stubs,
       propsData: props,

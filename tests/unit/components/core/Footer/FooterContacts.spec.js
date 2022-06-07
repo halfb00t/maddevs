@@ -30,7 +30,7 @@ const phoneClick = jest.spyOn(phoneClickEvent, 'send')
   })
 
 describe('FooterNavbarColumn', () => {
-  it('should correct render component', () => {
+  it('should correct render footer contacts', () => {
     const { container } = render(FooterContacts, {
       stubs,
       store,
@@ -40,7 +40,7 @@ describe('FooterNavbarColumn', () => {
     expect(container)
       .toMatchSnapshot()
   })
-  it('should lkasdfj', () => {
+  it('should correct send event to analytic (click to email)', () => {
     const wrapper = shallowMount(FooterContacts, {
       stubs,
       store,
@@ -52,7 +52,7 @@ describe('FooterNavbarColumn', () => {
     expect(emailClick)
       .toHaveBeenCalledTimes(1)
   })
-  it('should lkasdasdf fj', () => {
+  it('should correct send event to analytic (click to phone)', () => {
     const wrapper = shallowMount(FooterContacts, {
       stubs,
       store,
