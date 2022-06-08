@@ -36,9 +36,15 @@ export default {
     },
   },
 
+  data() {
+    return {
+      maxLettersLength: 9,
+    }
+  },
+
   computed: {
     scaleTextIfLarge() {
-      if (this.title.length >= 9 && !this.title.includes(' ')) return { fontSize: '11.5px', width: '100%' }
+      if (this.title.length >= this.maxLettersLength && !this.title.includes(' ')) return { fontSize: '11.5px', width: '100%' }
       return null
     },
   },
