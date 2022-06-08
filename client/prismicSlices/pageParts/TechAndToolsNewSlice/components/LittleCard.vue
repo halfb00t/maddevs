@@ -44,7 +44,7 @@ export default {
 
   computed: {
     scaleTextIfLarge() {
-      if (this.title.length >= this.maxLettersLength && !this.title.includes(' ')) return { fontSize: '11.5px', width: '100%' }
+      if (this.title.length >= this.maxLettersLength && !this.title.includes(' ')) return { fontSize: '11px', width: '100%' }
       return null
     },
   },
