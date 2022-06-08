@@ -12,7 +12,9 @@
       class="technologies__little-card-icon"
     >
     <h3
+      v-if="title"
       class="technologies__little-card-title"
+      :style="scaleTextIfLarge"
     >
       {{ title }}
     </h3>
@@ -31,6 +33,13 @@ export default {
     title: {
       type: String,
       default: '',
+    },
+  },
+
+  computed: {
+    scaleTextIfLarge() {
+      if (this.title.length >= 9 && !this.title.includes(' ')) return { fontSize: '11.5px', width: '100%' }
+      return null
     },
   },
 }
@@ -59,8 +68,7 @@ export default {
 
   &-title {
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     width: 70%;
     text-align: center;
     position: absolute;
