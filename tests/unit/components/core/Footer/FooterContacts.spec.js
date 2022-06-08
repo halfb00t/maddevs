@@ -14,9 +14,9 @@ const store = new Vuex.Store({
   getters: {
     footerContacts: () => ({
       emailTitle: 'email@email.com',
-      email: 'sdf',
-      phoneNumberTitle: 'sdf',
-      phoneNumber: 324324,
+      email: 'testemail@email.com',
+      phoneNumberTitle: 'Call us:',
+      phoneNumber: '+442039848555',
     }),
   },
 })
