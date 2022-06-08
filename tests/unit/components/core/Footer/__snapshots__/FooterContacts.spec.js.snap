@@ -21,9 +21,9 @@ exports[`FooterNavbarColumn should correct render footer contacts 1`] = `
          
         <a
           class="footer-contacts__contact-link footer-contacts__contact-mail"
-          href="mailto:sdf"
+          href="mailto:testemail@email.com"
         >
-          sdf
+          testemail@email.com
       
         </a>
       </div>
@@ -49,16 +49,16 @@ exports[`FooterNavbarColumn should correct render footer contacts 1`] = `
             class="footer-contacts__contact-title"
           >
             
-          sdf
+          Call us:
         
           </p>
         </div>
          
         <a
           class="footer-contacts__contact-link footer-contacts__contact-phone-number"
-          href="tel:324324"
+          href="tel:+442039848555"
         >
-          324324
+          +442039848555
         </a>
       </div>
     </div>
