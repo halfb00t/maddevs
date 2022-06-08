@@ -1,74 +1,114 @@
-import 'regenerator-runtime'
-import { createLocalVue, shallowMount } from '@vue/test-utils'
-import Vuelidate from 'vuelidate'
-import { render, screen } from '@testing-library/vue'
+import { render } from '@testing-library/vue'
+import { createLocalVue, mount, shallowMount } from '@vue/test-utils'
+import Vuex from 'vuex'
 import Footer from '@/components/core/Footer/Footer'
+import FooterNavbar from '@/components/core/Footer/FooterNavbar'
+import { footerNavigation } from './footerNavigationFixture'
+
+Object.defineProperty(global.document, 'querySelector', {
+  value: jest.fn(() => document.createElement('div')),
+})
+
+jest.mock('~/helpers/generatorUid')
 
 const localVue = createLocalVue()
+localVue.use(Vuex)
 
-localVue.use(Vuelidate)
+const recipeMock = jest.fn()
+recipeMock.mockReturnValue('footerMainNavigation')
 
-const ROUTE = {
-  name: '/home',
-  path: '/home',
-}
-
-const TEST_ID = 'test-footer'
-const updateClassName = jest.fn()
-
-const stubs = ['NuxtLink', 'FooterContacts', 'FooterSocialNetworks']
+const store = new Vuex.Store({
+  getters: {
+    footerMainNavigation: () => footerNavigation,
+  },
+  actions: {
+    getFooterContent: () => jest.fn(),
+  },
+})
 
 describe('Footer component', () => {
-  global.$nuxt = {
-    $route: ROUTE,
-  }
+  afterEach(() => {
+    jest.clearAllMocks()
+  })
+  it('should correct render footer', () => {
+    const stubs = ['FooterNavbar', 'FooterContacts', 'FooterStaticNavigations']
 
-  it('should render correctly', () => {
     const { container } = render(Footer, {
-      localVue,
+      store,
       stubs,
-      $nuxt: {
-        $route: ROUTE,
-      },
+      localVue,
     })
-
-    expect(container).toMatchSnapshot()
+    expect(container)
+      .toMatchSnapshot()
   })
-
-  it('correctly sets the route when mounted', async () => {
-    await render(Footer, {
-      localVue,
+  it('should correct change company column', async () => {
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
+    const parent = mount(Footer, {
+      store,
       stubs,
+      localVue,
     })
 
-    const element = await screen.getByTestId('test-footer')
-    expect(element.className).toBe(`footer ${ROUTE.name}`)
+    await parent.findComponent(FooterNavbar)
+      .find('.footer-nav-column--company')
+      .trigger('mouseenter')
+    expect(spy)
+      .toHaveBeenCalledTimes(1)
   })
-
-  it('correctly call update class function from watcher', () => {
-    const wrapper = shallowMount(Footer, {
-      localVue,
+  it('should correct change services column', async () => {
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
+    const parent = mount(Footer, {
+      store,
       stubs,
+      localVue,
     })
 
-    wrapper.vm.$options.watch.$route.call({
-      updateClassName,
-    })
-
-    expect(updateClassName).toHaveBeenCalledTimes(1)
+    await parent.findComponent(FooterNavbar)
+      .find('.footer-nav-column--services')
+      .trigger('mouseenter')
+    expect(spy)
+      .toHaveBeenCalledTimes(1)
   })
-
-  it('should correctly with empty route', async () => {
-    global.$nuxt = {
-      $route: {
-      },
-    }
-    await render(Footer, {
-      localVue,
+  it('should correct change industries column', async () => {
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
+    const parent = mount(Footer, {
+      store,
       stubs,
+      localVue,
     })
 
-    const element = await screen.getByTestId(TEST_ID)
-    expect(element.className).toBe('footer ')
+    await parent.findComponent(FooterNavbar)
+      .find('.footer-nav-column--industries')
+      .trigger('mouseenter')
+    expect(spy)
+      .toHaveBeenCalledTimes(1)
+  })
+  it('should correct run getActiveIconByColumnName without column name', async () => {
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const parent = shallowMount(Footer, {
+      store,
+      stubs,
+      localVue,
+    })
+    expect(parent.vm.$options.methods.getActiveIconByColumnName.call())
+      .toEqual('')
+  })
+  it('should correct run onChangeColumn without columnName', async () => {
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
+    const parent = mount(Footer, {
+      store,
+      stubs,
+      localVue,
+    })
+
+    await parent.findComponent(FooterNavbar)
+      .find('.footer-navbar')
+      .trigger('mouseleave')
+    expect(spy)
+      .toHaveBeenCalledTimes(1)
   })
 })

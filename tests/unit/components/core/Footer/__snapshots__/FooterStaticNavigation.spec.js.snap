@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterNavbarColumn Should correct render footer static navigation in footer 1`] = `
+<div>
+  <div
+    class="footer-subnavbar"
+  >
+    <div
+      class="footer-subnavbar__nav-list footer-subnavbar__nav-list--pdf"
+    >
+      <a
+        class="footer-subnavbar__nav-list-item footer-subnavbar__nav-list-item--pdf"
+        href="https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-work-process.pdf"
+        target="_blank"
+      >
+        
+      Work process.pdf
+    
+      </a>
+      <a
+        class="footer-subnavbar__nav-list-item footer-subnavbar__nav-list-item--pdf"
+        href="https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-cooperation-models.pdf"
+        target="_blank"
+      >
+        
+      Cooperation models.pdf
+    
+      </a>
+      <a
+        class="footer-subnavbar__nav-list-item footer-subnavbar__nav-list-item--pdf"
+        href="https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-brand-book.pdf"
+        target="_blank"
+      >
+        
+      Brand Book.pdf
+    
+      </a>
+    </div>
+     
+    <div
+      class="footer-subnavbar-container"
+    >
+      <div
+        class="footer-subnavbar__nav-list footer-subnavbar__nav-list--pages"
+      >
+        <nuxtlink-stub
+          class="footer-subnavbar__nav-list-item footer-subnavbar__nav-list-item--pages"
+          target="_blank"
+          to="/gdpr/"
+        >
+          
+        GDPR Compliance Commitment
+      
+        </nuxtlink-stub>
+        <nuxtlink-stub
+          class="footer-subnavbar__nav-list-item footer-subnavbar__nav-list-item--pages"
+          target="_blank"
+          to="/nda/"
+        >
+          
+        Non-Disclosure Agreement (NDA)
+      
+        </nuxtlink-stub>
+      </div>
+       
+      <p
+        class="footer-subnavbar__company-name"
+      >
+        
+      © Mad Devs - 2022
+    
+      </p>
+    </div>
+  </div>
+</div>
+`;

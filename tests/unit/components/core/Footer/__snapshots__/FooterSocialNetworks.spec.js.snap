@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FooterSocialNetworks component should render correctly 1`] = `
+exports[`FooterNavbarColumn should correct render footer social networks 1`] = `
 <div>
   <ul
-    class="footerSocialNetworkList"
+    class="footer__social-network"
   >
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://github.com/maddevsio"
         target="_blank"
       >
@@ -22,10 +22,10 @@ exports[`FooterSocialNetworks component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://www.facebook.com/maddevsllc"
         target="_blank"
       >
@@ -38,10 +38,10 @@ exports[`FooterSocialNetworks component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://twitter.com/MadDevsIO"
         target="_blank"
       >
@@ -54,10 +54,10 @@ exports[`FooterSocialNetworks component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://www.linkedin.com/company/mad-devs"
         target="_blank"
       >
@@ -70,10 +70,10 @@ exports[`FooterSocialNetworks component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://www.instagram.com/maddevsio"
         target="_blank"
       >
@@ -86,10 +86,10 @@ exports[`FooterSocialNetworks component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://medium.com/maddevs-io"
         target="_blank"
       >
@@ -102,10 +102,10 @@ exports[`FooterSocialNetworks component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://www.behance.net/maddevs"
         target="_blank"
       >
@@ -118,10 +118,10 @@ exports[`FooterSocialNetworks component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         href="https://dev.to/maddevs"
         target="_blank"
       >
