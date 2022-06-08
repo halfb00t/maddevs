@@ -39,6 +39,8 @@ const IGNORE_ROUTES = [
   '/blog/mad-devs-ishet-golang-razrabotchika',
   '/mad-devs-ishet-golang-razrabotchika',
   '//success-and-faq',
+  '/about',
+  '//about',
 ]
 
 export const CUSTOM_PAGE_ROUTES = [
@@ -128,7 +130,7 @@ const getRoutes = async () => {
 
   /* Custom pages from production */
   const customPageRoutes = prismicPosts
-    .filter(post => post.type === 'custom_page' && post.data.released === true)
+    .filter(post => post.type === 'custom_page' && post.data.released === true && post.uid !== 'about')
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
   const routes = [
