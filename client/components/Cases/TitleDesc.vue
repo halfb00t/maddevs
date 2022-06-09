@@ -23,9 +23,9 @@ export default {
     margin-bottom: 47px;
   }
 
-  @media screen and (max-width: 375px) {
-    margin-top: 125px;
-    margin-bottom: 39px;
+  @media screen and (max-width: 430px) {
+    margin-top: 116px;
+    margin-bottom: 2px;
   }
 
   h1 {
@@ -51,17 +51,11 @@ export default {
       font-size: 60px;
     }
 
-    @media screen and (max-width: 375px) {
-      font-size: 48px;
-      line-height: 58px;
+    @media screen and (max-width: 430px) {
+      font-size: 28px;
+      line-height: 32px;
       letter-spacing: -0.05em;
-      margin-bottom: 14px;
-    }
-
-    @media screen and (max-width: 370px) {
-      font-size: 36px;
-      line-height: 52px;
-      letter-spacing: -0.05em;
+      margin-bottom: 0;
     }
   }
 
@@ -86,9 +80,8 @@ export default {
       line-height: 23px;
     }
 
-    @media screen and (max-width: 375px) {
-      font-size: 18px;
-      line-height: 22px;
+    @media screen and (max-width: 430px) {
+      display: none;
     }
   }
 }

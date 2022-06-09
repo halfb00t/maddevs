@@ -62,6 +62,18 @@
           <NuxtLink :to="link">
             Explore
           </NuxtLink>
+          <div class="video-slice-info-text-content">
+            <span>{{ subtitle }}</span>
+            <h2>
+              {{ title }}
+            </h2>
+            <p>
+              {{ description }}
+            </p>
+            <NuxtLink :to="link">
+              Explore
+            </NuxtLink>
+          </div>
         </div>
       <!-- END Card info -->
       </NuxtLink>
@@ -166,8 +178,8 @@ export default {
     text-align: left;
     z-index: 1;
 
-    @media screen and (max-width: 375px) {
-      padding: 24px;
+    @media screen and (max-width: 430px) {
+      padding: 20px 24px 20px 20px;
     }
 
     &::before {
@@ -232,8 +244,10 @@ export default {
     }
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 430px) {
     grid-column: auto / span 4 !important;
+    max-height: 230px;
+    border-radius: 4px;
   }
 
   &-video {
@@ -260,7 +274,8 @@ export default {
     }
   }
 
-  &-info {
+  &-info,
+  &-info-text-content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -280,10 +295,18 @@ export default {
       max-width: 105px;
       height: auto;
       margin-bottom: auto;
+
+      @media screen and (max-width: 430px) {
+        max-width: 68px;
+      }
     }
 
     &-peklo-logo {
       max-width: 80px;
+
+      @media screen and (max-width: 430px) {
+        max-width: 68px;
+      }
     }
 
     > span {
@@ -301,10 +324,6 @@ export default {
       letter-spacing: -0.04em;
       font-weight: bold;
       line-height: 100%;
-
-      @media screen and (max-width: 375px) {
-        font-size: 32px;
-      }
     }
 
     p {
@@ -347,9 +366,51 @@ export default {
         padding: 8px;
         margin-top: 20px;
       }
+    }
 
-      @media screen and (max-width: 375px) {
-        font-size: 14px;
+    @media screen and (max-width: 430px) {
+      > span,
+      h2, h3,
+      p,
+      > a {
+        display: none;
+      }
+    }
+  }
+
+  &-info-text-content {
+    display: none;
+    @media screen and (max-width: 430px) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-end;
+      align-content: flex-end;
+      width: 100%;
+
+      h2, h3 {
+        font-size: 22px;
+        line-height: 26.63px;
+        max-width: 210px;
+        display: block;
+      }
+
+      > span {
+        width: 100%;
+        font-size: 7px;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      > a {
+        font-size: 11px;
+        line-height: 21px;
+        padding: 2px 10px;
+        display: grid;
+        place-items: center;
+        width: 37px;
+        height: 21px;
       }
     }
   }
