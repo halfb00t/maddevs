@@ -179,7 +179,7 @@ export default {
         text-align: left;
       }
     }
-    /deep/ p {
+    ::v-deep p {
       text-align: center;
 
       @media screen and (max-width: 1024px) {
@@ -229,7 +229,7 @@ export default {
       line-height: 23.8px;
     }
 
-    /deep/ p {
+    ::v-deep p {
       margin-top: 40px;
 
       @media screen and (max-width: 430px) {
@@ -237,7 +237,7 @@ export default {
       }
     }
 
-    /deep/ li {
+    ::v-deep li {
       font-weight: 400;
       margin-top: 7px;
 
@@ -246,7 +246,7 @@ export default {
       }
     }
 
-    /deep/ ul {
+    ::v-deep ul {
       li {
         &:before {
           content: '';

@@ -131,7 +131,7 @@ export default {
       grid-column: auto;
     }
 
-    /deep/ .card-item__button {
+    ::v-deep .card-item__button {
       align-self: center;
       @media screen and (max-width: 1024px) {
         align-self: flex-start;
@@ -140,7 +140,7 @@ export default {
   }
 
   &--text-center {
-    /deep/ .card-item__content {
+    ::v-deep .card-item__content {
       align-self: center;
       text-align: center;
 
@@ -153,7 +153,7 @@ export default {
 
   &--lottie-bottom {
     padding-bottom: 0;
-    /deep/ .card-item {
+    ::v-deep .card-item {
       &__content {
         order: 1;
         font-size: 40px;
@@ -190,7 +190,7 @@ export default {
   }
 
   &:hover {
-    /deep/ .card-item__button {
+    ::v-deep .card-item__button {
       background-color: $text-color--white-primary;
       color: $text-color--black-oil;
     }
@@ -237,6 +237,9 @@ export default {
 
   &__button {
     order: 3;
+  }
+
+  ::v-deep .ui-arrow-button {
     @media screen and (max-width: 430px) {
       width: 30px;
       min-width: 30px;
