@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom logo slice should render correctly with data 1`] = `
+<div>
+  <section
+    class="customer-logo-slice"
+    style="background-color: rgb(17, 18, 19);"
+  >
+    <div
+      class="container aos-init aos-animate"
+      data-aos="fade-up"
+    >
+      <div
+        class="customer-logo-slice_list aos-init aos-animate"
+        data-aos="fade-up"
+        data-testid="customer-logo-slice-container"
+      >
+        <div
+          class="customer-logo-slice_logo"
+          data-testid="customer-logo-slice-item"
+        >
+          <img
+            alt="Test"
+            data-src="https://superpupertest.cdn.prismic.io/superpupertest/8829fbb2-90af-4ded-913c-d503046e5ae7_clutch-black.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
