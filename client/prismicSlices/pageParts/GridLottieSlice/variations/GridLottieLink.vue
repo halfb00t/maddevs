@@ -118,6 +118,13 @@ export default {
     }
   }
 
+  @media screen and (max-width: 430px) {
+    padding: 24px;
+    &--lottie-bottom {
+      padding-bottom: 0;
+    }
+  }
+
   &--full-width {
     grid-column: auto/span 2;
     @media screen and (max-width: 1024px) {
@@ -159,6 +166,11 @@ export default {
           font-size: 30px;
           line-height: 37px;
         }
+
+        @media screen and (max-width: 430px) {
+          font-size: 22px;
+          line-height: 26.63px;
+        }
       }
       &__button {
         order: 2;
@@ -168,6 +180,10 @@ export default {
         margin: 0 auto;
         @media screen and (max-width: 1024px) {
           margin-top: 56px;
+        }
+
+        @media screen and (max-width: 430px) {
+          margin-top: 24px;
         }
       }
     }
@@ -189,6 +205,10 @@ export default {
     @media screen and (max-width: 580px) {
       margin-bottom: 40px;
     }
+
+    @media screen and (max-width: 430px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__content {
@@ -208,10 +228,21 @@ export default {
       font-size: 30px;
       line-height: 37px;
     }
+
+    @media screen and (max-width: 430px) {
+      font-size: 22px;
+      line-height: 26.63px;
+    }
   }
 
   &__button {
     order: 3;
+    @media screen and (max-width: 430px) {
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      margin-top: 24px;
+    }
   }
 }
 </style>

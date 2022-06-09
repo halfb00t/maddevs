@@ -126,6 +126,16 @@ export default {
     }
   }
 
+  @media screen and (max-width: 430px) {
+    padding: 24px;
+    &-bottom{
+      padding-bottom: 0;
+    }
+    &--without-lottie {
+      padding-bottom: 24px;
+    }
+  }
+
   &--full-width {
     grid-column: auto/span 2;
 
@@ -139,10 +149,20 @@ export default {
     height: 95px;
     margin-bottom: 60px;
     grid-area: lottie;
-    &-bottom{
+
+    @media screen and (max-width: 430px) {
+      margin-bottom: 24px;
+      height: 75px !important;
+    }
+
+    &-bottom {
       max-width: 689px;
       height: auto;
       margin: 40px auto 0;
+
+      @media screen and (max-width: 430px) {
+        height: 85px !important;
+      }
 
       @media screen and (max-width: 343px) {
         width: 289px;
@@ -179,6 +199,11 @@ export default {
       font-size: 30px;
       line-height: 37px;
     }
+
+    @media screen and (max-width: 430px) {
+      font-size: 22px;
+      line-height: 26.63px;
+    }
   }
 
   &__content {
@@ -199,8 +224,17 @@ export default {
       line-height: 30px;
     }
 
+    @media screen and (max-width: 430px) {
+      font-size: 16px;
+      line-height: 23.8px;
+    }
+
     /deep/ p {
       margin-top: 40px;
+
+      @media screen and (max-width: 430px) {
+        margin-top: 16px;
+      }
     }
 
     /deep/ li {
