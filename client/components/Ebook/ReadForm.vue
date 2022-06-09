@@ -157,11 +157,11 @@ export default {
       ebookSubmitFormEvent.send()
 
       this.$emit('form-sended', { email: this.email, name: this.name })
+      this.$refs.checkbox.reset()
     },
 
     reset() {
       this.$v.$reset() // Reset validation form
-      this.$refs.checkbox.reset()
       this.name = ''
       this.email = ''
     },

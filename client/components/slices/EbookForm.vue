@@ -168,12 +168,12 @@ export default {
         The letter with the PDF file was successfully sent to mail ${this.email}.
         <br><br> Please check your email.
       `
+      this.$refs.checkbox.reset()
       this.formSended = true
     },
 
     reset() {
       this.$v.$reset() // Reset validation form
-      this.$refs.checkbox.reset()
       this.name = ''
       this.email = ''
     },
