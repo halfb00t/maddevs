@@ -20,7 +20,6 @@ export const actions = {
 
 export const getters = {
   sortedCursomersByPriority(state) {
-    console.log(state.customers)
     return state.customers
   },
 }
