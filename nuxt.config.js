@@ -43,6 +43,14 @@ export default () => ({
     script: [
       { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', defer: true, body: true },
       { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, defer: true, body: true },
+      {
+        src: '//js-na1.hs-scripts.com/22003500.js',
+        defer: true,
+        body: true,
+        async: true,
+        id: 'hs-script-loader',
+        type: 'text/javascript',
+      },
     ],
   },
   /*
