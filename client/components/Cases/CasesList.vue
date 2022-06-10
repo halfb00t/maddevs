@@ -122,8 +122,8 @@ export default {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media screen and (max-width: 375px) {
-    gap: 8px;
+  @media screen and (max-width: 430px) {
+    gap: 24px;
   }
 
   &_card {
@@ -275,8 +275,8 @@ export default {
   justify-self: start;
   padding-bottom: 120px;
 
-  @media screen and (max-width: 375px) {
-    padding: 0;
+  @media screen and (max-width: 430px) {
+    padding: 22px 22px 48px;
   }
 }
 
