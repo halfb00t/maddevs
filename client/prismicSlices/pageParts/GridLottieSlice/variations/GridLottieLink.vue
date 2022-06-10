@@ -118,13 +118,20 @@ export default {
     }
   }
 
+  @media screen and (max-width: 430px) {
+    padding: 24px;
+    &--lottie-bottom {
+      padding-bottom: 0;
+    }
+  }
+
   &--full-width {
     grid-column: auto/span 2;
     @media screen and (max-width: 1024px) {
       grid-column: auto;
     }
 
-    /deep/ .card-item__button {
+    ::v-deep .card-item__button {
       align-self: center;
       @media screen and (max-width: 1024px) {
         align-self: flex-start;
@@ -133,7 +140,7 @@ export default {
   }
 
   &--text-center {
-    /deep/ .card-item__content {
+    ::v-deep .card-item__content {
       align-self: center;
       text-align: center;
 
@@ -146,7 +153,7 @@ export default {
 
   &--lottie-bottom {
     padding-bottom: 0;
-    /deep/ .card-item {
+    ::v-deep .card-item {
       &__content {
         order: 1;
         font-size: 40px;
@@ -159,6 +166,11 @@ export default {
           font-size: 30px;
           line-height: 37px;
         }
+
+        @media screen and (max-width: 430px) {
+          font-size: 22px;
+          line-height: 26.63px;
+        }
       }
       &__button {
         order: 2;
@@ -169,12 +181,16 @@ export default {
         @media screen and (max-width: 1024px) {
           margin-top: 56px;
         }
+
+        @media screen and (max-width: 430px) {
+          margin-top: 24px;
+        }
       }
     }
   }
 
   &:hover {
-    /deep/ .card-item__button {
+    ::v-deep .card-item__button {
       background-color: $text-color--white-primary;
       color: $text-color--black-oil;
     }
@@ -188,6 +204,10 @@ export default {
     margin-bottom: 60px;
     @media screen and (max-width: 580px) {
       margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: 430px) {
+      margin-bottom: 24px;
     }
   }
 
@@ -208,10 +228,24 @@ export default {
       font-size: 30px;
       line-height: 37px;
     }
+
+    @media screen and (max-width: 430px) {
+      font-size: 22px;
+      line-height: 26.63px;
+    }
   }
 
   &__button {
     order: 3;
+  }
+
+  ::v-deep .ui-arrow-button {
+    @media screen and (max-width: 430px) {
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      margin-top: 24px;
+    }
   }
 }
 </style>
