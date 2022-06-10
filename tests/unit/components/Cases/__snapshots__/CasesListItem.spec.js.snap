@@ -64,6 +64,32 @@ exports[`CasesListItem component should render correctly 1`] = `
         Explore
       
         </nuxtlink-stub>
+         
+        <div
+          class="cases-list_item-text-content"
+        >
+          <span>
+            Test test
+          </span>
+           
+          <h3>
+            
+          test
+        
+          </h3>
+           
+          <p>
+            test test
+          </p>
+           
+          <nuxtlink-stub
+            to="/"
+          >
+            
+          Explore
+        
+          </nuxtlink-stub>
+        </div>
       </div>
     </nuxtlink-stub>
   </div>
