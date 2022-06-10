@@ -15,7 +15,7 @@
         class="modal-content__img"
         width="110"
         height="155"
-        data-src="@/assets/img/Ebook/book.svg"
+        :data-src="ebookImage"
         alt="Pricing strategies"
       >
       <h2 class="modal-content__title">
@@ -25,6 +25,8 @@
         id="modal-ebook"
         :ebook-path="ebookPath"
         :book-name="bookName"
+        :book-image="ebookImage"
+        :send-pulse-template-id="sendPulseTemplateId"
         @form-sended="handleSendedForm"
       />
     </div>
@@ -74,6 +76,16 @@ export default {
     bookName: {
       type: String,
       default: '',
+    },
+
+    ebookImage: {
+      type: String,
+      default: '',
+    },
+
+    sendPulseTemplateId: {
+      type: Number,
+      default: null,
     },
   },
 
@@ -148,6 +160,7 @@ export default {
     &_head {
       padding: 0;
     }
+
     &_content {
       padding: 0;
       max-height: 80vh;

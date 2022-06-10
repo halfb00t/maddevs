@@ -162,8 +162,7 @@
               "download-pdf",
               "contact-me",
               "order-project"
-            ],
-            "default_value": "download-pdf"
+            ]
           },
           "type": "Select"
         },
@@ -180,6 +179,21 @@
             "placeholder": "Like: Pricing Strategies"
           },
           "type": "Text"
+        },
+        "ebookImage": {
+          "config": {
+            "label": "Book Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "sendPulseTemplateId": {
+          "config": {
+            "label": "SendPulse Template ID",
+            "placeholder": "Numbers from SendPulse template URL"
+          },
+          "type": "Number"
         }
       },
       "items": {}
