@@ -757,11 +757,17 @@
           }
         }
       }
+    },
+    "CustomersSlice": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
     "singleimage": {},
     "custom-page": {},
-    "video-block": {}
+    "video-block": {},
+    "customers": {}
   }
 }
