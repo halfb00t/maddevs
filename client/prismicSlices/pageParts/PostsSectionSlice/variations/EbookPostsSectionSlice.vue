@@ -181,15 +181,15 @@ export default {
 
   &__wrapper {
     @include grid(repeat(3, 1fr), auto, 24px, 24px);
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     @media screen and (max-width: 768px) {
       @include grid(repeat(2, 1fr), auto, 24px, 24px);
-      margin-bottom: 32px;
+      padding-bottom: 32px;
     }
 
     @media screen and (max-width: 580px) {
       @include grid(repeat(1, 1fr), auto, 0px, 48px);
-      margin-bottom: 48px;
+      padding-bottom: 48px;
     }
   }
 
