@@ -1,10 +1,10 @@
 <template>
   <ol
-    v-if="crumbs.length"
     itemscope
     itemtype="https://schema.org/BreadcrumbList"
   >
     <li
+      v-if="crumbs.length"
       itemprop="itemListElement"
       itemscope
       itemtype="http://schema.org/ListItem"
