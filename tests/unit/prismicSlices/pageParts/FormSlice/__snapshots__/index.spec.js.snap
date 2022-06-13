@@ -25,6 +25,7 @@ exports[`FormSlice component should correctly render FormSlice component 1`] = `
           bookname="Test book"
           class="form-slice__item"
           ebookpath="pdf/test-book.pdf"
+          sendpulsetemplateid="763889"
         />
          
         <div

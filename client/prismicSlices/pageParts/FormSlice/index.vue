@@ -20,6 +20,7 @@
           class="form-slice__item"
           :ebook-path="bookPath"
           :book-name="bookName"
+          :send-pulse-template-id="sendPulseTemplateId"
         />
         <div class="form-slice__item-img">
           <img
@@ -64,6 +65,7 @@ export default {
       bookName: this.slice?.primary?.bookName,
       animation: this.slice?.primary.animation,
       containerSize: this.slice?.primary?.containerSize,
+      sendPulseTemplateId: this.slice?.primary?.sendPulseTemplateId,
     }
   },
 
