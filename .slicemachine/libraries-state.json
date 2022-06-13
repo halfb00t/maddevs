@@ -127,7 +127,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/AccordionSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/AccordionSlice/default-slice/preview.png",
             "width": 729,
             "height": 381
           }
@@ -528,6 +528,17 @@
                   },
                   "type": "Select"
                 },
+                "textColor": {
+                  "config": {
+                    "label": "Text Color",
+                    "placeholder": "",
+                    "options": [
+                      "black",
+                      "white"
+                    ]
+                  },
+                  "type": "Select"
+                },
                 "title": {
                   "config": {
                     "label": "Title",
@@ -536,13 +547,6 @@
                     "single": "heading2,heading3,heading4,heading5,heading6"
                   },
                   "type": "StructuredText"
-                },
-                "titleColor": {
-                  "config": {
-                    "label": "Text color for title",
-                    "placeholder": ""
-                  },
-                  "type": "Color"
                 },
                 "description": {
                   "config": {
@@ -568,14 +572,6 @@
                   },
                   "type": "Link"
                 },
-                "image": {
-                  "config": {
-                    "label": "Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  },
-                  "type": "Image"
-                },
                 "buttonBgColor": {
                   "config": {
                     "label": "Button background color",
@@ -587,6 +583,27 @@
                     ]
                   },
                   "type": "Select"
+                },
+                "buttonTextColor": {
+                  "config": {
+                    "label": "Button Text Color",
+                    "placeholder": "",
+                    "options": [
+                      "grey",
+                      "white",
+                      "black"
+                    ],
+                    "default_value": "grey"
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
                 }
               },
               "items": {}
@@ -600,29 +617,31 @@
             "slice_type": "build_and_risks_slice",
             "items": [],
             "primary": {
-              "animation": "fade-right",
-              "outerBgColor": "silver",
-              "backgroundColor": "blue",
+              "animation": "fade-up",
+              "outerBgColor": "black",
+              "backgroundColor": "white",
+              "textColor": "black",
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Grow viral web-readiness",
+                  "text": "Deploy e-business architectures",
                   "spans": []
                 }
               ],
-              "titleColor": "#c40026",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Nostrud dolore veniam qui. Minim enim duis sit deserunt officia proident velit excepteur mollit id ex.",
+                  "text": "Id Lorem consequat Lorem pariatur occaecat enim.",
                   "spans": []
                 }
               ],
-              "buttonText": "whiteboard clicks-and-mortar bandwidth",
+              "buttonText": "unleash end-to-end e-services",
               "buttonLink": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "https://slicemachine.dev"
               },
+              "buttonBgColor": "black",
+              "buttonTextColor": "grey",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -630,9 +649,8 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
-              },
-              "buttonBgColor": "red"
+                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+              }
             }
           }
         },
@@ -643,7 +661,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/BuildAndRisksSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/BuildAndRisksSlice/default-slice/preview.png",
             "width": 1630,
             "height": 964
           }
@@ -1023,17 +1041,17 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ButtonSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/default-slice/preview.png",
             "width": 703,
             "height": 147
           },
           "outlinedButton": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ButtonSlice/outlinedButton/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/outlinedButton/preview.png",
             "width": 703,
             "height": 72
           },
           "linkButton": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ButtonSlice/linkButton/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/linkButton/preview.png",
             "width": 703,
             "height": 72
           }
@@ -1875,12 +1893,12 @@
         },
         "screenshotPaths": {
           "richTextCardsAnimation": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardGridSlice/richTextCardsAnimation/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsAnimation/preview.png",
             "width": 847,
             "height": 667
           },
           "richTextCardsBottomAnimation": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardGridSlice/richTextCardsBottomAnimation/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsBottomAnimation/preview.png",
             "width": 880,
             "height": 437
           }
@@ -1997,7 +2015,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardWithImageSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardWithImageSlice/default-slice/preview.png",
             "width": 844,
             "height": 348
           }
@@ -2201,7 +2219,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CardsWithIcon/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardsWithIcon/default-slice/preview.png",
             "width": 589,
             "height": 418
           }
@@ -2419,7 +2437,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CaseListSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CaseListSlice/default-slice/preview.png",
             "width": 561,
             "height": 553
           }
@@ -2556,7 +2574,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CasesListSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CasesListSlice/default-slice/preview.png",
             "width": 443,
             "height": 599
           }
@@ -2625,7 +2643,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/.slicemachine/assets/client/prismicSlices/pageParts/ContactsSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/ContactsSlice/default-slice/preview.png",
             "width": 1200,
             "height": 858
           }
@@ -2708,7 +2726,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/.slicemachine/assets/client/prismicSlices/pageParts/CreateProjectsSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/CreateProjectsSlice/default-slice/preview.png",
             "width": 1200,
             "height": 428
           }
@@ -2861,7 +2879,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CtaBannerSlice/default/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CtaBannerSlice/default/preview.png",
             "width": 703,
             "height": 356
           }
@@ -3006,7 +3024,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerLogoSlice/default/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerLogoSlice/default/preview.png",
             "width": 351,
             "height": 381
           }
@@ -3103,7 +3121,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerRatesSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerRatesSlice/default-slice/preview.png",
             "width": 854,
             "height": 381
           }
@@ -3229,12 +3247,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerTestimonials/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/default-slice/preview.png",
             "width": 778,
             "height": 463
           },
           "testimonialsSecondVariation": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/CustomerTestimonials/testimonialsSecondVariation/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/testimonialsSecondVariation/preview.png",
             "width": 1037,
             "height": 616
           }
@@ -3388,7 +3406,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/DescriptionSliceWithIcon/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/DescriptionSliceWithIcon/default-slice/preview.png",
             "width": 1014,
             "height": 528
           }
@@ -3543,7 +3561,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/EbookPageCardsSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/EbookPageCardsSlice/default-slice/preview.png",
             "width": 696,
             "height": 449
           }
@@ -3737,7 +3755,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/EmbedSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/EmbedSlice/default-slice/preview.png",
             "width": 1438,
             "height": 438
           }
@@ -3869,7 +3887,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/FormSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/FormSlice/default-slice/preview.png",
             "width": 807,
             "height": 465
           }
@@ -4446,17 +4464,17 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/GridLottieSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/default-slice/preview.png",
             "width": 630,
             "height": 782
           },
           "gridLottieLink": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/GridLottieSlice/gridLottieLink/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/gridLottieLink/preview.png",
             "width": 361,
             "height": 653
           },
           "gridWithAnimationOptionSlice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/GridLottieSlice/gridWithAnimationOptionSlice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/gridWithAnimationOptionSlice/preview.png",
             "width": 752,
             "height": 556
           }
@@ -4636,7 +4654,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ImageWithCaption/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ImageWithCaption/default-slice/preview.png",
             "width": 1313,
             "height": 707
           }
@@ -4941,17 +4959,17 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/KeyMetricsSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/default-slice/preview.png",
             "width": 937,
             "height": 719
           },
           "secondVariation": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/KeyMetricsSlice/secondVariation/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/secondVariation/preview.png",
             "width": 517,
             "height": 360
           },
           "thirdVariation": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/KeyMetricsSlice/thirdVariation/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/thirdVariation/preview.png",
             "width": 517,
             "height": 360
           }
@@ -5104,7 +5122,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/NavLinkSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/NavLinkSlice/default-slice/preview.png",
             "width": 323,
             "height": 38
           }
@@ -5351,12 +5369,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/PostsSectionSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PostsSectionSlice/default-slice/preview.png",
             "width": 1291,
             "height": 544
           },
           "ebookPostsSectionSlice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/PostsSectionSlice/ebookPostsSectionSlice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PostsSectionSlice/ebookPostsSectionSlice/preview.png",
             "width": 596,
             "height": 539
           }
@@ -5643,7 +5661,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/PressCenter/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PressCenter/default-slice/preview.png",
             "width": 2574,
             "height": 1116
           }
@@ -5850,7 +5868,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ProgressSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ProgressSlice/default-slice/preview.png",
             "width": 1502,
             "height": 557
           }
@@ -5954,7 +5972,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/ProjectStartSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ProjectStartSlice/default-slice/preview.png",
             "width": 836,
             "height": 740
           }
@@ -6068,7 +6086,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/QuickProjectStart/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/QuickProjectStart/default-slice/preview.png",
             "width": 836,
             "height": 740
           }
@@ -6276,7 +6294,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/SingleImage/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/SingleImage/default-slice/preview.png",
             "width": 797,
             "height": 391
           }
@@ -6374,7 +6392,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/SpacerSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/SpacerSlice/default-slice/preview.png",
             "width": 200,
             "height": 200
           }
@@ -6655,12 +6673,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/StartScreen/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/StartScreen/default-slice/preview.png",
             "width": 2880,
             "height": 1492
           },
           "startScreenImageRightAndButton": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/StartScreen/startScreenImageRightAndButton/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/StartScreen/startScreenImageRightAndButton/preview.png",
             "width": 790,
             "height": 417
           }
@@ -6833,7 +6851,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TeamCards/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TeamCards/default-slice/preview.png",
             "width": 1247,
             "height": 845
           }
@@ -7371,22 +7389,22 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechAndToolsNewSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/default-slice/preview.png",
             "width": 1275,
             "height": 459
           },
           "threeBigCards": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechAndToolsNewSlice/threeBigCards/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/threeBigCards/preview.png",
             "width": 1216,
             "height": 424
           },
           "twoBigCards": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechAndToolsNewSlice/twoBigCards/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/twoBigCards/preview.png",
             "width": 725,
             "height": 202
           },
           "oneBigCard": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechAndToolsNewSlice/oneBigCard/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/oneBigCard/preview.png",
             "width": 709,
             "height": 161
           }
@@ -7680,12 +7698,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechnologiesAndTools/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/default-slice/preview.png",
             "width": 1294,
             "height": 756
           },
           "toolsGrid": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechnologiesAndTools/toolsGrid/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/toolsGrid/preview.png",
             "width": 1259,
             "height": 245
           }
@@ -7762,7 +7780,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TechnologiesSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesSlice/default-slice/preview.png",
             "width": 1294,
             "height": 756
           }
@@ -7881,12 +7899,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextList/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextList/default-slice/preview.png",
             "width": 822,
             "height": 454
           },
           "twoColumnsList": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextList/twoColumnsList/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextList/twoColumnsList/preview.png",
             "width": 867,
             "height": 401
           }
@@ -8747,17 +8765,17 @@
         },
         "screenshotPaths": {
           "title": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextSlice/title/preview.jpeg",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/title/preview.jpeg",
             "width": 413,
             "height": 98
           },
           "paragraph": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextSlice/paragraph/preview.jpeg",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/paragraph/preview.jpeg",
             "width": 484,
             "height": 105
           },
           "flexibleParagraph": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TextSlice/flexibleParagraph/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/flexibleParagraph/preview.png",
             "width": 1166,
             "height": 292
           }
@@ -8843,7 +8861,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/TitleAndParagraphSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TitleAndParagraphSlice/default-slice/preview.png",
             "width": 1478,
             "height": 646
           }
@@ -9027,7 +9045,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/client/prismicSlices/pageParts/VideoSlice/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/VideoSlice/default-slice/preview.png",
             "width": 1089,
             "height": 538
           }
@@ -9122,7 +9140,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/railbatyrshin/Desktop/work/maddevs.nosync/.slicemachine/assets/client/prismicSlices/pageParts/WeCreateProjectsFor/default-slice/preview.png",
+            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/WeCreateProjectsFor/default-slice/preview.png",
             "width": 1200,
             "height": 428
           }
