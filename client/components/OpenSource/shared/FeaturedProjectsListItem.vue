@@ -87,6 +87,17 @@ export default {
     width: 100%;
     height: 100%;
     padding: 67px 60px 45px;
+
+    @media screen and (max-width: 430px) {
+      padding: 24px;
+
+      ::v-deep .ui-arrow-button {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        margin-top: 16px;
+      }
+    }
   }
   &-info {
     h3 {
@@ -103,6 +114,25 @@ export default {
       line-height: 25px;
       letter-spacing: -0.013em;
       color: $text-color--silver;
+    }
+
+    @media screen and (max-width: 430px) {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      h3 {
+        font-size: 22px;
+        line-height: 26.63px;
+        margin-top: 16px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 4px;
+      }
     }
   }
 }

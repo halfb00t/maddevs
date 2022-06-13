@@ -76,6 +76,16 @@ export default {
       type: String,
       required: true,
     },
+
+    ebookImage: {
+      type: String,
+      default: '',
+    },
+
+    sendPulseTemplateId: {
+      type: Number,
+      default: 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
+    },
   },
 
   data() {
@@ -125,7 +135,7 @@ export default {
       const requestSender = {
         body: {
           email: {
-            templateId: 763889, // Required
+            templateId: Number(this.sendPulseTemplateId) || 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
             variables: {
               subject: `Your ${this.bookName} Ebook by Mad Devs`,
               emailTo: this.email,

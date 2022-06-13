@@ -76,6 +76,13 @@
             "placeholder": "Like: Pricing Strategies"
           },
           "type": "Text"
+        },
+        "sendPulseTemplateId": {
+          "config": {
+            "label": "SendPulse Template ID",
+            "placeholder": "Numbers from SendPulse template URL"
+          },
+          "type": "Number"
         }
       },
       "items": {}
