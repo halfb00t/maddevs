@@ -79,8 +79,8 @@ export default {
     },
 
     ebookImage: {
-      type: String,
-      default: '',
+      type: Object,
+      required: true,
     },
 
     sendPulseTemplateId: {

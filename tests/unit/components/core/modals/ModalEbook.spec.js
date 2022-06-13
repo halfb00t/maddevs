@@ -9,6 +9,13 @@ const directives = {
 
 jest.mock('~/helpers/generatorUid')
 
+const props = {
+  ebookImage: {
+    url: 'img.jpg',
+    alt: 'Image',
+  },
+}
+
 describe('ModalEbook component', () => {
   let wrapper = null
   let mockShow = null
@@ -18,6 +25,7 @@ describe('ModalEbook component', () => {
   beforeEach(() => {
     wrapper = shallowMount(ModalEbook, {
       directives,
+      propsData: props,
     })
     mockShow = jest.fn()
     mockClose = jest.fn()
@@ -37,6 +45,7 @@ describe('ModalEbook component', () => {
   it('if call method "show" and ref modalEbook is undefined > "show" method in ref modalEbook not call', () => {
     wrapper = shallowMount(ModalEbook, {
       directives,
+      propsData: props,
     })
     wrapper.vm.show()
     expect(mockShow)
@@ -57,6 +66,7 @@ describe('ModalEbook component', () => {
         },
       },
       directives,
+      propsData: props,
     })
     wrapper.vm.show()
     expect(mockShow)
@@ -66,6 +76,7 @@ describe('ModalEbook component', () => {
   it('if call method "close" and ref modalEbook is undefined > "close" method in ref modalEbook not call', () => {
     wrapper = shallowMount(ModalEbook, {
       directives,
+      propsData: props,
     })
     wrapper.vm.close()
     expect(mockClose)
@@ -76,6 +87,7 @@ describe('ModalEbook component', () => {
   it('Should correct call handleSendedForm method', () => {
     wrapper = shallowMount(ModalEbook, {
       directives,
+      propsData: props,
     })
     wrapper.vm.handleSendedForm({ email: 'testemail@test.test' })
     expect(mockHandleSendedForm)
@@ -96,6 +108,7 @@ describe('ModalEbook component', () => {
         },
       },
       directives,
+      propsData: props,
     })
     wrapper.vm.close()
     expect(mockClose)

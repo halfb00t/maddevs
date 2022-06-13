@@ -22,9 +22,9 @@ exports[`FormSlice component should correctly render FormSlice component 1`] = `
         data-aos="fade-up"
       >
         <ebookform-stub
-          bookname="Test book"
           class="form-slice__item"
-          ebookpath="pdf/test-book.pdf"
+          ebookname="Pricing Strategies"
+          ebookpath=""
           sendpulsetemplateid="763889"
         />
          
