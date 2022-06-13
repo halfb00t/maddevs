@@ -3258,6 +3258,81 @@
           }
         }
       },
+      "customers_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "customers_slice",
+        "name": "CustomersSlice",
+        "description": "CustomersSlice",
+        "model": {
+          "id": "customers_slice",
+          "type": "SharedSlice",
+          "name": "CustomersSlice",
+          "description": "CustomersSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CustomersSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "background": {
+                  "config": {
+                    "label": "Background color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "grey"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "customers_slice",
+            "items": [],
+            "primary": {
+              "animation": "zoom-in-down",
+              "background": "white"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "description_slice_with_icon": {
         "library": "client/prismicSlices/pageParts",
         "id": "description_slice_with_icon",

@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Crumbs component should correctly hide data, when length of array less than 2 1`] = `
-<ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
-  <!---->
-</ol>
-`;
+exports[`Crumbs component should correctly hide data, when length of array less than 2 1`] = ``;
 
 exports[`Crumbs component should correctly return data, when length of array greater or equal 2 1`] = `
 <ol itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList">
