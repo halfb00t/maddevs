@@ -8,12 +8,12 @@
       "title": [
         {
           "type": "heading1",
-          "text": "Extend cross-platform supply-chains",
+          "text": "Architect magnetic e-tailers",
           "spans": []
         }
       ],
       "containerSize": "1026",
-      "animation": "zoom-in-right",
+      "animation": "fade-up",
       "image": {
         "dimensions": {
           "width": 900,
@@ -21,11 +21,11 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
       },
-      "bookPath": "target granular schemas",
-      "bookName": "matrix robust platforms",
-      "sendPulseTemplateId": 1759
+      "ebookPath": "evolve dot-com interfaces",
+      "ebookName": "visualize cross-platform infrastructures",
+      "sendPulseTemplateId": 7822
     }
   }
 ]

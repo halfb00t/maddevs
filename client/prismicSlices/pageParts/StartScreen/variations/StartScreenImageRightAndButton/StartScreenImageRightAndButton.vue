@@ -78,8 +78,8 @@
       ref="modalEbook"
       :ebook-title="$prismic.asText(title)"
       :ebook-path="ebookPath"
-      :book-name="bookName"
-      :book-image="ebookImage"
+      :ebook-name="ebookName"
+      :ebook-image="ebookImage"
       :send-pulse-template-id="sendPulseTemplateId"
     />
   </section>
@@ -128,8 +128,8 @@ export default {
       btnText: this.slice?.primary?.btnText,
       btnLink: this.slice?.primary?.btnLink,
       modal: this.slice?.primary?.modal,
-      ebookPath: this.slice?.primary?.bookPath,
-      bookName: this.slice?.primary?.bookName,
+      ebookPath: this.slice?.primary?.ebookPath,
+      ebookName: this.slice?.primary?.ebookName,
       ebookImage: this.slice?.primary?.ebookImage,
       sendPulseTemplateId: this.slice?.primary?.sendPulseTemplateId,
     }

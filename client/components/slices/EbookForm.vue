@@ -77,7 +77,7 @@ export default {
       default: '',
     },
 
-    bookName: {
+    ebookName: {
       type: String,
       default: 'Pricing Strategies',
     },
@@ -139,9 +139,9 @@ export default {
           email: {
             templateId: Number(this.sendPulseTemplateId) || 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
             variables: {
-              subject: `Your ${this.bookName} Ebook by Mad Devs`,
+              subject: `Your ${this.ebookName} Ebook by Mad Devs`,
               emailTo: this.email,
-              bookName: this.bookName,
+              bookName: this.ebookName,
               pdfUrl,
             },
 
@@ -160,7 +160,7 @@ export default {
         email: this.email,
         consent_to_mailing: this.isAgree ? 'Yes' : 'No',
         page: window.location.href,
-        formLocation: this.bookName,
+        formLocation: this.ebookName,
       }
       // from mixin
       this.submitLead(variables)
