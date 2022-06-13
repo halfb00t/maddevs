@@ -528,6 +528,17 @@
                   },
                   "type": "Select"
                 },
+                "textColor": {
+                  "config": {
+                    "label": "Text Color",
+                    "placeholder": "",
+                    "options": [
+                      "black",
+                      "white"
+                    ]
+                  },
+                  "type": "Select"
+                },
                 "title": {
                   "config": {
                     "label": "Title",
@@ -536,13 +547,6 @@
                     "single": "heading2,heading3,heading4,heading5,heading6"
                   },
                   "type": "StructuredText"
-                },
-                "titleColor": {
-                  "config": {
-                    "label": "Text color for title",
-                    "placeholder": ""
-                  },
-                  "type": "Color"
                 },
                 "description": {
                   "config": {
@@ -568,14 +572,6 @@
                   },
                   "type": "Link"
                 },
-                "image": {
-                  "config": {
-                    "label": "Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  },
-                  "type": "Image"
-                },
                 "buttonBgColor": {
                   "config": {
                     "label": "Button background color",
@@ -587,6 +583,27 @@
                     ]
                   },
                   "type": "Select"
+                },
+                "buttonTextColor": {
+                  "config": {
+                    "label": "Button Text Color",
+                    "placeholder": "",
+                    "options": [
+                      "grey",
+                      "white",
+                      "black"
+                    ],
+                    "default_value": "grey"
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
                 }
               },
               "items": {}
@@ -600,29 +617,31 @@
             "slice_type": "build_and_risks_slice",
             "items": [],
             "primary": {
-              "animation": "fade-right",
-              "outerBgColor": "silver",
-              "backgroundColor": "blue",
+              "animation": "fade-up",
+              "outerBgColor": "black",
+              "backgroundColor": "white",
+              "textColor": "black",
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Grow viral web-readiness",
+                  "text": "Deploy e-business architectures",
                   "spans": []
                 }
               ],
-              "titleColor": "#c40026",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Nostrud dolore veniam qui. Minim enim duis sit deserunt officia proident velit excepteur mollit id ex.",
+                  "text": "Id Lorem consequat Lorem pariatur occaecat enim.",
                   "spans": []
                 }
               ],
-              "buttonText": "whiteboard clicks-and-mortar bandwidth",
+              "buttonText": "unleash end-to-end e-services",
               "buttonLink": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "https://slicemachine.dev"
               },
+              "buttonBgColor": "black",
+              "buttonTextColor": "grey",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -630,9 +649,8 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
-              },
-              "buttonBgColor": "red"
+                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+              }
             }
           }
         },

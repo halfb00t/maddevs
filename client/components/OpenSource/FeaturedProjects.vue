@@ -49,5 +49,12 @@ export default {
       margin-bottom: 50px;
     }
   }
+
+  @media screen and (max-width: 430px) {
+    padding-bottom: 48px;
+    &__head {
+      margin-bottom: 48px;
+    }
+  }
 }
 </style>
