@@ -1,6 +1,8 @@
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import { screen, render } from '@testing-library/vue'
 import BuildAndRisksSlice from '@/prismicSlices/pageParts/BuildAndRisksSlice'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const stubs = ['PrismicRichText']
 
@@ -9,6 +11,10 @@ const mocks = {
     asHtml: jest.fn(),
   },
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const props = {
   slice: {
@@ -48,6 +54,7 @@ describe('BuildAndRisksSlice component', () => {
       propsData: props,
       stubs,
       mocks,
+      localVue,
     })
 
     expect(wrapper.find('.main-block__title').exists()).toBeTruthy()
@@ -60,6 +67,7 @@ describe('BuildAndRisksSlice component', () => {
       propsData: props,
       stubs,
       mocks,
+      localVue,
     })
 
     const image = screen.getByTestId('main-block__img-block-image')
@@ -74,6 +82,7 @@ describe('BuildAndRisksSlice component', () => {
       stubs,
       propsData: props,
       mocks,
+      localVue,
     })
 
     expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
@@ -84,6 +93,7 @@ describe('BuildAndRisksSlice component', () => {
       propsData: props,
       stubs,
       mocks,
+      localVue,
     })
 
     expect(wrapper.vm.serializer).toBe(wrapper.vm.htmlSerializer)
@@ -95,6 +105,7 @@ describe('BuildAndRisksSlice component', () => {
       propsData: props,
       stubs,
       mocks,
+      localVue,
     })
 
     expect(wrapper.vm.serializer).toBeNull()
@@ -130,6 +141,7 @@ describe('htmlSerializer', () => {
   beforeEach(() => {
     wrapper = shallowMount(BuildAndRisksSlice, {
       stubs,
+      localVue,
       propsData: slice,
       mocks: {
         $prismic: {

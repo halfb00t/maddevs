@@ -2,9 +2,13 @@ import { render } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import CustomerUniversitySection from '@/components/Blog/Main/CustomerUniversitySection'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const mocks = {
   $prismic: {
@@ -65,6 +69,7 @@ describe('CustomerUniversitySection component', () => {
       mocks,
       store,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()

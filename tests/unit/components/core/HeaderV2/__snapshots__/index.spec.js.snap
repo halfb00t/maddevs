@@ -22,7 +22,7 @@ exports[`Header component should render correctly 1`] = `
           <div
             class="header__content-left"
           >
-            <nuxtlink
+            <nuxtlink-stub
               class="header__logo"
               to="/"
             >
@@ -45,7 +45,7 @@ exports[`Header component should render correctly 1`] = `
                   />
                 </g>
               </svg>
-            </nuxtlink>
+            </nuxtlink-stub>
              
             <nav
               class="header__navigation"

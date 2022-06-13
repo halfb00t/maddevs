@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import ThreeBigCards from '@/prismicSlices/pageParts/TechAndToolsNewSlice/variations/ThreeBigCards'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const props = {
   bigCards: [
@@ -94,15 +96,15 @@ const props = {
   ],
 }
 
-const mocks = {
-  'lazy-load': jest.fn(),
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('FourBigCards component', () => {
   it('should correctly render component', () => {
     const { container } = render(ThreeBigCards, {
       propsData: props,
-      mocks,
+      localVue,
     })
 
     const bigCards = screen.getAllByTestId('tech-big-card')
@@ -115,7 +117,7 @@ describe('FourBigCards component', () => {
 
   it('should correctly return empty arrays from default props', () => {
     const wrapper = shallowMount(ThreeBigCards, {
-      mocks,
+      localVue,
     })
 
     expect(wrapper.vm.$options.props.bigCards.default.call()).toEqual([])

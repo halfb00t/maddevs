@@ -1,5 +1,8 @@
 import { render, screen } from '@testing-library/vue'
+import { createLocalVue } from '@vue/test-utils'
 import CustomerLogoSlice from '@/prismicSlices/pageParts/CustomerLogoSlice'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const data = () => ({
   customers: [
@@ -33,11 +36,16 @@ const getProps = params => ({
   },
 })
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 describe('Custom logo slice', () => {
   it('should render correctly with data', () => {
     const { container } = render(CustomerLogoSlice, {
       data,
       props: getProps(apiData),
+      localVue,
     })
     expect(screen.getAllByTestId('customer-logo-slice-item')).toHaveLength(data().customers.length)
     expect(container).toMatchSnapshot()
@@ -49,6 +57,7 @@ describe('Custom logo slice', () => {
         customers: [],
       }),
       props: getProps({}),
+      localVue,
     })
     expect(screen.queryByTestId('customer-logo-slice-item')).toBeNull()
     expect(container).toMatchSnapshot()
@@ -60,6 +69,7 @@ describe('Custom logo slice data-aos animation attribute', () => {
     render(CustomerLogoSlice, {
       data,
       props: getProps(apiData),
+      localVue,
     })
 
     expect(screen.getByTestId('customer-logo-slice-container').getAttribute('data-aos')).toBe(apiData.animation)
@@ -69,6 +79,7 @@ describe('Custom logo slice data-aos animation attribute', () => {
     render(CustomerLogoSlice, {
       data,
       props: getProps({}),
+      localVue,
     })
     expect(screen.getByTestId('customer-logo-slice-container').getAttribute('data-aos')).toBeNull()
   })

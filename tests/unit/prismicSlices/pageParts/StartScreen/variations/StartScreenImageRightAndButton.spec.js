@@ -149,8 +149,10 @@ describe('StartScreenImageRightAndButton component', () => {
       propsData: startScreenEbookData,
       mocks,
       stubs: {
-        UIButton: 'UIButton',
         NuxtLink: RouterLinkStub,
+        PrismicRichText: {
+          render(h) { return h('div') },
+        },
         ModalEbook: {
           render(h) { return h('div') },
           methods: {

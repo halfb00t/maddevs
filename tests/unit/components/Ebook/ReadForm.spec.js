@@ -28,6 +28,9 @@ describe('ReadForm component', () => {
         },
       },
       directives,
+      propsData: {
+        id: 'test',
+      },
     })
   })
 

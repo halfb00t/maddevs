@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import FormSlice from '@/prismicSlices/pageParts/FormSlice'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const props = {
   slice: {
@@ -32,9 +34,9 @@ const mocks = {
   },
 }
 
-const directives = {
-  'lazy-load': jest.fn(),
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('FormSlice component', () => {
   let wrapper = null
@@ -44,7 +46,7 @@ describe('FormSlice component', () => {
       propsData: props,
       mocks,
       stubs,
-      directives,
+      localVue,
     })
   })
 
@@ -57,7 +59,7 @@ describe('FormSlice component', () => {
       propsData: props,
       mocks,
       stubs,
-      directives,
+      localVue,
     })
 
     expect(screen.queryByTestId('form-slice__title')).not.toBeNull()
@@ -81,6 +83,7 @@ describe('htmlSerializer', () => {
     wrapper = shallowMount(FormSlice, {
       stubs,
       propsData: props,
+      localVue,
       mocks: {
         $prismic: {
           asText: text => text[0].text,
