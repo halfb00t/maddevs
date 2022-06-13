@@ -47,7 +47,11 @@ const startScreenEbookData = {
       btnLink: '',
       modal: 'download-pdf',
       ebookPath: 'pdf/test-ebook.pdf',
-      bookName: 'test-ebook',
+      ebookName: 'test-ebook',
+      ebookImage: {
+        url: 'img.jpg',
+        alt: 'Image',
+      },
     },
     variation: 'startScreenImageRightAndButton',
     slice_type: 'start_screen_slice',
