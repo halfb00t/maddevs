@@ -9,7 +9,7 @@ exports[`BuildAndRisksSlice component should render correctly with data 1`] = `
         <div class="main-block__description">
           <p style="color: rgb(255, 255, 255);"></p>
         </div>
-        <figure class="main-block__small-screen-image"><img width="338" height="477" data-src="https://via.placeholder.com/150" alt="test image" data-testid="main-block__img-block-image" class="main-block__img-block-image"></figure> <a href="https://google.com/" target="_blank" class="main-block__button" style="background-color: rgb(255, 255, 255);">
+        <figure class="main-block__small-screen-image"><img width="338" height="477" data-src="https://via.placeholder.com/150" alt="test image" data-testid="main-block__img-block-image" class="main-block__img-block-image"></figure> <a href="https://google.com/" target="_blank" class="main-block__button" style="background-color: rgb(255, 255, 255); color: rgb(112, 112, 114);">
           Read Ebook
         </a>
       </div>

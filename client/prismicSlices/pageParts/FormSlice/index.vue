@@ -18,8 +18,9 @@
       >
         <EbookForm
           class="form-slice__item"
-          :ebook-path="bookPath"
-          :book-name="bookName"
+          :ebook-path="ebookPath"
+          :ebook-name="ebookName"
+          :send-pulse-template-id="sendPulseTemplateId"
         />
         <div class="form-slice__item-img">
           <img
@@ -60,10 +61,11 @@ export default {
     return {
       title: this.slice?.primary?.title,
       image: this.slice?.primary?.image,
-      bookPath: this.slice?.primary?.bookPath,
-      bookName: this.slice?.primary?.bookName,
+      ebookPath: this.slice?.primary?.ebookPath,
+      ebookName: this.slice?.primary?.ebookName,
       animation: this.slice?.primary.animation,
       containerSize: this.slice?.primary?.containerSize,
+      sendPulseTemplateId: this.slice?.primary?.sendPulseTemplateId,
     }
   },
 

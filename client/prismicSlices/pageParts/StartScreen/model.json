@@ -162,24 +162,38 @@
               "download-pdf",
               "contact-me",
               "order-project"
-            ],
-            "default_value": "download-pdf"
+            ]
           },
           "type": "Select"
         },
-        "bookPath": {
+        "ebookPath": {
           "config": {
             "label": "Ebook Path on AWS S3",
             "placeholder": "Example: pdf/ebook-name.pdf"
           },
           "type": "Text"
         },
-        "bookName": {
+        "ebookName": {
           "config": {
             "label": "Book Name for Email",
             "placeholder": "Like: Pricing Strategies"
           },
           "type": "Text"
+        },
+        "ebookImage": {
+          "config": {
+            "label": "Book Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "sendPulseTemplateId": {
+          "config": {
+            "label": "SendPulse Template ID",
+            "placeholder": "Numbers from SendPulse template URL"
+          },
+          "type": "Number"
         }
       },
       "items": {}

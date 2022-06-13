@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FooterContacts component should render correctly 1`] = `
+exports[`FooterNavbarColumn should correct render footer contacts 1`] = `
 <div>
   <div
     class="footer-contacts"
@@ -15,15 +15,16 @@ exports[`FooterContacts component should render correctly 1`] = `
           class="footer-contacts__contact-title"
         >
           
-        Text us:
+        email@email.com
       
         </p>
          
         <a
           class="footer-contacts__contact-link footer-contacts__contact-mail"
-          href="mailto:undefined"
+          href="mailto:testemail@email.com"
         >
-          
+          testemail@email.com
+      
         </a>
       </div>
        
@@ -57,7 +58,7 @@ exports[`FooterContacts component should render correctly 1`] = `
           class="footer-contacts__contact-link footer-contacts__contact-phone-number"
           href="tel:+442039848555"
         >
-          +44 20 3984 8555
+          +442039848555
         </a>
       </div>
     </div>
@@ -65,96 +66,7 @@ exports[`FooterContacts component should render correctly 1`] = `
     <div
       class="footer-contacts__lists-wrapper"
     >
-      <ul
-        class="footer-contacts__messengers-list"
-      >
-        <li>
-          <a
-            class="footer-contacts__messenger-item-wrapper"
-            href="https://m.me/maddevsllc"
-            target="_blank"
-          >
-            <img
-              alt="Messenger"
-              data-src="[object Object]"
-              height="42"
-              width="42"
-            />
-             
-            <p
-              class="footer-contacts__messenger-name"
-            >
-              Messenger
-            </p>
-          </a>
-        </li>
-        <li>
-          <a
-            class="footer-contacts__messenger-item-wrapper"
-            href="https://wa.me/message/KPJAW6J7BF7EK1"
-            target="_blank"
-          >
-            <img
-              alt="WhatsApp"
-              data-src="[object Object]"
-              height="42"
-              width="42"
-            />
-             
-            <p
-              class="footer-contacts__messenger-name"
-            >
-              WhatsApp
-            </p>
-          </a>
-        </li>
-        <li>
-          <a
-            class="footer-contacts__messenger-item-wrapper"
-            href="https://t.me/MadDevs_io"
-            target="_blank"
-          >
-            <img
-              alt="Telegram"
-              data-src="[object Object]"
-              height="42"
-              width="42"
-            />
-             
-            <p
-              class="footer-contacts__messenger-name"
-            >
-              Telegram
-            </p>
-          </a>
-        </li>
-        <li>
-          <a
-            class="footer-contacts__messenger-item-wrapper"
-            href="https://msng.link/o/?https%3A%2F%2Fu.wechat.com%2FICWluRgJH8tu0IisMQ1eEFo=wc"
-            target="_blank"
-          >
-            <img
-              alt="WeChat"
-              data-src="[object Object]"
-              height="42"
-              width="42"
-            />
-             
-            <p
-              class="footer-contacts__messenger-name"
-            >
-              WeChat
-            </p>
-          </a>
-        </li>
-      </ul>
-       
-      <div
-        class="footer-contacts__social-network-list-desktop"
-      >
-        <footersocialnetworks-stub />
-      </div>
+      <footersocialnetworks-stub />
     </div>
   </div>
 </div>

@@ -70,5 +70,13 @@ export default {
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
   }
+
+  @media screen and (max-width: 430px) {
+    gap: 24px;
+
+    &__see-more {
+      margin-top: 24px;
+    }
+  }
 }
 </style>

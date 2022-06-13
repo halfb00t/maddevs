@@ -27,7 +27,7 @@
     "slice_type": "start_screen",
     "items": [],
     "primary": {
-      "background": "black",
+      "background": "grey",
       "gradientColor": "white",
       "image": {
         "dimensions": {
@@ -36,7 +36,7 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
       },
       "rightImage": {
         "dimensions": {
@@ -45,31 +45,41 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
       },
-      "imageOpacity": 9201,
+      "imageOpacity": 8234,
       "title": [
         {
           "type": "heading1",
-          "text": "Iterate turn-key paradigms",
+          "text": "Harness 24/7 content",
           "spans": []
         }
       ],
       "subtitle": [
         {
           "type": "paragraph",
-          "text": "Dolor esse enim ad officia aliquip sunt. In nisi ea aliquip laboris. Incididunt anim exercitation excepteur ut enim.",
+          "text": "Ea laboris veniam aute sint esse laborum eu ex.",
           "spans": []
         }
       ],
-      "btnText": "enhance mission-critical applications",
+      "btnText": "maximize global e-business",
       "btnLink": {
         "link_type": "Web",
         "url": "http://twitter.com"
       },
-      "modal": "contact-me",
-      "bookPath": "streamline world-class bandwidth",
-      "bookName": "recontextualize granular applications"
+      "modal": "download-pdf",
+      "ebookPath": "disintermediate open-source architectures",
+      "ebookName": "revolutionize web-enabled channels",
+      "ebookImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+      },
+      "sendPulseTemplateId": 8274
     }
   }
 ]

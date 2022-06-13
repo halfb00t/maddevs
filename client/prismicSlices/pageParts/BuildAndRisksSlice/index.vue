@@ -1,6 +1,6 @@
 <template>
   <section
-    :data-aos="animation"
+    :data-aos="animation || 'fade-up'"
     class="main-block-wrapper"
     :style="{ backgroundColor: wrapperBgColor || '#ffffff' }"
   >
@@ -40,7 +40,7 @@
             :href="link"
             target="_blank"
             class="main-block__button"
-            :style="`background-color: ${buttonBgColor}`"
+            :style="`background-color: ${buttonBgColor}; ${buttonTextColor}`"
           >
             {{ buttonText }}
           </a>
@@ -113,7 +113,14 @@ export default {
     },
 
     textContentColor() {
-      return `color: ${this.slice?.primary?.titleColor}`
+      if (this.slice?.primary?.textColor === 'black') return 'color: #111;'
+      return 'color: #fff;'
+    },
+
+    buttonTextColor() {
+      if (this.slice?.primary?.buttonTextColor === 'white') return 'color: #fff;'
+      if (this.slice?.primary?.buttonTextColor === 'black') return 'color: #111;'
+      return 'color: #707072;'
     },
   },
 

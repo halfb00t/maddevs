@@ -78,7 +78,9 @@
       ref="modalEbook"
       :ebook-title="$prismic.asText(title)"
       :ebook-path="ebookPath"
-      :book-name="bookName"
+      :ebook-name="ebookName"
+      :ebook-image="ebookImage"
+      :send-pulse-template-id="sendPulseTemplateId"
     />
   </section>
 </template>
@@ -93,7 +95,11 @@ import linkResolver from '@/plugins/link-resolver'
 
 export default {
   name: 'StartScreen',
-  components: { UIButton, ModalEbook },
+  components: {
+    UIButton,
+    ModalEbook,
+  },
+
   mixins: [changeSectionTextOpacityMixin('sectionText')],
   props: {
     slice: {
@@ -122,8 +128,10 @@ export default {
       btnText: this.slice?.primary?.btnText,
       btnLink: this.slice?.primary?.btnLink,
       modal: this.slice?.primary?.modal,
-      ebookPath: this.slice?.primary?.bookPath,
-      bookName: this.slice?.primary?.bookName,
+      ebookPath: this.slice?.primary?.ebookPath,
+      ebookName: this.slice?.primary?.ebookName,
+      ebookImage: this.slice?.primary?.ebookImage,
+      sendPulseTemplateId: this.slice?.primary?.sendPulseTemplateId,
     }
   },
 
@@ -158,20 +166,34 @@ export default {
       }
 
       switch (type) {
-        case Elements.heading1: return `<h1>${text}</h1>`
-        case Elements.heading2: return `<h2>${text}</h2>`
-        case Elements.heading3: return `<h3>${text}</h3>`
-        case Elements.heading4: return `<h4>${text}</h4>`
-        case Elements.heading5: return `<h5>${text}</h5>`
-        case Elements.heading6: return `<h6>${text}</h6>`
-        case Elements.paragraph: return `<p>${text}</p>`
-        case Elements.preformatted: return `<pre>${text}</pre>`
-        case Elements.strong: return `<strong>${text}</strong>`
-        case Elements.em: return `<em>${text}</em>`
-        case Elements.listItem: return `<li>${text}</li>`
-        case Elements.oListItem: return `<li>${text}</li>`
-        case Elements.list: return `<ul>${text}</ul>`
-        case Elements.oList: return `<ol>${text}</ol>`
+        case Elements.heading1:
+          return `<h1>${text}</h1>`
+        case Elements.heading2:
+          return `<h2>${text}</h2>`
+        case Elements.heading3:
+          return `<h3>${text}</h3>`
+        case Elements.heading4:
+          return `<h4>${text}</h4>`
+        case Elements.heading5:
+          return `<h5>${text}</h5>`
+        case Elements.heading6:
+          return `<h6>${text}</h6>`
+        case Elements.paragraph:
+          return `<p>${text}</p>`
+        case Elements.preformatted:
+          return `<pre>${text}</pre>`
+        case Elements.strong:
+          return `<strong>${text}</strong>`
+        case Elements.em:
+          return `<em>${text}</em>`
+        case Elements.listItem:
+          return `<li>${text}</li>`
+        case Elements.oListItem:
+          return `<li>${text}</li>`
+        case Elements.list:
+          return `<ul>${text}</ul>`
+        case Elements.oList:
+          return `<ol>${text}</ol>`
         case Elements.image:
           // eslint-disable-next-line
           const linkUrl = element.linkTo ? Link.url(element.linkTo, linkResolver) : null
@@ -205,8 +227,10 @@ export default {
           // eslint-disable-next-line
           const label = element.data.label ? ` class="${element.data.label}"` : ''
           return `<span ${label}>${text}</span>`
-        case Elements.span: return content ? content.replace(/\n/g, '<br />') : ''
-        default: return null
+        case Elements.span:
+          return content ? content.replace(/\n/g, '<br />') : ''
+        default:
+          return null
       }
     },
   },
@@ -242,6 +266,7 @@ export default {
     @media screen and (max-width: 580px) {
       margin-bottom: 32px;
     }
+
     ::v-deep h1,
     ::v-deep h2,
     ::v-deep h3,
@@ -308,6 +333,11 @@ export default {
 
   &__img-box {
     width: 25%;
+    position: relative;
+    top: -60px;
+    @media screen and (min-width: 1025px) {
+      margin-right: 75px;
+    }
     @media screen and (max-width: 1024px) {
       width: 45%;
     }
@@ -329,6 +359,7 @@ export default {
   &__btn-box {
     width: 100%;
     display: flex;
+
     a,
     button {
       @include font('Inter', 16px, 600);
@@ -345,6 +376,10 @@ export default {
       margin-right: 32px;
       @media screen and (max-width: 580px) {
         padding: 14px 24px;
+      }
+
+      @media screen and (max-width: 880px) {
+        padding: 14px 100px;
       }
 
       img {

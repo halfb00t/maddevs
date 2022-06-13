@@ -67,7 +67,7 @@ export default {
       default: '',
     },
 
-    bookName: {
+    ebookName: {
       type: String,
       default: '',
     },
@@ -75,6 +75,16 @@ export default {
     id: {
       type: String,
       required: true,
+    },
+
+    ebookImage: {
+      type: String,
+      default: '',
+    },
+
+    sendPulseTemplateId: {
+      type: Number,
+      default: 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
     },
   },
 
@@ -125,11 +135,11 @@ export default {
       const requestSender = {
         body: {
           email: {
-            templateId: 763889, // Required
+            templateId: Number(this.sendPulseTemplateId) || 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
             variables: {
-              subject: `Your ${this.bookName} Ebook by Mad Devs`,
+              subject: `Your ${this.ebookName} Ebook by Mad Devs`,
               emailTo: this.email,
-              bookName: this.bookName,
+              bookName: this.ebookName,
               pdfUrl,
             },
 
@@ -148,7 +158,7 @@ export default {
         email: this.email,
         consent_to_mailing: this.isAgree ? 'Yes' : 'No',
         page: window.location.href,
-        formLocation: this.bookName,
+        formLocation: this.ebookName,
       }
       // from mixin
       this.submitLead(variables)
@@ -157,11 +167,11 @@ export default {
       ebookSubmitFormEvent.send()
 
       this.$emit('form-sended', { email: this.email, name: this.name })
+      this.$refs.checkbox.reset()
     },
 
     reset() {
       this.$v.$reset() // Reset validation form
-      this.$refs.checkbox.reset()
       this.name = ''
       this.email = ''
     },

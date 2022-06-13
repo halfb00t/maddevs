@@ -70,6 +70,17 @@
           },
           "type": "Select"
         },
+        "textColor": {
+          "config": {
+            "label": "Text Color",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white"
+            ]
+          },
+          "type": "Select"
+        },
         "title": {
           "config": {
             "label": "Title",
@@ -78,13 +89,6 @@
             "single": "heading2,heading3,heading4,heading5,heading6"
           },
           "type": "StructuredText"
-        },
-        "titleColor": {
-          "config": {
-            "label": "Text color for title",
-            "placeholder": ""
-          },
-          "type": "Color"
         },
         "description": {
           "config": {
@@ -110,14 +114,6 @@
           },
           "type": "Link"
         },
-        "image": {
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
         "buttonBgColor": {
           "config": {
             "label": "Button background color",
@@ -129,6 +125,27 @@
             ]
           },
           "type": "Select"
+        },
+        "buttonTextColor": {
+          "config": {
+            "label": "Button Text Color",
+            "placeholder": "",
+            "options": [
+              "grey",
+              "white",
+              "black"
+            ],
+            "default_value": "grey"
+          },
+          "type": "Select"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
         }
       },
       "items": {}

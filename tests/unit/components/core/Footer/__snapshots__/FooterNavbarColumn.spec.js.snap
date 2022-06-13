@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterNavbarColumn should correct render footer navbar column 1`] = `
+<div>
+  <div
+    class="footer-section footer-section--company"
+  >
+    <div
+      class="footer-section__content"
+    >
+      <div
+        class="footer-section__menus"
+      >
+        <footernavbarmenu-stub
+          menuname="Company"
+          menuroutes="[object Object],[object Object],[object Object],[object Object],[object Object]"
+        />
+        <footernavbarmenu-stub
+          menuname="Approach"
+          menuroutes="[object Object],[object Object],[object Object],[object Object]"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
