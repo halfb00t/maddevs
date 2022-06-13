@@ -40,7 +40,7 @@
             :href="link"
             target="_blank"
             class="main-block__button"
-            :style="`background-color: ${buttonBgColor}; color: ${buttonTextColor}`"
+            :style="`background-color: ${buttonBgColor}; ${buttonTextColor}`"
           >
             {{ buttonText }}
           </a>
@@ -113,15 +113,14 @@ export default {
     },
 
     textContentColor() {
-      if (this.slice?.primary?.textColor === 'black') return 'color: #111'
-      return 'color: #fff'
+      if (this.slice?.primary?.textColor === 'black') return 'color: #111;'
+      return 'color: #fff;'
     },
 
     buttonTextColor() {
-      let color = '#707072'
-      if (this.slice?.primary?.buttonTextColor === 'white') color = '#fff'
-      if (this.slice?.primary?.buttonTextColor === 'black') color = '#111'
-      return color
+      if (this.slice?.primary?.buttonTextColor === 'white') return 'color: #fff;'
+      if (this.slice?.primary?.buttonTextColor === 'black') return 'color: #111;'
+      return 'color: #707072;'
     },
   },
 
