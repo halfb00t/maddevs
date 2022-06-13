@@ -12,6 +12,7 @@ import * as footer from './modules/footer'
 import * as authors from './modules/authorsPage'
 import * as ebooks from './modules/ebooks'
 import * as successAndFaq from './modules/successAndFaq'
+import * as customers from './modules/customers'
 
 export default {
   modules: {
@@ -29,5 +30,6 @@ export default {
     ebooks,
     authors,
     successAndFaq,
+    customers,
   },
 }
