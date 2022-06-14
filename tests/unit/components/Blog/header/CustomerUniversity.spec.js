@@ -68,6 +68,26 @@ describe('customer university header component', () => {
     subtitle: 'subtitle',
     title: 'title',
     id: 'YAGi7REAACMAgV8d',
+    postList: [
+      {
+        chapter_name: [{ text: 'test' }],
+        cu_post: {
+          uid: '123',
+        },
+      },
+      {
+        chapter_name: [{ text: 'test2' }],
+        cu_post: {
+          uid: '1234',
+        },
+      },
+      {
+        chapter_name: [{ text: 'test3' }],
+        cu_post: {
+          uid: '12345',
+        },
+      },
+    ],
   }
 
   const mocks = {
@@ -81,11 +101,27 @@ describe('customer university header component', () => {
 
   const stubs = ['PrismicImage', 'CommonHeader', 'NuxtLink']
 
-  const store = {
+  const store = new Vuex.Store({
     getters: {
-      blogAuthor: () => {},
+      blogAuthor: () => ({
+        uid: 'test-author',
+        name: 'test-author-name',
+        position: 'test-position',
+        image: {
+          url: 'img.jpg',
+          alt: 'Image',
+          thumbnail: {
+            url: 'thumb-img.jpg',
+            alt: 'image',
+            dimensions: {
+              width: '200',
+              height: '200',
+            },
+          },
+        },
+      }),
     },
-  }
+  })
 
   it('should render correctly with default props', () => {
     const { container } = render(CustomerUniversity, {

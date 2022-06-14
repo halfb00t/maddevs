@@ -9,6 +9,8 @@ const localVue = createLocalVue()
 localVue.directive('lazy-load', lazyLoad)
 jest.mock('nuxt-lazy-load/lib/module')
 
+jest.mock('~/helpers/generatorUid')
+
 describe('Main component', () => {
   it('should render correctly', () => {
     const { container } = render(Main, {
@@ -26,6 +28,7 @@ describe('Main component', () => {
           $getMediaFromS3: () => 'img.jpg',
         },
         localVue,
+        stubs: ['NuxtLink'],
       })
 
       const Banner = await container.vm.$options.components.Banner.call()

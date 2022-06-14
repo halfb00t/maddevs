@@ -40,6 +40,16 @@ describe('header Blog', () => {
               },
             },
           },
+          blogCoAuthor: {
+            state: {
+              author: {},
+            },
+            getters: {
+              blogCoAuthor(state) {
+                return state.coAuthor
+              },
+            },
+          },
           blogTag: {
             state: {
               blogTag: '',

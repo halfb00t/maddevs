@@ -154,7 +154,45 @@ exports[`customer university header component should render correctly with defau
     <div
       class="post-info"
     >
-      <!---->
+      <nuxtlink-stub
+        class="post-author post-author--dark-theme"
+        event="click"
+        to="/blog/authors/test-author/"
+      >
+        <div
+          class="post-author__image"
+        >
+          <img
+            alt="image"
+            data-src="thumb-img.jpg"
+            height="70"
+            width="70"
+          />
+        </div>
+         
+        <div
+          class="post-author__info"
+        >
+          <p
+            class="post-author__name"
+            title="test-author-name"
+          >
+            
+      test-author-name
+      
+            <span
+              class="post-author__position"
+              title="test-position"
+            >
+              
+        test-position
+      
+            </span>
+          </p>
+           
+          <!---->
+        </div>
+      </nuxtlink-stub>
     </div>
   </commonheader-stub>
 </div>

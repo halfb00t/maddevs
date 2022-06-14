@@ -114,7 +114,7 @@ export default {
 
     clusterName: {
       type: String,
-      default: () => '',
+      default: '',
     },
 
     date: {
