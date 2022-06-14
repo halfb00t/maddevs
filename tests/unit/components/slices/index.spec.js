@@ -1,8 +1,14 @@
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import { render } from '@testing-library/vue'
 import SlicesBlock from '@/components/slices'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 jest.mock('~/helpers/generatorUid')
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const stubs = [
   'PrismicImage',
@@ -364,7 +370,46 @@ describe('Post component copyAnchorLink', () => {
 
   describe('Dynamic imports', () => {
     it('should correctly import components', async () => {
-      const container = shallowMount(SlicesBlock)
+      const container = shallowMount(SlicesBlock, {
+        propsData: {
+          slices,
+        },
+        localVue,
+        mocks: {
+          $prismic: {
+            asText: text => text[0].text,
+            asHtml: html => `<p>${html}</p>`,
+            dom: {
+              Link: {
+                url: () => '',
+              },
+              RichText: {
+                Elements: {
+                  em: 'em',
+                  embed: 'embed',
+                  heading1: 'heading1',
+                  heading2: 'heading2',
+                  heading3: 'heading3',
+                  heading4: 'heading4',
+                  heading5: 'heading5',
+                  heading6: 'heading6',
+                  hyperlink: 'hyperlink',
+                  image: 'image',
+                  label: 'label',
+                  list: 'group-list-item',
+                  listItem: 'list-item',
+                  oList: 'group-o-list-item',
+                  oListItem: 'o-list-item',
+                  paragraph: 'paragraph',
+                  preformatted: 'preformatted',
+                  span: 'span',
+                  strong: 'strong',
+                },
+              },
+            },
+          },
+        },
+      })
 
       const SectionIdSlice = await container.vm.$options.components.SectionIdSlice.call()
       const QuoteSlice = await container.vm.$options.components.QuoteSlice.call()

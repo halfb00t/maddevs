@@ -1,15 +1,17 @@
 import { render, screen } from '@testing-library/vue'
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import OpportunitiesCards from '@/components/Cases/bandpay/OpportunitiesCards'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
 }
 
-const directives = {
-  'lazy-load': () => {},
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const imagesAlt = [
   'Promote business across the web and via SMS',
@@ -21,7 +23,7 @@ describe('BandPay OpportunitiesCards component', () => {
   it('should render correctly', () => {
     const { container } = render(OpportunitiesCards, {
       mocks,
-      directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -30,7 +32,7 @@ describe('BandPay OpportunitiesCards component', () => {
   it('should render with text', () => {
     render(OpportunitiesCards, {
       mocks,
-      directives,
+      localVue,
     })
 
     expect(screen.getByText(/Opportunities with BandPay/i).className).toBeTruthy()
@@ -45,7 +47,7 @@ describe('BandPay OpportunitiesCards component', () => {
   it('should render colored cards', () => {
     const wrapper = mount(OpportunitiesCards, {
       mocks,
-      directives,
+      localVue,
     })
 
     const cards = wrapper.findAll('.colored-card')
@@ -55,7 +57,7 @@ describe('BandPay OpportunitiesCards component', () => {
   it('should render images in colored cards', () => {
     render(OpportunitiesCards, {
       mocks,
-      directives,
+      localVue,
     })
 
     const images = screen.getAllByTestId('test-picture-img')

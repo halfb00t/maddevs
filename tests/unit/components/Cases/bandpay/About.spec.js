@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/vue'
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import About from '@/components/Cases/bandpay/About'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
@@ -11,11 +13,16 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 describe('BandPay About component', () => {
   it('should render correctly', () => {
     const { container } = render(About, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -25,6 +32,7 @@ describe('BandPay About component', () => {
     render(About, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(screen.getByText(/Achievements in figures/i).className).toBeTruthy()
@@ -34,6 +42,7 @@ describe('BandPay About component', () => {
     const wrapper = mount(About, {
       mocks,
       directives,
+      localVue,
     })
 
     const lottieDiv = wrapper.find('.case_lottie')
@@ -44,6 +53,7 @@ describe('BandPay About component', () => {
     const wrapper = mount(About, {
       mocks,
       directives,
+      localVue,
     })
 
     const statisticsDivs = wrapper.findAll('.case_statistics-item')
@@ -54,6 +64,7 @@ describe('BandPay About component', () => {
     render(About, {
       mocks,
       directives,
+      localVue,
     })
 
     screen.getAllByTestId('test-icon').forEach(item => {

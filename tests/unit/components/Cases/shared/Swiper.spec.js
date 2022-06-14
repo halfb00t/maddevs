@@ -20,6 +20,8 @@ const props = {
   safariTopBar: '',
   safariTopBarImage: '',
   safariTopBarAlt: '',
+  width: 300,
+  height: 300,
 }
 
 const stubs = ['Picture']

@@ -27,7 +27,7 @@ const store = new Vuex.Store({
   getters,
 })
 
-const stubs = ['ModalContactMe', 'HeaderPost', 'HeaderMobile', 'Crumbs']
+const stubs = ['ModalContactMe', 'HeaderPost', 'HeaderMobile', 'Crumbs', 'NuxtLink']
 
 const mocks = {
   $nuxt: {

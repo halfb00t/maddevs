@@ -2,9 +2,13 @@ import { render, screen, fireEvent } from '@testing-library/vue'
 import Vuex from 'vuex'
 import { createLocalVue } from '@vue/test-utils'
 import EbooksWithFilterSlice from '@/prismicSlices/pageParts/EbooksWithFilterSlice'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const recipeMock = jest.fn()
 const scroll = jest.fn()

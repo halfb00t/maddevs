@@ -1,6 +1,8 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import LittleCard from '@/prismicSlices/pageParts/TechAndToolsNewSlice/components/LittleCard'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const props = {
   icon: {
@@ -11,15 +13,15 @@ const props = {
   title: 'Test',
 }
 
-const mocks = {
-  'lazy-load': jest.fn(),
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('BigCard component', () => {
   it('should correctly render component', () => {
     const { container } = render(LittleCard, {
       propsData: props,
-      mocks,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -27,7 +29,7 @@ describe('BigCard component', () => {
 
   it('should correctly return empty object from icon props', () => {
     const wrapper = shallowMount(LittleCard, {
-      mocks,
+      localVue,
     })
 
     expect(wrapper.vm.$options.props.icon.default.call()).toEqual({})

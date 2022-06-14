@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/vue'
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import ChallengesSolutions from '@/components/Cases/bandpay/ChallengesSolutions'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
@@ -12,11 +14,16 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 describe('BandPay ChallengesSolutions component', () => {
   it('should render correctly', () => {
     const { container } = render(ChallengesSolutions, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -26,6 +33,7 @@ describe('BandPay ChallengesSolutions component', () => {
     render(ChallengesSolutions, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(screen.getByText(/Challenges & solutions/i).className).toBeTruthy()
@@ -35,6 +43,7 @@ describe('BandPay ChallengesSolutions component', () => {
     const wrapper = mount(ChallengesSolutions, {
       mocks,
       directives,
+      localVue,
     })
 
     const paragraphs = wrapper.findAll('.m-48_bottom .case_paragraph')
@@ -45,6 +54,7 @@ describe('BandPay ChallengesSolutions component', () => {
     const wrapper = mount(ChallengesSolutions, {
       mocks,
       directives,
+      localVue,
     })
 
     const parallaxCards = wrapper.findAll('.card-content')
@@ -55,6 +65,7 @@ describe('BandPay ChallengesSolutions component', () => {
     render(ChallengesSolutions, {
       mocks,
       directives,
+      localVue,
     })
 
     screen.getAllByAltText('Icon').forEach(item => {

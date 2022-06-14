@@ -1,20 +1,23 @@
 import { render, screen } from '@testing-library/vue'
+import { createLocalVue } from '@vue/test-utils'
 import TwoSmartphones from '@/components/Cases/bandpay/TwoSmartphones'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
 }
 
-const directives = {
-  'lazy-load': () => {},
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('BandPay TwoSmartphones component', () => {
   it('should render correctly', () => {
     const { container } = render(TwoSmartphones, {
       mocks,
-      directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -23,7 +26,7 @@ describe('BandPay TwoSmartphones component', () => {
   it('should render with text', () => {
     render(TwoSmartphones, {
       mocks,
-      directives,
+      localVue,
     })
 
     expect(screen.getByText(/To deposit funds and start a project/i).className).toBeTruthy()
@@ -32,7 +35,7 @@ describe('BandPay TwoSmartphones component', () => {
   it('should render image', () => {
     render(TwoSmartphones, {
       mocks,
-      directives,
+      localVue,
     })
 
     const image = screen.getByTestId('test-picture-img')

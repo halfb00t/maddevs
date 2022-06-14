@@ -4,9 +4,13 @@ import Vuex from 'vuex'
 import AuthorPostsSection from '@/components/Blog/Main/AuthorPostsSection'
 import allPosts from '../../../__mocks__/allPosts'
 import initializeLazyLoad from '@/helpers/lazyLoad'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const mocks = {
   $prismic: {
@@ -45,6 +49,7 @@ describe('AuthorPostsSection component', () => {
       stubs,
       mocks,
       store,
+      localVue,
     })
 
     const button = screen.getByTestId('test-load-more-button')

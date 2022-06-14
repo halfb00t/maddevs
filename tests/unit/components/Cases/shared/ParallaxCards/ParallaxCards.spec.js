@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import ParallaxCards from '@/components/Cases/shared/ParallaxCards/ParallaxCards'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const props = {
   dataCards: [{
@@ -40,9 +42,12 @@ const props = {
 }
 
 const directives = {
-  'lazy-load': () => {},
-  'mad-parallax': () => {},
+  'mad-parallax': jest.fn(),
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
@@ -54,6 +59,7 @@ describe('ParallaxCards component', () => {
       props,
       mocks,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -64,6 +70,7 @@ describe('ParallaxCards component', () => {
       props,
       mocks,
       directives,
+      localVue,
     })
 
     expect(screen.getByText(props.dataCards[0].title)).toBeTruthy()
@@ -77,6 +84,7 @@ describe('ParallaxCards component', () => {
       },
       mocks,
       directives,
+      localVue,
     })
 
     expect(container.vm.$options.props.dataCards.default.call()).toEqual([])

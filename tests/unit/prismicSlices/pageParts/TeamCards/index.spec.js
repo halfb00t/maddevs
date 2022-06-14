@@ -1,5 +1,8 @@
 import { render, screen } from '@testing-library/vue'
+import { createLocalVue } from '@vue/test-utils'
 import TeamCards from '@/prismicSlices/pageParts/TeamCards'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const apiData = {
   animation: 'fade-up',
@@ -43,6 +46,10 @@ const getProps = params => ({
   },
 })
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 jest.mock('~/helpers/generatorUid')
 
 describe('TeamCards slice', () => {
@@ -52,6 +59,7 @@ describe('TeamCards slice', () => {
         ...apiData,
         background: 'white',
       }),
+      localVue,
     })
     expect(screen.queryAllByText('Uncle Bob')).not.toBeNull()
     expect(screen.queryAllByText('Alice')).not.toBeNull()
@@ -64,6 +72,7 @@ describe('TeamCards slice', () => {
         ...apiData,
         background: 'white',
       }),
+      localVue,
     })
     const img = screen.getAllByTestId('item-img')[0]
     expect(img.getAttribute('src')).toEqual('https://google.com/')

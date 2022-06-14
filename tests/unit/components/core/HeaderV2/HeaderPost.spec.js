@@ -1,13 +1,20 @@
 import { render, screen } from '@testing-library/vue'
+import { createLocalVue } from '@vue/test-utils'
 
 import HeaderPost from '@/components/core/HeaderV2/HeaderPost'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $prismic: {
-    asText: name => name,
+    asText: name => name[0].text,
   },
   $route: () => 'blog',
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const stubs = ['HeaderSection', 'PostAuthor', 'NuxtLink', 'PostTag']
 
@@ -16,7 +23,7 @@ const props = {
 
   uid: '1',
 
-  title: 'test',
+  title: [{ text: 'test', type: 'heading4' }],
 
   date: '01.01.01',
 
@@ -41,7 +48,7 @@ const props = {
 describe('HeaderPost component', () => {
   it('should render correctly', () => {
     const { container } = render(HeaderPost, {
-      stubs, props, mocks,
+      stubs, props, mocks, localVue,
     })
     expect(screen.getAllByText('test')).not.toBeNull()
     expect(screen.getByTestId('post-link').getAttribute('to')).toBe('/blog/1/')

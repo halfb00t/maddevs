@@ -1,7 +1,9 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Main from '@/components/Cases/guardrails/Main'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
@@ -13,11 +15,12 @@ const stubs = [
 ]
 
 const directives = {
-  'lazy-load': () => {
-  },
-  'mad-parallax': () => {
-  },
+  'mad-parallax': jest.fn(),
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('Main component', () => {
   it('should render correctly', () => {
@@ -25,6 +28,7 @@ describe('Main component', () => {
       mocks,
       stubs,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -34,6 +38,7 @@ describe('Main component', () => {
       const container = shallowMount(Main, {
         mocks,
         directives,
+        localVue,
       })
       const About = await container.vm.$options.components.About.call()
       const StoryBehindProject = await container.vm.$options.components.StoryBehindProject.call()

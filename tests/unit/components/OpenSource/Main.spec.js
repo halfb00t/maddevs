@@ -6,10 +6,15 @@ const stubs = ['Banner', 'ParagraphSection', 'FeaturedProjects', 'Boilerplates',
 
 jest.mock('~/helpers/generatorUid')
 
+const mocks = {
+  $getMediaFromS3: () => 'img.jpg',
+}
+
 describe('Main component', () => {
   it('should render correctly', () => {
     const { container } = render(Main, {
       stubs,
+      mocks,
     })
 
     expect(container).toMatchSnapshot()
@@ -19,6 +24,7 @@ describe('Main component', () => {
     it('should correctly import components', async () => {
       const container = shallowMount(Main, {
         stubs: ['LazyHydrate'],
+        mocks,
       })
 
       const Banner = await container.vm.$options.components.Banner.call()

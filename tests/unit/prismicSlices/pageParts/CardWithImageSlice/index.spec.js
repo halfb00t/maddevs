@@ -1,6 +1,8 @@
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import { screen, render } from '@testing-library/vue'
 import CardWithImageSlice from '@/prismicSlices/pageParts/CardWithImageSlice'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const stubs = ['PrismicRichText']
 
@@ -27,11 +29,16 @@ const props = {
   },
 }
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 describe('CardWithImageSlice component', () => {
   it('should render correctly with data', () => {
     const wrapper = shallowMount(CardWithImageSlice, {
       propsData: props,
       stubs,
+      localVue,
     })
 
     expect(wrapper.find('.card-with-image__title').exists()).toBeTruthy()
@@ -43,6 +50,7 @@ describe('CardWithImageSlice component', () => {
     render(CardWithImageSlice, {
       propsData: props,
       stubs,
+      localVue,
     })
 
     const image = screen.getByTestId('card-with-image__image')
@@ -56,6 +64,7 @@ describe('CardWithImageSlice component', () => {
     const wrapper = shallowMount(CardWithImageSlice, {
       stubs,
       propsData: props,
+      localVue,
     })
 
     expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
@@ -65,6 +74,7 @@ describe('CardWithImageSlice component', () => {
     const wrapper = shallowMount(CardWithImageSlice, {
       propsData: props,
       stubs,
+      localVue,
     })
 
     expect(wrapper.vm.serializer).toBe(wrapper.vm.htmlSerializer)
@@ -75,6 +85,7 @@ describe('CardWithImageSlice component', () => {
     const wrapper = shallowMount(CardWithImageSlice, {
       propsData: props,
       stubs,
+      localVue,
     })
 
     expect(wrapper.vm.serializer).toBeNull()
@@ -111,6 +122,7 @@ describe('htmlSerializer', () => {
     wrapper = shallowMount(CardWithImageSlice, {
       stubs,
       propsData: slice,
+      localVue,
       mocks: {
         $prismic: {
           dom: {

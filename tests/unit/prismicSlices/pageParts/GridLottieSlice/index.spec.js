@@ -48,7 +48,9 @@ describe('Card Grid slice', () => {
 
   describe('Dynamic imports GridLottieMain', () => {
     it('should correctly import components', async () => {
-      const container = shallowMount(GridLottieMain)
+      const props = getProps(apiData)
+      props.slice.variation = 'gridLottieLink'
+      const container = shallowMount(GridLottieMain, { propsData: props })
 
       const GridLottieLink = await container.vm.$options.components.GridLottieLink.call()
       const GridLottie = await container.vm.$options.components.GridLottie.call()

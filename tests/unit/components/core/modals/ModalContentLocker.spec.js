@@ -2,10 +2,16 @@ import 'regenerator-runtime'
 import {
   render,
 } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import ModalContentLocker from '@/components/core/modals/ModalContentLocker'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 jest.mock('~/helpers/generatorUid')
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('ModalContentLocker component', () => {
   let wrapper
@@ -18,13 +24,13 @@ describe('ModalContentLocker component', () => {
   })
 
   it('should correctly render', () => {
-    const { container } = render(ModalContentLocker)
+    const { container } = render(ModalContentLocker, { localVue })
 
     expect(container).toMatchSnapshot()
   })
 
   it('if call method "show" and ref modalContactMe is undefined > "show" method in ref modalContactMe not call', () => {
-    wrapper = shallowMount(ModalContentLocker)
+    wrapper = shallowMount(ModalContentLocker, { localVue })
     wrapper.vm.show()
     expect(mockShow).not.toHaveBeenCalled()
   })
@@ -39,13 +45,14 @@ describe('ModalContentLocker component', () => {
           },
         },
       },
+      localVue,
     })
     wrapper.vm.show()
     expect(mockShow).toHaveBeenCalledTimes(1)
   })
 
   it('if call method "close" and ref modalContactMe is undefined > "close" method in ref modalContactMe not call', () => {
-    wrapper = shallowMount(ModalContentLocker)
+    wrapper = shallowMount(ModalContentLocker, { localVue })
     wrapper.vm.close()
     expect(mockClose).not.toHaveBeenCalled()
   })
@@ -60,6 +67,7 @@ describe('ModalContentLocker component', () => {
           },
         },
       },
+      localVue,
     })
     wrapper.vm.close()
     expect(mockClose).toHaveBeenCalledTimes(1)
@@ -75,6 +83,7 @@ describe('ModalContentLocker component', () => {
           },
         },
       },
+      localVue,
     })
     wrapper.vm.handleSendedForm({ email: 'test@email.com' })
     expect(wrapper).toMatchSnapshot()

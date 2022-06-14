@@ -4,9 +4,13 @@ import { createLocalVue, shallowMount } from '@vue/test-utils'
 import AllPostsSection from '@/components/Blog/Main/AllPostsSection'
 import allPosts from '../../../__mocks__/allPosts'
 import * as homeContent from '../../../__mocks__/homePageContent'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const recipeMock = jest.fn()
 const scroll = jest.fn()

@@ -2,9 +2,13 @@ import { render, screen } from '@testing-library/vue'
 import { mount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import CustomerUniversity from '@/components/Blog/header/CustomerUniversity'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('customer university header component', () => {
   const postList = [
@@ -89,6 +93,7 @@ describe('customer university header component', () => {
       mocks,
       stubs,
       store,
+      localVue,
     })
     expect(container).toMatchSnapshot()
   })
@@ -104,6 +109,7 @@ describe('customer university header component', () => {
       mocks,
       stubs,
       store,
+      localVue,
     })
     expect(screen.getByText(clusterName)).not.toBeNull()
   })
@@ -119,6 +125,7 @@ describe('customer university header component', () => {
       mocks,
       stubs,
       store,
+      localVue,
     })
 
     expect(screen.getByText(clusterName)).not.toBeNull()

@@ -1,17 +1,24 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Main from '@/components/Cases/nambafood/Main'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 // eslint-disable-next-line no-sparse-arrays
 const stubs = [
   'LazyHydrate',
+  'NuxtLink',
+  'ClientOnly',
 ]
 
 const directives = {
-  'lazy-load': () => {},
-  'mad-parallax': () => {},
+  'mad-parallax': jest.fn(),
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('Main component', () => {
   it('should render correctly', () => {
@@ -21,6 +28,7 @@ describe('Main component', () => {
         $getMediaFromS3: () => 'img.jpg',
       },
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -32,6 +40,8 @@ describe('Main component', () => {
         $getMediaFromS3: () => 'img.jpg',
       },
       directives,
+      localVue,
+      stubs: ['NuxtLink', 'ClientOnly'],
     })
 
     const About = await container.vm.$options.components.About.call()

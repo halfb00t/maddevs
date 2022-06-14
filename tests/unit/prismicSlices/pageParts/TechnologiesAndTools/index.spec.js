@@ -94,7 +94,12 @@ describe('Technologies and Tools Grid slice', () => {
 
   describe('Dynamic imports TechnologiesAndTools', () => {
     it('should correctly import components', async () => {
-      const container = shallowMount(TechnologiesAndTools)
+      const container = shallowMount(TechnologiesAndTools, {
+        propsData: getFakePropsByParams({
+          ...apiData,
+          background: 'unknown',
+        }),
+      })
 
       const TechnologiesAndTool = await container.vm.$options.components.TechnologiesAndTools.call()
       const ToolsGrid = await container.vm.$options.components.ToolsGrid.call()

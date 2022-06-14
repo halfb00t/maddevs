@@ -1,6 +1,8 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import TechAndToolsNewSlice from '@/prismicSlices/pageParts/TechAndToolsNewSlice'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const props = {
   slice: {
@@ -41,9 +43,9 @@ const props = {
   },
 }
 
-const mock = {
-  'lazy-load': jest.fn(),
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const stubs = ['BigCard', 'LittleCard']
 
@@ -51,7 +53,7 @@ describe('TechAndToolsNewSlice component', () => {
   it('should correctly render component', () => {
     const { container } = render(TechAndToolsNewSlice, {
       propsData: props,
-      mock,
+      localVue,
       stubs,
     })
 
@@ -61,7 +63,7 @@ describe('TechAndToolsNewSlice component', () => {
   it('should correctly return empty object from slice props', () => {
     const wrapper = shallowMount(TechAndToolsNewSlice, {
       propsData: props,
-      mock,
+      localVue,
       stubs,
     })
 

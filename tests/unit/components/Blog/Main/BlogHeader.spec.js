@@ -3,9 +3,13 @@ import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import BlogHeader from '@/components/Blog/Main/BlogHeader'
 import allPosts from '../../../__mocks__/allPosts'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const mocks = {
   $prismic: {
@@ -31,6 +35,7 @@ describe('BlogHeader component', () => {
       stubs,
       mocks,
       store,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
