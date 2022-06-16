@@ -5,20 +5,18 @@
     "slice_type": "we_create_projects_for",
     "items": [],
     "primary": {
-      "title": [
-        {
-          "type": "heading1",
-          "text": "E-enable global experiences",
-          "spans": []
-        }
-      ],
-      "description": [
-        {
-          "type": "paragraph",
-          "text": "Officia sint occaecat id.",
-          "spans": []
-        }
-      ]
+      "background": "black",
+      "animation": "fade-up-right"
+    }
+  },
+  {
+    "variation": "weCreateProjectsForWithMap",
+    "name": "WeCreateProjectsForWithMap",
+    "slice_type": "we_create_projects_for",
+    "items": [],
+    "primary": {
+      "background": "black",
+      "animation": "zoom-in-up"
     }
   }
 ]
