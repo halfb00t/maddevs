@@ -25,7 +25,7 @@ exports[`ProjectsCountries component should render correctly 1`] = `
       class="projects-countries_img-wrap"
     >
       <img
-        alt="lobal projects in 20+ countries"
+        alt="global projects in 20+ countries"
         class="projects-countries_img"
         data-src="img.jpg"
         height="558"

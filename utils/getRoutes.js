@@ -123,7 +123,7 @@ const getRoutes = async () => {
 
   const careerPageRoutes = prismicPosts
     .filter(post => post.type === 'vacancy')
-    .map(vacancy => `/ru/careers/${vacancy.uid}`)
+    .map(vacancy => `/careers/${vacancy.uid}`)
 
   const tagPageRoutes = prismicTags
     .map(tag => `/tag/${convertToSlug(tag)}`)
@@ -137,7 +137,6 @@ const getRoutes = async () => {
     '/',
     '/services',
     '/careers',
-    '/ru/careers',
     '/gdpr',
     '/nda',
     '/privacy',

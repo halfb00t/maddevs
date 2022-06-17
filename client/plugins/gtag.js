@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueGtag from 'vue-gtag'
+import VueGtag, { pageview } from 'vue-gtag'
 
 export default ctx => {
   if (process.client) {
@@ -12,18 +12,25 @@ export default ctx => {
         config: {
           id: process.env.analytics4Key,
           params: {
-            send_page_view: true,
+            send_page_view: false,
           },
         },
         includes: [
           {
             id: process.env.analyticsUniversalKey,
             params: {
-              send_page_view: true,
+              send_page_view: false,
             },
           },
         ],
-      }, ctx.app.router)
+      })
+      const { router } = ctx.app
+
+      router.afterEach(to => {
+        Vue.nextTick(() => {
+          pageview({ page_path: to.fullPath, page_title: document.title })
+        })
+      })
     }
   }
 }

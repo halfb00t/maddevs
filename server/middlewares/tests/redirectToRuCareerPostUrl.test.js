@@ -24,16 +24,16 @@ describe('redirectToRuCareerPostUrl middleware', () => {
   })
 
   it('should correctly call redirect to russian localization page url if req.path does not contain ru and position is present', () => {
-    req.url = '/careers/test/'
+    req.url = '/ru/careers/test/'
 
     redirectToRuCareerPostUrl(req, res, next)
 
-    expect(res.redirect).toHaveBeenCalledWith(301, '/ru/careers/test/')
+    expect(res.redirect).toHaveBeenCalledWith(301, '/careers/test/')
     expect(next).not.toHaveBeenCalled()
   })
 
   it('should not call redirect to russian localization page url if req.path contains ru and position is present', () => {
-    req.url = '/ru/careers/test/'
+    req.url = '/careers/test/'
 
     redirectToRuCareerPostUrl(req, res, next)
 
@@ -42,7 +42,7 @@ describe('redirectToRuCareerPostUrl middleware', () => {
   })
 
   it('should not call redirect to russian localization page url if req.path contains ru and position is not present', () => {
-    req.url = '/ru/careers/'
+    req.url = '/careers/'
 
     redirectToRuCareerPostUrl(req, res, next)
 
