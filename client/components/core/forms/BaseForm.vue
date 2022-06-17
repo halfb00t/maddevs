@@ -71,6 +71,11 @@
       ref="checkboxes"
       @change="handleCheckboxesChange"
     />
+    <UIFormCheckbox
+      :id="id"
+      ref="checkbox"
+      @change="handleCheckboxChange"
+    />
 
     <UIButton
       :id="isValid ? buttonIdName : ''"
@@ -93,6 +98,7 @@ import RadioButtons from '@/components/core/forms/RadioButtons'
 import UIFormCheckboxes from '@/components/shared/UIFormCheckboxes'
 import UIButton from '@/components/shared/UIButton'
 import phoneHandlerMixin from '@/mixins/phoneHandlerMixin'
+import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 
 export default {
   name: 'BaseForm',
@@ -101,6 +107,7 @@ export default {
     UIFormCheckboxes,
     UIButton,
     RadioButtons,
+    UIFormCheckbox,
   },
 
   mixins: [phoneHandlerMixin],
@@ -275,6 +282,7 @@ export default {
       agreeWithPrivacyPolicy: false,
       agreeToGetMadDevsDiscountOffers: false,
       isSubmitted: false,
+      isAgree: true,
     }
   },
 
@@ -300,6 +308,10 @@ export default {
   },
 
   methods: {
+    handleCheckboxChange({ isAgree }) {
+      this.isAgree = isAgree
+    },
+
     defaultChoice() {
       if (this.isPartnership) return 'Partnership'
       return this.defaultInterestRadioInput ? this.interestRadioChoices[0] : ''
@@ -320,6 +332,7 @@ export default {
         email: this.email || '',
         agreeWithPrivacyPolicy: this.agreeWithPrivacyPolicy,
         agreeToGetMadDevsDiscountOffers: this.agreeToGetMadDevsDiscountOffers,
+        newsLetter: this.isAgree ? 'Yes' : 'No',
       }
       if (
         (this.useCompany
