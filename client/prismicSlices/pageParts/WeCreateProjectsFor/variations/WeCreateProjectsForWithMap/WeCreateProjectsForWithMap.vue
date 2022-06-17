@@ -420,13 +420,13 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &__list_items{
+  &__list_items {
     display: inline;
     @media screen and (max-width: 692px) {
       width: 45%;
-      gap: 20px ;
+      gap: 20px;
     }
-    }
+  }
 
   &__item {
     &-industry {
