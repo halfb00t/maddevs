@@ -108,7 +108,7 @@ export default {
       } catch (err) {
         // to-do: handle the error
         // eslint-disable-next-line no-console
-        console.log('Error: ', err)
+        console.log('Error: ', err.message)
       }
     },
 

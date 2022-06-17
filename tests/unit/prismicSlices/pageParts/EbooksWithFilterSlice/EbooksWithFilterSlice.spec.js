@@ -129,6 +129,7 @@ const store = {
     ebookCategory: () => 'Ebooks',
     totalPages: () => 1,
     perPage: () => 6,
+    ebookCategories: () => [],
   },
   actions: {
     getEbooksAction: jest.fn(),

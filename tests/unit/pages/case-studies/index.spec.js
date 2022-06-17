@@ -32,6 +32,7 @@ const mocks = {
 const localVue = createLocalVue()
 localVue.directive('lazy-load', lazyLoad)
 jest.mock('nuxt-lazy-load/lib/module')
+jest.mock('~/helpers/generatorUid')
 
 describe('Index page', () => {
   it('should render correctly', () => {
