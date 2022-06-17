@@ -1,11 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ReadForm component should render correctly with no data 1`] = `
+exports[`ReadForm component should render correctly with data 1`] = `
 <div class="read-form">
   <div class="read-form__fields">
-    <div name="name" required="required" placeholder="Your name" validation="" value=""></div>
-    <div name="email" placeholder="Email" required="required" value=""></div>
-    <uiformcheckbox-stub id="test"></uiformcheckbox-stub> <button id="sent_ebook_button" class="read-form__button read-form__button--active">
+    <div class="modal-field-item field-item">
+      <!---->
+      <div style="position: relative;"><input data-testid="test-base-form-name" type="text" class="modal-entry-field entry-field">
+        <div class="v-placeholder-asterisk" style="pointer-events: none; position: absolute; top: 0px; left: 0px; display: flex; align-items: center;"><span></span>
+          <div style="color: red; margin-left: 3px;"></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div class="modal-field-item field-item">
+      <!---->
+      <div style="position: relative;"><input data-testid="test-base-form-email" type="text" class="modal-entry-field entry-field">
+        <div class="v-placeholder-asterisk" style="pointer-events: none; position: absolute; top: 0px; left: 0px; display: flex; align-items: center;"><span></span>
+          <div style="color: red; margin-left: 3px;"></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div class="form-checkbox"><label for="sent_ebook_news-test" class="form-checkbox-label required">I agree to receive the monthly newsletter from Mad Devs
+        <input id="sent_ebook_news-test" data-testid="user-agreement-checkbox-input" type="checkbox" name="User agreement" class="form-checkbox-input">
+        <div class="checkmark"></div>
+      </label></div> <button id="" class="read-form__button read-form__button--always-fullsized">
       Send me the ebook
     </button>
   </div>
