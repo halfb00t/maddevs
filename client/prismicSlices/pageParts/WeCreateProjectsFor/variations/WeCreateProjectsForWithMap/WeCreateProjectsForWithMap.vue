@@ -422,7 +422,11 @@ export default {
 
   &__list_items{
     display: inline;
-  }
+    @media screen and (max-width: 692px) {
+      width: 45%;
+      gap: 20px ;
+    }
+    }
 
   &__item {
     &-industry {
@@ -438,8 +442,15 @@ export default {
 
     &-industry-name {
       margin-bottom: 24px;
-      @include font('Inter', 16px, 400);
       color: $text-color--white-primary;
+      @media screen and (max-width: 1024px) {
+        @include font('Inter', 16px, 400);
+      }
+
+      @media screen and (max-width: 692px) {
+        @include font('Inter', 14px, 400);
+        text-wrap: normal;
+      }
     }
   }
 }
