@@ -11,6 +11,7 @@
       href="https://github.com/maddevsio/"
       target="_blank"
       class="featured-projects-list__see-more"
+      @click="sendGithubClickEvent"
     >
       <UIButton>70+ Open source projects on GitHub</UIButton>
     </a>
@@ -21,6 +22,7 @@
 import UIButton from '@/components/shared/UIButton'
 import FeaturedProjectsListItem from '@/components/OpenSource/shared/FeaturedProjectsListItem'
 import { featuredProjectsList } from '@/data/featuredProjectsList'
+import { githubClickEvent } from '@/analytics/events'
 
 export default {
   name: 'FeaturedProjectsList',
@@ -33,6 +35,12 @@ export default {
     return {
       featuredProjectsList,
     }
+  },
+
+  methods: {
+    sendGithubClickEvent() {
+      githubClickEvent.send()
+    },
   },
 }
 </script>
@@ -61,6 +69,14 @@ export default {
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 430px) {
+    gap: 24px;
+
+    &__see-more {
+      margin-top: 24px;
+    }
   }
 }
 </style>

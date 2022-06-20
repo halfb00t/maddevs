@@ -1,6 +1,200 @@
 {
   "client/prismicSlices/pageParts": {
     "components": {
+      "accordion_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "accordion_slice",
+        "name": "AccordionSlice",
+        "description": "AccordionSlice",
+        "model": {
+          "id": "accordion_slice",
+          "type": "SharedSlice",
+          "name": "AccordionSlice",
+          "description": "AccordionSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AccordionSlice",
+              "primary": {
+                "mainTitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Main Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6"
+                  }
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container Size",
+                    "placeholder": "Default 1026",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "question": {
+                  "config": {
+                    "label": "Question",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "answer": {
+                  "config": {
+                    "label": "Answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "accordion_slice",
+            "items": [
+              {
+                "question": "brand cutting-edge relationships",
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolor proident dolor amet.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "question": "strategize front-end eyeballs",
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ipsum ad ut excepteur adipisicing adipisicing sint mollit est fugiat. Mollit culpa Lorem sint aute commodo ut labore cillum qui exercitation laboris Lorem qui quis aliquip.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "question": "brand magnetic ROI",
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Velit deserunt ullamco officia reprehenderit incididunt dolor adipisicing do anim ipsum eu in irure est aute. Cupidatat eu voluptate reprehenderit deserunt eiusmod duis occaecat ut excepteur veniam proident dolore occaecat Lorem reprehenderit.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "question": "matrix impactful web services",
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Lorem laborum cillum pariatur velit mollit.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "mainTitle": [
+                {
+                  "type": "heading1",
+                  "text": "Maximize mission-critical paradigms",
+                  "spans": []
+                }
+              ],
+              "containerSize": "1026"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/AccordionSlice/default-slice/preview.png",
+            "width": 729,
+            "height": 381
+          }
+        }
+      },
+      "authors_list_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "authors_list_slice",
+        "name": "AuthorsListSlice",
+        "description": "AuthorsListSlice",
+        "model": {
+          "id": "authors_list_slice",
+          "type": "SharedSlice",
+          "name": "AuthorsListSlice",
+          "description": "AuthorsListSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AuthorsListSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-righ",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-up",
+                      "zoom-in-left",
+                      "zoom-in-right"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "authors_list_slice",
+            "items": [],
+            "primary": {
+              "animation": "zoom-in-right"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "awards_slice": {
         "library": "client/prismicSlices/pageParts",
         "id": "awards_slice",
@@ -256,6 +450,222 @@
           "extension": "vue"
         },
         "screenshotPaths": {}
+      },
+      "build_and_risks_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "build_and_risks_slice",
+        "name": "BuildAndRisksSlice",
+        "description": "BuildAndRisksSlice",
+        "model": {
+          "id": "build_and_risks_slice",
+          "type": "SharedSlice",
+          "name": "BuildAndRisksSlice",
+          "description": "BuildAndRisksSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "BuildAndRisksSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
+                "outerBgColor": {
+                  "config": {
+                    "label": "Outer background color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "silver",
+                      "grey",
+                      "red",
+                      "blue",
+                      "yellow",
+                      "purple",
+                      "green"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "backgroundColor": {
+                  "config": {
+                    "label": "Background color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "silver",
+                      "grey",
+                      "red",
+                      "blue",
+                      "yellow",
+                      "purple",
+                      "green"
+                    ],
+                    "default_value": "white"
+                  },
+                  "type": "Select"
+                },
+                "textColor": {
+                  "config": {
+                    "label": "Text Color",
+                    "placeholder": "",
+                    "options": [
+                      "black",
+                      "white"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2,heading3,heading4,heading5,heading6"
+                  },
+                  "type": "StructuredText"
+                },
+                "description": {
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                },
+                "buttonText": {
+                  "config": {
+                    "label": "Buttontext",
+                    "placeholder": "Read Ebook"
+                  },
+                  "type": "Text"
+                },
+                "buttonLink": {
+                  "config": {
+                    "label": "Button link",
+                    "placeholder": "",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                },
+                "buttonBgColor": {
+                  "config": {
+                    "label": "Button background color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "red"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "buttonTextColor": {
+                  "config": {
+                    "label": "Button Text Color",
+                    "placeholder": "",
+                    "options": [
+                      "grey",
+                      "white",
+                      "black"
+                    ],
+                    "default_value": "grey"
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "build_and_risks_slice",
+            "items": [],
+            "primary": {
+              "animation": "fade-up",
+              "outerBgColor": "black",
+              "backgroundColor": "white",
+              "textColor": "black",
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Deploy e-business architectures",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Id Lorem consequat Lorem pariatur occaecat enim.",
+                  "spans": []
+                }
+              ],
+              "buttonText": "unleash end-to-end e-services",
+              "buttonLink": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "buttonBgColor": "black",
+              "buttonTextColor": "grey",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/BuildAndRisksSlice/default-slice/preview.png",
+            "width": 1630,
+            "height": 964
+          }
+        }
       },
       "button_slice": {
         "library": "client/prismicSlices/pageParts",
@@ -631,17 +1041,17 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/ButtonSlice/default-slice/preview.png",
             "width": 703,
             "height": 147
           },
           "outlinedButton": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/outlinedButton/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/ButtonSlice/outlinedButton/preview.png",
             "width": 703,
             "height": 72
           },
           "linkButton": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ButtonSlice/linkButton/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/ButtonSlice/linkButton/preview.png",
             "width": 703,
             "height": 72
           }
@@ -665,15 +1075,14 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "Card Grid slice",
               "primary": {
-                "colorTheme": {
+                "background": {
                   "config": {
-                    "label": "Theme color",
+                    "label": "Background",
                     "placeholder": "",
                     "options": [
                       "white",
                       "black"
-                    ],
-                    "default_value": "white"
+                    ]
                   },
                   "type": "Select"
                 },
@@ -708,6 +1117,18 @@
                   },
                   "type": "Text"
                 },
+                "titleWeight": {
+                  "config": {
+                    "label": "Title Weight",
+                    "placeholder": "",
+                    "options": [
+                      "bold",
+                      "normal"
+                    ],
+                    "default_value": "bold"
+                  },
+                  "type": "Select"
+                },
                 "description": {
                   "config": {
                     "label": "Description",
@@ -735,6 +1156,15 @@
                 "fullWidth": {
                   "config": {
                     "label": "100% or 50%",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                },
+                "paddingBottom": {
+                  "config": {
+                    "label": "Bottom padding after image",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
                     "default_value": false
@@ -1138,8 +1568,9 @@
             "slice_type": "card_grid_slice",
             "items": [
               {
-                "title": "integrate magnetic applications",
-                "description": "synergize efficient markets",
+                "title": "aggregate extensible eyeballs",
+                "titleWeight": "normal",
+                "description": "scale turn-key eyeballs",
                 "btnLink": {
                   "link_type": "Web",
                   "url": "http://google.com"
@@ -1151,16 +1582,18 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
                 },
-                "fullWidth": true
+                "fullWidth": true,
+                "paddingBottom": true
               },
               {
-                "title": "brand world-class channels",
-                "description": "evolve rich architectures",
+                "title": "embrace transparent synergies",
+                "titleWeight": "bold",
+                "description": "syndicate magnetic relationships",
                 "btnLink": {
                   "link_type": "Web",
-                  "url": "https://prismic.io"
+                  "url": "http://twitter.com"
                 },
                 "image": {
                   "dimensions": {
@@ -1169,31 +1602,14 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
                 },
-                "fullWidth": true
-              },
-              {
-                "title": "deploy efficient e-tailers",
-                "description": "envisioneer impactful metrics",
-                "btnLink": {
-                  "link_type": "Web",
-                  "url": "http://google.com"
-                },
-                "image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
-                },
-                "fullWidth": false
+                "fullWidth": false,
+                "paddingBottom": true
               }
             ],
             "primary": {
-              "colorTheme": "white",
+              "background": "black",
               "animation": "none"
             }
           },
@@ -1205,7 +1621,7 @@
               {
                 "link": {
                   "link_type": "Web",
-                  "url": "http://twitter.com"
+                  "url": "http://google.com"
                 },
                 "icon": {
                   "dimensions": {
@@ -1214,27 +1630,10 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
                 },
-                "title": "strategize killer initiatives",
-                "description": "morph clicks-and-mortar synergies"
-              },
-              {
-                "link": {
-                  "link_type": "Web",
-                  "url": "http://twitter.com"
-                },
-                "icon": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
-                },
-                "title": "embrace rich models",
-                "description": "incubate 24/365 blockchains"
+                "title": "embrace visionary experiences",
+                "description": "scale web-enabled architectures"
               },
               {
                 "link": {
@@ -1248,10 +1647,27 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?w=900&h=500&fit=crop"
                 },
-                "title": "transition extensible niches",
-                "description": "cultivate integrated partnerships"
+                "title": "incentivize e-business partnerships",
+                "description": "streamline B2C solutions"
+              },
+              {
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                },
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+                },
+                "title": "visualize vertical vortals",
+                "description": "benchmark efficient models"
               },
               {
                 "link": {
@@ -1265,17 +1681,17 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
                 },
-                "title": "drive granular synergies",
-                "description": "scale innovative experiences"
+                "title": "expedite e-business eyeballs",
+                "description": "scale out-of-the-box niches"
               }
             ],
             "primary": {
-              "displayButtons": true,
+              "displayButtons": false,
               "background": "black",
-              "colorTheme": "black",
-              "animation": "zoom-in-right"
+              "colorTheme": "white",
+              "animation": "fade-up-left"
             }
           },
           "richTextCards": {
@@ -1285,38 +1701,51 @@
             "items": [
               {
                 "fullWidth": true,
-                "background": "#b71c",
-                "title": "brand wireless technologies",
+                "background": "#b3a047",
+                "title": "repurpose web-enabled e-markets",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Ut consectetur pariatur esse occaecat pariatur cillum Lorem labore pariatur sit et incididunt laboris ad eu. Nostrud ad aliqua incididunt id.",
+                    "text": "Exercitation nostrud voluptate eiusmod fugiat cupidatat veniam et dolore mollit sit tempor consequat quis nostrud. Officia anim anim laborum. Quis id enim eu veniam eu consectetur reprehenderit deserunt tempor qui aliquip.",
                     "spans": []
                   }
                 ],
                 "alignText": "left"
               },
               {
-                "fullWidth": true,
-                "background": "#bcf4d4",
-                "title": "incentivize distributed eyeballs",
+                "fullWidth": false,
+                "background": "#2d2f2d",
+                "title": "mesh proactive vortals",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Non duis excepteur non est irure consectetur esse enim esse.",
+                    "text": "In id voluptate dolor Lorem culpa ea.",
                     "spans": []
                   }
                 ],
                 "alignText": "left"
               },
               {
-                "fullWidth": true,
-                "background": "#bb28a3",
-                "title": "maximize best-of-breed deliverables",
+                "fullWidth": false,
+                "background": "#eb1b1b",
+                "title": "aggregate global architectures",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Officia ipsum anim elit cupidatat dolore occaecat voluptate et id excepteur consectetur labore ad occaecat. Cupidatat dolor irure cillum duis.",
+                    "text": "Consectetur id ex minim nulla labore voluptate nostrud elit sunt ullamco. Proident proident laborum elit do sunt non ea deserunt. Est nostrud cillum est magna et enim aliquip consectetur adipisicing.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left"
+              },
+              {
+                "fullWidth": false,
+                "background": "#11f611",
+                "title": "disintermediate 24/365 relationships",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Reprehenderit ea voluptate voluptate quis nostrud commodo.",
                     "spans": []
                   }
                 ],
@@ -1324,20 +1753,20 @@
               },
               {
                 "fullWidth": true,
-                "background": "#74d0d4",
-                "title": "aggregate world-class web-readiness",
+                "background": "#be9b80",
+                "title": "architect 24/7 e-tailers",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Aliqua in duis ex occaecat cillum officia incididunt sunt nulla sint duis reprehenderit fugiat elit.",
+                    "text": "Officia esse magna deserunt culpa minim occaecat aliquip incididunt mollit velit consectetur sit duis ex in.",
                     "spans": []
                   }
                 ],
-                "alignText": "left"
+                "alignText": "center"
               }
             ],
             "primary": {
-              "animation": "zoom-in-up"
+              "animation": "zoom-in-left"
             }
           },
           "richTextCardsAnimation": {
@@ -1347,55 +1776,39 @@
             "items": [
               {
                 "fullWidth": false,
-                "background": "#d6977d",
-                "title": "visualize viral systems",
+                "background": "#011c62",
+                "title": "generate scalable interfaces",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Nisi pariatur mollit deserunt excepteur sunt cupidatat incididunt in commodo sit exercitation ad voluptate officia officia. Non proident nostrud dolore consequat magna officia.",
+                    "text": "Ad do aliquip elit nostrud in proident nostrud eiusmod aute. Magna et elit id quis adipisicing. Ex tempor culpa sint commodo amet mollit nisi officia aliquip cupidatat et.",
                     "spans": []
                   }
                 ],
                 "alignText": "left",
-                "lottie-animations": "active-development",
-                "width": "unleash integrated channels",
-                "height": "enable cutting-edge action-items"
+                "lottie-animations": "cloud-migration",
+                "width": "visualize seamless action-items",
+                "height": "enhance collaborative networks"
               },
               {
-                "fullWidth": false,
-                "background": "#45838c",
-                "title": "matrix B2C users",
+                "fullWidth": true,
+                "background": "#8f2694",
+                "title": "syndicate 24/365 experiences",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Exercitation duis in adipisicing dolore voluptate labore eiusmod deserunt eu aute minim fugiat officia. Lorem ipsum voluptate nostrud exercitation officia culpa exercitation qui ea nulla nostrud sint amet.",
+                    "text": "Dolore anim voluptate minim excepteur. Consectetur labore excepteur cillum mollit aliquip consequat. Et fugiat exercitation laborum nostrud enim ex cillum.",
                     "spans": []
                   }
                 ],
                 "alignText": "left",
-                "lottie-animations": "active-development",
-                "width": "engage vertical metrics",
-                "height": "implement granular architectures"
-              },
-              {
-                "fullWidth": false,
-                "background": "#54b015",
-                "title": "architect vertical paradigms",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Est est Lorem quis sit ipsum. Consequat nulla eu ullamco mollit elit eu aliqua ea ex do culpa duis in.",
-                    "spans": []
-                  }
-                ],
-                "alignText": "left",
-                "lottie-animations": "stack-selection",
-                "width": "aggregate web-enabled synergies",
-                "height": "empower ubiquitous metrics"
+                "lottie-animations": "cloud-migration",
+                "width": "enhance bricks-and-clicks applications",
+                "height": "enable revolutionary e-tailers"
               }
             ],
             "primary": {
-              "animation": "fade-left"
+              "animation": "fade-up-left"
             }
           },
           "richTextCardsBottomAnimation": {
@@ -1405,55 +1818,71 @@
             "items": [
               {
                 "fullWidth": false,
-                "background": "#d94fb7",
-                "title": "transition cross-platform initiatives",
+                "background": "#9ddff5",
+                "title": "e-enable B2B action-items",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Mollit cupidatat eu magna incididunt consequat adipisicing dolore labore non id ut.",
-                    "spans": []
-                  }
-                ],
-                "alignText": "center",
-                "lottie-animations": "devops-audit",
-                "width": "syndicate innovative initiatives",
-                "height": "whiteboard vertical paradigms"
-              },
-              {
-                "fullWidth": true,
-                "background": "#1ea396",
-                "title": "expedite rich blockchains",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Cillum exercitation excepteur labore eiusmod amet sit qui incididunt veniam nostrud duis Lorem Lorem.",
+                    "text": "Aliquip ut voluptate excepteur nulla minim laborum laboris non ut officia elit commodo excepteur et voluptate.",
                     "spans": []
                   }
                 ],
                 "alignText": "left",
-                "lottie-animations": "qa-page2",
-                "width": "maximize 24/7 applications",
-                "height": "seize back-end applications"
+                "lottie-animations": "devops-audit",
+                "width": "embrace sexy applications",
+                "height": "revolutionize front-end applications"
               },
               {
-                "fullWidth": false,
-                "background": "#bbe284",
-                "title": "facilitate web-enabled partnerships",
+                "fullWidth": true,
+                "background": "#5a5180",
+                "title": "matrix efficient action-items",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Elit proident laboris dolor non occaecat anim incididunt. Fugiat ea cupidatat anim. Exercitation ut cillum laborum adipisicing non nulla minim eu ea et ad.",
+                    "text": "Proident duis nostrud esse id quis anim velit non Lorem ipsum veniam ipsum labore. Culpa do labore deserunt in nulla fugiat do et minim esse commodo pariatur exercitation ex. Eiusmod eu in officia esse qui cillum tempor ea ullamco minim velit consequat dolor cillum.",
                     "spans": []
                   }
                 ],
                 "alignText": "left",
                 "lottie-animations": "infrastructure-animation",
-                "width": "aggregate magnetic markets",
-                "height": "synthesize ubiquitous niches"
+                "width": "enhance compelling networks",
+                "height": "synthesize intuitive paradigms"
+              },
+              {
+                "fullWidth": true,
+                "background": "#3ad5bb",
+                "title": "matrix vertical users",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Excepteur dolore duis minim non laboris. Veniam consequat adipisicing reprehenderit proident nostrud non est sunt proident non adipisicing. In in mollit eu non dolore consectetur.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left",
+                "lottie-animations": "devops-audit",
+                "width": "whiteboard mission-critical solutions",
+                "height": "synthesize compelling e-tailers"
+              },
+              {
+                "fullWidth": false,
+                "background": "#ef8e51",
+                "title": "revolutionize granular experiences",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Culpa ea id proident excepteur quis consequat reprehenderit officia id sit minim sit irure. Commodo do ad ea ullamco culpa velit.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left",
+                "lottie-animations": "qa-page2",
+                "width": "syndicate mission-critical methodologies",
+                "height": "matrix B2B metrics"
               }
             ],
             "primary": {
-              "animation": "fade-up-left"
+              "animation": "zoom-in-left"
             }
           }
         },
@@ -1463,28 +1892,13 @@
           "extension": "vue"
         },
         "screenshotPaths": {
-          "default-slice": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/CardGridSlice/default-slice/preview.png",
-            "width": 1200,
-            "height": 1112
-          },
-          "cardGridWithIcon": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/CardGridSlice/cardGridWithIcon/preview.png",
-            "width": 1200,
-            "height": 775
-          },
-          "richTextCards": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/CardGridSlice/richTextCards/preview.png",
-            "width": 1200,
-            "height": 1528
-          },
           "richTextCardsAnimation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsAnimation/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsAnimation/preview.png",
             "width": 847,
             "height": 667
           },
           "richTextCardsBottomAnimation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsBottomAnimation/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CardGridSlice/richTextCardsBottomAnimation/preview.png",
             "width": 880,
             "height": 437
           }
@@ -1601,9 +2015,213 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CardWithImageSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CardWithImageSlice/default-slice/preview.png",
             "width": 844,
             "height": 348
+          }
+        }
+      },
+      "cards_with_icon": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "cards_with_icon",
+        "name": "CardsWithIcon",
+        "description": "CardsWithIcon",
+        "model": {
+          "id": "cards_with_icon",
+          "type": "SharedSlice",
+          "name": "CardsWithIcon",
+          "description": "CardsWithIcon",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CardsWithIcon",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation List",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container Size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "iconImage": {
+                  "config": {
+                    "label": "Icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+                  },
+                  "type": "StructuredText"
+                },
+                "description": {
+                  "config": {
+                    "label": "Description",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "cards_with_icon",
+            "items": [
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Deliver strategic deliverables",
+                    "spans": []
+                  }
+                ],
+                "description": "grow front-end schemas"
+              },
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Seize best-of-breed e-commerce",
+                    "spans": []
+                  }
+                ],
+                "description": "brand sexy markets"
+              },
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Extend viral web-readiness",
+                    "spans": []
+                  }
+                ],
+                "description": "integrate dynamic blockchains"
+              },
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Transform interactive niches",
+                    "spans": []
+                  }
+                ],
+                "description": "extend ubiquitous networks"
+              },
+              {
+                "iconImage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+                },
+                "title": [
+                  {
+                    "type": "heading1",
+                    "text": "Aggregate next-generation vortals",
+                    "spans": []
+                  }
+                ],
+                "description": "innovate customized portals"
+              }
+            ],
+            "primary": {
+              "animation": "zoom-in",
+              "containerSize": "1240"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CardsWithIcon/default-slice/preview.png",
+            "width": 589,
+            "height": 418
           }
         }
       },
@@ -1819,7 +2437,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CaseListSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CaseListSlice/default-slice/preview.png",
             "width": 561,
             "height": 553
           }
@@ -1956,7 +2574,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CasesListSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CasesListSlice/default-slice/preview.png",
             "width": 443,
             "height": 599
           }
@@ -2025,7 +2643,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/ContactsSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/ContactsSlice/default-slice/preview.png",
             "width": 1200,
             "height": 858
           }
@@ -2108,7 +2726,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/CreateProjectsSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/CreateProjectsSlice/default-slice/preview.png",
             "width": 1200,
             "height": 428
           }
@@ -2261,7 +2879,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CtaBannerSlice/default/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CtaBannerSlice/default/preview.png",
             "width": 703,
             "height": 356
           }
@@ -2406,7 +3024,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerLogoSlice/default/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CustomerLogoSlice/default/preview.png",
             "width": 351,
             "height": 381
           }
@@ -2503,7 +3121,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerRatesSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CustomerRatesSlice/default-slice/preview.png",
             "width": 854,
             "height": 381
           }
@@ -2629,16 +3247,91 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/default-slice/preview.png",
             "width": 778,
             "height": 463
           },
           "testimonialsSecondVariation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/testimonialsSecondVariation/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/CustomerTestimonials/testimonialsSecondVariation/preview.png",
             "width": 1037,
             "height": 616
           }
         }
+      },
+      "customers_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "customers_slice",
+        "name": "CustomersSlice",
+        "description": "CustomersSlice",
+        "model": {
+          "id": "customers_slice",
+          "type": "SharedSlice",
+          "name": "CustomersSlice",
+          "description": "CustomersSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CustomersSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "background": {
+                  "config": {
+                    "label": "Background color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "grey"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "customers_slice",
+            "items": [],
+            "primary": {
+              "animation": "zoom-in-down",
+              "background": "white"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
       },
       "description_slice_with_icon": {
         "library": "client/prismicSlices/pageParts",
@@ -2788,11 +3481,204 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/DescriptionSliceWithIcon/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/DescriptionSliceWithIcon/default-slice/preview.png",
             "width": 1014,
             "height": 528
           }
         }
+      },
+      "ebook_page_cards_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "ebook_page_cards_slice",
+        "name": "EbookPageCardsSlice",
+        "description": "EbookPageCardsSlice",
+        "model": {
+          "id": "ebook_page_cards_slice",
+          "type": "SharedSlice",
+          "name": "EbookPageCardsSlice",
+          "description": "EbookPageCardsSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "EbookPageCardsSlice",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+                  }
+                },
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
+                "btnText": {
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "btnLink": {
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container Size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "data": {
+                  "config": {
+                    "label": "Link to Ebook Page",
+                    "customtypes": [
+                      "custom_page"
+                    ],
+                    "select": "document"
+                  },
+                  "type": "Link"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "ebook_page_cards_slice",
+            "items": [
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Synergize leading-edge blockchains",
+                  "spans": []
+                }
+              ],
+              "animation": "fade-left",
+              "btnText": "aggregate turn-key e-tailers",
+              "btnLink": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              },
+              "containerSize": "1026"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/EbookPageCardsSlice/default-slice/preview.png",
+            "width": 696,
+            "height": 449
+          }
+        }
+      },
+      "ebooks_with_filter_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "ebooks_with_filter_slice",
+        "name": "EbooksWithFilterSlice",
+        "description": "EbooksWithFilterSlice",
+        "model": {
+          "id": "ebooks_with_filter_slice",
+          "type": "SharedSlice",
+          "name": "EbooksWithFilterSlice",
+          "description": "EbooksWithFilterSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "EbooksWithFilterSlice",
+              "primary": {},
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "ebooks_with_filter_slice",
+            "items": [],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
       },
       "embed_slice": {
         "library": "client/prismicSlices/pageParts",
@@ -2944,9 +3830,149 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/EmbedSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/EmbedSlice/default-slice/preview.png",
             "width": 1438,
             "height": 438
+          }
+        }
+      },
+      "form_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "form_slice",
+        "name": "FormSlice",
+        "description": "FormSlice",
+        "model": {
+          "id": "form_slice",
+          "type": "SharedSlice",
+          "name": "FormSlice",
+          "description": "FormSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FormSlice",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6"
+                  }
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
+                },
+                "animation": {
+                  "config": {
+                    "label": "Animation List",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "Book image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "ebookPath": {
+                  "config": {
+                    "label": "Ebook Path on AWS S3",
+                    "placeholder": "Example: pdf/ebook-name.pdf"
+                  },
+                  "type": "Text"
+                },
+                "ebookName": {
+                  "config": {
+                    "label": "Book Name For Email",
+                    "placeholder": "Like: Pricing Strategies"
+                  },
+                  "type": "Text"
+                },
+                "sendPulseTemplateId": {
+                  "config": {
+                    "label": "SendPulse Template ID",
+                    "placeholder": "Numbers from SendPulse template URL"
+                  },
+                  "type": "Number"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "form_slice",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Architect magnetic e-tailers",
+                  "spans": []
+                }
+              ],
+              "containerSize": "1026",
+              "animation": "fade-up",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+              },
+              "ebookPath": "evolve dot-com interfaces",
+              "ebookName": "visualize cross-platform infrastructures",
+              "sendPulseTemplateId": 7822
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/FormSlice/default-slice/preview.png",
+            "width": 807,
+            "height": 465
           }
         }
       },
@@ -3196,6 +4222,123 @@
                   "type": "Text"
                 }
               }
+            },
+            {
+              "id": "gridWithAnimationOptionSlice",
+              "name": "GridWithAnimationOptionSlice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "GridLottieSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animations List",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-righ",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-up",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "fullWidth": {
+                  "config": {
+                    "label": "Full width",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                },
+                "background": {
+                  "config": {
+                    "label": "Background",
+                    "placeholder": ""
+                  },
+                  "type": "Color"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "content": {
+                  "config": {
+                    "label": "Content",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "multi": "list-item,o-list-item"
+                  },
+                  "type": "StructuredText"
+                },
+                "alignText": {
+                  "config": {
+                    "label": "Content Alignment",
+                    "placeholder": "",
+                    "options": [
+                      "left",
+                      "center"
+                    ],
+                    "default_value": "left"
+                  },
+                  "type": "Select"
+                },
+                "lottieAnimation": {
+                  "config": {
+                    "label": "Link to Lottie Animation on S3",
+                    "placeholder": "Like: images/custom/lottie.json"
+                  },
+                  "type": "Text"
+                },
+                "lottieHeight": {
+                  "config": {
+                    "label": "Lottie height",
+                    "placeholder": "default 395px"
+                  },
+                  "type": "Text"
+                },
+                "lottiePosition": {
+                  "config": {
+                    "label": "Lottie Position",
+                    "placeholder": "",
+                    "options": [
+                      "top",
+                      "bottom"
+                    ],
+                    "default_value": "top"
+                  },
+                  "type": "Select"
+                },
+                "width": {
+                  "config": {
+                    "label": "Width",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "height": {
+                  "config": {
+                    "label": "Height",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                }
+              }
             }
           ]
         },
@@ -3207,54 +4350,71 @@
             "items": [
               {
                 "fullWidth": false,
-                "background": "#a86961",
-                "title": "drive end-to-end methodologies",
+                "background": "#baecf1",
+                "title": "envisioneer synergistic blockchains",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Esse do id tempor ut tempor sunt consectetur eiusmod anim incididunt esse.",
+                    "text": "Amet anim consequat esse irure excepteur aute amet amet laborum ea tempor. Sint sit sunt labore.",
                     "spans": []
                   }
                 ],
                 "alignText": "left",
-                "lottie-animation": "monetize killer models",
+                "lottie-animation": "seize transparent e-services",
                 "lottiePosition": "top",
-                "width": "drive best-of-breed markets",
-                "height": "orchestrate holistic systems"
+                "width": "whiteboard B2B infrastructures",
+                "height": "envisioneer innovative applications"
               },
               {
                 "fullWidth": true,
-                "background": "#b5f433",
-                "title": "deliver frictionless supply-chains",
+                "background": "#26bede",
+                "title": "maximize plug-and-play infrastructures",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Proident commodo ut ipsum adipisicing.",
+                    "text": "Qui occaecat anim cupidatat occaecat consequat commodo dolor sit voluptate. Aute in non elit deserunt fugiat id exercitation qui eu ex deserunt dolor aute Lorem incididunt.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left",
+                "lottie-animation": "benchmark one-to-one convergence",
+                "lottiePosition": "top",
+                "width": "monetize integrated vortals",
+                "height": "harness sexy web-readiness"
+              },
+              {
+                "fullWidth": true,
+                "background": "#3c8b48",
+                "title": "reinvent efficient schemas",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Elit incididunt deserunt cillum eu fugiat et consectetur deserunt sint enim est est sunt labore.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left",
+                "lottie-animation": "enhance transparent action-items",
+                "lottiePosition": "top",
+                "width": "deploy cross-platform convergence",
+                "height": "optimize mission-critical e-commerce"
+              },
+              {
+                "fullWidth": true,
+                "background": "#0e4994",
+                "title": "drive web-enabled e-commerce",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Amet minim est commodo adipisicing cupidatat nulla esse dolor.",
                     "spans": []
                   }
                 ],
                 "alignText": "center",
-                "lottie-animation": "aggregate seamless markets",
-                "lottiePosition": "bottom",
-                "width": "monetize clicks-and-mortar blockchains",
-                "height": "productize efficient e-business"
-              },
-              {
-                "fullWidth": true,
-                "background": "#011ba5",
-                "title": "productize compelling e-business",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Minim tempor aute elit velit aliqua laboris ut sunt est in nisi sunt veniam nulla consequat. Quis ullamco exercitation excepteur nostrud ut in eiusmod enim ex exercitation do commodo ad labore. Ea est esse excepteur ea Lorem deserunt ut sunt tempor anim consequat eu nulla nisi ex.",
-                    "spans": []
-                  }
-                ],
-                "alignText": "left",
-                "lottie-animation": "redefine 24/7 e-services",
+                "lottie-animation": "incentivize enterprise infrastructures",
                 "lottiePosition": "top",
-                "width": "enable extensible users",
-                "height": "scale real-time action-items"
+                "width": "incubate world-class ROI",
+                "height": "disintermediate transparent supply-chains"
               }
             ],
             "primary": {
@@ -3267,80 +4427,116 @@
             "slice_type": "grid_lottie_slice",
             "items": [
               {
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                },
+                "fullWidth": true,
+                "background": "#3f53b0",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Commodo velit ad pariatur enim aliqua deserunt non incididunt id in. Excepteur sunt fugiat ipsum in anim pariatur laboris. Ut consequat nisi aute qui fugiat nulla tempor culpa minim ex eiusmod.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left",
+                "lottie-animation": "reintermediate viral schemas",
+                "lottie-S3-path": "unleash virtual metrics",
+                "lottieHeight": "iterate interactive communities",
+                "lottiePosition": "top",
+                "width": "synthesize leading-edge relationships",
+                "height": "seize efficient functionalities"
+              },
+              {
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                },
                 "fullWidth": false,
-                "background": "#4730f9",
-                "title": "matrix strategic e-commerce",
+                "background": "#c08b54",
                 "content": [
                   {
                     "type": "paragraph",
-                    "text": "Officia deserunt amet cillum sint irure Lorem nulla eiusmod consequat qui tempor consectetur amet veniam.",
+                    "text": "Ad in tempor eu in aliquip exercitation mollit esse aute incididunt ullamco aliquip enim elit. Est fugiat commodo occaecat. Dolor commodo proident elit elit anim mollit.",
                     "spans": []
                   }
                 ],
                 "alignText": "center",
-                "lottie-animation": "about-consulting",
-                "lottie-S3-path": "custom/about/",
-                "lottiePosition": "bottom",
-                "width": "innovate B2C content",
-                "height": "drive end-to-end eyeballs"
-              },
-              {
-                "fullWidth": true,
-                "background": "#8aa40a",
-                "title": "empower cutting-edge bandwidth",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Et proident nisi tempor adipisicing mollit amet occaecat ullamco adipisicing anim proident mollit irure. Veniam minim ipsum ad incididunt.",
-                    "spans": []
-                  }
-                ],
-                "alignText": "left",
-                "lottie-animation": "about-consulting",
-                "lottie-S3-path": "custom/about/",
+                "lottie-animation": "benchmark value-added methodologies",
+                "lottie-S3-path": "implement enterprise functionalities",
+                "lottieHeight": "benchmark compelling initiatives",
                 "lottiePosition": "top",
-                "width": "deliver visionary action-items",
-                "height": "transform real-time experiences"
-              },
-              {
-                "fullWidth": true,
-                "background": "#78587d",
-                "title": "deliver synergistic mindshare",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Aliqua proident minim cillum cillum in sit esse sint proident adipisicing tempor culpa.",
-                    "spans": []
-                  }
-                ],
-                "alignText": "center",
-                "lottie-animation": "about-consulting",
-                "lottie-S3-path": "custom/about/",
-                "lottiePosition": "top",
-                "width": "evolve intuitive e-business",
-                "height": "iterate B2B mindshare"
-              },
-              {
-                "fullWidth": true,
-                "background": "#630ea4",
-                "title": "disintermediate frictionless action-items",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Elit nulla elit et ad adipisicing minim cillum officia proident cupidatat elit nisi ex. Pariatur in est Lorem enim aliqua aute tempor do velit cupidatat exercitation minim. Excepteur eiusmod fugiat id anim adipisicing anim commodo aliqua.",
-                    "spans": []
-                  }
-                ],
-                "alignText": "left",
-                "lottie-animation": "about-consulting",
-                "lottie-S3-path": "custom/about/",
-                "lottiePosition": "top",
-                "width": "monetize customized ROI",
-                "height": "orchestrate synergistic web services"
+                "width": "drive intuitive infrastructures",
+                "height": "drive virtual initiatives"
               }
             ],
             "primary": {
-              "animation": "fade-down-left"
+              "animation": "zoom-in"
+            }
+          },
+          "gridWithAnimationOptionSlice": {
+            "variation": "gridWithAnimationOptionSlice",
+            "name": "GridWithAnimationOptionSlice",
+            "slice_type": "grid_lottie_slice",
+            "items": [
+              {
+                "fullWidth": false,
+                "background": "#1a2e22",
+                "title": "transition wireless niches",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Qui eu adipisicing ad eu excepteur dolore. Velit magna anim est sunt cillum nisi consectetur aliqua ad ea esse ex. Tempor velit proident eu aliquip esse.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left",
+                "lottieAnimation": "utilize sticky e-services",
+                "lottieHeight": "aggregate enterprise networks",
+                "lottiePosition": "bottom",
+                "width": "expedite synergistic technologies",
+                "height": "enhance turn-key paradigms"
+              },
+              {
+                "fullWidth": false,
+                "background": "#4156c8",
+                "title": "repurpose frictionless e-services",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Dolor elit cillum duis sint irure.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "left",
+                "lottieAnimation": "enhance viral e-tailers",
+                "lottieHeight": "repurpose synergistic platforms",
+                "lottiePosition": "top",
+                "width": "synergize user-centric infrastructures",
+                "height": "deliver B2C mindshare"
+              },
+              {
+                "fullWidth": true,
+                "background": "#69638e",
+                "title": "embrace frictionless initiatives",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "text": "Cupidatat est magna ex voluptate Lorem.",
+                    "spans": []
+                  }
+                ],
+                "alignText": "center",
+                "lottieAnimation": "exploit innovative channels",
+                "lottieHeight": "innovate extensible content",
+                "lottiePosition": "top",
+                "width": "synthesize value-added markets",
+                "height": "benchmark global mindshare"
+              }
+            ],
+            "primary": {
+              "animation": "fade-up"
             }
           }
         },
@@ -3351,14 +4547,19 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/GridLottieSlice/default-slice/preview.png",
             "width": 630,
             "height": 782
           },
           "gridLottieLink": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/GridLottieSlice/gridLottieLink/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/GridLottieSlice/gridLottieLink/preview.png",
             "width": 361,
             "height": 653
+          },
+          "gridWithAnimationOptionSlice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/GridLottieSlice/gridWithAnimationOptionSlice/preview.png",
+            "width": 752,
+            "height": 556
           }
         }
       },
@@ -3536,7 +4737,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ImageWithCaption/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/ImageWithCaption/default-slice/preview.png",
             "width": 1313,
             "height": 707
           }
@@ -3841,17 +5042,17 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/default-slice/preview.png",
             "width": 937,
             "height": 719
           },
           "secondVariation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/secondVariation/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/secondVariation/preview.png",
             "width": 517,
             "height": 360
           },
           "thirdVariation": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/thirdVariation/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/KeyMetricsSlice/thirdVariation/preview.png",
             "width": 517,
             "height": 360
           }
@@ -4004,7 +5205,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/NavLinkSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/NavLinkSlice/default-slice/preview.png",
             "width": 323,
             "height": 38
           }
@@ -4077,6 +5278,84 @@
                   "type": "Link"
                 }
               }
+            },
+            {
+              "id": "ebookPostsSectionSlice",
+              "name": "EbookPostsSectionSlice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostsSectionSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                },
+                "title": {
+                  "config": {
+                    "label": "Main Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+                  },
+                  "type": "StructuredText"
+                },
+                "containerSize": {
+                  "config": {
+                    "label": "Container size",
+                    "placeholder": "",
+                    "options": [
+                      "1026",
+                      "1240"
+                    ],
+                    "default_value": "1026"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "theme": {
+                  "config": {
+                    "label": "Theme",
+                    "placeholder": "",
+                    "options": [
+                      "light",
+                      "dark"
+                    ],
+                    "default_value": "light"
+                  },
+                  "type": "Select"
+                },
+                "data": {
+                  "config": {
+                    "label": "LinkToArticle",
+                    "select": "document",
+                    "customtypes": [
+                      "post",
+                      "customer_university"
+                    ]
+                  },
+                  "type": "Link"
+                }
+              }
             }
           ]
         },
@@ -4090,7 +5369,28 @@
                 "theme": "light",
                 "data": {
                   "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "theme": "light",
+                "data": {
+                  "link_type": "Web",
                   "url": "https://prismic.io"
+                }
+              },
+              {
+                "theme": "light",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              },
+              {
+                "theme": "light",
+                "data": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
                 }
               },
               {
@@ -4102,7 +5402,46 @@
               }
             ],
             "primary": {
-              "animation": "zoom-in"
+              "animation": "fade-up"
+            }
+          },
+          "ebookPostsSectionSlice": {
+            "variation": "ebookPostsSectionSlice",
+            "name": "EbookPostsSectionSlice",
+            "slice_type": "posts_section_slice",
+            "items": [
+              {
+                "theme": "light",
+                "data": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              },
+              {
+                "theme": "light",
+                "data": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              },
+              {
+                "theme": "light",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {
+              "animation": "fade-right",
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Strategize turn-key networks",
+                  "spans": []
+                }
+              ],
+              "containerSize": "1026"
             }
           }
         },
@@ -4113,9 +5452,14 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PostsSectionSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/PostsSectionSlice/default-slice/preview.png",
             "width": 1291,
             "height": 544
+          },
+          "ebookPostsSectionSlice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/PostsSectionSlice/ebookPostsSectionSlice/preview.png",
+            "width": 596,
+            "height": 539
           }
         }
       },
@@ -4400,7 +5744,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/PressCenter/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/PressCenter/default-slice/preview.png",
             "width": 2574,
             "height": 1116
           }
@@ -4607,7 +5951,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ProgressSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/ProgressSlice/default-slice/preview.png",
             "width": 1502,
             "height": 557
           }
@@ -4711,7 +6055,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/ProjectStartSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/ProjectStartSlice/default-slice/preview.png",
             "width": 836,
             "height": 740
           }
@@ -4825,7 +6169,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/QuickProjectStart/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/QuickProjectStart/default-slice/preview.png",
             "width": 836,
             "height": 740
           }
@@ -4905,6 +6249,79 @@
                 }
               },
               "items": {}
+            },
+            {
+              "id": "singleImageTwo",
+              "name": "SingleImageTwo",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SingleImage",
+              "primary": {
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "subtitle": {
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "image": {
+                  "config": {
+                    "label": "Image",
+                    "constraint": {
+                      "width": 1240,
+                      "height": 607
+                    },
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "testField": {
+                  "config": {
+                    "label": "testField",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                }
+              },
+              "items": {}
             }
           ]
         },
@@ -4915,9 +6332,9 @@
             "slice_type": "single_image",
             "items": [],
             "primary": {
-              "title": "deliver impactful interfaces",
-              "text": "streamline frictionless ROI",
-              "subtitle": "recontextualize value-added web services",
+              "title": "grow global architectures",
+              "text": "unleash bleeding-edge platforms",
+              "subtitle": "brand bleeding-edge methodologies",
               "image": {
                 "dimensions": {
                   "width": 1240,
@@ -4925,9 +6342,31 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=1240&h=607&fit=crop"
+                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=1240&h=607&fit=crop"
               },
-              "animation": "fade-up-left"
+              "animation": "zoom-in-right"
+            }
+          },
+          "singleImageTwo": {
+            "variation": "singleImageTwo",
+            "name": "SingleImageTwo",
+            "slice_type": "single_image",
+            "items": [],
+            "primary": {
+              "title": "monetize plug-and-play e-business",
+              "text": "utilize real-time communities",
+              "subtitle": "engineer compelling e-business",
+              "image": {
+                "dimensions": {
+                  "width": 1240,
+                  "height": 607
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=1240&h=607&fit=crop"
+              },
+              "animation": "zoom-in-right",
+              "testField": true
             }
           }
         },
@@ -4938,7 +6377,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/SingleImage/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/SingleImage/default-slice/preview.png",
             "width": 797,
             "height": 391
           }
@@ -5036,7 +6475,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/SpacerSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/SpacerSlice/default-slice/preview.png",
             "width": 200,
             "height": 200
           }
@@ -5115,6 +6554,137 @@
                 }
               },
               "items": {}
+            },
+            {
+              "id": "startScreenImageRightAndButton",
+              "name": "StartScreenImageRightAndButton",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "StartScreen",
+              "primary": {
+                "background": {
+                  "config": {
+                    "label": "Slice background",
+                    "placeholder": "",
+                    "options": [
+                      "black",
+                      "white",
+                      "grey"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "gradientColor": {
+                  "config": {
+                    "label": "Gradient color",
+                    "placeholder": "",
+                    "options": [
+                      "white",
+                      "black",
+                      "grey"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "image": {
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "rightImage": {
+                  "config": {
+                    "label": "RIght Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "imageOpacity": {
+                  "config": {
+                    "label": "Image opacity",
+                    "placeholder": "0.8"
+                  },
+                  "type": "Number"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6,strong"
+                  },
+                  "type": "StructuredText"
+                },
+                "subtitle": {
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                },
+                "btnText": {
+                  "config": {
+                    "label": "Button text",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "btnLink": {
+                  "config": {
+                    "label": "Button Link (optional)",
+                    "placeholder": "Button will be a link instead of a modal window",
+                    "allowTargetBlank": false
+                  },
+                  "type": "Link"
+                },
+                "modal": {
+                  "config": {
+                    "label": "Modal window (optional)",
+                    "placeholder": "Select modal window that will open",
+                    "options": [
+                      "download-pdf",
+                      "contact-me",
+                      "order-project"
+                    ]
+                  },
+                  "type": "Select"
+                },
+                "ebookPath": {
+                  "config": {
+                    "label": "Ebook Path on AWS S3",
+                    "placeholder": "Example: pdf/ebook-name.pdf"
+                  },
+                  "type": "Text"
+                },
+                "ebookName": {
+                  "config": {
+                    "label": "Book Name for Email",
+                    "placeholder": "Like: Pricing Strategies"
+                  },
+                  "type": "Text"
+                },
+                "ebookImage": {
+                  "config": {
+                    "label": "Book Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "sendPulseTemplateId": {
+                  "config": {
+                    "label": "SendPulse Template ID",
+                    "placeholder": "Numbers from SendPulse template URL"
+                  },
+                  "type": "Number"
+                }
+              },
+              "items": {}
             }
           ]
         },
@@ -5126,7 +6696,7 @@
             "items": [],
             "primary": {
               "background": "black",
-              "gradientColor": "white",
+              "gradientColor": "black",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -5140,6 +6710,67 @@
               "title": "Mad Devs Engineering Your Growth",
               "subtitle": "Without empty words, here at Mad Devs we partner with projects where our teams thrive. Innovating solutions, carrying ownership, delivering sustainable value and celebrating successes — make a happy workplace, where things get done. "
             }
+          },
+          "startScreenImageRightAndButton": {
+            "variation": "startScreenImageRightAndButton",
+            "name": "StartScreenImageRightAndButton",
+            "slice_type": "start_screen",
+            "items": [],
+            "primary": {
+              "background": "grey",
+              "gradientColor": "white",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
+              },
+              "rightImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+              },
+              "imageOpacity": 8234,
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Harness 24/7 content",
+                  "spans": []
+                }
+              ],
+              "subtitle": [
+                {
+                  "type": "paragraph",
+                  "text": "Ea laboris veniam aute sint esse laborum eu ex.",
+                  "spans": []
+                }
+              ],
+              "btnText": "maximize global e-business",
+              "btnLink": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              },
+              "modal": "download-pdf",
+              "ebookPath": "disintermediate open-source architectures",
+              "ebookName": "revolutionize web-enabled channels",
+              "ebookImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+              },
+              "sendPulseTemplateId": 8274
+            }
           }
         },
         "meta": {
@@ -5149,9 +6780,14 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/StartScreen/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/StartScreen/default-slice/preview.png",
             "width": 2880,
             "height": 1492
+          },
+          "startScreenImageRightAndButton": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/StartScreen/startScreenImageRightAndButton/preview.png",
+            "width": 790,
+            "height": 417
           }
         }
       },
@@ -5322,9 +6958,562 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TeamCards/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TeamCards/default-slice/preview.png",
             "width": 1247,
             "height": 845
+          }
+        }
+      },
+      "tech_and_tools_new_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "tech_and_tools_new_slice",
+        "name": "TechAndToolsNewSlice",
+        "description": "TechAndToolsNewSlice",
+        "model": {
+          "id": "tech_and_tools_new_slice",
+          "type": "SharedSlice",
+          "name": "TechAndToolsNewSlice",
+          "description": "TechAndToolsNewSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TechAndToolsNewSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "icon": {
+                  "config": {
+                    "label": "SVG Icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "isBig": {
+                  "config": {
+                    "label": "Big card?",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "description": {
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "if little card don`t filled"
+                  },
+                  "type": "Text"
+                }
+              }
+            },
+            {
+              "id": "threeBigCards",
+              "name": "ThreeBigCards",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TechAndToolsNewSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "icon": {
+                  "config": {
+                    "label": "SVG Icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "isBig": {
+                  "config": {
+                    "label": "Big card?",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "description": {
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "if little card don`t filled"
+                  },
+                  "type": "Text"
+                }
+              }
+            },
+            {
+              "id": "twoBigCards",
+              "name": "TwoBigCards",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TechAndToolsNewSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "icon": {
+                  "config": {
+                    "label": "SVG Icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "isBig": {
+                  "config": {
+                    "label": "Big card?",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "description": {
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "if little card don`t filled"
+                  },
+                  "type": "Text"
+                }
+              }
+            },
+            {
+              "id": "oneBigCard",
+              "name": "OneBigCard",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TechAndToolsNewSlice",
+              "primary": {
+                "animation": {
+                  "config": {
+                    "label": "Animation",
+                    "placeholder": "",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-right",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-down",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ],
+                    "default_value": "fade-up"
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {
+                "icon": {
+                  "config": {
+                    "label": "SVG Icon",
+                    "constraint": {},
+                    "thumbnails": []
+                  },
+                  "type": "Image"
+                },
+                "isBig": {
+                  "config": {
+                    "label": "Big card?",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                },
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "description": {
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "if little card don`t filled"
+                  },
+                  "type": "Text"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "tech_and_tools_new_slice",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "optimize extensible relationships",
+                "description": "facilitate open-source mindshare"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "reinvent dynamic infomediaries",
+                "description": "streamline clicks-and-mortar e-markets"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "disintermediate intuitive paradigms",
+                "description": "monetize rich niches"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+                },
+                "isBig": false,
+                "title": "reinvent sticky users",
+                "description": "integrate turn-key portals"
+              }
+            ],
+            "primary": {
+              "animation": "fade-up"
+            }
+          },
+          "threeBigCards": {
+            "variation": "threeBigCards",
+            "name": "ThreeBigCards",
+            "slice_type": "tech_and_tools_new_slice",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
+                },
+                "isBig": false,
+                "title": "envisioneer distributed metrics",
+                "description": "monetize mission-critical channels"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "empower killer infrastructures",
+                "description": "engineer rich ROI"
+              }
+            ],
+            "primary": {
+              "animation": "fade-up"
+            }
+          },
+          "twoBigCards": {
+            "variation": "twoBigCards",
+            "name": "TwoBigCards",
+            "slice_type": "tech_and_tools_new_slice",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
+                },
+                "isBig": false,
+                "title": "streamline transparent web services",
+                "description": "benchmark synergistic technologies"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "cultivate e-business metrics",
+                "description": "synergize intuitive convergence"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+                },
+                "isBig": false,
+                "title": "recontextualize turn-key systems",
+                "description": "grow dynamic deliverables"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "enhance open-source users",
+                "description": "brand web-enabled ROI"
+              }
+            ],
+            "primary": {
+              "animation": "fade-up"
+            }
+          },
+          "oneBigCard": {
+            "variation": "oneBigCard",
+            "name": "OneBigCard",
+            "slice_type": "tech_and_tools_new_slice",
+            "items": [
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "scale user-centric networks",
+                "description": "exploit turn-key supply-chains"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+                },
+                "isBig": false,
+                "title": "seize interactive eyeballs",
+                "description": "recontextualize revolutionary infrastructures"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "syndicate 24/365 relationships",
+                "description": "maximize 24/365 niches"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+                },
+                "isBig": false,
+                "title": "mesh front-end supply-chains",
+                "description": "maximize integrated architectures"
+              },
+              {
+                "icon": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"
+                },
+                "isBig": true,
+                "title": "unleash frictionless infrastructures",
+                "description": "brand value-added architectures"
+              }
+            ],
+            "primary": {
+              "animation": "zoom-in-right"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/default-slice/preview.png",
+            "width": 1275,
+            "height": 459
+          },
+          "threeBigCards": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/threeBigCards/preview.png",
+            "width": 1216,
+            "height": 424
+          },
+          "twoBigCards": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/twoBigCards/preview.png",
+            "width": 725,
+            "height": 202
+          },
+          "oneBigCard": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TechAndToolsNewSlice/oneBigCard/preview.png",
+            "width": 709,
+            "height": 161
           }
         }
       },
@@ -5616,12 +7805,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/default-slice/preview.png",
             "width": 1294,
             "height": 756
           },
           "toolsGrid": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/toolsGrid/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TechnologiesAndTools/toolsGrid/preview.png",
             "width": 1259,
             "height": 245
           }
@@ -5698,7 +7887,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TechnologiesSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TechnologiesSlice/default-slice/preview.png",
             "width": 1294,
             "height": 756
           }
@@ -5817,12 +8006,12 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextList/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TextList/default-slice/preview.png",
             "width": 822,
             "height": 454
           },
           "twoColumnsList": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextList/twoColumnsList/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TextList/twoColumnsList/preview.png",
             "width": 867,
             "height": 401
           }
@@ -6683,17 +8872,17 @@
         },
         "screenshotPaths": {
           "title": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/title/preview.jpeg",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TextSlice/title/preview.jpeg",
             "width": 413,
             "height": 98
           },
           "paragraph": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/paragraph/preview.jpeg",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TextSlice/paragraph/preview.jpeg",
             "width": 484,
             "height": 105
           },
           "flexibleParagraph": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TextSlice/flexibleParagraph/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TextSlice/flexibleParagraph/preview.png",
             "width": 1166,
             "height": 292
           }
@@ -6779,7 +8968,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/TitleAndParagraphSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/TitleAndParagraphSlice/default-slice/preview.png",
             "width": 1478,
             "height": 646
           }
@@ -6963,7 +9152,7 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/client/prismicSlices/pageParts/VideoSlice/default-slice/preview.png",
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/VideoSlice/default-slice/preview.png",
             "width": 1089,
             "height": 538
           }
@@ -7024,6 +9213,51 @@
                 }
               },
               "items": {}
+            },
+            {
+              "id": "weCreateProjectsForWithMap",
+              "name": "WeCreateProjectsForWithMap",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "WeCreateProjectsFor",
+              "primary": {
+                "background": {
+                  "config": {
+                    "label": "Slice background",
+                    "placeholder": "",
+                    "options": [
+                      "black",
+                      "white",
+                      "grey"
+                    ],
+                    "default_value": "black"
+                  },
+                  "type": "Select"
+                },
+                "animation": {
+                  "config": {
+                    "label": "Animation list",
+                    "placeholder": "Select aos animation",
+                    "options": [
+                      "fade-up",
+                      "fade-down",
+                      "fade-right",
+                      "fade-left",
+                      "fade-up-right",
+                      "fade-up-left",
+                      "fade-down-righ",
+                      "fade-down-left",
+                      "zoom-in",
+                      "zoom-in-up",
+                      "zoom-in-left",
+                      "zoom-in-right",
+                      "none"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {}
             }
           ]
         },
@@ -7034,20 +9268,18 @@
             "slice_type": "we_create_projects_for",
             "items": [],
             "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "E-enable global experiences",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Officia sint occaecat id.",
-                  "spans": []
-                }
-              ]
+              "background": "black",
+              "animation": "fade-up-right"
+            }
+          },
+          "weCreateProjectsForWithMap": {
+            "variation": "weCreateProjectsForWithMap",
+            "name": "WeCreateProjectsForWithMap",
+            "slice_type": "we_create_projects_for",
+            "items": [],
+            "primary": {
+              "background": "black",
+              "animation": "zoom-in-up"
             }
           }
         },
@@ -7058,9 +9290,14 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/home/domino/work/maddevs/.slicemachine/assets/client/prismicSlices/pageParts/WeCreateProjectsFor/default-slice/preview.png",
-            "width": 1200,
-            "height": 428
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/WeCreateProjectsFor/default-slice/preview.png",
+            "width": 1288,
+            "height": 410
+          },
+          "weCreateProjectsForWithMap": {
+            "path": "/home/antoneo/dev/maddevs/client/prismicSlices/pageParts/WeCreateProjectsFor/weCreateProjectsForWithMap/preview.png",
+            "width": 1092,
+            "height": 706
           }
         }
       }

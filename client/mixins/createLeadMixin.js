@@ -16,6 +16,7 @@ const createLeadMixin = (templateId, title = 'Individuals', subject = 'Marketing
       const baseTitle = 'Mad Devs Website Forms'
       const payload = {
         templateId,
+        type: variables.type,
         variables: {
           emailTo: process.env.emailContact,
           subject,
@@ -23,6 +24,7 @@ const createLeadMixin = (templateId, title = 'Individuals', subject = 'Marketing
           projectDescriber: variables.description,
           agreeToGetMadDevsDiscountOffers: variables.agreeToGetMadDevsDiscountOffers ? 'Yes' : 'No',
           agreeWithPrivacyPolicy: variables.agreeWithPrivacyPolicy ? 'Yes' : 'No',
+          consent_to_mailing: variables.consent_to_mailing,
           formLocation: variables.formLocation,
           interest: variables.interest,
           pageUrl: (window && window.location.href) || 'Unknown',
@@ -35,7 +37,7 @@ const createLeadMixin = (templateId, title = 'Individuals', subject = 'Marketing
 
       this.sendLead(payload)
       await delay(500)
-      this.reset()
+      if (this.reset) this.reset()
       this.$parent.$emit('success')
     },
   },

@@ -18,19 +18,16 @@
         />
       </div>
       <div class="author-posts__list">
-        <template v-if="authorPostsLoaded">
-          <section
-            v-for="post in authorPostsToShow"
+        <template v-if="authorPosts.length">
+          <PostCard
+            v-for="post in authorPosts.slice(0, authorsPerPage)"
             :key="post.id"
             :post="post"
+            :author="blogAuthor"
+            :disable-author-link="true"
             class="author-posts__list-item"
-          >
-            <PostCard
-              :post="post"
-              :author="blogAuthor"
-              :disable-author-link="true"
-            />
-          </section>
+            data-testid="author-posts__list-item"
+          />
         </template>
         <template v-else>
           <section
@@ -43,11 +40,11 @@
         </template>
       </div>
       <div
-        v-if="totalPages > authorPostsPage"
+        v-if="showButton && authorPosts.length > authorsPerPage"
         class="author-posts__load-more"
       >
         <LoadMoreButton
-          @click="getMoreAuthorPosts"
+          @click="showMorePosts"
         />
       </div>
     </div>
@@ -55,7 +52,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 import FeaturedPost from '@/components/Blog/shared/FeaturedPost'
 import SkeletonFeaturedPost from '@/components/Blog/skeletons/SkeletonFeaturedPost'
 import SkeletonBlogWidget from '@/components/Blog/skeletons/SkeletonBlogWidget'
@@ -75,21 +72,13 @@ export default {
 
   data() {
     return {
-      pageSize: 13,
+      authorsPerPage: 7,
+      showButton: true,
     }
   },
 
   computed: {
-    ...mapGetters(['blogAuthor', 'authorPosts', 'authorPostsLoaded', 'authorPostsPage']),
-
-    authorPostsToShow() {
-      if (this.authorPosts && !this.authorPosts.length) return []
-      return this.authorPosts.slice(0, this.pageSize * this.authorPostsPage)
-    },
-
-    totalPages() {
-      return Math.ceil(this.authorPosts.length / this.pageSize)
-    },
+    ...mapGetters(['blogAuthor', 'authorPosts', 'authorPostsLoaded']),
   },
 
   updated() {
@@ -97,7 +86,10 @@ export default {
   },
 
   methods: {
-    ...mapActions(['getMoreAuthorPosts']),
+    showMorePosts() {
+      this.showButton = false
+      this.authorsPerPage = this.authorPosts.length
+    },
   },
 }
 </script>
@@ -114,29 +106,52 @@ export default {
       }
     }
 
+    ::v-deep .post-card {
+      display: flex;
+      flex-direction: column;
+      width: 33.3333%;
+      height: auto;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
+      &__info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      &__info-text{
+        margin-bottom: 16px;
+      }
+    }
+
     &__list {
       display: flex;
       flex-flow: row wrap;
       margin: 0 -10px;
+      row-gap: 103px;
     }
 
     &__list-item {
       box-sizing: border-box;
       width: 33.3333%;
       padding: 0 10px;
-      margin-bottom: 103px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      ::v-deep .post-card__meta {
+        margin: auto 0 16px;
+      }
       &:first-of-type {
         display: none;
-      }
-      @media only screen and (min-width: 991px) {
-        &:nth-last-child(-n+3) {
-          margin-bottom: 0;
-        }
       }
     }
 
     &__load-more {
       margin-top: 75px;
+      ::v-deep .load-more-button {
+        width: 100%;
+      }
     }
 
     @media only screen and (max-width: 991px) {
@@ -147,14 +162,14 @@ export default {
         margin-bottom: 56px;
       }
 
+      &__list {
+        row-gap: 56px;
+      }
+
       &__list-item {
         width: 100%;
-        margin-bottom: 56px;
         &:first-of-type {
           display: block;
-        }
-        &:last-child {
-          margin-bottom: 0;
         }
       }
 

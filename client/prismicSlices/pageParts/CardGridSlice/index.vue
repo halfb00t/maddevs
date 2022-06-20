@@ -1,7 +1,7 @@
 <template>
   <section
     class="card-grid-main"
-    :style="{ backgroundColor: sliceBackground }"
+    :style="{ backgroundColor: sliceBackground || '#ffffff' }"
   >
     <CardGrid
       v-if="slice.variation === 'default-slice'"

@@ -16,7 +16,7 @@
       >
         <div class="header__content">
           <div
-            v-if="logoTextIsActive && showCrumbs"
+            v-if="logoTextIsActive"
             class="header__content-crumbs"
           >
             <Crumbs />
@@ -54,6 +54,7 @@
             <a
               href="tel:+442039848555"
               class="header__phone"
+              @click="sendPhoneClickEvent"
             >
               <img
                 width="18"
@@ -147,6 +148,7 @@ import HeaderLogo from '@/components/core/HeaderV2/HeaderLogo.vue'
 import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
 import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
 import { isMobile } from '@/helpers/isMobileDeviceDetect'
+import { contactMeClickEvent, phoneClickEvent } from '@/analytics/events'
 
 // TODO: Need to transfer this constant to @/data/navigation.js
 const navigation = [
@@ -157,6 +159,10 @@ const navigation = [
   {
     name: 'services',
     label: 'Services',
+  },
+  {
+    name: 'industries',
+    label: 'Industries',
   },
   {
     name: 'clients',
@@ -194,18 +200,6 @@ export default {
   },
 
   computed: {
-    showCrumbs() {
-      const { fullPath } = this.$route
-      if (fullPath !== undefined) {
-        const pathArray = (fullPath.startsWith('/')
-          ? fullPath.substring(1).split('/')
-          : fullPath.split('/')).filter(url => url)
-
-        return !pathArray.includes('ebooks')
-      }
-      return null
-    },
-
     ...mapGetters(['headerTransparentArea', 'headerTransparent']),
 
     isBlogPage() {
@@ -258,15 +252,20 @@ export default {
   },
 
   methods: {
+    ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
+
+    sendPhoneClickEvent() {
+      phoneClickEvent.send()
+    },
+
     showBurgerMenu() {
       this.isMobile = isMobile()
     },
 
-    ...mapActions(['getHeaderContent', 'setHeaderTransparent']),
-
     showModal() {
       if (!this.$refs?.modalContactMe?.show) return
       this.$refs.modalContactMe.show()
+      contactMeClickEvent.send()
       this.isActiveMobileMenu = false
     },
 

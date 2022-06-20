@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PostsSectionSlice component should correctly render PostsSectionSlice component 1`] = `
+<div class="tag-posts">
+  <div class="container">
+    <div data-testid="tag-posts__list" data-aos="fade-up" class="tag-posts__list"></div>
+  </div>
+</div>
+`;

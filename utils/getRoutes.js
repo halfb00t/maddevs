@@ -77,18 +77,18 @@ const getDynamicRoutes = async () => {
 
   const authorPageRoutes = prismicPosts
     .filter(post => post.type === 'author')
-    .map(author => `/author/${author.uid}`)
+    .map(author => `/blog/authors/${author.uid}`)
 
   const careerPageRoutes = prismicPosts
     .filter(post => post.type === 'vacancy')
-    .map(vacancy => `/ru/careers/${vacancy.uid}`)
+    .map(vacancy => `/careers/${vacancy.uid}`)
 
   const tagPageRoutes = prismicTags
     .map(tag => `/tag/${convertToSlug(tag)}`)
 
   /* Custom pages from production */
   const customPageRoutes = prismicPosts
-    .filter(post => post.type === 'custom_page' && post.data.released === true)
+    .filter(post => post.type === 'custom_page' && post.data.released === true && post.uid !== 'about')
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
   return {
@@ -107,7 +107,6 @@ export const getStructuredRoutes = async () => {
       '/',
       '/services',
       '/careers',
-      '/ru/careers',
       '/gdpr',
       '/nda',
       '/privacy',
@@ -125,9 +124,14 @@ export const getStructuredRoutes = async () => {
       '/case-studies/yourcast',
       '/case-studies/veeqo',
       '/case-studies/clutch',
+      '/case-studies/peklo',
+      '/case-studies/R4TCA-web-application',
+      '/case-studies/citycam',
+      '/case-studies/bandpay',
+      '/case-studies/guardrails',
+      '/case-studies/namba-taxi',
     ],
     insights: [
-      '/ebooks/pricing-strategies',
       '/open-source/',
       ...dynamicRoutes.cuPageRoutes,
     ],

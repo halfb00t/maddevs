@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EbookPostsSectionSlice component should correctly render component 1`] = `
+<div>
+  <section
+    class="ebook-posts"
+  >
+    <div
+      class="container"
+      style="max-width: 1026px;"
+    >
+      <prismicrichtext-stub
+        class="ebook-posts__title"
+        data-aos="fade-up"
+        data-testid="ebook-posts__title"
+        field="[object Object]"
+        html-serializer="function () { [native code] }"
+      />
+       
+      <div
+        class="ebook-posts__wrapper"
+        data-aos="fade-up"
+      >
+        <div
+          class="ebook-posts__item"
+        >
+          <postcard-stub
+            disabletaglink="true"
+            height="217"
+            isshowposttags="true"
+            limit="80"
+            post="[object Object]"
+            textcolor=""
+            theme="light"
+            width="400"
+          />
+        </div>
+         
+        <!---->
+      </div>
+       
+      <div
+        class="ebook-posts__btn-box"
+      >
+        <!---->
+      </div>
+    </div>
+  </section>
+</div>
+`;

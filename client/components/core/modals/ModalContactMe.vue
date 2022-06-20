@@ -8,6 +8,7 @@
     <ContactMeForm
       id="contact-me-modal"
       :form-location="location"
+      @triggerClose="close"
     />
   </Modal>
 </template>

@@ -23,7 +23,7 @@ db.json
 /server/storage/
 /client/assets/img/Home/png/copyright/mad_copy--dont_touche_big.png
 /client/assets/img/Home/png/copyright/mad_copy--dont_touche.png
-
+/client/static/eslint-report.json
 # Nuxt build
 .nuxt
 dist/

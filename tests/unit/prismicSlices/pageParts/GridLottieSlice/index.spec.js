@@ -15,6 +15,8 @@ const getProps = params => ({
   },
 })
 
+jest.mock('~/helpers/generatorUid')
+
 const stubs = ['GridLottieLink', 'LazyHydrate', 'GridLottie']
 
 describe('Card Grid slice', () => {
@@ -46,13 +48,17 @@ describe('Card Grid slice', () => {
 
   describe('Dynamic imports GridLottieMain', () => {
     it('should correctly import components', async () => {
-      const container = shallowMount(GridLottieMain)
+      const props = getProps(apiData)
+      props.slice.variation = 'gridLottieLink'
+      const container = shallowMount(GridLottieMain, { propsData: props })
 
       const GridLottieLink = await container.vm.$options.components.GridLottieLink.call()
       const GridLottie = await container.vm.$options.components.GridLottie.call()
+      const GridWithAnimationOptionSlice = await container.vm.$options.components.GridWithAnimationOptionSlice.call()
 
       expect(GridLottieLink.default.name).toBe('GridLottieLink')
       expect(GridLottie.default.name).toBe('GridLottie')
+      expect(GridWithAnimationOptionSlice.default.name).toBe('GridWithAnimationOptionSlice')
     })
   })
 })

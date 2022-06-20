@@ -8,6 +8,7 @@
     <NuxtLink
       :to="`/delivery-models/${uid}/`"
       class="model-card__link"
+      @click.native="sendClickCardEvent"
     >
       <div class="model-card__animation">
         <LottieMad
@@ -31,6 +32,7 @@
 <script>
 import LottieMad from '@/components/shared/LottieMad'
 import UIArrowButton from '@/components/shared/UIArrowButton'
+import { cardClickEvent } from '@/analytics/events'
 
 export default {
   name: 'ModelCard',
@@ -91,6 +93,10 @@ export default {
   },
 
   methods: {
+    sendClickCardEvent() {
+      cardClickEvent.send()
+    },
+
     animCreatedHandler(animation) {
       this.animation = animation
       this.animation.setSpeed(this.animationSpeed)
@@ -102,7 +108,7 @@ export default {
       } catch (err) {
         // to-do: handle the error
         // eslint-disable-next-line no-console
-        console.log('Error: ', err)
+        console.log('Error: ', err.message)
       }
     },
 

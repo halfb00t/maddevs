@@ -7,9 +7,9 @@ exports[`CTABanner component should render correctly 1`] = `
   >
     <div
       image="img.png"
-      image-alt-text="Anatoliy"
-      man-name="Anatoliy Fedorenko"
-      man-position="Delivery Manager"
+      image-alt-text="Tony"
+      man-name="Tony Fedorenko"
+      man-position="Head of Delivery"
       text="Together we build solutions that bring digital innovation."
       title="Build your product <br /> with Mad Devs"
     />

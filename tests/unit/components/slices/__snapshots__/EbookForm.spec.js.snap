@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadForm component should render correctly with no data 1`] = `
+<div id="ebook-form" class="ebook-form">
+  <div class="read-form__fields">
+    <div name="name" show-label="true" required="required" placeholder="John Smith" validation="" label="Full name" value=""></div>
+    <div name="email" show-label="true" placeholder="Email" required="required" validation="" label="Email" value=""></div>
+    <uiformcheckbox-stub id="form"></uiformcheckbox-stub> <button id="sent_ebook_button" class="ebook-form__button ebook-form__button--active">
+      Send me the ebook
+    </button>
+    <p class="ebook-form__caption">
+      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for downloading the ebook and some more useful resources in the future.
+    </p>
+  </div>
+</div>
+`;

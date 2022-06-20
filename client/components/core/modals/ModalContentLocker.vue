@@ -25,7 +25,10 @@
         Get your copy of “Custom Software Development: Pricing Strategies”
       </h2>
       <ReadForm
+        id="modal-content-locker"
         :fullsize-button="true"
+        ebook-path="pdf/custom-software-development-pricing-strategies-ebook-new.pdf"
+        ebook-name="Pricing Strategies"
         @form-sended="handleSendedForm"
       />
     </div>

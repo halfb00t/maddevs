@@ -1,5 +1,7 @@
 const axios = require('axios')
-const { ATLASSIAN_AUTH_TOKEN, ATLASSIAN_PROJECT_KEY, ATLASSIAN_API_URL } = require('../config/env')
+const {
+  ATLASSIAN_AUTH_TOKEN, ATLASSIAN_PROJECT_KEY, ATLASSIAN_API_URL, ATLASSIAN_PROJECT_EBOOK_KEY,
+} = require('../config/env')
 
 function generateToken(token) {
   return Buffer.from(token).toString('base64')
@@ -33,6 +35,7 @@ function buildPayload({ variables }) {
       customfield_10063: variables.company,
       customfield_10057: variables.phoneNumber,
       customfield_10166: variables.interest ? { value: variables.interest } : null,
+      customfield_10207: variables.newsLetter ? { value: variables.newsLetter } : null,
       customfield_10064: 'maddevs.io',
       customfield_10066: 'https://megadocnotprovided.com',
       customfield_10183: variables.formLocation,
@@ -60,6 +63,25 @@ function buildPayload({ variables }) {
   }
 }
 
+function buildEbookPayload({ variables }) {
+  return {
+    fields: {
+      summary: variables.fullName, // issue title
+      issuetype: {
+        id: '10002',
+      },
+      project: {
+        key: ATLASSIAN_PROJECT_EBOOK_KEY,
+      },
+      customfield_10058: variables.fullName,
+      customfield_10056: variables.email,
+      customfield_10207: variables.consent_to_mailing ? { value: variables.consent_to_mailing } : null,
+      customfield_10185: variables.pageUrl,
+      customfield_10064: 'maddevs.io',
+    },
+  }
+}
+
 async function createLead(body) {
   try {
     const token = generateToken(ATLASSIAN_AUTH_TOKEN)
@@ -78,6 +100,25 @@ async function createLead(body) {
   }
 }
 
+async function createEbookLead(body) {
+  try {
+    const token = generateToken(ATLASSIAN_AUTH_TOKEN)
+    const payload = buildEbookPayload(body)
+
+    const response = await axios.post(ATLASSIAN_API_URL, payload, {
+      headers: {
+        Authorization: `Basic ${token}`,
+        'Content-Type': 'application/json',
+      },
+    })
+
+    return response.data
+  } catch (error) {
+    return error
+  }
+}
+
 module.exports = {
+  createEbookLead,
   createLead,
 }

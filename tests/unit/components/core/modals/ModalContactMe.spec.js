@@ -2,6 +2,8 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModalContactMe from '@/components/core/modals/ModalContactMe'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalContactMe component', () => {
   let wrapper
   let mockShow

@@ -1,14 +1,15 @@
 <template>
-  <ul class="footerSocialNetworkList">
+  <ul class="footer__social-network">
     <li
       v-for="network in socialNetworks"
       :key="network.key"
-      class="footerSocialNetworkList__social-network-link-wrapper"
+      class="footer__social-network-link-wrapper"
     >
       <a
         :href="network.url"
-        class="footerSocialNetworkList__social-network-link"
+        class="footer__social-network-link"
         target="_blank"
+        @click="sendSocialClickEvent"
       >
         <img
           v-lazy-load
@@ -24,6 +25,7 @@
 
 <script>
 import { socialNetworks } from '@/data/socialNetworks'
+import { socialNetworkClickEvent } from '@/analytics/events'
 
 export default {
   name: 'FooterSocialNetworkList',
@@ -32,12 +34,18 @@ export default {
       socialNetworks,
     }
   },
+
+  methods: {
+    sendSocialClickEvent() {
+      socialNetworkClickEvent.send()
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 @mixin social-network-list-grid {
-  .footerSocialNetworkList {
+  .footer__social-network {
     display: grid;
     grid-template-columns: repeat(4, max-content);
 
@@ -47,11 +55,11 @@ export default {
   }
 }
 
-.footerSocialNetworkList {
+.footer__social-network {
   display: flex;
   justify-content: space-between;
 
-  &__social-network-link {
+  &-link {
     width: 42px;
     height: 42px;
     display: block;
@@ -63,10 +71,6 @@ export default {
       overflow: hidden;
     }
   }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  @include social-network-list-grid;
 }
 
 @media screen and (max-width: 640px) {

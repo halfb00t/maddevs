@@ -28,7 +28,7 @@
         <UIButton
           type="button"
           class="careers-position__apply-button"
-          @click="scrollToElement('#careers-position-form')"
+          @click="sendWriteUsClickEvent"
         >
           {{ $t('careers.detailPage.btn') }}
         </UIButton>
@@ -43,6 +43,7 @@ import PositionLabels from '@/components/Careers/shared/PositionLabels'
 import PositionTags from '@/components/Careers/shared/PositionTags'
 import UIButton from '@/components/shared/UIButton'
 import scrollToElementMixin from '@/mixins/scrollToElementMixin'
+import { writeUsClickEvent } from '@/analytics/events'
 
 export default {
   name: 'PositionHeader',
@@ -56,6 +57,13 @@ export default {
 
   computed: {
     ...mapGetters(['vacancy']),
+  },
+
+  methods: {
+    sendWriteUsClickEvent() {
+      writeUsClickEvent.send()
+      this.scrollToElement('#careers-position-form')
+    },
   },
 }
 </script>

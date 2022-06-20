@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UIFormCheckboxes should render correctly with id prop 1`] = `
+<div>
+  <div
+    class="form-checkbox"
+  >
+    <label
+      class="form-checkbox-label required"
+      for="sent_ebook_news-custom-id"
+    >
+      I agree to receive the monthly newsletter from Mad Devs
+    
+      <input
+        class="form-checkbox-input"
+        data-testid="user-agreement-checkbox-input"
+        id="sent_ebook_news-custom-id"
+        name="User agreement"
+        type="checkbox"
+      />
+       
+      <div
+        class="checkmark"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`UIFormCheckboxes should render correctly with slot 1`] = `
+<div>
+  <div
+    class="form-checkbox"
+  >
+    <label
+      class="form-checkbox-label required"
+      for="sent_ebook_news-custom-id"
+    >
+      I agree to receive the monthly newsletter from Mad Devs
+    
+      <input
+        class="form-checkbox-input"
+        data-testid="user-agreement-checkbox-input"
+        id="sent_ebook_news-custom-id"
+        name="User agreement"
+        type="checkbox"
+      />
+       
+      <div
+        class="checkmark"
+      />
+    </label>
+  </div>
+</div>
+`;

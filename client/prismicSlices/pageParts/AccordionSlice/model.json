@@ -1,0 +1,55 @@
+{
+  "id": "accordion_slice",
+  "type": "SharedSlice",
+  "name": "AccordionSlice",
+  "description": "AccordionSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "AccordionSlice",
+      "primary": {
+        "mainTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Main Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6"
+          }
+        },
+        "containerSize": {
+          "config": {
+            "label": "Container Size",
+            "placeholder": "Default 1026",
+            "options": [
+              "1026",
+              "1240"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "question": {
+          "config": {
+            "label": "Question",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "answer": {
+          "config": {
+            "label": "Answer",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        }
+      }
+    }
+  ]
+}

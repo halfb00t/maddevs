@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/vue'
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import LookingAtTheFrontend from '@/components/Cases/bandpay/LookingAtTheFrontend'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
@@ -11,11 +13,16 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 describe('BandPay LookingAtTheFrontend component', () => {
   it('should render correctly', () => {
     const { container } = render(LookingAtTheFrontend, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -25,6 +32,7 @@ describe('BandPay LookingAtTheFrontend component', () => {
     render(LookingAtTheFrontend, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(screen.getByText(/Looking at the frontend/i).className).toBeTruthy()
@@ -46,6 +54,7 @@ describe('BandPay LookingAtTheFrontend component', () => {
     const wrapper = mount(LookingAtTheFrontend, {
       mocks,
       directives,
+      localVue,
     })
 
     const cards = wrapper.findAll('.colored-card')
@@ -57,6 +66,7 @@ describe('BandPay LookingAtTheFrontend component', () => {
       render(LookingAtTheFrontend, {
         mocks,
         directives,
+        localVue,
       })
 
       const image = screen.getByAltText('High performance')
@@ -69,6 +79,7 @@ describe('BandPay LookingAtTheFrontend component', () => {
       render(LookingAtTheFrontend, {
         mocks,
         directives,
+        localVue,
       })
 
       const image = screen.getByAltText('Flexibility')

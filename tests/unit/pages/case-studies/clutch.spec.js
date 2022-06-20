@@ -3,9 +3,13 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Clutch from '@/pages/case-studies/clutch'
 import formBaseProps from '../../__mocks__/formBaseProps'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const DESCRIPTION = 'B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.'
 
@@ -28,7 +32,7 @@ const META_DATA = {
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Clutch - the leading B2B ratings and reviews platform", "description": "B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
-  image: 'https://maddevs.io/blog.png',
+  image: 'https://maddevs.io/md-blog.png',
 }
 
 const mocks = {

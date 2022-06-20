@@ -17,6 +17,11 @@
         :required="true"
         :validation="$v.email"
       />
+      <UIFormCheckbox
+        :id="id"
+        ref="checkbox"
+        @change="handleCheckboxChange"
+      />
       <button
         :id="isValid ? 'sent_ebook_button': ''"
         class="read-form__button"
@@ -36,16 +41,45 @@
 import { email, maxLength, required } from 'vuelidate/lib/validators'
 import BaseInput from '@/components/core/forms/BaseInput'
 import { sendEmail } from '@/api/email'
+import createLeadMixin from '@/mixins/createLeadMixin'
 import { getLinkWithLifeTime } from '@/api/s3'
+import { ebookSubmitFormEvent } from '@/analytics/events'
+import { addUserType } from '@/analytics/Event'
+import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 
 export default {
   name: 'ReadForm',
-  components: { BaseInput },
+  components: {
+    BaseInput,
+    UIFormCheckbox,
+  },
+
+  mixins: [createLeadMixin(624246, 'Request a PDF file from the Ebook page')],
 
   props: {
     fullsizeButton: {
       type: Boolean,
       default: false,
+    },
+
+    ebookPath: {
+      type: String,
+      default: '',
+    },
+
+    ebookName: {
+      type: String,
+      default: '',
+    },
+
+    id: {
+      type: String,
+      required: true,
+    },
+
+    sendPulseTemplateId: {
+      type: Number,
+      default: 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
     },
   },
 
@@ -53,6 +87,8 @@ export default {
     return {
       name: '',
       email: '',
+      type: 'ebook-form',
+      isAgree: true,
     }
   },
 
@@ -77,22 +113,28 @@ export default {
   },
 
   methods: {
+    handleCheckboxChange({ isAgree }) {
+      this.isAgree = isAgree
+    },
+
     async submit() {
       if (!this.isValid) return
       const params = {
         region: 'eu-west-1',
         bucket: 'maddevsio',
-        file: 'pdf/custom-software-development-pricing-strategies-ebook.pdf',
+        file: this.ebookPath,
         expiresIn: 86400, // sec -> 24h
       }
       const { data: pdfUrl } = await getLinkWithLifeTime(this.$axios, params)
+
       const requestSender = {
         body: {
           email: {
-            templateId: 348595, // Required
+            templateId: Number(this.sendPulseTemplateId) || 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
             variables: {
-              subject: 'Your Pricing Strategies Ebook by Mad Devs',
+              subject: `Your ${this.ebookName} Ebook by Mad Devs`,
               emailTo: this.email,
+              bookName: this.ebookName,
               pdfUrl,
             },
 
@@ -102,31 +144,28 @@ export default {
 
         base64: null,
       }
-      const requestMarketing = {
-        body: {
-          email: {
-            templateId: 624246, // Required
-            variables: {
-              subject: 'Request a PDF file from the Ebook page',
-              senderName: this.name,
-              emailTo: process.env.emailMarketing,
-              fromSender: this.email,
-              page: window.location.href,
-            },
 
-            attachment: null,
-          },
-        },
-
-        base64: '',
-      }
       sendEmail(this.$axios, requestSender) // Send email to sender
-      sendEmail(this.$axios, requestMarketing) // Send email to Mad Devs marketing
+
+      const variables = {
+        type: this.type,
+        fullName: this.name,
+        email: this.email,
+        consent_to_mailing: this.isAgree ? 'Yes' : 'No',
+        page: window.location.href,
+        formLocation: this.ebookName,
+      }
+      // from mixin
+      this.submitLead(variables)
+
+      addUserType('download_ebook')
+      ebookSubmitFormEvent.send()
+
       this.$emit('form-sended', { email: this.email, name: this.name })
-      this.resetForm()
+      this.$refs.checkbox.reset()
     },
 
-    resetForm() {
+    reset() {
       this.$v.$reset() // Reset validation form
       this.name = ''
       this.email = ''

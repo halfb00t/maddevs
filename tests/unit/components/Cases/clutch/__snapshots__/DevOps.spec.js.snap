@@ -105,7 +105,7 @@ exports[`DevOps component should render correctly 1`] = `
     
       </p>
        
-      <nuxtlink
+      <nuxtlink-stub
         to="/"
       >
         <div
@@ -145,7 +145,7 @@ exports[`DevOps component should render correctly 1`] = `
             />
           </div>
         </div>
-      </nuxtlink>
+      </nuxtlink-stub>
        
       <h3
         class="case_title_h3 m-12_bottom"

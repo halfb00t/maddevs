@@ -6,6 +6,8 @@ const mocks = {
   $getMediaFromS3: () => 'img.png',
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('CTABanner component', () => {
   let wrapper = null
   let mockShow = null

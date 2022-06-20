@@ -89,22 +89,3 @@ export const headerNavigation = [
     names: [],
   },
 ]
-
-export const footerNavigation = [
-  {
-    title: 'GDPR Compliance Commitment',
-    link: '/gdpr/',
-  },
-  {
-    title: 'Non-Disclosure Agreement (NDA)',
-    link: '/nda/',
-  },
-  {
-    title: 'Privacy Policy',
-    link: '/privacy/',
-  },
-  {
-    title: 'FAQ',
-    link: '/faq/',
-  },
-]

@@ -17,25 +17,23 @@ export default {
 
   mixins: [headerMixin('.careers-banner')],
 
+  middleware: 'redirectToHomePage',
+
   head() {
     return {
       ...buildHead(
         {
           ...getMetadata('careers'),
-          url: `https://maddevs.io${this.$route.path}/`,
+          url: `https://maddevs.io${this.$route.path}`,
           title: this.$t('careers.meta.title'),
           description: this.$t('careers.meta.description'),
+          image: 'https://maddevs.io/careers.png',
         }, // meta tags
         [], // scripts
-        [
-          { rel: 'alternate', hreflang: 'en', href: 'https://maddevs.io/about/careers/' },
-          { rel: 'alternate', hreflang: 'x-default', href: 'https://maddevs.io/about/careers/' },
-          { rel: 'alternate', hreflang: 'ru', href: 'https://maddevs.io/ru/about/careers/' },
-        ], // links
       ),
 
       htmlAttrs: {
-        lang: this.$i18n.locale,
+        lang: 'en',
       },
     }
   },

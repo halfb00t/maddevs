@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FourBigCards component should correctly render component 1`] = `
+<div>
+  <div
+    class="one-big-cards"
+  >
+    <div
+      class="technologies__big-card technologies__big-card--one-big-cards"
+      data-testid="tech-big-card"
+      isbig="true"
+    >
+      <div
+        class="technologies__big-card-icon-wrapper"
+      >
+        <img
+          alt="Gitlab Icon"
+          class="technologies__big-card-icon"
+          data-src="https://superpupertest.cdn.prismic.io/superpupertest/4588b69e-4518-4ef0-b9eb-a17b793e06d3_gitlab_icon.svg"
+          height="45"
+          width="45"
+        />
+      </div>
+       
+      <div
+        class="technologies__big-card-info"
+      >
+        <h3
+          class="technologies__big-card-title"
+        >
+          
+      Gitlab
+    
+        </h3>
+         
+        <p
+          class="technologies__big-card-description"
+        >
+          
+      A library for GPS and Accelerometer data "fusion" with Kalman filter.A library for GPS and Accelerometer data "fusion" with Kalman filter.
+    
+        </p>
+      </div>
+    </div>
+     
+    <div
+      class="technologies__little-card"
+      data-testid="tech-little-card"
+    >
+      <img
+        alt="Gitlab Icon"
+        class="technologies__little-card-icon"
+        data-src="https://superpupertest.cdn.prismic.io/superpupertest/4588b69e-4518-4ef0-b9eb-a17b793e06d3_gitlab_icon.svg"
+        height="45"
+        width="45"
+      />
+       
+      <h3
+        class="technologies__little-card-title"
+      >
+        
+    Gitlab2
+  
+      </h3>
+    </div>
+    <div
+      class="technologies__little-card"
+      data-testid="tech-little-card"
+    >
+      <img
+        alt="Gitlab Icon"
+        class="technologies__little-card-icon"
+        data-src="https://superpupertest.cdn.prismic.io/superpupertest/4588b69e-4518-4ef0-b9eb-a17b793e06d3_gitlab_icon.svg"
+        height="45"
+        width="45"
+      />
+       
+      <h3
+        class="technologies__little-card-title"
+      >
+        
+    Gitlab3
+  
+      </h3>
+    </div>
+    <div
+      class="technologies__little-card"
+      data-testid="tech-little-card"
+    >
+      <img
+        alt="Gitlab Icon"
+        class="technologies__little-card-icon"
+        data-src="https://superpupertest.cdn.prismic.io/superpupertest/4588b69e-4518-4ef0-b9eb-a17b793e06d3_gitlab_icon.svg"
+        height="45"
+        width="45"
+      />
+       
+      <h3
+        class="technologies__little-card-title"
+      >
+        
+    Gitlab4
+  
+      </h3>
+    </div>
+  </div>
+</div>
+`;

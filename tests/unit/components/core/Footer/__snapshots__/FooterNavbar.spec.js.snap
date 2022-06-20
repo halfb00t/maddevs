@@ -1,58 +1,560 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FooterNavbar component should render correctly 1`] = `
+exports[`FooterNavbar component should correct render footer navbar 1`] = `
 <div>
   <div
     class="footer-navbar"
   >
-    <p
-      class="footer-navbar__company-name"
+    <ul
+      class="footer-main-navigation footer-nav-column footer-nav-column--company"
     >
+      <li
+        class="footer-sub-navigation__column footer-navigation__column--company"
+      >
+        <span
+          class="footer-main-navigation__column-title"
+        >
+          
+        company
       
-    © Mad Devs - 2022
+        </span>
+         
+        <hr
+          class="footer-sub-navigation__separator"
+        />
+         
+        <div
+          class="footer-section footer-section--company"
+          link="/about/"
+        >
+          <div
+            class="footer-section__content"
+          >
+            <div
+              class="footer-section__menus"
+            >
+              <div
+                class="footer-menu"
+              >
+                <h5
+                  class="footer-menu__name"
+                >
+                  
+    Company
   
-    </p>
-     
-    <div
-      class="footer-navbar__nav-list"
+                </h5>
+                 
+                <ul
+                  class="footer-menu__list"
+                >
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/about/"
+                      >
+                        
+          About Mad Devs
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/team/"
+                      >
+                        
+          Team
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/careers/"
+                      >
+                        
+          Careers
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/contact-us/"
+                      >
+                        
+          Contacts
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/faq/"
+                      >
+                        
+          FAQ
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="footer-menu"
+              >
+                <h5
+                  class="footer-menu__name"
+                >
+                  
+    Approach
+  
+                </h5>
+                 
+                <ul
+                  class="footer-menu__list"
+                >
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/development-process/"
+                      >
+                        
+          Development process
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/delivery-models/"
+                      >
+                        
+          Delivery models
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/privacy/"
+                      >
+                        
+          Private Policy
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/sustainability-policy/"
+                      >
+                        
+          Sustainability Policy
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul
+      class="footer-main-navigation footer-nav-column footer-nav-column--services"
     >
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/gdpr/"
+      <li
+        class="footer-sub-navigation__column footer-navigation__column--services"
       >
+        <span
+          class="footer-main-navigation__column-title"
+        >
+          
+        services
+      
+        </span>
+         
+        <hr
+          class="footer-sub-navigation__separator"
+        />
+         
+        <div
+          class="footer-section footer-section--services"
+          link="/services/"
+        >
+          <div
+            class="footer-section__content"
+          >
+            <div
+              class="footer-section__menus"
+            >
+              <div
+                class="footer-menu"
+              >
+                <h5
+                  class="footer-menu__name"
+                >
+                  
+    Software development
+  
+                </h5>
+                 
+                <ul
+                  class="footer-menu__list"
+                >
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/frontend-development/"
+                      >
+                        
+          Frontend development
         
-      GDPR Compliance Commitment
-    
-      </nuxtlink-stub>
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/nda/"
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/backend-development/"
+                      >
+                        
+          Backend development
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/software-testing/"
+                      >
+                        
+          Quality assurance
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/devops/"
+                      >
+                        
+          DevOps
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/mobile-development/"
+                      >
+                        
+          Mobile development
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/design/"
+                      >
+                        
+          Design
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/project-management/"
+                      >
+                        
+          Project management
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul
+      class="footer-main-navigation footer-nav-column footer-nav-column--industries"
+    >
+      <li
+        class="footer-sub-navigation__column footer-navigation__column--industries"
       >
+        <span
+          class="footer-main-navigation__column-title"
+        >
+          
+        industries
+      
+        </span>
+         
+        <hr
+          class="footer-sub-navigation__separator"
+        />
+         
+        <div
+          class="footer-section footer-section--industries"
+          link=""
+        >
+          <div
+            class="footer-section__content"
+          >
+            <div
+              class="footer-section__menus"
+            >
+              <div
+                class="footer-menu"
+              >
+                <!---->
+                 
+                <ul
+                  class="footer-menu__list"
+                >
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/transportation/"
+                      >
+                        
+          Transportation
         
-      Non-Disclosure Agreement (NDA)
-    
-      </nuxtlink-stub>
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/privacy/"
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="footer-sub-navigation__column footer-navigation__column--clients"
       >
+        <span
+          class="footer-main-navigation__column-title"
+        >
+          
+        clients
+      
+        </span>
+         
+        <hr
+          class="footer-sub-navigation__separator"
+        />
+         
+        <div
+          class="footer-section footer-section--clients"
+          link=""
+        >
+          <div
+            class="footer-section__content"
+          >
+            <div
+              class="footer-section__menus"
+            >
+              <div
+                class="footer-menu"
+              >
+                <!---->
+                 
+                <ul
+                  class="footer-menu__list"
+                >
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/case-studies/"
+                      >
+                        
+          Case Studies
         
-      Privacy Policy
-    
-      </nuxtlink-stub>
-      <nuxtlink-stub
-        class="footer-navbar__nav-item"
-        target="_blank"
-        to="/faq/"
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li
+        class="footer-sub-navigation__column footer-navigation__column--insights"
       >
+        <span
+          class="footer-main-navigation__column-title"
+        >
+          
+        insights
+      
+        </span>
+         
+        <hr
+          class="footer-sub-navigation__separator"
+        />
+         
+        <div
+          class="footer-section footer-section--insights"
+          link=""
+        >
+          <div
+            class="footer-section__content"
+          >
+            <div
+              class="footer-section__menus"
+            >
+              <div
+                class="footer-menu"
+              >
+                <!---->
+                 
+                <ul
+                  class="footer-menu__list"
+                >
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/blog/"
+                      >
+                        
+          IT Blog
         
-      FAQ
-    
-      </nuxtlink-stub>
-    </div>
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/open-source/"
+                      >
+                        
+          Open Source
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                  <li
+                    class="footer-menu__item"
+                  >
+                    <div>
+                      <nuxtlink-stub
+                        class="footer-menu__item-link"
+                        data-testid="menu-item-internal-link"
+                        to="/ebooks/"
+                      >
+                        
+          Ebooks
+        
+                      </nuxtlink-stub>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 `;

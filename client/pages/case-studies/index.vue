@@ -31,7 +31,9 @@ export default {
   nuxtI18n: false,
 
   head() {
-    return buildHead(getMetadata('caseStudies'))
+    return buildHead({
+      ...getMetadata('caseStudies'),
+    })
   },
 }
 </script>

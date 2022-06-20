@@ -2,18 +2,22 @@
   <div class="default-layout">
     <HeaderV2 />
     <Nuxt class="main-section" />
+    <Chat class="modal-chat" />
     <ClientOnly>
       <CookieNotice />
     </ClientOnly>
-    <Footer v-if="showFooter" />
+    <Footer
+      v-if="showFooter"
+    />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import Chat from '@/components/core/chat'
 import HeaderV2 from '@/components/core/HeaderV2'
-import Footer from '@/components/core/Footer/Footer'
 import CookieNotice from '@/components/core/CookieNotice'
+import Footer from '@/components/core/Footer/Footer'
 import { getNotAllowedRoutes } from '../../utils/getNotAllowedRoutes'
 
 export default {
@@ -22,6 +26,7 @@ export default {
     CookieNotice,
     HeaderV2,
     Footer,
+    Chat,
   },
 
   /**
@@ -51,10 +56,6 @@ export default {
     $route() {
       this.checkNotAllowedRoute()
     },
-  },
-
-  beforeMount() {
-    this.checkNotAllowedRoute()
   },
 
   mounted() {
@@ -89,6 +90,17 @@ export default {
 <style lang="scss" scoped>
 .default-layout {
   background-color: $bgcolor--black;
+
+  .modal-chat {
+    position: fixed;
+    bottom: 10px;
+    right: 25px;
+    z-index: 10;
+
+    @media screen and (max-width: 420px) {
+      right: 10px;
+    }
+  }
 }
 
 .main-section {

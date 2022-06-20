@@ -16,6 +16,8 @@ const props = {
   ],
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('HeaderMobile component', () => {
   it('should render correctly with props and stubs', () => {
     const wrapper = shallowMount(HeaderMobile, {

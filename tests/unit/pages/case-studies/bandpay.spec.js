@@ -3,9 +3,13 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Bandpay from '@/pages/case-studies/bandpay'
 import formBaseProps from '../../__mocks__/formBaseProps'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const DESCRIPTION = 'FinTech Case Study: Why freelancers don\'t receive payment on time, and how to avoid it? Read Bandpay\'s stories of creating a milestone-based platform to manage the payments process for freelancers.'
 
@@ -28,7 +32,7 @@ const META_DATA = {
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Bandpay - Payment Management Solution for Freelancers and Small Businesses", "description": "FinTech Case Study: Why freelancers don\'t receive payment on time, and how to avoid it? Read Bandpay\'s stories of creating a milestone-based platform to manage the payments process for freelancers.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
-  image: 'https://maddevs.io/blog.png',
+  image: 'https://maddevs.io/md-blog.png',
 }
 
 const mocks = {

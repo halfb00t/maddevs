@@ -12,6 +12,8 @@ const directives = {
   'lazy-load': () => {},
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('CTABanner component', () => {
   it('should render correctly', () => {
     const { container } = render(CTABanner, {

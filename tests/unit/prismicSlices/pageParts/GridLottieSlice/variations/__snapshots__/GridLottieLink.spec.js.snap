@@ -54,7 +54,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         >
           <div
             class="lottie-container"
-            id="about-consulting"
+            id="about-consulting2"
             style="--height: 100px; --width: 100%;"
           />
         </div>
@@ -88,7 +88,7 @@ exports[`GridLottieLink - CardGridWithIcon variation should render correctly wit
         >
           <div
             class="lottie-container"
-            id="about-consulting"
+            id="about-consulting3"
             style="--height: 100px; --width: 100%;"
           />
         </div>

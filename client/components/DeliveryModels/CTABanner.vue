@@ -4,9 +4,9 @@
       title="Build your product <br /> with Mad Devs"
       text="Together we build solutions that bring digital innovation."
       :image="$getMediaFromS3(`/images/CTABanner/Anatoliy.png`)"
-      image-alt-text="Anatoliy"
-      man-name="Anatoliy Fedorenko"
-      man-position="Delivery Manager"
+      image-alt-text="Tony"
+      man-name="Tony Fedorenko"
+      man-position="Head of Delivery"
     >
       <UIButton @click="show">
         Estimate your project

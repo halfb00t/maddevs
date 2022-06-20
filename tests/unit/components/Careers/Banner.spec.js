@@ -1,5 +1,4 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
 import Banner from '@/components/Careers/Banner'
 
 const mocks = {
@@ -25,15 +24,5 @@ describe('Banner component', () => {
     })
 
     expect(container).toMatchSnapshot()
-  })
-
-  it('if call changeLocale should return locale "ru"', () => {
-    const wrapper = shallowMount(Banner, {
-      mocks,
-      store,
-    })
-    wrapper.vm.changeLocale()
-
-    expect(wrapper.vm.changeLocale()).toBe('ru')
   })
 })

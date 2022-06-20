@@ -1,0 +1,12 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "customers_slice",
+    "items": [],
+    "primary": {
+      "animation": "zoom-in-down",
+      "background": "white"
+    }
+  }
+]

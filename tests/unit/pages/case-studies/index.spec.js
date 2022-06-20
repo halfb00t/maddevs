@@ -1,6 +1,8 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Index from '@/pages/case-studies/index'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const META_DATA = {
   description: 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
@@ -9,17 +11,17 @@ const META_DATA = {
   'og:site_name': 'Custom Software Development Company',
   'og:title': 'Mad Devs Custom Software Development Company',
   'og:description': 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
-  'og:image': 'https://maddevs.io/Open-Graph.png',
+  'og:image': 'https://maddevs.io/case-studies.png',
   'og:image:width': '1200',
   'og:image:height': '630',
   'twitter:card': 'summary_large_image',
   'twitter:text:title': 'Mad Devs Custom Software Development Company',
   'twitter:description': 'Discover how Mad Devs helps world-class brands and startups engineer their growth and reach desired outcomes with efficacy and creativity.',
-  'twitter:image:src': 'https://maddevs.io/Open-Graph.png',
+  'twitter:image:src': 'https://maddevs.io/case-studies.png',
   'twitter:url': 'https://maddevs.io/case-studies/',
 }
 
-const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam', 'LazyHydrate']
+const stubs = ['TitleDesc', 'CasesList', 'Customers', 'BuildDevTeam', 'LazyHydrate', 'NuxtLink']
 
 const mocks = {
   $lazyLoad: {
@@ -27,16 +29,17 @@ const mocks = {
   },
 }
 
-const directives = {
-  'lazy-load': () => {},
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+jest.mock('~/helpers/generatorUid')
 
 describe('Index page', () => {
   it('should render correctly', () => {
     const { container } = render(Index, {
       stubs,
       mocks,
-      directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -46,7 +49,7 @@ describe('Index page', () => {
     const wrapper = shallowMount(Index, {
       stubs,
       mocks,
-      directives,
+      localVue,
     })
 
     const actual = wrapper.vm.$options.head.call(wrapper.vm)
@@ -60,7 +63,8 @@ describe('Index page', () => {
   describe('Dymanic imports index', () => {
     it('should find text in dymanic imports', async () => {
       const container = shallowMount(Index, {
-        directives,
+        localVue,
+        stubs: ['NuxtLink'],
         mocks: {
           $getMediaFromS3: () => 'img.jpg',
         },

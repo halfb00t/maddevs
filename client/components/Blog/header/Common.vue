@@ -4,6 +4,12 @@
     class="blog-post__introduction-container"
   >
     <slot name="beforeTitle" />
+    <span
+      v-if="date"
+      class="blog-post__date"
+    >
+      {{ date }}
+    </span>
     <h1
       :id="createAnchorID(title)"
       class="blog-post__blog-title title"
@@ -60,6 +66,11 @@ export default {
       type: String,
       default: '',
     },
+
+    date: {
+      type: String,
+      default: '',
+    },
   },
 
   head() {
@@ -92,6 +103,20 @@ export default {
 
 <style scoped lang="scss">
 .blog-post {
+  &__date {
+    display: block;
+    color: $text-color--grey-pale;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 166%;
+    margin-bottom: 15px;
+    letter-spacing: -0.1px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0 24px;
+    }
+  }
+
   &__blog-title {
     @include font('Poppins', 52px, 400);
     line-height: 67px;

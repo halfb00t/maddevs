@@ -239,6 +239,123 @@
           "type": "Text"
         }
       }
+    },
+    {
+      "id": "gridWithAnimationOptionSlice",
+      "name": "GridWithAnimationOptionSlice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "GridLottieSlice",
+      "primary": {
+        "animation": {
+          "config": {
+            "label": "Animations List",
+            "placeholder": "Select aos animation",
+            "options": [
+              "fade-up",
+              "fade-down",
+              "fade-right",
+              "fade-left",
+              "fade-up-right",
+              "fade-up-left",
+              "fade-down-righ",
+              "fade-down-left",
+              "zoom-in",
+              "zoom-in-up",
+              "zoom-in-left",
+              "zoom-in-right",
+              "none"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {
+        "fullWidth": {
+          "config": {
+            "label": "Full width",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        },
+        "background": {
+          "config": {
+            "label": "Background",
+            "placeholder": ""
+          },
+          "type": "Color"
+        },
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "content": {
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "list-item,o-list-item"
+          },
+          "type": "StructuredText"
+        },
+        "alignText": {
+          "config": {
+            "label": "Content Alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center"
+            ],
+            "default_value": "left"
+          },
+          "type": "Select"
+        },
+        "lottieAnimation": {
+          "config": {
+            "label": "Link to Lottie Animation on S3",
+            "placeholder": "Like: images/custom/lottie.json"
+          },
+          "type": "Text"
+        },
+        "lottieHeight": {
+          "config": {
+            "label": "Lottie height",
+            "placeholder": "default 395px"
+          },
+          "type": "Text"
+        },
+        "lottiePosition": {
+          "config": {
+            "label": "Lottie Position",
+            "placeholder": "",
+            "options": [
+              "top",
+              "bottom"
+            ],
+            "default_value": "top"
+          },
+          "type": "Select"
+        },
+        "width": {
+          "config": {
+            "label": "Width",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "height": {
+          "config": {
+            "label": "Height",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
     }
   ]
 }

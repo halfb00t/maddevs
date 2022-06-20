@@ -3,9 +3,13 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import CityCam from '@/pages/case-studies/citycam'
 import formBaseProps from '../../__mocks__/formBaseProps'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const DESCRIPTION = 'IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.'
 
@@ -28,7 +32,7 @@ const META_DATA = {
   metaTitle: '',
   url: '',
   jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Real-Time Traffic Monitoring System for Cities", "description": "IoT Case Study: How to monitor traffic in real-time? Read CityCam\'s story of real-time traffic monitoring, which makes transportation safer and faster.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
-  image: 'https://maddevs.io/blog.png',
+  image: 'https://maddevs.io/md-blog.png',
 }
 
 const mocks = {

@@ -1,10 +1,10 @@
 <template>
   <ol
+    v-if="crumbs.length"
     itemscope
     itemtype="https://schema.org/BreadcrumbList"
   >
     <li
-      v-if="crumbs.length"
       itemprop="itemListElement"
       itemscope
       itemtype="http://schema.org/ListItem"
@@ -14,9 +14,9 @@
         :to="'/'"
         class="title"
         itemprop="item"
-        title="Mad Devs"
+        title="Home"
       >
-        <span itemprop="name">Mad Devs</span>
+        <span itemprop="name">Home</span>
         <meta
           itemprop="position"
           content="0"
@@ -84,7 +84,6 @@ export default {
       }
 
       if (breadcrumbs[0]?.title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
-      if (breadcrumbs[0]?.title === 'Author') breadcrumbs[0].to = '/blog/'
 
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },

@@ -55,6 +55,9 @@ const IGNORE_ROUTES = [
   '/blog/it-recruiter-middle-maddevs',
   '/blog/mad-devs-ishet-golang-razrabotchika',
   '/mad-devs-ishet-golang-razrabotchika',
+  '//success-and-faq',
+  '/about',
+  '//about',
 ]
 
 /** The priority of the route depends on the nesting. More nesting has a lower priority

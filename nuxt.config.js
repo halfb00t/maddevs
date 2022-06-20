@@ -36,17 +36,50 @@ export default async () => {
       title: 'Mad Devs: Software & Mobile App Development Company',
       meta: [
         { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'yandex-verification', content: '1cce4e9bf6ebcdff' },
-        { name: 'facebook-domain-verification', content: 'gjmbb6g9th5cxl6awr0dx598t7ruz3' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
+        {
+          name: 'yandex-verification',
+          content: '1cce4e9bf6ebcdff',
+        },
+        {
+          name: 'facebook-domain-verification',
+          content: 'gjmbb6g9th5cxl6awr0dx598t7ruz3',
+        },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'sitemap', type: 'application/xml', href: 'https://maddevs.io/sitemap.xml' },
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+        {
+          rel: 'sitemap',
+          type: 'application/xml',
+          href: 'https://maddevs.io/sitemap.xml',
+        },
       ],
       script: [
-        { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', defer: true, body: true },
-        { src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`, defer: true, body: true },
+        {
+          src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
+          defer: true,
+          body: true,
+        },
+        {
+          src: `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`,
+          defer: true,
+          body: true,
+        },
+        {
+          src: '//js-na1.hs-scripts.com/22003500.js',
+          defer: true,
+          body: true,
+          async: true,
+          id: 'hs-script-loader',
+          type: 'text/javascript',
+        },
       ],
     },
     /*
@@ -63,6 +96,7 @@ export default async () => {
     generate: {
       routes: getRoutes,
       fallback: '404.html',
+      exclude: [/^((?!\/ru\/careers).)*$/],
       // TODO enable crawler after removing old levels for urls
       crawler: false,
     },
@@ -78,7 +112,11 @@ export default async () => {
     /*
      ** Server middlewares
      */
-    serverMiddleware: [{ path: '/', handler: '~/../server/index.js' }],
+    serverMiddleware: [{
+      path: '/',
+      handler: '~/../server/index.js',
+    }],
+    middleware: 'redirectToHomePage',
     /*
      ** Build configuration
      */
@@ -95,7 +133,10 @@ export default async () => {
       transpile: ['dom7', 'vue-slicezone', 'nuxt-sm', 'vue-lazy-hydration'],
       followSymlinks: true,
       cache: true,
-      extend(config, { isDev, isClient }) {
+      extend(config, {
+        isDev,
+        isClient,
+      }) {
         if (isDev && isClient) {
           config.module.rules.push({
             enforce: 'pre',
@@ -135,8 +176,14 @@ export default async () => {
         },
       },
       filenames: {
-        app: ({ isDev, isModern }) => (isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`),
-        chunk: ({ isDev, isModern }) => (isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`),
+        app: ({
+          isDev,
+          isModern,
+        }) => (isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`),
+        chunk: ({
+          isDev,
+          isModern,
+        }) => (isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`),
         css: ({ isDev }) => (isDev ? '[name].css' : 'css/[contenthash:7].css'),
         img: ({ isDev }) => (isDev ? '[path][name].[ext]' : 'img/[name].[contenthash:7].[ext]'),
         font: ({ isDev }) => (isDev ? '[path][name].[ext]' : 'fonts/[name].[contenthash:7].[ext]'),
@@ -156,7 +203,6 @@ export default async () => {
       '@nuxtjs/robots',
       '@nuxtjs/prismic',
       '@nuxtjs/sitemap',
-      '@nuxtjs/gtm',
       '@nuxtjs/style-resources',
       '@nuxtjs/sentry',
       ['nuxt-lazy-load', {
@@ -170,8 +216,11 @@ export default async () => {
           defaultLocale: 'en',
           langDir: '~/locales/',
           locales: [
-            { code: 'ru', iso: 'ru-RU', file: 'ru.json' },
-            { code: 'en', iso: 'en-EN', file: 'en.json' },
+            {
+              code: 'en',
+              iso: 'en-EN',
+              file: 'en.json',
+            },
           ],
           detectBrowserLanguage: false,
           parsePages: false,
@@ -319,18 +368,6 @@ export default async () => {
       htmlSerializer: '@/plugins/html-serializer',
       preview: false,
     },
-    gtm: {
-      enabled: true,
-      id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
-      // crossOrigin: true,
-      scriptDefer: true,
-      pageTracking: true,
-    },
-    publicRuntimeConfig: {
-      gtm: {
-        id: process.env.NODE_GOOGLE_TAG_MANAGER_ID,
-      },
-    },
 
     ignore: ['**/*.stories.js'],
     env: {
@@ -347,6 +384,8 @@ export default async () => {
       prismicApi: process.env.NODE_PRISMIC_API,
       ipInfoToken: process.env.NODE_IP_INFO_TOKEN,
       reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
+      analyticsUniversalKey: process.env.NODE_ANALYTICS_UNIVERSAL_KEY,
+      analytics4Key: process.env.NODE_GA4_KEY,
     },
     router: {
       trailingSlash: true,

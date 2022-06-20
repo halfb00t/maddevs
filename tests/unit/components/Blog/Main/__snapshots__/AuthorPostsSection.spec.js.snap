@@ -23,228 +23,205 @@ exports[`AuthorPostsSection component should render correctly 1`] = `
       <div
         class="author-posts__list"
       >
-        <section
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
-        <section
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
           class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
           post="[object Object]"
-        >
-          <postcard-stub
-            author="[object Object]"
-            disableauthorlink="true"
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-          />
-        </section>
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
+        <postcard-stub
+          author="[object Object]"
+          class="author-posts__list-item"
+          data-testid="author-posts__list-item"
+          disableauthorlink="true"
+          height="217"
+          isshowposttags="true"
+          limit="150"
+          post="[object Object]"
+          textcolor=""
+          theme="light"
+          width="400"
+          withauthor="true"
+        />
       </div>
        
-      <div
-        class="author-posts__load-more"
-      >
-        <button
-          class="load-more-button"
-          data-testid="test-load-more-button"
-        >
-          
-  See more
-
-        </button>
-      </div>
+      <!---->
     </div>
   </div>
 </div>

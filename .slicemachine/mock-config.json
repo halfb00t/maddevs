@@ -30,7 +30,8 @@
           "animation": {
             "content": "none"
           }
-        }
+        },
+        "items": {}
       },
       "cardGridWithIcon": {
         "primary": {},
@@ -267,6 +268,22 @@
           },
           "background": {
             "content": "black"
+          }
+        }
+      },
+      "startScreenImageRightAndButton": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "subtitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }
@@ -515,12 +532,25 @@
             "content": "devops-audit"
           }
         }
+      },
+      "gridWithAnimationOptionSlice": {
+        "items": {}
       }
     },
     "PostsSectionSlice": {
       "default-slice": {
         "primary": {},
         "items": {}
+      },
+      "ebookPostsSectionSlice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "ImageSlice": {
@@ -634,11 +664,110 @@
           }
         }
       }
+    },
+    "CardsWithIcon": {
+      "default-slice": {
+        "primary": {},
+        "items": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "FormSlice": {
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "EbookPageCardsSlice": {
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "EbooksWithFilterSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "AuthorsListSlice": {
+      "default-slice": {
+        "primary": {}
+      }
+    },
+    "AccordionSlice": {
+      "default-slice": {
+        "primary": {
+          "mainTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "answer": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "TechAndToolsNewSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "BuildAndRisksSlice": {
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "CustomersSlice": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
     "singleimage": {},
     "custom-page": {},
-    "video-block": {}
+    "video-block": {},
+    "customers": {}
   }
 }

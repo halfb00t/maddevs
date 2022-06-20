@@ -84,8 +84,7 @@ export default {
 
   computed: {
     link() {
-      if (this.uid === 'сopywriter') return `/careers/${this.uid}/`
-      return `/ru/careers/${this.uid}/`
+      return `/careers/${this.uid}/`
     },
   },
 }

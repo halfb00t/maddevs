@@ -42,20 +42,6 @@ exports[`Banner component should render correctly 1`] = `
       translated
     
       </p>
-       
-      <button
-        class="careers-banner_btn"
-      >
-        <img
-          alt="Russian flag"
-          src="@/assets/img/Careers/svg/russian-flag.svg"
-        />
-         
-        <!---->
-        
-      translated
-    
-      </button>
     </div>
   </div>
 </div>

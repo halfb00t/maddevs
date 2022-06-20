@@ -1,11 +1,16 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Main from '@/components/Cases/peklo/Main'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const directives = {
-  'lazy-load': () => {},
-  'mad-parallax': () => {},
+  'mad-parallax': jest.fn(),
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const stubs = ['About',
   'BenefitsFromPekloTool',
@@ -22,6 +27,7 @@ describe('Main component', () => {
   it('should render correctly', () => {
     const { container } = render(Main, {
       stubs,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -33,6 +39,7 @@ describe('Main component', () => {
           $getMediaFromS3: () => 'img.jpg',
         },
         directives,
+        localVue,
       })
       const About = await container.vm.$options.components.About.call()
       const BenefitsFromPekloTool = await container.vm.$options.components.BenefitsFromPekloTool.call()
