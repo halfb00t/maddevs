@@ -58,7 +58,7 @@ export default async () => {
         {
           rel: 'sitemap',
           type: 'application/xml',
-          href: 'https://maddevs.io/sitemap.xml',
+          href: 'https://maddevs.io/sitemapindex.xml',
         },
       ],
       script: [
