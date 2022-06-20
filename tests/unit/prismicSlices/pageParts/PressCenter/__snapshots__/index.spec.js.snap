@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressCenter component should correct render component 1`] = `
+<div>
+  <section
+    class="section press-center-section"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="press-center"
+        data-aos="fade-up"
+      >
+        <div
+          class="press-center-main ps-main-card"
+        >
+          <div
+            class="ps-main-card-section ps-main-card-section--left"
+          >
+            <h2
+              class="ps-main-card__title"
+            >
+              
+            test
+          
+            </h2>
+             
+            <div
+              class="ps-main-card__description"
+            >
+              
+            test desc
+          
+            </div>
+             
+            <div
+              class="ps-main-card__footer"
+            >
+              <span
+                class="ps-main-card__date"
+              >
+                Jun 20, 2022
+              </span>
+               
+              <a
+                class="ps-main-card__link"
+                data-testid="press-center-link"
+                href="https://maddevs.io"
+                target="_blank"
+              >
+                <span
+                  class="ps-main-card__link-label"
+                >
+                  
+                Test
+              
+                </span>
+              </a>
+            </div>
+          </div>
+           
+          <div
+            class="ps-main-card-section ps-main-card-section--right"
+          >
+            <img
+              alt="Test"
+              class="ps-main-card__image"
+              data-src="img.jpg"
+            />
+             
+            <img
+              alt="Test logo"
+              class="ps-main-card__linked-logo"
+              data-src="img-logo.jpg"
+            />
+          </div>
+        </div>
+         
+        <div
+          class="press-center-sub ps-sub-cards"
+        >
+          <div
+            class="press-center-sub-wrapper ps-sub-card-wrapper"
+          >
+            <div
+              class="press-center-sub ps-sub-card"
+            >
+              <div
+                class="ps-sub-card-section ps-sub-card-section--left"
+              >
+                <img
+                  alt="Test alt"
+                  class="ps-sub-card__image"
+                  data-src="img.jpg"
+                />
+                 
+                <img
+                  alt="Test"
+                  class="ps-sub-card__linked-logo"
+                  data-src="img-logo.jpg"
+                />
+              </div>
+               
+              <div
+                class="ps-sub-card-section ps-sub-card-section--right"
+              >
+                <h2
+                  class="ps-sub-card__title"
+                >
+                  
+                Test Test
+              
+                </h2>
+                 
+                <div
+                  class="ps-sub-card__description"
+                >
+                  
+                Test description
+              
+                </div>
+                 
+                <div
+                  class="ps-sub-card__footer"
+                >
+                  <span
+                    class="ps-sub-card__date"
+                  >
+                    Jun 20, 2022
+                  </span>
+                   
+                  <a
+                    class="ps-sub-card__link"
+                    href="https://maddevs.co"
+                    target="_blank"
+                  >
+                    <span
+                      class="ps-sub-card__link-label"
+                    >
+                      
+                    Test label
+                  
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

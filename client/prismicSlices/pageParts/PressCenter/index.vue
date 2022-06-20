@@ -6,7 +6,6 @@
         class="press-center"
       >
         <!--  primary zone  -->
-        <!--   \/  \/  \/   -->
         <div class="press-center-main ps-main-card">
           <div class="ps-main-card-section ps-main-card-section--left">
             <h2 class="ps-main-card__title">
@@ -23,6 +22,7 @@
                 :href="link.url"
                 class="ps-main-card__link"
                 target="_blank"
+                data-testid="press-center-link"
                 @click="sendPressCenterPostEvent"
               >
                 <span class="ps-main-card__link-label">
@@ -46,11 +46,9 @@
             >
           </div>
         </div>
-        <!--   /\  /\  /\   -->
         <!--primary zone end-->
         <!-------------------->
         <!--repeatable zone -->
-        <!--   \/  \/  \/   -->
         <div class="press-center-sub ps-sub-cards">
           <div
             v-for="(item, i) in subPosts"
@@ -101,7 +99,6 @@
             </div>
           </div>
         </div>
-        <!--    /\  /\  /\     -->
         <!--repeatable zone end-->
       </div>
     </div>
@@ -138,9 +135,6 @@ export default {
       subPosts: this.slice?.items,
       animation: this.slice?.primary?.animation,
     }
-  },
-
-  mounted() {
   },
 
   methods: {
@@ -185,6 +179,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+    }
   }
 
   &__link {
@@ -218,7 +215,7 @@ export default {
       @media screen and (max-width: 767px) {
         padding: 18px;
         order: 2;
-        height: 300px;
+        max-height: 300px;
       }
     }
 
@@ -230,11 +227,15 @@ export default {
         order: 1;
         max-height: 200px;
       }
+
+      @media screen and (max-width: 540px) {
+        max-height: 175px;
+      }
     }
   }
 
   &__title {
-    @include font('Poppins', 26px, 700);
+    @include font('Inter', 26px, 600);
     line-height: 32px;
     color: $text-color--black;
     margin-bottom: 15px;
@@ -243,13 +244,13 @@ export default {
       line-height: 24px;
     }
     @media screen and (max-width: 767px) {
-      font-size: 22px;
-      line-height: 30px;
+      font-size: 16px;
+      line-height: 21px;
     }
   }
 
   &__description {
-    @include font('Poppins', 14px, 400);
+    @include font('Inter', 14px, 400);
     color: $text-color--grey-pale;
     line-height: 20px;
     letter-spacing: -0.4px;
@@ -260,17 +261,17 @@ export default {
     }
     @media screen and (max-width: 767px) {
       font-size: 14px;
-      line-height: 23px;
+      line-height: 21px;
     }
   }
 
   &__date {
-    @include font('Poppins', 12px, 400);
+    @include font('Inter', 12px, 400);
     color: $text-color--grey;
   }
 
   &__link-label {
-    @include font('Poppins', 16px, 600);
+    @include font('Inter', 16px, 600);
 
     &:hover {
       color: $text-color--red;
@@ -366,7 +367,7 @@ export default {
       display: flex;
       flex-direction: column;
       @media screen and (max-width: 767px) {
-        height: 300px;
+        max-height: 300px;
         padding: 15px 14px 14px 14px;
       }
     }
@@ -395,7 +396,7 @@ export default {
   }
 
   &__title {
-    @include font('Poppins', 18px, 700);
+    @include font('Inter', 18px, 700);
     line-height: 24px;
     color: $text-color--black;
     margin-bottom: 10px;
@@ -404,14 +405,14 @@ export default {
       line-height: 18px;
     }
     @media screen and (max-width: 767px) {
-      @include font('Poppins', 18px, 600);
-      font-size: 23px;
-      line-height: 30px;
+      @include font('Inter', 18px, 600);
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 
   &__description {
-    @include font('Poppins', 12px, 400);
+    @include font('Inter', 12px, 400);
     color: $text-color--grey-pale;
     line-height: 18px;
     margin-bottom: 18px;
@@ -420,17 +421,17 @@ export default {
     }
     @media screen and (max-width: 767px) {
       font-size: 14px;
-      line-height: 23px;
+      line-height: 21px;
     }
   }
 
   &__date {
-    @include font('Poppins', 12px, 400);
+    @include font('Inter', 12px, 400);
     color: $text-color--grey;
   }
 
   &__link-label {
-    @include font('Poppins', 16px, 600);
+    @include font('Inter', 16px, 600);
 
     &:hover {
       color: $text-color--red;
