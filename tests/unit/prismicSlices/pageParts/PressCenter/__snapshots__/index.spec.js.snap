@@ -40,7 +40,7 @@ exports[`PressCenter component should correct render component 1`] = `
               <span
                 class="ps-main-card__date"
               >
-                Jun 20, 2022
+                Feb 03, 2020
               </span>
                
               <a
@@ -127,7 +127,7 @@ exports[`PressCenter component should correct render component 1`] = `
                   <span
                     class="ps-sub-card__date"
                   >
-                    Jun 20, 2022
+                    Feb 03, 2020
                   </span>
                    
                   <a

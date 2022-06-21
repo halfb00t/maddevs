@@ -12,7 +12,7 @@ const props = {
     primary: {
       title: 'test',
       description: 'test desc',
-      date: new Date().toISOString(),
+      date: '02.03.2020',
       link: {
         url: 'https://maddevs.io',
       },
@@ -38,7 +38,7 @@ const props = {
         link: {
           url: 'https://maddevs.co',
         },
-        date: new Date().toISOString(),
+        date: '02.03.2020',
         linkLabel: 'Test label',
         linkedCompanyLogo: {
           url: 'img-logo.jpg',
