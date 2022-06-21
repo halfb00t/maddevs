@@ -218,17 +218,10 @@ export default {
 
   &__image {
     width: 100%;
-  }
-
-  &-wrapper {
-    display: flex;
-    justify-content: center;
-    @media screen and (max-width: 1024px) {
-      padding: 0 40px;
-    }
-
-    @media screen and (max-width: 692px) {
-      padding: 0 20px;
+    max-width: 900px;
+    &-wrapper {
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -236,6 +229,13 @@ export default {
     background: linear-gradient(90deg, $bgcolor--black 15%, $border-color--grey 50%, $bgcolor--black 85%);
     margin: 66px 0 55px;
     height: 1px;
+    @media screen and (max-width: 1024px) {
+      margin: 66px 0 55px;
+    }
+
+    @media screen and (max-width: 692px) {
+      margin: 34px 0 40px;
+    }
   }
 }
 
