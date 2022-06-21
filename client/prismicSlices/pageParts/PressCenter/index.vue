@@ -235,7 +235,7 @@ export default {
   }
 
   &__title {
-    @include font('Inter', 26px, 600);
+    @include font('Inter', 26px, 700);
     line-height: 32px;
     color: $text-color--black;
     margin-bottom: 15px;
@@ -244,7 +244,7 @@ export default {
       line-height: 24px;
     }
     @media screen and (max-width: 767px) {
-      font-size: 16px;
+      @include font('Inter', 16px, 600);
       line-height: 21px;
     }
   }
@@ -405,8 +405,7 @@ export default {
       line-height: 18px;
     }
     @media screen and (max-width: 767px) {
-      @include font('Inter', 18px, 600);
-      font-size: 14px;
+      @include font('Inter', 16px, 600);
       line-height: 21px;
     }
   }
