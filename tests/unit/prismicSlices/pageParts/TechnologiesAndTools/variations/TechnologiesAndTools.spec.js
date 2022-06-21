@@ -1,4 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/vue'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
+import lazyLoad from 'nuxt-lazy-load'
 import { categories, technologies } from '@/data/technologiesAndTools'
 import ToolsGridMain from '@/prismicSlices/pageParts/TechnologiesAndTools/variations/TechnologiesAndTools'
 import { getFakePropsByParams } from '../testUtils'
@@ -16,6 +18,10 @@ const data = () => ({
   categories,
   technologies,
 })
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('ToolsGridMain slice', () => {
   it('should render the title correctly with data', () => {
@@ -61,6 +67,15 @@ describe('ToolsGridMain slice', () => {
     expect(html()).toContain('<div class="technologies-slice__categories technologies-slice__categories--devops">')
     await fireEvent.click(categoryCheckboxes[0])
     expect(html()).not.toContain('<div class="technologies-slice__categories technologies-slice__categories--devops">')
+  })
+
+  it('should correctly return default props', () => {
+    const wrapper = shallowMount(ToolsGridMain, {
+      propsData: getFakePropsByParams({}),
+      localVue,
+    })
+
+    expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
   })
 
   describe('data-aos animation attribute', () => {

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolsCategoris component should correctly render component 1`] = `
+<div>
+  <div
+    class="tools-categories"
+    tools="[object Object]"
+  />
+</div>
+`;

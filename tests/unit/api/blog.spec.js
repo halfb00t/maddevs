@@ -80,4 +80,25 @@ describe('Blog api methods', () => {
     const data = await api.getCustomerUniversityFeaturedPost(prismicFailure, master)
     expect(data).toBe(error)
   })
+
+  it('getCUPosts success', async () => {
+    const data = await api.getCUPosts(prismic)
+    expect(data).toBe('results')
+  })
+
+  it('getCUPosts failure', async () => {
+    const data = await api.getCUPosts(prismicFailure)
+    expect(data).toBe(error)
+  })
+
+  it('getCustomerUniversitySectionPosts success', async () => {
+    const data = await api.getCustomerUniversitySectionPosts(prismic)
+    expect(data).toBe('data')
+    expect(prismic.api.getSingle).toHaveBeenCalledWith('cu_master')
+  })
+
+  it('getCustomerUniversitySectionPosts failure', async () => {
+    const data = await api.getCustomerUniversitySectionPosts(prismicFailure)
+    expect(data).toBe(error)
+  })
 })
