@@ -1,3 +1,4 @@
+import 'regenerator-runtime'
 import { shallowMount } from '@vue/test-utils'
 import ExistingToolsGrid from '@/prismicSlices/pageParts/TechnologiesAndTools/variations/ExistingToolsGrid'
 

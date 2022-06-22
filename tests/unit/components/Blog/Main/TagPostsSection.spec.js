@@ -3,6 +3,7 @@ import { mount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import TagPostsSection from '@/components/Blog/Main/TagPostsSection'
 import tagPosts from '../../../__mocks__/tagPosts'
+import initializeLazyLoad from '@/helpers/lazyLoad'
 
 const localVue = createLocalVue()
 
@@ -34,6 +35,10 @@ const store = {
 }
 
 const stubs = ['FeaturedPost', 'NuxtLink', 'PostCard']
+
+jest.mock('@/helpers/lazyLoad', () => ({
+  initializeLazyLoad: jest.fn(),
+}))
 
 describe('TagPostsSection component', () => {
   it('should render correctly', () => {
@@ -73,7 +78,10 @@ describe('TagPostsSection component', () => {
     expect(wrapper.vm.featuredPostAuthor).toBeNull()
   })
 
-  it('if tagPosts has data > will return { id: "YG83_xAAACIA9tnb", name: "Denisoed" }', () => {
+  it('if tagPosts has data > will return { id: "YG83_xAAACIA9tnb", name: "Denisoed" }', async () => {
+    const initLazyLoadMock = jest.spyOn(initializeLazyLoad, 'initializeLazyLoad').mockImplementation(() => {})
+    const nextTick = jest.fn(() => initLazyLoadMock())
+    mocks.$nextTick = nextTick
     const wrapper = mount(TagPostsSection, {
       localVue,
       mocks,
@@ -101,5 +109,9 @@ describe('TagPostsSection component', () => {
       },
     })
     expect(wrapper.vm.featuredPostAuthor).toEqual({ id: 'YG83_xAAACIA9tnb', name: 'Denisoed' })
+    await wrapper.vm.$forceUpdate()
+    await wrapper.vm.$nextTick(() => {
+      expect(initLazyLoadMock).toHaveBeenCalledTimes(1)
+    })
   })
 })

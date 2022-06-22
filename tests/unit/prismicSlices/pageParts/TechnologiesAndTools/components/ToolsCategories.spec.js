@@ -1,15 +1,15 @@
 import { render } from '@testing-library/vue'
-import { createLocalVue } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import lazyLoad from 'nuxt-lazy-load'
 import ToolsCategories from '@/prismicSlices/pageParts/TechnologiesAndTools/components/ToolsCategories'
 
 const props = {
   activeCategory: 'Test category',
-  tools: [
+  categories: [
     {
       label: 'Test',
-      category: 'Test category',
-      icon: 'img.jpg',
+      value: 'Test category',
+      color: 'black',
     },
   ],
 }
@@ -31,5 +31,18 @@ describe('ToolsCategoris component', () => {
     })
 
     expect(container).toMatchSnapshot()
+  })
+
+  it('should correctly work setActiveCategory', () => {
+    const wrapper = shallowMount(ToolsCategories, {
+      propsData: props,
+      localVue,
+      mocks,
+    })
+
+    const button = wrapper.find('.tools-categories__checkbox')
+    button.trigger('click')
+    expect(wrapper.emitted().selectCategory[0]).toEqual(['Test category'])
+    expect(wrapper.vm.$options.props.categories.default.call()).toEqual([])
   })
 })

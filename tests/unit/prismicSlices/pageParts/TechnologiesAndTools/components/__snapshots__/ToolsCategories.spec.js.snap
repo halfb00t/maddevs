@@ -4,7 +4,19 @@ exports[`ToolsCategoris component should correctly render component 1`] = `
 <div>
   <div
     class="tools-categories"
-    tools="[object Object]"
-  />
+  >
+    <button
+      class="tools-categories__checkbox tools-categories__checkbox--active"
+      type="button"
+    >
+      <div
+        class="tools-categories__checkbox-icon"
+        style="background-color: black;"
+      />
+      
+    Test
+  
+    </button>
+  </div>
 </div>
 `;
