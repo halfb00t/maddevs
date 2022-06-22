@@ -40,3 +40,14 @@ exports[`CaseListSlice component should render correctly 1`] = `
   </section>
 </div>
 `;
+
+exports[`CaseListSlice component sliceBackground computed method should correctly work autoplay 1`] = `
+<section>
+  <div data-aos="fade-up" data-testid="test-case-container" class="container">
+    <div class="case-list-slice">
+      <caseslistitem-stub titletag="h3" width="big" videofilename="/videos/veeqo-banner.mp4#t=1" logo="[object Object]" title="grow e-business bandwidth" link="/clients/case-studies/veeqo/" subtitle="syndicate B2C action-items" desc="benchmark granular relationships" posterlink="/images/Cases/veeqo/svg/veeqo-banner-bg.svg" data-testid="test-case-card"></caseslistitem-stub>
+      <caseslistitem-stub titletag="h3" width="big" videofilename="/videos/veeqo-banner.mp4#t=1" logo="[object Object]" title="grow e-business bandwidth" link="/clients/case-studies/veeqo/" subtitle="syndicate B2C action-items" desc="benchmark granular relationships" posterlink="/images/Cases/veeqo/svg/veeqo-banner-bg.svg" data-testid="test-case-card"></caseslistitem-stub>
+    </div>
+  </div>
+</section>
+`;

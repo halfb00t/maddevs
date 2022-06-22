@@ -1,5 +1,6 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
+import VueMeta from 'vue-meta'
 import PostAuthor from '@/components/Blog/shared/PostAuthor'
 
 const mocks = {
@@ -22,6 +23,9 @@ const props = {
     author_title: 'author_title',
   },
 }
+
+const localVue = createLocalVue()
+localVue.use(VueMeta, { keyName: 'head' })
 
 describe('text slice component', () => {
   it('should render correctly', () => {
@@ -51,13 +55,43 @@ describe('text slice component', () => {
     const callObject = {
       name: 'name',
     }
+
+    props.image = {
+      url: 'img.jpg',
+      alt: 'test',
+      dimensions: {
+        width: 100,
+        height: 100,
+      },
+      thumbnail: {
+        url: 'img.jpg',
+        alt: 'test',
+        dimensions: {
+          width: 30,
+          height: 30,
+        },
+      },
+    }
     const wrapper = shallowMount(PostAuthor, {
       propsData: props,
       mocks,
+      localVue,
     })
+
+    const headResult = wrapper.vm.$metaInfo
+    const headExpected = {
+      link: [
+        {
+          rel: 'preload',
+          as: 'image',
+          href: 'img.jpg',
+        },
+      ],
+    }
 
     const result = wrapper.vm.$options.computed.shortTitle.call(callObject)
 
     expect(result).toBe(callObject.name)
+    expect(headResult).toEqual(headExpected)
   })
 })

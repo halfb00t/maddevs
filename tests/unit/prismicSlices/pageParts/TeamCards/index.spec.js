@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/vue'
-import { createLocalVue } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import TeamCards from '@/prismicSlices/pageParts/TeamCards'
 // eslint-disable-next-line import/order
 import lazyLoad from 'nuxt-lazy-load/lib/module'
+import { linkedinUserClickEvent } from '@/analytics/events'
 
 const apiData = {
   animation: 'fade-up',
@@ -52,7 +53,27 @@ jest.mock('nuxt-lazy-load/lib/module')
 
 jest.mock('~/helpers/generatorUid')
 
+const linkedinUserClick = jest.spyOn(linkedinUserClickEvent, 'send')
+  .mockImplementation(() => {
+  })
+
 describe('TeamCards slice', () => {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = shallowMount(TeamCards, {
+      propsData: getProps({
+        ...apiData,
+        background: 'white',
+      }),
+      localVue,
+    })
+  })
+
+  afterEach(() => {
+    wrapper = null
+  })
+
   it('should render correctly', () => {
     const { container } = render(TeamCards, {
       propsData: getProps({
@@ -76,5 +97,22 @@ describe('TeamCards slice', () => {
     })
     const img = screen.getAllByTestId('item-img')[0]
     expect(img.getAttribute('src')).toEqual('https://google.com/')
+  })
+
+  it('should correctly return default empty props', () => {
+    expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
+  })
+
+  it('should correctly work send linkedin event', () => {
+    wrapper.find('a[rel="nofollow"]').trigger('click')
+    expect(linkedinUserClick).toHaveBeenCalledTimes(1)
+  })
+
+  it('should correctly work toggleImageHandle', () => {
+    wrapper.find('.meet-our-experts__expert-item').trigger('mouseenter')
+    wrapper.find('.meet-our-experts__expert-item').trigger('mouseenter')
+    wrapper.find('.meet-our-experts__expert-item').trigger('mouseenter')
+    expect(wrapper.vm.hoverCount).toBe(3)
+    expect(wrapper.vm.alreadyAnimated).toBeTruthy()
   })
 })

@@ -43,6 +43,7 @@ describe('KeyMetrics slice - ThirdVariation component', () => {
       })
 
       expect(wrapper.vm.colorThemeOption).toBe('black')
+      expect(wrapper.vm.$options.props.metrics.default.call()).toEqual([])
     })
 
     it('should return \'white\'', () => {

@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/vue'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
+import lazyLoad from 'nuxt-lazy-load'
 import ToolsGrid from '@/prismicSlices/pageParts/TechnologiesAndTools/variations/ToolsGrid'
 import { getFakePropsByParams } from '../testUtils'
 
@@ -18,6 +20,10 @@ const items = [
     text: 'text',
   },
 ]
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('ToolsGrid slice data-aos animation attribute', () => {
   it('should render correctly with data', () => {
@@ -58,5 +64,14 @@ describe('ToolsGrid slice data-aos animation attribute', () => {
     })
 
     expect(screen.getByTestId('tools-slice-container').getAttribute('data-aos')).toBeNull()
+  })
+
+  it('should correctly return default props', () => {
+    const wrapper = shallowMount(ToolsGrid, {
+      propsData: getFakePropsByParams({}),
+      localVue,
+    })
+
+    expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
   })
 })

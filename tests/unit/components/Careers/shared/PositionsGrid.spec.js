@@ -1,5 +1,5 @@
 import { render } from '@testing-library/vue'
-import { createLocalVue } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import PositionsGrid from '@/components/Careers/shared/PositionsGrid'
 
@@ -25,8 +25,21 @@ describe('PositionsGrid component', () => {
     const { container } = render(PositionsGrid, {
       stubs,
       store,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
+  })
+
+  it('should correctly import dynamic component', async () => {
+    store.getters.vacanciesCategory = null
+    const wrapper = shallowMount(PositionsGrid, {
+      stubs: ['UnderlinedButton'],
+      store,
+      localVue,
+    })
+
+    const PositionsGridItem = await wrapper.vm.$options.components.PositionsGridItem.call()
+    expect(PositionsGridItem.default.name).toBe('PositionsGridItem')
   })
 })

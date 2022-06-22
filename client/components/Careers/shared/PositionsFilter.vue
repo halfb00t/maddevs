@@ -7,6 +7,7 @@
     >
       <input
         :id="category.title"
+        data-testid="vacancy-input-id"
         type="radio"
         name="tag"
         :value="category.title"

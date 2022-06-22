@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolsGrid component should correctly render component 1`] = `
+<div>
+  <div
+    class="tools-grid"
+  >
+    <div
+      class="tools-grid__item Test category tools-grid__item--active"
+      title="Test"
+    >
+      <img
+        alt="Icon"
+        class="tools-grid__item-icon"
+        height="26"
+        width="26"
+      />
+       
+      <span
+        class="tools-grid__item-label"
+      >
+        
+      Test
+    
+      </span>
+    </div>
+  </div>
+</div>
+`;
