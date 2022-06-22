@@ -1,6 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`СustomerUniversityCard component should render correctly with data 1`] = `
+<div class="customer-university-card customer-university-card--md customer-university-card--w-100 customer-university-card customer-university-card--column">
+  <nuxtlink-stub to="/customer-university/test/" class="customer-university-card__image"><img width="560" height="311"></nuxtlink-stub>
+  <nuxtlink-stub to="/customer-university/test/" class="customer-university-card__info">
+    <!---->
+    <h2 class="customer-university-card__title">
+      Сustomer University card
+    </h2>
+    <p class="customer-university-card__text">
+
+    </p>
+    <!---->
+  </nuxtlink-stub>
+</div>
+`;
+
+exports[`СustomerUniversityCard component should render correctly with no data 1`] = `
 <div>
   <div
     class="customer-university-card customer-university-card--md customer-university-card--w-100 customer-university-card customer-university-card--column"

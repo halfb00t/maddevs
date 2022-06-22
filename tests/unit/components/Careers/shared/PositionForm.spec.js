@@ -2,6 +2,7 @@
 import Vuelidate from 'vuelidate'
 import { render } from '@testing-library/vue'
 import { createLocalVue, shallowMount } from '@vue/test-utils'
+import Vuex from 'vuex'
 import PositionForm from '@/components/Careers/shared/PositionForm'
 
 jest.mock('bowser', () => ({
@@ -22,13 +23,26 @@ jest.mock('bowser', () => ({
   }),
 }))
 
+const file = new File([new ArrayBuffer(1)], 'file.pdf')
+
 jest.mock('~/helpers/generatorUid')
 
 Object.defineProperty(global.window, 'location', { value: { href: 'pageUrl' }, writable: true })
+Object.defineProperty(global.window, 'grecaptcha', {
+  value: {
+    ready: jest.fn(callback => {
+      callback()
+    }),
+    execute: () => new Promise(res => {
+      res.bind(null, 'tokenList')
+    }),
+  },
+})
 
 const localVue = createLocalVue()
 
 localVue.use(Vuelidate)
+localVue.use(Vuex)
 
 const mocks = {
   $v: {
@@ -50,15 +64,14 @@ const mocks = {
     $reset: jest.fn(),
     validationGroup: {},
   },
-  buildApplicantData: jest.fn(),
   resetForm: jest.fn(),
   sendVacancy: jest.fn(),
   $refs: {
     fileInput: {
-      reset: jest.fn(),
+      reset: () => jest.fn(),
     },
     radioButtons: {
-      reset: jest.fn(),
+      reset: () => jest.fn(),
     },
     successModal: {
       show: jest.fn(),
@@ -67,7 +80,21 @@ const mocks = {
   $t: () => 'translated',
 }
 
+const store = new Vuex.Store({
+  actions: {
+    sendVacancy: () => jest.fn(),
+  },
+})
+
 describe('PositionForm component', () => {
+  let fileInputReset
+  let radioButtonsReset
+
+  beforeEach(() => {
+    fileInputReset = jest.spyOn(mocks.$refs.fileInput, 'reset').mockImplementation()
+    radioButtonsReset = jest.spyOn(mocks.$refs.radioButtons, 'reset').mockImplementation()
+  })
+
   it('should render correctly', () => {
     const { container } = render(PositionForm, {
       localVue,
@@ -99,18 +126,28 @@ describe('PositionForm component', () => {
     expect(mocks.$v.cvFile.$touch).toHaveBeenCalledTimes(1)
   })
 
-  it('should not work send form if have invaid param', async () => {
+  it('should work send form if have valid param', async () => {
     const wrapper = shallowMount(PositionForm, {
       localVue,
       mocks,
+      props: {
+        huntflowVacancyId: '123',
+        position: 'Frontend',
+      },
+      store,
     })
 
-    mocks.$v.validationGroup.$invalid = true
-    wrapper.vm.$options.methods.submitForm.call(mocks)
+    wrapper.setData({
+      name: 'John Johnson',
+      email: 'johnhohnson@maddevs.io',
+      cvFile: file,
+      linkedin: '',
+      grade: { value: 'Senior' },
+    })
 
-    await expect(mocks.buildApplicantData).toHaveBeenCalledTimes(0)
-    expect(mocks.resetForm).toHaveBeenCalledTimes(0)
-    expect(mocks.sendVacancy).toHaveBeenCalledTimes(0)
+    const resetMock = jest.spyOn(wrapper.vm, 'resetForm').mockImplementation()
+    await wrapper.vm.submitForm()
+    expect(resetMock).toHaveBeenCalledTimes(1)
   })
 
   it('should work reset form', () => {
@@ -122,8 +159,8 @@ describe('PositionForm component', () => {
     wrapper.vm.$options.methods.resetForm.call(mocks)
 
     expect(mocks.$v.$reset).toHaveBeenCalledTimes(1)
-    expect(mocks.$refs.fileInput.reset).toHaveBeenCalledTimes(1)
-    expect(mocks.$refs.radioButtons.reset).toHaveBeenCalledTimes(1)
+    expect(fileInputReset).toHaveBeenCalledTimes(1)
+    expect(radioButtonsReset).toHaveBeenCalledTimes(1)
   })
 
   it('should work build applicant data function', async () => {
@@ -138,7 +175,7 @@ describe('PositionForm component', () => {
       ...mocks,
       name: 'John Johnson',
       email: 'johnhohnson@maddevs.io',
-      cvFile: { name: 'some-name' },
+      cvFile: file,
       linkedin: '',
       grade: { value: 'Senior' },
     }
@@ -150,13 +187,7 @@ describe('PositionForm component', () => {
         huntflowVacancyId: '123',
         position: 'Frontend',
       },
-      data: () => ({
-        name: 'John Johnson',
-        email: 'johnhohnson@maddevs.io',
-        cvFile: { name: 'some-name' },
-        linkedin: '',
-        grade: { value: 'Senior' },
-      }),
+      store,
     })
 
     const result = await wrapper.vm.$options.methods.buildApplicantData.call(callObject)
@@ -203,7 +234,6 @@ describe('PositionForm component', () => {
       cvFile: callObject.cvFile,
     }
 
-    await expect(toBase64Mock).toHaveBeenCalledTimes(1)
     expect(result).toEqual(expectedResult)
   })
 })

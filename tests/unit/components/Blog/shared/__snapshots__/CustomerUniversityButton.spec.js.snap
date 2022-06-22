@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerUniversityButton component should correctly render 1`] = `
+<button class="customer-university__btn customer-university__btn--md">
+  Click me
+</button>
+`;
