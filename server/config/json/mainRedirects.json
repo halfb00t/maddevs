@@ -45,147 +45,147 @@
   {
     "pageType": "Careers",
     "from": "/ru/about/careers",
-    "to": "https://maddevs.io/ru/careers/"
+    "to": "https://maddevs.io/careers/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/aqa-engineer",
-    "to": "https://maddevs.io/ru/careers/aqa-engineer/"
+    "to": "https://maddevs.io/careers/aqa-engineer/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/frontend-developer",
-    "to": "https://maddevs.io/ru/careers/frontend-developer/"
+    "to": "https://maddevs.io/careers/frontend-developer/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/golang-developer",
-    "to": "https://maddevs.io/ru/careers/golang-developer/"
+    "to": "https://maddevs.io/careers/golang-developer/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/golang-middle-developer",
-    "to": "https://maddevs.io/ru/careers/golang-middle-developer/"
+    "to": "https://maddevs.io/careers/golang-middle-developer/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/ios-developer",
-    "to": "https://maddevs.io/ru/careers/ios-developer/"
+    "to": "https://maddevs.io/careers/ios-developer/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/java-developer",
-    "to": "https://maddevs.io/ru/careers/java-developer/"
+    "to": "https://maddevs.io/careers/java-developer/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/jun-it-recruiter",
-    "to": "https://maddevs.io/ru/careers/jun-it-recruiter/"
+    "to": "https://maddevs.io/careers/jun-it-recruiter/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/junior-golan-developer",
-    "to": "https://maddevs.io/ru/careers/junior-golan-developer/"
+    "to": "https://maddevs.io/careers/junior-golan-developer/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/pm-clutch",
-    "to": "https://maddevs.io/ru/careers/pm-clutch/"
+    "to": "https://maddevs.io/careers/pm-clutch/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/project-manager",
-    "to": "https://maddevs.io/ru/careers/project-manager/"
+    "to": "https://maddevs.io/careers/project-manager/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/python-develope-swp",
-    "to": "https://maddevs.io/ru/careers/python-develope-swp/"
+    "to": "https://maddevs.io/careers/python-develope-swp/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/python-developer-junior",
-    "to": "https://maddevs.io/ru/careers/python-developer-junior/"
+    "to": "https://maddevs.io/careers/python-developer-junior/"
   },
   {
     "pageType": "Careers",
     "from": "/ru/about/careers/qa-engineer",
-    "to": "https://maddevs.io/ru/careers/qa-engineer/"
+    "to": "https://maddevs.io/careers/qa-engineer/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog-maddevs-io-job-openings/home",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/vacancy/home",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/featured-post",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/copywriter",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/marketing",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/it",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/python",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/django",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/go",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/golang",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/ios",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/hr",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/assistant",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/hr-department",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/assistant-delivery-manager",
-    "to": "https://maddevs.io/ru/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
@@ -195,22 +195,22 @@
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/vue-vuetify-middle-v-saas-proekt",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/mad-devs-ishet-senior-python-developer-v-proekt-clutch",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/project-manager-v-finteh-proekt",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/it-recruiter-middle-maddevs",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
@@ -220,12 +220,12 @@
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/middle-python-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/middle-android-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
@@ -235,87 +235,22 @@
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/mad-devs-devops",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/middle-ios-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/senior-ios-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/mad-devs-ishet-golang-razrabotchika",
-    "to": "https://maddevs.io/careers/#open-positions/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/junior-frontend-developer",
-    "to": "https://maddevs.io/ru/careers/junior-frontend-developer/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/qa-engineer",
-    "to": "https://maddevs.io/ru/careers/qa-engineer/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/pm-clutch",
-    "to": "https://maddevs.io/ru/careers/pm-clutch/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/ux-ui",
-    "to": "https://maddevs.io/ru/careers/ux-ui/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/.net-edentity",
-    "to": "https://maddevs.io/ru/careers/.net-edentity/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/business-analyst",
-    "to": "https://maddevs.io/ru/careers/business-analyst/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/mobile-team-lead",
-    "to": "https://maddevs.io/ru/careers/mobile-team-lead/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/it-recruiter",
-    "to": "https://maddevs.io/ru/careers/it-recruiter/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/.net",
-    "to": "https://maddevs.io/ru/careers/.net/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/project-manager",
-    "to": "https://maddevs.io/ru/careers/project-manager/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/ios-developer",
-    "to": "https://maddevs.io/ru/careers/ios-developer/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/android-developer",
-    "to": "https://maddevs.io/ru/careers/android-developer/"
-  },
-  {
-    "pageType": "Careers/старые редиректы",
-    "from": "/careers/golang-developer",
-    "to": "https://maddevs.io/ru/careers/golang-developer/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
@@ -325,22 +260,22 @@
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
@@ -350,12 +285,12 @@
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
@@ -365,202 +300,202 @@
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/about/careers/#open-positions",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/junior-frontend-developer",
-    "to": "https://maddevs.io/ru/careers/junior-frontend-developer/"
+    "to": "https://maddevs.io/careers/junior-frontend-developer/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/qa-engineer",
-    "to": "https://maddevs.io/ru/careers/qa-engineer/"
+    "to": "https://maddevs.io/careers/qa-engineer/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/pm-clutch",
-    "to": "https://maddevs.io/ru/careers/pm-clutch/"
+    "to": "https://maddevs.io/careers/pm-clutch/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/ux-ui",
-    "to": "https://maddevs.io/ru/careers/ux-ui/"
+    "to": "https://maddevs.io/careers/ux-ui/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/.net-edentity",
-    "to": "https://maddevs.io/ru/careers/.net-edentity/"
+    "to": "https://maddevs.io/careers/.net-edentity/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/business-analyst",
-    "to": "https://maddevs.io/ru/careers/business-analyst/"
+    "to": "https://maddevs.io/careers/business-analyst/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/mobile-team-lead",
-    "to": "https://maddevs.io/ru/careers/mobile-team-lead/"
+    "to": "https://maddevs.io/careers/mobile-team-lead/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/it-recruiter",
-    "to": "https://maddevs.io/ru/careers/it-recruiter/"
+    "to": "https://maddevs.io/careers/it-recruiter/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/.net",
-    "to": "https://maddevs.io/ru/careers/.net/"
+    "to": "https://maddevs.io/careers/.net/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/project-manager",
-    "to": "https://maddevs.io/ru/careers/project-manager/"
+    "to": "https://maddevs.io/careers/project-manager/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/ios-developer",
-    "to": "https://maddevs.io/ru/careers/ios-developer/"
+    "to": "https://maddevs.io/careers/ios-developer/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/android-developer",
-    "to": "https://maddevs.io/ru/careers/android-developer/"
+    "to": "https://maddevs.io/careers/android-developer/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/ru/about/careers/golang-developer",
-    "to": "https://maddevs.io/ru/careers/golang-developer/"
+    "to": "https://maddevs.io/careers/golang-developer/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/lets-go-mad-devs-%D0%B8%D1%89%D0%B5%D1%82-golang-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0-1d486c5c0aa1",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/mad-devs-%D1%80%D0%B0%D0%B7%D1%8B%D1%81%D0%BA%D0%B8%D0%B2%D0%B0%D0%B5%D1%82-devops-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2-38da4d1a0093",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/mad-devs-ishet-middle-python-developer-bd01875e9afa",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/middle-and-senior-android-developer-cc4fa2c61708",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/middle-python-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/middle-android-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/senior-android-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/senior-ios-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/middle-ios-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/mad-devs-devops",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/middle-it-recruiter-941248482416",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/middle-and-senior-ios-developers-f5eb41be694d",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/insights/blog/senior-ios-developer",
-    "to": "https://maddevs.io/ru/careers/ios-developer/"
+    "to": "https://maddevs.io/careers/ios-developer/"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/insights/blog/middle-python-developer",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/designer-wanted-a82cbed193e",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/middle-senior-mobile-developer-android-ios-1672d32ed83f",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/hr-wanted-a70716a9a8a8",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/junior-qa-tester-manual-6f478d3e08c",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/junior-intern-php-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA-103fc305e544",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/project-manager-58dbe9aec708",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/digital-marketing-manager-9f85c900cf28",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/qa-specialist-ef1814ad3b0d",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Careers/старые редиректы",
     "from": "/blog/tag/job-opening",
-    "to": "https://maddevs.io/careers/#open-positions/"
+    "to": "https://maddevs.io/careers/#open-positions"
   },
   {
     "pageType": "Team",
