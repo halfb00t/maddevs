@@ -2,7 +2,7 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModelsGrid from '@/components/DeliveryModels/ModelsGrid'
 
-const stubs = ['ModelCard', 'LazyHydrate']
+const stubs = ['ModelCard', 'LazyHydrate', 'NuxtLink']
 
 jest.mock('~/helpers/generatorUid')
 
@@ -21,6 +21,7 @@ describe('ModelsGrid component', () => {
         mocks: {
           $getMediaFromS3: () => 'img.jpg',
         },
+        stubs: ['NuxtLink'],
       })
 
       const ModelCard = await container.vm.$options.components.ModelCard.call()

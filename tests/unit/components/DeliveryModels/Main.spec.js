@@ -1,17 +1,21 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Main from '@/components/DeliveryModels/Main'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const stubs = ['Banner', 'ModelsGrid', 'Presentation', 'Testimonials', 'CTABanner', 'LazyHydrate', 'NuxtLink']
-const directives = {
-  'v-lazy-load': () => {},
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
+jest.mock('~/helpers/generatorUid')
 
 describe('Main component', () => {
   it('should render correctly', () => {
     const { container } = render(Main, {
       stubs,
-      directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -23,7 +27,8 @@ describe('Main component', () => {
         mocks: {
           $getMediaFromS3: () => 'img.jpg',
         },
-        directives,
+        localVue,
+        stubs: ['NuxtLink'],
       })
 
       const Banner = await container.vm.$options.components.Banner.call()

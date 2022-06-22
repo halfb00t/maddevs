@@ -67,9 +67,11 @@ export default {
     PositionForm,
   },
 
+  middleware: 'redirectToHomePage',
+
   async asyncData({ store, params, redirect }) {
     const { uid } = params
-    const openGraphUrl = `${process.env.domain}/ru/careers/${uid}/`
+    const openGraphUrl = `${process.env.domain}/careers/${uid}/`
 
     try {
       await store.dispatch('getVacancy', uid)
@@ -90,12 +92,12 @@ export default {
   },
 
   nuxtI18n: {
-    locales: ['ru'],
+    locales: ['en'],
   },
 
   head() {
     return buildHead({
-      lang: 'ru',
+      lang: 'en',
       title: this.vacancy.metaTitle || this.vacancy.title || '',
       metaTitle: this.vacancy.metaTitle || this.vacancy.title || '',
       description: this.vacancy.metaDescription || this.vacancy.subtitle || '',

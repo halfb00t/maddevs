@@ -2,11 +2,15 @@ import { render } from '@testing-library/vue'
 import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Main from '@/components/Careers/Main'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
-const stubs = ['LazyHydrate', 'Banner', 'ProjectsCountries', 'Benefits', 'KeyMetrics', 'EmployeesBenefits', 'OpenPositions', 'CTABanner', 'ScrollToPositionsLink']
+const stubs = ['NuxtLink', 'LazyHydrate', 'Banner', 'ProjectsCountries', 'Benefits', 'KeyMetrics', 'EmployeesBenefits', 'OpenPositions', 'CTABanner', 'ScrollToPositionsLink']
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const actions = {
   getCareersHome: jest.fn(),
@@ -14,6 +18,9 @@ const actions = {
 
 const store = new Vuex.Store({
   actions,
+  getters: {
+    vacancyCategories: jest.fn(),
+  },
 })
 
 jest.mock('~/helpers/generatorUid')
@@ -37,6 +44,7 @@ describe('Main component', () => {
         },
         store,
         localVue,
+        stubs: ['NuxtLink'],
       })
 
       const ProjectsCountries = await container.vm.$options.components.ProjectsCountries.call()

@@ -1,20 +1,23 @@
 import { render, screen } from '@testing-library/vue'
+import { createLocalVue } from '@vue/test-utils'
 import ProjectPlanning from '@/components/Cases/bandpay/ProjectPlanning'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
 }
 
-const directives = {
-  'lazy-load': () => {},
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('BandPay ProjectPlanning component', () => {
   it('should render correctly', () => {
     const { container } = render(ProjectPlanning, {
       mocks,
-      directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -23,7 +26,7 @@ describe('BandPay ProjectPlanning component', () => {
   it('should render with text', () => {
     render(ProjectPlanning, {
       mocks,
-      directives,
+      localVue,
     })
 
     expect(screen.getByText(/Project planning and management/i).className).toBeTruthy()
@@ -36,7 +39,7 @@ describe('BandPay ProjectPlanning component', () => {
     it('should render images', () => {
       render(ProjectPlanning, {
         mocks,
-        directives,
+        localVue,
       })
 
       screen.getAllByTestId('test-picture-img').forEach(item => {

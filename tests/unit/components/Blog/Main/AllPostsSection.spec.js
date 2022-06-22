@@ -4,9 +4,14 @@ import { createLocalVue, shallowMount } from '@vue/test-utils'
 import AllPostsSection from '@/components/Blog/Main/AllPostsSection'
 import allPosts from '../../../__mocks__/allPosts'
 import * as homeContent from '../../../__mocks__/homePageContent'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
+import initializeLazyLoad from '@/helpers/lazyLoad'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const recipeMock = jest.fn()
 const scroll = jest.fn()
@@ -46,6 +51,10 @@ const link = document.createElement('a')
 link.setAttribute('href', 'undefined')
 link.setAttribute('data-testid', 'test-href')
 containerToRender.append(link)
+
+jest.mock('@/helpers/lazyLoad', () => ({
+  initializeLazyLoad: jest.fn(),
+}))
 
 describe('AllPostsSection component', () => {
   window.scrollTo = windowsScroll
@@ -110,6 +119,10 @@ describe('AllPostsSection component', () => {
   })
 
   it('categories() computed method with invalid homePageContent getter should return empty array', async () => {
+    const initLazyLoadMock = jest.spyOn(initializeLazyLoad, 'initializeLazyLoad').mockImplementation(() => {})
+    const nextTick = jest.fn(() => initLazyLoadMock())
+    mocks.$nextTick = nextTick
+
     const wrapper = shallowMount(AllPostsSection, {
       localVue,
       mocks,
@@ -124,6 +137,10 @@ describe('AllPostsSection component', () => {
     })
 
     expect(wrapper.vm.categories).toEqual([])
+    await wrapper.vm.$forceUpdate()
+    await wrapper.vm.$nextTick(() => {
+      expect(initLazyLoadMock).toHaveBeenCalledTimes(1)
+    })
   })
 
   it('should correct work change post category', async () => {

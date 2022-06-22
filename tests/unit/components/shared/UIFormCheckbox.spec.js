@@ -8,7 +8,7 @@ describe('UIFormCheckboxes', () => {
   }
 
   it('should render correctly with slot', () => {
-    const { container } = render(UIFormCheckbox, {})
+    const { container } = render(UIFormCheckbox, { props })
     expect(container).toMatchSnapshot()
   })
 
@@ -24,7 +24,7 @@ describe('UIFormCheckboxes', () => {
   })
 
   it('should correctly handle click marketing-communications checkbox', async () => {
-    const { getByTestId, emitted } = render(UIFormCheckbox)
+    const { getByTestId, emitted } = render(UIFormCheckbox, { props })
     const checkbox = getByTestId('user-agreement-checkbox-input')
     expect(checkbox.checked).toEqual(true)
     fireEvent.click(checkbox)

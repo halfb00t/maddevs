@@ -6,7 +6,7 @@ exports[`ModalEbook component should render correctly with no data 1`] = `
     <h2 class="modal-content__title">
       Get your copy of “”
     </h2>
-    <readform-stub ebookpath="" ebookname="" id="modal-ebook" ebookimage="[object Object]"></readform-stub>
+    <readform-stub ebookpath="" ebookname="" id="modal-ebook" ebook-image="[object Object]"></readform-stub>
   </div>
 </modal-stub>
 `;

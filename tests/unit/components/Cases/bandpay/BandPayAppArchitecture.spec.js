@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/vue'
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import BandPayAppArchitecture from '@/components/Cases/bandpay/BandPayAppArchitecture'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
@@ -12,6 +14,10 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 const parallaxTitles = ['Activity / Fragment', 'View model', 'Repository / Service', 'Network module']
 
 describe('BandPay BandPayAppArchitecture component', () => {
@@ -19,6 +25,7 @@ describe('BandPay BandPayAppArchitecture component', () => {
     const { container } = render(BandPayAppArchitecture, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -28,6 +35,7 @@ describe('BandPay BandPayAppArchitecture component', () => {
     render(BandPayAppArchitecture, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(screen.getByText(/BandPay app architecture/i).className).toBeTruthy()
@@ -37,6 +45,7 @@ describe('BandPay BandPayAppArchitecture component', () => {
     const wrapper = mount(BandPayAppArchitecture, {
       mocks,
       directives,
+      localVue,
     })
 
     const lottieDiv = wrapper.find('.case_lottie')
@@ -46,6 +55,7 @@ describe('BandPay BandPayAppArchitecture component', () => {
   it('should render all parallaxCards', () => {
     const wrapper = mount(BandPayAppArchitecture, {
       mocks,
+      localVue,
       directives,
     })
 
@@ -57,6 +67,7 @@ describe('BandPay BandPayAppArchitecture component', () => {
     render(BandPayAppArchitecture, {
       mocks,
       directives,
+      localVue,
     })
 
     screen.getAllByAltText('Icon').forEach(item => {
@@ -70,6 +81,7 @@ describe('BandPay BandPayAppArchitecture component', () => {
     const wrapper = mount(BandPayAppArchitecture, {
       mocks,
       directives,
+      localVue,
     })
 
     const getTitles = wrapper.findAll('.parallax-title')

@@ -1,7 +1,9 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Main from '@/components/Cases/godee/Main.vue'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const containerToRender = document.createElement('div')
 containerToRender.setAttribute('id', 'case-scroll-container')
@@ -28,9 +30,12 @@ const stubs = [
 ]
 
 const directives = {
-  'lazy-load': () => {},
   'mad-parallax': () => {},
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('Main component', () => {
   it('should render correctly', () => {
@@ -39,6 +44,7 @@ describe('Main component', () => {
       stubs,
       container: document.body.appendChild(containerToRender),
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -51,6 +57,7 @@ describe('Main component', () => {
           $getMediaFromS3: () => 'img.jpg',
         },
         directives,
+        localVue,
       })
 
       const About = await container.vm.$options.components.About.call()

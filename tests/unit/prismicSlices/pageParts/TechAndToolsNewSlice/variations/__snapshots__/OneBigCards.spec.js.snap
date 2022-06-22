@@ -59,7 +59,7 @@ exports[`FourBigCards component should correctly render component 1`] = `
         class="technologies__little-card-title"
       >
         
-    Gitlab
+    Gitlab2
   
       </h3>
     </div>
@@ -79,7 +79,7 @@ exports[`FourBigCards component should correctly render component 1`] = `
         class="technologies__little-card-title"
       >
         
-    Gitlab
+    Gitlab3
   
       </h3>
     </div>
@@ -99,7 +99,7 @@ exports[`FourBigCards component should correctly render component 1`] = `
         class="technologies__little-card-title"
       >
         
-    Gitlab
+    Gitlab4
   
       </h3>
     </div>

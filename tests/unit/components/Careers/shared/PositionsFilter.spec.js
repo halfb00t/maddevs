@@ -1,4 +1,4 @@
-import { render } from '@testing-library/vue'
+import { fireEvent, render, screen } from '@testing-library/vue'
 import { createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import OpenPositions from '@/components/Careers/OpenPositions'
@@ -22,8 +22,21 @@ describe('PositionsFilter component', () => {
     const { container } = render(PositionsFilter, {
       parentComponent: OpenPositions,
       store,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
+  })
+
+  it('should correctly work filter', async () => {
+    render(PositionsFilter, {
+      parentComponent: OpenPositions,
+      store,
+      localVue,
+    })
+
+    const input = screen.getAllByTestId('vacancy-input-id')
+    await fireEvent.click(input[0], 'Python')
+    expect(store.actions.changeVacanciesCategory).toHaveBeenCalledTimes(1)
   })
 })

@@ -35,6 +35,7 @@ function buildPayload({ variables }) {
       customfield_10063: variables.company,
       customfield_10057: variables.phoneNumber,
       customfield_10166: variables.interest ? { value: variables.interest } : null,
+      customfield_10207: variables.newsLetter ? { value: variables.newsLetter } : null,
       customfield_10064: 'maddevs.io',
       customfield_10066: 'https://megadocnotprovided.com',
       customfield_10183: variables.formLocation,

@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import { render, screen } from '@testing-library/vue'
-import WeCreateProjectsFor from '@/prismicSlices/pageParts/WeCreateProjectsFor'
+import WeCreateProjectsFor from '@/prismicSlices/pageParts/WeCreateProjectsFor/variations/default-slice/default-slice'
 
 const backgrounds = {
   white: '#ffffff',

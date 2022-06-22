@@ -3,9 +3,13 @@ import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Clutch from '@/pages/case-studies/clutch'
 import formBaseProps from '../../__mocks__/formBaseProps'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const DESCRIPTION = 'B2B Service Review Platform Case Study: How to adapt the B2B platform to increasing numbers of users? Read Clutch\'s story about implementing cutting-edge technology solutions to the platform\'s growth.'
 

@@ -30,12 +30,6 @@
       <p class="careers-banner_description">
         {{ $t('careers.section-1.description') }}
       </p>
-      <button
-        class="careers-banner_btn"
-        @click="changeLocale"
-      >
-        {{ $t('careers.section-1.btn') }}
-      </button>
     </div>
   </div>
 </template>
@@ -51,14 +45,6 @@ export default {
   computed: {
     currentLanguage() {
       return this.$i18n?.locale || 'en'
-    },
-  },
-
-  methods: {
-    changeLocale() {
-      const lang = this.$i18n.locale === 'en' ? 'ru' : 'en'
-      this.$i18n.setLocale(lang)
-      return lang
     },
   },
 }

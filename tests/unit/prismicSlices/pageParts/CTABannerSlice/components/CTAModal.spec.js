@@ -9,6 +9,8 @@ const props = {
 
 const stubs = ['ModalContactMe', 'ModalOrderProjectFromUs']
 
+jest.mock('~/helpers/generatorUid')
+
 describe('CTAModal component', () => {
   it('should correclty render component', () => {
     const { container } = render(CTAModal, {
@@ -26,7 +28,7 @@ describe('CTAModal component', () => {
     const ModalContactMe = await wrapper.vm.$options.components.ModalContactMe.call()
     const ModalOrderProjectFromUs = await wrapper.vm.$options.components.ModalOrderProjectFromUs.call()
 
-    expect(ModalContactMe.default).toBeUndefined()
+    expect(ModalContactMe.default.name).toBe('ModalContactMe')
     expect(ModalOrderProjectFromUs.default.name).toBe('ModalOrderProjectFromUs')
   })
 

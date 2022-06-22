@@ -185,6 +185,29 @@ exports[`Development component should render correctly 1`] = `
         </label>
       </div>
        
+      <div
+        class="form-checkbox"
+      >
+        <label
+          class="form-checkbox-label required"
+          for="sent_ebook_news-chat-form"
+        >
+          I agree to receive the monthly newsletter from Mad Devs
+    
+          <input
+            class="form-checkbox-input"
+            data-testid="user-agreement-checkbox-input"
+            id="sent_ebook_news-chat-form"
+            name="User agreement"
+            type="checkbox"
+          />
+           
+          <div
+            class="checkmark"
+          />
+        </label>
+      </div>
+       
       <button
         class="ui-button ui-button--disabled ui-button--transparent-bgc ui-button_submit-button-footer"
         disabled="disabled"

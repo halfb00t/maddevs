@@ -62,6 +62,7 @@ describe('KeyMetrics slice - SecondVariation component', () => {
       })
 
       expect(wrapper.vm.colorThemeOption).toBe('white')
+      expect(wrapper.vm.$options.props.metrics.default.call()).toEqual([])
     })
   })
 })

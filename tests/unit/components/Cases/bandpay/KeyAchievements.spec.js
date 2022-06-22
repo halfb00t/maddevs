@@ -1,7 +1,9 @@
 import { render, screen } from '@testing-library/vue'
-import { mount } from '@vue/test-utils'
+import { createLocalVue, mount } from '@vue/test-utils'
 import KeyAchievements from '@/components/Cases/bandpay/KeyAchievements'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
@@ -11,11 +13,16 @@ const directives = {
   'lazy-load': () => {},
 }
 
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
+
 describe('BandPay KeyAchievements component', () => {
   it('should render correctly', () => {
     const { container } = render(KeyAchievements, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(container).toMatchSnapshot()
@@ -25,6 +32,7 @@ describe('BandPay KeyAchievements component', () => {
     render(KeyAchievements, {
       mocks,
       directives,
+      localVue,
     })
 
     expect(screen.getByText(/Key achievements/i).className).toBeTruthy()
@@ -43,6 +51,7 @@ describe('BandPay KeyAchievements component', () => {
     const wrapper = mount(KeyAchievements, {
       mocks,
       directives,
+      localVue,
     })
 
     const videoFrame = wrapper.find('.case_iframe')
@@ -55,6 +64,7 @@ describe('BandPay KeyAchievements component', () => {
       render(KeyAchievements, {
         mocks,
         directives,
+        localVue,
       })
 
       screen.getAllByTestId('test-picture-img').forEach(item => {
