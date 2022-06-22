@@ -54,6 +54,12 @@ const messagesText = {
     + '|__/ |__| |  \\ | |__|  |  |  | |__/    [__  |___ |\\ |  |      |  |  |    [__  |    |__| |    |_/  \n'
     + '|  \\ |  | |__/ | |  |  |  |__| |  \\    ___] |___ | \\|  |      |  |__|    ___] |___ |  | |___ | \\_ \n'
     + '                                                                                                  ',
+  error: {
+    getCoverageMessage: 'Unable to retrieve  `Tests coverage`.',
+    getDeploysCount: 'Unable to retrieve `Deploys count`',
+    getEslintReport: 'Unable to retrieve `Eslint report`',
+    getPageSpeedMetric: 'Unable to retrieve `PageSpeed metrics`',
+  },
 }
 
 module.exports = {

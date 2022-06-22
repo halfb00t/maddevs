@@ -132,12 +132,34 @@ class DevRadiator {
     const mongoConnection = await mongoose.connect(DEV_RADIATOR_MONGO)
     if (mongoConnection) {
       console.log('MongoDB connected to MONGO')
+      let coverageData,
+        deploysCount,
+        eslintErrorsCount,
+        pageSpeedMetricDesktop,
+        pageSpeedMetricMobile
 
-      const coverageData = await getCoverageMessage()
-      const deploysCount = await getDeploysCount()
-      const eslintErrorsCount = await getEslintReport()
-      const pageSpeedMetricDesktop = await getPageSpeedMetric('desktop')
-      const pageSpeedMetricMobile = await getPageSpeedMetric('mobile')
+      try {
+        coverageData = await getCoverageMessage()
+      } catch (e) {
+        throw new Error(messagesText.error.getCoverageMessage)
+      }
+      try {
+        deploysCount = await getDeploysCount()
+      } catch (e) {
+        throw new Error(messagesText.error.getDeploysCount)
+      }
+      try {
+        eslintErrorsCount = await getEslintReport()
+      } catch (e) {
+        throw new Error(messagesText.error.getEslintReport)
+      }
+      try {
+        pageSpeedMetricDesktop = await getPageSpeedMetric('desktop')
+        pageSpeedMetricMobile = await getPageSpeedMetric('mobile')
+      } catch (e) {
+        throw new Error(messagesText.error.getPageSpeedMetric)
+      }
+
       const metrics = new Metrics({
         pageSpeed: {
           desktop: pageSpeedMetricDesktop,
@@ -223,47 +245,65 @@ class DevRadiator {
 
   async sendMetricsToSlack() {
     console.log(messagesText.run)
-    await this.collectMetrics()
+    if (process.env.FF_ENVIRONMENT === 'production') {
+      let requestData
+      try {
+        await this.collectMetrics()
+        function timeout(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms))
+        }
+        await timeout(3000)
 
-    function timeout(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms))
+        const metrics = await this.getMetricsFromDB()
+
+
+        if (!metrics.hasOwnProperty('comparedData')) {
+          console.log(chalk.hex('#ff0000')('!HAS NO DATA FROM LAST WEEK!'))
+          return
+        }
+
+        const coverageDescription = `${(metrics.comparedData.coverage.new < metrics.comparedData.coverage.old) ? `\n \`Total performance decreased by ${(metrics.comparedData.coverage.old - metrics.comparedData.coverage.new).toFixed(2)} points\`\n` : ''}`
+
+        const pageSpeedDesktopDescription = `:computer:\n Today's pages performance: ${metrics.pageSpeed.desktop.map(page => `<${page.url}|${page.name}> (${page.total}) `)
+          .join('')}`
+        const pageSpeedMobileDescription = `:iphone:\n Today's pages performance: ${metrics.pageSpeed.mobile.map(page => `<${page.url}|${page.name}> (${page.total}) `)
+          .join('')}`
+
+        requestData = {
+          title: 'Dev Radiator:',
+          blocks: [
+            this.createMessageBlock('header', 'Отчет радиатора по исполнению целей команды разработчиков проекта маркетинг'),
+            this.createMessageBlock('divider'),
+            this.createMessageBlock('section', this.createMessage('Total coverage', metrics.coverage.total, goals.coverage.total, coverageDescription, metrics.comparedData.coverage.old)),
+            this.createMessageBlock('section', this.createMessage('Branches', metrics.coverage.branches, goals.coverage.branches)),
+            this.createMessageBlock('section', this.createMessage('Functions', metrics.coverage.functions, goals.coverage.functions)),
+            this.createMessageBlock('section', this.createMessage('Lines', metrics.coverage.lines, goals.coverage.lines)),
+            this.createMessageBlock('section', this.createMessage('Statements', metrics.coverage.statements, goals.coverage.statements)),
+            this.createMessageBlock('divider'),
+            this.createMessageBlock('section', this.createMessage('Weekly deploys count', metrics.deploys, goals.deploys)),
+            this.createMessageBlock('divider'),
+            this.createMessageBlock('section', this.createMessage('Eslint errors count', metrics.eslintErrors, goals.eslint)),
+            this.createMessageBlock('divider'),
+            this.createMessageBlock('section', this.createMessage('Weekly total performance (Desktop)', metrics.comparedData.pageSpeed.desktop.new, goals.performanceDesktop, pageSpeedDesktopDescription, metrics.comparedData.pageSpeed.desktop.old)),
+            this.createMessageBlock('divider'),
+            this.createMessageBlock('section', this.createMessage('Weekly total performance (Mobile)', metrics.comparedData.pageSpeed.mobile.new, goals.performanceMobile, pageSpeedMobileDescription, metrics.comparedData.pageSpeed.mobile.old)),
+          ],
+        }
+        await this.sendToSlack(requestData)
+
+      } catch (e) {
+        requestData = {
+          title: 'Dev Radiator:',
+          blocks: [
+            this.createMessageBlock('header', 'Dev Radiator\nВозникла ошибка в ходе работы:\n'),
+            this.createMessageBlock('divider'),
+            this.createMessageBlock('section', e.toString()),
+          ]
+        }
+        await this.sendToSlack(requestData)
+        console.log('Error to collect data\n', e.toString())
+      }
     }
-    await timeout(3000)
-    const metrics = await this.getMetricsFromDB()
-
-    if (!metrics.hasOwnProperty('comparedData')) {
-      console.log(chalk.hex('#ff0000')('!HAS NO DATA FROM LAST WEEK!'))
-      return
-    }
-
-    const coverageDescription = `${(metrics.comparedData.coverage.new < metrics.comparedData.coverage.old) ? `\n \`Total performance decreased by ${(metrics.comparedData.coverage.old - metrics.comparedData.coverage.new).toFixed(2)} points\`\n` : ''}`
-
-    const pageSpeedDesktopDescription = `:iphone:\n Today's pages performance: ${metrics.pageSpeed.desktop.map(page => `<${page.url}|${page.name}> (${page.total}) `)
-      .join('')}`
-    const pageSpeedMobileDescription = `:iphone:\n Today's pages performance: ${metrics.pageSpeed.mobile.map(page => `<${page.url}|${page.name}> (${page.total}) `)
-      .join('')}`
-
-    const requestData = {
-      title: 'Dev Radiator:',
-      blocks: [
-        this.createMessageBlock('header', 'Отчет радиатора по исполнению целей команды разработчиков проекта маркетинг'),
-        this.createMessageBlock('divider'),
-        this.createMessageBlock('section', this.createMessage('Total coverage', metrics.coverage.total, goals.coverage.total, coverageDescription, metrics.comparedData.coverage.old)),
-        this.createMessageBlock('section', this.createMessage('Branches', metrics.coverage.branches, goals.coverage.branches)),
-        this.createMessageBlock('section', this.createMessage('Functions', metrics.coverage.functions, goals.coverage.functions)),
-        this.createMessageBlock('section', this.createMessage('Lines', metrics.coverage.lines, goals.coverage.lines)),
-        this.createMessageBlock('section', this.createMessage('Statements', metrics.coverage.statements, goals.coverage.statements)),
-        this.createMessageBlock('divider'),
-        this.createMessageBlock('section', this.createMessage('Weekly deploys count', metrics.deploys, goals.deploys)),
-        this.createMessageBlock('divider'),
-        this.createMessageBlock('section', this.createMessage('Eslint errors count', metrics.eslintErrors, goals.eslint)),
-        this.createMessageBlock('divider'),
-        this.createMessageBlock('section', this.createMessage('Weekly total performance (Desktop)', metrics.comparedData.pageSpeed.desktop.new, goals.performanceDesktop, pageSpeedDesktopDescription, metrics.comparedData.pageSpeed.desktop.old)),
-        this.createMessageBlock('divider'),
-        this.createMessageBlock('section', this.createMessage('Weekly total performance (Mobile)', metrics.comparedData.pageSpeed.mobile.new, goals.performanceMobile, pageSpeedMobileDescription, metrics.comparedData.pageSpeed.mobile.old)),
-      ],
-    }
-    await this.sendToSlack(requestData)
   }
 }
 
