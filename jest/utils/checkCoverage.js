@@ -23,11 +23,12 @@ const reporter = createReporter()
 
 const summary = istanbulCoverage.createCoverageSummary()
 
-map.files().forEach(f => {
-  const fc = map.fileCoverageFor(f)
-  const s = fc.toSummary()
-  summary.merge(s)
-})
+map.files()
+  .forEach(f => {
+    const fc = map.fileCoverageFor(f)
+    const s = fc.toSummary()
+    summary.merge(s)
+  })
 
 reporter.addAll(['json', 'lcov', 'json-summary'])
 reporter.write(map)
@@ -65,7 +66,11 @@ checkCoverage.run(cfg, options, err => {
   // eslint-disable-next-line no-console
   console.log(chalk.green(`
     Coverage summary:
-    
+
+    Total coverage percentage: ${
+  ((summary.lines.pct + summary.statements.pct + summary.branches.pct + summary.functions.pct) / 4).toFixed(2)
+}%
+
     Lines: ${cfg.check.global.lines}% -> ${summary.lines.pct}%
     Statements: ${cfg.check.global.statements}% -> ${summary.statements.pct}%
     Branches: ${cfg.check.global.branches}% -> ${summary.branches.pct}%
