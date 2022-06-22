@@ -78,6 +78,7 @@ function buildEbookPayload({ variables }) {
       customfield_10207: variables.consent_to_mailing ? { value: variables.consent_to_mailing } : null,
       customfield_10185: variables.pageUrl,
       customfield_10064: 'maddevs.io',
+      customfield_10183: variables.formLocation,
     },
   }
 }
