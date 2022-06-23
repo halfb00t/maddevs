@@ -1,7 +1,7 @@
 /* eslint-disable prefer-promise-reject-errors */
 import 'regenerator-runtime'
 import axios from 'axios'
-import { createLead, createEbookLead } from '../LeadsService'
+import { createLead } from '../LeadsService'
 
 jest.mock('../../config/env', () => ({
   ATLASSIAN_AUTH_TOKEN: '123',
@@ -58,7 +58,7 @@ describe('Leads service', () => {
         },
       },
     }
-    const data = await createEbookLead(req.body)
+    const data = await createLead(req.body, 'ebook-form')
     expect(data).toBe('some data')
   })
 
@@ -67,14 +67,6 @@ describe('Leads service', () => {
     axios.post.mockImplementation(() => Promise.reject('error'))
 
     const error = await createLead(req.body)
-    expect(error).toBe('error')
-  })
-
-  it('should correctly return error if axios failed ebooks', async () => {
-    jest.clearAllMocks()
-    axios.post.mockImplementation(() => Promise.reject('error'))
-
-    const error = await createEbookLead(req.body)
     expect(error).toBe('error')
   })
 

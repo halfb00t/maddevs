@@ -83,28 +83,12 @@ function buildEbookPayload({ variables }) {
   }
 }
 
-async function createLead(body) {
+async function createLead(body, type) {
   try {
     const token = generateToken(ATLASSIAN_AUTH_TOKEN)
-    const payload = buildPayload(body)
-
-    const response = await axios.post(ATLASSIAN_API_URL, payload, {
-      headers: {
-        Authorization: `Basic ${token}`,
-        'Content-Type': 'application/json',
-      },
-    })
-
-    return response.data
-  } catch (error) {
-    return error
-  }
-}
-
-async function createEbookLead(body) {
-  try {
-    const token = generateToken(ATLASSIAN_AUTH_TOKEN)
-    const payload = buildEbookPayload(body)
+    const payload = (type === 'ebook-form')
+      ? buildEbookPayload(body)
+      : buildPayload(body)
 
     const response = await axios.post(ATLASSIAN_API_URL, payload, {
       headers: {
@@ -120,6 +104,5 @@ async function createEbookLead(body) {
 }
 
 module.exports = {
-  createEbookLead,
   createLead,
 }
