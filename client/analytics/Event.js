@@ -99,6 +99,7 @@ export class AnalyticsEvent {
         const properties = { ...this.properties, send_to: analyticsId }
         try {
           window.gtag('event', this.action, properties)
+          window.fbq('track', this.action, properties)
         } catch (error) {
           this._handleError(error)
         }

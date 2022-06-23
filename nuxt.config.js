@@ -194,6 +194,18 @@ export default () => ({
         },
       },
     ],
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: process.env.FACEBOOK_CODE,
+      autoPageView: true,
+      disabled: false,
+    }],
+    ['nuxt-linkedin-pixel-module', {
+      /* module options */
+      partnerId: process.env.LINKEDIN_PIXEL_ID,
+      disabled: false,
+    }],
   ],
   sentry: {
     Vue,
