@@ -79,6 +79,14 @@ export default {
   text-transform: capitalize;
 }
 
+a.nuxt-link-exact-active {
+  color: $text-color--red !important;
+
+  &::before {
+    opacity: 1;
+  }
+}
+
 .footer-menu {
   margin-bottom: 30px;
 
