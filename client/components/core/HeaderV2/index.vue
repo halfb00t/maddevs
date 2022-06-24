@@ -266,6 +266,8 @@ export default {
       if (!this.$refs?.modalContactMe?.show) return
       this.$refs.modalContactMe.show()
       contactMeClickEvent.send()
+      contactMeClickPixelEvent.send()
+
       this.isActiveMobileMenu = false
     },
 

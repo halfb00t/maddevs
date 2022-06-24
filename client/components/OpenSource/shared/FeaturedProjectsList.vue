@@ -40,6 +40,7 @@ export default {
   methods: {
     sendGithubClickEvent() {
       githubClickEvent.send()
+      githubClickPixelEvent.send()
     },
   },
 }

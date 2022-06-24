@@ -11,7 +11,7 @@ export const addUserType = type => {
   localStorage.setItem(LOCAL_STORAGE_KEYS.TYPE, type)
 }
 
-export class AnalyticsEvent {
+export class PixelAnalyticsEvent {
   constructor(action, strict = true) {
     if (!action) {
       throw new Error(`Event action is missing for ${this.action}, please add an action for object`)
@@ -98,7 +98,7 @@ export class AnalyticsEvent {
       analyticsKeys.forEach(analyticsId => {
         const properties = { ...this.properties, send_to: analyticsId }
         try {
-          window.gtag('event', this.action, properties)
+          window.fbq('track', this.action, properties)
         } catch (error) {
           this._handleError(error)
         }

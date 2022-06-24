@@ -146,6 +146,7 @@ export default {
   methods: {
     sendPressCenterPostEvent() {
       pressCenterClickEvent.send()
+      pressCenterClickPixelEvent.send()
     },
 
     shortDescription(text) {

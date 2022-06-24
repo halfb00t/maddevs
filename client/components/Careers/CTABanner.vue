@@ -65,6 +65,7 @@ export default {
   methods: {
     sendHrSiteLickEvent() {
       hrSiteClickEvent.send()
+      hrSiteClickPixelEvent.send()
     },
   },
 }

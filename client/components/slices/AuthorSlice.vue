@@ -208,7 +208,10 @@ export default {
 
   methods: {
     sendLinkedinClickEvent(network) {
-      if (network === 'Linkedin') linkedinUserClickEvent.send()
+      if (network === 'Linkedin') {
+        linkedinUserClickEvent.send()
+        linkedinUserClickPixelEvent.send()
+      }
     },
   },
 }

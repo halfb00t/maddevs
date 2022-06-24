@@ -92,7 +92,10 @@ export default {
 
   methods: {
     sendLinkedinClickEvent(event) {
-      if (event.target.href) linkedinUserClickEvent.send()
+      if (event.target.href) {
+        linkedinUserClickEvent.send()
+        linkedinUserClickPixelEvent.send()
+      }
     },
 
     toggleImageHanlde() {

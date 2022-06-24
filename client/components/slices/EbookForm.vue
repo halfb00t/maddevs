@@ -167,6 +167,7 @@ export default {
 
       addUserType('download_ebook')
       ebookSubmitFormEvent.send()
+      ebookSubmitFormPixelEvent.send()
 
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.successMessage = `

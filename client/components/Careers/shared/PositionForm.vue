@@ -336,6 +336,7 @@ export default {
       })
       addUserType('hr_candidate')
       submitCvFormEvent.send()
+      submitCvFormPixelEvent.send()
       this.resetForm()
     },
 

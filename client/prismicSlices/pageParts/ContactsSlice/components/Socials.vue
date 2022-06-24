@@ -39,6 +39,7 @@ export default {
   methods: {
     sendSocialClickEvent() {
       socialNetworkClickEvent.send()
+      socialNetworkClickPixelEvent.send()
     },
   },
 }

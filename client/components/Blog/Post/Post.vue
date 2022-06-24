@@ -22,18 +22,21 @@
             :title="metaTitle"
             network="facebook"
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__facebook-icon"
+            @open="sendPixelAnalitics('facebook')"
           />
           <ShareNetwork
             :url="openGraphUrl"
             :title="metaTitle"
             network="twitter"
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__twitter-icon"
+            @open="sendPixelAnalitics('twitter')"
           />
           <ShareNetwork
             :url="openGraphUrl"
             :title="metaTitle"
             network="linkedin"
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__linkedin-icon"
+            @open="sendPixelAnalitics('linkedin')"
           />
         </div>
       </div>
@@ -131,6 +134,7 @@ import ContentLocker from '@/components/Blog/Post/ContentLocker'
 
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import { Cookies } from '@/helpers/cookies'
+import {writeUsClickEvent} from "@/analytics/events";
 
 export default {
   name: 'PostView',
@@ -345,6 +349,11 @@ export default {
       const scrolled = (winScroll / height) * 100
       this.$refs.progressBar.style.width = `${scrolled}%`
     },
+
+    sendPixelAnalitics(tag) {
+      socialNetworkPixelEvent.setTag(tag)
+      socialNetworkPixelEvent.send()
+    }
   },
 }
 </script>

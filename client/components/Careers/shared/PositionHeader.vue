@@ -62,6 +62,7 @@ export default {
   methods: {
     sendWriteUsClickEvent() {
       writeUsClickEvent.send()
+      writeUsClickPixelEvent.send()
       this.scrollToElement('#careers-position-form')
     },
   },

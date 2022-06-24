@@ -82,8 +82,14 @@ export default {
 
   methods: {
     sendEvent(type) {
-      if (type === 'email') emailClickEvent.send()
-      if (type === 'phone') phoneClickEvent.send()
+      if (type === 'email') {
+        emailClickEvent.send()
+        emailClickPixelEvent.send()
+      }
+      if (type === 'phone') {
+        phoneClickEvent.send()
+        phoneClickPixelEvent.send()
+      }
     },
   },
 }
