@@ -69,9 +69,34 @@ export default {
     },
   },
 
+  watch: {
+    $route: {
+      handler({ path }) {
+        this.checkCurrentRoute(path)
+      },
+
+      deep: true,
+      immediate: true,
+    },
+  },
+
   methods: {
     onChangePage() {
       this.$emit('changed-page')
+    },
+
+    checkCurrentRoute(urlPath) {
+      this.menus.forEach(menu => {
+        menu.routes.forEach(route => {
+          if (route?.link?.url.endsWith(urlPath) && urlPath !== '/') {
+            return this.$emit('name', this.name)
+          }
+          if (urlPath === '/') {
+            return this.$emit('name', null)
+          }
+          return null
+        })
+      })
     },
   },
 }
