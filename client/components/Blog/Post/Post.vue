@@ -36,6 +36,7 @@
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__linkedin-icon"
           />
         </div>
+        <SubscribeForm />
       </div>
 
       <CustomerUniversityHeader
@@ -131,10 +132,12 @@ import ContentLocker from '@/components/Blog/Post/ContentLocker'
 
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import { Cookies } from '@/helpers/cookies'
+import SubscribeForm from '@/components/core/forms/SubscribeForm'
 
 export default {
   name: 'PostView',
   components: {
+    SubscribeForm,
     ContentLocker,
     SlicesBlock,
     PostCard,
@@ -429,6 +432,7 @@ export default {
   &__share-links {
     display: flex;
     margin-top: 20px;
+    margin-bottom: 33px;
   }
 
   &__share-link {
