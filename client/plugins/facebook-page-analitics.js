@@ -6,7 +6,7 @@ export default ctx => {
   let seconds = 0
   router.afterEach(() => {
     Vue.nextTick(() => {
-      setTimeout(() => {
+      setInterval(() => {
         seconds += 15
         const payload = `${seconds}sec`
         $fb.fbq('trackCustom', payload)
