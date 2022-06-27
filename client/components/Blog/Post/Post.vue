@@ -22,18 +22,21 @@
             :title="metaTitle"
             network="facebook"
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__facebook-icon"
+            @open="sendPixelAnalitics(facebookNetworkPixelEvent)"
           />
           <ShareNetwork
             :url="openGraphUrl"
             :title="metaTitle"
             network="twitter"
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__twitter-icon"
+            @open="sendPixelAnalitics(twitterNetworkPixelEvent)"
           />
           <ShareNetwork
             :url="openGraphUrl"
             :title="metaTitle"
             network="linkedin"
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__linkedin-icon"
+            @open="sendPixelAnalitics(linkedinNetworkPixelEvent)"
           />
         </div>
       </div>
@@ -344,6 +347,10 @@ export default {
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
       const scrolled = (winScroll / height) * 100
       this.$refs.progressBar.style.width = `${scrolled}%`
+    },
+
+    sendPixelAnalitics(pixelEvent) {
+      pixelEvent.send()
     },
   },
 }

@@ -167,6 +167,8 @@ A list of environment variables that needed to start the project(required)
 | RECAPTCHA_SECRET_KEY                 | ReCaptcha secret key                                |
 | NODE_GA4_KEY                         | GA4 MEASUREMENT ID                                  |
 | NODE_ANALYTICS_UNIVERSAL_KEY         | Universal Analytics Tracking ID                     |
+| FACEBOOK_CODE                        | Access code for FaceBook Pixel                      |
+| LINKEDIN_PIXEL_ID                    | Linkidin identificator                              |
 
 All of these variables must be added to the Heroku hosting
 

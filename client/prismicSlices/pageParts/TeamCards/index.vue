@@ -58,6 +58,7 @@
 <script>
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 import { linkedinUserClickEvent } from '@/analytics/events'
+import { linkedinUserClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'TeamCards',
@@ -92,7 +93,10 @@ export default {
 
   methods: {
     sendLinkedinClickEvent(event) {
-      if (event.target.href) linkedinUserClickEvent.send()
+      if (event.target.href) {
+        linkedinUserClickEvent.send()
+        linkedinUserClickPixelEvent.send()
+      }
     },
 
     toggleImageHanlde() {

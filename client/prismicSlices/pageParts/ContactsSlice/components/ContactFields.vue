@@ -70,6 +70,7 @@
 
 <script>
 import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
+import { emailClickPixelEvent, phoneClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'ContactFields',
@@ -82,8 +83,14 @@ export default {
 
   methods: {
     sendEvent(type) {
-      if (type === 'email') emailClickEvent.send()
-      if (type === 'phone') phoneClickEvent.send()
+      if (type === 'email') {
+        emailClickEvent.send()
+        emailClickPixelEvent.send()
+      }
+      if (type === 'phone') {
+        phoneClickEvent.send()
+        phoneClickPixelEvent.send()
+      }
     },
   },
 }
