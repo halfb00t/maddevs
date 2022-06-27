@@ -123,10 +123,10 @@ export default {
           this.industriesList = this.spliceIndustryList(this.industries, 4) // columns count
           break
         case 'tablet':
-          this.industriesList = this.spliceIndustryList(this.industries, 3) // columns count
+          this.industriesList = this.spliceIndustryList(this.industries.filter(item => (item.text !== '')), 3) // columns count
           break
         case 'mobile':
-          this.industriesList = this.spliceIndustryList(this.industries, 2) // columns count
+          this.industriesList = this.spliceIndustryList(this.industries.filter(item => (item.text !== '')), 2) // columns count
           break
         default:
           // eslint-disable-next-line no-console
@@ -219,6 +219,7 @@ export default {
   &__image {
     width: 100%;
     max-width: 900px;
+
     &-wrapper {
       display: flex;
       justify-content: center;

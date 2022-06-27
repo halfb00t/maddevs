@@ -60,6 +60,10 @@ export const industriesForMapVariation = [
     text: 'Serverless',
   },
   {
+    iconID: '',
+    text: '',
+  },
+  {
     iconID: 'transportation',
     text: 'Transportation',
   },
@@ -102,5 +106,9 @@ export const industriesForMapVariation = [
   {
     iconID: 'byod',
     text: 'BYOD',
+  },
+  {
+    iconID: '',
+    text: '',
   },
 ]
