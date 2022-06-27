@@ -70,6 +70,7 @@
 
 <script>
 import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
+import { emailClickPixelEvent, phoneClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'ContactFields',

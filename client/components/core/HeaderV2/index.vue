@@ -149,6 +149,7 @@ import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
 import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
 import { isMobile } from '@/helpers/isMobileDeviceDetect'
 import { contactMeClickEvent, phoneClickEvent } from '@/analytics/events'
+import { contactMeClickPixelEvent } from '@/analytics/pixelEvents'
 
 // TODO: Need to transfer this constant to @/data/navigation.js
 const navigation = [

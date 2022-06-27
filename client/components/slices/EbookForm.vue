@@ -60,6 +60,7 @@ import createLeadMixin from '@/mixins/createLeadMixin'
 import { ebookSubmitFormEvent } from '@/analytics/events'
 import { addUserType } from '@/analytics/Event'
 import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
+import { ebookSubmitFormPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'EbookForm',

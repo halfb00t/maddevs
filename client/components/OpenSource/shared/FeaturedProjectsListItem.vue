@@ -25,6 +25,7 @@
 <script>
 import UIArrowButton from '@/components/shared/UIArrowButton'
 import { githubClickEvent } from '@/analytics/events'
+import { githubClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'FeaturedProjectsListItem',

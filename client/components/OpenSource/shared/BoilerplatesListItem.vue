@@ -37,6 +37,7 @@
 <script>
 import UIArrowButton from '@/components/shared/UIArrowButton.vue'
 import { githubClickEvent } from '@/analytics/events'
+import { githubClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'BoilerplatesListItem',

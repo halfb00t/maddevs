@@ -6,19 +6,25 @@ const LOCAL_STORAGE_KEYS = {
   TYPE: 'GA_USER_TYPE',
 }
 
+export const TRACK_TYPES = {
+  TRACK: 'track',
+  CUSTOM_TRACK: 'trackCustom',
+}
+
 export const addUserType = type => {
   // TYPE: 'hr_candidate' | 'lead' | 'download_ebook' | undefined
   localStorage.setItem(LOCAL_STORAGE_KEYS.TYPE, type)
 }
 
 export class PixelAnalyticsEvent {
-  constructor(action, strict = true) {
+  constructor(action, trackType = TRACK_TYPES.TRACK, strict = true) {
     if (!action) {
       throw new Error(`Event action is missing for ${this.action}, please add an action for object`)
     }
     this.strict = strict
     this.action = action
     this.properties = {}
+    this.trackType = trackType
     this._applyUser()
   }
 
@@ -98,7 +104,7 @@ export class PixelAnalyticsEvent {
       analyticsKeys.forEach(analyticsId => {
         const properties = { ...this.properties, send_to: analyticsId }
         try {
-          window.fbq('track', this.action, properties)
+          window.fbq(this.trackType, this.action, properties)
         } catch (error) {
           this._handleError(error)
         }

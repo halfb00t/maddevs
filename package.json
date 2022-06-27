@@ -17,6 +17,7 @@
     "lint-es": "eslint -c .eslintrc --ext .js,.vue --ignore-path .gitignore .",
     "lint-vue-scss": "sass-lint-vue components",
     "lint-scss": "sass-lint client/assets/styles/*.scss --verbose",
+    "precommit": "npm run lint",
     "heroku-postbuild": "npm run build",
     "heroku-cleanup": "cd ./client; ls | grep -v static | grep -v modules | xargs rm -rfv",
     "snyk-protect": "snyk protect",
@@ -124,6 +125,11 @@
     "slice-machine-ui": "^0.2.1",
     "vue-jest": "^3.0.7",
     "vue-loader": "15.9.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   },
   "snyk": true
 }

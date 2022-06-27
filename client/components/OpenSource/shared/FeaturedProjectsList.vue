@@ -23,6 +23,7 @@ import UIButton from '@/components/shared/UIButton'
 import FeaturedProjectsListItem from '@/components/OpenSource/shared/FeaturedProjectsListItem'
 import { featuredProjectsList } from '@/data/featuredProjectsList'
 import { githubClickEvent } from '@/analytics/events'
+import { githubClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'FeaturedProjectsList',

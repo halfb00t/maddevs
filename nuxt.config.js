@@ -196,7 +196,7 @@ export default () => ({
     ],
     ['nuxt-facebook-pixel-module', {
       /* module options */
-      track: 'PageView',
+      track: 'ContentView',
       pixelId: process.env.FACEBOOK_CODE,
       autoPageView: true,
       disabled: false,

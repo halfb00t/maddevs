@@ -164,6 +164,7 @@
 import { mapGetters } from 'vuex'
 import linkResolver from '@/plugins/link-resolver'
 import { linkedinUserClickEvent } from '@/analytics/events'
+import { linkedinUserClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'AuthorSlice',

@@ -26,6 +26,7 @@
 <script>
 import { socialNetworks } from '@/data/socialNetworks'
 import { socialNetworkClickEvent } from '@/analytics/events'
+import { socialNetworkClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'Socials',

@@ -46,7 +46,7 @@
 import { mapGetters } from 'vuex'
 import FooterSocialNetworks from '@/components/core/Footer/FooterSocialNetworks'
 import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
-import {phoneClickPixelEvent} from "@/analytics/pixelEvents";
+import { phoneClickPixelEvent, emailClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'FooterContacts',

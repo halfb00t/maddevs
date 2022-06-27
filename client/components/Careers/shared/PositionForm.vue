@@ -160,6 +160,7 @@ import { fileSizeValidation, fileExt } from '@/helpers/validators'
 import parseUserAgentForLeads from '@/helpers/parseUserAgentForLeads'
 import { submitCvFormEvent } from '@/analytics/events'
 import { addUserType } from '@/analytics/Event'
+import { submitCvFormPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'PositionForm',
