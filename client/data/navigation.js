@@ -17,6 +17,29 @@ export const aboutBannerNavigation = [
   },
 ]
 
+export const navigation = [
+  {
+    name: 'company',
+    label: 'Company',
+  },
+  {
+    name: 'services',
+    label: 'Services',
+  },
+  {
+    name: 'industries',
+    label: 'Industries',
+  },
+  {
+    name: 'clients',
+    label: 'Clients',
+  },
+  {
+    name: 'insights',
+    label: 'Insights',
+  },
+]
+
 export const projectsBannerNavigation = [
   {
     link: '#case-studies',

@@ -44,6 +44,7 @@ import { sendEmail } from '@/api/email'
 import createLeadMixin from '@/mixins/createLeadMixin'
 import { getLinkWithLifeTime } from '@/api/s3'
 import { ebookSubmitFormEvent } from '@/analytics/events'
+import { ebookSubmitFormPixelEvent } from '@/analytics/pixelEvents'
 import { addUserType } from '@/analytics/Event'
 import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 
@@ -160,6 +161,7 @@ export default {
 
       addUserType('download_ebook')
       ebookSubmitFormEvent.send()
+      ebookSubmitFormPixelEvent.send()
 
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.$refs.checkbox.reset()

@@ -26,6 +26,7 @@
 <script>
 import { socialNetworks } from '@/data/socialNetworks'
 import { socialNetworkClickEvent } from '@/analytics/events'
+import { socialNetworkClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'FooterSocialNetworkList',
@@ -38,6 +39,7 @@ export default {
   methods: {
     sendSocialClickEvent() {
       socialNetworkClickEvent.send()
+      socialNetworkClickPixelEvent.send()
     },
   },
 }

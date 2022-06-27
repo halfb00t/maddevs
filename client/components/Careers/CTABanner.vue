@@ -49,6 +49,7 @@
 <script>
 import UIBanner from '@/components/shared/UIBanner'
 import { hrSiteClickEvent } from '@/analytics/events'
+import { hrSiteClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'CTABanner',
@@ -65,6 +66,7 @@ export default {
   methods: {
     sendHrSiteLickEvent() {
       hrSiteClickEvent.send()
+      hrSiteClickPixelEvent.send()
     },
   },
 }
