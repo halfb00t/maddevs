@@ -36,7 +36,9 @@
             class="blog-post__share-link icon-wrapper__icon icon-wrapper__linkedin-icon"
           />
         </div>
-        <SubscribeForm />
+        <SubscribeForm
+          :form-location="title"
+        />
       </div>
 
       <CustomerUniversityHeader
