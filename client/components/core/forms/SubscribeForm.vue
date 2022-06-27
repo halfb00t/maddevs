@@ -248,7 +248,7 @@ export default {
 
     checkEmailInLocalStorage() {
       const subscriber = JSON.parse(localStorage.getItem('newsLetter_subscriber')) || []
-      if (subscriber) {
+      if (subscriber.length) {
         if (subscriber.includes(this.email)) return true
         subscriber.push(this.email)
       } else {
