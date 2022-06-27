@@ -35,3 +35,52 @@ exports[`TagBanner component should render correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`TagBanner component should render correctly with data 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="current-tag"
+    >
+      <div
+        class="current-tag__info"
+      >
+        <h1
+          class="current-tag__title"
+        >
+          
+        Project Management
+      
+        </h1>
+         
+        <p
+          class="current-tag__description"
+        >
+          
+        Project managers need to continuously improve their skills and knowledge to keep up with the changes in their organizations. Browse our articles to learn about various project management techniques and methodologies.
+      
+        </p>
+         
+        <p
+          class="current-tag__posts-count"
+        >
+          
+        A collection of 0 posts
+      
+        </p>
+      </div>
+       
+      <div
+        class="current-tag__lottie"
+      >
+        <div
+          class="lottie-container case_lottie"
+          style="--height: 201px; --width: 100%;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

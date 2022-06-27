@@ -150,30 +150,7 @@ import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
 import { isMobile } from '@/helpers/isMobileDeviceDetect'
 import { contactMeClickEvent, phoneClickEvent } from '@/analytics/events'
 import { contactMeClickPixelEvent } from '@/analytics/pixelEvents'
-
-// TODO: Need to transfer this constant to @/data/navigation.js
-const navigation = [
-  {
-    name: 'company',
-    label: 'Company',
-  },
-  {
-    name: 'services',
-    label: 'Services',
-  },
-  {
-    name: 'industries',
-    label: 'Industries',
-  },
-  {
-    name: 'clients',
-    label: 'Clients',
-  },
-  {
-    name: 'insights',
-    label: 'Insights',
-  },
-]
+import { navigation } from '@/data/navigation'
 
 export default {
   name: 'HeaderV2',

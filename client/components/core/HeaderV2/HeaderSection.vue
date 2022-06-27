@@ -30,6 +30,7 @@
 
 <script>
 import HeaderMenu from '@/components/core/HeaderV2/HeaderMenu'
+import checkCurrentRoute from '@/helpers/checkCurrentRoute'
 
 export default {
   name: 'HeaderSection',
@@ -66,6 +67,17 @@ export default {
       type: Object,
       default: () => ({}),
       required: true,
+    },
+  },
+
+  watch: {
+    $route: {
+      handler({ path }) {
+        checkCurrentRoute.bind(this)(path)
+      },
+
+      deep: true,
+      immediate: true,
     },
   },
 

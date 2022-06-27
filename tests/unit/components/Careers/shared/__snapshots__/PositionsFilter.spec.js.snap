@@ -9,6 +9,7 @@ exports[`PositionsFilter component should render correctly 1`] = `
       class="positions-filter__item"
     >
       <input
+        data-testid="vacancy-input-id"
         name="tag"
         type="radio"
         value=""
@@ -22,6 +23,7 @@ exports[`PositionsFilter component should render correctly 1`] = `
       class="positions-filter__item"
     >
       <input
+        data-testid="vacancy-input-id"
         name="tag"
         type="radio"
         value=""

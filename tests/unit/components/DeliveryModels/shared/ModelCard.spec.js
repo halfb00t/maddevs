@@ -9,6 +9,7 @@ const props = {
   title: 'title',
   animationName: 'staff',
   startAnimationOnScreenPercent: 23,
+  animationSpeed: 2,
 }
 
 const mocks = {
@@ -77,11 +78,13 @@ describe('ModelCard component', () => {
     const playAnimationMock = jest.spyOn(wrapper.vm, 'playAnimation')
 
     delete animation.play
+    jest.spyOn(global.console, 'log').mockImplementation(() => 'Error:  TypeError: this.animation.play is not a function')
     wrapper.vm.animCreatedHandler(animation)
     window.innerHeight = 100
 
     jest.spyOn(wrapper.vm.$refs.card, 'getBoundingClientRect').mockImplementation(() => ({ bottom: 20, top: 10, height: 30 }))
     wrapper.vm.handleCardAnimation()
+    expect(global.console.log).toHaveBeenCalledTimes(1)
     expect(playAnimationMock).toHaveBeenCalledTimes(1)
   })
 })

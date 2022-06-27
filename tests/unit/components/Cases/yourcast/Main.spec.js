@@ -1,12 +1,17 @@
 import { render } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Main from '@/components/Cases/yourcast/Main'
 import '../../../__mocks__/intersectionObserverMock'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const directives = {
-  'lazy-load': () => {},
-  'mad-parallax': () => {},
+  'mad-parallax': jest.fn(),
 }
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const stubs = [
   'NuxtLink',
@@ -25,6 +30,7 @@ describe('Main component', () => {
       },
       stubs,
       directives,
+      localVue,
     })
     expect(container).toMatchSnapshot()
   })
@@ -36,6 +42,7 @@ describe('Main component', () => {
           $getMediaFromS3: () => 'img.jpg',
         },
         directives,
+        localVue,
       })
 
       const AboutYourcast = await container.vm.$options.components.AboutYourcast.call()

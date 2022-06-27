@@ -34,14 +34,14 @@ exports[`UIFormCheckboxes should render correctly with slot 1`] = `
   >
     <label
       class="form-checkbox-label required"
-      for="sent_ebook_news-undefined"
+      for="sent_ebook_news-custom-id"
     >
       I agree to receive the monthly newsletter from Mad Devs
     
       <input
         class="form-checkbox-input"
         data-testid="user-agreement-checkbox-input"
-        id="sent_ebook_news-undefined"
+        id="sent_ebook_news-custom-id"
         name="User agreement"
         type="checkbox"
       />

@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/vue'
+import { shallowMount } from '@vue/test-utils'
 import FirstVariation from '@/prismicSlices/pageParts/KeyMetricsSlice/variations/FirstVariation'
 
 const defaultTitle = 'Mad Devs’ key metrics'
@@ -42,5 +43,13 @@ describe('KeyMetrics slice - FirstVariation component', () => {
     expect(screen.getByText(defaultTitle)).not.toBeNull()
     expect(screen.queryByTestId('key-metric')).toBeNull()
     expect(container).toMatchSnapshot()
+  })
+
+  it('should correctly return empty array from default props', () => {
+    const wrapper = shallowMount(FirstVariation, {
+      propsData: props,
+    })
+
+    expect(wrapper.vm.$options.props.metrics.default.call()).toEqual([])
   })
 })

@@ -1,7 +1,13 @@
 import { render, screen } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 import CaseListSlice from '@/prismicSlices/pageParts/CaseListSlice'
+import mainMixins from '@/mixins/mainMixins'
 import '../../../__mocks__/intersectionObserverMock'
+
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const stubs = ['CasesListItem', 'NuxtLink']
 
@@ -47,6 +53,10 @@ const getProps = params => ({
     },
     items: [...params?.items],
   },
+})
+
+Object.defineProperty(global, 'innerWidth', {
+  value: 768,
 })
 
 describe('CaseListSlice component', () => {
@@ -111,6 +121,65 @@ describe('CaseListSlice component', () => {
       })
 
       expect(wrapper.vm.sliceBackground).toBeNull()
+    })
+
+    it('should correctly work autoplay', () => {
+      const pause = () => ''
+      const play = () => ''
+
+      const containerToRender = document.createElement('div')
+      containerToRender.setAttribute('class', 'cases-list_item-video')
+      containerToRender.pause = pause
+      containerToRender.play = play
+
+      Object.defineProperty(document, 'querySelectorAll', {
+        value: () => [containerToRender, containerToRender],
+      })
+
+      Object.defineProperty(global.window, 'IntersectionObserver', {
+        writable: true,
+        configurable: true,
+        value: class IntersectionObserver {
+          constructor(callback, options) {
+            this.viewPort = options.root
+            this.entries = [{ isIntersecting: true, target: containerToRender }]
+            this.callback = callback
+          }
+
+          observe(target) {
+            this.entries.push({ isIntersecting: false, target })
+            this.callback(this.entries, this)
+          }
+        },
+      })
+
+      const wrapper = shallowMount(CaseListSlice, {
+        stubs,
+        propsData: getProps({
+          ...apiData,
+          background: 'unknown',
+        }),
+        localVue,
+        mixins: [mainMixins],
+      })
+
+      jest.spyOn(wrapper.vm, 'MixinPlayVideo').mockImplementation()
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('should correctly dynamic import', async () => {
+      const wrapper = shallowMount(CaseListSlice, {
+        stubs: ['NuxtLink', 'LazyHydrate'],
+        propsData: getProps({
+          ...apiData,
+          background: 'unknown',
+        }),
+        localVue,
+        mixins: [mainMixins],
+      })
+
+      jest.spyOn(wrapper.vm, 'MixinPlayVideo').mockImplementation()
+      expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
     })
   })
 })

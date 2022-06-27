@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import OneBigCards from '@/prismicSlices/pageParts/TechAndToolsNewSlice/variations/OneBigCards'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const props = {
   bigCards: [
@@ -32,7 +34,7 @@ const props = {
         url: 'https://superpupertest.cdn.prismic.io/superpupertest/4588b69e-4518-4ef0-b9eb-a17b793e06d3_gitlab_icon.svg',
       },
       isBig: false,
-      title: 'Gitlab',
+      title: 'Gitlab2',
       description: '',
     },
     {
@@ -46,7 +48,7 @@ const props = {
         url: 'https://superpupertest.cdn.prismic.io/superpupertest/4588b69e-4518-4ef0-b9eb-a17b793e06d3_gitlab_icon.svg',
       },
       isBig: false,
-      title: 'Gitlab',
+      title: 'Gitlab3',
       description: '',
     },
     {
@@ -60,21 +62,21 @@ const props = {
         url: 'https://superpupertest.cdn.prismic.io/superpupertest/4588b69e-4518-4ef0-b9eb-a17b793e06d3_gitlab_icon.svg',
       },
       isBig: false,
-      title: 'Gitlab',
+      title: 'Gitlab4',
       description: '',
     },
   ],
 }
 
-const mocks = {
-  'lazy-load': jest.fn(),
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('FourBigCards component', () => {
   it('should correctly render component', () => {
     const { container } = render(OneBigCards, {
       propsData: props,
-      mocks,
+      localVue,
     })
 
     const bigCards = screen.getAllByTestId('tech-big-card')
@@ -87,7 +89,7 @@ describe('FourBigCards component', () => {
 
   it('should correctly return empty arrays from default props', () => {
     const wrapper = shallowMount(OneBigCards, {
-      mocks,
+      localVue,
     })
 
     expect(wrapper.vm.$options.props.bigCards.default.call()).toEqual([])

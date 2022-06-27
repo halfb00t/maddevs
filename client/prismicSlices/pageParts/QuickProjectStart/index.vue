@@ -136,6 +136,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .project-start-slice {
+  overflow: hidden;
   &--black-theme {
     .project-start-slice__title {
       color: $text-color--black-lighter;

@@ -23,6 +23,27 @@ describe('getBlogTags', () => {
   })
 })
 
+describe('getBlogTag', () => {
+  const response = [{ tags }]
+  const prismic = jest.fn()
+
+  it('success', async () => {
+    jest.clearAllMocks()
+    getBlogPosts.mockImplementation(() => Promise.resolve(response))
+    const data = await api.getBlogTag(prismic, 'tag1')
+    expect(data).toEqual('tag1')
+  })
+
+  it('failure', async () => {
+    jest.clearAllMocks()
+    const error = new Error('Test error')
+    const errorExpected = new TypeError('blogTags.find is not a function')
+    getBlogPosts.mockImplementation(() => Promise.reject(error))
+    const result = await api.getBlogTag(prismic, 'tag1')
+    expect(result).toStrictEqual(errorExpected)
+  })
+})
+
 describe('getPostsByTag', () => {
   const results = [{
     data: {

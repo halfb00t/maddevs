@@ -9,6 +9,7 @@
     >
       <span
         data-testid="test-navigation-link"
+        :class="{ 'header-navigation__item-active': currentNavigationName === name }"
         @click="goTo(name)"
         @mouseenter="setNavigation(name)"
       >
@@ -20,6 +21,7 @@
         :is-active="activeNavigation === name"
         :class="{ 'header-section--active': activeNavigation === name }"
         @changed-page="onChangePage"
+        @name="getName"
       />
     </li>
   </ul>
@@ -48,11 +50,21 @@ export default {
     },
   },
 
+  data() {
+    return {
+      currentNavigationName: null,
+    }
+  },
+
   computed: {
     ...mapGetters(['headerContent']),
   },
 
   methods: {
+    getName(value) {
+      this.currentNavigationName = value
+    },
+
     setNavigation(navigationName) {
       this.$emit('changed-navigation', navigationName)
     },
@@ -104,6 +116,10 @@ export default {
       justify-content: center;
       color: $text-color--white-primary;
       transition: all .15s ease;
+    }
+
+    &-active {
+      color: $text-color--red !important;
     }
   }
 }

@@ -1,15 +1,18 @@
 import { fireEvent, render, screen } from '@testing-library/vue'
+import { createLocalVue } from '@vue/test-utils'
 import CustomerTestimonials from '@/components/About/CustomerTestimonials'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
-const directives = {
-  'lazy-load': () => {},
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 describe('CustomerTestimonials', () => {
   it('should render correctly', () => {
     const { container } = render(CustomerTestimonials, {
       stubs: ['ClientOnly'],
-      directives,
+      localVue,
     })
 
     expect(screen.getByText('Customer Testimonials')).not.toBeNull()
@@ -20,7 +23,7 @@ describe('CustomerTestimonials', () => {
   it('widget show in DOM when page load', () => {
     const { container } = render(CustomerTestimonials, {
       stubs: ['ClientOnly'],
-      directives,
+      localVue,
     })
 
     const widget = container.getElementsByClassName('.clutch-widget')
@@ -29,7 +32,7 @@ describe('CustomerTestimonials', () => {
   it('correctly length of elements in DOM', () => {
     const { container } = render(CustomerTestimonials, {
       stubs: ['ClientOnly'],
-      directives,
+      localVue,
     })
 
     const contentItems = container.querySelectorAll('.customer-testimonials__testimonials-item')
@@ -39,7 +42,7 @@ describe('CustomerTestimonials', () => {
   it('correctly call script after mounting', async () => {
     const { getAllByTestId } = render(CustomerTestimonials, {
       stubs: ['ClientOnly'],
-      directives,
+      localVue,
     })
 
     await fireEvent.scroll(global, { target: { scrollY: 100 } })
@@ -49,7 +52,7 @@ describe('CustomerTestimonials', () => {
   describe('data-aos animation attribute', () => {
     it('should be \'fade-up\' value', () => {
       render(CustomerTestimonials, {
-        directives,
+        localVue,
         props: {
           aos: 'fade-up',
         },
@@ -61,7 +64,7 @@ describe('CustomerTestimonials', () => {
 
     it('should be null value', () => {
       render(CustomerTestimonials, {
-        directives,
+        localVue,
         stubs: ['ClientOnly'],
       })
 

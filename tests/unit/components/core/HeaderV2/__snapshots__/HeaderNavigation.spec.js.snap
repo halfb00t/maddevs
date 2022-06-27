@@ -10,6 +10,7 @@ exports[`HeaderNavigation component should render correctly 1`] = `
       data-testid="navigation__item"
     >
       <span
+        class=""
         data-testid="test-navigation-link"
       >
         
@@ -24,6 +25,7 @@ exports[`HeaderNavigation component should render correctly 1`] = `
       data-testid="navigation__item"
     >
       <span
+        class=""
         data-testid="test-navigation-link"
       >
         

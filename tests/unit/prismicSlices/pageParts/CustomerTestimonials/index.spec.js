@@ -45,7 +45,9 @@ describe('CustomerTestimonials slice', () => {
 
   describe('Dynamic imports CustomerTestimonials', () => {
     it('should correctly import components', async () => {
-      const container = shallowMount(CustomerTestimonials)
+      const props = getProps(apiData)
+      props.slice.variation = 'default-slice'
+      const container = shallowMount(CustomerTestimonials, { propsData: props })
 
       const CustomerTestimonialsSlice = await container.vm.$options.components.CustomerTestimonialsSlice.call()
       const Testimonials = await container.vm.$options.components.Testimonials.call()

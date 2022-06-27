@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExistingToolsGrid component should correctly render component 1`] = `
+<section class="tools-slice">
+  <div data-aos="fade-up" data-testid="tools-slice-container" class="container">
+    <toolscategories-stub categories="[object Object],[object Object],[object Object]"></toolscategories-stub>
+    <toolsgrid-stub tools="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"></toolsgrid-stub>
+  </div>
+</section>
+`;
+
+exports[`ExistingToolsGrid component should correctly render with unknown category 1`] = `
+<section class="tools-slice">
+  <div data-aos="fade-up" data-testid="tools-slice-container" class="container">
+    <toolscategories-stub categories="[object Object],[object Object],[object Object]"></toolscategories-stub>
+    <toolsgrid-stub tools="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"></toolsgrid-stub>
+  </div>
+</section>
+`;

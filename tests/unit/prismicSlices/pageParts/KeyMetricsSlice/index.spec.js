@@ -96,6 +96,7 @@ describe('KeyMetrics slice', () => {
         }),
       })
 
+      expect(wrapper.vm.$options.props.slice.default.call()).toEqual({})
       expect(wrapper.vm.sliceBackground).toBe(backgrounds.white)
     })
 

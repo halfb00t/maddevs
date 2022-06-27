@@ -1,12 +1,13 @@
 /* eslint-disable prefer-promise-reject-errors */
 import 'regenerator-runtime'
 import axios from 'axios'
-import { createLead } from '../LeadsService'
+import { createLead, createEbookLead } from '../LeadsService'
 
 jest.mock('../../config/env', () => ({
   ATLASSIAN_AUTH_TOKEN: '123',
   ATLASSIAN_PROJECT_KEY: 'DELMTEST',
   ATLASSIAN_API_URL: 'https://maddevs.atlassian.net/rest/api/3/issue',
+  ATLASSIAN_EBOOK_PROJECT_KEY: 'EB',
 }))
 
 const response = { data: 'some data' }
@@ -16,6 +17,7 @@ describe('Leads service', () => {
   let req
 
   beforeEach(() => {
+    jest.clearAllMocks()
     req = {
       body: {
         variables: {
@@ -24,6 +26,7 @@ describe('Leads service', () => {
           company: 'company',
           phoneNumber: 'phoneNumber',
           interest: 'Partnership',
+          newsLetter: 'Yes',
           projectDescription: 'Description',
           formLocation: '\'Contact me\' button, header component',
           geoIp: 'Country: -, City: -',
@@ -37,14 +40,41 @@ describe('Leads service', () => {
   })
 
   it('should correctly return data from response', async () => {
+    jest.clearAllMocks()
     const data = await createLead(req.body)
     expect(data).toBe('some data')
   })
 
+  it('should correctly return data from response ebooks', async () => {
+    jest.clearAllMocks()
+    req = {
+      body: {
+        variables: {
+          fullName: 'Fullname',
+          email: 'email@test.te',
+          consent_to_mailing: 'Yes',
+          pageUrl: 'url.com/url/',
+          formLocation: 'Pricing Strategies',
+        },
+      },
+    }
+    const data = await createEbookLead(req.body)
+    expect(data).toBe('some data')
+  })
+
   it('should correctly return error if axios failed', async () => {
+    jest.clearAllMocks()
     axios.post.mockImplementation(() => Promise.reject('error'))
 
     const error = await createLead(req.body)
+    expect(error).toBe('error')
+  })
+
+  it('should correctly return error if axios failed ebooks', async () => {
+    jest.clearAllMocks()
+    axios.post.mockImplementation(() => Promise.reject('error'))
+
+    const error = await createEbookLead(req.body)
     expect(error).toBe('error')
   })
 
@@ -100,6 +130,7 @@ describe('Leads service', () => {
         customfield_10064: 'maddevs.io',
         customfield_10066: 'https://megadocnotprovided.com',
         customfield_10166: { value: 'Partnership' },
+        customfield_10207: { value: 'Yes' },
         customfield_10183: '\'Contact me\' button, header component',
         customfield_10184: 'Country: -, City: -',
         customfield_10185: 'url',

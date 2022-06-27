@@ -15,10 +15,7 @@
         :key="label"
         class="header-menu__item"
       >
-        <div
-
-          v-if="label"
-        >
+        <div v-if="label">
           <NuxtLink
             v-if="!extractMenuLink(link).isExternalLink"
             :to="extractMenuLink(link).url"

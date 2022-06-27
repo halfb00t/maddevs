@@ -78,11 +78,6 @@ export default {
       required: true,
     },
 
-    ebookImage: {
-      type: String,
-      default: '',
-    },
-
     sendPulseTemplateId: {
       type: Number,
       default: 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"

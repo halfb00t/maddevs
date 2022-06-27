@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/vue'
-import { shallowMount } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import CardsWithIcon from '@/prismicSlices/pageParts/CardsWithIcon'
+// eslint-disable-next-line import/order
+import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const props = {
   slice: {
@@ -29,9 +31,9 @@ const mocks = {
   },
 }
 
-const directives = {
-  'lazy-load': jest.fn(),
-}
+const localVue = createLocalVue()
+localVue.directive('lazy-load', lazyLoad)
+jest.mock('nuxt-lazy-load/lib/module')
 
 const stubs = ['PrismicRichText']
 
@@ -42,7 +44,7 @@ describe('CardsWithIcon component', () => {
     wrapper = shallowMount(CardsWithIcon, {
       propsData: props,
       mocks,
-      directives,
+      localVue,
       stubs,
     })
   })
@@ -54,7 +56,7 @@ describe('CardsWithIcon component', () => {
   it('should correctly render component', () => {
     const container = render(CardsWithIcon, {
       propsData: props,
-      directives,
+      localVue,
       mocks,
       stubs,
     })
@@ -80,6 +82,7 @@ describe('htmlSerializer', () => {
     wrapper = shallowMount(CardsWithIcon, {
       stubs,
       propsData: props,
+      localVue,
       mocks: {
         $prismic: {
           asText: text => text[0].text,
