@@ -308,6 +308,7 @@ export default () => ({
     reCaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY,
     analyticsUniversalKey: process.env.NODE_ANALYTICS_UNIVERSAL_KEY,
     analytics4Key: process.env.NODE_GA4_KEY,
+    sendPulseAddressBooksId: process.env.NODE_SENDPULSE_ADDRESSBOOKS_ID,
   },
   router: {
     trailingSlash: true,
