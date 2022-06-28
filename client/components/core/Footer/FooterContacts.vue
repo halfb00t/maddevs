@@ -46,6 +46,7 @@
 import { mapGetters } from 'vuex'
 import FooterSocialNetworks from '@/components/core/Footer/FooterSocialNetworks'
 import { emailClickEvent, phoneClickEvent } from '@/analytics/events'
+import { phoneClickPixelEvent, emailClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'FooterContacts',
@@ -65,8 +66,14 @@ export default {
 
   methods: {
     sendEvent(type) {
-      if (type === 'email') emailClickEvent.send()
-      if (type === 'phone') phoneClickEvent.send()
+      if (type === 'email') {
+        emailClickEvent.send()
+        emailClickPixelEvent.send()
+      }
+      if (type === 'phone') {
+        phoneClickEvent.send()
+        phoneClickPixelEvent.send()
+      }
     },
   },
 }

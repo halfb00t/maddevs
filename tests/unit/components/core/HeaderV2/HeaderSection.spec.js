@@ -13,11 +13,22 @@ const props = {
   postAuthor: {},
 }
 
+const mocks = {
+  $route: {
+    path: '/development-process',
+    handler: jest.fn(),
+  },
+}
+
 jest.mock('~/helpers/generatorUid')
 
 describe('HeaderSection component', () => {
   it('should render correctly', () => {
-    const { container } = render(HeaderSection, { stubs, props })
+    const { container } = render(HeaderSection, {
+      stubs,
+      props,
+      mocks,
+    })
     expect(container).toMatchSnapshot()
   })
 })

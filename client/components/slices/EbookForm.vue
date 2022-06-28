@@ -60,6 +60,7 @@ import createLeadMixin from '@/mixins/createLeadMixin'
 import { ebookSubmitFormEvent } from '@/analytics/events'
 import { addUserType } from '@/analytics/Event'
 import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
+import { ebookSubmitFormPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'EbookForm',
@@ -167,6 +168,7 @@ export default {
 
       addUserType('download_ebook')
       ebookSubmitFormEvent.send()
+      ebookSubmitFormPixelEvent.send()
 
       this.$emit('form-sended', { email: this.email, name: this.name })
       this.successMessage = `
