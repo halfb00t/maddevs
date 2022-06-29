@@ -32,7 +32,8 @@
       </button>
     </div>
     <p class="read-form__caption">
-      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for downloading the ebook and some more useful resources in the future.
+      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for
+      downloading the ebook and some more useful resources in the future.
     </p>
   </div>
 </template>
@@ -43,10 +44,10 @@ import BaseInput from '@/components/core/forms/BaseInput'
 import { sendEmail } from '@/api/email'
 import createLeadMixin from '@/mixins/createLeadMixin'
 import { getLinkWithLifeTime } from '@/api/s3'
-import { ebookSubmitFormEvent } from '@/analytics/events'
 import { ebookSubmitFormPixelEvent } from '@/analytics/pixelEvents'
-import { addUserType } from '@/analytics/Event'
 import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
+import { submitEbookEventToGA4 } from '@/helpers/submitEbook'
+import { sendPulseEbookTemplates } from '@/data/sendPulseTemplates'
 
 export default {
   name: 'ReadForm',
@@ -80,7 +81,7 @@ export default {
 
     sendPulseTemplateId: {
       type: Number,
-      default: 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
+      default: sendPulseEbookTemplates.pricing_strategies, // default value is a template ID of  "Ebooks - Pricing Strategies"
     },
   },
 
@@ -90,6 +91,7 @@ export default {
       email: '',
       type: 'ebook-form',
       isAgree: true,
+      sendPulseEbookTemplates,
     }
   },
 
@@ -131,7 +133,7 @@ export default {
       const requestSender = {
         body: {
           email: {
-            templateId: Number(this.sendPulseTemplateId) || 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
+            templateId: Number(this.sendPulseTemplateId) || sendPulseEbookTemplates.pricing_strategies, // default value is a template ID of  "Ebooks - Pricing Strategies"
             variables: {
               subject: `Your ${this.ebookName} Ebook by Mad Devs`,
               emailTo: this.email,
@@ -159,11 +161,13 @@ export default {
       // from mixin
       this.submitLead(variables)
 
-      addUserType('download_ebook')
-      ebookSubmitFormEvent.send()
+      submitEbookEventToGA4(this.sendPulseTemplateId)
       ebookSubmitFormPixelEvent.send()
 
-      this.$emit('form-sended', { email: this.email, name: this.name })
+      this.$emit('form-sended', {
+        email: this.email,
+        name: this.name,
+      })
       this.$refs.checkbox.reset()
     },
 

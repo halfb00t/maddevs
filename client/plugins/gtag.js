@@ -28,7 +28,10 @@ export default ctx => {
 
       router.afterEach(to => {
         Vue.nextTick(() => {
-          pageview({ page_path: to.fullPath, page_title: document.title })
+          pageview({
+            page_path: to.fullPath,
+            page_title: document.title,
+          })
         })
       })
     }
