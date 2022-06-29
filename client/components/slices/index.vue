@@ -91,6 +91,11 @@
         </LazyHydrate>
       </template>
       <!-- Careers slices end -->
+      <template v-else-if="slice.slice_type === 'subscribe_form_slice'">
+        <LazyHydrate when-visible>
+          <SubscribeFormSlice :slice="slice" />
+        </LazyHydrate>
+      </template>
     </section>
   </section>
 </template>
@@ -102,6 +107,7 @@ import mainMixins from '@/mixins/mainMixins'
 import convertTagsToText from '@/helpers/convertTagsToText'
 import CodeBlockSlice from '@/components/slices/CodeBlockSlice/'
 import TextSlice from '@/components/slices/TextSlice.vue'
+import SubscribeFormSlice from '@/prismicSlices/pageParts/SubscribeFormSlice'
 
 export default {
   name: 'SlicesBlock',
@@ -110,6 +116,7 @@ export default {
     LazyHydrate,
     TextSlice,
     CodeBlockSlice,
+    SubscribeFormSlice,
     SectionIdSlice: () => import('@/components/slices/SectionIdSlice'),
     QuoteSlice: () => import('@/components/slices/QuoteSlice.vue'),
     ImageCaptionSlice: () => import('@/components/slices/ImageCaptionSlice.vue'),

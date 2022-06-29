@@ -4,9 +4,6 @@ export default function checkCurrentRoute(urlPath) {
       if (route?.link?.url.endsWith(urlPath) && urlPath !== '/') {
         return this.$emit('name', this.name)
       }
-      if (urlPath === '/') {
-        return this.$emit('name', null)
-      }
       return null
     })
   })
