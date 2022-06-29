@@ -12,7 +12,8 @@ localVue.use(Vuelidate)
 
 const mocks = {
   $axios: {
-    post: jest.fn().mockImplementation(() => new Promise(res => res())),
+    post: jest.fn()
+      .mockImplementation(() => new Promise(res => res())),
   },
 }
 
@@ -93,7 +94,8 @@ describe('SubscribeForm component', () => {
   })
 
   it('should correctly work showEmailInput method', () => {
-    wrapper.find('.subscribe-form__button').trigger('click')
+    wrapper.find('.subscribe-form__button')
+      .trigger('click')
     expect(wrapper.vm.isActive)
       .toBeTruthy()
   })
@@ -112,10 +114,13 @@ describe('SubscribeForm component', () => {
       email: 'test@gmail.com',
     })
 
-    jest.spyOn(wrapper.vm, 'submitLead').mockImplementation()
+    jest.spyOn(wrapper.vm, 'submitLead')
+      .mockImplementation()
 
-    await wrapper.find('.subscribe-form').trigger('submit.prevent')
-    expect(wrapper.vm.isSubmitted).toBeTruthy()
+    await wrapper.find('.subscribe-form')
+      .trigger('submit.prevent')
+    expect(wrapper.vm.isSubmitted)
+      .toBeTruthy()
   })
 
   it('should correctly work checkEmailLocalStorage', async () => {
@@ -125,10 +130,13 @@ describe('SubscribeForm component', () => {
 
     window.localStorage.setItem('newsLetter_subscriber', JSON.stringify(['test@gmail.com']))
 
-    jest.spyOn(wrapper.vm, 'submitLead').mockImplementation()
+    jest.spyOn(wrapper.vm, 'submitLead')
+      .mockImplementation()
 
-    await wrapper.find('.subscribe-form').trigger('submit.prevent')
-    expect(wrapper.vm.emailExists).toBeTruthy()
+    await wrapper.find('.subscribe-form')
+      .trigger('submit.prevent')
+    expect(wrapper.vm.emailExists)
+      .toBeTruthy()
   })
 
   it('should correctly work checkEmailLocalStorage with created subscriber', async () => {
@@ -138,10 +146,13 @@ describe('SubscribeForm component', () => {
 
     window.localStorage.setItem('newsLetter_subscriber', JSON.stringify(['test@gmail.com']))
 
-    jest.spyOn(wrapper.vm, 'submitLead').mockImplementation()
+    jest.spyOn(wrapper.vm, 'submitLead')
+      .mockImplementation()
 
-    await wrapper.find('.subscribe-form').trigger('submit.prevent')
+    await wrapper.find('.subscribe-form')
+      .trigger('submit.prevent')
     const subscriber = JSON.parse(window.localStorage.getItem('newsLetter_subscriber'))
-    expect(subscriber.includes('test2@gmail.com')).toBeTruthy()
+    expect(subscriber.includes('test2@gmail.com'))
+      .toBeTruthy()
   })
 })
