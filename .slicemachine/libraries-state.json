@@ -6791,6 +6791,58 @@
           }
         }
       },
+      "subscribe_form_slice": {
+        "library": "client/prismicSlices/pageParts",
+        "id": "subscribe_form_slice",
+        "name": "SubscribeFormSlice",
+        "description": "SubscribeFormSlice",
+        "model": {
+          "id": "subscribe_form_slice",
+          "type": "SharedSlice",
+          "name": "SubscribeFormSlice",
+          "description": "SubscribeFormSlice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SubscribeFormSlice",
+              "primary": {
+                "backgroundColor": {
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": "Please choice background color",
+                    "options": [
+                      "white",
+                      "black"
+                    ]
+                  },
+                  "type": "Select"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "subscribe_form_slice",
+            "items": [],
+            "primary": {
+              "backgroundColor": "black"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "team_cards": {
         "library": "client/prismicSlices/pageParts",
         "id": "team_cards",
