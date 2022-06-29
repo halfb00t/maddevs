@@ -46,11 +46,9 @@
             class="subscribe-form__email"
             :class="{
               'subscribe-form__email--invalid': $v.email.$error || emailExists,
-              'subscribe-form__email--disabled': isSubmitted,
               'subscribe-form__email--black-theme': blackTheme,
             }"
             placeholder="your@mail.com*"
-            :disabled="isSubmitted"
             required
             @input="handleInput"
           >
@@ -220,8 +218,9 @@ export default {
     handleInput() {
       clearTimeout(this.timeoutId)
       this.timeoutId = setTimeout(() => {
-        if (this.email === '') this.emailExists = false
-      }, 600)
+        this.emailExists = false
+        this.isSubmitted = false
+      }, 400)
     },
 
     showEmailInput() {
@@ -346,10 +345,6 @@ export default {
       border-color: $border-color--red;
     }
 
-    &--disabled {
-      cursor: not-allowed;
-    }
-
     &--black-theme {
       color: $text-color--white-primary;
       background: $bgcolor--black;
@@ -391,8 +386,7 @@ export default {
     height: 100px;
 
     &--medium {
-      top: unset;
-      bottom: 15px;
+      top: -10px;
     }
   }
 }
