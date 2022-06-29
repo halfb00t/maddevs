@@ -113,11 +113,11 @@
         Your email already exists
       </span>
       <span
-        v-if="isSubmitted"
+        v-if="isSubmitted && !$v.email.$error"
         key="email-success"
         class="subscribe-form__email-success"
       >
-        You are successfully subscribed! Thank you! The newsletter will be sent on the first Tuesday of the month.
+        You are successfully subscribed! Thank you!<br v-if="lineBreakForSuccess"> The newsletter will be sent on the first Tuesday of the month.
       </span>
     </transition-group>
     <svg
@@ -190,6 +190,11 @@ export default {
       type: Number,
       default: 30,
     },
+
+    lineBreakForSuccess: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   data() {
@@ -220,7 +225,7 @@ export default {
       this.timeoutId = setTimeout(() => {
         this.emailExists = false
         this.isSubmitted = false
-      }, 400)
+      }, 600)
     },
 
     showEmailInput() {
