@@ -29,10 +29,16 @@ const props = {
   ],
 }
 
+const mocks = {
+  $route: {
+    path: '/',
+  },
+}
+
 describe('HeaderNavigation component', () => {
   it('should render correctly', () => {
     const { container } = render(HeaderNavigation, {
-      stubs, props, store,
+      stubs, props, store, mocks,
     })
 
     expect(screen.getAllByText('Company')).not.toBeNull()
@@ -40,9 +46,9 @@ describe('HeaderNavigation component', () => {
     expect(container).toMatchSnapshot()
   })
 
-  it('should correctly change class if avtive', () => {
+  it('should correctly change class if aсtive', () => {
     render(HeaderNavigation, {
-      stubs, props: { ...props, activeNavigation: 'services' }, store,
+      stubs, props: { ...props, activeNavigation: 'services' }, store, mocks,
     })
 
     expect(screen.getAllByTestId('navigation__item')[1].className).toBe('header-navigation__item header-navigation__item-services header-navigation__item--is-hover')
