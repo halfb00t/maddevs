@@ -148,7 +148,7 @@ import createLeadMixin from '@/mixins/createLeadMixin'
 export default {
   name: 'SubscribeForm',
 
-  mixins: [createLeadMixin(process.env.sendPulseAddressBooksId, 'Create new newsletter subscriber')],
+  mixins: [createLeadMixin(Number(process.env.sendPulseAddressBooksId), 'Create new newsletter subscriber')],
 
   props: {
     formLocation: {
@@ -238,12 +238,13 @@ export default {
       this.emailExists = this.checkEmailInLocalStorage()
       if (this.emailExists) return
       const variables = {
-        addressBooksId: process.env.sendPulseAddressBooksId,
+        addressBooksId: Number(process.env.sendPulseAddressBooksId),
         newsLetter: 'Yes',
         formLocation: this.formLocation,
         type: this.type,
         email: this.email,
         fromId: this.type,
+        templateId: Number(process.env.sendPulseAddressBooksId),
       }
       await this.submitLead(variables)
       this.isSubmitted = true
