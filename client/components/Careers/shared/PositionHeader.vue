@@ -44,6 +44,7 @@ import PositionTags from '@/components/Careers/shared/PositionTags'
 import UIButton from '@/components/shared/UIButton'
 import scrollToElementMixin from '@/mixins/scrollToElementMixin'
 import { writeUsClickEvent } from '@/analytics/events'
+import { writeUsClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'PositionHeader',
@@ -62,6 +63,7 @@ export default {
   methods: {
     sendWriteUsClickEvent() {
       writeUsClickEvent.send()
+      writeUsClickPixelEvent.send()
       this.scrollToElement('#careers-position-form')
     },
   },

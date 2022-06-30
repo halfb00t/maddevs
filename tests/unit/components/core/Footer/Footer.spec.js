@@ -31,7 +31,7 @@ describe('Footer component', () => {
     jest.clearAllMocks()
   })
   it('should correct render footer', () => {
-    const stubs = ['FooterNavbar', 'FooterContacts', 'FooterStaticNavigations']
+    const stubs = ['FooterNavbar', 'FooterContacts', 'FooterStaticNavigations', 'SubscribeForm']
 
     const { container } = render(Footer, {
       store,
@@ -42,7 +42,7 @@ describe('Footer component', () => {
       .toMatchSnapshot()
   })
   it('should correct change company column', async () => {
-    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink', 'SubscribeForm']
     const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
     const parent = mount(Footer, {
       store,
@@ -57,7 +57,7 @@ describe('Footer component', () => {
       .toHaveBeenCalledTimes(1)
   })
   it('should correct change services column', async () => {
-    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink', 'SubscribeForm']
     const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
     const parent = mount(Footer, {
       store,
@@ -72,7 +72,7 @@ describe('Footer component', () => {
       .toHaveBeenCalledTimes(1)
   })
   it('should correct change industries column', async () => {
-    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink', 'SubscribeForm']
     const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
     const parent = mount(Footer, {
       store,
@@ -87,7 +87,7 @@ describe('Footer component', () => {
       .toHaveBeenCalledTimes(1)
   })
   it('should correct run getActiveIconByColumnName without column name', async () => {
-    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink', 'SubscribeForm']
     const parent = shallowMount(Footer, {
       store,
       stubs,
@@ -97,7 +97,7 @@ describe('Footer component', () => {
       .toEqual('')
   })
   it('should correct run onChangeColumn without columnName', async () => {
-    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink']
+    const stubs = ['FooterContacts', 'FooterStaticNavigations', 'FooterNavbarMenu', 'NuxtLink', 'SubscribeForm']
     const spy = jest.spyOn(Footer.methods, 'onChangeColumn')
     const parent = mount(Footer, {
       store,

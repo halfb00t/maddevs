@@ -149,30 +149,8 @@ import HeaderNavigation from '@/components/core/HeaderV2/HeaderNavigation'
 import HeaderMobile from '@/components/core/HeaderV2/HeaderMobile'
 import { isMobile } from '@/helpers/isMobileDeviceDetect'
 import { contactMeClickEvent, phoneClickEvent } from '@/analytics/events'
-
-// TODO: Need to transfer this constant to @/data/navigation.js
-const navigation = [
-  {
-    name: 'company',
-    label: 'Company',
-  },
-  {
-    name: 'services',
-    label: 'Services',
-  },
-  {
-    name: 'industries',
-    label: 'Industries',
-  },
-  {
-    name: 'clients',
-    label: 'Clients',
-  },
-  {
-    name: 'insights',
-    label: 'Insights',
-  },
-]
+import { contactMeClickPixelEvent } from '@/analytics/pixelEvents'
+import { navigation } from '@/data/navigation'
 
 export default {
   name: 'HeaderV2',
@@ -266,6 +244,8 @@ export default {
       if (!this.$refs?.modalContactMe?.show) return
       this.$refs.modalContactMe.show()
       contactMeClickEvent.send()
+      contactMeClickPixelEvent.send()
+
       this.isActiveMobileMenu = false
     },
 

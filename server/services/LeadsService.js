@@ -1,6 +1,6 @@
 const axios = require('axios')
 const {
-  ATLASSIAN_AUTH_TOKEN, ATLASSIAN_PROJECT_KEY, ATLASSIAN_API_URL, ATLASSIAN_PROJECT_EBOOK_KEY,
+  ATLASSIAN_AUTH_TOKEN, ATLASSIAN_PROJECT_KEY, ATLASSIAN_API_URL, ATLASSIAN_PROJECT_EBOOK_KEY, ATLASSIAN_SUBSCRIBERS_PROJECT_KEY,
 } = require('../config/env')
 
 function generateToken(token) {
@@ -83,12 +83,43 @@ function buildEbookPayload({ variables }) {
   }
 }
 
+function buildSubscribersPayload({ variables }) {
+  return {
+    fields: {
+      summary: variables.email, // issue title
+      issuetype: {
+        id: '10002',
+      },
+      project: {
+        key: ATLASSIAN_SUBSCRIBERS_PROJECT_KEY,
+      },
+      customfield_10056: variables.email,
+      customfield_10207: variables.newsLetter ? { value: variables.newsLetter } : null,
+      customfield_10183: variables.formLocation,
+      customfield_10184: variables.geoIp,
+      customfield_10185: variables.pageUrl,
+      customfield_10186: variables.userBrowser,
+      customfield_10187: variables.userOS,
+      customfield_10188: variables.userPlatform,
+    },
+  }
+}
+
 async function createLead(body, type) {
   try {
     const token = generateToken(ATLASSIAN_AUTH_TOKEN)
-    const payload = (type === 'ebook-form')
-      ? buildEbookPayload(body)
-      : buildPayload(body)
+    let payload
+
+    switch (type) {
+      case 'ebook-form':
+        payload = buildEbookPayload(body)
+        break
+      case 'subscribe-form':
+        payload = buildSubscribersPayload(body)
+        break
+      default:
+        payload = buildPayload(body)
+    }
 
     const response = await axios.post(ATLASSIAN_API_URL, payload, {
       headers: {

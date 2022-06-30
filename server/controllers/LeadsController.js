@@ -1,4 +1,4 @@
-const { sendMailFromVariables } = require('../services/EmailsService')
+const { sendMailFromVariables, addToAddressBookEmail } = require('../services/EmailsService')
 const { createLead } = require('../services/LeadsService')
 const { validate } = require('../utils/validation')
 const {
@@ -38,9 +38,13 @@ async function create(req, res) {
     return res.json({ message: 'Request sent to test email' })
   }
 
-  await sendMailFromVariables(body)
+  if (req.body.variables.fromId === 'subscribe-form') {
+    await addToAddressBookEmail(body)
+  } else {
+    await sendMailFromVariables(body)
+  }
 
-  const response = createLead(body, req?.body?.type)
+  const response = await createLead(body, req?.body?.type)
 
   return res.json(response)
 }

@@ -142,23 +142,28 @@ export default {
 .posts-filter {
   min-width: 150px;
   margin-bottom: 50px;
+
   &__list {
     display: flex;
     flex-flow: row nowrap;
     justify-content: stretch;
   }
+
   &__item {
     &-wrapper {
       width: 100%;
       min-width: 148px;
       margin-right: 20px;
+
       &:last-child {
         margin-right: 0;
       }
     }
+
     input[type="radio"] {
       display: none;
     }
+
     label {
       @include font('Poppins', 18px, 600);
       cursor: pointer;
@@ -173,6 +178,7 @@ export default {
       border-radius: 2px;
       transition: 0.2s;
     }
+
     input[type="radio"]:checked + label {
       border-color: $border-color--red;
       color: $text-color--red;
@@ -196,6 +202,7 @@ export default {
       &-wrapper {
         margin-right: 8px;
       }
+
       label {
         font-size: 16px;
         line-height: 19px;
@@ -242,6 +249,27 @@ export default {
   &__load-more {
     text-align: center;
     margin-top: 75px;
+
+    ::v-deep .load-more-button {
+      display: flex;
+      width: 100%;
+      background-color: #ec1c24;
+      color: #f5f7f9;
+      @include font('Inter', 16px, 600);
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(236, 28, 36, .5);
+      border-radius: 4px;
+      letter-spacing: -.02em;
+      line-height: 24px;
+      box-shadow: none;
+      transition: .4s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f04b51;
+      }
+    }
   }
 
   @media only screen and (max-width: 991px) {
@@ -254,6 +282,7 @@ export default {
     &__list-item {
       width: 100%;
       margin-bottom: 32px;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -261,26 +290,32 @@ export default {
       /deep/ .post-card {
         display: flex;
         align-items: flex-start;
+
         &__image {
           width: 235px;
           flex-shrink: 0;
           margin-right: 16px;
           margin-bottom: 0;
         }
+
         &__title {
           font-size: 15px;
           line-height: 18.6px;
           letter-spacing: -0.03em;
         }
+
         &__paragraph {
           display: none;
         }
+
         &__meta {
           margin: 8px 0;
+
           .post-tag {
             display: none;
           }
         }
+
         &__date {
           font-size: 11px;
           line-height: 16px;
@@ -290,6 +325,7 @@ export default {
 
       /deep/ .post-author {
         align-items: unset;
+
         &__image,
         &__none-image {
           &,
@@ -300,12 +336,14 @@ export default {
             margin-bottom: 0;
           }
         }
+
         &__name,
         &__position {
           font-size: 11px;
           line-height: 16px;
           letter-spacing: -0.02em;
         }
+
         &__name {
           margin-bottom: 0;
         }
@@ -334,6 +372,7 @@ export default {
       &__image {
         width: 145px;
         height: 100%;
+
         img {
           height: 100%;
           object-fit: cover;

@@ -25,7 +25,7 @@ module.exports = {
     '<rootDir>/client/**/*.js',
     '<rootDir>/server/**/*.js',
   ],
-  coveragePathIgnorePatterns: ['<rootDir>/server/sentry', '<rootDir>/server/db', '<rootDir>/server/routes', '<rootDir>/server/index.js', '<rootDir>/client/mixins/createNewLeadMixin.js', '<rootDir>/server/radiator', '<rootDir>/server/utils/devRadiator'],
+  coveragePathIgnorePatterns: ['<rootDir>/server/sentry', '<rootDir>/server/db', '<rootDir>/server/routes', '<rootDir>/server/index.js', '<rootDir>/client/mixins/createNewLeadMixin.js', '<rootDir>/server/radiator', '<rootDir>/server/utils/devRadiator', '<rootDir>/client/analytics/PixelAnalyticsEvent.js'],
   coverageReporters: ['json'],
   setupFiles: ['jest-canvas-mock'],
   modulePathIgnorePatterns: [

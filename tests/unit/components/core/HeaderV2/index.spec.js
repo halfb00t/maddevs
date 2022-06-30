@@ -27,7 +27,7 @@ const store = new Vuex.Store({
   getters,
 })
 
-const stubs = ['ModalContactMe', 'HeaderPost', 'HeaderMobile', 'Crumbs', 'NuxtLink']
+const stubs = ['ModalContactMe', 'HeaderPost', 'HeaderMobile', 'HeaderNavigation', 'Crumbs', 'NuxtLink']
 
 const mocks = {
   $nuxt: {
@@ -91,9 +91,6 @@ describe('Header component', () => {
 
     await fireEvent.scroll(document.documentElement, { target: { scrollTop: SCROLL_POSITION } })
     expect(document.documentElement.scrollTop).toBe(SCROLL_POSITION)
-
-    await fireEvent.click(screen.getAllByTestId('test-navigation-link')[0])
-    expect(document.body.scrollTop).toBe(0)
   })
 
   it('should correct work scroll handler', async () => {

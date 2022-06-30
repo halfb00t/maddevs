@@ -96,6 +96,19 @@ exports[`Footer component should correct render footer 1`] = `
         >
           <footercontacts-stub />
            
+          <div
+            class="footer__content-subscribe-form"
+          >
+            <subscribeform-stub
+              blacktheme="true"
+              formlocation="Footer"
+              formmaxwidth="90%"
+              mediumtitle="true"
+              showbackgroundimage="true"
+              submitbuttonsizeinpercentage="20"
+            />
+          </div>
+           
           <footerstaticnavigations-stub />
         </div>
       </div>
