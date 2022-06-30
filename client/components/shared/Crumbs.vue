@@ -61,10 +61,10 @@ export default {
   computed: {
     crumbs() {
       const { fullPath } = this.$route
-      if (fullPath === '/') return []
-      const pathArray = (fullPath.startsWith('/')
-        ? fullPath.substring(1).split('/')
-        : fullPath.split('/')).filter(url => url)
+      const pathArray = fullPath
+        .replace(/^\//, '')
+        .split('/')
+        .filter(url => url)
 
       const breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
         breadcrumbArray.push({
