@@ -762,6 +762,11 @@
       "default-slice": {
         "primary": {}
       }
+    },
+    "SubscribeFormSlice": {
+      "default-slice": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

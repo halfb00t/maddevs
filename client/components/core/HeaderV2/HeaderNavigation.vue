@@ -60,6 +60,17 @@ export default {
     ...mapGetters(['headerContent']),
   },
 
+  watch: {
+    $route: {
+      handler({ path }) {
+        if (path === '/') this.currentNavigationName = 'company'
+      },
+
+      deep: true,
+      immediate: true,
+    },
+  },
+
   methods: {
     getName(value) {
       this.currentNavigationName = value
@@ -75,7 +86,11 @@ export default {
 
     goTo(name) {
       const path = this.headerContent[name]?.link
-      if (!path) return
+      if (!path) {
+        this.currentNavigationName = null
+        return
+      }
+      this.currentNavigationName = name
       categoryPageClickEvent.send()
       this.$router.push({ path })
     },

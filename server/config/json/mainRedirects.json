@@ -1024,6 +1024,11 @@
   },
   {
     "pageType": "Tags",
+    "from": "/blog/project-management",
+    "to": "https://maddevs.io/tag/project-management/"
+  },
+  {
+    "pageType": "Tags",
     "from": "/insights/blog/tag/ios-development",
     "to": "https://maddevs.io/tag/ios-development/"
   },

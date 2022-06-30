@@ -1,0 +1,29 @@
+{
+  "id": "subscribe_form_slice",
+  "type": "SharedSlice",
+  "name": "SubscribeFormSlice",
+  "description": "SubscribeFormSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "SubscribeFormSlice",
+      "primary": {
+        "backgroundColor": {
+          "config": {
+            "label": "Background Color",
+            "placeholder": "Please choice background color",
+            "options": [
+              "white",
+              "black"
+            ]
+          },
+          "type": "Select"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

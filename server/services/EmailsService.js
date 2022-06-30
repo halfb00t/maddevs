@@ -18,6 +18,14 @@ async function sendpulseSMTPRequest(email) {
   })
 }
 
+async function sendpulseAddEMailsRequest(email, addressBooksId) {
+  return new Promise(resolve => {
+    sendpulse.addEmails(data => {
+      resolve(data)
+    }, addressBooksId, [{ email, variables: {} }])
+  })
+}
+
 async function send(email) {
   await initSendpulse(
     config.SENDPULSE_API_USER_ID,
@@ -84,7 +92,18 @@ async function sendCVResponseMail({ variables }) {
   return send(email)
 }
 
+async function addToAddressBookEmail({ variables }) {
+  await initSendpulse(
+    config.SENDPULSE_API_USER_ID,
+    config.SENDPULSE_API_KEY,
+    config.SENDPULSE_TOKEN_STORAGE,
+  )
+
+  return sendpulseAddEMailsRequest(variables.email, variables.addressBooksId)
+}
+
 module.exports = {
   sendMailFromVariables,
   sendCVResponseMail,
+  addToAddressBookEmail,
 }

@@ -79,6 +79,16 @@
         </div>
         <div class="footer__content footer__content--right-section">
           <FooterContacts />
+          <div class="footer__content-subscribe-form">
+            <SubscribeForm
+              form-location="Footer"
+              :show-button="false"
+              :black-theme="true"
+              :medium-title="true"
+              :submit-button-size-in-percentage="20"
+              form-max-width="90%"
+            />
+          </div>
           <FooterStaticNavigations />
         </div>
       </div>
@@ -92,6 +102,7 @@ import FooterNavbar from '@/components/core/Footer/FooterNavbar'
 import { navigationsSections as mainNavigations } from '@/data/footerNavigation'
 import FooterContacts from '@/components/core/Footer/FooterContacts'
 import FooterStaticNavigations from '@/components/core/Footer/FooterStaticNavigations'
+import SubscribeForm from '@/components/core/forms/SubscribeForm'
 
 export default {
   name: 'Footer',
@@ -99,6 +110,7 @@ export default {
     FooterContacts,
     FooterNavbar,
     FooterStaticNavigations,
+    SubscribeForm,
   },
 
   data() {
@@ -195,6 +207,10 @@ export default {
       @media screen and (min-width: 993px) and (max-width: 1320px) {
         padding-left: 25px;
       }
+    }
+
+    &-subscribe-form {
+      margin-top: 38px;
     }
   }
 

@@ -91,7 +91,7 @@ const refs = { // use for offsetHeight random numbers
   },
 }
 
-const stubs = ['NuxtLink', 'ShareNetwork', 'PrismicRichText', 'PrismicEmbed', 'BlogHeader', 'SlicesBlock', 'PostCard', 'ClientOnly']
+const stubs = ['NuxtLink', 'ShareNetwork', 'PrismicRichText', 'PrismicEmbed', 'BlogHeader', 'SlicesBlock', 'PostCard', 'ClientOnly', 'SubscribeForm']
 
 const WINDOW_SCROLL_TO = jest.fn()
 
