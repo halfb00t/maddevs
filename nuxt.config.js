@@ -400,6 +400,7 @@ export default async () => {
       analyticsUniversalKey: process.env.NODE_ANALYTICS_UNIVERSAL_KEY,
       analytics4Key: process.env.NODE_GA4_KEY,
       pixelFacebookId: process.env.FACEBOOK_CODE,
+      sendPulseAddressBooksId: process.env.NODE_SENDPULSE_ADDRESSBOOKS_ID,
     },
     router: {
       trailingSlash: true,
