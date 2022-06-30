@@ -239,6 +239,18 @@ export default async () => {
           },
         },
       ],
+      ['nuxt-facebook-pixel-module', {
+        /* module options */
+        track: 'ContentView',
+        pixelId: process.env.FACEBOOK_CODE || 'Not defined value',
+        autoPageView: true,
+        disabled: false,
+      }],
+      ['nuxt-linkedin-pixel-module', {
+        /* module options */
+        partnerId: process.env.LINKEDIN_PIXEL_ID || 'Not defined value',
+        disabled: false,
+      }],
     ],
     sentry: {
       Vue,
