@@ -64,26 +64,22 @@ export default {
       const pathArray = fullPath
         .replace(/^\//, '')
         .split('/')
-        .filter(url => url)
-
+        .filter(Boolean)
+      const re = /\/$/
       const breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
-        breadcrumbArray.push({
-          to: pathArray[idx - 1]
-            ? `/${pathArray[idx - 1]}/${path}${path.endsWith('/') ? '' : '/'}`
-            : `/${path}${path.endsWith('/') ? '' : '/'}`,
-          title: (path.charAt(0).toUpperCase() + path.substr(1)).replace(/-/gm, ' '),
-        })
-
+        if (path) {
+          breadcrumbArray.push({
+            to: pathArray[idx - 1]
+              ? `/${pathArray[idx - 1]}/${path}${re.test(path) ? '' : '/'}`
+              : `/${path}${re.test(path) ? '' : '/'}`,
+            title: (`${path.charAt(0).toUpperCase()}${path.substr(1)}`).replace(/-/gm, ' '),
+          })
+        }
         return breadcrumbArray
       }, [])
 
-      for (let i = breadcrumbs.length; i >= 0; i -= 1) {
-        if (!breadcrumbs[i]?.title) {
-          breadcrumbs.splice(i, 1)
-        }
-      }
-
       if (breadcrumbs[0]?.title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
+      if (breadcrumbs[0]?.title === 'Tag') breadcrumbs[0].to = '/blog/'
 
       return breadcrumbs.length >= 2 ? breadcrumbs : []
     },
