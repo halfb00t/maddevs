@@ -40,7 +40,7 @@
           />
         </div>
         <SubscribeForm
-          :form-location="title"
+          form-location="Table of Contents"
         />
       </div>
 

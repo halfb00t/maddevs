@@ -240,7 +240,7 @@ export default {
       const variables = {
         addressBooksId: Number(process.env.sendPulseAddressBooksId),
         newsLetter: 'Yes',
-        formLocation: document.title || this.formLocation,
+        formLocation: `${this.formLocation}: ${document.title}`,
         type: this.type,
         email: this.email,
         fromId: this.type,
