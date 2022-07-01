@@ -38,16 +38,12 @@ const convertToSlug = text => {
   return text.toLowerCase()
     .trim()
     .replace(/[^\w ]+/g, '')
-    .replace(/ +/g, '-')
+    .replace(/\s+/g, '-')
 }
 
-const getRoutePrefix = routePrefix => {
-  if (typeof routePrefix !== 'string' || !routePrefix) return ''
-  let prefix = routePrefix
-  if (prefix.endsWith('/')) prefix = prefix.slice(0, prefix.length - 1)
-  if (prefix.startsWith('/')) prefix = prefix.slice(1)
-  return prefix
-}
+const getRoutePrefix = routePrefix => ((typeof routePrefix !== 'string' || !routePrefix)
+  ? ''
+  : routePrefix.replace(/^\/|\/$/g, ''))
 
 const filterNotAllowedRoutes = routes => {
   const notAllowedRoutesList = getNotAllowedRoutes()
@@ -75,6 +71,15 @@ const getDynamicRoutes = async () => {
     .filter(post => post.type === 'customer_university')
     .map(post => `/customer-university/${post.uid}`)
 
+  const ebooks = prismicPosts
+    .filter(post => (
+      post.type === 'custom_page'
+    && post.data.released === true
+    && (post.uid === 'ebooks'
+    || post.data.route_prefix === 'ebooks'
+    )))
+    .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
+
   const authorPageRoutes = prismicPosts
     .filter(post => post.type === 'author')
     .map(author => `/blog/authors/${author.uid}`)
@@ -87,8 +92,23 @@ const getDynamicRoutes = async () => {
     .map(tag => `/tag/${convertToSlug(tag)}`)
 
   /* Custom pages from production */
+  const excludePages = [
+    'about',
+    'ebooks',
+    'team',
+    'contact-us',
+    'authors',
+    'sustainability-policy',
+  ]
+
   const customPageRoutes = prismicPosts
-    .filter(post => post.type === 'custom_page' && post.data.released === true && post.uid !== 'about')
+    .filter(post => (
+      post.type === 'custom_page'
+      && post.data.released === true
+      && post.data.route_prefix !== 'ebooks'
+      && post.data.route_prefix !== 'blog'
+      && !excludePages.includes(post.uid)
+    ))
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
   return {
@@ -98,23 +118,26 @@ const getDynamicRoutes = async () => {
     careerPageRoutes,
     tagPageRoutes,
     customPageRoutes,
+    ebooks,
   }
 }
 
 export const getStructuredRoutes = async () => {
   const dynamicRoutes = await getDynamicRoutes()
+
   return {
     main: [
       '/',
-      '/services',
-      '/careers',
       '/gdpr',
       '/nda',
       '/privacy',
       '/faq',
-      '/blog',
+      '/team',
+      '/contact-us',
+      '/sustainability-policy',
     ],
     caseStudies: [
+      '/case-studies/',
       '/case-studies/peklo',
       '/case-studies/namba-taxi',
       '/case-studies/citycam',
@@ -131,15 +154,19 @@ export const getStructuredRoutes = async () => {
     insights: [
       '/open-source/',
       ...dynamicRoutes.cuPageRoutes,
+      ...dynamicRoutes.ebooks,
     ],
     blog: [
+      '/blog/',
       ...dynamicRoutes.blogPageRoutes,
       ...dynamicRoutes.tagPageRoutes,
     ],
     authors: [
+      '/blog/authors/',
       ...dynamicRoutes.authorPageRoutes,
     ],
     careers: [
+      '/careers/',
       ...dynamicRoutes.careerPageRoutes,
     ],
     services: [
