@@ -92,18 +92,22 @@ const getDynamicRoutes = async () => {
     .map(tag => `/tag/${convertToSlug(tag)}`)
 
   /* Custom pages from production */
+  const excludePages = [
+    'about',
+    'ebooks',
+    'team',
+    'contact-us',
+    'authors',
+    'sustainability-policy',
+  ]
+
   const customPageRoutes = prismicPosts
     .filter(post => (
       post.type === 'custom_page'
       && post.data.released === true
-      && post.uid !== 'about'
-      && post.uid !== 'ebooks'
       && post.data.route_prefix !== 'ebooks'
-      && post.uid !== 'team'
-      && post.uid !== 'contact-us'
-      && post.uid !== 'authors'
       && post.data.route_prefix !== 'blog'
-      && post.uid !== 'sustainability-policy'
+      && !excludePages.includes(post.uid)
     ))
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
