@@ -67,14 +67,15 @@ export default {
         .filter(Boolean)
       const re = /\/$/
       const breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
-        breadcrumbArray.push({
-          to: pathArray[idx - 1]
-            ? `/${pathArray[idx - 1]}/${path}${re.test(path) ? '' : '/'}`
-            : `/${path}${re.test(path) ? '' : '/'}`,
-          title: (`${path.charAt(0).toUpperCase()}${path.substr(1)}`).replace(/-/gm, ' '),
-        })
-
-        return breadcrumbArray.filter(breadcrumb => breadcrumb.title)
+        if (path) {
+          breadcrumbArray.push({
+            to: pathArray[idx - 1]
+              ? `/${pathArray[idx - 1]}/${path}${re.test(path) ? '' : '/'}`
+              : `/${path}${re.test(path) ? '' : '/'}`,
+            title: (`${path.charAt(0).toUpperCase()}${path.substr(1)}`).replace(/-/gm, ' '),
+          })
+        }
+        return breadcrumbArray
       }, [])
 
       if (breadcrumbs[0]?.title === 'Customer university') breadcrumbs[0].to = '/blog/#customer-university'
