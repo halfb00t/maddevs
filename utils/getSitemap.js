@@ -86,7 +86,7 @@ export const getSitemapRoutes = async () => {
   Object.keys(structuredRoutes).forEach(routeGroup => {
     if (Object.prototype.hasOwnProperty.call(structuredRoutes, routeGroup)) {
       structuredRoutes[routeGroup] = structuredRoutes[routeGroup].map(route => generateRoute(route.trim()))
-        .filter(route => route !== null)
+        .filter(Boolean)
     }
   })
 
