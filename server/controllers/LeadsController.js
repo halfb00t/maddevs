@@ -1,5 +1,5 @@
 const { sendMailFromVariables, addToAddressBookEmail } = require('../services/EmailsService')
-const { createLead, createEbookLead, createSubscriberLead } = require('../services/LeadsService')
+const { createLead } = require('../services/LeadsService')
 const { validate } = require('../utils/validation')
 const {
   getIPByRequest, getLocation, isBlockedIP, isTestIP,
@@ -44,14 +44,7 @@ async function create(req, res) {
     await sendMailFromVariables(body)
   }
 
-  let response
-  if (req?.body?.type === 'ebook-form') {
-    response = await createEbookLead(body)
-  } else if (req.body.type === 'subscribe-form') {
-    response = await createSubscriberLead(body)
-  } else {
-    response = await createLead(body)
-  }
+  const response = await createLead(body, req?.body?.type)
 
   return res.json(response)
 }

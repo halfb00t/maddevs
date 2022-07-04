@@ -86,10 +86,7 @@ export default {
 
     goTo(name) {
       const path = this.headerContent[name]?.link
-      if (!path) {
-        this.currentNavigationName = null
-        return
-      }
+      if (!path) return
       this.currentNavigationName = name
       categoryPageClickEvent.send()
       this.$router.push({ path })

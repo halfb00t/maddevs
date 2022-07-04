@@ -67,20 +67,11 @@ export class PixelAnalyticsEvent {
     this.properties.path = window.location.pathname
   }
 
-  _collectGoogleAnalyticsKeys() {
-    const keys = window.dataLayer
-      ?.filter(dataLayerValue => dataLayerValue[0] === 'config' && dataLayerValue.length >= 3)
-      .map(dataLayerValue => dataLayerValue[1]) || []
-
-    return Array.from(new Set(keys))
-  }
-
-  _log(analyticsKeys) {
+  _log() {
     const msg = [
       '<------- ANALYTICS EVENT SENDING -------->',
       `EVENT: ${this.action}`,
       `PROPS: ${JSON.stringify(this.properties)}`,
-      `ANALYTICS: ${JSON.stringify(analyticsKeys)}`,
     ]
 
     console.log(msg.join('\n'))
@@ -95,20 +86,15 @@ export class PixelAnalyticsEvent {
       this._setPath()
       this._applyUser()
 
-      const analyticsKeys = this._collectGoogleAnalyticsKeys()
-
       if (process.env.NODE_ENV === 'development') {
-        this._log(analyticsKeys)
+        this._log()
       }
 
-      analyticsKeys.forEach(analyticsId => {
-        const properties = { ...this.properties, send_to: analyticsId }
-        try {
-          window.fbq(this.trackType, this.action, properties)
-        } catch (error) {
-          this._handleError(error)
-        }
-      })
+      try {
+        window.fbq(this.trackType, process.env.pixelFacebookId, this.action, this.properties)
+      } catch (error) {
+        this._handleError(error)
+      }
     }
   }
 }
