@@ -37,6 +37,6 @@ export const writeUsClickEvent = new AnalyticsEvent('write_us_click').setCategor
 
 export const submitCvFormEvent = new AnalyticsEvent('submit_cv').setCategory(EVENT_CATEGORIES.SUBMIT)
 
-export const pricingStrategiesEbookSubmitFormEvent = new AnalyticsEvent('submit-pricing-strategies_ebook_form').setCategory(EVENT_CATEGORIES.SUBMIT)
+export const pricingStrategiesEbookSubmitFormEvent = new AnalyticsEvent('submit_pricing_strategies_ebook_form').setCategory(EVENT_CATEGORIES.SUBMIT)
 
-export const approachDPEbookSubmitFormEvent = new AnalyticsEvent('submit-approach_dp_ebook_form').setCategory(EVENT_CATEGORIES.SUBMIT)
+export const approachDPEbookSubmitFormEvent = new AnalyticsEvent('submit_approach_dp_ebook_form').setCategory(EVENT_CATEGORIES.SUBMIT)
