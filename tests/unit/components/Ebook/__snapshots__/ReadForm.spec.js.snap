@@ -29,7 +29,8 @@ exports[`ReadForm component should render correctly with data 1`] = `
     </button>
   </div>
   <p class="read-form__caption">
-    By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for downloading the ebook and some more useful resources in the future.
+    By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for
+    downloading the ebook and some more useful resources in the future.
   </p>
 </div>
 `;

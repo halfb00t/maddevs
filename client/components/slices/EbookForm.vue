@@ -39,7 +39,8 @@
         Send me the ebook
       </button>
       <p class="ebook-form__caption">
-        By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for downloading the ebook and some more useful resources in the future.
+        By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for
+        downloading the ebook and some more useful resources in the future.
       </p>
     </div>
     <SuccessMessage
@@ -57,10 +58,10 @@ import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import { getLinkWithLifeTime } from '@/api/s3'
 import { sendEmail } from '@/api/email'
 import createLeadMixin from '@/mixins/createLeadMixin'
-import { ebookSubmitFormEvent } from '@/analytics/events'
-import { addUserType } from '@/analytics/Event'
 import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 import { ebookSubmitFormPixelEvent } from '@/analytics/pixelEvents'
+import { submitEbookEventToGA4 } from '@/helpers/submitEbook'
+import { sendPulseEbookTemplates } from '@/data/sendPulseTemplates'
 
 export default {
   name: 'EbookForm',
@@ -70,7 +71,7 @@ export default {
     UIFormCheckbox,
   },
 
-  mixins: [createLeadMixin(624246, 'Request a PDF file from the Ebook page')],
+  mixins: [createLeadMixin(624246, 'Request a PDF file from the Ebook page')], // template ID from SendPulse for domestic email 624246
 
   props: {
     ebookPath: {
@@ -85,7 +86,7 @@ export default {
 
     sendPulseTemplateId: {
       type: Number,
-      default: 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
+      default: sendPulseEbookTemplates.pricing_strategies, // default value is a template ID of  "Ebooks - Pricing Strategies"
     },
   },
 
@@ -138,7 +139,7 @@ export default {
       const requestSender = {
         body: {
           email: {
-            templateId: Number(this.sendPulseTemplateId) || 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
+            templateId: Number(this.sendPulseTemplateId) || sendPulseEbookTemplates.pricing_strategies, // default value is a template ID of  "Ebooks - Pricing Strategies"
             variables: {
               subject: `Your ${this.ebookName} Ebook by Mad Devs`,
               emailTo: this.email,
@@ -166,11 +167,14 @@ export default {
       // from mixin
       this.submitLead(variables)
 
-      addUserType('download_ebook')
-      ebookSubmitFormEvent.send()
+      submitEbookEventToGA4(this.sendPulseTemplateId)
       ebookSubmitFormPixelEvent.send()
 
-      this.$emit('form-sended', { email: this.email, name: this.name })
+      this.$emit('form-sended', {
+        email: this.email,
+        name: this.name,
+      })
+
       this.successMessage = `
         The letter with the PDF file was successfully sent to mail ${this.email}.
         <br><br> Please check your email.
@@ -230,6 +234,7 @@ export default {
   ::v-deep .success-message {
     background: $bgcolor--white-primary;
     margin-bottom: 85px;
+
     &__title {
       color: $text-color--black;
     }
