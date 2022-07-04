@@ -30,7 +30,6 @@ export class AnalyticsEvent {
       const userId = existId || uniqid()
 
       localStorage.setItem(LOCAL_STORAGE_KEYS.ID, userId)
-
       this.properties.user_id = userId
       this.properties.user_type = type
     }
@@ -96,7 +95,10 @@ export class AnalyticsEvent {
       }
 
       analyticsKeys.forEach(analyticsId => {
-        const properties = { ...this.properties, send_to: analyticsId }
+        const properties = {
+          ...this.properties,
+          send_to: analyticsId,
+        }
         try {
           window.gtag('event', this.action, properties)
         } catch (error) {

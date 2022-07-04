@@ -36,6 +36,7 @@
 
 <script>
 import HeaderMobileMenu from '@/components/core/HeaderV2/HeaderMobile/HeaderMobileMenu'
+import checkCurrentRoute from '@/helpers/checkCurrentRoute'
 
 export default {
   name: 'HeaderMobileSection',
@@ -80,6 +81,17 @@ export default {
         if (!name) otherMenu.routes = [...otherMenu.routes, ...routes]
       })
       return [...filteredMenus, otherMenu]
+    },
+  },
+
+  watch: {
+    $route: {
+      handler({ path }) {
+        checkCurrentRoute.bind(this)(path)
+      },
+
+      deep: true,
+      immediate: true,
     },
   },
 

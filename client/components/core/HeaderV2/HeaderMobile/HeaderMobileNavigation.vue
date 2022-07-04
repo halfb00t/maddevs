@@ -11,7 +11,10 @@
         class="header-mobile-navigation__item-button"
         @click="setNavigation(name)"
       >
-        <span class="header-mobile-navigation__item-label">{{ label }}</span>
+        <span
+          :class="{ 'header-mobile-navigation__item-active': currentNavigationName === name }"
+          class="header-mobile-navigation__item-label"
+        >{{ label }}</span>
         <span class="header-mobile-navigation__item-icon">↓</span>
       </button>
       <HeaderMobileSection
@@ -21,6 +24,7 @@
         :class="{ 'header-mobile-section--active': activeNavigation === name }"
         @closed-mobile-section="activeNavigation = null"
         @changed-page="onChangePage"
+        @name="getName"
       />
     </li>
   </ul>
@@ -46,6 +50,7 @@ export default {
   data() {
     return {
       activeNavigation: null,
+      currentNavigationName: null,
     }
   },
 
@@ -54,6 +59,10 @@ export default {
   },
 
   methods: {
+    getName(value) {
+      this.currentNavigationName = value
+    },
+
     onChangePage() {
       this.activeNavigation = null
       this.$emit('changed-page')
@@ -110,6 +119,10 @@ export default {
       font-size: 25px;
       color: $text-color--quote-box;
       transform: rotate(-90deg);
+    }
+
+    &-active {
+      color: $text-color--red !important;
     }
   }
 }

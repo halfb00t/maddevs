@@ -1,15 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ReadForm component should render correctly with no data 1`] = `
+exports[`EbookForm slice should render correctly with data 1`] = `
 <div id="ebook-form" class="ebook-form">
   <div class="read-form__fields">
-    <div name="name" show-label="true" required="required" placeholder="John Smith" validation="" label="Full name" value=""></div>
-    <div name="email" show-label="true" placeholder="Email" required="required" validation="" label="Email" value=""></div>
-    <uiformcheckbox-stub id="form"></uiformcheckbox-stub> <button id="sent_ebook_button" class="ebook-form__button ebook-form__button--active">
+    <div class="modal-field-item field-item">
+      <p class="modal-field-name field-name required">
+        Full name
+      </p>
+      <div><input data-testid="test-base-form-name" type="text" placeholder="John Smith" class="modal-entry-field entry-field">
+        <!---->
+      </div>
+      <!---->
+    </div>
+    <div class="modal-field-item field-item">
+      <p class="modal-field-name field-name required">
+        Email
+      </p>
+      <div><input data-testid="test-base-form-email" type="text" placeholder="Email" class="modal-entry-field entry-field">
+        <!---->
+      </div>
+      <!---->
+    </div>
+    <div class="form-checkbox"><label for="sent_ebook_news-form" class="form-checkbox-label required">I agree to receive the monthly newsletter from Mad Devs
+        <input id="sent_ebook_news-form" data-testid="user-agreement-checkbox-input" type="checkbox" name="User agreement" class="form-checkbox-input">
+        <div class="checkmark"></div>
+      </label></div> <button id="" class="ebook-form__button">
       Send me the ebook
     </button>
     <p class="ebook-form__caption">
-      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for downloading the ebook and some more useful resources in the future.
+      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for
+      downloading the ebook and some more useful resources in the future.
     </p>
   </div>
 </div>

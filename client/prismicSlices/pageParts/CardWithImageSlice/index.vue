@@ -88,13 +88,20 @@ export default {
       })
 
       switch (type) {
-        case Elements.heading1: return `<h1>${text}</h1>`
-        case Elements.heading2: return `<h2>${text}</h2>`
-        case Elements.heading3: return `<h3>${text}</h3>`
-        case Elements.heading4: return `<h4>${text}</h4>`
-        case Elements.heading5: return `<h5>${text}</h5>`
-        case Elements.heading6: return `<h6>${text}</h6>`
-        default: return null
+        case Elements.heading1:
+          return `<h1>${text}</h1>`
+        case Elements.heading2:
+          return `<h2>${text}</h2>`
+        case Elements.heading3:
+          return `<h3>${text}</h3>`
+        case Elements.heading4:
+          return `<h4>${text}</h4>`
+        case Elements.heading5:
+          return `<h5>${text}</h5>`
+        case Elements.heading6:
+          return `<h6>${text}</h6>`
+        default:
+          return null
       }
     },
   },
@@ -123,6 +130,7 @@ export default {
       flex-direction: column;
     }
   }
+
   &__text-content {
     padding: 39px 43px;
     width: 53%;
@@ -136,17 +144,20 @@ export default {
       box-sizing: border-box;
     }
   }
+
   &__text-content-full {
     width: 100%;
     @media screen and (max-width: 676px) {
       padding-bottom: 30px;
     }
   }
+
   &__title {
     margin-bottom: 10px;
     width: 135%;
     position: relative;
     z-index: 2;
+
     ::v-deep h1,
     ::v-deep h2,
     ::v-deep h3,
@@ -157,6 +168,7 @@ export default {
       line-height: 130%;
       letter-spacing: -0.4px;
     }
+
     @media screen and (max-width: 980px) {
       width: 170%;
     }
@@ -187,11 +199,13 @@ export default {
       margin-bottom: 14px;
     }
   }
+
   &__description {
     @include font('Inter', 17px, 400);
     line-height: 166%;
     letter-spacing: -0.035em;
   }
+
   &__image-box {
     width: 36%;
     position: relative;
@@ -214,6 +228,7 @@ export default {
       display: flex;
     }
   }
+
   &__image {
     width: auto;
     height: auto;
@@ -222,7 +237,7 @@ export default {
     max-height: 100%;
     @media screen and (max-width: 676px) {
       position: relative;
-      bottom: -10px;
+      bottom: 0;
       height: 100%;
       width: auto;
       margin-left: auto;

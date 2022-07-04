@@ -109,6 +109,7 @@
 import textEllipsis from '@/helpers/textEllipsis'
 import formatDate from '@/helpers/formatDate'
 import { pressCenterClickEvent } from '@/analytics/events'
+import { pressCenterClickPixelEvent } from '@/analytics/pixelEvents'
 
 export default {
   name: 'PressCenter',
@@ -140,6 +141,7 @@ export default {
   methods: {
     sendPressCenterPostEvent() {
       pressCenterClickEvent.send()
+      pressCenterClickPixelEvent.send()
     },
 
     shortDescription(text) {
