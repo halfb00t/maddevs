@@ -428,6 +428,7 @@ export default {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    background: transparent;
     img {
       display: block;
       width: 16px;
