@@ -329,7 +329,6 @@ export default {
     cursor: pointer;
     outline: none;
     box-shadow: none;
-    background-color: transparent;
   }
 
   &-wrapper {
@@ -465,14 +464,18 @@ export default {
     @include font('Inter', 15px, 400);
     line-height: 25px;
     letter-spacing: -0.1px;
-    border: 1px solid $bgcolor--red-extra-dark !important;
-    color: $text-color--red;
+    color: $text-color--chinese-black;
     min-width: 122px;
     border-radius: 4px;
     padding: 7px 20px;
     transition: all 0.3s ease;
+    background-color: $bgcolor--white-primary;
     &:hover {
-      background-color: $bgcolor--red-extra-dark;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: $text-color--chinese-black;
+    }
+    &:active {
+      background-color: $bgcolor--red;
       color: $text-color--white-primary;
     }
     @media screen and (max-width: 1012px) {
