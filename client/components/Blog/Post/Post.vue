@@ -119,7 +119,10 @@
       class="progress-bar"
     />
     <client-only>
-      <ContentLocker v-if="!sawModal" />
+      <ContentLocker
+        v-if="Object.keys(ebook).length !== 0"
+        :ebook="ebook"
+      />
     </client-only>
   </main>
 </template>
@@ -138,6 +141,7 @@ import ContentLocker from '@/components/Blog/Post/ContentLocker'
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 import { Cookies } from '@/helpers/cookies'
 import SubscribeForm from '@/components/core/forms/SubscribeForm'
+import { getEbooks } from '@/api/ebooks'
 
 export default {
   name: 'PostView',
@@ -235,7 +239,8 @@ export default {
       headerContainer: null,
       isFixed: false,
       isBottom: false,
-      sawModal: false,
+      ebooks: [],
+      ebook: {},
     }
   },
 
@@ -285,10 +290,11 @@ export default {
     },
   },
 
-  mounted() {
+  async mounted() {
     window.addEventListener('scroll', this.scrollHandler)
     this.dataLoaded = true
-    this.sawModal = Cookies.checkCookie('sawModal')
+    await this.getEbooksFromPrismic()
+    this.takeRandomEbook()
   },
 
   destroyed() {
@@ -356,6 +362,20 @@ export default {
 
     sendPixelAnalitics(pixelEvent) {
       pixelEvent.send()
+    },
+
+    async getEbooksFromPrismic() {
+      const { results } = await getEbooks(this.$prismic)
+      this.ebooks = results
+        .filter(ebook => ebook.tags.some(tag => this.tags.includes(tag)))
+        .filter(ebook => !Cookies.checkCookie(`sawModal_${ebook.data.body[0].primary.sendPulseTemplateId}`))
+    },
+
+    takeRandomEbook() {
+      if (this.ebooks.length === 0) return
+      const randomIndex = Math.floor(Math.random() * this.ebooks.length)
+      const [ebookInfo] = this.ebooks[randomIndex].data.body
+      this.ebook = ebookInfo
     },
   },
 }

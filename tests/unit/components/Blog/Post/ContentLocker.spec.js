@@ -25,11 +25,16 @@ const store = {
   },
 }
 
+const props = {
+  ebook: {},
+}
+
 describe('ContentLocker component', () => {
   it('should correctly render', () => {
     const { container } = render(ContentLocker, {
       directives,
       store,
+      propsData: props,
     })
 
     expect(container).toMatchSnapshot()
@@ -49,6 +54,7 @@ describe('ContentLocker component', () => {
       },
       directives,
       store,
+      propsData: props,
     })
 
     await fireEvent.scroll(document, { target: { scrollY: 100 } })

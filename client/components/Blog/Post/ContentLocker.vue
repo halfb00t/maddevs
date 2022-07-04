@@ -3,6 +3,7 @@
     id="content-locker"
     ref="modalContentLocker"
     data-testid="content-locker"
+    :ebook="ebook"
   />
 </template>
 
@@ -15,6 +16,13 @@ const TIME_TO_LOCK_CONTENT = 15000 // in ms
 export default {
   name: 'ContentLocker',
   components: { ModalContentLocker },
+
+  props: {
+    ebook: {
+      type: Object,
+      required: true,
+    },
+  },
 
   data() {
     return {
