@@ -253,12 +253,12 @@ export default {
     ::v-deep .load-more-button {
       display: flex;
       width: 100%;
-      background-color: #ec1c24;
-      color: #f5f7f9;
+      border-color: $border-color--red;
+      color: $text-color--red;
+      background-color: transparent;
       @include font('Inter', 16px, 600);
       align-items: center;
       justify-content: center;
-      border: 1px solid rgba(236, 28, 36, .5);
       border-radius: 4px;
       letter-spacing: -.02em;
       line-height: 24px;
@@ -267,7 +267,8 @@ export default {
       cursor: pointer;
 
       &:hover {
-        background-color: #f04b51;
+        background-color: $bgcolor--red;
+        color: $text-color--white-primary;
       }
     }
   }
