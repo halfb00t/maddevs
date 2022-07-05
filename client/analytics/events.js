@@ -40,3 +40,7 @@ export const submitCvFormEvent = new AnalyticsEvent('submit_cv').setCategory(EVE
 export const pricingStrategiesEbookSubmitFormEvent = new AnalyticsEvent('submit_pricing_strategies_ebook_form').setCategory(EVENT_CATEGORIES.SUBMIT)
 
 export const approachDPEbookSubmitFormEvent = new AnalyticsEvent('submit_approach_dp_ebook_form').setCategory(EVENT_CATEGORIES.SUBMIT)
+
+export const clickNewsletterButton = new AnalyticsEvent('click_newsletter_button').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const submitNewsletterSubscription = new AnalyticsEvent('submit_newsletter_subscription').setCategory(EVENT_CATEGORIES.SUBMIT)

@@ -144,6 +144,7 @@
 <script>
 import { required, email } from 'vuelidate/lib/validators'
 import createLeadMixin from '@/mixins/createLeadMixin'
+import { clickNewsletterButton, submitNewsletterSubscription } from '@/analytics/events'
 
 export default {
   name: 'SubscribeForm',
@@ -230,6 +231,7 @@ export default {
 
     showEmailInput() {
       this.isActive = !this.isActive
+      clickNewsletterButton.send()
     },
 
     async submitSubscriber() {
@@ -248,6 +250,7 @@ export default {
       }
       await this.submitLead(variables)
       this.isSubmitted = true
+      submitNewsletterSubscription.send()
       this.$v.$reset()
     },
 
