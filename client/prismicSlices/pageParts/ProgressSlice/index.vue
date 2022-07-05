@@ -16,7 +16,7 @@
       />
       <div
         class="progress-slice__list"
-        :style="cssVars"
+        :style="{'grid-template-columns': `repeat(${steps.length}, 1fr)`}"
       >
         <div
           v-for="(step) in steps"
@@ -90,14 +90,6 @@ export default {
       sliceBackground: setSliceBackground(this.slice?.primary?.background),
       colorTheme: (this.slice.primary.colorTheme === 'black') ? 'black' : 'white',
     }
-  },
-
-  computed: {
-    cssVars() {
-      return {
-        '--frame': this.steps.length,
-      }
-    },
   },
 }
 </script>

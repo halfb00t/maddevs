@@ -388,7 +388,9 @@ export default {
 
   &:hover {
     .anchor_copy-link button {
-      display: block;
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
     }
   }
 }
