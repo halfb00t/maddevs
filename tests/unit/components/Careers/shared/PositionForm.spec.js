@@ -137,6 +137,9 @@ describe('PositionForm component', () => {
       store,
     })
 
+    const mockSuccess = jest.fn()
+    wrapper.vm.$refs.successModal.show = mockSuccess
+
     wrapper.setData({
       name: 'John Johnson',
       email: 'johnhohnson@maddevs.io',
@@ -202,9 +205,6 @@ describe('PositionForm component', () => {
           positionTitle: wrapper.vm.$props.position,
           positionValue: callObject.grade.value,
           linkedinProfile: callObject.linkedin,
-        },
-        variables: {
-          token: '',
         },
         email: {
           templateId: 305491,
