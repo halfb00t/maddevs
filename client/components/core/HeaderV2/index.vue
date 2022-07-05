@@ -490,6 +490,7 @@ export default {
     justify-content: center;
     height: 100%;
     padding: 0 15px;
+    background: transparent;
     @media screen and (max-width: 1012px) {
       display: flex;
     }
