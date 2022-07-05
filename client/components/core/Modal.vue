@@ -106,6 +106,11 @@ export default {
       required: false,
       default: '',
     },
+
+    ebookSendpulseTemplateId: {
+      type: Number,
+      default: 763889, // default value is a template ID of  "Ebooks - Pricing Strategies"
+    },
   },
 
   data() {
@@ -151,11 +156,11 @@ export default {
         this.$emit('on-close')
         this.isSuccess = false
       }, 100)
-      if (this.whereIsCalled === 'ebook') {
+      if (this.whereIsCalled === 'ebook' && this.ebookSendpulseTemplateId) {
         Cookies.setCookie({
-          name: 'sawModal',
+          name: `sawModal_${this.ebookSendpulseTemplateId}`,
           value: true,
-          expires: 1,
+          expires: 30,
         })
       }
     },

@@ -46,10 +46,33 @@ Object.defineProperty(window, 'pageYOffset', {
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
+const success = jest.fn(() => Promise.resolve({
+  results: [
+    {
+      tags: ['Project Management'],
+      data: {
+        body: [
+          {
+            primary: {
+              sendPulseTemplateId: 123,
+            },
+          },
+        ],
+      },
+    },
+  ],
+}))
+
 const mocks = {
   $prismic: {
     asText: () => 'text',
     asHtml: html => `<p>${html}</p>`,
+    api: {
+      query: success,
+    },
+    predicates: {
+      at: jest.fn(),
+    },
   },
   $route: {
     name: 'test-route',

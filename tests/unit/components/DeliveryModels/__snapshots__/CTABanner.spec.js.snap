@@ -15,6 +15,7 @@ exports[`CTABanner component should render correctly 1`] = `
     />
      
     <modal-stub
+      ebooksendpulsetemplateid="763889"
       id="contact-me-modal"
       modalbackground="white"
       modaltitle=""
