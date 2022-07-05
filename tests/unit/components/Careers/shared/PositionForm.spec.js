@@ -74,7 +74,7 @@ const mocks = {
       reset: () => jest.fn(),
     },
     successModal: {
-      show: jest.fn(),
+      show: () => jest.fn(),
     },
   },
   $t: () => 'translated',
@@ -137,6 +137,9 @@ describe('PositionForm component', () => {
       store,
     })
 
+    const mockedMethod = jest.fn()
+    wrapper.vm.$refs.successModal.show = mockedMethod
+
     wrapper.setData({
       name: 'John Johnson',
       email: 'johnhohnson@maddevs.io',
@@ -146,6 +149,7 @@ describe('PositionForm component', () => {
     })
 
     const resetMock = jest.spyOn(wrapper.vm, 'resetForm').mockImplementation()
+
     await wrapper.vm.submitForm()
     expect(resetMock).toHaveBeenCalledTimes(1)
   })

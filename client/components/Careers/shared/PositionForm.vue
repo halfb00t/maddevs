@@ -325,22 +325,14 @@ export default {
 
     async submitForm() {
       if (this.$v.validationGroup.$invalid) return
-      const recaptcha = window.grecaptcha
       const applicantData = await this.buildApplicantData()
-
-      recaptcha.ready(() => {
-        recaptcha.execute(process.env.reCaptchaSiteKey, { action: 'submit' }).then(async token => {
-          applicantData.body.variables.token = token
-          this.sendVacancy(applicantData)
-          this.$refs.successModal.show()
-        })
-      })
+      this.sendVacancy(applicantData)
+      this.$refs.successModal.show()
       addUserType('hr_candidate')
       submitCvFormEvent.send()
       submitCvFormPixelEvent.send()
       this.resetForm()
     },
-
   },
 }
 </script>
