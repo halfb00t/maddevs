@@ -101,6 +101,10 @@ export default {
 
   methods: {
     makeRandomTitle() {
+      if (this.sendPulseTemplateId === 791537) { // to be removed this if
+        this.title = 'Are you wondering what processes and principles Mad Devs follow when developing software?'
+        return
+      }
       const randomIndex = Math.floor(Math.random() * this.titles.length)
       this.title = this.titles[randomIndex]
     },
