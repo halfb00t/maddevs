@@ -142,11 +142,10 @@ export default {
   }
 
   &__list {
-    grid-template-columns: repeat(var(--frame), 1fr);
     display: grid;
     grid-gap: 4%;
     @media screen and (max-width: 767px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
       grid-gap: 10px;
     }
   }
