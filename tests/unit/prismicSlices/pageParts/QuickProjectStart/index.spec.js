@@ -40,6 +40,8 @@ const getProps = params => ({
   },
 })
 
+jest.mock('~/helpers/generatorUid')
+
 describe('QuickProjectStart slice', () => {
   it('should render correctly with data', () => {
     const { container } = render(QuickProjectStart, {
