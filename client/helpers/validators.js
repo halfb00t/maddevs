@@ -9,7 +9,7 @@ export const fileSizeValidation = value => {
   if (!value) {
     return true
   }
-  return value.size < 5000000 // max 5md
+  return value.size < 5000000 // max 5mb
 }
 
 export const fileExt = value => {

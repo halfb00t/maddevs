@@ -2,6 +2,8 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModalGetYourTrustedItPartner from '@/components/core/modals/ModalGetYourTrustedItPartner'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalGetYourTrustedItPartner component', () => {
   let wrapper
   let mockShow

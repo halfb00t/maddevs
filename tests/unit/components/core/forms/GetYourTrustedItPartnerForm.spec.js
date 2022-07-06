@@ -19,6 +19,8 @@ mocks.$v.needAssistanceWith = {
   $touch: jest.fn(),
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('GetYourTrustedItPartnerForm component', () => {
   it('should render correctly', () => {
     const { container } = render(GetYourTrustedItPartnerForm, {

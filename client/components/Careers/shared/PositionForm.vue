@@ -245,26 +245,12 @@ export default {
   methods: {
     ...mapActions(['sendVacancy']),
 
-    toBase64(file) {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader()
-        reader.readAsDataURL(file)
-        reader.onload = () => resolve(reader.result)
-        reader.onerror = error => reject(error)
-      })
-    },
-
     async buildApplicantData() {
       const splitedName = this.name.split(' ')
-      const base64File = await this.toBase64(this.cvFile)
       const { userBrowser, userOS, userPlatform } = parseUserAgentForLeads()
 
       return {
         body: {
-          variables: {
-            token: '',
-          },
-
           huntflow: {
             vacancyId: this.huntflowVacancyId,
             firstName: splitedName[0],
@@ -298,7 +284,7 @@ export default {
             },
 
             attachment: {
-              base64: base64File.replace(/^data:(.*,)?/, ''),
+              base64: null,
               name: this.cvFile.name,
             },
           },

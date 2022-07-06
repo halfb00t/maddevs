@@ -19,6 +19,8 @@ mocks.$v.questionsOnItConsulting = {
   $touch: jest.fn(),
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('GetExpertAdviceForm component', () => {
   it('should render correctly', () => {
     const { container } = render(GetExpertAdviceForm, {

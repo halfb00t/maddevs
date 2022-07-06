@@ -137,8 +137,8 @@ describe('PositionForm component', () => {
       store,
     })
 
-    const mockedMethod = jest.fn()
-    wrapper.vm.$refs.successModal.show = mockedMethod
+    const mockSuccess = jest.fn()
+    wrapper.vm.$refs.successModal.show = mockSuccess
 
     wrapper.setData({
       name: 'John Johnson',
@@ -207,9 +207,6 @@ describe('PositionForm component', () => {
           positionValue: callObject.grade.value,
           linkedinProfile: callObject.linkedin,
         },
-        variables: {
-          token: '',
-        },
         email: {
           templateId: 305491,
           variables: {
@@ -229,7 +226,7 @@ describe('PositionForm component', () => {
           },
 
           attachment: {
-            base64: 'base64file',
+            base64: null,
             name: callObject.cvFile.name,
           },
         },

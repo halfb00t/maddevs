@@ -2,6 +2,8 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModalOrderProjectFromUs from '@/components/core/modals/ModalOrderProjectFromUs'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalOrderProjectFromUs component', () => {
   let wrapper
   let mockShow

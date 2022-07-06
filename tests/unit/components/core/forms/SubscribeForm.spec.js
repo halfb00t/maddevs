@@ -4,6 +4,7 @@ import { createLocalVue, mount } from '@vue/test-utils'
 import Vuelidate from 'vuelidate'
 import SubscribeForm from '@/components/core/forms/SubscribeForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
+import { clickNewsletterButton, submitNewsletterSubscription } from '@/analytics/events'
 
 jest.mock('~/helpers/generatorUid')
 
@@ -20,6 +21,15 @@ const mocks = {
 jest.mock('~/api/email', () => ({
   sendEmail: jest.fn(),
 }))
+
+jest.mock('~/helpers/generatorUid')
+const clickNewsletterButtonMock = jest.spyOn(clickNewsletterButton, 'send')
+  .mockImplementation(() => {
+  })
+
+const submitNewsletterSubscriptionMock = jest.spyOn(submitNewsletterSubscription, 'send')
+  .mockImplementation(() => {
+  })
 
 const storageMock = () => {
   const storage = {}
@@ -96,6 +106,9 @@ describe('SubscribeForm component', () => {
   it('should correctly work showEmailInput method', () => {
     wrapper.find('.subscribe-form__button')
       .trigger('click')
+
+    expect(clickNewsletterButtonMock)
+      .toHaveBeenCalledTimes(1)
     expect(wrapper.vm.isActive)
       .toBeTruthy()
   })
@@ -119,6 +132,9 @@ describe('SubscribeForm component', () => {
 
     await wrapper.find('.subscribe-form')
       .trigger('submit.prevent')
+
+    expect(submitNewsletterSubscriptionMock)
+      .toHaveBeenCalledTimes(1)
     expect(wrapper.vm.isSubmitted)
       .toBeTruthy()
   })

@@ -1,3 +1,4 @@
+const { readFile } = require('fs').promises
 const { sendMailFromVariables, sendCVResponseMail } = require('../services/EmailsService')
 const { sendApplication } = require('../services/HuntflowService')
 const { validate } = require('../utils/validation')
@@ -16,6 +17,13 @@ const buildRequest = (req, key) => ({
 })
 
 async function index(req, res) {
+  let base64 = await readFile(req.file.path, { encoding: 'base64' })
+  base64 = base64.replace(/^data:(.*,)?/, '')
+  const payload = JSON.parse(req.body.payload)
+
+  payload.email.attachment.base64 = base64
+  req.body.payload = JSON.stringify(payload)
+
   const parsedReq = parseRequest(req)
   const ipFromRequest = getIPByRequest(req)
   const { ip, city, country } = await getLocation(ipFromRequest)
@@ -42,7 +50,6 @@ async function index(req, res) {
 
   const emailValidation = validate(emailReq, 'email')
   if (!emailValidation.isValid) return res.status(emailValidation.error.status).json(emailValidation.error)
-
   const huntflowResponse = await sendApplication(huntflowReq)
   const hrEmailResponse = await sendMailFromVariables(emailReq.body)
   const userEmailResponse = await sendCVResponseMail(emailReq.body)

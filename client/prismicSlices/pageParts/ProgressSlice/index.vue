@@ -16,7 +16,7 @@
       />
       <div
         class="progress-slice__list"
-        :style="cssVars"
+        :style="{'grid-template-columns': `repeat(${steps.length}, 1fr)`}"
       >
         <div
           v-for="(step) in steps"
@@ -91,14 +91,6 @@ export default {
       colorTheme: (this.slice.primary.colorTheme === 'black') ? 'black' : 'white',
     }
   },
-
-  computed: {
-    cssVars() {
-      return {
-        '--frame': this.steps.length,
-      }
-    },
-  },
 }
 </script>
 
@@ -150,11 +142,10 @@ export default {
   }
 
   &__list {
-    grid-template-columns: repeat(var(--frame), 1fr);
     display: grid;
     grid-gap: 4%;
     @media screen and (max-width: 767px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
       grid-gap: 10px;
     }
   }

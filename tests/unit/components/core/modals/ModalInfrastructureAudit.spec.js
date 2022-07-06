@@ -2,6 +2,8 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModalInfrastructureAudit from '@/components/core/modals/ModalInfrastructureAudit'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalInfrastructureAudit component', () => {
   let wrapper
   let mockShow

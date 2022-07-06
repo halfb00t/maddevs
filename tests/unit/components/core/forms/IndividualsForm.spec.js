@@ -16,6 +16,8 @@ const store = {
 }
 const mocks = formBaseProps
 
+jest.mock('~/helpers/generatorUid')
+
 describe('IndividualsForm component', () => {
   it('should render correctly', () => {
     const { container } = render(IndividualsForm, {
