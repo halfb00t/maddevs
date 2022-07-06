@@ -3,6 +3,7 @@ import { createLocalVue, mount } from '@vue/test-utils'
 import Vuelidate from 'vuelidate'
 import EbookForm from '@/components/slices/EbookForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
+import { submitNewsletterSubscription } from '@/analytics/events'
 
 jest.mock('~/helpers/generatorUid')
 
@@ -32,6 +33,9 @@ jest.mock('~/api/s3', () => ({
 jest.mock('~/helpers/submitEbook', () => ({
   submitEbookEventToGA4: jest.fn(),
 }))
+
+const submitNewsletterSubscriptionMock = jest.spyOn(submitNewsletterSubscription, 'send')
+  .mockImplementation(() => {})
 
 describe('EbookForm slice', () => {
   let wrapper = null
@@ -78,6 +82,7 @@ describe('EbookForm slice', () => {
     await wrapper.find('.ebook-form__button')
       .trigger('click')
     wrapper.vm.reset()
+    expect(submitNewsletterSubscriptionMock).toHaveBeenCalledTimes(1)
     expect(wrapper.vm.name)
       .toBe('')
     expect(wrapper.vm.$refs.checkbox.reset)

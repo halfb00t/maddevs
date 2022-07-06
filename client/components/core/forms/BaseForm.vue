@@ -99,6 +99,7 @@ import UIFormCheckboxes from '@/components/shared/UIFormCheckboxes'
 import UIButton from '@/components/shared/UIButton'
 import phoneHandlerMixin from '@/mixins/phoneHandlerMixin'
 import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
+import { submitNewsletterSubscription } from '@/analytics/events'
 
 export default {
   name: 'BaseForm',
@@ -346,6 +347,7 @@ export default {
       if (this.usePhone) formData.phoneNumber = this.phoneNumber
       if (this.useDescription) formData.description = this.description
       if (this.useCompanyField) formData.company = this.company
+      if (this.isAgree) submitNewsletterSubscription.send()
 
       this.$emit('submit', formData)
     },

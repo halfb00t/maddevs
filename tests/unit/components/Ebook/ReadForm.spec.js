@@ -3,6 +3,7 @@ import { createLocalVue, mount } from '@vue/test-utils'
 import Vuelidate from 'vuelidate'
 import ReadForm from '@/components/Ebook/ReadForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
+import { submitNewsletterSubscription } from '@/analytics/events'
 
 jest.mock('~/helpers/generatorUid')
 
@@ -27,6 +28,9 @@ jest.mock('~/api/email', () => ({
 jest.mock('~/api/s3', () => ({
   getLinkWithLifeTime: jest.fn().mockImplementation(() => Promise.resolve({ data: { pdfUrl: 'test' } })),
 }))
+
+const submitNewsletterSubscriptionMock = jest.spyOn(submitNewsletterSubscription, 'send')
+  .mockImplementation(() => {})
 
 describe('ReadForm component', () => {
   let wrapper = null
@@ -73,6 +77,7 @@ describe('ReadForm component', () => {
     jest.spyOn(wrapper.vm.$refs.checkbox, 'reset').mockImplementation()
 
     await wrapper.find('.read-form__button').trigger('click')
+    expect(submitNewsletterSubscriptionMock).toHaveBeenCalledTimes(1)
     wrapper.vm.reset()
     expect(wrapper.vm.name).toBe('')
     expect(wrapper.vm.$refs.checkbox.reset).toHaveBeenCalledTimes(1)

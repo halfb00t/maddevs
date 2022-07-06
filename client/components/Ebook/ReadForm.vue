@@ -48,6 +48,7 @@ import { ebookSubmitFormPixelEvent } from '@/analytics/pixelEvents'
 import UIFormCheckbox from '@/components/shared/UIFormCheckbox'
 import { submitEbookEventToGA4 } from '@/helpers/submitEbook'
 import { sendPulseEbookTemplates } from '@/data/sendPulseTemplates'
+import { submitNewsletterSubscription } from '@/analytics/events'
 
 export default {
   name: 'ReadForm',
@@ -163,6 +164,7 @@ export default {
 
       submitEbookEventToGA4(this.sendPulseTemplateId)
       ebookSubmitFormPixelEvent.send()
+      if (this.isAgree) submitNewsletterSubscription.send()
 
       this.$emit('form-sended', {
         email: this.email,
