@@ -1690,7 +1690,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/code-review-best-practices",
-    "to": "https://maddevs.io/blog/code-review-best-practices/"
+    "to": "https://maddevs.io/customer-university/code-review-best-practices/"
   },
   {
     "pageType": "Posts",
@@ -1735,7 +1735,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/customer-onboarding-process",
-    "to": "https://maddevs.io/blog/customer-onboarding-process/"
+    "to": "https://maddevs.io/customer-university/customer-onboarding-process/"
   },
   {
     "pageType": "Posts",
@@ -1830,7 +1830,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/effective-virtual-meetings",
-    "to": "https://maddevs.io/blog/effective-virtual-meetings/"
+    "to": "https://maddevs.io/customer-university/effective-virtual-meetings/"
   },
   {
     "pageType": "Posts",
@@ -2350,7 +2350,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/internal-and-external-software-audits",
-    "to": "https://maddevs.io/blog/internal-and-external-software-audits/"
+    "to": "https://maddevs.io/customer-university/internal-and-external-software-audits/"
   },
   {
     "pageType": "Posts",
@@ -2530,7 +2530,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/managing-developers-remote-team-communication",
-    "to": "https://maddevs.io/blog/managing-developers-remote-team-communication/"
+    "to": "https://maddevs.io/customer-university/managing-developers-remote-team-communication/"
   },
   {
     "pageType": "Posts",
@@ -2660,7 +2660,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/project-management-using-jira",
-    "to": "https://maddevs.io/blog/project-management-using-jira/"
+    "to": "https://maddevs.io/customer-university/project-management-using-jira/"
   },
   {
     "pageType": "Posts",
@@ -2670,7 +2670,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/qa-software-testing-life-cycle",
-    "to": "https://maddevs.io/blog/qa-software-testing-life-cycle/"
+    "to": "https://maddevs.io/customer-university/qa-software-testing-life-cycle/"
   },
   {
     "pageType": "Posts",
@@ -2710,7 +2710,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/retrospective-meeting",
-    "to": "https://maddevs.io/blog/retrospective-meeting/"
+    "to": "https://maddevs.io/customer-university/retrospective-meeting/"
   },
   {
     "pageType": "Posts",
@@ -2780,7 +2780,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/software-development-metrics",
-    "to": "https://maddevs.io/blog/software-development-metrics/"
+    "to": "https://maddevs.io/customer-university/software-development-metrics/"
   },
   {
     "pageType": "Posts",
@@ -2810,7 +2810,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/software-prototyping-and-mockups",
-    "to": "https://maddevs.io/blog/software-prototyping-and-mockups/"
+    "to": "https://maddevs.io/customer-university/software-prototyping-and-mockups/"
   },
   {
     "pageType": "Posts",
@@ -2965,7 +2965,7 @@
   {
     "pageType": "Posts",
     "from": "/insights/blog/time-tracking-in-software-development",
-    "to": "https://maddevs.io/blog/time-tracking-in-software-development/"
+    "to": "https://maddevs.io/customer-university/time-tracking-in-software-development/"
   },
   {
     "pageType": "Posts",
@@ -3986,5 +3986,140 @@
     "pageType": "Непонятные ссылки",
     "from": "/tel:+442039848555",
     "to": "https://maddevs.io/contact-us/"
+  },
+  {
+    "pageType": "Careers",
+    "from": "/ru/careers/android-developer-swp",
+    "to": "https://maddevs.io/careers/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/insights/blog/growth-opportunities",
+    "to": "https://maddevs.io/customer-university/growth-opportunities/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/insights/blog/product-based-vs-service-based-companies",
+    "to": "https://maddevs.io/customer-university/product-based-vs-service-based-companies/"
+  },
+  {
+    "pageType": "Posts-CU - из старых редиректов",
+    "from": "/insights/blog/product-based-vs-service-based-companies",
+    "to": "https://maddevs.io/customer-university/product-based-vs-service-based-companies/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/ux-ui/design-page",
+    "to": "https://maddevs.io/design/ui-ux-design/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/ui-ux/intuitive-web-designs",
+    "to": "https://maddevs.io/design/web-design/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/about-with-achievements",
+    "to": "https://maddevs.io/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/about/team/",
+    "to": "https://maddevs.io/team/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/ru/about/careers/tech-lead",
+    "to": "https://maddevs.io/careers/tech-lead/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/time-tracking-in-software-development",
+    "to": "https://maddevs.io/customer-university/time-tracking-in-software-development/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/effective-virtual-meetings",
+    "to": "https://maddevs.io/customer-university/effective-virtual-meetings/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/software-engineering-project-report",
+    "to": "https://maddevs.io/customer-university/software-engineering-project-report/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/retrospective-meeting",
+    "to": "https://maddevs.io/customer-university/retrospective-meeting/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/software-development-metrics",
+    "to": "https://maddevs.io/customer-university/software-development-metrics/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/project-management-using-jira",
+    "to": "https://maddevs.io/customer-university/project-management-using-jira/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/importance-of-documentation",
+    "to": "https://maddevs.io/customer-university/importance-of-documentation/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/optimization-of-software-delivery-pipeline",
+    "to": "https://maddevs.io/customer-university/optimization-of-software-delivery-pipeline/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/qa-software-testing-life-cycle",
+    "to": "https://maddevs.io/customer-university/qa-software-testing-life-cycle/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/technical-debt-management",
+    "to": "https://maddevs.io/customer-university/technical-debt-management/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/code-review-best-practices",
+    "to": "https://maddevs.io/customer-university/code-review-best-practices/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/internal-and-external-software-audits",
+    "to": "https://maddevs.io/customer-university/internal-and-external-software-audits/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/developers-onboarding-offboarding-processes",
+    "to": "https://maddevs.io/customer-university/developers-onboarding-offboarding-processes/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/customer-onboarding-process",
+    "to": "https://maddevs.io/customer-university/customer-onboarding-process/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/managing-developers-remote-team-communication",
+    "to": "https://maddevs.io/customer-university/managing-developers-remote-team-communication/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/growth-ways-for-developers",
+    "to": "https://maddevs.io/customer-university/growth-ways-for-developers/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/software-prototyping-and-mockups",
+    "to": "https://maddevs.io/customer-university/software-prototyping-and-mockups/"
+  },
+  {
+    "pageType": "Pages",
+    "from": "/blog/project-management/",
+    "to": "https://maddevs.io/blog/"
   }
 ]
