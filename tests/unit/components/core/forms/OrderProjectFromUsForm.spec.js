@@ -22,6 +22,8 @@ const mocks = {
   },
 }
 
+jest.mock('~/helpers/generatorUid')
+
 describe('OrderProjectFromUsForm component', () => {
   it('should render correctly', () => {
     const { container } = render(OrderProjectFromUsForm, {
