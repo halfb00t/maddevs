@@ -19,7 +19,7 @@ exports[`ProgressSlice slice should render correctly with data 1`] = `
        
       <div
         class="progress-slice__list"
-        style="--frame: 2;"
+        style="grid-template-columns: repeat(2, 1fr);"
       >
         <div
           class="progress"

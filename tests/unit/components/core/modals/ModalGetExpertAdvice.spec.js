@@ -2,6 +2,8 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModalGetExpertAdvice from '@/components/core/modals/ModalGetExpertAdvice'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalGetExpertAdvice component', () => {
   let wrapper
   let mockShow

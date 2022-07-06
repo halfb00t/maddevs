@@ -84,6 +84,13 @@ describe('ModalContentLocker component', () => {
         },
       },
       localVue,
+      propsData: {
+        ebook: {
+          primary: {
+            sendPulseTemplateId: 123,
+          },
+        },
+      },
     })
     wrapper.vm.handleSendedForm({ email: 'test@email.com' })
     expect(wrapper).toMatchSnapshot()

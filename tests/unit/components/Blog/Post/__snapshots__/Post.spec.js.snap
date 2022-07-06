@@ -115,14 +115,7 @@ exports[`Post component should render correctly with default props 1`] = `
     />
      
     <clientonly-stub>
-      <transition-stub
-        class="modal-content-locker"
-        data-testid="content-locker"
-        mode="out-in"
-        name="main-fade"
-      >
-        <!---->
-      </transition-stub>
+      <!---->
     </clientonly-stub>
   </main>
 </div>

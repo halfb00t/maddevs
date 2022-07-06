@@ -2,6 +2,8 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModalIndividuals from '@/components/core/modals/ModalIndividuals'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalIndividuals component', () => {
   let wrapper
   let mockShow

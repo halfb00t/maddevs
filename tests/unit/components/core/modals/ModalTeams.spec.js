@@ -2,6 +2,8 @@ import { render } from '@testing-library/vue'
 import { shallowMount } from '@vue/test-utils'
 import ModalTeams from '@/components/core/modals/ModalTeams'
 
+jest.mock('~/helpers/generatorUid')
+
 describe('ModalTeams component', () => {
   let wrapper
   let mockShow

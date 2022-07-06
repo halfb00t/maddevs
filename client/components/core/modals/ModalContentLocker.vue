@@ -4,9 +4,10 @@
     modal-background="black"
     where-is-called="ebook"
     :class="{ 'modal-content-locker': !formSended }"
+    :ebook-sendpulse-template-id="sendPulseTemplateId || 763889"
   >
     <div
-      v-if="!formSended"
+      v-if="!formSended && ebookTitle"
       class="modal-content"
       data-testid="content-locker-modal-content"
     >
@@ -15,20 +16,21 @@
         class="modal-content__img"
         width="110"
         height="155"
-        data-src="@/assets/img/Ebook/book.svg"
-        alt="Pricing strategies"
+        :data-src="ebookImage.url"
+        :alt="ebookImage.alt || 'Ebook Image'"
       >
       <h2 class="modal-content__title">
         {{ title }}
       </h2>
       <h2 class="modal-content__description">
-        Get your copy of “Custom Software Development: Pricing Strategies”
+        Get your copy of “{{ $prismic.asText(ebookTitle) }}”
       </h2>
       <ReadForm
         id="modal-content-locker"
         :fullsize-button="true"
-        ebook-path="pdf/custom-software-development-pricing-strategies-ebook-new.pdf"
-        ebook-name="Pricing Strategies"
+        :ebook-path="ebookPath"
+        :ebook-name="ebookName"
+        :send-pulse-template-id="sendPulseTemplateId"
         @form-sended="handleSendedForm"
       />
     </div>
@@ -66,6 +68,11 @@ export default {
       type: String,
       default: '',
     },
+
+    ebook: {
+      type: Object,
+      default: () => ({}),
+    },
   },
 
   data() {
@@ -79,6 +86,12 @@ export default {
         'Are an aspiring IT company searching for useful information?',
         'Are interested in pricing information for custom software development?',
       ],
+
+      ebookTitle: this.ebook?.primary?.title,
+      ebookImage: this.ebook?.primary?.ebookImage,
+      ebookPath: this.ebook?.primary?.ebookPath,
+      ebookName: this.ebook?.primary?.ebookName,
+      sendPulseTemplateId: this.ebook?.primary?.sendPulseTemplateId,
     }
   },
 
@@ -88,6 +101,10 @@ export default {
 
   methods: {
     makeRandomTitle() {
+      if (this.sendPulseTemplateId === 791537) { // to be removed this if
+        this.title = 'Are you wondering what processes and principles Mad Devs follow when developing software?'
+        return
+      }
       const randomIndex = Math.floor(Math.random() * this.titles.length)
       this.title = this.titles[randomIndex]
     },
@@ -99,7 +116,7 @@ export default {
       `
       this.formSended = true
       Cookies.setCookie({
-        name: 'sawModal',
+        name: `sawModal_${this.ebook.primary.sendPulseTemplateId}`,
         value: true,
         expires: 30,
       })
