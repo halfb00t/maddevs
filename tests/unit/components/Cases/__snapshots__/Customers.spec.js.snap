@@ -29,12 +29,12 @@ exports[`Customers component should render correctly 1`] = `
       
         </p>
       </div>
+       
+      <uicustomerslist-stub
+        customers="clutch,godee,veeqo,guardrails,triggermesh,sjmc,ab,itc,bandpay,mythril,topica,lido,bile-bile,allo-doc,terbine-logo,megauni,iotsploit,kickoico,tengri,frame-a,kuprik,lendsmart,thea,eatigo,iothub,loadify,admitad,teacherly,progressay,nambafood,seso,peklo,nambataxi,edumall,terbine,silk-road,vms,ase,logo-internews,logo-logo"
+        iconbackground="transparent"
+      />
     </div>
-     
-    <uicustomerslist-stub
-      customers="clutch,godee,veeqo,guardrails,triggermesh,sjmc,ab,itc,bandpay,mythril,topica,lido,bile-bile,allo-doc,terbine-logo,megauni,iotsploit,kickoico,tengri,frame-a,kuprik,lendsmart,thea,eatigo,iothub,loadify,admitad,teacherly,progressay,nambafood,seso,peklo,nambataxi,edumall,terbine,silk-road,vms,ase,logo-internews,logo-logo"
-      iconbackground="transparent"
-    />
   </section>
 </div>
 `;

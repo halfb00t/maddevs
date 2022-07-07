@@ -6,7 +6,7 @@ exports[`UICustomersList backgroundColor should be transparent 1`] = `
     class="customers"
   >
     <div
-      class="container"
+      class="wrapper"
     >
       <div
         class="customers__list"
@@ -33,7 +33,7 @@ exports[`UICustomersList should correctly render without data 1`] = `
     class="customers"
   >
     <div
-      class="container"
+      class="wrapper"
     >
       <div
         class="customers__list"
@@ -49,7 +49,7 @@ exports[`UICustomersList should render correctly 1`] = `
     class="customers"
   >
     <div
-      class="container"
+      class="wrapper"
     >
       <div
         class="customers__list"
