@@ -1,6 +1,6 @@
 <template>
   <section class="customers">
-    <div class="container">
+    <div class="wrapper">
       <div class="customers__list">
         <div
           v-for="customer in customers"
@@ -59,7 +59,7 @@ export default {
 
 <style lang="scss" scoped>
 .customers {
-  .container {
+  .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
