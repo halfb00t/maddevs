@@ -14,12 +14,12 @@
           are a few of the companies we work with.
         </p>
       </div>
-      <UICustomersList
-        :light="light"
-        :customers="customers"
-        :icon-background="iconBackground"
-      />
     </div>
+    <UICustomersList
+      :light="light"
+      :customers="customers"
+      :icon-background="iconBackground"
+    />
   </section>
 </template>
 
