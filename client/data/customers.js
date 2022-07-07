@@ -2,6 +2,7 @@ export const customers = [
   'clutch',
   'godee',
   'veeqo',
+  'logo-internews',
   'guardrails',
   'triggermesh',
   'sjmc',
@@ -37,7 +38,6 @@ export const customers = [
   'silk-road',
   'vms',
   'ase',
-  'logo-internews',
   'logo-logo',
 ]
 
@@ -50,7 +50,7 @@ export const careersCustomers = [
   'guardrails',
   'teacherly',
   'nambataxi',
-  'alfa-bank',
+  'ab',
   'edumall',
   'triggermesh',
   'bile-bile',
