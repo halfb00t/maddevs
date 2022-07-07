@@ -20,7 +20,7 @@ exports[`WeCreateProjectsFor slice should render correctly with data 1`] = `
           
         We create 
           <br />
-           IT projects for:
+           IT projects for
       
         </h2>
          
@@ -127,7 +127,7 @@ exports[`WeCreateProjectsFor slice should render correctly without data 1`] = `
           
         We create 
           <br />
-           IT projects for:
+           IT projects for
       
         </h2>
          
