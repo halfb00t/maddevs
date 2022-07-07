@@ -10,7 +10,7 @@
         data-testid="create-projects-slice__content"
       >
         <h2 class="create-projects-slice__title">
-          We create <br> IT projects for:
+          We create <br> IT projects for
         </h2>
 
         <div

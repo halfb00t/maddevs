@@ -2,54 +2,70 @@
 
 exports[`UICustomersList backgroundColor should be transparent 1`] = `
 <div>
-  <div
-    class="customers__customers-list"
+  <section
+    class="customers"
   >
     <div
-      class="icon-wrapper"
-      data-testid="icon-wrapper"
-      style="background-color: transparent;"
+      class="wrapper"
     >
-      <img
-        alt="topica"
-        class="icon-wrapper__icon"
-        data-src="[object Object]"
-        data-testid="customer-icon"
-        height="64"
-        width="143"
-      />
+      <div
+        class="customers__list"
+      >
+        <div
+          class="customers__logo"
+          data-testid="icon-wrapper"
+          style="background-color: transparent;"
+        >
+          <img
+            alt="topica"
+            data-src="[object Object]"
+          />
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
 exports[`UICustomersList should correctly render without data 1`] = `
 <div>
-  <div
-    class="customers__customers-list"
-  />
+  <section
+    class="customers"
+  >
+    <div
+      class="wrapper"
+    >
+      <div
+        class="customers__list"
+      />
+    </div>
+  </section>
 </div>
 `;
 
 exports[`UICustomersList should render correctly 1`] = `
 <div>
-  <div
-    class="customers__customers-list"
+  <section
+    class="customers"
   >
     <div
-      class="icon-wrapper"
-      data-testid="icon-wrapper"
-      style="background-color: rgb(255, 255, 255);"
+      class="wrapper"
     >
-      <img
-        alt="topica"
-        class="icon-wrapper__icon"
-        data-src="[object Object]"
-        data-testid="customer-icon"
-        height="64"
-        width="143"
-      />
+      <div
+        class="customers__list"
+      >
+        <div
+          class="customers__logo"
+          data-testid="icon-wrapper"
+          style="background-color: rgb(255, 255, 255);"
+        >
+          <img
+            alt="topica"
+            data-src="[object Object]"
+          />
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </div>
 `;

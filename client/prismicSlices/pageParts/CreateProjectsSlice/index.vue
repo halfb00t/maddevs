@@ -9,7 +9,7 @@
         :data-aos="animation"
       >
         <h2 class="create-projects-slice__title">
-          We create <br> IT projects for:
+          We create <br> IT projects for
         </h2>
         <div class="create-projects-slice__projects projects-list">
           <div
