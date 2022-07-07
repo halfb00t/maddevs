@@ -74,7 +74,7 @@ const mocks = {
       reset: () => jest.fn(),
     },
     successModal: {
-      show: jest.fn(),
+      show: () => jest.fn(),
     },
   },
   $t: () => 'translated',
@@ -149,6 +149,7 @@ describe('PositionForm component', () => {
     })
 
     const resetMock = jest.spyOn(wrapper.vm, 'resetForm').mockImplementation()
+
     await wrapper.vm.submitForm()
     expect(resetMock).toHaveBeenCalledTimes(1)
   })
@@ -225,7 +226,7 @@ describe('PositionForm component', () => {
           },
 
           attachment: {
-            base64: 'base64file',
+            base64: null,
             name: callObject.cvFile.name,
           },
         },
