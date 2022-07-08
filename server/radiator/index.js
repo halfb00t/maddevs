@@ -69,18 +69,18 @@ function runRadiator() {
     ],
   }
   const slackConfig = {
-    slackWebhookUrl: process.env.RADIATOR_SLACK_WEBHOOK_URL,
-    slackChannelId: process.env.RADIATOR_SLACK_CHANNEL_ID,
+    slackWebhookUrl: process.env.SLACK_WEBHOOK_URL,
+    slackChannelId: process.env.SLACK_CHANNEL_ID,
   }
   const redditConfig = {
-    redditClientId: process.env.RADIATOR_REDDIT_CLIENT_ID,
-    redditClientSecret: process.env.RADIATOR_REDDIT_CLIENT_SECRET,
-    redditUsername: process.env.RADIATOR_REDDIT_USERNAME,
-    redditPassword: process.env.RADIATOR_REDDIT_PASSWORD,
+    redditClientId: process.env.REDDIT_CLIENT_ID,
+    redditClientSecret: process.env.REDDIT_CLIENT_SECRET,
+    redditUsername: process.env.REDDIT_USER_NAME,
+    redditPassword: process.env.REDDIT_PASSWORD,
   }
   const dailyScheduleConfig = {
     period: 'day',
-    time: 10,
+    time: 0,
   }
   const firestoreId = process.env.RADIATOR_FIRESTORE_ID
   const quora = {
