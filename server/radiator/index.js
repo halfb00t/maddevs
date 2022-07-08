@@ -69,8 +69,8 @@ function runRadiator() {
     ],
   }
   const slackConfig = {
-    slackWebhookUrl: 'https://hooks.slack.com/services/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',
-    slackChannelId: 'radiator-test-channel',
+    slackWebhookUrl: process.env.RADIATOR_SLACK_WEBHOOK_URL,
+    slackChannelId: process.env.RADIATOR_SLACK_CHANNEL_ID,
   }
   const redditConfig = {
     redditClientId: 'hlsnZNHey3z3n4E30Bf0hw',
