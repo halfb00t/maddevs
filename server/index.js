@@ -66,7 +66,7 @@ function bootstrap() {
     radiator.scheduleSendMetrics()
   }
 
-  // run radiator
+  // run mad radiator
   runRadiator()
 
   return app

@@ -1,19 +1,40 @@
-require('dotenv').config()
+import {
+  MAD_RADIATOR_AUTH_TYPE,
+  MAD_RADIATOR_AUTH_URI,
+  MAD_RADIATOR_CLIENT_CERT_URL,
+  MAD_RADIATOR_CLIENT_EMAIL,
+  MAD_RADIATOR_CLIENT_ID,
+  MAD_RADIATOR_GOOGLEAPIS_KEY,
+  MAD_RADIATOR_PRIVATE_KEY,
+  MAD_RADIATOR_PRIVATE_KEY_ID,
+  MAD_RADIATOR_PROJECT_ID,
+  MAD_RADIATOR_PROVIDER_CERT_URL,
+  MAD_RADIATOR_TOKEN_URI,
+  MAD_RADIATOR_FIRESTORE_ID,
+  MAD_RADIATOR_SLACK_WEBHOOK_URL,
+  MAD_RADIATOR_SLACK_CHANNEL_ID,
+  MAD_RADIATOR_REDDIT_CLIENT_ID,
+  MAD_RADIATOR_REDDIT_CLIENT_SECRET,
+  MAD_RADIATOR_REDDIT_USER_NAME,
+  MAD_RADIATOR_REDDIT_PASSWORD,
+  MAD_RADIATOR_QUORA_USER_ID,
+} from '../config'
+
 const { Radiator } = require('@maddevs/mad-radiator')
 
 function runRadiator() {
   const baseConfig = {
-    authType: process.env.RADIATOR_AUTH_TYPE,
-    analyticsProjectId: process.env.RADIATOR_PROJECT_ID,
-    analyticsPrivateKeyId: process.env.RADIATOR_PRIVATE_KEY_ID,
-    analyticsPrivateKey: process.env.RADIATOR_PRIVATE_KEY,
-    analyticsClientEmail: process.env.RADIATOR_CLIENT_EMAIL,
-    analyticsClientId: process.env.RADIATOR_CLIENT_ID,
-    analyticsAuthUrl: process.env.RADIATOR_AUTH_URI,
-    analyticsTokenUri: process.env.RADIATOR_TOKEN_URI,
-    analyticsProviderCertUrl: process.env.RADIATOR_PROVIDER_CERT_URL,
-    analyticsClientCertUrl: process.env.RADIATOR_CLIENT_CERT_URL,
-    googleapisKey: process.env.RADIATOR_GOOGLEAPIS_KEY,
+    authType: MAD_RADIATOR_AUTH_TYPE,
+    analyticsProjectId: MAD_RADIATOR_PROJECT_ID,
+    analyticsPrivateKeyId: MAD_RADIATOR_PRIVATE_KEY_ID,
+    analyticsPrivateKey: MAD_RADIATOR_PRIVATE_KEY,
+    analyticsClientEmail: MAD_RADIATOR_CLIENT_EMAIL,
+    analyticsClientId: MAD_RADIATOR_CLIENT_ID,
+    analyticsAuthUrl: MAD_RADIATOR_AUTH_URI,
+    analyticsTokenUri: MAD_RADIATOR_TOKEN_URI,
+    analyticsProviderCertUrl: MAD_RADIATOR_PROVIDER_CERT_URL,
+    analyticsClientCertUrl: MAD_RADIATOR_CLIENT_CERT_URL,
+    googleapisKey: MAD_RADIATOR_GOOGLEAPIS_KEY,
     websiteUrl: 'https://maddevs.io',
     retryAttempts: 3,
   }
@@ -69,22 +90,22 @@ function runRadiator() {
     ],
   }
   const slackConfig = {
-    slackWebhookUrl: process.env.SLACK_WEBHOOK_URL,
-    slackChannelId: process.env.SLACK_CHANNEL_ID,
+    slackWebhookUrl: MAD_RADIATOR_SLACK_WEBHOOK_URL,
+    slackChannelId: MAD_RADIATOR_SLACK_CHANNEL_ID,
   }
   const redditConfig = {
-    redditClientId: process.env.REDDIT_CLIENT_ID,
-    redditClientSecret: process.env.REDDIT_CLIENT_SECRET,
-    redditUsername: process.env.REDDIT_USER_NAME,
-    redditPassword: process.env.REDDIT_PASSWORD,
+    redditClientId: MAD_RADIATOR_REDDIT_CLIENT_ID,
+    redditClientSecret: MAD_RADIATOR_REDDIT_CLIENT_SECRET,
+    redditUsername: MAD_RADIATOR_REDDIT_USER_NAME,
+    redditPassword: MAD_RADIATOR_REDDIT_PASSWORD,
   }
   const dailyScheduleConfig = {
     period: 'day',
-    time: 0,
+    time: 2,
   }
-  const firestoreId = process.env.RADIATOR_FIRESTORE_ID
+  const firestoreId = MAD_RADIATOR_FIRESTORE_ID
   const quora = {
-    quoraUserID: process.env.RADIATOR_QUORA_USER_ID,
+    quoraUserID: MAD_RADIATOR_QUORA_USER_ID,
   }
   const lighthouseConfig = {
     urlTestRegexp: '(\\/blog\\/)|(\\/customer-university\\/)|(\\/ru\\/)[a-zA-Z0-9]{1}',
