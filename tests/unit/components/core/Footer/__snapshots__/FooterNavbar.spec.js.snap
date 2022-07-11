@@ -3,7 +3,7 @@
 exports[`FooterNavbar component should correct render footer navbar 1`] = `
 <div>
   <div
-    class="footer-navbar"
+    class="footer-navbar test-deploy-3"
   >
     <ul
       class="footer-main-navigation footer-nav-column footer-nav-column--company"
