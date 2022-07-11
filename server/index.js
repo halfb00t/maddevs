@@ -64,10 +64,10 @@ function bootstrap() {
     console.log('Run Dev Radiator schedulers')
     radiator.scheduleCollectMetrics()
     radiator.scheduleSendMetrics()
-  }
 
-  // run mad radiator
-  runRadiator()
+    // Run the mad radiator in the production mode
+    runRadiator()
+  }
 
   return app
 }

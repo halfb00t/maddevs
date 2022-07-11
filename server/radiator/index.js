@@ -18,6 +18,7 @@ import {
   MAD_RADIATOR_REDDIT_USER_NAME,
   MAD_RADIATOR_REDDIT_PASSWORD,
   MAD_RADIATOR_QUORA_USER_ID,
+  MAD_RADIATOR_DAILY_DISPATCH_TIME,
 } from '../config'
 
 const { Radiator } = require('@maddevs/mad-radiator')
@@ -101,7 +102,7 @@ function runRadiator() {
   }
   const dailyScheduleConfig = {
     period: 'day',
-    time: 2,
+    time: MAD_RADIATOR_DAILY_DISPATCH_TIME || 9,
   }
   const firestoreId = MAD_RADIATOR_FIRESTORE_ID
   const quora = {
