@@ -30,7 +30,7 @@ export const navigationsSections = [
 export const staticsPDFLinks = [
   {
     title: 'About Us.pdf',
-    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/about-mad-devs-upd.pdf',
+    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/about-mad-devs.pdf',
   },
   {
     title: 'Work process.pdf',
@@ -42,7 +42,7 @@ export const staticsPDFLinks = [
   },
   {
     title: 'Brand Book.pdf',
-    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-brand-book-upd.pdf',
+    link: 'https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-brand-book.pdf',
   },
 ]
 
