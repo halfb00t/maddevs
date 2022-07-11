@@ -77,7 +77,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.noname-selector-for-deploy-three{
+  display: none;
+}
 .footer {
   &-navbar {
     display: flex;
