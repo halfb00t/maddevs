@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-contacts">
+  <div class="footer-contacts test-deploy-1">
     <div class="footer-contacts__head-content">
       <div class="footer-contacts__contact-item">
         <p class="footer-contacts__contact-title">
@@ -80,9 +80,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.noname-selector-for-deploy-one{
-  display: none;
-}
 .footer-contacts {
   &__head-content {
     margin-bottom: 40px;
