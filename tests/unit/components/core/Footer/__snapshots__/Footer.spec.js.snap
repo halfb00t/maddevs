@@ -3,7 +3,7 @@
 exports[`Footer component should correct render footer 1`] = `
 <div>
   <footer
-    class="footer "
+    class="footer  test-deploy-2"
   >
     <div
       class="container"
