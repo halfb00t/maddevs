@@ -163,6 +163,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.noname-selector-for-deploy-two{
+  display: none;
+}
 .footer {
   position: relative;
   padding-top: 65px;
