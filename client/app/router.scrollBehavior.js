@@ -45,12 +45,13 @@ export default async (to, from, savedPosition) => {
     const hashEl = await findEl(to.hash)
     if (hashEl && hashEl.offsetTop > 0) {
       if ('scrollBehavior' in document.documentElement.style) {
-        return window.scrollTo({
-          top: hashEl.offsetTop,
+        return hashEl.scrollIntoView({
           behavior: 'smooth',
         })
       }
-      return window.scrollTo(0, hashEl.offsetTop)
+      return hashEl.scrollIntoView({
+        behavior: 'smooth',
+      })
     }
   }
 
