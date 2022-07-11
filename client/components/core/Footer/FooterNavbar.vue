@@ -1,6 +1,6 @@
 <template>
   <div
-    class="footer-navbar"
+    class="footer-navbar test-deploy-3"
     @mouseleave="setActiveColumn($event)"
   >
     <ul
@@ -77,9 +77,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.noname-selector-for-deploy-three{
-  display: none;
-}
 .footer {
   &-navbar {
     display: flex;
