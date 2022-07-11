@@ -78,7 +78,7 @@
           />
         </div>
         <div class="footer__content footer__content--right-section">
-          <FooterContacts/>
+          <FooterContacts />
           <div class="footer__content-subscribe-form">
             <SubscribeForm
               form-location="Footer"
@@ -89,7 +89,7 @@
               form-max-width="90%"
             />
           </div>
-          <FooterStaticNavigations/>
+          <FooterStaticNavigations />
         </div>
       </div>
     </div>
