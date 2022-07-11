@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-contacts test-deploy-1">
+  <div class="footer-contacts">
     <div class="footer-contacts__head-content">
       <div class="footer-contacts__contact-item">
         <p class="footer-contacts__contact-title">

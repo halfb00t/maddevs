@@ -1,5 +1,5 @@
 <template>
-  <footer :class="`footer ${pageName} test-deploy-2`">
+  <footer :class="`footer ${pageName}`">
     <div class="container">
       <div
         id="footer__top-line"
