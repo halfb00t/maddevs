@@ -10,6 +10,15 @@ exports[`FooterNavbarColumn Should correct render footer static navigation in fo
     >
       <a
         class="footer-subnavbar__nav-list-item footer-subnavbar__nav-list-item--pdf"
+        href="https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/about-mad-devs.pdf"
+        target="_blank"
+      >
+        
+      About Us.pdf
+    
+      </a>
+      <a
+        class="footer-subnavbar__nav-list-item footer-subnavbar__nav-list-item--pdf"
         href="https://maddevsio.s3.eu-west-1.amazonaws.com/pdf/mad-devs-work-process.pdf"
         target="_blank"
       >
