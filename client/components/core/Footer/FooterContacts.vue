@@ -80,7 +80,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.noname-selector-for-deploy-one{
+  display: none;
+}
 .footer-contacts {
   &__head-content {
     margin-bottom: 40px;
