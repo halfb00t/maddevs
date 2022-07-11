@@ -1,11 +1,13 @@
 <template>
-  <div class="container contacts-slice__content">
+  <div
+    id="contact-form"
+    class="container contacts-slice__content"
+  >
     <div class="contacts-slice__content-info">
       <ContactFields class="contacts-slice__content-fields" />
       <Socials class="contacts-slice__content-socials" />
     </div>
     <OrderForm
-      id="contact-form"
       class="contacts-slice__content-form"
     />
   </div>
@@ -32,6 +34,7 @@ export default {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  scroll-margin-top: 120px;
   @media screen and (max-width: 1160px) {
     padding: 0 42px;
   }
