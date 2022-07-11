@@ -1,5 +1,5 @@
 <template>
-  <footer :class="`footer ${pageName}`">
+  <footer :class="`footer ${pageName} test-deploy-2`">
     <div class="container">
       <div
         id="footer__top-line"
@@ -78,7 +78,7 @@
           />
         </div>
         <div class="footer__content footer__content--right-section">
-          <FooterContacts />
+          <FooterContacts/>
           <div class="footer__content-subscribe-form">
             <SubscribeForm
               form-location="Footer"
@@ -89,7 +89,7 @@
               form-max-width="90%"
             />
           </div>
-          <FooterStaticNavigations />
+          <FooterStaticNavigations/>
         </div>
       </div>
     </div>
@@ -163,9 +163,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.noname-selector-for-deploy-two{
-  display: none;
-}
 .footer {
   position: relative;
   padding-top: 65px;
