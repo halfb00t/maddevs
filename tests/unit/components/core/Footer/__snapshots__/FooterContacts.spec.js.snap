@@ -3,7 +3,7 @@
 exports[`FooterNavbarColumn should correct render footer contacts 1`] = `
 <div>
   <div
-    class="footer-contacts"
+    class="footer-contacts test-deploy-1"
   >
     <div
       class="footer-contacts__head-content"
