@@ -29,18 +29,22 @@ const store = {
     allPosts: () => allPosts,
     allAuthors: () => [{}],
     postsLoaded: () => true,
-    postsCategory: jest.fn(),
+    activeTags: () => ['Editors pick'],
     recentPosts: jest.fn(),
     featuredCUPost: jest.fn(),
     customerContent: () => {},
     postsPage: () => 2,
     homePageContent: () => homeContent.default,
+    tags: () => ['Editors pick', 'Hardware'],
   },
   actions: {
     getHomePageContent: jest.fn(),
     getBlogPosts: () => jest.fn(),
     getCustomerUniversityContent: jest.fn(),
     getBlogAuthors: jest.fn(),
+    setDefaultArrayWithTags: jest.fn(),
+    clearAllData: jest.fn(),
+    getTagsFromPrismic: jest.fn(),
   },
 }
 

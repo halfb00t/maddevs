@@ -34,9 +34,7 @@ describe('Blog module state', () => {
     expect(state.posts).toEqual([])
     expect(state.CUPosts).toEqual([])
     expect(state.featuredPost).toBeNull()
-    expect(state.postsCategory).toBeNull()
     expect(state.postsLoaded).toBeFalsy()
-    expect(state.postsPage).toBe(1)
     expect(state.showContentLocker).toBeTruthy()
   })
 })
@@ -46,12 +44,6 @@ describe('Blog module mutations', () => {
     const state = defaultState()
 
     const data = {
-      categories: [
-        {
-          category_title: [],
-          tags: [1, 2, 3],
-        },
-      ],
       headline: [{ text: 'Headline' }],
       description: [{ text: 'Description' }],
       recent_posts_banner: 'Banner',
@@ -68,12 +60,6 @@ describe('Blog module mutations', () => {
       homePageContent: {
         banner: 'Banner',
         bannerLink: 'link',
-        categories: [
-          {
-            tags: [''],
-            title: '',
-          },
-        ],
         description: 'Description',
         headline: 'Headline',
         image: 'url',
@@ -138,19 +124,6 @@ describe('Blog module mutations', () => {
     })
   })
 
-  it('should correct mutate state after calling SET_POSTS_CATEGORY mutation', () => {
-    const state = defaultState()
-
-    const category = 'category'
-
-    mutations.SET_POSTS_CATEGORY(state, category)
-
-    expect(state).toEqual({
-      ...defaultState(),
-      postsCategory: category,
-    })
-  })
-
   it('should correct mutate state after calling SET_POSTS_LOADED mutation', () => {
     const state = defaultState()
 
@@ -161,19 +134,6 @@ describe('Blog module mutations', () => {
     expect(state).toEqual({
       ...defaultState(),
       postsLoaded: value,
-    })
-  })
-
-  it('should correct mutate state after calling SET_POSTS_PAGE mutation', () => {
-    const state = defaultState()
-
-    const page = 3
-
-    mutations.SET_POSTS_PAGE(state, page)
-
-    expect(state).toEqual({
-      ...defaultState(),
-      postsPage: page,
     })
   })
 
@@ -210,7 +170,6 @@ describe('Blog module actions', () => {
     await actions.getHomePageContent(store)
 
     expect(store.commit).toHaveBeenCalledWith('SET_BLOG_PAGE_CONTENT', 'test')
-    expect(store.commit).toHaveBeenCalledWith('SET_POSTS_CATEGORY', '123')
   })
 
   it('should correctly called getHomePageContent with postsCategory', async () => {
@@ -234,29 +193,6 @@ describe('Blog module actions', () => {
     await actions.getBlogPosts(store)
     expect(store.commit).toHaveBeenCalledWith('SET_POSTS', 'test')
     expect(store.commit).toHaveBeenCalledWith('SET_POSTS_LOADED', true)
-  })
-
-  it('should correctly called getMorePosts', () => {
-    const store = {
-      commit: jest.fn(),
-      state: defaultState(),
-    }
-
-    actions.getMorePosts(store)
-    expect(store.commit).toHaveBeenCalledWith('SET_POSTS_PAGE', 2)
-  })
-
-  it('should correctly called changePostsCategory', () => {
-    const store = {
-      commit: jest.fn(),
-      state: defaultState(),
-    }
-
-    const filter = 'category'
-
-    actions.changePostsCategory(store, filter)
-    expect(store.commit).toHaveBeenCalledWith('SET_POSTS_PAGE', 1)
-    expect(store.commit).toHaveBeenCalledWith('SET_POSTS_CATEGORY', filter)
   })
 
   it('should correctly called getCustomerUniversityContent', async () => {
@@ -322,41 +258,8 @@ describe('Blog module getters', () => {
     expect(getters.featuredPost(state)).toBe(state.featuredPost)
   })
 
-  it('postsCategory', () => {
-    expect(getters.postsCategory(state)).toBe(state.postsCategory)
-  })
-
   it('postsLoaded', () => {
     expect(getters.postsLoaded(state)).toBe(state.postsLoaded)
-  })
-
-  it('postsPage', () => {
-    expect(getters.postsPage(state)).toBe(state.postsPage)
-  })
-
-  it('filteredPosts empty', () => {
-    state.postsCategory = null
-    expect(getters.filteredPosts(state)).toEqual([])
-  })
-
-  it('filteredPosts empty 2', () => {
-    state.postsCategory = 'category'
-    state.homePageContent.categories = null
-    expect(getters.filteredPosts(state)).toEqual([])
-  })
-
-  it('filteredPosts correct', () => {
-    state.postsCategory = 'category'
-    state.homePageContent.categories = [{
-      title: 'category',
-      tags: ['tag'],
-    }]
-    state.posts = [
-      {
-        tags: ['tag'],
-      },
-    ]
-    expect(getters.filteredPosts(state)).toEqual(state.posts)
   })
 
   it('recentPosts', () => {

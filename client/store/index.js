@@ -13,6 +13,7 @@ import * as authors from './modules/authorsPage'
 import * as ebooks from './modules/ebooks'
 import * as successAndFaq from './modules/successAndFaq'
 import * as customers from './modules/customers'
+import * as tags from './modules/tags'
 
 export default {
   modules: {
@@ -31,5 +32,6 @@ export default {
     authors,
     successAndFaq,
     customers,
+    tags,
   },
 }
