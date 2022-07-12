@@ -4,6 +4,9 @@ const cors = require('cors')
 // sentry
 const { configureSentry } = require('./sentry')
 
+// mad radiator
+const runRadiator = require('./radiator')
+
 // custom middlewares
 const applyXFrame = require('./middlewares/applyXFrame')
 const redirectToValidLink = require('./middlewares/redirectToValidLink')
@@ -61,6 +64,9 @@ function bootstrap() {
     console.log('Run Dev Radiator schedulers')
     radiator.scheduleCollectMetrics()
     radiator.scheduleSendMetrics()
+
+    // Run the mad radiator in the production mode
+    runRadiator()
   }
 
   return app

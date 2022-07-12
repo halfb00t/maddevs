@@ -80,7 +80,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .footer-contacts {
   &__head-content {
     margin-bottom: 40px;

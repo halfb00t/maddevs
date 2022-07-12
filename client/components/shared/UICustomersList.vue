@@ -1,23 +1,23 @@
 <template>
-  <div class="customers__customers-list">
-    <div
-      v-for="customer in customers"
-      :key="customer"
-      :style="backgroundColor"
-      class="icon-wrapper"
-      data-testid="icon-wrapper"
-    >
-      <img
-        v-lazy-load
-        width="143"
-        height="64"
-        class="icon-wrapper__icon"
-        :data-src="fileName(customer)"
-        :alt="customer || 'Image'"
-        data-testid="customer-icon"
-      >
+  <section class="customers">
+    <div class="wrapper">
+      <div class="customers__list">
+        <div
+          v-for="customer in customers"
+          :key="customer"
+          :style="backgroundColor"
+          class="customers__logo"
+          data-testid="icon-wrapper"
+        >
+          <img
+            v-lazy-load
+            :data-src="fileName(customer)"
+            :alt="customer || 'Image'"
+          >
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -59,61 +59,69 @@ export default {
 
 <style lang="scss" scoped>
 .customers {
-  &__customers-list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    @media only screen and (max-width: 1300px) {
-      grid-template-columns: repeat(5, 1fr);
+  &__list {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 1024px) {
+      gap: 14px;
+    }
+  }
+
+  &__logo {
+    width: 16%;
+    max-width: 190px;
+    min-height: 111px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 8px;
+    box-sizing: border-box;
+
+    img {
+      width: 143px;
+      height: 64px;
+      display: block;
     }
 
     @media only screen and (max-width: 1160px) {
-      grid-template-columns: repeat(4, 1fr);
+      width: 19%;
     }
 
     @media only screen and (max-width: 1024px) {
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 14px;
+      width: 15%;
+      min-height: 81px;
+
+      img {
+        width: 75px;
+        height: 33px;
+      }
     }
 
     @media only screen and (max-width: 834px) {
-      grid-template-columns: repeat(5, 1fr);
+      width: 18%;
     }
 
     @media only screen and (max-width: 640px) {
-      grid-template-columns: repeat(4, 1fr);
+      width: 22.99%;
     }
 
     @media only screen and (max-width: 520px) {
-      grid-template-columns: repeat(3, 1fr);
+      width: 29%;
     }
 
     @media only screen and (max-width: 360px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-}
-
-.icon-wrapper {
-  min-height: 111px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  &__icon {
-    width: 143px;
-    height: 64px;
-    display: block;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    min-height: 81px;
-
-    &__icon {
-      width: 75px;
-      height: 33px;
+      width: 45%;
     }
   }
 }

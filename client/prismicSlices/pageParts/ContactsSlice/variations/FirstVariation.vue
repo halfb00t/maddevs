@@ -2,19 +2,18 @@
   <div class="container contacts-slice__content">
     <div class="contacts-slice__content-info">
       <ContactFields class="contacts-slice__content-fields" />
-      <!-- <Messengers class="contacts-slice__content-messengers" /> -->
       <Socials class="contacts-slice__content-socials" />
     </div>
-    <OrderForm class="contacts-slice__content-form" />
+    <OrderForm
+      id="contact-form"
+      class="contacts-slice__content-form"
+    />
   </div>
 </template>
 
 <script>
-/* temporary commented messengers at the request of
-  the task https://maddevs.atlassian.net/browse/MAR-3062 */
 
 import ContactFields from '../components/ContactFields'
-// import Messengers from '../components/Messengers'
 import Socials from '../components/Socials'
 import OrderForm from '../components/OrderForm'
 
@@ -22,7 +21,6 @@ export default {
   name: 'FirstVariation',
   components: {
     ContactFields,
-    // Messengers,
     Socials,
     OrderForm,
   },
@@ -43,31 +41,35 @@ export default {
   @media screen and (max-width: 440px) {
     padding: 0 24px;
   }
+
   &-info {
     padding-right: 35px;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 769px) {
+      position: sticky;
+      top: 30%;
+      align-self: flex-start;
+    }
     @media screen and (max-width: 768px) {
       padding-right: 0;
     }
   }
-  // &-messengers {
-  //   margin-top: 73px;
-  //   @media screen and (max-width: 1024px) {
-  //     margin-top: 50px;
-  //   }
-  // }
+
   &-socials {
     margin-top: 57px;
     @media screen and (max-width: 1024px) {
       margin-top: 48px;
     }
   }
+
   &-form {
     box-sizing: border-box;
     width: 100%;
     max-width: 490px;
+    scroll-margin-top: 120px;
     @media screen and (max-width: 768px) {
+      scroll-margin-top: 80px;
       margin-top: 72px;
       width: calc(100% + 8px);
       max-width: calc(100% + 8px);
