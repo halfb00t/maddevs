@@ -48,7 +48,7 @@ export default {
     flex-direction: column;
     @media screen and (min-width: 769px) {
       position: sticky;
-      top: 100px;
+      top: 30%;
       align-self: flex-start;
     }
     @media screen and (max-width: 768px) {
