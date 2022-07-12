@@ -1,13 +1,11 @@
 <template>
-  <div
-    id="contact-form"
-    class="container contacts-slice__content"
-  >
+  <div class="container contacts-slice__content">
     <div class="contacts-slice__content-info">
       <ContactFields class="contacts-slice__content-fields" />
       <Socials class="contacts-slice__content-socials" />
     </div>
     <OrderForm
+      id="contact-form"
       class="contacts-slice__content-form"
     />
   </div>
@@ -34,7 +32,6 @@ export default {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  scroll-margin-top: 120px;
   @media screen and (max-width: 1160px) {
     padding: 0 42px;
   }
@@ -49,9 +46,11 @@ export default {
     padding-right: 35px;
     display: flex;
     flex-direction: column;
-    position: sticky;
-    top: 100px;
-    align-self: flex-start;
+    @media screen and (min-width: 769px) {
+      position: sticky;
+      top: 100px;
+      align-self: flex-start;
+    }
     @media screen and (max-width: 768px) {
       padding-right: 0;
     }
@@ -68,7 +67,9 @@ export default {
     box-sizing: border-box;
     width: 100%;
     max-width: 490px;
+    scroll-margin-top: 120px;
     @media screen and (max-width: 768px) {
+      scroll-margin-top: 80px;
       margin-top: 72px;
       width: calc(100% + 8px);
       max-width: calc(100% + 8px);
