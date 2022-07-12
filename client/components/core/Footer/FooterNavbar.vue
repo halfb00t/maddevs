@@ -1,6 +1,6 @@
 <template>
   <div
-    class="footer-navbar test-deploy-3"
+    class="footer-navbar"
     @mouseleave="setActiveColumn($event)"
   >
     <ul
