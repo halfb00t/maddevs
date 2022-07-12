@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UITagCloud component should correctly render component 1`] = `
+<div>
+  <div
+    class="posts-filter"
+  >
+    <ul
+      class="posts-filter__list"
+    >
+      <li
+        class="posts-filter__item-wrapper"
+      >
+        <div
+          class="posts-filter__item"
+        >
+          <input
+            data-testid="test-post-input"
+            id="Editors pick"
+            name="Tag"
+            type="checkbox"
+            value="Editors pick"
+          />
+           
+          <label
+            for="Editors pick"
+          >
+            Editors pick
+          </label>
+        </div>
+      </li>
+      <li
+        class="posts-filter__item-wrapper"
+      >
+        <div
+          class="posts-filter__item"
+        >
+          <input
+            data-testid="test-post-input"
+            id="Python"
+            name="Tag"
+            type="checkbox"
+            value="Python"
+          />
+           
+          <label
+            for="Python"
+          >
+            Python
+          </label>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

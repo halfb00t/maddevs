@@ -17,28 +17,18 @@ export const state = () => ({
   posts: [],
   CUPosts: [],
   featuredPost: null,
-  postsCategory: null,
   postsLoaded: false,
-  postsPage: 1,
   showContentLocker: true,
 })
 
 export const mutations = {
   SET_BLOG_PAGE_CONTENT(state, data) {
-    let categories = []
-    if (data && data.categories && data.categories.length) {
-      categories = data.categories.map(category => ({
-        title: this.$prismic.asText(category.category_title),
-        tags: category.tags.length ? this.$prismic.asText(category.tags).split(/, */g) : [],
-      }))
-    }
     state.homePageContent = {
       image: data.image.url,
       headline: data.headline[0].text,
       description: data.description[0].text,
       banner: data.recent_posts_banner,
       bannerLink: data.banner_link,
-      categories,
     }
   },
   SET_CUSTOMER_CONTENT(state, data) {
@@ -55,14 +45,8 @@ export const mutations = {
     state.posts = data
     state.featuredPost = data && data.find(post => post.tags.includes('Featured post'))
   },
-  SET_POSTS_CATEGORY(state, category) {
-    state.postsCategory = category
-  },
   SET_POSTS_LOADED(state, value) {
     state.postsLoaded = value
-  },
-  SET_POSTS_PAGE(state, page) {
-    state.postsPage = page
   },
   SET_SHOW_CONTENT_LOCKER(state, value) {
     state.showContentLocker = value
@@ -70,12 +54,9 @@ export const mutations = {
 }
 
 export const actions = {
-  async getHomePageContent({ commit, state }) {
+  async getHomePageContent({ commit }) {
     const pageContent = await getHomePageContent(this.$prismic)
     commit('SET_BLOG_PAGE_CONTENT', pageContent)
-    if (!state.postsCategory) {
-      commit('SET_POSTS_CATEGORY', state.homePageContent.categories[0].title)
-    }
   },
   async getBlogPosts({ commit }) {
     const posts = await getBlogPosts(this.$prismic)
@@ -93,13 +74,6 @@ export const actions = {
   async getCustomerUniversityPosts({ commit }) {
     const posts = await getCUPosts(this.$prismic)
     commit('SET_CU_POSTS', posts)
-  },
-  getMorePosts({ commit, state }) {
-    commit('SET_POSTS_PAGE', state.postsPage + 1)
-  },
-  changePostsCategory({ commit }, filter) {
-    commit('SET_POSTS_PAGE', 1)
-    commit('SET_POSTS_CATEGORY', filter)
   },
   changeContentLockerDisplay({ commit }, value) {
     commit('SET_SHOW_CONTENT_LOCKER', value)
@@ -122,14 +96,6 @@ export const getters = {
   CUPosts(state) {
     return state.CUPosts
   },
-  filteredPosts(state) {
-    if (state.postsCategory !== null && state.homePageContent.categories) {
-      const currentCategory = state.homePageContent.categories.find(tag => tag.title === state.postsCategory)
-      const currentTags = [...currentCategory.tags, currentCategory.title]
-      return state.posts.filter(post => post.tags.some(tag => currentTags.includes(tag)))
-    }
-    return []
-  },
   recentPosts(state) {
     const posts = state.posts.slice(0, 5)
     if (posts.length) {
@@ -144,14 +110,8 @@ export const getters = {
   featuredPost(state) {
     return state.featuredPost
   },
-  postsCategory(state) {
-    return state.postsCategory
-  },
   postsLoaded(state) {
     return state.postsLoaded
-  },
-  postsPage(state) {
-    return state.postsPage
   },
   showContentLocker(state) {
     return state.showContentLocker

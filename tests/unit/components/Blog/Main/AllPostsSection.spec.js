@@ -25,22 +25,27 @@ const mocks = {
   },
 }
 
-const stubs = ['NuxtLink', 'PostCard']
+const stubs = ['NuxtLink', 'PostCard', 'UITagCloud']
 
-const store = {
+const actions = {
+  changePostsCategory: jest.fn(),
+  getMorePosts: jest.fn(),
+  setDefaultArrayWithTags: jest.fn(),
+  clearAllData: jest.fn(),
+}
+
+const store = new Vuex.Store({
   getters: {
-    filteredPosts: () => allPosts,
+    filteredPosts: () => [...allPosts, ...allPosts],
     allPosts: () => allPosts,
-    postsCategory: jest.fn(),
+    activeTags: () => ['Editors pick'],
     postsPage: () => 2,
     homePageContent: () => homeContent.default,
     allAuthors: jest.fn(),
+    tags: () => ['Editors pick', 'Hardware'],
   },
-  actions: {
-    changePostsCategory: jest.fn(),
-    getMorePosts: jest.fn(),
-  },
-}
+  actions,
+})
 
 const containerToRender = document.createElement('div')
 containerToRender.setAttribute('id', 'case-scroll-container')
@@ -77,83 +82,7 @@ describe('AllPostsSection component', () => {
       store,
     })
 
-    expect(screen.getAllByTestId('test-single-post')).toHaveLength(allPosts.length)
-  })
-
-  it('categories() computed method should return correct array', async () => {
-    const wrapper = shallowMount(AllPostsSection, {
-      localVue,
-      mocks,
-      stubs,
-      store: {
-        ...store,
-        getters: {
-          ...store.getters,
-          homePageContent: {
-            categories: [
-              {
-                title: 'Editors Pick',
-                tags: [],
-              },
-              {
-                title: 'DevOps',
-                tags: [],
-              },
-            ],
-          },
-        },
-      },
-    })
-
-    const expectedCategories = [
-      {
-        title: 'Editors Pick',
-        tags: [],
-      },
-      {
-        title: 'DevOps',
-        tags: [],
-      },
-    ]
-    expect(wrapper.vm.categories).toEqual(expectedCategories)
-  })
-
-  it('categories() computed method with invalid homePageContent getter should return empty array', async () => {
-    const initLazyLoadMock = jest.spyOn(initializeLazyLoad, 'initializeLazyLoad').mockImplementation(() => {})
-    const nextTick = jest.fn(() => initLazyLoadMock())
-    mocks.$nextTick = nextTick
-
-    const wrapper = shallowMount(AllPostsSection, {
-      localVue,
-      mocks,
-      stubs,
-      store: {
-        ...store,
-        getters: {
-          ...store.getters,
-          homePageContent: 'string',
-        },
-      },
-    })
-
-    expect(wrapper.vm.categories).toEqual([])
-    await wrapper.vm.$forceUpdate()
-    await wrapper.vm.$nextTick(() => {
-      expect(initLazyLoadMock).toHaveBeenCalledTimes(1)
-    })
-  })
-
-  it('should correct work change post category', async () => {
-    render(AllPostsSection, {
-      localVue,
-      mocks,
-      stubs,
-      store,
-    })
-
-    const input = screen.getAllByTestId('test-post-input')
-    await fireEvent.update(input[0], 'Hardware')
-    expect(store.actions.changePostsCategory).toHaveBeenCalledTimes(1)
+    expect(screen.getAllByTestId('test-single-post')).toHaveLength(24)
   })
 
   it('correctly call update class function from watcher if haven\'t parent node or not found attribute', () => {
@@ -173,7 +102,10 @@ describe('AllPostsSection component', () => {
     expect(windowsScroll).toHaveBeenCalledTimes(0)
   })
 
-  it('correctly call update class function from watcher', () => {
+  it('correctly call update class function from watcher', async () => {
+    const initLazyLoadMock = jest.spyOn(initializeLazyLoad, 'initializeLazyLoad').mockImplementation(() => {})
+    const nextTick = jest.fn(() => initLazyLoadMock())
+    mocks.$nextTick = nextTick
     mocks.visitedPost = 'Hardware'
     const wrapper = shallowMount(AllPostsSection, {
       localVue,
@@ -186,12 +118,16 @@ describe('AllPostsSection component', () => {
     wrapper.vm.$options.watch.filteredPosts()
     expect(scroll).toHaveBeenCalledTimes(1)
     expect(windowsScroll).toHaveBeenCalledTimes(1)
+    await wrapper.vm.$forceUpdate()
+    await wrapper.vm.$nextTick(() => {
+      expect(initLazyLoadMock).toHaveBeenCalledTimes(1)
+      expect(actions.setDefaultArrayWithTags).toHaveBeenCalledTimes(1)
+    })
   })
 
-  it('should correct work get more posts handler', () => {
+  it('should correct work get more posts handler', async () => {
     const nextTick = jest.fn()
     mocks.$nextTick = nextTick
-    store.getters.filteredPosts = () => [...allPosts, ...allPosts]
     render(AllPostsSection, {
       localVue,
       mocks,
@@ -200,8 +136,8 @@ describe('AllPostsSection component', () => {
     })
 
     const button = screen.getByTestId('test-load-more-button')
-    fireEvent.click(button)
+    await fireEvent.click(button)
 
-    expect(store.actions.getMorePosts).toHaveBeenCalledTimes(1)
+    expect(actions.getMorePosts).toHaveBeenCalledTimes(1)
   })
 })

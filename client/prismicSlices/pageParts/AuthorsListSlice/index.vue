@@ -3,10 +3,11 @@
     class="authors-slice-wrapper"
   >
     <div class="container container--1026">
+      <UITagCloud />
       <div class="authors">
         <div class="authors__list">
           <div
-            v-for="(author, i) of authorsWithPostsData.slice(0, countOfShownAuthors)"
+            v-for="(author, i) of filteredPosts.slice(0, countOfShownAuthors)"
             :key="i"
             class="author-wrapper"
           >
@@ -37,7 +38,7 @@
           </div>
         </div>
         <button
-          v-if="showButton"
+          v-if="showButton && filteredPosts.length > countOfShownAuthors"
           class="authors__show-button"
           @click="showAllAuthors"
         >
@@ -53,9 +54,11 @@
 import { mapActions, mapGetters } from 'vuex'
 import setSliceBackground from '@/helpers/setSliceBackground'
 import linkResolver from '@/plugins/link-resolver'
+import UITagCloud from '@/components/shared/UITagCloud'
 
 export default {
   name: 'AuthorsListSlice',
+  components: { UITagCloud },
   props: {
     slice: {
       type: Object,
@@ -75,21 +78,25 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['authorsWithPostsData']),
-
-    categories() {
-      const { categories = [] } = this.homePageContent
-      if (Array.isArray(categories) && categories.length) return categories
-      return []
-    },
+    ...mapGetters([
+      'authorsWithPostsData',
+      'filteredPosts',
+      'activeTags',
+      'postsPage',
+    ]),
   },
 
-  created() {
-    this.getAuthorsWithPosts()
+  async created() {
+    await this.getAuthorsWithPosts()
+    await this.$store.dispatch('setDefaultArrayWithTags', this.authorsWithPostsData)
+  },
+
+  updated() {
+    this.$store.dispatch('setDefaultArrayWithTags', this.authorsWithPostsData)
   },
 
   methods: {
-    ...mapActions(['getAuthorsWithPosts']),
+    ...mapActions(['getAuthorsWithPosts', 'setDefaultArrayWithTags']),
     linkResolver,
     showAllAuthors() {
       this.showButton = false

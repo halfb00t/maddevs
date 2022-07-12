@@ -15,7 +15,7 @@ export const setAuthorsPostsData = (authors, posts) => {
   return authors
     .reduce((acc, rawAuthor) => {
       const { tags = [], count = 0 } = authorsAdditionalData.get(rawAuthor.uid) || {}
-      const author = { ...rawAuthor, post_tags: Array.from(tags), post_count: count }
+      const author = { ...rawAuthor, tags: [...new Set([...Array.from(tags), ...rawAuthor.tags])], post_count: count }
       if (!count) return acc
       return [...acc, author]
     }, [])
