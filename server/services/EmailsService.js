@@ -70,7 +70,9 @@ async function sendMailFromVariables({ variables, templateId, attachment }) {
     fromName: variables.modalTitle,
     fromEmail: DEFAULT_FROM_EMAIL,
     toName: DEFAULT_TO_NAME,
-    toEmail: variables.emailTo,
+    toEmail: variables.type === 'ebook-form'
+      ? config.EMAIL_NODE_EMAIL_MARKETING
+      : variables.emailTo,
   }
 
   const email = buildEmail(emailParams)
