@@ -25,6 +25,10 @@ const mocks = {
   },
 }
 
+const props = {
+  allPosts,
+}
+
 const stubs = ['NuxtLink', 'PostCard', 'UITagCloud']
 
 const actions = {
@@ -69,6 +73,7 @@ describe('AllPostsSection component', () => {
       mocks,
       stubs,
       store,
+      propsData: props,
     })
 
     expect(container).toMatchSnapshot()
@@ -80,6 +85,7 @@ describe('AllPostsSection component', () => {
       mocks,
       stubs,
       store,
+      propsData: props,
     })
 
     expect(screen.getAllByTestId('test-single-post')).toHaveLength(24)
@@ -94,6 +100,7 @@ describe('AllPostsSection component', () => {
       mocks,
       stubs,
       store,
+      propsData: props,
       container: document.body.appendChild(singleLink),
     })
 
@@ -112,6 +119,7 @@ describe('AllPostsSection component', () => {
       mocks,
       stubs,
       store,
+      propsData: props,
       container: document.body.appendChild(containerToRender),
     })
 
@@ -133,6 +141,7 @@ describe('AllPostsSection component', () => {
       mocks,
       stubs,
       store,
+      propsData: props,
     })
 
     const button = screen.getByTestId('test-load-more-button')

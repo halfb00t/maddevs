@@ -5,38 +5,46 @@
     <div class="container container--1026">
       <UITagCloud />
       <div class="authors">
-        <div class="authors__list">
+        <transition
+          name="list"
+          mode="out-in"
+        >
           <div
-            v-for="(author, i) of filteredPosts.slice(0, countOfShownAuthors)"
-            :key="i"
-            class="author-wrapper"
+            :key="activeTags.join(' ')"
+            class="authors__list"
           >
-            <NuxtLink
-              class="authors__item author"
-              :to="linkResolver({ type: 'author', uid : author.uid })"
+            <div
+              v-for="(author, i) of filteredPosts.slice(0, countOfShownAuthors)"
+              :key="i"
+              class="author-wrapper"
             >
-              <div class="author__image-wrapper">
-                <img
-                  class="author__image"
-                  :src="author.data.image.url"
-                  :alt="author.data.image.alt"
-                >
-              </div>
-              <div class="author-info">
-                <span class="author-info__posts-count">
-                  {{ author.post_count }}
-                  posts
-                </span>
-                <h3 class="author-info__name">
-                  {{ author.data.name }}
-                </h3>
-                <span class="author-info__position">
-                  {{ author.data.position }}
-                </span>
-              </div>
-            </NuxtLink>
+              <NuxtLink
+                class="authors__item author"
+                :to="linkResolver({ type: 'author', uid : author.uid })"
+              >
+                <div class="author__image-wrapper">
+                  <img
+                    class="author__image"
+                    :src="author.data.image.url"
+                    :alt="author.data.image.alt"
+                  >
+                </div>
+                <div class="author-info">
+                  <span class="author-info__posts-count">
+                    {{ author.post_count }}
+                    posts
+                  </span>
+                  <h3 class="author-info__name">
+                    {{ author.data.name }}
+                  </h3>
+                  <span class="author-info__position">
+                    {{ author.data.position }}
+                  </span>
+                </div>
+              </NuxtLink>
+            </div>
           </div>
-        </div>
+        </transition>
         <button
           v-if="showButton && filteredPosts.length > countOfShownAuthors"
           class="authors__show-button"
@@ -243,4 +251,13 @@ export default {
   }
 }
 
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+}
 </style>

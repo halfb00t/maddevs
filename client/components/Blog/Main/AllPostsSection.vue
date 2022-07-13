@@ -5,24 +5,29 @@
   >
     <div class="container">
       <UITagCloud />
-      <div
-        v-if="filteredPosts.length !== 0"
-        class="filtered-posts__list"
+      <transition
+        name="list"
+        mode="out-in"
       >
-        <section
-          v-for="(post, i) in filteredPostsToShow"
-          :key="`filtered-posts__item-${i}`"
-          :post="post"
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
+        <div
+          v-if="filteredPosts.length !== 0"
+          :key="activeTags.join(' ')"
+          class="filtered-posts__list"
         >
-          <PostCard
-            :post="post"
-            :tag="post.tags.find(tag => activeTags.includes(tag))"
-            :author="findAuthor(post.data.post_author.id, allAuthors)"
-          />
-        </section>
-      </div>
+          <section
+            v-for="(post, i) in filteredPostsToShow"
+            :key="`${post.data.title}-${i}`"
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <PostCard
+              :post="post"
+              :tag="post.tags.find(tag => activeTags.includes(tag))"
+              :author="findAuthor(post.data.post_author.id, allAuthors)"
+            />
+          </section>
+        </div>
+      </transition>
       <div
         v-if="totalPages > postsPage"
         class="filtered-posts__load-more"
@@ -52,6 +57,13 @@ export default {
 
   mixins: [findPostAuthorMixin],
 
+  props: {
+    allPosts: {
+      type: Array,
+      required: true,
+    },
+  },
+
   data() {
     return {
       pageSize: 12,
@@ -60,7 +72,6 @@ export default {
 
   computed: {
     ...mapGetters([
-      'allPosts',
       'allAuthors',
       'filteredPosts',
       'activeTags',
@@ -270,5 +281,15 @@ export default {
       }
     }
   }
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.list-enter,
+.list-leave-to {
+  opacity: 0;
 }
 </style>
