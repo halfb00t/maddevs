@@ -7,13 +7,21 @@ export const getHomePageContent = async prismic => {
   }
 }
 
-export const getBlogPosts = async prismic => {
+export const getBlogPosts = async (prismic, currentPage = 1) => {
   try {
     const response = await prismic.api.query(prismic.predicates.at('document.type', 'post'), {
       orderings: '[my.post.date desc]',
       pageSize: 100,
+      page: currentPage,
     })
-    return response.results
+
+    const currentPosts = response.results
+    if (!response.next_page) {
+      return currentPosts
+    }
+    const newPage = currentPage + 1
+    const newPosts = await getBlogPosts(prismic, newPage)
+    return ([...currentPosts, ...newPosts])
   } catch (error) {
     return error
   }

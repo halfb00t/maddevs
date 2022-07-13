@@ -4,50 +4,30 @@
     class="filtered-posts"
   >
     <div class="container">
-      <div
-        v-if="categories.length"
-        class="posts-filter"
+      <UITagCloud />
+      <transition
+        name="list"
+        mode="out-in"
       >
-        <Simplebar>
-          <ul class="posts-filter__list">
-            <li
-              v-for="(category, i) in categories"
-              :key="`posts-filter__item-${i}`"
-              class="posts-filter__item-wrapper"
-            >
-              <div class="posts-filter__item">
-                <input
-                  :id="category.title"
-                  type="radio"
-                  name="Tag"
-                  data-testid="test-post-input"
-                  :value="category.title"
-                  :checked="postsCategory === category.title"
-                  @change="handleFilterChange"
-                >
-                <label :for="category.title">{{ category.title }}</label>
-              </div>
-            </li>
-          </ul>
-        </Simplebar>
-      </div>
-      <div
-        v-if="filteredPosts.length !== 0"
-        class="filtered-posts__list"
-      >
-        <section
-          v-for="(post, i) in filteredPostsToShow"
-          :key="`filtered-posts__item-${i}`"
-          :post="post"
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
+        <div
+          v-if="filteredPosts.length !== 0"
+          :key="activeTags.join(' ')"
+          class="filtered-posts__list"
         >
-          <PostCard
-            :post="post"
-            :author="findAuthor(post.data.post_author.id, allAuthors)"
-          />
-        </section>
-      </div>
+          <section
+            v-for="(post, i) in filteredPostsToShow"
+            :key="`${post.data.title}-${i}`"
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <PostCard
+              :post="post"
+              :tag="post.tags.find(tag => activeTags.includes(tag))"
+              :author="findAuthor(post.data.post_author.id, allAuthors)"
+            />
+          </section>
+        </div>
+      </transition>
       <div
         v-if="totalPages > postsPage"
         class="filtered-posts__load-more"
@@ -60,9 +40,9 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import Simplebar from 'simplebar-vue'
 import PostCard from '@/components/Blog/shared/PostCard'
 import LoadMoreButton from '@/components/Blog/shared/LoadMoreButton'
+import UITagCloud from '@/components/shared/UITagCloud'
 import initializeLazyLoad from '@/helpers/lazyLoad'
 
 import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
@@ -70,12 +50,19 @@ import findPostAuthorMixin from '@/mixins/findPostAuthorMixin'
 export default {
   name: 'AllPostsSection',
   components: {
-    Simplebar,
+    UITagCloud,
     PostCard,
     LoadMoreButton,
   },
 
   mixins: [findPostAuthorMixin],
+
+  props: {
+    allPosts: {
+      type: Array,
+      required: true,
+    },
+  },
 
   data() {
     return {
@@ -85,11 +72,9 @@ export default {
 
   computed: {
     ...mapGetters([
-      'homePageContent',
-      'allPosts',
       'allAuthors',
       'filteredPosts',
-      'postsCategory',
+      'activeTags',
       'postsPage',
     ]),
 
@@ -99,12 +84,6 @@ export default {
 
     totalPages() {
       return Math.ceil(this.filteredPosts.length / this.pageSize)
-    },
-
-    categories() {
-      const { categories = [] } = this.homePageContent
-      if (Array.isArray(categories) && categories.length) return categories
-      return []
     },
   },
 
@@ -124,106 +103,22 @@ export default {
     },
   },
 
+  mounted() {
+    this.$store.dispatch('setDefaultArrayWithTags', this.allPosts)
+  },
+
   updated() {
     this.$nextTick(() => initializeLazyLoad())
+    this.$store.dispatch('setDefaultArrayWithTags', this.allPosts)
   },
 
   methods: {
-    ...mapActions(['changePostsCategory', 'getMorePosts']),
-
-    handleFilterChange(e) {
-      this.changePostsCategory(e.target.value)
-    },
+    ...mapActions(['getMorePosts', 'setDefaultArrayWithTags']),
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.posts-filter {
-  min-width: 150px;
-  margin-bottom: 50px;
-
-  &__list {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: stretch;
-  }
-
-  &__item {
-    &-wrapper {
-      width: 100%;
-      min-width: 148px;
-      margin-right: 20px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    input[type="radio"] {
-      display: none;
-    }
-
-    label {
-      @include font('Poppins', 18px, 600);
-      cursor: pointer;
-      box-shadow: none;
-      display: flex;
-      align-items: flex-end;
-      padding: 47px 22px 22px;
-      color: $text-color--black;
-      background-color: $bgcolor--silver;
-      line-height: 22px;
-      min-height: 44px;
-      border-radius: 2px;
-      transition: 0.2s;
-    }
-
-    input[type="radio"]:checked + label {
-      border-color: $border-color--red;
-      color: $text-color--red;
-    }
-  }
-
-  /deep/ .ps__rail-x {
-    display: none;
-  }
-
-  /deep/ .simplebar-track {
-    display: none;
-  }
-
-  @media screen and (max-width: 1200px) {
-    &__list {
-      margin: 0 -4px;
-    }
-
-    &__item {
-      &-wrapper {
-        margin-right: 8px;
-      }
-
-      label {
-        font-size: 16px;
-        line-height: 19px;
-        padding: 16px;
-        min-height: 40px;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 1024px) {
-    &__item label:hover {
-      border-color: $border-color--red;
-      color: $text-color--red;
-    }
-  }
-
-  @media only screen and (min-width: 991px) {
-    margin-bottom: 35px;
-  }
-}
-
 .filtered-posts {
   background-color: $bgcolor--white-primary;
   padding: 80px 0 73px;
@@ -386,5 +281,15 @@ export default {
       }
     }
   }
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.list-enter,
+.list-leave-to {
+  opacity: 0;
 }
 </style>

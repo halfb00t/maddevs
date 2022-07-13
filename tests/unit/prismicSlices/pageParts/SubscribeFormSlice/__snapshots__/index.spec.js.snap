@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubscribeFormSlice component should correctly render component 1`] = `
+<div>
+  <section
+    class="subscribe-form-slice-section"
+  >
+    <div
+      class="subscribe-form-slice"
+    >
+      <div
+        class="subscribe-form-slice__image-wrapper"
+      >
+        <img
+          alt="Subscribe Mail Box"
+          class="subscribe-form-slice__image"
+          height="170"
+          width="246"
+        />
+         
+        <img
+          alt="Subscribe Mail Box"
+          class="subscribe-form-slice__image--mobile"
+          height="168"
+          width="120"
+        />
+      </div>
+       
+      <subscribeform-stub
+        bigtitle="true"
+        formlocation="Blog Post"
+        formmaxwidth="58%"
+        linebreakforsuccess="true"
+        showbutton="true"
+        submitbuttonsizeinpercentage="30"
+      />
+    </div>
+  </section>
+</div>
+`;

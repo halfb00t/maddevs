@@ -3,7 +3,7 @@
     <BlogHeader />
     <LatestPostsSection />
     <NewCustomerUniversitySection />
-    <AllPostsSection />
+    <AllPostsSection :all-posts="allPosts" />
   </main>
 </template>
 

@@ -8,433 +8,414 @@ exports[`AllPostsSection component is a Vue instance 1`] = `
     <div
       class="container"
     >
-      <div
-        class="posts-filter"
+      <uitagcloud-stub />
+       
+      <transition-stub
+        mode="out-in"
+        name="list"
       >
         <div
-          data-simplebar="init"
+          class="filtered-posts__list"
         >
-          <div
-            class="simplebar-wrapper"
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
           >
-            <div
-              class="simplebar-height-auto-observer-wrapper"
-            >
-              <div
-                class="simplebar-height-auto-observer"
-              />
-            </div>
-             
-            <div
-              class="simplebar-mask"
-            >
-              <div
-                class="simplebar-offset"
-                style="right: 0px; bottom: 0px;"
-              >
-                <div
-                  aria-label="scrollable content"
-                  class="simplebar-content-wrapper"
-                  role="region"
-                  style="height: auto; overflow-x: hidden; overflow-y: hidden;"
-                  tabindex="0"
-                >
-                  <div
-                    class="simplebar-content"
-                  >
-                    <ul
-                      class="posts-filter__list"
-                    >
-                      <li
-                        class="posts-filter__item-wrapper"
-                      >
-                        <div
-                          class="posts-filter__item"
-                        >
-                          <input
-                            data-testid="test-post-input"
-                            id="Editors Pick"
-                            name="Tag"
-                            type="radio"
-                            value="Editors Pick"
-                          />
-                           
-                          <label
-                            for="Editors Pick"
-                          >
-                            Editors Pick
-                          </label>
-                        </div>
-                      </li>
-                      <li
-                        class="posts-filter__item-wrapper"
-                      >
-                        <div
-                          class="posts-filter__item"
-                        >
-                          <input
-                            data-testid="test-post-input"
-                            id="Software Development"
-                            name="Tag"
-                            type="radio"
-                            value="Software Development"
-                          />
-                           
-                          <label
-                            for="Software Development"
-                          >
-                            Software Development
-                          </label>
-                        </div>
-                      </li>
-                      <li
-                        class="posts-filter__item-wrapper"
-                      >
-                        <div
-                          class="posts-filter__item"
-                        >
-                          <input
-                            data-testid="test-post-input"
-                            id="Mobile Development"
-                            name="Tag"
-                            type="radio"
-                            value="Mobile Development"
-                          />
-                           
-                          <label
-                            for="Mobile Development"
-                          >
-                            Mobile Development
-                          </label>
-                        </div>
-                      </li>
-                      <li
-                        class="posts-filter__item-wrapper"
-                      >
-                        <div
-                          class="posts-filter__item"
-                        >
-                          <input
-                            data-testid="test-post-input"
-                            id="Project Management"
-                            name="Tag"
-                            type="radio"
-                            value="Project Management"
-                          />
-                           
-                          <label
-                            for="Project Management"
-                          >
-                            Project Management
-                          </label>
-                        </div>
-                      </li>
-                      <li
-                        class="posts-filter__item-wrapper"
-                      >
-                        <div
-                          class="posts-filter__item"
-                        >
-                          <input
-                            data-testid="test-post-input"
-                            id="Hardware"
-                            name="Tag"
-                            type="radio"
-                            value="Hardware"
-                          />
-                           
-                          <label
-                            for="Hardware"
-                          >
-                            Hardware
-                          </label>
-                        </div>
-                      </li>
-                      <li
-                        class="posts-filter__item-wrapper"
-                      >
-                        <div
-                          class="posts-filter__item"
-                        >
-                          <input
-                            data-testid="test-post-input"
-                            id="Job Opening"
-                            name="Tag"
-                            type="radio"
-                            value="Job Opening"
-                          />
-                           
-                          <label
-                            for="Job Opening"
-                          >
-                            Job Opening
-                          </label>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-             
-            <div
-              class="simplebar-placeholder"
-              style="width: 0px; height: 0px;"
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
             />
-          </div>
-           
-          <div
-            class="simplebar-track simplebar-horizontal"
-            style="visibility: hidden;"
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
           >
-            <div
-              class="simplebar-scrollbar"
-              style="width: 0px; display: none;"
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
             />
-          </div>
-           
-          <div
-            class="simplebar-track simplebar-vertical"
-            style="visibility: hidden;"
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
           >
-            <div
-              class="simplebar-scrollbar"
-              style="height: 0px; display: none;"
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
             />
-          </div>
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
+          <section
+            class="filtered-posts__list-item"
+            data-testid="test-single-post"
+          >
+            <postcard-stub
+              height="217"
+              isshowposttags="true"
+              limit="150"
+              post="[object Object]"
+              tag="Editors pick"
+              textcolor=""
+              theme="light"
+              width="400"
+              withauthor="true"
+            />
+          </section>
         </div>
-      </div>
+      </transition-stub>
        
       <div
-        class="filtered-posts__list"
+        class="filtered-posts__load-more"
       >
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
+        <button
+          class="load-more-button"
+          data-testid="test-load-more-button"
         >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
-        <section
-          class="filtered-posts__list-item"
-          data-testid="test-single-post"
-          post="[object Object]"
-        >
-          <postcard-stub
-            height="217"
-            isshowposttags="true"
-            limit="150"
-            post="[object Object]"
-            textcolor=""
-            theme="light"
-            width="400"
-            withauthor="true"
-          />
-        </section>
+          
+  See more
+
+        </button>
       </div>
-       
-      <!---->
     </div>
   </div>
 </div>
