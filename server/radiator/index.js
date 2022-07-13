@@ -48,11 +48,6 @@ function runRadiator() {
       '/customer-university/',
       '/blog/',
     ],
-    chart: {
-      chartView: 'bar',
-      type: 'totalUsers',
-      period: 90,
-    },
     analyticsViewId: '294117887',
     analyticsConversions: [
       {
