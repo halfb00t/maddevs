@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { writeFile } from 'fs'
 import { getNotAllowedRoutes } from './getNotAllowedRoutes'
 
 export const CUSTOM_PAGE_ROUTES = [
@@ -61,6 +62,10 @@ const getDynamicRoutes = async () => {
   // Getting posts of all types from prismic
   const { ref } = prismicData.data.refs[0]
   const prismicPosts = await getPosts(`${process.env.NODE_PRISMIC_API}/documents/search?ref=${ref}#format=json`)
+
+  writeFile('prismic.json', JSON.stringify(prismicPosts, null, 2), () => {
+    console.log('Prismic posts saved')
+  })
 
   // Creating a list of routes
   const blogPageRoutes = prismicPosts
@@ -135,6 +140,13 @@ export const getStructuredRoutes = async () => {
       '/team',
       '/contact-us',
       '/sustainability-policy',
+      '/delivery-models',
+      '/delivery-models/staff-augmentation',
+      '/delivery-models/dedicated-team',
+      '/delivery-models/temp-to-hire',
+      '/delivery-models/technical-assessment',
+      '/delivery-models/team-supervision',
+      '/delivery-models/transferring-projects',
     ],
     caseStudies: [
       '/case-studies/',
