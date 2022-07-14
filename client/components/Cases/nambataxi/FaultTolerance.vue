@@ -204,6 +204,11 @@ export default {
   data() {
     return {
       applicationStatistics,
+      elementIdsForCountUp: [
+        'statistics-application-speed-0',
+        'statistics-application-speed-1',
+        'statistics-application-speed-2',
+      ],
     }
   },
 
@@ -213,7 +218,7 @@ export default {
 
   methods: {
     initIntersectionObserver() {
-      ['statistics-application-speed-0', 'statistics-application-speed-1', 'statistics-application-speed-2'].forEach(id => {
+      this.elementIdsForCountUp.forEach(id => {
         const callback = (entries, observer) => {
           entries.forEach(entry => {
             if (entry.target.id === id) {
