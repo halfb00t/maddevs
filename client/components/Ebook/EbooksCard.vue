@@ -118,9 +118,8 @@ export default {
   }
 
   &__title {
-    @include font('Poppins', 22.78px, 600);
+    @include font('Poppins', 22px, 700);
     line-height: 130%;
-    letter-spacing: -1px;
     color: $text-color--chinese-black;
     margin-bottom: 10px;
   }
