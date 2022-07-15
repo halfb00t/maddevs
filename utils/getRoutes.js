@@ -135,6 +135,13 @@ export const getStructuredRoutes = async () => {
       '/team',
       '/contact-us',
       '/sustainability-policy',
+      '/delivery-models',
+      '/delivery-models/staff-augmentation',
+      '/delivery-models/dedicated-team',
+      '/delivery-models/temp-to-hire',
+      '/delivery-models/technical-assessment',
+      '/delivery-models/team-supervision',
+      '/delivery-models/transferring-projects',
     ],
     caseStudies: [
       '/case-studies/',
