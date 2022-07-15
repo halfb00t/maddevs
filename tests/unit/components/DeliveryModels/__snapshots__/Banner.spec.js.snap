@@ -9,16 +9,16 @@ exports[`Banner component should render correctly 1`] = `
     <picture>
       <source
         class="delivery-model-banner__image"
-        data-srcset="img.jpg ,img.jpg"
+        srcset="img.jpg ,img.jpg"
         type="image/webp"
       />
        
       <img
         alt="Team"
         class="delivery-model-banner__image"
-        data-src="img.jpg"
-        data-srcset="img.jpg"
         height="827"
+        src="img.jpg"
+        srcset="img.jpg"
         width="1680"
       />
     </picture>
