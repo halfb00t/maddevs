@@ -77,6 +77,7 @@
 import LazyHydrate from 'vue-lazy-hydration'
 import { steps } from '@/data/quickProjectStart'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import { projectFormClickEvent } from '@/analytics/events'
 
 export default {
   name: 'QuickProjectStart',
@@ -128,6 +129,7 @@ export default {
 
   methods: {
     show() {
+      projectFormClickEvent.send()
       if (!this.$refs?.modalOrderProjectFromUs?.show) return
       this.$refs.modalOrderProjectFromUs.show()
     },

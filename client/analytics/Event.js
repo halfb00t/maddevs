@@ -65,7 +65,7 @@ export class AnalyticsEvent {
       ?.filter(dataLayerValue => dataLayerValue[0] === 'config' && dataLayerValue.length >= 3)
       .map(dataLayerValue => dataLayerValue[1]) || []
 
-    return Array.from(new Set(keys))
+    return [...new Set(keys)]
   }
 
   _log(analyticsKeys) {

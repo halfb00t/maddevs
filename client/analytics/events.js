@@ -15,7 +15,9 @@ export const cardClickEvent = new AnalyticsEvent('card_click').setCategory(EVENT
 
 export const socialNetworkClickEvent = new AnalyticsEvent('social_network_click').setCategory(EVENT_CATEGORIES.CLICK)
 
-export const footerFormSubmitEvent = new AnalyticsEvent('submit_footer_form').setCategory(EVENT_CATEGORIES.SUBMIT)
+export const projectFormClickEvent = new AnalyticsEvent('click_submit_project_form').setCategory(EVENT_CATEGORIES.CLICK)
+
+export const projectFormSubmitEvent = new AnalyticsEvent('submit_your_project_form').setCategory(EVENT_CATEGORIES.SUBMIT)
 
 export const contactsClickEvent = new AnalyticsEvent('contacts_click').setCategory(EVENT_CATEGORIES.CLICK)
 

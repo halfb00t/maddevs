@@ -29,19 +29,22 @@ const getPosts = async pageUrl => {
   const response = await axios.get(pageUrl)
 
   posts = posts.concat(response.data.results)
-  if (response.data.next_page) posts = posts.concat(await getPosts(response.data.next_page))
+  if (response.data.next_page) {
+    posts = posts.concat(await getPosts(response.data.next_page))
+  }
   return posts
 }
 
 const convertToSlug = text => {
   if (typeof text !== 'string') return ''
-  return text.toLowerCase()
+  return text
+    .toLowerCase()
     .trim()
     .replace(/[^\w ]+/g, '')
     .replace(/\s+/g, '-')
 }
 
-const getRoutePrefix = routePrefix => ((typeof routePrefix !== 'string' || !routePrefix)
+const getRoutePrefix = routePrefix => (typeof routePrefix !== 'string' || !routePrefix
   ? ''
   : routePrefix.replace(/^\/|\/$/g, ''))
 
@@ -60,7 +63,9 @@ const getDynamicRoutes = async () => {
 
   // Getting posts of all types from prismic
   const { ref } = prismicData.data.refs[0]
-  const prismicPosts = await getPosts(`${process.env.NODE_PRISMIC_API}/documents/search?ref=${ref}#format=json`)
+  const prismicPosts = await getPosts(
+    `${process.env.NODE_PRISMIC_API}/documents/search?ref=${ref}#format=json`,
+  )
 
   // Creating a list of routes
   const blogPageRoutes = prismicPosts
@@ -72,12 +77,11 @@ const getDynamicRoutes = async () => {
     .map(post => `/customer-university/${post.uid}`)
 
   const ebooks = prismicPosts
-    .filter(post => (
-      post.type === 'custom_page'
-    && post.data.released === true
-    && (post.uid === 'ebooks'
-    || post.data.route_prefix === 'ebooks'
-    )))
+    .filter(
+      post => post.type === 'custom_page'
+        && post.data.released === true
+        && (post.uid === 'ebooks' || post.data.route_prefix === 'ebooks'),
+    )
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
   const authorPageRoutes = prismicPosts
@@ -88,8 +92,7 @@ const getDynamicRoutes = async () => {
     .filter(post => post.type === 'vacancy')
     .map(vacancy => `/careers/${vacancy.uid}`)
 
-  const tagPageRoutes = prismicTags
-    .map(tag => `/tag/${convertToSlug(tag)}`)
+  const tagPageRoutes = prismicTags.map(tag => `/tag/${convertToSlug(tag)}`)
 
   /* Custom pages from production */
   const excludePages = [
@@ -102,13 +105,13 @@ const getDynamicRoutes = async () => {
   ]
 
   const customPageRoutes = prismicPosts
-    .filter(post => (
-      post.type === 'custom_page'
-      && post.data.released === true
-      && post.data.route_prefix !== 'ebooks'
-      && post.data.route_prefix !== 'blog'
-      && !excludePages.includes(post.uid)
-    ))
+    .filter(
+      post => post.type === 'custom_page'
+        && post.data.released === true
+        && post.data.route_prefix !== 'ebooks'
+        && post.data.route_prefix !== 'blog'
+        && !excludePages.includes(post.uid),
+    )
     .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
 
   return {
@@ -168,17 +171,9 @@ export const getStructuredRoutes = async () => {
       ...dynamicRoutes.blogPageRoutes,
       ...dynamicRoutes.tagPageRoutes,
     ],
-    authors: [
-      '/blog/authors/',
-      ...dynamicRoutes.authorPageRoutes,
-    ],
-    careers: [
-      '/careers/',
-      ...dynamicRoutes.careerPageRoutes,
-    ],
-    services: [
-      ...dynamicRoutes.customPageRoutes,
-    ],
+    authors: ['/blog/authors/', ...dynamicRoutes.authorPageRoutes],
+    careers: ['/careers/', ...dynamicRoutes.careerPageRoutes],
+    services: [...dynamicRoutes.customPageRoutes],
   }
 }
 

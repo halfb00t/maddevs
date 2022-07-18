@@ -24,6 +24,7 @@ export default ctx => {
           },
         ],
       })
+
       const { router } = ctx.app
 
       router.afterEach(to => {

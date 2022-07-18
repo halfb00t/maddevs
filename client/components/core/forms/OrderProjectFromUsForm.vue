@@ -20,6 +20,7 @@ import BaseForm from '@/components/core/forms/BaseForm'
 import createLeadMixin from '@/mixins/createLeadMixin'
 
 import exceptKeys from '@/helpers/exceptKeys'
+import { projectFormSubmitEvent } from '@/analytics/events'
 
 export default {
   name: 'OrderProjectFromUsForm',
@@ -50,6 +51,7 @@ export default {
       await this.submitLead(variables)
       this.$emit('triggerClose')
       this.setFilledLeadForm()
+      projectFormSubmitEvent.send()
       await this.$router.push('/success-and-faq/')
     },
 
