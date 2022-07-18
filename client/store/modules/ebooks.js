@@ -16,10 +16,7 @@ export const state = () => ({
 export const mutations = {
   SET_EBOOKS(state, data) {
     state.ebooksDefault = data.results.map(ebook => ({
-      title: textEllipsis(this.$prismic.asText(ebook.data.body[0].primary.title), {
-        limit: 42,
-        trimToSpace: false,
-      }),
+      title: this.$prismic.asText(ebook.data.body[0].primary.title),
       subtitle: textEllipsis(this.$prismic.asText(ebook.data.body[0].primary.subtitle), {
         limit: 80,
         trimToSpace: false,
