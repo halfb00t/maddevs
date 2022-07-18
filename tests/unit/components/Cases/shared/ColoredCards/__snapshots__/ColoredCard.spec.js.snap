@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColoredCard component should correctly render component 1`] = `
+<div>
+  <div
+    class="colored-card colored-card--1 background-color-black "
+  >
+    <div
+      class="colored-card__image-wrapper"
+    >
+      <picture
+        class="colored-card__image colored-card-image-img"
+      >
+        <source
+          class="image"
+          data-srcset="undefined ,"
+          type="image/webp"
+        />
+         
+        <img
+          alt="Test Image"
+          class="image"
+          data-src=""
+          data-srcset=""
+          data-testid="test-picture-img"
+          height="200"
+          width="396"
+        />
+      </picture>
+    </div>
+     
+    <div
+      class="colored-card__footer"
+    >
+      <span
+        class="colored-card__pre-title case_paragraph-uppercase m-10_bottom media-m-8_bottom text-color-grey"
+      >
+        test pre
+      </span>
+       
+      <h3
+        class="colored-card__title case_title_h4 m-10_bottom media-m-8_bottom text-color-white"
+      >
+        
+      Test
+    
+      </h3>
+       
+      <p
+        class="case_paragraph colored-card__description text-color-white"
+      >
+        
+        Test desc
+      
+      </p>
+       
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;

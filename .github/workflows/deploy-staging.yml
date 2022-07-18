@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - staging # Changing the branch here would also work
+      - develop
 
 jobs:
   build:
@@ -16,4 +17,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME_STAGING}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          branch: "staging"
+          branch: ${{ github.ref_name }}
