@@ -98,8 +98,7 @@ export class AnalyticsEvent {
     if (window.location.hostname === 'maddevs.io'
       || window.location.hostname === 'maddevs.co'
       || window.location.origin === 'https://maddevs.co'
-      || window.location.origin === 'https://maddevs.io'
-      || window.location.origin === 'http://192.168.0.101:3000') {
+      || window.location.origin === 'https://maddevs.io') {
       this._setPath()
       this._applyUser()
 
@@ -110,7 +109,6 @@ export class AnalyticsEvent {
       }
 
       const nameByPath = this._getNameByPath(CONTENT_GROUPS, window.location.pathname)
-      console.log(nameByPath)
 
       analyticsKeys.forEach(analyticsId => {
         const properties = {
