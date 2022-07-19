@@ -23,12 +23,20 @@ export class AnalyticsEvent {
     this._applyUser()
   }
 
-  _getNameByPath(contentGroup, path) {
-    if (!Array.isArray(contentGroup)) {
-      return null
-    }
-    return contentGroup.find(group => group.url.includes(path))?.name
-  }
+  _getNameByPath = (contentGroups, path) => {
+    if (path === '/') return 'home_page'
+    const paths = path.split('/').filter(Boolean)
+    const isOnlyMainPath = paths.length === 1
+
+    if (isOnlyMainPath) return contentGroups.filter(item => item.url.some(url => url === path))[0]?.name
+
+    const mainPath = `/${paths[0]}/`
+
+    return contentGroups.filter(item => item.url.some(url => {
+      if (url.split('/').filter(Boolean).length === 1) return false
+      return url.startsWith(mainPath)
+    }))[0]?.name
+  };
 
   _applyUser() {
     if ('window' in global) {
@@ -90,7 +98,8 @@ export class AnalyticsEvent {
     if (window.location.hostname === 'maddevs.io'
       || window.location.hostname === 'maddevs.co'
       || window.location.origin === 'https://maddevs.co'
-      || window.location.origin === 'https://maddevs.io') {
+      || window.location.origin === 'https://maddevs.io'
+      || window.location.origin === 'http://192.168.0.101:3000') {
       this._setPath()
       this._applyUser()
 
@@ -100,7 +109,8 @@ export class AnalyticsEvent {
         this._log(analyticsKeys)
       }
 
-      const nameByPath = this._getNameByPath(CONTENT_GROUPS, window.location.href)
+      const nameByPath = this._getNameByPath(CONTENT_GROUPS, window.location.pathname)
+      console.log(nameByPath)
 
       analyticsKeys.forEach(analyticsId => {
         const properties = {

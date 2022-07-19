@@ -104,7 +104,7 @@ describe('AnalyticsEvent class', () => {
     const sendMock = jest.spyOn(testEvent, 'send')
     window.gtag = () => {}
     testEvent.send()
-    expect(consoleLogMock).toHaveBeenCalledTimes(1)
+    expect(consoleLogMock).toHaveBeenCalledTimes(2)
     expect(sendMock).toHaveBeenCalledTimes(1)
   })
 
@@ -112,7 +112,7 @@ describe('AnalyticsEvent class', () => {
     window.gtag = ''
     const testEvent = new AnalyticsEvent('test_event').setCategory('TEST')
     expect(() => testEvent.send()).toThrow('window.gtag is not a function')
-    expect(consoleLogMock).toHaveBeenCalledTimes(2)
+    expect(consoleLogMock).toHaveBeenCalledTimes(4)
   })
 
   it('should return empty array from _collectGoogleAnalyticsKeys', () => {
@@ -121,7 +121,7 @@ describe('AnalyticsEvent class', () => {
     delete window.dataLayer
     window.gtag = () => {}
     testEvent.send()
-    expect(consoleLogMock).toHaveBeenCalledTimes(3)
+    expect(consoleLogMock).toHaveBeenCalledTimes(6)
     expect(sendMock).toHaveBeenCalledTimes(1)
   })
 })
