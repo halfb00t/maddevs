@@ -1,5 +1,5 @@
 export const CONTENT_GROUPS = [
-  { url: ['http://maddevs.io/'], name: 'home_page' },
+  { url: ['https://maddevs.io/'], name: 'home_page' },
   { url: ['https://maddevs.io/case-studies/'], name: 'case_studies' },
   { url: ['https://maddevs.io/case-studies/clutch/'], name: 'case' },
   { url: ['https://maddevs.io/blog/'], name: 'blog' },

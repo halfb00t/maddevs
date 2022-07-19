@@ -75,6 +75,7 @@ import { steps } from '@/data/quickProjectStart'
 
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
 import setSliceBackground from '@/helpers/setSliceBackground'
+import { projectFormClickEvent } from '@/analytics/events'
 
 export default {
   name: 'ProjectStartSlice',
@@ -112,8 +113,13 @@ export default {
     }
   },
 
+  mounted() {
+    this.currentRoute = window.location.href
+  },
+
   methods: {
     show() {
+      projectFormClickEvent.send()
       if (!this.$refs?.modalOrderProjectFromUs?.show) return
       this.$refs.modalOrderProjectFromUs.show()
     },

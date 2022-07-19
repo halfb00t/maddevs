@@ -1,5 +1,6 @@
 /* eslint-disable no-console, class-methods-use-this, no-underscore-dangle */
 import uniqid from '~/helpers/generatorUid'
+import { CONTENT_GROUPS } from './constants'
 
 const LOCAL_STORAGE_KEYS = {
   ID: 'GA_USER_ID',
@@ -22,11 +23,17 @@ export class AnalyticsEvent {
     this._applyUser()
   }
 
+  _getNameByPath(contentGroup, path) {
+    if (!Array.isArray(contentGroup)) {
+      return null
+    }
+    return contentGroup.find(group => group.url.includes(path))?.name
+  }
+
   _applyUser() {
     if ('window' in global) {
       const existId = localStorage.getItem(LOCAL_STORAGE_KEYS.ID)
       const type = localStorage.getItem(LOCAL_STORAGE_KEYS.TYPE)
-
       const userId = existId || uniqid()
 
       localStorage.setItem(LOCAL_STORAGE_KEYS.ID, userId)
@@ -83,8 +90,7 @@ export class AnalyticsEvent {
     if (window.location.hostname === 'maddevs.io'
       || window.location.hostname === 'maddevs.co'
       || window.location.origin === 'https://maddevs.co'
-      || window.location.origin === 'https://maddevs.io'
-    ) {
+      || window.location.origin === 'https://maddevs.io') {
       this._setPath()
       this._applyUser()
 
@@ -94,10 +100,13 @@ export class AnalyticsEvent {
         this._log(analyticsKeys)
       }
 
+      const nameByPath = this._getNameByPath(CONTENT_GROUPS, window.location.href)
+
       analyticsKeys.forEach(analyticsId => {
         const properties = {
           ...this.properties,
           send_to: analyticsId,
+          content_group: nameByPath || '',
         }
         try {
           window.gtag('event', this.action, properties)
