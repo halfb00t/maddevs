@@ -5,7 +5,7 @@ const DEV_PLUGINS = [
   '~/plugins/header-handler.js',
   '~/plugins/feature-flags.js',
   { src: '~/plugins/gtag.js', mode: 'client' },
-  { src: '~/plugins/facebook-page-analitics.js', mode: 'client' },
+  { src: '~/plugins/facebook-page-analytics.js', mode: 'client' },
 ]
 
 const getPlugins = isProd => (isProd ? [...DEV_PLUGINS] : DEV_PLUGINS)

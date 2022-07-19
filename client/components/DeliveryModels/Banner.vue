@@ -5,15 +5,13 @@
   >
     <picture>
       <source
-        v-lazy-load
-        :data-srcset="[$getMediaFromS3('/images/DeliveryModels/webp/banner-min.webp') + ' ', $getMediaFromS3('/images/DeliveryModels/webp/banner-min@2x.webp 2x')]"
+        :srcset="[$getMediaFromS3('/images/DeliveryModels/webp/banner-min.webp') + ' ', $getMediaFromS3('/images/DeliveryModels/webp/banner-min@2x.webp 2x')]"
         type="image/webp"
         class="delivery-model-banner__image"
       >
       <img
-        v-lazy-load
-        :data-srcset="$getMediaFromS3('/images/DeliveryModels/jpg/banner-min@2x.jpg')"
-        :data-src="$getMediaFromS3('/images/DeliveryModels/jpg/banner-min.jpg')"
+        :srcset="$getMediaFromS3('/images/DeliveryModels/jpg/banner-min@2x.jpg')"
+        :src="$getMediaFromS3('/images/DeliveryModels/jpg/banner-min.jpg')"
         width="1680"
         height="827"
         class="delivery-model-banner__image"
