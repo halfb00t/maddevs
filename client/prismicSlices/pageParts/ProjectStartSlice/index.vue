@@ -113,10 +113,6 @@ export default {
     }
   },
 
-  mounted() {
-    this.currentRoute = window.location.href
-  },
-
   methods: {
     show() {
       projectFormClickEvent.send()

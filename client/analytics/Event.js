@@ -24,17 +24,19 @@ export class AnalyticsEvent {
   }
 
   _getNameByPath = (contentGroups, path) => {
-    if (path === '/') return 'home_page'
+    if (path === '/') {
+      return 'home_page'
+    }
+
     const paths = path.split('/').filter(Boolean)
-    const isOnlyMainPath = paths.length === 1
 
-    if (isOnlyMainPath) return contentGroups.filter(item => item.url.some(url => url === path))[0]?.name
-
-    const mainPath = `/${paths[0]}/`
+    if (paths.length === 1) {
+      return contentGroups.filter(item => item.url.some(url => url === path))[0]?.name
+    }
 
     return contentGroups.filter(item => item.url.some(url => {
       if (url.split('/').filter(Boolean).length === 1) return false
-      return url.startsWith(mainPath)
+      return url.startsWith(`/${paths[0]}/`)
     }))[0]?.name
   };
 
