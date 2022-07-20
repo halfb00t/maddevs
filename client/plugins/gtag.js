@@ -1,13 +1,10 @@
 import Vue from 'vue'
 import VueGtag, { pageview } from 'vue-gtag'
+import { isMatchMainDomain } from '@/helpers/isMatchMainDomain'
 
 export default ctx => {
   if (process.client) {
-    if (window.location.hostname === 'maddevs.io'
-      || window.location.hostname === 'maddevs.co'
-      || window.location.origin === 'https://maddevs.co'
-      || window.location.origin === 'https://maddevs.io'
-    ) {
+    if (isMatchMainDomain(window.location.origin)) {
       Vue.use(VueGtag, {
         config: {
           id: process.env.analytics4Key,

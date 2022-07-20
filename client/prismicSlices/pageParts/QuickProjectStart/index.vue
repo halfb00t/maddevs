@@ -57,7 +57,7 @@
           color="red"
           class="project-start-slice__button"
           data-testid="project-start-slice__button"
-          @click="$refs.modalOrderProjectFromUs.show()"
+          @click="$refs.modalOrderProjectFromUs.show(); sendEvent()"
         >
           Submit your project
         </UIOutlinedButton>
@@ -77,6 +77,7 @@
 import LazyHydrate from 'vue-lazy-hydration'
 import { steps } from '@/data/quickProjectStart'
 import animateOnScrollMixin from '@/mixins/animateOnScrollMixin'
+import { projectFormClickEvent } from '@/analytics/events'
 
 export default {
   name: 'QuickProjectStart',
@@ -127,6 +128,10 @@ export default {
   },
 
   methods: {
+    sendEvent() {
+      projectFormClickEvent.send()
+    },
+
     show() {
       if (!this.$refs?.modalOrderProjectFromUs?.show) return
       this.$refs.modalOrderProjectFromUs.show()

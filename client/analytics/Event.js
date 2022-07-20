@@ -1,6 +1,7 @@
 /* eslint-disable no-console, class-methods-use-this, no-underscore-dangle */
 import uniqid from '~/helpers/generatorUid'
 import { CONTENT_GROUPS } from './constants'
+import { isMatchMainDomain } from '@/helpers/isMatchMainDomain'
 
 const LOCAL_STORAGE_KEYS = {
   ID: 'GA_USER_ID',
@@ -35,7 +36,9 @@ export class AnalyticsEvent {
     }
 
     return contentGroups.filter(item => item.url.some(url => {
-      if (url.split('/').filter(Boolean).length === 1) return false
+      if (url.split('/').filter(Boolean).length === 1) {
+        return false
+      }
       return url.startsWith(`/${paths[0]}/`)
     }))[0]?.name
   };
@@ -97,10 +100,7 @@ export class AnalyticsEvent {
   }
 
   send() {
-    if (window.location.hostname === 'maddevs.io'
-      || window.location.hostname === 'maddevs.co'
-      || window.location.origin === 'https://maddevs.co'
-      || window.location.origin === 'https://maddevs.io') {
+    if (isMatchMainDomain(window.location.origin)) {
       this._setPath()
       this._applyUser()
 
