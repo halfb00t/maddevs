@@ -10,7 +10,6 @@ import {
   MAD_RADIATOR_PROJECT_ID,
   MAD_RADIATOR_PROVIDER_CERT_URL,
   MAD_RADIATOR_TOKEN_URI,
-  MAD_RADIATOR_FIRESTORE_ID,
   MAD_RADIATOR_SLACK_WEBHOOK_URL,
   MAD_RADIATOR_SLACK_CHANNEL_ID,
   MAD_RADIATOR_REDDIT_CLIENT_ID,
@@ -19,6 +18,16 @@ import {
   MAD_RADIATOR_REDDIT_PASSWORD,
   MAD_RADIATOR_QUORA_USER_ID,
   MAD_RADIATOR_DAILY_DISPATCH_TIME,
+  MAD_RADIATOR_FIRESTORE_AUTH_TYPE,
+  MAD_RADIATOR_FIRESTORE_PROJECT_ID,
+  MAD_RADIATOR_FIRESTORE_PRIVATE_KEY_ID,
+  MAD_RADIATOR_FIRESTORE_CLIENT_EMAIL,
+  MAD_RADIATOR_FIRESTORE_CLIENT_ID,
+  MAD_RADIATOR_FIRESTORE_AUTH_URI,
+  MAD_RADIATOR_FIRESTORE_TOKEN_URI,
+  MAD_RADIATOR_FIRESTORE_AUTH_PROVIDER,
+  MAD_RADIATOR_FIRESTORE_CLIENT_CERT_URL,
+  MAD_RADIATOR_FIRESTORE_PRIVATE_KEY,
 } from '../config'
 
 const { Radiator } = require('@maddevs/mad-radiator')
@@ -43,6 +52,20 @@ function runRadiator() {
     ...baseConfig,
     range: 'day',
   }
+
+  const fireStore = {
+    authType: MAD_RADIATOR_FIRESTORE_AUTH_TYPE,
+    firestoreProjectId: MAD_RADIATOR_FIRESTORE_PROJECT_ID,
+    firestorePrivateKeyId: MAD_RADIATOR_FIRESTORE_PRIVATE_KEY_ID,
+    firestoreClientEmail: MAD_RADIATOR_FIRESTORE_CLIENT_EMAIL,
+    firestoreClientId: MAD_RADIATOR_FIRESTORE_CLIENT_ID,
+    firestoreAuthUri: MAD_RADIATOR_FIRESTORE_AUTH_URI,
+    firestoreTokenUri: MAD_RADIATOR_FIRESTORE_TOKEN_URI,
+    firestoreAuthProviderCertUrl: MAD_RADIATOR_FIRESTORE_AUTH_PROVIDER,
+    firestoreClientCertUrl: MAD_RADIATOR_FIRESTORE_CLIENT_CERT_URL,
+    firestorePrivateKey: MAD_RADIATOR_FIRESTORE_PRIVATE_KEY,
+  }
+
   const analyticsConfig = {
     pagesPathForViewsAnalytics: [
       '/customer-university/',
@@ -99,7 +122,6 @@ function runRadiator() {
     period: 'day',
     time: MAD_RADIATOR_DAILY_DISPATCH_TIME || 9,
   }
-  const firestoreId = MAD_RADIATOR_FIRESTORE_ID
   const quora = {
     quoraUserID: MAD_RADIATOR_QUORA_USER_ID,
   }
@@ -117,9 +139,9 @@ function runRadiator() {
 
   dailyRadiator.useAnalytics(analyticsConfig)
   dailyRadiator.useRedditCountPosts(redditConfig)
-  dailyRadiator.useQuoraService(quora, firestoreId)
-  dailyRadiator.useNewPagesInSite(lighthouseConfig, firestoreId)
-  dailyRadiator.usePageAnalytics(pageAnalyticsConfig, firestoreId)
+  dailyRadiator.useQuoraService(quora, fireStore)
+  dailyRadiator.useNewPagesInSite(lighthouseConfig, fireStore)
+  dailyRadiator.usePageAnalytics(pageAnalyticsConfig, fireStore)
   dailyRadiator.useSlack(slackConfig)
   dailyRadiator.scheduleJob(dailyScheduleConfig)
 
