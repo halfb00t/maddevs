@@ -21,7 +21,7 @@ exports[`EbookForm slice should render correctly with data 1`] = `
       </div>
       <!---->
     </div>
-    <div class="form-checkbox"><label for="sent_ebook_news-form" class="form-checkbox-label required">I agree to receive the monthly newsletter from Mad Devs
+    <div class="form-checkbox"><label for="sent_ebook_news-form" class="form-checkbox-label">I agree to receive the monthly newsletter from Mad Devs
         <input id="sent_ebook_news-form" data-testid="user-agreement-checkbox-input" type="checkbox" name="User agreement" class="form-checkbox-input">
         <div class="checkmark"></div>
       </label></div> <button id="" class="ebook-form__button">

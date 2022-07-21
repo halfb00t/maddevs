@@ -267,7 +267,7 @@ exports[`OrderProjectFromUsForm component should render correctly 1`] = `
       class="form-checkbox"
     >
       <label
-        class="form-checkbox-label required"
+        class="form-checkbox-label"
         for="sent_ebook_news-order-project-form"
       >
         I agree to receive the monthly newsletter from Mad Devs
