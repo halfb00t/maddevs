@@ -130,9 +130,9 @@ export default {
 
   &__compare-overlay {
     position: absolute;
-    overflow:hidden;
+    overflow: hidden;
     height: auto;
-    top:0;
+    top: 0;
   }
 
   &__before-img,
@@ -156,7 +156,7 @@ export default {
     right: 0;
     height: 50px;
     cursor: ew-resize;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
     opacity: 0;
   }
 
@@ -195,8 +195,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    background: #FF0000;
+    color: $text-color--white-primary;
+    background: $bgcolor--venetian-red;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -218,10 +218,10 @@ export default {
     top:0;
     width: 2px;
     height: 100%;
-    background: #FF0000;
+    background: $bgcolor--venetian-red;
     z-index: 4;
-    pointer-events:none;
-    user-select:none;
+    pointer-events: none;
+    user-select: none;
   }
 }
 </style>

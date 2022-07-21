@@ -767,6 +767,12 @@
       "default-slice": {
         "primary": {}
       }
+    },
+    "AchievementsSlice": {
+      "default-slice": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
