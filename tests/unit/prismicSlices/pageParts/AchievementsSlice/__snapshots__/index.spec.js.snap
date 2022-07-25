@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AchievementsSlice.vue should render correctly with data 1`] = `
+<div>
+  <div
+    class="wrapper"
+  >
+    <section
+      class="container achievements-container"
+    >
+      <div
+        class="achievement"
+        data-testid="achieve-block"
+      >
+        <img
+          alt="Image alt text"
+          class="achievement__image"
+          data-src="https://www.example.com/image.jpg"
+          height="100"
+          width="100"
+        />
+         
+        <h3
+          class="achievement__description"
+        >
+          
+        Achievements description
+      
+        </h3>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`AchievementsSlice.vue should render correctly with no data 1`] = `
+<div>
+  <div
+    class="wrapper"
+  >
+    <section
+      class="container achievements-container"
+    />
+  </div>
+</div>
+`;
