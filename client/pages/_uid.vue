@@ -13,6 +13,7 @@ import SliceZone from 'vue-slicezone'
 import { buildHead } from '@/data/seo'
 import headerMixin from '@/mixins/headerMixin'
 import getRoutePrefix from '@/helpers/getRoutePrefix'
+import { Strapi } from '@/services/strapi'
 
 export default {
   components: {
@@ -56,13 +57,20 @@ export default {
   }) {
     await store.dispatch('getCustomPage', params.uid)
     const { customPage } = store?.getters
+    const strapi = new Strapi({ uid: params.uid })
+    const data = await strapi.getPageContent()
+    console.log(data) // todo remove this.
+    console.log(strapi) // todo remove this.
 
     if (
       !customPage?.slices
       || (!customPage.released && process.env.ffEnvironment === 'production')
       || getRoutePrefix(route.path) !== `${customPage.routePrefix ? `${customPage.routePrefix}/` : ''}${params.uid}`
     ) {
-      return error({ statusCode: 404, message: 'Page not found' })
+      return error({
+        statusCode: 404,
+        message: 'Page not found',
+      })
     }
 
     store.dispatch('showFooter', customPage.showFooter)
