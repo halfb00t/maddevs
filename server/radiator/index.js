@@ -28,6 +28,7 @@ import {
   MAD_RADIATOR_FIRESTORE_AUTH_PROVIDER,
   MAD_RADIATOR_FIRESTORE_CLIENT_CERT_URL,
   MAD_RADIATOR_FIRESTORE_PRIVATE_KEY,
+  NODE_ENV,
 } from '../config'
 
 const { Radiator } = require('@maddevs/mad-radiator')
@@ -51,6 +52,7 @@ function runRadiator() {
   const dailyConfig = {
     ...baseConfig,
     range: 'day',
+    nodeEnv: NODE_ENV,
   }
 
   const fireStore = {
@@ -135,6 +137,9 @@ function runRadiator() {
     urlTestRegexp: '^((?!\\/blog).)*$',
     sitemapUrl: 'sitemapindex.xml',
   }
+  const glassdoor = {
+    glassdoorUrl: 'https://www.glassdoor.com/Overview/Working-at-Mad-Devs-EI_IE2507466.11,19.htm',
+  }
   const dailyRadiator = new Radiator(dailyConfig)
 
   dailyRadiator.useAnalytics(analyticsConfig)
@@ -142,6 +147,7 @@ function runRadiator() {
   dailyRadiator.useQuoraService(quora, fireStore)
   dailyRadiator.useNewPagesInSite(lighthouseConfig, fireStore)
   dailyRadiator.usePageAnalytics(pageAnalyticsConfig, fireStore)
+  dailyRadiator.useGlassdoorService(glassdoor, fireStore)
   dailyRadiator.useSlack(slackConfig)
   dailyRadiator.scheduleJob(dailyScheduleConfig)
 
