@@ -28,6 +28,7 @@ import {
   MAD_RADIATOR_FIRESTORE_AUTH_PROVIDER,
   MAD_RADIATOR_FIRESTORE_CLIENT_CERT_URL,
   MAD_RADIATOR_FIRESTORE_PRIVATE_KEY,
+  NODE_ENV,
 } from '../config'
 
 const { Radiator } = require('@maddevs/mad-radiator')
@@ -51,6 +52,7 @@ function runRadiator() {
   const dailyConfig = {
     ...baseConfig,
     range: 'day',
+    nodeEnv: NODE_ENV,
   }
 
   const fireStore = {
