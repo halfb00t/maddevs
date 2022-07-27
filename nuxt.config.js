@@ -401,6 +401,7 @@ export default async () => {
       analytics4Key: process.env.NODE_GA4_KEY,
       pixelFacebookId: process.env.FACEBOOK_CODE,
       sendPulseAddressBooksId: process.env.NODE_SENDPULSE_ADDRESSBOOKS_ID,
+      strapiApiUrl: process.env.NODE_STRAPI_API_URL,
     },
     router: {
       trailingSlash: true,

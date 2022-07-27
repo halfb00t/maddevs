@@ -57,10 +57,10 @@ export default {
   }) {
     await store.dispatch('getCustomPage', params.uid)
     const { customPage } = store?.getters
-    const strapi = new Strapi({ uid: params.uid })
-    const data = await strapi.getPageContent()
-    console.log(data) // todo remove this.
+    const strapi = new Strapi()
+    const data = await strapi.getPageContent(params.uid)
     console.log(strapi) // todo remove this.
+    console.log(data) // todo remove this.
 
     if (
       !customPage?.slices

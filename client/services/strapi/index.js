@@ -1,42 +1,36 @@
 import axios from 'axios'
-import Spacer from '@/services/strapi/components/Spacer'
-import Text from '@/services/strapi/components/Text'
+
+import { getComponentContent } from '@/services/strapi/getComponentContent'
 
 export class Strapi {
-  uid = ''
-
   pageData = {}
 
-  constructor(props) {
-    this.uid = props.uid
+  queryOptions = '/api/pages?&populate=deep&filters[uid][$eq]='
+
+  constructor(options) {
+    this.options = options
+  }
+
+  // eslint-disable-next-line
+  async serviceGet(url) {
+    return axios.get(url)
+  }
+
+  createAxiosUrl(uid) { // bad naming and position
+    try {
+      return `${process.env.strapiApiUrl}${this.queryOptions}${uid}`
+    } catch (e) {
+      console.log(e)
+    }
+    return { data: [] }
   }
 
   /**
-   * @param {{__component:Object}} component
+   * @param uid
    */
-  static generateComponentData(component) {
+  async getPageContent(uid) {
+    const { data } = await this.serviceGet(this.createAxiosUrl(uid))
     // eslint-disable-next-line
-    switch (component['__component']) {
-      case 'prismic-slices.spacer':
-        return new Spacer(component)
-      case 'prismic-slices.text':
-        return new Text(component)
-      default:
-        return []
-    }
-  }
-
-  async getPageContent() {
-    const { data } = await axios.get(`http://158.181.22.126:1337/pages?uid=${this.uid}`)
-    let pageData = []
-    try {
-      pageData = data[0].content.map(item =>
-        // eslint-disable-next-line
-         Strapi.generateComponentData(item))
-    } catch (e) {
-      // eslint-disable-next-line
-      console.log(e)
-    }
-    this.pageData = pageData
+    return data.data[0]['attributes'].components.map(item => getComponentContent(item))
   }
 }
