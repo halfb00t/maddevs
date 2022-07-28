@@ -34,8 +34,8 @@
         slot="icon"
         v-lazy-load
         :data-src="require(`@/assets/img/Studies/svg/bandpay-footer.svg`)"
-        width="230"
-        height="113"
+        width="294"
+        height="88"
         alt="Bandpay"
         class="case_logotype-bandpay"
       >
@@ -165,10 +165,18 @@ export default {
   & .case_lido__header-description {
     color: $text-color--white-primary;
   }
+
+  & .case_footer {
+    padding-top: 46px;
+
+    & .case_title {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .case_logotype-bandpay {
-  margin-bottom: 35px;
+  margin-bottom: 46px;
   @media screen and (max-width: 768px) {
     width: 180px;
     height: 87.35px;
