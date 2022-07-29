@@ -6,7 +6,7 @@ exports[`UIFormCheckboxes should render correctly with id prop 1`] = `
     class="form-checkbox"
   >
     <label
-      class="form-checkbox-label required"
+      class="form-checkbox-label"
       for="sent_ebook_news-custom-id"
     >
       I agree to receive the monthly newsletter from Mad Devs
@@ -33,7 +33,7 @@ exports[`UIFormCheckboxes should render correctly with slot 1`] = `
     class="form-checkbox"
   >
     <label
-      class="form-checkbox-label required"
+      class="form-checkbox-label"
       for="sent_ebook_news-custom-id"
     >
       I agree to receive the monthly newsletter from Mad Devs
