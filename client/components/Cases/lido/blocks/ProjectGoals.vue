@@ -21,6 +21,7 @@
         <a
           href="#terminology"
           nofollow
+          data-testid="anchor-link"
           @click.prevent="goToTerminology"
         >
           here.

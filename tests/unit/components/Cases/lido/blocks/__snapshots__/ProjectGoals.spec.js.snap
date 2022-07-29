@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido ProjectGoals component should correctly render component 1`] = `
+<div>
+  <section
+    class="container_regular m-96_bottom case-lido__project-goals"
+  >
+    <h3
+      class="case_title_h2 m-48_bottom media-m-24_bottom"
+    >
+      
+    Project goals and how we resolved them
+  
+    </h3>
+     
+    <div
+      class="parallax_cards"
+    >
+      <div
+        class="parallax_cards__item"
+      >
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom parallax-title"
+          >
+            
+    Goal 1:
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      Allow customers to receive an additional reward in addition to the stacking rewards if they contribute tokens to the liquidity pool.
+    
+          </p>
+           
+        </div>
+      </div>
+       
+      <div
+        class="parallax_cards__item"
+      >
+        <div
+          class="card-content background-color-silver"
+          iconheight="51.94"
+          iconwidth="51.94"
+        >
+          <img
+            alt="Icon"
+            class="card-content_icon"
+            data-src="img.jpg"
+            height="51.94"
+            width="51.94"
+          />
+           
+          <h4
+            class="case_title_h4 m-10-bottom parallax-title"
+          >
+            
+    Goal 2:
+  
+          </h4>
+           
+          <p
+            class="case_paragraph"
+          >
+            
+      The bridge that was in use at the time was sunsetting, so another bridge was required to keep the platform operational.
+    
+          </p>
+           
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="case-lido__project-goals-alert m-24_top"
+    >
+      <img
+        alt="Icon anchor"
+        class="case-lido__project-goals-anchor-icon"
+        data-src="img.jpg"
+        height="25"
+        width="25"
+      />
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      Before proceeding, we advise that you review the terminology presented
+      
+        <a
+          data-testid="anchor-link"
+          href="#terminology"
+          nofollow=""
+        >
+          
+        here.
+      
+        </a>
+      </p>
+    </div>
+  </section>
+</div>
+`;

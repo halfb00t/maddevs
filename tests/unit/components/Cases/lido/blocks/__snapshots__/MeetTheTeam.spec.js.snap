@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido MeetTheTeam component should correctly render component 1`] = `
+<div>
+  <section
+    class="container_regular m-96_bottom media-m-48_bottom"
+  >
+    <h3
+      class="case_title_h2 m-24_bottom"
+    >
+      
+    Meet the team
+  
+    </h3>
+     
+    <ul
+      class="case_list-team m-72_bottom media-m-41_bottom"
+    >
+      <li
+        class="case_team-item"
+      >
+        <picture
+          class="case_team-item__image"
+        >
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Pavel Zverev"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="50"
+            width="50"
+          />
+        </picture>
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Pavel Zverev
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Tech Lead
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture
+          class="case_team-item__image"
+        >
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Emir Sabyrkulov"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="50"
+            width="50"
+          />
+        </picture>
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Emir Sabyrkulov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Project Manager
+    
+          </p>
+        </div>
+      </li>
+      <li
+        class="case_team-item"
+      >
+        <picture
+          class="case_team-item__image"
+        >
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Gleb Ershov"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="50"
+            width="50"
+          />
+        </picture>
+         
+        <div
+          class="case_team-item__info"
+        >
+          <p
+            class="case_team-item__name"
+          >
+            
+      Gleb Ershov
+    
+          </p>
+           
+          <p
+            class="case_team-item__position"
+          >
+            
+      Tech Lead
+    
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+`;

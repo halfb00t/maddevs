@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido ListItemTerminology component should correctly render component 1`] = `
+<div>
+  <li
+    class="list-item-terminology"
+  />
+</div>
+`;

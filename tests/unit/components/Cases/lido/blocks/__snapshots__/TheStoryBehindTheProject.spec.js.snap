@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido TheStoryBehindTheProject component should correctly render component 1`] = `
+<div>
+  <section
+    class="container_regular m-96_bottom media-m-48_bottom case-lido__story-behind"
+  >
+    <h3
+      class="case_title_h2 m-12_bottom media-m-24_bottom"
+    >
+      
+    The story behind the project
+  
+    </h3>
+     
+    <p
+      class="case_paragraph m-24_bottom media-m-48_bottom"
+    >
+      
+    This project came about as a result of a perfect match between the clients' desires and Mad Devs' capabilities.
+    The client lacked the time and resources necessary to accelerate the rollout of new integrations,
+    such as conducting research, comparing two codebases, and developing a plan for task scoping.
+  
+    </p>
+     
+    <ul
+      class="case_list m-48_bottom media-m-24_bottom"
+    >
+      <li
+        class="case-lido__story-behind-list-item list-item-custom-check-mark background-color-medium-turquoise"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <img
+          alt="[object Object]"
+          class="list-item__box-icon"
+          data-src="img.jpg"
+          height="25"
+          width="25"
+        />
+         
+        <p
+          class="case_paragraph text-color-white"
+        >
+          
+        Blockchain is not a typical technological advance. You cannot immediately turn around a server and production.
+      
+        </p>
+      </li>
+      <li
+        class="case-lido__story-behind-list-item list-item-custom-check-mark background-color-blue-sky"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <img
+          alt="[object Object]"
+          class="list-item__box-icon"
+          data-src="img.jpg"
+          height="25"
+          width="25"
+        />
+         
+        <p
+          class="case_paragraph text-color-white"
+        >
+          
+        Lido has a request; Mad Devs has capacity. That was an ideal way to initiate collaboration.
+      
+        </p>
+      </li>
+      <li
+        class="case-lido__story-behind-list-item list-item-custom-check-mark background-color-button-blue"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom"
+      >
+        <img
+          alt="[object Object]"
+          class="list-item__box-icon"
+          data-src="img.jpg"
+          height="25"
+          width="25"
+        />
+         
+        <p
+          class="case_paragraph text-color-white"
+        >
+          
+        Our collaboration is composed of two phases.
+      
+        </p>
+      </li>
+    </ul>
+  </section>
+</div>
+`;

@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido _uid component should render correctly 1`] = `
+<div>
+  <main
+    class="case case_lido"
+  >
+    <div
+      class="case-lido__header-wrapper"
+    >
+      <section
+        class="case_header case_header-lido"
+        id="transparent-header-area"
+      >
+        <img
+          alt="case video fallback"
+          class="case_main-video_fallback"
+          data-src="img.jpg"
+        />
+         
+        <!---->
+         
+        <div
+          class="case_header-content"
+        >
+          <div
+            class="case_header-text"
+            style="opacity: 1;"
+          >
+            <div
+              class="case_case-study-item"
+            >
+              
+        Case Study
+      
+            </div>
+             
+            <h1
+              class="case_header-title case_lido__header-title"
+            >
+              
+        Lido: decentralized
+        
+              <br />
+              
+        staking platform
+      
+            </h1>
+             
+            <p
+              class="case_header-description case_lido__header-description"
+            >
+              
+        Mad Devs assisted Lido - a liquid staking solution - to improve their
+        
+              <br />
+              
+        product and simplify and secure staking for your digital assets.
+      
+            </p>
+             
+          </div>
+           
+          <img
+            alt="Lido logo"
+            class="case_header-logo case_lido-logo"
+            height="70"
+            src="img.jpg"
+            style="opacity: 1;"
+            width="286"
+          />
+        </div>
+      </section>
+    </div>
+     
+    <main-stub />
+     
+    <section
+      class="case_footer container_full"
+    >
+      <img
+        alt="Bandpay"
+        class="case_logotype-bandpay"
+        data-src="[object Object]"
+        height="88"
+        width="294"
+      />
+       
+      <h2
+        class="case_title case_title_h2 case_title-bandpay"
+      >
+        
+    BandPay: A tool to run business
+  
+      </h2>
+       
+      <nuxtlink-stub
+        class="case_next-project-button"
+        to="/case-studies/bandpay/"
+      >
+        
+    Read next project
+  
+      </nuxtlink-stub>
+    </section>
+  </main>
+</div>
+`;

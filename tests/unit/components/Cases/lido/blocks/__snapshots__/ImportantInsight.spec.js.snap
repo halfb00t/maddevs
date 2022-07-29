@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido ImportantInsight component should correctly render component 1`] = `
+<div>
+  <section
+    class="case-lido__important-insight m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular"
+    >
+      <h4
+        class="case_title_h4-28 m-12_bottom"
+      >
+        
+      Important insight to remember:
+    
+      </h4>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      Mad Devs successfully completed the migration, passing all the tests and audits.
+      Nonetheless, the work of both the Lido team and the Mad Devs team uncovered an intriguing pattern that deserves
+      everyone's attention.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      The smart contract work with the frontend, which will also pack bytes. For the old bridge,
+      it was packed from right to left, but for us, it should be packed from left to right.
+      The chain tests revealed that everything was working in order. However, when the users arrived,
+      the most crucial detail was uncovered. If the users did not reload the page during the migration,
+      they became stuck during the operation.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-48_bottom"
+      >
+        
+      Total stuck in the bridge - 450 ETH (1 million 200 thousand at that rate by then).
+    
+      </p>
+       
+      <div
+        class="twitter-card"
+      >
+        <div
+          class="twitter-card__inner"
+        >
+          <img
+            alt=""
+            class="twitter-card__inner-three-dots"
+            data-src="img.jpg"
+            height="4"
+            width="22"
+          />
+           
+          <div
+            class="twitter-card__inner-header m-24_bottom"
+          >
+            <img
+              alt="Lido Twitter Logo"
+              class="twitter-card__inner-logo"
+              data-src="img.jpg"
+              height="56"
+              width="56"
+            />
+             
+            <div
+              class="twitter-card__inner-header-content"
+            >
+              <p
+                class="case_paragraph twitter-card__inner-header-text"
+              >
+                
+          Lido
+        
+              </p>
+               
+              <p
+                class="case_paragraph twitter-card__inner-header-company-tag twitter-card__header-text"
+              >
+                
+          @Lidofinance
+        
+              </p>
+            </div>
+          </div>
+           
+          <p
+            class="case_paragraph twitter-card__main-text"
+          >
+            
+        Due to a UI bug associated with today's bETH migration - most likely related to non-invalidated
+        caching - approximately 450 ETH of user funds were locked. The
+        
+            <a
+              class="twitter-card__main-text-link"
+              href="https://anchor.lido.fi/unwrap"
+              target="_blank"
+            >
+              
+          anchor.lido.fi
+        
+            </a>
+            
+        Ul is currently
+        shut down to prevent any potential further issues.
+      
+          </p>
+           
+          <div
+            class="twitter-card__inner-footer m-24_top"
+          >
+            <p
+              class="case_paragraph twitter-card__inner-footer-text"
+            >
+              
+        Twitter Web App
+      
+            </p>
+          </div>
+        </div>
+         
+        <p
+          class="case_paragraph twitter-card__source case_text-align-center m-12_top"
+        >
+          
+    Source:
+    
+          <a
+            class="twitter-card__source-link"
+            href="https://twitter.com/LidoFinance/status/1486353473985822727"
+            target="_blank"
+          >
+            
+      https://twitter.com/LidoFinance
+    
+          </a>
+        </p>
+      </div>
+       
+      <p
+        class="case_paragraph m-48_top"
+      >
+        
+      Moral: Not only is it important to make tests "green," but also to evaluate the entire system - 
+        <strong>
+          the user should
+        know if the Smart contract has been modified (it is vital to reloading the page).
+        </strong>
+      </p>
+    </div>
+  </section>
+</div>
+`;

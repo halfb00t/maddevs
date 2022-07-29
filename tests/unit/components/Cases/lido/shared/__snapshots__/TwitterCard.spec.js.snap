@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido TwitterCard shared component should correctly render component 1`] = `
+<div>
+  <div
+    class="twitter-card"
+  >
+    <div
+      class="twitter-card__inner"
+    >
+      <img
+        alt=""
+        class="twitter-card__inner-three-dots"
+        data-src="img.jpg"
+        height="4"
+        width="22"
+      />
+       
+      <div
+        class="twitter-card__inner-header m-24_bottom"
+      >
+        <img
+          alt="Lido Twitter Logo"
+          class="twitter-card__inner-logo"
+          data-src="img.jpg"
+          height="56"
+          width="56"
+        />
+         
+        <div
+          class="twitter-card__inner-header-content"
+        >
+          <p
+            class="case_paragraph twitter-card__inner-header-text"
+          >
+            
+          Lido
+        
+          </p>
+           
+          <p
+            class="case_paragraph twitter-card__inner-header-company-tag twitter-card__header-text"
+          >
+            
+          @Lidofinance
+        
+          </p>
+        </div>
+      </div>
+        
+      <div
+        class="twitter-card__inner-footer m-24_top"
+      >
+        <p
+          class="case_paragraph twitter-card__inner-footer-text"
+        >
+          
+        Twitter Web App
+      
+        </p>
+      </div>
+    </div>
+     
+    <p
+      class="case_paragraph twitter-card__source case_text-align-center m-12_top"
+    >
+      
+    Source:
+    
+      <a
+        class="twitter-card__source-link"
+        href="https://maddevs.io"
+        target="_blank"
+      >
+        
+      https://twitter.com/LidoFinance
+    
+      </a>
+    </p>
+  </div>
+</div>
+`;
