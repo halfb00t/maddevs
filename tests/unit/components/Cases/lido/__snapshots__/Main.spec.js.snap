@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido Main component should render correctly 1`] = `
+<div>
+  <section
+    class="case-lido__main"
+  >
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <about-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <lidostatisticswithtimeline-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <thestorybehindtheproject-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <projectgoals-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <firstchallenge-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <visualflow-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <secondchallenge-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <importantinsight-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <projectplanning-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <results-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <technologiesstack-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <meettheteam-stub />
+    </lazyhydrate-stub>
+     
+    <lazyhydrate-stub
+      idletimeout="2000"
+      whenvisible="true"
+    >
+      <terminology-stub />
+    </lazyhydrate-stub>
+  </section>
+</div>
+`;

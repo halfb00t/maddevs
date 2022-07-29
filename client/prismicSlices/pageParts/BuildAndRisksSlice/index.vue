@@ -31,7 +31,7 @@
               width="338"
               height="477"
               :data-src="slice.primary.image.url"
-              :alt="slice.primary.image.alt"
+              :alt="slice.primary.image.alt || 'Image'"
               data-testid="main-block__img-block-image"
               class="main-block__img-block-image"
             >
@@ -51,7 +51,7 @@
             width="338"
             height="477"
             :data-src="slice.primary.image.url"
-            :alt="slice.primary.image.alt"
+            :alt="slice.primary.image.alt || 'Image'"
             class="main-block__img-block-image"
           >
         </figure>
