@@ -9,11 +9,11 @@
       </h3>
       <List>
         <ListItemTerminology
-          v-for="(terming, i) in terminologyLido"
-          :key="terming + i"
+          v-for="(term, i) in terminologyLido"
+          :key="term + i"
           data-aos="fade-up"
         >
-          <TextParagraph v-html="terming" />
+          <TextParagraph v-html="term" />
         </ListItemTerminology>
       </List>
     </div>
