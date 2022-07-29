@@ -23,7 +23,7 @@
           width="25"
           height="25"
           :data-src="$getMediaFromS3(`/images/Cases/lido/svg/check-mark.svg`)"
-          :alt="listItem"
+          :alt="listItem.text"
           class="list-item__box-icon"
         >
         <TextParagraph

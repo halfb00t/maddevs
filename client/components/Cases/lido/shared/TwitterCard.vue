@@ -4,7 +4,7 @@
       <img
         v-lazy-load
         :data-src="$getMediaFromS3('/images/Cases/lido/svg/three-dots.svg')"
-        alt=""
+        alt="Three dots"
         class="twitter-card__inner-three-dots"
         width="22"
         height="4"

@@ -53,7 +53,7 @@ exports[`Lido ImportantInsight component should correctly render component 1`] =
           class="twitter-card__inner"
         >
           <img
-            alt=""
+            alt="Three dots"
             class="twitter-card__inner-three-dots"
             data-src="img.jpg"
             height="4"

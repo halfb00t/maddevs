@@ -32,7 +32,7 @@ exports[`Lido TheStoryBehindTheProject component should correctly render compone
         data-aos-anchor-placement="bottom"
       >
         <img
-          alt="[object Object]"
+          alt="Blockchain is not a typical technological advance. You cannot immediately turn around a server and production."
           class="list-item__box-icon"
           data-src="img.jpg"
           height="25"
@@ -53,7 +53,7 @@ exports[`Lido TheStoryBehindTheProject component should correctly render compone
         data-aos-anchor-placement="bottom"
       >
         <img
-          alt="[object Object]"
+          alt="Lido has a request; Mad Devs has capacity. That was an ideal way to initiate collaboration."
           class="list-item__box-icon"
           data-src="img.jpg"
           height="25"
@@ -74,7 +74,7 @@ exports[`Lido TheStoryBehindTheProject component should correctly render compone
         data-aos-anchor-placement="bottom"
       >
         <img
-          alt="[object Object]"
+          alt="Our collaboration is composed of two phases."
           class="list-item__box-icon"
           data-src="img.jpg"
           height="25"

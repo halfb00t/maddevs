@@ -13,7 +13,7 @@
           :width="achievement.width"
           :height="achievement.height"
           :data-src="achievement.image.url"
-          :alt="achievement.image.alt"
+          :alt="achievement.image.alt || 'Image'"
         >
         <h3 class="achievement__description">
           {{ achievement.description }}
