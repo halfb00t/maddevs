@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PageContent :uid="uid" />
     <SliceZone
       type="page"
       :slices="customPage.slices"
@@ -13,11 +14,12 @@ import SliceZone from 'vue-slicezone'
 import { buildHead } from '@/data/seo'
 import headerMixin from '@/mixins/headerMixin'
 import getRoutePrefix from '@/helpers/getRoutePrefix'
-import { Strapi } from '@/services/strapi'
+import PageContent from '@/strapi/pageContent'
 
 export default {
   components: {
     SliceZone,
+    PageContent,
   },
 
   mixins: [headerMixin('.start-screen-slice')],
@@ -53,15 +55,14 @@ export default {
   middleware: 'redirectToHomePage',
 
   async asyncData({
-    error, params, store, route,
+    error,
+    params,
+    store,
+    route,
   }) {
     await store.dispatch('getCustomPage', params.uid)
     const { customPage } = store?.getters
-    const strapi = new Strapi()
-    const data = await strapi.getPageContent(params.uid)
-    console.log(strapi) // todo remove this.
-    console.log(data) // todo remove this.
-
+    const { uid } = params
     if (
       !customPage?.slices
       || (!customPage.released && process.env.ffEnvironment === 'production')
@@ -75,6 +76,7 @@ export default {
 
     store.dispatch('showFooter', customPage.showFooter)
     return {
+      uid,
       customPage,
       openGraphUrl: `${process.env.domain}/${customPage.routePrefix}/${params.uid}/`,
     }

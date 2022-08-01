@@ -12,8 +12,8 @@ export class TextParagraph extends ITextParagraph {
    */
   constructor(props) {
     super()
+    this.componentName = 'TextParagraph'
     // eslint-disable-next-line
-    this.componentName = props['__component'] || ''
     this.text = props.text || ''
     this.maxWidth = props.max_width || ''
     this.background = props.background.background || ''
@@ -23,5 +23,9 @@ export class TextParagraph extends ITextParagraph {
     this.textSizeLG = props.text_size.lg_screen || ''
     this.textSizeMD = props.text_size.md_screen || ''
     this.textSizeSM = props.text_size.sm_screen || ''
+  }
+
+  getComponentName() {
+    return this.componentName
   }
 }

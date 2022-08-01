@@ -1,4 +1,6 @@
 export class ISpacer {
+  componentName = 'spacer'
+
   heightDefault = ''
 
   heightScreenXl = ''

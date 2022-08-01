@@ -13,6 +13,7 @@ export class TextTitle extends ITextTitle {
    */
   constructor(props) {
     super()
+    this.componentName = 'TextTitle'
     this.text = props.title || ''
     this.show_anchor_link = props.show_anchor_link || ''
     this.max_width = props.max_width || ''
@@ -25,5 +26,9 @@ export class TextTitle extends ITextTitle {
     this.textSizeLG = props.text_size.lg_screen || ''
     this.textSizeMD = props.text_size.md_screen || ''
     this.textSizeSM = props.text_size.sm_screen || ''
+  }
+
+  getComponentName() {
+    return this.componentName
   }
 }

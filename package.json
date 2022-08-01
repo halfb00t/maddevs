@@ -51,6 +51,7 @@
     "@sentry/tracing": "^6.18.2",
     "@sentry/vue": "^6.18.2",
     "@sentry/webpack-plugin": "^1.18.8",
+    "@vue/composition-api": "^1.7.0",
     "aos": "^2.3.4",
     "axios": "^0.21.3",
     "bowser": "^2.11.0",
@@ -128,9 +129,7 @@
     "vue-loader": "15.9.6"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "npm run precommit"
-    }
+    "hooks": {}
   },
   "snyk": true
 }

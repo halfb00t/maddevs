@@ -1,3 +1,4 @@
+import { markRaw } from '@vue/composition-api'
 import { ISpacer } from '@/services/strapi/components/interfaces/ISpacer'
 
 export class Spacer extends ISpacer {
@@ -11,11 +12,17 @@ export class Spacer extends ISpacer {
    */
   constructor(props) {
     super()
+    markRaw(this)
+    this.componentName = 'Spacer'
     this.heightDefault = props.height_default || ''
     this.heightScreenXl = props.height_xl || ''
     this.heightScreenLg = props.height_lg || ''
     this.heightScreenMd = props.height_md || ''
     this.heightScreenSm = props.height_sm || ''
     this.background = props.background?.background || ''
+  }
+
+  getComponentName() {
+    return this.componentName
   }
 }

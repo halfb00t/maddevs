@@ -28,11 +28,13 @@ export const generateComponentData = component => {
 
   /** Spacer component  **/
     if (name.includes('spacer.spacer')) {
+      console.log('spacer')
       return new Spacer(component)
   }
 
   /** startScreen component  **/
   if (name.startsWith('start_screen')) {
+    console.log('start_screen')
     // todo add all variations
   }
   return { type: 'none', component } // todo replace to error throw when component will done

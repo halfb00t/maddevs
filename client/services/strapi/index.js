@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { markRaw } from '@vue/composition-api'
 
 import { getComponentContent } from '@/services/strapi/getComponentContent'
 
@@ -31,6 +32,8 @@ export class Strapi {
   async getPageContent(uid) {
     const { data } = await this.serviceGet(this.createAxiosUrl(uid))
     // eslint-disable-next-line
-    return data.data[0]['attributes'].components.map(item => getComponentContent(item))
+    const strapiData = data.data[0]['attributes'].components.map(item => getComponentContent(item))
+    markRaw(strapiData)
+    return strapiData
   }
 }
