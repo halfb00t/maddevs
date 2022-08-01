@@ -28,6 +28,7 @@ import {
   MAD_RADIATOR_FIRESTORE_AUTH_PROVIDER,
   MAD_RADIATOR_FIRESTORE_CLIENT_CERT_URL,
   MAD_RADIATOR_FIRESTORE_PRIVATE_KEY,
+  MAD_RADIATOR_TOTAL_USERS_TO_ENJI_URL,
   NODE_ENV,
 } from '../config'
 
@@ -69,6 +70,9 @@ function runRadiator() {
   }
 
   const analyticsConfig = {
+    totalUsersToEnji: {
+      url: MAD_RADIATOR_TOTAL_USERS_TO_ENJI_URL,
+    },
     pagesPathForViewsAnalytics: [
       '/customer-university/',
       '/blog/',
@@ -141,7 +145,6 @@ function runRadiator() {
     glassdoorUrl: 'https://www.glassdoor.com/Overview/Working-at-Mad-Devs-EI_IE2507466.11,19.htm',
   }
   const dailyRadiator = new Radiator(dailyConfig)
-
   dailyRadiator.useAnalytics(analyticsConfig)
   dailyRadiator.useRedditCountPosts(redditConfig)
   dailyRadiator.useQuoraService(quora, fireStore)
