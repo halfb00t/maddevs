@@ -20,11 +20,23 @@
         <StatisticsContainer
           class="m-72_top media-m-62_top"
         >
-          <StatisticsItem
+          <StatisticCard
             v-for="(statisticsItem, i) in statisticsLido"
             :id="`about-item-${i}`"
-            :key="statisticsItem.title"
-            v-bind="statisticsItem"
+            :key="statisticsItem.description"
+            :number="statisticsItem.number"
+            :number-text="statisticsItem.numberText"
+            :name="statisticsItem.name"
+            :header-text="statisticsItem.headerText"
+            :header-text-color="statisticsItem.headerTextColor"
+            :without-space-before-number="statisticsItem.withoutSpaceBeforeNumber"
+            :without-space-after-number="statisticsItem.withoutSpaceAfterNumber"
+            :text-before-number="statisticsItem.textBeforeNumber"
+            :has-space-before-number="false"
+            :has-space-after-number="false"
+            :number-color="statisticsItem.numberColor"
+            section="about"
+            :index="i"
           />
         </StatisticsContainer>
         <LottieMad
@@ -75,8 +87,10 @@
 import TextParagraph from '@/components/Cases/shared/TextParagraph'
 import LottieMad from '@/components/shared/LottieMad'
 import StatisticsContainer from '@/components/Cases/shared/StatisticsContainer'
-import StatisticsItem from '@/components/Cases/shared/StatisticsItem'
+import StatisticCard from '@/components/Cases/shared/StatisticsCard'
 import { statisticsLido } from '@/data/caseLido'
+import IntersectionObserverMixin from '@/mixins/IntersectionObserverMixin'
+import countUp from '@/helpers/countUp'
 
 export default {
   name: 'About',
@@ -84,8 +98,15 @@ export default {
     TextParagraph,
     LottieMad,
     StatisticsContainer,
-    StatisticsItem,
+    StatisticCard,
   },
+
+  mixins: [
+    IntersectionObserverMixin(
+      ['statistics-about-1', 'statistics-about-2'],
+      countUp,
+    ),
+  ],
 
   data() {
     return {
@@ -119,6 +140,11 @@ export default {
     }
 
     ::v-deep .case_statistics-item {
+      gap: 12px;
+      &_number {
+        border-right: none;
+      }
+
       &:first-child {
         padding-left: 0;
         padding-right: 25.5px;
