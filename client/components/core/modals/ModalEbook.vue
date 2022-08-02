@@ -18,14 +18,12 @@
         :data-src="ebookImage.url"
         :alt="ebookImage.alt || 'Image'"
       >
-      <h2 class="modal-content__title">
-        Get your copy of “{{ ebookTitle }}”
-      </h2>
       <ReadForm
         id="modal-ebook"
         :ebook-path="ebookPath"
         :ebook-name="ebookName"
         :ebook-image="ebookImage"
+        :ebook-sub-title="ebookSubTitle"
         :send-pulse-template-id="sendPulseTemplateId"
         @form-sended="handleSendedForm"
       />
@@ -63,9 +61,9 @@ export default {
       default: '',
     },
 
-    ebookTitle: {
-      type: String,
-      default: '',
+    ebookSubTitle: {
+      type: Array,
+      default: () => [],
     },
 
     ebookPath: {
@@ -121,36 +119,29 @@ export default {
 <style lang="scss" scoped>
 .modal-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   padding: 42px 48px;
   background-color: $bgcolor--silver;
-  border-radius: 4px;
   box-sizing: border-box;
 
-  @media screen and (max-width: 540px) {
-    padding: 32px 38px;
-  }
-
-  @media screen and (max-width: 376px) {
-    padding: 22px 28px;
+  @media screen and (max-width: 675px) {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__img {
     width: 100%;
-    max-width: 140px;
+    max-width: 249px;
     height: auto;
-  }
+    margin-right: 43px;
 
-  &__title {
-    @include font('Inter', 22px, 400);
-    line-height: 30px;
-    letter-spacing: -1px;
-    color: $text-color--chinese-black;
-    margin-top: 15px;
-    margin-bottom: 24px;
-    width: 100%;
+    @media screen and (max-width: 480px) {
+      max-width: 78px;
+      margin-right: 0;
+      margin-bottom: 21px;
+    }
   }
 }
 
@@ -161,9 +152,25 @@ export default {
       padding: 0;
     }
 
+    &_head {
+      position: unset;
+
+      @media screen and (max-width: 640px) {
+        position: relative;
+      }
+    }
+
+    &_container {
+      border-radius: 0;
+
+      @media screen and (max-width: 640px) {
+        padding: 0 16px;
+      }
+    }
+
     &_content {
       padding: 0;
-      max-height: 80vh;
+      max-height: 90vh;
     }
 
     &_head {
@@ -174,14 +181,20 @@ export default {
 
     &_container {
       @media screen and (min-width: 640px) {
-        width: 498px;
-        max-width: 498px;
+        width: 998px;
+        max-width: 998px;
       }
     }
 
     &_close {
-      top: 20px;
-      right: 20px;
+      padding: 0;
+      top: 21px;
+      right: 41px;
+
+      @media screen and (max-width: 768px) {
+        top: 20px;
+        right: 20px;
+      }
     }
   }
 

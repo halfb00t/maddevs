@@ -7,7 +7,7 @@
   >
     <img
       :src="image && image.url"
-      :alt="image && image.alt || 'Image'"
+      :alt="(image && image.alt) || 'Image'"
       width="1680"
       height="969"
       :style="{
@@ -24,9 +24,7 @@
         :style="{ opacity: sectionTextOpacity }"
         class="start-screen-slice__flex-wrapper"
       >
-        <div
-          class="start-screen-slice__content"
-        >
+        <div class="start-screen-slice__content">
           <div class="start-screen-slice__titles-wrapper">
             <PrismicRichText
               v-if="$prismic.asText(title)"
@@ -59,12 +57,10 @@
             </UIButton>
           </div>
         </div>
-        <div
-          class="start-screen-slice__img-box"
-        >
+        <div class="start-screen-slice__img-box">
           <img
             :src="rightImage && rightImage.url"
-            :alt="rightImage && rightImage.alt || 'Image'"
+            :alt="(rightImage && rightImage.alt) || 'Image'"
             width="259.69"
             height="380.25"
             class="start-screen-slice__img-box-image"
@@ -76,7 +72,7 @@
     <ModalEbook
       id="sent-ebook"
       ref="modalEbook"
-      :ebook-title="$prismic.asText(title)"
+      :ebook-sub-title="title"
       :ebook-path="ebookPath"
       :ebook-name="ebookName"
       :ebook-image="ebookImage"
@@ -160,7 +156,11 @@ export default {
       } else {
         text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
           // the second parameter of function excludes tags
-          const formattedCode = convertTagsToText(inlineCode, ['strong', 'em', 'a'])
+          const formattedCode = convertTagsToText(inlineCode, [
+            'strong',
+            'em',
+            'a',
+          ])
           return `<code class="inline-code">${formattedCode}</code>`
         })
       }
@@ -196,36 +196,47 @@ export default {
           return `<ol>${text}</ol>`
         case Elements.image:
           // eslint-disable-next-line
-          const linkUrl = element.linkTo ? Link.url(element.linkTo, linkResolver) : null
+          const linkUrl = element.linkTo
+            ? Link.url(element.linkTo, linkResolver)
+            : null
           // eslint-disable-next-line
-          const linkTarget = element.linkTo && element.linkTo.target ? `target="${element.linkTo.target}" rel="noopener"` : ''
+          const linkTarget =
+            element.linkTo && element.linkTo.target
+              ? `target="${element.linkTo.target}" rel="noopener"`
+              : ''
           // eslint-disable-next-line
           const wrapperClassList = [element.label || '', 'block-img']
           // eslint-disable-next-line
-          const img = `<img src="${element.url}" alt="${element.alt || 'Image'}" copyright="${element.copyright || ''}">`
-          return (`
+          const img = `<img src="${element.url}" alt="${
+            element.alt || 'Image'
+          }" copyright="${element.copyright || ''}">`
+          return `
             <p class="${wrapperClassList.join(' ')}">
               ${linkUrl ? `<a ${linkTarget} href="${linkUrl}">${img}</a>` : img}
             </p>
-          `)
+          `
         case Elements.embed:
-          return (`
+          return `
             <div data-oembed="${element.oembed.embed_url}"
               data-oembed-type="${element.oembed.type}"
               data-oembed-provider="${element.oembed.provider_name}"
             >
               ${element.oembed.html}
             </div>
-          `)
+          `
         case Elements.hyperlink:
           // eslint-disable-next-line
-          const target = element.data.target ? `target="${element.data.target}" rel="noopener"` : ''
+          const target = element.data.target
+            ? `target="${element.data.target}" rel="noopener"`
+            : ''
           // eslint-disable-next-line
           const url = Link.url(element.data, linkResolver)
           return `<a ${target} href="${url}">${text}</a>`
         case Elements.label:
           // eslint-disable-next-line
-          const label = element.data.label ? ` class="${element.data.label}"` : ''
+          const label = element.data.label
+            ? ` class="${element.data.label}"`
+            : ''
           return `<span ${label}>${text}</span>`
         case Elements.span:
           return content ? content.replace(/\n/g, '<br />') : ''
@@ -273,18 +284,18 @@ export default {
     ::v-deep h4,
     ::v-deep h5,
     ::v-deep h6 {
-      @include font('Inter', 64px, 700);
+      @include font("Inter", 64px, 700);
       line-height: 72px;
       letter-spacing: -2px;
       @media screen and (max-width: 580px) {
-        @include font('Inter', 42px, 600);
+        @include font("Inter", 42px, 600);
         line-height: 48px;
       }
     }
   }
 
   &__subtitle {
-    @include font('Inter', 32px, 600);
+    @include font("Inter", 32px, 600);
     line-height: 44px;
     letter-spacing: -1px;
     color: $text-color--white-primary;
@@ -362,7 +373,7 @@ export default {
 
     a,
     button {
-      @include font('Inter', 16px, 600);
+      @include font("Inter", 16px, 600);
       letter-spacing: -0.4px;
       line-height: 20px;
       color: $text-color--white-primary;
