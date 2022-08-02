@@ -1,5 +1,5 @@
 <template>
-  <section class="case-lido__second-challenge m-96_bottom media-m-48_bottom">
+  <section class="case-lido__second-challenge m-72_bottom media-m-48_bottom">
     <div class="container_regular">
       <h4 class="case_title_h4-28 m-24_bottom">
         Second challenge: Integration with cross-chain bridge

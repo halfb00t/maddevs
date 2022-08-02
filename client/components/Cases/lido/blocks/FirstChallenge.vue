@@ -1,5 +1,5 @@
 <template>
-  <section class="case-lido__first-challenge m-96_bottom media-m-48_bottom">
+  <section class="case-lido__first-challenge m-72_bottom media-m-48_bottom">
     <div class="container_regular">
       <h4 class="case_title_h4 m-12_bottom">
         First Challenge: Integration with the liquidity pool

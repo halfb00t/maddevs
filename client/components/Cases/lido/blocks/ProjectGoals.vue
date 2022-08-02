@@ -1,5 +1,5 @@
 <template>
-  <section class="container_regular m-96_bottom case-lido__project-goals">
+  <section class="container_regular m-96_bottom media-m-48_bottom case-lido__project-goals">
     <h3 class="case_title_h2 m-48_bottom media-m-24_bottom">
       Project goals and how we resolved them
     </h3>

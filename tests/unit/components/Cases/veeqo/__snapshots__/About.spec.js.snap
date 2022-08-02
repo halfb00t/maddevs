@@ -52,6 +52,7 @@ exports[`About component should render correctly 1`] = `
          
         <p
           class="case_statistics-item_number"
+          data-aos-easing="ease-in"
         >
           
     2013
@@ -79,6 +80,7 @@ exports[`About component should render correctly 1`] = `
          
         <p
           class="case_statistics-item_number"
+          data-aos-easing="ease-in"
         >
           
     1.5bn
@@ -106,6 +108,7 @@ exports[`About component should render correctly 1`] = `
          
         <p
           class="case_statistics-item_number"
+          data-aos-easing="ease-in"
         >
           
     31m

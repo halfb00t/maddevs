@@ -3,7 +3,7 @@
 exports[`Lido FirstChallenge component should correctly render component 1`] = `
 <div>
   <section
-    class="case-lido__first-challenge m-96_bottom media-m-48_bottom"
+    class="case-lido__first-challenge m-72_bottom media-m-48_bottom"
   >
     <div
       class="container_regular"
