@@ -32,21 +32,6 @@ export const statisticsLido = [
     headerText: 'Total rewards paid',
     headerTextColor: '#FFFFFF',
   },
-  // {
-  //   title: 'Total staking assets',
-  //   number: '$6,655,072,744',
-  //   numberColor: '#FFFFFF',
-  // },
-  // {
-  //   title: 'Stakers',
-  //   number: '143,201',
-  //   numberColor: '#FFFFFF',
-  // },
-  // {
-  //   title: 'Total rewards paid',
-  //   number: '$166,725,259',
-  //   numberColor: '#FFFFFF',
-  // },
 ]
 
 export const theStoryBehindList = [
