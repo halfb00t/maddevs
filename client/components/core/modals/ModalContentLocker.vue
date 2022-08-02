@@ -163,7 +163,7 @@ export default {
     line-height: 32px;
     margin: 22px 15px 8px;
     letter-spacing: -1px;
-    color: #111;
+    color: $text-color--chinese-black;
     text-align: center;
     align-self: center;
     @media screen and (max-width: 580px) {
@@ -177,7 +177,7 @@ export default {
     line-height: 30px;
     margin: 0 15px 24px;
     letter-spacing: -1px;
-    color: #111;
+    color: $text-color--chinese-black;
     text-align: center;
     @media screen and (max-width: 580px) {
       @include font('Inter', 17px, 400);
