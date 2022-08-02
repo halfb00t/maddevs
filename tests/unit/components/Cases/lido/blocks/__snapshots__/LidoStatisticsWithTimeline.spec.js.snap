@@ -11,13 +11,26 @@ exports[`Lido LidoStatisticsWithTimeline component should correctly render compo
       <div
         class="container_regular"
       >
+        <h4
+          class="case_lido__timeline-stat-title m-32_bottom"
+        >
+          
+        Eth2 liquid staking balances (time series)
+      
+        </h4>
+         
         <div
-          class="lottie-container case_lottie"
-          style="--height: 550px; --width: 100%;"
+          class="lottie-container case_lottie case_lottie__desktop"
+          style="--height: 420px; --width: 100%;"
         />
          
         <div
-          class="case_lido__timeline-stat-alert m-24_top"
+          class="lottie-container case_lottie case_lottie__mobile"
+          style="--height: 660px; --width: 100%;"
+        />
+         
+        <div
+          class="case_lido__timeline-stat-alert m-12_top"
         >
           <p
             class="case_paragraph case_text-align-center"

@@ -47,89 +47,128 @@ exports[`Lido About component should correctly render component 1`] = `
           <div
             class="case_statistics-item"
             id="about-item-0"
-            numbercolor="#FFFFFF"
           >
             <p
-              class="case_paragraph-uppercase case_statistics-item_title"
+              class="case_paragraph case_statistics-item_header"
+              data-testid="card-header-text"
+              style="color: rgb(255, 255, 255);"
             >
               
     Total staking assets
   
             </p>
              
-            <p
-              class="case_statistics-item_number"
-            >
-              
-    $6,655,072,744
-  
-            </p>
+            <!---->
              
-            <p
-              class="case_statistics-item_description"
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(255, 255, 255);"
             >
-              
-    
-  
-            </p>
+              <span
+                style="color: rgb(255, 255, 255);"
+              >
+                $
+              </span>
+              <span
+                data-end-value="6.7"
+                data-start-value="6,7"
+                id="statistics-about-0"
+                style="color: rgb(255, 255, 255);"
+              >
+                6,7
+              </span>
+              <span
+                style="color: rgb(255, 255, 255);"
+              >
+                B
+              </span>
+            </h3>
+             
+            <!---->
           </div>
           <div
             class="case_statistics-item"
             id="about-item-1"
-            numbercolor="#FFFFFF"
           >
             <p
-              class="case_paragraph-uppercase case_statistics-item_title"
+              class="case_paragraph case_statistics-item_header"
+              data-testid="card-header-text"
+              style="color: rgb(255, 255, 255);"
             >
               
     Stakers
   
             </p>
              
-            <p
-              class="case_statistics-item_number"
-            >
-              
-    143,201
-  
-            </p>
+            <!---->
              
-            <p
-              class="case_statistics-item_description"
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(255, 255, 255);"
             >
-              
-    
-  
-            </p>
+              <span
+                style="color: rgb(255, 255, 255);"
+              >
+                +
+              </span>
+              <span
+                data-end-value="143"
+                data-start-value="143"
+                id="statistics-about-1"
+                style="color: rgb(255, 255, 255);"
+              >
+                143
+              </span>
+              <span
+                style="color: rgb(255, 255, 255);"
+              >
+                K
+              </span>
+            </h3>
+             
+            <!---->
           </div>
           <div
             class="case_statistics-item"
             id="about-item-2"
-            numbercolor="#FFFFFF"
           >
             <p
-              class="case_paragraph-uppercase case_statistics-item_title"
+              class="case_paragraph case_statistics-item_header"
+              data-testid="card-header-text"
+              style="color: rgb(255, 255, 255);"
             >
               
     Total rewards paid
   
             </p>
              
-            <p
-              class="case_statistics-item_number"
-            >
-              
-    $166,725,259
-  
-            </p>
+            <!---->
              
-            <p
-              class="case_statistics-item_description"
+            <h3
+              class="case_statistics-item_number p-16_bottom"
+              style="color: rgb(255, 255, 255);"
             >
-              
-    
-  
-            </p>
+              <span
+                style="color: rgb(255, 255, 255);"
+              >
+                $
+              </span>
+              <span
+                data-end-value="167"
+                data-start-value="167"
+                id="statistics-about-2"
+                style="color: rgb(255, 255, 255);"
+              >
+                167
+              </span>
+              <span
+                style="color: rgb(255, 255, 255);"
+              >
+                M
+              </span>
+            </h3>
+             
+            <!---->
           </div>
         </div>
          
