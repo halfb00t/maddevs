@@ -40,7 +40,11 @@
         </div>
       </div>
       <TextParagraph class="case_text-align-center case-lido__results-source-text m-12_top">
-        Source: DeFi
+        Source: <a
+          href="https://www.defipulse.com/"
+          target="_blank"
+        >
+          DeFI</a>
       </TextParagraph>
     </div>
     <div class="container_regular">
@@ -111,6 +115,10 @@ export default {
     font-size: 14px;
     line-height: 166%;
     color: $text-color--grey-opacity-40-percent;
+    a {
+      color: $text-color--grey-opacity-40-percent;
+      text-decoration: underline;
+    }
   }
 
   @media screen and (max-width: 480px) {

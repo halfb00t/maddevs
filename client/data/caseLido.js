@@ -1,18 +1,36 @@
 export const statisticsLido = [
   {
-    title: 'Total staking assets',
-    number: '$6,655,072,744',
+    numberText: '6,7',
+    number: 6.7,
+    name: 'B',
+    textBeforeNumber: '$',
+    withoutSpaceBeforeNumber: true,
+    withoutSpaceAfterNumber: true,
     numberColor: '#FFFFFF',
+    headerText: 'Total staking assets',
+    headerTextColor: '#FFFFFF',
   },
   {
-    title: 'Stakers',
-    number: '143,201',
+    numberText: '143',
+    number: 143,
+    name: 'K',
+    textBeforeNumber: '+',
+    withoutSpaceBeforeNumber: true,
+    withoutSpaceAfterNumber: true,
     numberColor: '#FFFFFF',
+    headerText: 'Stakers',
+    headerTextColor: '#FFFFFF',
   },
   {
-    title: 'Total rewards paid',
-    number: '$166,725,259',
+    numberText: '167',
+    number: 167,
+    name: 'M',
+    textBeforeNumber: '$',
+    withoutSpaceBeforeNumber: true,
+    withoutSpaceAfterNumber: true,
     numberColor: '#FFFFFF',
+    headerText: 'Total rewards paid',
+    headerTextColor: '#FFFFFF',
   },
 ]
 
@@ -201,23 +219,30 @@ export const techStackLido = [
 export const teamLido = [
   {
     name: 'Pavel Zverev',
-    position: 'Tech Lead',
+    position: 'Backend Tech Lead',
     image: {
       file: 'pavel-zverev',
     },
   },
   {
     name: 'Emir Sabyrkulov',
-    position: 'Project Manager',
+    position: 'Delivery Manager',
     image: {
       file: 'emir-sabyrkulov',
     },
   },
   {
     name: 'Gleb Ershov',
-    position: 'Tech Lead',
+    position: 'Backend Developer',
     image: {
       file: 'gleb-ershov',
+    },
+  },
+  {
+    name: 'Pavel Isayenko',
+    position: 'Backend Developer',
+    image: {
+      file: 'pavel-isayenko',
     },
   },
 ]

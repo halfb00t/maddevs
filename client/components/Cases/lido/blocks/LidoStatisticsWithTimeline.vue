@@ -4,14 +4,23 @@
   >
     <div class="container_full background-color-silver p-48_top p-48_bottom media-p-32_top media-p-32_bottom">
       <div class="container_regular">
+        <h4 class="case_lido__timeline-stat-title m-32_bottom">
+          Eth2 liquid staking balances (time series)
+        </h4>
         <LottieMad
-          class="case_lottie"
-          height="550px"
-          :lottie-link="$getMediaFromS3(`/images/Cases/lido/lottie/statistics.json`)"
+          class="case_lottie case_lottie__desktop"
+          height="420px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/lido/lottie/timeline-desktop.json`)"
+          :autoplay="true"
+        />
+        <LottieMad
+          class="case_lottie case_lottie__mobile"
+          height="660px"
+          :lottie-link="$getMediaFromS3(`/images/Cases/lido/lottie/timeline-mobile.json`)"
           :autoplay="true"
         />
         <div
-          class="case_lido__timeline-stat-alert m-24_top"
+          class="case_lido__timeline-stat-alert m-12_top"
         >
           <TextParagraph
             class="case_text-align-center"
@@ -49,6 +58,28 @@ export default {
 </script>
 <style scoped lang="scss">
 .case_lido__timeline-stat {
+  &-title {
+    @include font('Inter', 16px, 700);
+    line-height: 22px;
+    letter-spacing: -0.02em;
+    color: $text-color--quote-box;
+  }
+
+  & .case_lottie__desktop {
+    display: block;
+  }
+  & .case_lottie__mobile {
+    display: none;
+  }
+  @media screen and (max-width: 430px) {
+    & .case_lottie__desktop {
+      display: none;
+    }
+    & .case_lottie__mobile {
+      display: block;
+    }
+  }
+
   &-alert {
     background: rgba(255, 255, 255, 1);
     border-radius: 5px;

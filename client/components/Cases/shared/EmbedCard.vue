@@ -90,6 +90,7 @@ export default {
     color: $text-color--chinese-black;
     padding: 5px 27.5px;
     margin-right: auto;
+    min-width: 117px;
   }
 
   @media screen and (max-width: 725px) {
@@ -97,8 +98,8 @@ export default {
     padding: 25.5px 32px;
 
     &__image {
-      width: 103px;
-      height: 101px;
+      width: 40px;
+      height: 39px;
     }
 
     &__title {

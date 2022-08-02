@@ -84,8 +84,14 @@ exports[`Lido Results component should correctly render component 1`] = `
         class="case_paragraph case_text-align-center case-lido__results-source-text m-12_top"
       >
         
-      Source: DeFi
-    
+      Source: 
+        <a
+          href="https://www.defipulse.com/"
+          target="_blank"
+        >
+          
+        DeFI
+        </a>
       </p>
     </div>
      
