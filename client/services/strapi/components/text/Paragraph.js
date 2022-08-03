@@ -1,5 +1,7 @@
 import { ITextParagraph } from '@/services/strapi/components/interfaces/ITextParagraph'
 
+// import { ,TEXT, WIDTH, BACKGROUND, THEME_COLOR, TEXT_SIZES } from '@/services/strapi/common/extractData'
+
 export class TextParagraph extends ITextParagraph {
   /**
    * @param {{text:string}} props
@@ -17,12 +19,16 @@ export class TextParagraph extends ITextParagraph {
     this.text = props.text || ''
     this.maxWidth = props.max_width || ''
     this.background = props.background.background || ''
+    this.animation = props.background.animation || ''
+    this.position = props.background.position || ''
     this.themeColor = props.theme_color.theme_color || ''
-    this.textSizeXXL = props.text_size.xxl_screen || ''
-    this.textSizeXL = props.text_size.xl_screen || ''
-    this.textSizeLG = props.text_size.lg_screen || ''
-    this.textSizeMD = props.text_size.md_screen || ''
-    this.textSizeSM = props.text_size.sm_screen || ''
+    this.textSizes = {
+      xxl: props.text_size.xxl_screen || '',
+      xl: props.text_size.xl_screen || '',
+      lg: props.text_size.lg_screen || '',
+      md: props.text_size.md_screen || '',
+      sm: props.text_size.sm_screen || '',
+    }
   }
 
   getComponentName() {
