@@ -175,6 +175,13 @@ export const meta = {
     url: 'https://maddevs.io/case-studies/bandpay/',
     jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Bandpay - Payment Management Solution for Freelancers and Small Businesses", "description": "FinTech Case Study: Why freelancers don\'t receive payment on time, and how to avoid it? Read Bandpay\'s stories of creating a milestone-based platform to manage the payments process for freelancers.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
   },
+  lido: {
+    title: 'Mad Devs Case Study: Lido - the Leading DeFi Staking Platform',
+    description:
+      'Blockchain Technology Case Study: How to secure staking for the Defi platform? Read how Mad Devs helped Lido to improve their product and simplify and secure staking for users\' digital assets.',
+    url: 'https://maddevs.io/case-studies/lido/',
+    jsonLd: '{"@context": "https://schema.org", "@type": "WebPage", "name": "Mad Devs Case Study: Lido - the Leading DeFi Staking Platform", "description": "Blockchain Technology Case Study: How to secure staking for the Defi platform? Read how Mad Devs helped Lido to improve their product and simplify and secure staking for users\' digital assets.", "publisher": {"@type": "ProfilePage", "name": "Mad Devs Group Limited"}}',
+  },
   blog: {
     title: 'Mad Devs: Software & Mobile App Development Company | Blog',
     url: 'https://maddevs.io/blog/',

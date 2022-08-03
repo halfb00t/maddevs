@@ -3,7 +3,13 @@
     <TextParagraphUppercase class="case_statistics-item_title">
       {{ title }}
     </TextParagraphUppercase>
-    <p class="case_statistics-item_number">
+    <p
+      class="case_statistics-item_number"
+      :data-aos="isLido && 'zoom-in'"
+      :data-aos-duration="isLido && 650"
+      :data-aos-delay="isLido && animationDelay"
+      data-aos-easing="ease-in"
+    >
       {{ number }}
     </p>
     <p class="case_statistics-item_description">
@@ -35,6 +41,16 @@ export default {
     description: {
       type: String,
       default: '',
+    },
+
+    isLido: {
+      type: Boolean,
+      default: false,
+    },
+
+    animationDelay: {
+      type: Number,
+      default: 0,
     },
   },
 }

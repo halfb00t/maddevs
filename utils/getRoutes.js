@@ -157,6 +157,7 @@ export const getStructuredRoutes = async () => {
       '/case-studies/clutch',
       '/case-studies/bandpay',
       '/case-studies/guardrails',
+      '/case-studies/lido',
     ],
     insights: [
       '/open-source/',

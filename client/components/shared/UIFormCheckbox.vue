@@ -2,7 +2,7 @@
   <div class="form-checkbox">
     <label
       :for="`sent_ebook_news-${id}`"
-      class="form-checkbox-label required"
+      class="form-checkbox-label"
     >I agree to receive the monthly newsletter from Mad Devs
       <input
         :id="`sent_ebook_news-${id}`"

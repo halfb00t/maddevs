@@ -13,7 +13,19 @@ exports[`ReadForm component should render correctly with data 1`] = `
       <baseinput-stub name="name" elementtype="input" label="Label" placeholder="Your name" required="true" type="text" validation="[object Object]" value=""></baseinput-stub>
       <baseinput-stub name="email" elementtype="input" label="Label" placeholder="Email" required="true" type="text" validation="[object Object]" value=""></baseinput-stub>
     </div>
-    <uiformcheckbox-stub id="test"></uiformcheckbox-stub> <button id="" class="read-form__button read-form__button--always-fullsized">
+    <div class="modal-field-item field-item">
+      <!---->
+      <div style="position: relative;"><input data-testid="test-base-form-email" type="text" class="modal-entry-field entry-field">
+        <div class="v-placeholder-asterisk" style="pointer-events: none; position: absolute; top: 0px; left: 0px; display: flex; align-items: center;"><span></span>
+          <div style="color: red; margin-left: 3px;"></div>
+        </div>
+      </div>
+      <!---->
+    </div>
+    <div class="form-checkbox"><label for="sent_ebook_news-test" class="form-checkbox-label">I agree to receive the monthly newsletter from Mad Devs
+        <input id="sent_ebook_news-test" data-testid="user-agreement-checkbox-input" type="checkbox" name="User agreement" class="form-checkbox-input">
+        <div class="checkmark"></div>
+      </label></div> <button id="" class="read-form__button read-form__button--always-fullsized">
       Send me the ebook
     </button>
   </div>

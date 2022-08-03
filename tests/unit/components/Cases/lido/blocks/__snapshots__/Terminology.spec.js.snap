@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido Terminology component should correctly render component 1`] = `
+<div>
+  <section
+    class="case-lido__terminology m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular"
+    >
+      <h3
+        class="case_title_h2 m-24_bottom case-lido__terminology-title"
+        id="terminology"
+      >
+        
+      Terminology
+    
+      </h3>
+       
+      <ul
+        class="case_list"
+      >
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              Ethereum staking,
+            </strong>
+             ether stacking is the act of depositing 32 ETH to activate validator software. The user uploads 32 ethers and becomes a validator. If he does not have 32 ethers or does not want to be a validator, he can join the staking pool.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              Staking pool
+            </strong>
+             is a tool that becomes an ether validator and stacker, but uses the ether raised from users to do so, distributing the income from stacking among them and taking a small commission.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              stETH
+            </strong>
+             is the token that Lido's stacking pool users get when they stack their ether.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              DAI
+            </strong>
+             is a token, a stable coin, pegged to the U.S. dollar.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              Liquidity pool
+            </strong>
+             is a contract that stores liquidity raised from users, in tokens. Users are rewarded for this. Example: Curve. 1inch is an aggregator of liquidity pools.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              Liquidity provider (LP)
+            </strong>
+             is a user who deposits the liquidity to the liquidity pool and gets rewarded for that.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              LP token
+            </strong>
+             is a token, which LP receives as confirmation of its share in the liquidity pool.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              LDO
+            </strong>
+             is an Ethereum token granting governance rights in the Lido DAO. This token can be bought through any exchanger or (in our case) it is received by liquidity providers through a reward manager.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              Incentivization
+            </strong>
+             is additional rewarding of LP for some specific pool in some specific tokens. In our case, we want to reward LP of stETH - DAI pool with LDO and INCH.
+          </p>
+        </li>
+        <li
+          class="list-item-terminology"
+          data-aos="fade-up"
+        >
+          <p
+            class="case_paragraph"
+          >
+            <strong>
+              Co-incentivization
+            </strong>
+             is incentivization from two sides with two tokens. In our case, Lido and 1inch co-incentivize LP of stETH - DAI pool with LDO and INCH.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+`;

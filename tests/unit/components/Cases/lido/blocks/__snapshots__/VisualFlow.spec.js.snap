@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido VisualFlow component should correctly render component 1`] = `
+<div>
+  <section
+    class="case-lido__visual-flow m-72_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular m-48_bottom media-m-24_bottom"
+    >
+      <h4
+        class="case-lido__visual-flow-title m-24_bottom media-m-12_bottom"
+      >
+        
+      Here’s visual flow:
+    
+      </h4>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      Also, 100% test coverage was a prerequisite, as well as a test that would pass the entire Smart Contract procedure.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_full background-color-silver p-72_top p-56_bottom m-48_bottom media-p-32_top media-p-32_bottom media-m-24_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <div
+          class="lottie-container case_lottie"
+          style="--height: 603.24px; --width: 100%;"
+        />
+      </div>
+    </div>
+     
+    <div
+      class="container_regular"
+    >
+      <div
+        class="embed-card"
+        data-aos="fade-up"
+      >
+        <img
+          alt="checkbox-circle logo"
+          class="embed-card__image"
+          data-src="img.jpg"
+        />
+         
+        <div
+          class="embed-card__text-content"
+        >
+          <h4
+            class="embed-card__title"
+          >
+            
+      Testing process and how we solved it
+    
+          </h4>
+           
+          <a
+            class="embed-card__link"
+            href="https://github.com/lidofinance/1inch-rewards-manager/blob/main/tests/test_happy_path.py#L13-L34"
+            target="_blank"
+          >
+            
+      View on Github
+    
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
