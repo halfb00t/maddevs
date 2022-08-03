@@ -9,7 +9,6 @@ export function useWindowSize() {
   })
   const resizeListener = () => {
     // eslint-disable-next-line
-    debugger
     ({
       innerWidth: windowSize.x,
       innerHeight: windowSize.y,
@@ -17,7 +16,6 @@ export function useWindowSize() {
   }
   onMounted(() => {
     // eslint-disable-next-line
-    debugger
     window.addEventListener('resize', resizeListener)
   })
 

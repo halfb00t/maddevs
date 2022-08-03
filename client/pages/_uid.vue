@@ -1,9 +1,10 @@
 <template>
   <div>
     <PageContent :uid="uid" />
+    <!--    todo add check to to select strapi or prismic main component-->
     <SliceZone
-      type="page"
       :slices="customPage.slices"
+      type="page"
     />
   </div>
 </template>

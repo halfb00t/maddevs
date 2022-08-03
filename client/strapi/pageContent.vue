@@ -7,7 +7,7 @@
       >
         <component
           :is="item.getComponentName()"
-          :props="item"
+          :data="item"
         /><!--v-bind is not working-->
       </div>
     </div>
@@ -40,7 +40,7 @@ export default defineComponent({
   setup(props) {
     const items = ref([])
     onMounted(async () => {
-      const strapi = new Strapi() // to boot
+      const strapi = new Strapi() // todo to boot
       items.value = await strapi.getPageContent(props.uid)
     })
     return { items }

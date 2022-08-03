@@ -1,27 +1,55 @@
-import { ref, watch } from '@vue/composition-api'
+/* eslint-disable */
+import { ref, watch, reactive } from '@vue/composition-api'
 import useWindowSize from '@/components/strapi/common/windowSize'
 
-export function useTextSize() {
-  const currentScreenSize = reactive(useWindowSize())
-  const textSize = ref('')
+export function useTextSize(textSizes) {
+  const currentScreenSize = useWindowSize()
+  const textSizeClassName = ref('')
 
-  function getTextSize(screenSize) {
-    if (screenSize.x <= 333) {
-      return 'nice-size'
+  /**
+   * used bootstrap 5 grid system
+   *
+   * current / old
+   * strapi / prismic
+   * xxl = ['size-xl']
+   * xl = ['size-lg']
+   * lg = ['size-md']
+   * md = ['size-sm']
+   * sm = ['size-xs']
+   * **/
+  function getTextSize(currentScreenSize) {
+    const windowWidth = currentScreenSize.x.value
+    if (windowWidth <= 768) {
+      textSizeClassName.value = textSizes.sm
+        || textSizes.md
+        || textSizes.lg
+        || textSizes.xl
+        || textSizes.xxl
+    } if (windowWidth > 768 && windowWidth <= 1024) {
+      textSizeClassName.value = textSizes.md
+        || textSizes.lg
+        || textSizes.xl
+        || textSizes.xxl
+    } if (windowWidth > 1024 && windowWidth <= 1200) {
+      textSizeClassName.value = textSizes.lg
+        || textSizes.xl
+        || textSizes.xxl
+    } if (windowWidth > 1200 && windowWidth <= 1440) {
+      textSizeClassName.value = textSizes.xl
+        || textSizes.xxl
+    } if (windowWidth > 1440) {
+      textSizeClassName.value = textSizes.xxl
     }
-    return 'fail-size-string'
   }
 
-  watch(currentScreenSize.x,
+  watch(() => currentScreenSize,
     (newSize, oldSize) => {
-      console.log('watch', newSize, oldSize)
       getTextSize(newSize)
-    }) // { deep: true }
+    }, { deep: true })
 
-  // eslint-disable-next-line
-  debugger
+  getTextSize(currentScreenSize)
 
-  return { textSize }
+  return { textSizeClassName }
 }
 
 export default useTextSize

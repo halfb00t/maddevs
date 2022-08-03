@@ -1,45 +1,105 @@
 <template>
   <section
     :class="[
-      `paragraph-slice-text--${props.position}`,
+      `paragraph-slice-text--${data.position}`,
     ]"
     class="paragraph-slice"
   >
     <p
       :class="[
         `paragraph-slice-text`,
-        `paragraph-slice-text--${props.textSizeXXL}`,
-        `paragraph-slice-text--${props.type}`,
+        `paragraph-slice-text--${textSizeClassName}`,
+        `paragraph-slice-text--${data.type}`,
       ]"
-      :style="`max-width: ${props.maxWidth}`"
-      v-html="props.text"
+      :style="`max-width: ${data.maxWidth}`"
+      v-html="data.text"
     />
+    <div>{{ textSizeClassName }}</div>
   </section>
 </template>
 
 <script>
 import { defineComponent } from '@vue/composition-api'
-import useWindowSize from '@/components/strapi/common/windowSize'
 import { useTextSize } from '@/components/strapi/common/useText'
+import useWindowSize from '@/components/strapi/common/windowSize'
 
 export default defineComponent({
   name: 'ParagraphSlice',
   props: {
-    props: {
+    data: {
       type: Object,
       default: () => ({}),
     },
   },
 
-  setup() {
+  setup(props) {
     useWindowSize()
-    useTextSize()
+    const { textSizeClassName } = useTextSize(props.data.textSizes) // props.props - очень плохо. не нравится. нужно переименовать
+
+    return {
+      textSizeClassName,
+    }
   },
 
 })
 </script>
 
 <style lang="scss" scoped>
+.text-slice {
+  word-break: break-word;
+
+  &--white-theme {
+    color: $text-color--black-lighter;
+  }
+
+  &--black-theme {
+    color: $text-color--white;
+  }
+}
+
+/deep/ h1,
+/deep/ h2,
+/deep/ h3 {
+  @include font('Inter', 60px, 700);
+  line-height: 60px;
+  letter-spacing: -0.013em;
+  @media screen and (max-width: 1024px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+/deep/ p {
+  @include font('Inter', 24px, 600);
+  line-height: 35px;
+  letter-spacing: -0.013em;
+  @media screen and (max-width: 1024px) {
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
+
+/deep/ li {
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: -0.013em;
+}
+
+/deep/ .fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s;
+}
+
+/deep/ .fade-enter,
+.fade-leave-to {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
 .paragraph-slice {
   width: 100%;
 

@@ -7,6 +7,10 @@ export class ITextParagraph {
 
   background = ''
 
+  animation = ''
+
+  position = ''
+
   themeColor = ''
 
   textSizeXXL = ''
