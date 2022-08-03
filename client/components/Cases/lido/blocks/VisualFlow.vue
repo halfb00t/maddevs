@@ -1,5 +1,5 @@
 <template>
-  <section class="case-lido__visual-flow m-96_bottom media-m-48_bottom">
+  <section class="case-lido__visual-flow m-72_bottom media-m-48_bottom">
     <div class="container_regular m-48_bottom media-m-24_bottom">
       <h4 class="case-lido__visual-flow-title m-24_bottom media-m-12_bottom">
         Here’s visual flow:

@@ -47,128 +47,101 @@ exports[`Lido About component should correctly render component 1`] = `
           <div
             class="case_statistics-item"
             id="about-item-0"
+            numbercolor="#FFFFFF"
           >
             <p
-              class="case_paragraph case_statistics-item_header"
-              data-testid="card-header-text"
-              style="color: rgb(255, 255, 255);"
+              class="case_paragraph-uppercase case_statistics-item_title"
             >
               
     Total staking assets
   
             </p>
              
-            <!---->
-             
-            <h3
-              class="case_statistics-item_number p-16_bottom"
-              style="color: rgb(255, 255, 255);"
+            <p
+              class="case_statistics-item_number"
+              data-aos="zoom-in"
+              data-aos-delay="0"
+              data-aos-duration="650"
+              data-aos-easing="ease-in"
             >
-              <span
-                style="color: rgb(255, 255, 255);"
-              >
-                $
-              </span>
-              <span
-                data-end-value="6.7"
-                data-start-value="6,7"
-                id="statistics-about-0"
-                style="color: rgb(255, 255, 255);"
-              >
-                6,7
-              </span>
-              <span
-                style="color: rgb(255, 255, 255);"
-              >
-                B
-              </span>
-            </h3>
+              
+    $6,7B
+  
+            </p>
              
-            <!---->
+            <p
+              class="case_statistics-item_description"
+            >
+              
+    
+  
+            </p>
           </div>
           <div
             class="case_statistics-item"
             id="about-item-1"
+            numbercolor="#FFFFFF"
           >
             <p
-              class="case_paragraph case_statistics-item_header"
-              data-testid="card-header-text"
-              style="color: rgb(255, 255, 255);"
+              class="case_paragraph-uppercase case_statistics-item_title"
             >
               
     Stakers
   
             </p>
              
-            <!---->
-             
-            <h3
-              class="case_statistics-item_number p-16_bottom"
-              style="color: rgb(255, 255, 255);"
+            <p
+              class="case_statistics-item_number"
+              data-aos="zoom-in"
+              data-aos-delay="650"
+              data-aos-duration="650"
+              data-aos-easing="ease-in"
             >
-              <span
-                style="color: rgb(255, 255, 255);"
-              >
-                +
-              </span>
-              <span
-                data-end-value="143"
-                data-start-value="143"
-                id="statistics-about-1"
-                style="color: rgb(255, 255, 255);"
-              >
-                143
-              </span>
-              <span
-                style="color: rgb(255, 255, 255);"
-              >
-                K
-              </span>
-            </h3>
+              
+    +143K
+  
+            </p>
              
-            <!---->
+            <p
+              class="case_statistics-item_description"
+            >
+              
+    
+  
+            </p>
           </div>
           <div
             class="case_statistics-item"
             id="about-item-2"
+            numbercolor="#FFFFFF"
           >
             <p
-              class="case_paragraph case_statistics-item_header"
-              data-testid="card-header-text"
-              style="color: rgb(255, 255, 255);"
+              class="case_paragraph-uppercase case_statistics-item_title"
             >
               
     Total rewards paid
   
             </p>
              
-            <!---->
-             
-            <h3
-              class="case_statistics-item_number p-16_bottom"
-              style="color: rgb(255, 255, 255);"
+            <p
+              class="case_statistics-item_number"
+              data-aos="zoom-in"
+              data-aos-delay="1300"
+              data-aos-duration="650"
+              data-aos-easing="ease-in"
             >
-              <span
-                style="color: rgb(255, 255, 255);"
-              >
-                $
-              </span>
-              <span
-                data-end-value="167"
-                data-start-value="167"
-                id="statistics-about-2"
-                style="color: rgb(255, 255, 255);"
-              >
-                167
-              </span>
-              <span
-                style="color: rgb(255, 255, 255);"
-              >
-                M
-              </span>
-            </h3>
+              
+    $167M
+  
+            </p>
              
-            <!---->
+            <p
+              class="case_statistics-item_description"
+            >
+              
+    
+  
+            </p>
           </div>
         </div>
          

@@ -3,7 +3,7 @@
 exports[`Lido VisualFlow component should correctly render component 1`] = `
 <div>
   <section
-    class="case-lido__visual-flow m-96_bottom media-m-48_bottom"
+    class="case-lido__visual-flow m-72_bottom media-m-48_bottom"
   >
     <div
       class="container_regular m-48_bottom media-m-24_bottom"
