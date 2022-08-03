@@ -42,6 +42,7 @@
 import Modal from '@/components/core/Modal'
 import ReadForm from '@/components/Ebook/ReadForm'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
+import makeRandomTitle from '@/helpers/makeRandomTitle'
 
 export default {
   name: 'ModalEbook',
@@ -93,29 +94,14 @@ export default {
       successMessage: null,
       formSended: false,
       title: '',
-      titles: [
-        'How to negotiate with an IT vendor?',
-        'Are looking for software development services?',
-        'Are an aspiring IT company searching for useful information?',
-        'Are interested in pricing information for custom software development?',
-      ],
     }
   },
 
   mounted() {
-    this.makeRandomTitle()
+    this.title = makeRandomTitle(this.sendPulseTemplateId)
   },
 
   methods: {
-    makeRandomTitle() {
-      if (this.sendPulseTemplateId === 791537) {
-        this.title = 'Are you wondering what processes and principles Mad Devs follow when developing software?'
-        return
-      }
-      const randomIndex = Math.floor(Math.random() * this.titles.length)
-      this.title = this.titles[randomIndex]
-    },
-
     handleSendedForm(payload) {
       this.successMessage = `
         The letter with the PDF file was successfully sent to mail ${payload.email}.
