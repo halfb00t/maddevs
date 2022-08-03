@@ -23,6 +23,7 @@
         :ebook-path="ebookPath"
         :ebook-name="ebookName"
         :ebook-image="ebookImage"
+        :ebook-title="title"
         :ebook-sub-title="ebookSubTitle"
         :send-pulse-template-id="sendPulseTemplateId"
         @form-sended="handleSendedForm"
@@ -41,6 +42,7 @@
 import Modal from '@/components/core/Modal'
 import ReadForm from '@/components/Ebook/ReadForm'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
+import getRandomTitle from '@/helpers/getRandomTitle'
 
 export default {
   name: 'ModalEbook',
@@ -91,7 +93,12 @@ export default {
     return {
       successMessage: null,
       formSended: false,
+      title: '',
     }
+  },
+
+  mounted() {
+    this.title = getRandomTitle(this.sendPulseTemplateId)
   },
 
   methods: {

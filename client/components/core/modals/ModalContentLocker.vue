@@ -45,6 +45,7 @@ import Modal from '@/components/core/Modal'
 import ReadForm from '@/components/Ebook/ReadForm'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import { Cookies } from '@/helpers/cookies'
+import getRandomTitle from '@/helpers/getRandomTitle'
 
 export default {
   name: 'ModalContentLocker',
@@ -76,13 +77,6 @@ export default {
       successMessage: null,
       formSended: false,
       title: '',
-      titles: [
-        'How to negotiate with an IT vendor?',
-        'Are looking for software development services?',
-        'Are an aspiring IT company searching for useful information?',
-        'Are interested in pricing information for custom software development?',
-      ],
-
       ebookSubTitle: this.ebook?.primary?.title,
       ebookImage: this.ebook?.primary?.ebookImage,
       ebookPath: this.ebook?.primary?.ebookPath,
@@ -92,20 +86,10 @@ export default {
   },
 
   mounted() {
-    this.makeRandomTitle()
+    this.title = getRandomTitle(this.sendPulseTemplateId)
   },
 
   methods: {
-    makeRandomTitle() {
-      if (this.sendPulseTemplateId === 791537) {
-        // to be removed this if
-        this.title = 'Are you wondering what processes and principles Mad Devs follow when developing software?'
-        return
-      }
-      const randomIndex = Math.floor(Math.random() * this.titles.length)
-      this.title = this.titles[randomIndex]
-    },
-
     handleSendedForm(payload) {
       this.successMessage = `
         The letter with the PDF file was successfully sent to mail ${payload.email}.
