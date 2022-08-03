@@ -45,7 +45,7 @@ import Modal from '@/components/core/Modal'
 import ReadForm from '@/components/Ebook/ReadForm'
 import SuccessMessage from '@/components/core/modals/SuccessMessage'
 import { Cookies } from '@/helpers/cookies'
-import makeRandomTitle from '@/helpers/makeRandomTitle'
+import getRandomTitle from '@/helpers/getRandomTitle'
 
 export default {
   name: 'ModalContentLocker',
@@ -86,7 +86,7 @@ export default {
   },
 
   mounted() {
-    this.title = makeRandomTitle(this.sendPulseTemplateId)
+    this.title = getRandomTitle(this.sendPulseTemplateId)
   },
 
   methods: {
