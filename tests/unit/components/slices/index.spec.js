@@ -248,7 +248,7 @@ describe('Post component copyAnchorLink', () => {
   })
 
   it('if type preformatted will return <pre>Blog post title</pre>', () => {
-    const result = wrapper.vm.htmlSerializer('preformatted', null, null, ['Blog post title'])
+    const result = wrapper.vm.htmlSerializer('preformatted', { text: 'Blog post title' }, null, ['Blog post title'])
     expect(result).toBe('<pre>Blog post title</pre>')
   })
 
