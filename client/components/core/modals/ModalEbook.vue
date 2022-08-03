@@ -23,6 +23,7 @@
         :ebook-path="ebookPath"
         :ebook-name="ebookName"
         :ebook-image="ebookImage"
+        :ebook-title="title"
         :ebook-sub-title="ebookSubTitle"
         :send-pulse-template-id="sendPulseTemplateId"
         @form-sended="handleSendedForm"
@@ -91,10 +92,30 @@ export default {
     return {
       successMessage: null,
       formSended: false,
+      title: '',
+      titles: [
+        'How to negotiate with an IT vendor?',
+        'Are looking for software development services?',
+        'Are an aspiring IT company searching for useful information?',
+        'Are interested in pricing information for custom software development?',
+      ],
     }
   },
 
+  mounted() {
+    this.makeRandomTitle()
+  },
+
   methods: {
+    makeRandomTitle() {
+      if (this.sendPulseTemplateId === 791537) {
+        this.title = 'Are you wondering what processes and principles Mad Devs follow when developing software?'
+        return
+      }
+      const randomIndex = Math.floor(Math.random() * this.titles.length)
+      this.title = this.titles[randomIndex]
+    },
+
     handleSendedForm(payload) {
       this.successMessage = `
         The letter with the PDF file was successfully sent to mail ${payload.email}.
