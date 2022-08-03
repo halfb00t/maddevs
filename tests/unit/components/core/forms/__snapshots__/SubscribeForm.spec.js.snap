@@ -2,9 +2,9 @@
 
 exports[`SubscribeForm component should render correctly with data 1`] = `
 <form id="subscribe-form" class="subscribe-form" style="max-width: 199px;">
-  <h4 class="subscribe-form__title">
+  <p class="subscribe-form__title">
     Subscribe to our monthly Newsletter
-  </h4>
+  </p>
   <div class="subscribe-form__controllers">
     <transition-stub name="button" appear="true"><button type="button" class="subscribe-form__button">
         Subscribe
@@ -31,13 +31,13 @@ exports[`SubscribeForm component should render correctly without showButton 1`] 
     id="subscribe-form"
     style="max-width: 199px;"
   >
-    <h4
+    <p
       class="subscribe-form__title"
     >
       
     Subscribe to our monthly Newsletter
   
-    </h4>
+    </p>
      
     <div
       class="subscribe-form__controllers"

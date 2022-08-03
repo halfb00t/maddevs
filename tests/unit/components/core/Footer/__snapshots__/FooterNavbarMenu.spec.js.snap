@@ -5,13 +5,13 @@ exports[`FooterNavbarColumn should correct render footer navbar menu 1`] = `
   <div
     class="footer-menu"
   >
-    <h5
+    <h3
       class="footer-menu__name"
     >
       
     Company
   
-    </h5>
+    </h3>
      
     <ul
       class="footer-menu__list"

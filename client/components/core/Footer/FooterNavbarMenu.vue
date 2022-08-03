@@ -3,12 +3,12 @@
     v-if="menuRoutes && menuRoutes.length"
     class="footer-menu"
   >
-    <h5
+    <h3
       v-if="menuName"
       class="footer-menu__name"
     >
       {{ menuName }}
-    </h5>
+    </h3>
     <ul class="footer-menu__list">
       <li
         v-for="{ label, link } in menuRoutes"
