@@ -67,6 +67,11 @@ exports[`Lido VisualFlow component should correctly render component 1`] = `
             href="https://github.com/lidofinance/1inch-rewards-manager/blob/main/tests/test_happy_path.py#L13-L34"
             target="_blank"
           >
+            <img
+              alt="Github icon"
+              class="embed-card__link-icon"
+              data-src="img.jpg"
+            />
             
       View on Github
     
