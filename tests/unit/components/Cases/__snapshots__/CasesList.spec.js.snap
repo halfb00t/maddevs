@@ -39,6 +39,9 @@ exports[`CasesList component should correctly work autoplay 1`] = `
     <lazyhydrate-stub idletimeout="2000" whenvisible="true">
       <caseslistitem-stub video-file-name="/videos/namba-taxi-banner.mp4#t=1" logo="[object Object]" subtitle="Transportation" title-tag="h3" title="Namba Taxi: Modernising transport" desc="The system that took urban transport in Bishkek, Kyrgyzstan to the next level in 2013 by making taxi ordering fast, efficient and convenient and continues to function today." width="small" link="/case-studies/namba-taxi/" poster-link="/images/Cases/nambataxi/png/nambataxi-banner.png" item="[object Object]" data-testid="test-case-card" class="cases-list_nambataxi"></caseslistitem-stub>
     </lazyhydrate-stub>
+    <lazyhydrate-stub idletimeout="2000" whenvisible="true">
+      <caseslistitem-stub video-file-name="/videos/lido-banner.mp4" logo="[object Object]" subtitle="Blockchain and Crypto" title-tag="h3" title="Lido: decentralized staking platform" desc="Mad Devs assisted Lido - a liquid staking solution - to improve their product and simplify and secure staking for your digital assets." width="full" link="/case-studies/lido/" poster-link="/images/Cases/lido/jpg/lido-banner.jpg" item="[object Object]" data-testid="test-case-card" class="cases-list_lido"></caseslistitem-stub>
+    </lazyhydrate-stub>
   </section>
   <nuxtlink-stub to="/case-studies/" class="cases-list_see-more"><span>See More</span></nuxtlink-stub>
 </div>
@@ -278,6 +281,25 @@ exports[`CasesList component should render correctly 1`] = `
           title-tag="h3"
           video-file-name="/videos/namba-taxi-banner.mp4#t=1"
           width="small"
+        />
+      </lazyhydrate-stub>
+      <lazyhydrate-stub
+        idletimeout="2000"
+        whenvisible="true"
+      >
+        <caseslistitem-stub
+          class="cases-list_lido"
+          data-testid="test-case-card"
+          desc="Mad Devs assisted Lido - a liquid staking solution - to improve their product and simplify and secure staking for your digital assets."
+          item="[object Object]"
+          link="/case-studies/lido/"
+          logo="[object Object]"
+          poster-link="/images/Cases/lido/jpg/lido-banner.jpg"
+          subtitle="Blockchain and Crypto"
+          title="Lido: decentralized staking platform"
+          title-tag="h3"
+          video-file-name="/videos/lido-banner.mp4"
+          width="full"
         />
       </lazyhydrate-stub>
     </section>

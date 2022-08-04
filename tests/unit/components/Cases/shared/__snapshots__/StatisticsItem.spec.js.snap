@@ -15,6 +15,7 @@ exports[`StatisticsItem component should render correctly 1`] = `
      
     <p
       class="case_statistics-item_number"
+      data-aos-easing="ease-in"
     >
       
     2013

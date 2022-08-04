@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido TechnologiesStack component should correctly render component 1`] = `
+<div>
+  <section
+    class="container_regular"
+  >
+    <h3
+      class="case_title_h2 m-24_bottom media-m-12_bottom"
+    >
+      
+    Technology stack
+  
+    </h3>
+     
+    <ul
+      class="case_list-technologies m-96_bottom media-m-48_bottom"
+    >
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Brownie"
+          class="case_technologies-item__tech-icon case_technologies-item__brownie brownie"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-brownie"
+        >
+          
+    Brownie
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Python"
+          class="case_technologies-item__tech-icon case_technologies-item__python python"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-python"
+        >
+          
+    Python
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="PyTest"
+          class="case_technologies-item__tech-icon case_technologies-item__pytest pytest"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-pytest"
+        >
+          
+    PyTest
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Ganache"
+          class="case_technologies-item__tech-icon case_technologies-item__ganache ganache"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-ganache"
+        >
+          
+    Ganache
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Solidity"
+          class="case_technologies-item__tech-icon case_technologies-item__solidity solidity"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-solidity"
+        >
+          
+    Solidity
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Infura"
+          class="case_technologies-item__tech-icon case_technologies-item__infura infura"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-infura"
+        >
+          
+    Infura
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="1INCH"
+          class="case_technologies-item__tech-icon case_technologies-item__1inch 1inch"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-1inch"
+        >
+          
+    1INCH
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Vyper"
+          class="case_technologies-item__tech-icon case_technologies-item__vyper vyper"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-vyper"
+        >
+          
+    Vyper
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Lido protocol"
+          class="case_technologies-item__tech-icon case_technologies-item__lido-protocol lido-protocol"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-lido-protocol"
+        >
+          
+    Lido protocol
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Wormhole"
+          class="case_technologies-item__tech-icon case_technologies-item__wormhole wormhole"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-wormhole"
+        >
+          
+    Wormhole
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Anchor protocol"
+          class="case_technologies-item__tech-icon case_technologies-item__anchor-protocol anchor-protocol"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-anchor-protocol"
+        >
+          
+    Anchor protocol
+  
+        </p>
+      </li>
+      <li
+        class="case_technologies-item case_tech-list-item"
+      >
+        <img
+          alt="Terra chain"
+          class="case_technologies-item__tech-icon case_technologies-item__terra-chain terra-chain"
+          data-src="[object Object]"
+          height="40"
+          width="40"
+        />
+         
+        <p
+          class="case_technologies-item__tech-name tech-terra-chain"
+        >
+          
+    Terra chain
+  
+        </p>
+      </li>
+    </ul>
+  </section>
+</div>
+`;
