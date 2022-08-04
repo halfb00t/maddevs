@@ -352,6 +352,11 @@ exports[`Lido FirstChallenge component should correctly render component 1`] = `
             href="https://github.com/lidofinance/1inch-rewards-manager/blob/main/FLOW.md"
             target="_blank"
           >
+            <img
+              alt="Github icon"
+              class="embed-card__link-icon"
+              data-src="img.jpg"
+            />
             
       View on Github
     

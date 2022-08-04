@@ -119,6 +119,11 @@ exports[`Lido SecondChallenge component should correctly render component 1`] = 
             href="https://github.com/lidofinance/anchor-collateral-steth/blob/9bc0483accc20ff758485918993219a5a9944dea/scripts/wormhole_connector_check.py#L127-L143"
             target="_blank"
           >
+            <img
+              alt="Github icon"
+              class="embed-card__link-icon"
+              data-src="img.jpg"
+            />
             
       View on Github
     

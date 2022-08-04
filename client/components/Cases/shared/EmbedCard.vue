@@ -18,6 +18,12 @@
         class="embed-card__link"
         target="_blank"
       >
+        <img
+          v-lazy-load
+          :data-src="$getMediaFromS3('/images/Cases/lido/svg/github-icon.svg')"
+          alt="Github icon"
+          class="embed-card__link-icon"
+        >
         {{ textLink }}
       </a>
     </div>
@@ -88,9 +94,17 @@ export default {
     @include font('Inter', 16px, 400);
     line-height: 26px;
     color: $text-color--chinese-black;
-    padding: 5px 27.5px;
+    padding: 5px 16.5px;
     margin-right: auto;
     min-width: 117px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    &-icon {
+      width: 14px;
+      height: 14px;
+    }
   }
 
   @media screen and (max-width: 725px) {
