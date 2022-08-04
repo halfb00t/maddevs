@@ -60,7 +60,8 @@ exports[`Lido ImportantInsight component should correctly render component 1`] =
         
       Moral: Not only is it important to make tests "green," but also to evaluate the entire system - 
         <strong>
-          the user should
+          the user
+        should
         know if the Smart contract has been modified (it is vital to reloading the page).
         </strong>
       </p>
