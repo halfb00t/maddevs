@@ -1,12 +1,9 @@
 <template>
   <section class="case-lido__visual-flow m-72_bottom media-m-48_bottom">
-    <div class="container_regular m-48_bottom media-m-24_bottom">
-      <h4 class="case-lido__visual-flow-title m-24_bottom media-m-12_bottom">
+    <div class="container_regular m-24_bottom media-m-12_bottom">
+      <h4 class="case-lido__visual-flow-title">
         Here’s visual flow:
       </h4>
-      <TextParagraph>
-        Also, 100% test coverage was a prerequisite, as well as a test that would pass the entire Smart Contract procedure.
-      </TextParagraph>
     </div>
     <div class="container_full background-color-silver p-72_top p-56_bottom m-48_bottom media-p-32_top media-p-32_bottom media-m-24_bottom">
       <div class="container_regular">
@@ -19,6 +16,9 @@
       </div>
     </div>
     <div class="container_regular">
+      <TextParagraph class="m-24_bottom media-m-12_bottom">
+        Also, 100% test coverage was a prerequisite, as well as a test that would pass the entire Smart Contract procedure.
+      </TextParagraph>
       <EmbedCard v-bind="testingProcessData" />
     </div>
   </section>

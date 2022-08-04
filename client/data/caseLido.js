@@ -239,8 +239,8 @@ export const terminologyLido = [
   '<strong>DAI</strong> is a token, a stable coin, pegged to the U.S. dollar.',
   '<strong>Liquidity pool</strong> is a contract that stores liquidity raised from users, in tokens. Users are rewarded for this. Example: Curve. 1inch is an aggregator of liquidity pools.',
   '<strong>Liquidity provider (LP)</strong> is a user who deposits the liquidity to the liquidity pool and gets rewarded for that.',
-  '<strong>LP token</strong> is a token, which LP receives as confirmation of its share in the liquidity pool.',
+  '<strong>LP token is a token that LP</strong> receives as confirmation of its share in the liquidity pool.',
   '<strong>LDO</strong> is an Ethereum token granting governance rights in the Lido DAO. This token can be bought through any exchanger or (in our case) it is received by liquidity providers through a reward manager.',
-  '<strong>Incentivization</strong> is additional rewarding of LP for some specific pool in some specific tokens. In our case, we want to reward LP of stETH - DAI pool with LDO and INCH.',
+  '<strong>Incentivization</strong> is additional reward of LP for some specific pool in some specific tokens. In our case, we want to reward LP of stETH - DAI pool with LDO and INCH.',
   '<strong>Co-incentivization</strong> is incentivization from two sides with two tokens. In our case, Lido and 1inch co-incentivize LP of stETH - DAI pool with LDO and INCH.',
 ]

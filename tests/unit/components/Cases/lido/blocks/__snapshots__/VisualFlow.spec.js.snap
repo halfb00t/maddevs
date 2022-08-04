@@ -6,23 +6,15 @@ exports[`Lido VisualFlow component should correctly render component 1`] = `
     class="case-lido__visual-flow m-72_bottom media-m-48_bottom"
   >
     <div
-      class="container_regular m-48_bottom media-m-24_bottom"
+      class="container_regular m-24_bottom media-m-12_bottom"
     >
       <h4
-        class="case-lido__visual-flow-title m-24_bottom media-m-12_bottom"
+        class="case-lido__visual-flow-title"
       >
         
       Here’s visual flow:
     
       </h4>
-       
-      <p
-        class="case_paragraph"
-      >
-        
-      Also, 100% test coverage was a prerequisite, as well as a test that would pass the entire Smart Contract procedure.
-    
-      </p>
     </div>
      
     <div
@@ -41,6 +33,14 @@ exports[`Lido VisualFlow component should correctly render component 1`] = `
     <div
       class="container_regular"
     >
+      <p
+        class="case_paragraph m-24_bottom media-m-12_bottom"
+      >
+        
+      Also, 100% test coverage was a prerequisite, as well as a test that would pass the entire Smart Contract procedure.
+    
+      </p>
+       
       <div
         class="embed-card"
         data-aos="fade-up"

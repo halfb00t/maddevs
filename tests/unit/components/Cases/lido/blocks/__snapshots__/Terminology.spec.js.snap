@@ -106,9 +106,9 @@ exports[`Lido Terminology component should correctly render component 1`] = `
             class="case_paragraph"
           >
             <strong>
-              LP token
+              LP token is a token that LP
             </strong>
-             is a token, which LP receives as confirmation of its share in the liquidity pool.
+             receives as confirmation of its share in the liquidity pool.
           </p>
         </li>
         <li
@@ -134,7 +134,7 @@ exports[`Lido Terminology component should correctly render component 1`] = `
             <strong>
               Incentivization
             </strong>
-             is additional rewarding of LP for some specific pool in some specific tokens. In our case, we want to reward LP of stETH - DAI pool with LDO and INCH.
+             is additional reward of LP for some specific pool in some specific tokens. In our case, we want to reward LP of stETH - DAI pool with LDO and INCH.
           </p>
         </li>
         <li
