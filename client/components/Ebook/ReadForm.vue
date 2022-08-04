@@ -1,39 +1,57 @@
 <template>
   <div class="read-form">
     <div class="read-form__fields">
-      <BaseInput
-        v-model="name"
-        name="name"
-        :show-label="false"
-        :required="true"
-        placeholder="Your name"
-        :validation="$v.name"
-      />
-      <BaseInput
-        v-model="email"
-        name="email"
-        :show-label="false"
-        placeholder="Email"
-        :required="true"
-        :validation="$v.email"
-      />
+      <h2
+        v-if="ebookTitle"
+        class="modal-content__title"
+      >
+        {{ ebookTitle }}
+      </h2>
+      <h2
+        v-if="description"
+        class="read-form__sub-title"
+      >
+        Get your copy of “ {{ description }}”
+      </h2>
+      <div class="read-form__inputs">
+        <BaseInput
+          v-model="name"
+          name="name"
+          :show-label="false"
+          :required="true"
+          placeholder="Your name"
+          :validation="$v.name"
+        />
+        <BaseInput
+          v-model="email"
+          name="email"
+          :show-label="false"
+          placeholder="Email"
+          :required="true"
+          :validation="$v.email"
+        />
+      </div>
       <UIFormCheckbox
         :id="id"
         ref="checkbox"
         @change="handleCheckboxChange"
       />
       <button
-        :id="isValid ? 'sent_ebook_button': ''"
+        :id="isValid ? 'sent_ebook_button' : ''"
         class="read-form__button"
-        :class="{ 'read-form__button--active': isValid, 'read-form__button--always-fullsized': fullsizeButton }"
+        :class="{
+          'read-form__button--active': isValid,
+          'read-form__button--always-fullsized': fullsizeButton,
+        }"
         @click="submit"
       >
         Send me the ebook
       </button>
     </div>
     <p class="read-form__caption">
-      By providing your email address, you agree to our Privacy Policy. We will not send you any spam – only link for
-      downloading the ebook and some more useful resources in the future.
+      By providing your email address, you agree to our Privacy Policy. We will
+      not send you any spam – only link for downloading the ebook and some more
+      useful resources in the future.
     </p>
   </div>
 </template>
@@ -75,6 +93,16 @@ export default {
       default: '',
     },
 
+    ebookTitle: {
+      type: String,
+      default: '',
+    },
+
+    ebookSubTitle: {
+      type: Array,
+      default: () => [],
+    },
+
     id: {
       type: String,
       required: true,
@@ -113,6 +141,10 @@ export default {
   computed: {
     isValid() {
       return !this.$v.validationGroup.$invalid
+    },
+
+    description() {
+      return this.$prismic.asText(this.ebookSubTitle)
     },
   },
 
@@ -184,6 +216,36 @@ export default {
 
 <style lang="scss" scoped>
 .read-form {
+  &__title {
+    @include font('Inter', 28px, 700);
+    line-height: 32px;
+    margin: 22px 15px 8px;
+    letter-spacing: -1px;
+    color: $text-color--chinese-black;
+    text-align: center;
+    align-self: center;
+    @media screen and (max-width: 580px) {
+      @include font('Inter', 21px, 700);
+      line-height: 24px;
+    }
+  }
+
+  &__sub-title {
+    @include font('Inter', 16px, 400);
+    line-height: 26px;
+    letter-spacing: -1px;
+    color: $text-color--chinese-black;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.4px;
+    }
+  }
+
   &__fields {
     width: 100%;
     display: flex;
@@ -197,13 +259,14 @@ export default {
 
       input {
         width: 100%;
-        padding: 12px 15px;
-        @include font('Inter', 16px, 400);
+        padding: 11px 15px;
+        @include font("Inter", 16px, 400);
         color: $text-color--grey-pale;
         border-radius: 4px;
         border: 1px solid $text-color--grey-pale;
         background-color: transparent;
         box-sizing: border-box;
+        line-height: 26px;
       }
 
       .v-placeholder-asterisk {
@@ -215,10 +278,21 @@ export default {
     }
   }
 
+  &__inputs {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
   &__button {
-    width: auto;
-    padding: 12px 15px;
-    @include font('Inter', 16px, 600);
+    width: 100%;
+    padding: 9px 0;
+    @include font("Inter", 16px, 600);
     line-height: 20px;
     letter-spacing: -0.4px;
     color: $text-color--grey-opacity-40-percent;
@@ -251,10 +325,11 @@ export default {
   }
 
   &__caption {
-    @include font('Inter', 14px, 400);
+    @include font("Inter", 12px, 400);
     letter-spacing: -0.4px;
     color: $text-color--grey-opacity-40-percent;
     line-height: 18px;
+    text-align: center;
   }
 }
 </style>
