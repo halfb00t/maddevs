@@ -2,20 +2,17 @@ import {
   onMounted, onUnmounted, reactive, toRefs,
 } from '@vue/composition-api'
 
-export function useWindowSize() {
+export default function useResize(instance) {
   const windowSize = reactive({
     x: 0,
     y: 0,
   })
   const resizeListener = () => {
-    // eslint-disable-next-line
-    ({
-      innerWidth: windowSize.x,
-      innerHeight: windowSize.y,
-    } = window)
+    windowSize.x = window.innerWidth
+    windowSize.y = window.innerHeight
+    instance.handleResize(window.innerWidth)
   }
   onMounted(() => {
-    // eslint-disable-next-line
     window.addEventListener('resize', resizeListener)
   })
 
@@ -23,7 +20,3 @@ export function useWindowSize() {
   resizeListener()
   return toRefs(windowSize)
 }
-
-export default useWindowSize
-
-// todo move common folder to oth location?

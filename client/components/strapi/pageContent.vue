@@ -7,8 +7,8 @@
       >
         <component
           :is="item.getComponentName()"
-          :data="item"
-        /><!--v-bind is not working-->
+          :instance="item"
+        />
       </div>
     </div>
   </div>
@@ -17,10 +17,10 @@
 <script>
 import { defineComponent, onMounted, ref } from '@vue/composition-api'
 
-import { Strapi } from '@/services/strapi'
 import TextParagraph from '@/components/strapi/text/TextParagraph'
 import TextTitle from '@/components/strapi/text/TextTitle'
 import Spacer from '@/components/strapi/spacer/Spacer'
+import { STRAPI } from '@/modules/strapi'
 
 export default defineComponent({
   name: 'PageContent',
@@ -40,8 +40,7 @@ export default defineComponent({
   setup(props) {
     const items = ref([])
     onMounted(async () => {
-      const strapi = new Strapi() // todo to boot
-      items.value = await strapi.getPageContent(props.uid)
+      items.value = await STRAPI.getPageContent(props.uid)
     })
     return { items }
   },

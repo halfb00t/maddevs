@@ -15,7 +15,7 @@ import SliceZone from 'vue-slicezone'
 import { buildHead } from '@/data/seo'
 import headerMixin from '@/mixins/headerMixin'
 import getRoutePrefix from '@/helpers/getRoutePrefix'
-import PageContent from '@/strapi/pageContent'
+import PageContent from '@/components/strapi/pageContent'
 
 export default {
   components: {
