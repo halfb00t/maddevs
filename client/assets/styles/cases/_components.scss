@@ -11,6 +11,10 @@
     @include title($text-color--black-oil, 26.56px, -0.03em);
   }
 
+  &_title_h4-28 {
+    @include title($text-color--black-oil, 28px, -1px);
+  }
+
   &_title_h5 {
     @include title($text-color--black-oil, 21.25px, -0.02em);
   }
@@ -103,5 +107,10 @@
     &_animation_block {
       height: 0;
     }
+  }
+
+  &_link-in-text {
+    color: $text-color--black-oil;
+    text-decoration: underline;
   }
 }

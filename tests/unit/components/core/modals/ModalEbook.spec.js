@@ -8,6 +8,7 @@ const directives = {
 }
 
 jest.mock('~/helpers/generatorUid')
+jest.mock('~/helpers/getRandomTitle')
 
 const props = {
   ebookImage: {

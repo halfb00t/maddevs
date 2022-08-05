@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido Results component should correctly render component 1`] = `
+<div>
+  <section
+    class="case-lido__results m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular"
+    >
+      <h3
+        class="case_title_h2 m-12_bottom"
+      >
+        
+      Results
+    
+      </h3>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      After collaborating with the Lido team, both goals were accomplished and are now operating efficiently.
+    
+      </p>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      The second phase of the work was completed in January 2022. Since February, the Lido service has grown and received positive feedback:
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_middle m-48_top media-m-12_top m-96_bottom media-m-48_bottom"
+    >
+      <div
+        class="case_image-wrapper case_box-shadow"
+      >
+        <picture>
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Project visibility"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="16.45"
+            width="1026"
+          />
+        </picture>
+         
+        <div
+          class="case_image-main-image"
+        >
+          <picture>
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="TVL Rankings"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="595.81"
+              width="1028"
+            />
+          </picture>
+        </div>
+      </div>
+       
+      <p
+        class="case_paragraph case_text-align-center case-lido__results-source-text m-12_top"
+      >
+        
+      Source: 
+        <a
+          href="https://www.defipulse.com/"
+          target="_blank"
+        >
+          
+        DeFI
+        </a>
+      </p>
+    </div>
+     
+    <div
+      class="container_regular"
+    >
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      Our joint work helped to strengthen and improve the service, which had a positive impact on the overall statistics of its work:
+    
+      </p>
+       
+      <div
+        class="twitter-card"
+      >
+        <div
+          class="twitter-card__tweet"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;
