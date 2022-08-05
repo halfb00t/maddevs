@@ -49,7 +49,7 @@ exports[`Lido FirstChallenge component should correctly render component 1`] = `
         stake.lido.fi
       
         </a>
-         to the Ethereum 2.0 pool, receiving an equivalent amount of stETH tokens in return.
+         to the Ethereum pool, receiving an equivalent amount of stETH tokens in return.
     
       </p>
     </div>
@@ -110,7 +110,19 @@ exports[`Lido FirstChallenge component should correctly render component 1`] = `
       >
         
       The user buys some amount of DAI on stocks or from exchangers (Metamask allows to do this).
-      Liquidity provider selects liquidity pool for 1inch. In our case, it will be a pair of DAI-stETH.
+      Liquidity provider selects liquidity pool for
+      
+        <a
+          class="case_link-in-text"
+          href="https://app.1inch.io/#/1/dao/pools"
+          rel="noopener"
+          target="_blank"
+        >
+          
+        1inch
+      
+        </a>
+        . In our case, it will be a pair of DAI-stETH.
     
       </p>
     </div>
@@ -170,7 +182,7 @@ exports[`Lido FirstChallenge component should correctly render component 1`] = `
         class="case_paragraph"
       >
         
-      It then gives access to its stETH tokens. A liquid staked Ether 2.0 (stETH) contact is made through DelegateProxy.
+      It then gives access to its stETH tokens. A liquid staked Ether (stETH) contact is made through DelegateProxy.
       This allows the liquidity pool contract (Mooniswap, it is unique for each pair, it will be new) to use
       the entire balance of stETH tokens belonging to the user.
     
@@ -352,6 +364,11 @@ exports[`Lido FirstChallenge component should correctly render component 1`] = `
             href="https://github.com/lidofinance/1inch-rewards-manager/blob/main/FLOW.md"
             target="_blank"
           >
+            <img
+              alt="Github icon"
+              class="embed-card__link-icon"
+              data-src="img.jpg"
+            />
             
       View on Github
     

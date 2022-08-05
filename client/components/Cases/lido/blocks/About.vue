@@ -42,30 +42,31 @@
             color="#363636"
             class="case_text-align-center"
           >
-            This data is current as of Jule 2022. Please, visit the
+            Visit
             <a
               href="https://lido.fi/"
               target="_blank"
             >
               Lido website
             </a>
-            to see the actual APR rate.
+            to see actual information
           </TextParagraph>
         </div>
       </div>
     </div>
     <div class="container_regular m-96_top media-m-72_top">
       <TextParagraph class="m-24_bottom">
-        The goal of the Lido platform is to remove the incentives of ETH 2.0 by allowing people to stake their
-        ETH while also participating in on-chain lending. This will enable them to earn additional yield and
-        improve the security of the ETH network.
+        Lido’s goal is to let all users stake assets, use them as collateral for other projects and get daily rewards.
+        No minimum amount of tokens is required to stake. In the DeFi ecosystem, clients' assets can be used for
+        multiple purposes, such as yield farming, lending, and more.
       </TextParagraph>
       <TextParagraph class="m-24_bottom">
-        When the users stake  ETH on the Ethereum beacon chain, they will receive a token called stETH, which
-        represents  ETH on the chain on a 1:1 basis. This bridge allows people to earn rewards from both the old and new ETH 2.0 blockchains.
+        When the users stake  ETH on the Ethereum beacon chain, they will receive a token called stETH,
+        which represents  ETH on the chain on a 1:1 basis.
+        This bridge allows people to earn rewards from both the old and new ETH blockchains.
       </TextParagraph>
       <TextParagraph class="m-24_bottom">
-        Lido works with Ethereum 2.0, Solana, Kusama and Polygon networks.
+        Lido works with Ethereum, Solana, Kusama, Polkadot, and Polygon networks. As of August 2022, these are supported blockchains.
       </TextParagraph>
       <TextParagraph>
         Despite the competition from other platforms, such as Stkr and Rocketpool, the team at Lido has maintained its dominant position.

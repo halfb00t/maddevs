@@ -5,9 +5,33 @@
         Second challenge: Integration with cross-chain bridge
       </h4>
       <TextParagraph class="m-24_bottom">
-        The bETH token is a derisively-native asset that is used in the Anchor Protocol.
-        Its integration was carried out through the Shuttle bridge, which transfers it between Terra and Ethereum.
-        In order to preserve its resilience, a decision was made to migrate to Wormhole bridge.
+        The
+        <a
+          href="https://docs.anchorprotocol.com/protocol/bonded-assets-bassets/bonded-eth-beth"
+          target="_blank"
+          class="case_link-in-text"
+          rel="noopener"
+        >
+          bETH
+        </a> token is a derisively-native asset used in the Anchor Protocol.
+        Its integration was carried out through the
+        <a
+          href="https://bridge.terra.money/"
+          target="_blank"
+          class="case_link-in-text"
+          rel="noopener"
+        >
+          Shuttle bridge
+        </a>, which transfers it between Terra and Ethereum.
+        In order to preserve its resilience, a decision was made to migrate to
+        <a
+          href="https://www.portalbridge.com/#/transfer"
+          target="_blank"
+          rel="noopener"
+          class="case_link-in-text"
+        >
+          Wormhole bridge.
+        </a>
       </TextParagraph>
       <TextParagraph class="m-24_bottom">
         The migration plan is:

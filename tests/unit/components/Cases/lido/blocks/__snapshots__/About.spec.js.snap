@@ -158,7 +158,7 @@ exports[`Lido About component should correctly render component 1`] = `
             style="color: rgb(54, 54, 54);"
           >
             
-          This data is current as of Jule 2022. Please, visit the
+          Visit
           
             <a
               href="https://lido.fi/"
@@ -169,7 +169,7 @@ exports[`Lido About component should correctly render component 1`] = `
           
             </a>
             
-          to see the actual APR rate.
+          to see actual information
         
           </p>
         </div>
@@ -183,9 +183,9 @@ exports[`Lido About component should correctly render component 1`] = `
         class="case_paragraph m-24_bottom"
       >
         
-      The goal of the Lido platform is to remove the incentives of ETH 2.0 by allowing people to stake their
-      ETH while also participating in on-chain lending. This will enable them to earn additional yield and
-      improve the security of the ETH network.
+      Lido’s goal is to let all users stake assets, use them as collateral for other projects and get daily rewards.
+      No minimum amount of tokens is required to stake. In the DeFi ecosystem, clients' assets can be used for
+      multiple purposes, such as yield farming, lending, and more.
     
       </p>
        
@@ -193,8 +193,9 @@ exports[`Lido About component should correctly render component 1`] = `
         class="case_paragraph m-24_bottom"
       >
         
-      When the users stake  ETH on the Ethereum beacon chain, they will receive a token called stETH, which
-      represents  ETH on the chain on a 1:1 basis. This bridge allows people to earn rewards from both the old and new ETH 2.0 blockchains.
+      When the users stake  ETH on the Ethereum beacon chain, they will receive a token called stETH,
+      which represents  ETH on the chain on a 1:1 basis.
+      This bridge allows people to earn rewards from both the old and new ETH blockchains.
     
       </p>
        
@@ -202,7 +203,7 @@ exports[`Lido About component should correctly render component 1`] = `
         class="case_paragraph m-24_bottom"
       >
         
-      Lido works with Ethereum 2.0, Solana, Kusama and Polygon networks.
+      Lido works with Ethereum, Solana, Kusama, Polkadot, and Polygon networks. As of August 2022, these are supported blockchains.
     
       </p>
        
