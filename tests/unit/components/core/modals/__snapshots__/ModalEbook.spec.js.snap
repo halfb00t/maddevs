@@ -3,7 +3,7 @@
 exports[`ModalEbook component should render correctly with no data 1`] = `
 <modal-stub id="" modaltitle="" modalbackground="black" whereiscalled="" ebooksendpulsetemplateid="763889" class="modal-ebook">
   <div class="modal-content"><img width="110" height="155" data-src="img.jpg" alt="Image" class="modal-content__img">
-    <readform-stub ebookpath="" ebookname="" ebooktitle="How to negotiate with an IT vendor?" ebooksubtitle="" id="modal-ebook" ebook-image="[object Object]"></readform-stub>
+    <readform-stub ebookpath="" ebookname="" ebooktitle="Are interested in pricing information for custom software development?" ebooksubtitle="" id="modal-ebook" ebook-image="[object Object]"></readform-stub>
   </div>
 </modal-stub>
 `;
