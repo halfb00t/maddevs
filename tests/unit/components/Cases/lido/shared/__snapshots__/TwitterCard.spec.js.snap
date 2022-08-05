@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido TwitterCard shared component should correctly render component 1`] = `
+<div>
+  <div
+    class="twitter-card"
+    sourcelink="https://maddevs.io"
+  >
+    <div
+      class="twitter-card__tweet"
+    />
+  </div>
+</div>
+`;

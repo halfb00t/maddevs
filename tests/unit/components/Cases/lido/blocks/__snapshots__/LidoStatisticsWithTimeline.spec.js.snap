@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido LidoStatisticsWithTimeline component should correctly render component 1`] = `
+<div>
+  <section
+    class="case_lido__timeline-stat m-96_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_full background-color-silver p-48_top p-48_bottom media-p-32_top media-p-32_bottom"
+    >
+      <div
+        class="container_regular"
+      >
+        <h4
+          class="case_lido__timeline-stat-title m-32_bottom"
+        >
+          
+        Eth2 liquid staking balances (time series)
+      
+        </h4>
+         
+        <div
+          class="lottie-container case_lottie case_lottie__desktop"
+          style="--height: 420px; --width: 100%;"
+        />
+         
+        <div
+          class="lottie-container case_lottie case_lottie__mobile"
+          style="--height: 660px; --width: 100%;"
+        />
+         
+        <div
+          class="case_lido__timeline-stat-alert m-12_top"
+        >
+          <p
+            class="case_paragraph case_text-align-center"
+          >
+            
+          The graphic is current as of July 2022. Visit the
+          
+            <a
+              href="https://dune.com/LidoAnalytical/Lido-Finance-Extended"
+              target="_blank"
+            >
+              
+            website
+          
+            </a>
+            
+          for complete up-to-date statistics
+        
+          </p>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="container_regular m-48_top"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      Moreover, Andreessen Horowitz, a private American venture capital firm, invested in Lido and described it
+      as “an effective, decentralized staking platform. It offers one of the easiest ways to stake ETH and other
+      PoS assets today while striving for decentralization through the DAO’s governance. Lido democratizes staking.”
+    
+      </p>
+    </div>
+  </section>
+</div>
+`;

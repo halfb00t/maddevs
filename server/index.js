@@ -59,14 +59,24 @@ function bootstrap() {
   app.use(Sentry.Handlers.errorHandler())
 
   if (process.env.FF_ENVIRONMENT === 'production') {
-    const radiator = new DevRadiator()
-    // eslint-disable-next-line no-console
-    console.log('Run Dev Radiator schedulers')
-    radiator.scheduleCollectMetrics()
-    radiator.scheduleSendMetrics()
+    try {
+      const radiator = new DevRadiator()
+      // eslint-disable-next-line no-console
+      console.log('Run Dev Radiator schedulers')
+      radiator.scheduleCollectMetrics()
+      radiator.scheduleSendMetrics()
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error)
+    }
 
     // Run the mad radiator in the production mode
-    runRadiator()
+    try {
+      runRadiator()
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error)
+    }
   }
 
   return app

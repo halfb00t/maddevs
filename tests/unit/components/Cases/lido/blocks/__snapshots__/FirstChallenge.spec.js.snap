@@ -1,0 +1,369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido FirstChallenge component should correctly render component 1`] = `
+<div>
+  <section
+    class="case-lido__first-challenge m-72_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular"
+    >
+      <h4
+        class="case_title_h4 m-12_bottom"
+      >
+        
+      First Challenge: Integration with the liquidity pool
+    
+      </h4>
+       
+      <p
+        class="case_paragraph case-lido__first-challenge-subtitle m-24_bottom"
+      >
+        
+      Liquidity pool - a contract that stores tokenized liquidity attracted from users, in tokens.
+      In exchange, users receive liquidity pool tokens and rewards.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      After conducting analysis and research, we determined that 1inch has a an integrated rewards manager
+      to which we could connect the rewards contract. But we had to adapt it.
+    
+      </p>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      The user provides Ether via
+      
+        <a
+          class="case_link-in-text"
+          href="https://stake.lido.fi/"
+          target="_blank"
+        >
+          
+        stake.lido.fi
+      
+        </a>
+         to the Ethereum 2.0 pool, receiving an equivalent amount of stETH tokens in return.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_middle m-48_top media-m-24_top"
+    >
+      <div
+        class="case_image-wrapper case_box-shadow"
+      >
+        <picture>
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Project visibility"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="16.45"
+            width="1026"
+          />
+        </picture>
+         
+        <div
+          class="case_image-main-image"
+        >
+          <picture>
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="Stake Ether"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="595.81"
+              width="1028"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="container_regular m-72_top media-m-48_top"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      The user buys some amount of DAI on stocks or from exchangers (Metamask allows to do this).
+      Liquidity provider selects liquidity pool for 1inch. In our case, it will be a pair of DAI-stETH.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_middle m-48_top media-m-24_top"
+    >
+      <div
+        class="case_image-wrapper case_box-shadow"
+      >
+        <picture>
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Project visibility"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="16.45"
+            width="1026"
+          />
+        </picture>
+         
+        <div
+          class="case_image-main-image"
+        >
+          <picture>
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="1inch"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="416"
+              width="1028"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="container_regular m-72_top media-m-48_top"
+    >
+      <p
+        class="case_paragraph"
+      >
+        
+      It then gives access to its stETH tokens. A liquid staked Ether 2.0 (stETH) contact is made through DelegateProxy.
+      This allows the liquidity pool contract (Mooniswap, it is unique for each pair, it will be new) to use
+      the entire balance of stETH tokens belonging to the user.
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_middle m-48_top media-m-24_top"
+    >
+      <div
+        class="case_image-wrapper case_box-shadow"
+      >
+        <picture>
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Project visibility"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="16.45"
+            width="1026"
+          />
+        </picture>
+         
+        <div
+          class="case_image-main-image"
+        >
+          <picture>
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="1inch"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="416"
+              width="1028"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="container_regular m-72_top media-m-48_top"
+    >
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      The user then transfers tokens into the liquidity pool. Mooniswap is the deposit method of the liquidity
+      pool contract. This operation transfers stETH tokens from the user's balance to the liquidity pool
+      contract's balance. In exchange, the liquidity pool transfers LP tokens to the user. The LP tokens contract for each liquidity pool is unique.
+    
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      The user then loads his LP tokens into the
+      
+        <a
+          class="case_link-in-text"
+          href="https://app.1inch.io/#/1/swap/ETH/stETH"
+          target="_blank"
+        >
+          
+        farming.
+      
+        </a>
+      </p>
+       
+      <p
+        class="case_paragraph"
+      >
+        
+      The user can withdraw his reward for farming stETH and DAI, withdraw all uploaded tokens (Withdraw), or exit farming entirely (Exit).
+    
+      </p>
+    </div>
+     
+    <div
+      class="container_middle m-48_top media-m-24_top"
+    >
+      <div
+        class="case_image-wrapper case_box-shadow"
+      >
+        <picture>
+          <source
+            class="image grey-background"
+            data-srcset="img.jpg ,img.jpg"
+            type="image/webp"
+          />
+           
+          <img
+            alt="Project visibility"
+            class="image grey-background"
+            data-src="img.jpg"
+            data-srcset="img.jpg"
+            data-testid="test-picture-img"
+            height="16.45"
+            width="1026"
+          />
+        </picture>
+         
+        <div
+          class="case_image-main-image"
+        >
+          <picture>
+            <source
+              class="image"
+              data-srcset="img.jpg ,img.jpg"
+              type="image/webp"
+            />
+             
+            <img
+              alt="1inch"
+              class="image"
+              data-src="img.jpg"
+              data-srcset="img.jpg"
+              data-testid="test-picture-img"
+              height="595.81"
+              width="1028"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="container_regular m-48_top media-m-24_top"
+    >
+      <p
+        class="case_paragraph m-48_bottom"
+      >
+        
+      In Withdraw method, all tokens loaded into the pool are transferred back to the user.
+        <br />
+        
+      During co-investment, when users request a reward, LDO and 1INCH tokens are also transferred to them.
+    
+      </p>
+       
+      <div
+        class="embed-card"
+        data-aos="fade-up"
+      >
+        <img
+          alt="github logo"
+          class="embed-card__image"
+          data-src="img.jpg"
+        />
+         
+        <div
+          class="embed-card__text-content"
+        >
+          <h4
+            class="embed-card__title"
+          >
+            
+      The process of integration with liquidity pool
+    
+          </h4>
+           
+          <a
+            class="embed-card__link"
+            href="https://github.com/lidofinance/1inch-rewards-manager/blob/main/FLOW.md"
+            target="_blank"
+          >
+            <img
+              alt="Github icon"
+              class="embed-card__link-icon"
+              data-src="img.jpg"
+            />
+            
+      View on Github
+    
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -245,6 +245,7 @@ export default async () => {
         pixelId: process.env.FACEBOOK_CODE || 'Not defined value',
         autoPageView: true,
         disabled: false,
+        debug: process.env.NODE_ENV === 'development',
       }],
       ['nuxt-linkedin-pixel-module', {
         /* module options */

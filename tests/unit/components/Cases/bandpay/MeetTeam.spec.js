@@ -7,6 +7,9 @@ import lazyLoad from 'nuxt-lazy-load/lib/module'
 
 const mocks = {
   $getMediaFromS3: () => 'img.jpg',
+  $refs: {
+    meetTheTeamList: document.createElement('div'),
+  },
 }
 
 const localVue = createLocalVue()
@@ -19,6 +22,27 @@ const data = () => ({
 
 describe('BandPay MeetTeam component', () => {
   it('should render correctly', () => {
+    Object.defineProperty(global.window, 'IntersectionObserver', {
+      writable: true,
+      configurable: true,
+      value: class IntersectionObserver {
+        constructor(callback) {
+          this.entries = [{ isIntersecting: true, target: mocks.$refs.meetTheTeamList }]
+          this.callback = callback
+        }
+
+        observe(target) {
+          this.entries.push({ isIntersecting: true, target })
+          this.callback(this.entries, this)
+        }
+
+        // eslint-disable-next-line class-methods-use-this
+        unobserve() {
+          return jest.fn()
+        }
+      },
+    })
+
     const { container } = render(MeetTeam, {
       mocks,
       data,
