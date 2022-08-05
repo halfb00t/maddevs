@@ -424,6 +424,26 @@ export default {
   }
 }
 
+.cases-list_lido {
+  &:before {
+    z-index: 1;
+  }
+
+  & .cases-list_item-video_poster {
+    z-index: 0;
+  }
+
+  &:hover {
+    &:before {
+      z-index: 0;
+    }
+
+    .cases-list_item-video_poster {
+      z-index: -1;
+    }
+  }
+}
+
 .is-mobile {
   .cases-list_item-info {
     p {

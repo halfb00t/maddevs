@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lido SecondChallenge component should correctly render component 1`] = `
+<div>
+  <section
+    class="case-lido__second-challenge m-72_bottom media-m-48_bottom"
+  >
+    <div
+      class="container_regular"
+    >
+      <h4
+        class="case_title_h4-28 m-24_bottom"
+      >
+        
+      Second challenge: Integration with cross-chain bridge
+    
+      </h4>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      The
+      
+        <a
+          class="case_link-in-text"
+          href="https://docs.anchorprotocol.com/protocol/bonded-assets-bassets/bonded-eth-beth"
+          rel="noopener"
+          target="_blank"
+        >
+          
+        bETH
+      
+        </a>
+         token is a derisively-native asset used in the Anchor Protocol.
+      Its integration was carried out through the
+      
+        <a
+          class="case_link-in-text"
+          href="https://bridge.terra.money/"
+          rel="noopener"
+          target="_blank"
+        >
+          
+        Shuttle bridge
+      
+        </a>
+        , which transfers it between Terra and Ethereum.
+      In order to preserve its resilience, a decision was made to migrate to
+      
+        <a
+          class="case_link-in-text"
+          href="https://www.portalbridge.com/#/transfer"
+          rel="noopener"
+          target="_blank"
+        >
+          
+        Wormhole bridge.
+      
+        </a>
+      </p>
+       
+      <p
+        class="case_paragraph m-24_bottom"
+      >
+        
+      The migration plan is:
+    
+      </p>
+       
+      <ol
+        class="case-list_numbered m-48_bottom media-m-24_bottom"
+      >
+        <li
+          class="case_list-numbered_item"
+          data-aos="fade-up"
+          id="solution-item-0"
+        >
+          
+        Disable Lido bETH UI & Shuttle bETH bridging UI.
+      
+        </li>
+        <li
+          class="case_list-numbered_item"
+          data-aos="fade-up"
+          id="solution-item-1"
+        >
+          
+        Disable AnchorVault smart contract, to prevent users from minting and bridging bETH while the migration is in progress.
+      
+        </li>
+        <li
+          class="case_list-numbered_item"
+          data-aos="fade-up"
+          id="solution-item-2"
+        >
+          
+        Discontinue bETH support on Shuttle.
+      
+        </li>
+        <li
+          class="case_list-numbered_item"
+          data-aos="fade-up"
+          id="solution-item-3"
+        >
+          
+        Migrate the Ethereum bETH liquidity from the Shuttle bridge vault through the Wormhole to bETH-webETH converter contract on Terra.
+      
+        </li>
+        <li
+          class="case_list-numbered_item"
+          data-aos="fade-up"
+          id="solution-item-4"
+        >
+          
+        Enable AnchorVault smart contract setting bridge connector delegate to BridgeConnectorWormhole.
+      
+        </li>
+        <li
+          class="case_list-numbered_item"
+          data-aos="fade-up"
+          id="solution-item-5"
+        >
+          
+        Enable the updated Lido bETH UI.
+      
+        </li>
+      </ol>
+       
+      <div
+        class="embed-card"
+        data-aos="fade-up"
+      >
+        <img
+          alt="wormhole logo"
+          class="embed-card__image"
+          data-src="img.jpg"
+        />
+         
+        <div
+          class="embed-card__text-content"
+        >
+          <h4
+            class="embed-card__title"
+          >
+            
+      The migration to Wormhole bridge
+    
+          </h4>
+           
+          <a
+            class="embed-card__link"
+            href="https://github.com/lidofinance/anchor-collateral-steth/blob/9bc0483accc20ff758485918993219a5a9944dea/scripts/wormhole_connector_check.py#L127-L143"
+            target="_blank"
+          >
+            <img
+              alt="Github icon"
+              class="embed-card__link-icon"
+              data-src="img.jpg"
+            />
+            
+      View on Github
+    
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
