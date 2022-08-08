@@ -19,9 +19,10 @@
       <TextParagraph class="m-48_bottom">
         Total stuck in the bridge - 450 ETH (1 million 200 thousand at that rate by then).
       </TextParagraph>
-      <TwitterCard id="1486353473985822727" />
+      <TwitterCard :id="tweetId" />
       <TextParagraph class="m-48_top">
-        Moral: Not only is it important to make tests "green," but also to evaluate the entire system - <strong>the user should
+        Moral: Not only is it important to make tests "green," but also to evaluate the entire system - <strong>the user
+          should
           know if the Smart contract has been modified (it is vital to reloading the page).</strong>
       </TextParagraph>
     </div>
@@ -33,7 +34,16 @@ import TwitterCard from '@/components/Cases/lido/shared/TwitterCard'
 
 export default {
   name: 'ImportantInsight',
-  components: { TwitterCard, TextParagraph },
+  components: {
+    TwitterCard,
+    TextParagraph,
+  },
+
+  data() {
+    return {
+      tweetId: '1486353473985822727',
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>

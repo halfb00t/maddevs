@@ -5,7 +5,7 @@
     <div class="container_full background-color-silver p-48_top p-48_bottom media-p-32_top media-p-32_bottom">
       <div class="container_regular">
         <h4 class="case_lido__timeline-stat-title m-32_bottom">
-          Eth2 liquid staking balances (time series)
+          Eth liquid staking balances (time series)
         </h4>
         <LottieMad
           class="case_lottie case_lottie__desktop"
@@ -39,7 +39,15 @@
     </div>
     <div class="container_regular m-48_top">
       <TextParagraph>
-        Moreover, Andreessen Horowitz, a private American venture capital firm, invested in Lido and described it
+        Moreover,
+        <a
+          href="https://a16z.com/2022/03/03/investing-in-lido/"
+          rel="noopener"
+          class="case_link-in-text"
+          target="_blank"
+        >
+          Andreessen Horowitz
+        </a>, a private American venture capital firm, invested in Lido and described it
         as “an effective, decentralized staking platform. It offers one of the easiest ways to stake ETH and other
         PoS assets today while striving for decentralization through the DAO’s governance. Lido democratizes staking.”
       </TextParagraph>

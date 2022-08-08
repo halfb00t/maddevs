@@ -51,7 +51,7 @@
       <TextParagraph class="m-24_bottom">
         Our joint work helped to strengthen and improve the service, which had a positive impact on the overall statistics of its work:
       </TextParagraph>
-      <TwitterCard id="1498248565495418881" />
+      <TwitterCard :id="tweetId" />
     </div>
   </section>
 </template>
@@ -66,6 +66,12 @@ export default {
     TwitterCard,
     TextParagraph,
     Picture,
+  },
+
+  data() {
+    return {
+      tweetId: '1498248565495418881',
+    }
   },
 }
 </script>

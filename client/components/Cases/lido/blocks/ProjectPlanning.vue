@@ -6,10 +6,10 @@
       </h3>
       <TextParagraph class="m-24_bottom">
         To perform client tasks, the most qualified programmers were recruited.
-        The first phase of the project involved 4 people, while the second phase involved 3 developers.
+        The project's first phase involved 4 people, while the second phase involved 3 developers.
       </TextParagraph>
       <TextParagraph class="m-24_bottom">
-        Work on both objectives occured in several phases:
+        Work on both objectives occurred in several phases:
       </TextParagraph>
       <List class="m-24_bottom">
         <ListItemCustomCheckMark
@@ -38,8 +38,7 @@
         </ListItemCustomCheckMark>
       </List>
       <TextParagraph>
-        *IMPORTANT: Lido ensures that smart contracts are always audited by external companies
-        because it is a matter of security and the right functionality.
+        *IMPORTANT: Lido ensures that external companies always audit smart contracts because it is a matter of security and the right functionality.
       </TextParagraph>
     </div>
   </section>

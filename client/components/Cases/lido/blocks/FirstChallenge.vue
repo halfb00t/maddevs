@@ -22,7 +22,7 @@
           target="_blank"
         >
           stake.lido.fi
-        </a> to the Ethereum 2.0 pool, receiving an equivalent amount of stETH tokens in return.
+        </a> to the Ethereum pool, receiving an equivalent amount of stETH tokens in return.
       </TextParagraph>
     </div>
     <div class="container_middle m-48_top media-m-24_top">
@@ -57,7 +57,15 @@
     <div class="container_regular m-72_top media-m-48_top">
       <TextParagraph>
         The user buys some amount of DAI on stocks or from exchangers (Metamask allows to do this).
-        Liquidity provider selects liquidity pool for 1inch. In our case, it will be a pair of DAI-stETH.
+        Liquidity provider selects liquidity pool for
+        <a
+          href="https://app.1inch.io/#/1/dao/pools"
+          target="_blank"
+          rel="noopener"
+          class="case_link-in-text"
+        >
+          1inch
+        </a>. In our case, it will be a pair of DAI-stETH.
       </TextParagraph>
     </div>
     <div class="container_middle m-48_top media-m-24_top">
@@ -91,7 +99,7 @@
     </div>
     <div class="container_regular m-72_top media-m-48_top">
       <TextParagraph>
-        It then gives access to its stETH tokens. A liquid staked Ether 2.0 (stETH) contact is made through DelegateProxy.
+        It then gives access to its stETH tokens. A liquid staked Ether (stETH) contact is made through DelegateProxy.
         This allows the liquidity pool contract (Mooniswap, it is unique for each pair, it will be new) to use
         the entire balance of stETH tokens belonging to the user.
       </TextParagraph>

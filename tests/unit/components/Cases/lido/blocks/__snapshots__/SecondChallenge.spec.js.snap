@@ -20,10 +20,44 @@ exports[`Lido SecondChallenge component should correctly render component 1`] = 
         class="case_paragraph m-24_bottom"
       >
         
-      The bETH token is a derisively-native asset that is used in the Anchor Protocol.
-      Its integration was carried out through the Shuttle bridge, which transfers it between Terra and Ethereum.
-      In order to preserve its resilience, a decision was made to migrate to Wormhole bridge.
-    
+      The
+      
+        <a
+          class="case_link-in-text"
+          href="https://docs.anchorprotocol.com/protocol/bonded-assets-bassets/bonded-eth-beth"
+          rel="noopener"
+          target="_blank"
+        >
+          
+        bETH
+      
+        </a>
+         token is a derisively-native asset used in the Anchor Protocol.
+      Its integration was carried out through the
+      
+        <a
+          class="case_link-in-text"
+          href="https://bridge.terra.money/"
+          rel="noopener"
+          target="_blank"
+        >
+          
+        Shuttle bridge
+      
+        </a>
+        , which transfers it between Terra and Ethereum.
+      In order to preserve its resilience, a decision was made to migrate to
+      
+        <a
+          class="case_link-in-text"
+          href="https://www.portalbridge.com/#/transfer"
+          rel="noopener"
+          target="_blank"
+        >
+          
+        Wormhole bridge.
+      
+        </a>
       </p>
        
       <p
