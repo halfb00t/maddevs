@@ -51,7 +51,8 @@ export default {
   },
 
   created() {
-    this.getTagPosts(this.blogTag)
+    const currentTag = this.blogTag === 'Software Development' ? 'Software Development ' : this.blogTag
+    this.getTagPosts(currentTag)
     this.getBlogAuthors()
   },
 
