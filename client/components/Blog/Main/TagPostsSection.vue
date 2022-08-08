@@ -8,6 +8,7 @@
         <FeaturedPost
           v-if="tagPostsLoaded && featuredPostAuthor"
           :post="tagPosts[0]"
+          :tag="blogTag"
           :author="featuredPostAuthor"
           theme="light"
           :disable-tag-link="true"
