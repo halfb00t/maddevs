@@ -245,6 +245,9 @@ class DevRadiator {
 
   async sendMetricsToSlack() {
     console.log(messagesText.run)
+    console.log('current Time on server:')
+    console.log(`date: ${new Date()}`)
+    console.log(`moment: ${moment().format(' YYYY/MM/DD hh:mm A')}`)
     if (process.env.FF_ENVIRONMENT === 'production') {
       let requestData
       try {

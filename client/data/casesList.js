@@ -202,4 +202,21 @@ export const casesList = [
       alt: 'nambataxi logo',
     },
   },
+  {
+    width: 'full',
+    id: 'lido',
+    link: '/case-studies/lido/',
+    video: '/videos/lido-banner.mp4',
+    subtitle: 'Blockchain and Crypto',
+    title: 'Lido: decentralized staking platform',
+    desc: 'Mad Devs assisted Lido - a liquid staking solution - to improve their product and simplify and secure staking for your digital assets.',
+    poster: '/images/Cases/lido/jpg/lido-banner.jpg',
+    logo: {
+      width: 105,
+      height: 67,
+      folder: 'lido',
+      file: 'lido-logo',
+      alt: 'Lido logo',
+    },
+  },
 ]
