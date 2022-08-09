@@ -109,7 +109,7 @@ const getDynamicRoutes = async () => {
       && post.data.route_prefix !== 'blog'
       && !excludePages.includes(post.uid)
     ))
-    .map(page => `/${getRoutePrefix(page.data.route_prefix)}/${page.uid}`)
+    .map(page => `${getRoutePrefix(page.data.route_prefix) === '' ? '' : `/${getRoutePrefix(page.data.route_prefix)}`}/${page.uid}`)
 
   return {
     blogPageRoutes,

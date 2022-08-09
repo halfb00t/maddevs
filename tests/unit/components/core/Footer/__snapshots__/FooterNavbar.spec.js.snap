@@ -36,13 +36,13 @@ exports[`FooterNavbar component should correct render footer navbar 1`] = `
               <div
                 class="footer-menu"
               >
-                <h5
+                <h3
                   class="footer-menu__name"
                 >
                   
     Company
   
-                </h5>
+                </h3>
                  
                 <ul
                   class="footer-menu__list"
@@ -127,13 +127,13 @@ exports[`FooterNavbar component should correct render footer navbar 1`] = `
               <div
                 class="footer-menu"
               >
-                <h5
+                <h3
                   class="footer-menu__name"
                 >
                   
     Approach
   
-                </h5>
+                </h3>
                  
                 <ul
                   class="footer-menu__list"
@@ -236,13 +236,13 @@ exports[`FooterNavbar component should correct render footer navbar 1`] = `
               <div
                 class="footer-menu"
               >
-                <h5
+                <h3
                   class="footer-menu__name"
                 >
                   
     Software development
   
-                </h5>
+                </h3>
                  
                 <ul
                   class="footer-menu__list"

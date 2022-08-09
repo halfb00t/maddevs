@@ -318,13 +318,13 @@ describe('Post component copyAnchorLink', () => {
       expect(toOneLine(result)).toStrictEqual(toOneLine(hyperlinkHtml))
     })
 
-    it('if type hyperlink will return <a target="_blank" rel="noopener" href=""></a>', () => {
+    it('if type hyperlink will return <a target="_blank" rel="noopener nofollow" href=""></a>', () => {
       const element = {
         data: {
           target: '_blank',
         },
       }
-      const hyperlinkHtml = '<a target="_blank" rel="noopener" href=""></a>'
+      const hyperlinkHtml = '<a target="_blank" rel="noopener nofollow" href=""></a>'
       const result = wrapper.vm.htmlSerializer('hyperlink', element, null, ['Blog post title'])
       expect(toOneLine(result)).toStrictEqual(toOneLine(hyperlinkHtml))
     })

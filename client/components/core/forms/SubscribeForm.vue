@@ -5,7 +5,7 @@
     :style="{ maxWidth: formMaxWidth }"
     @submit.prevent="submitSubscriber"
   >
-    <h4
+    <p
       class="subscribe-form__title"
       :class="{
         'subscribe-form__title--big': bigTitle,
@@ -14,7 +14,7 @@
       }"
     >
       Subscribe to our monthly Newsletter
-    </h4>
+    </p>
     <div
       class="subscribe-form__controllers"
     >
