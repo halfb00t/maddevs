@@ -35,4 +35,5 @@ jobs:
           RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
           CI: true
       - run: node ./SEOAnalyzer/index.js
-      
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
