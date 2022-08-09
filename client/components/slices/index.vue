@@ -188,7 +188,7 @@ export default {
           // eslint-disable-next-line
           const linkUrl = element.linkTo ? Link.url(element.linkTo, linkResolver) : null
           // eslint-disable-next-line
-          const linkTarget = element.linkTo && element.linkTo.target ? `target="${element.linkTo.target}" rel="noopener"` : ''
+          const linkTarget = element.linkTo && element.linkTo.target ? `target="${element.linkTo.target}" rel="noopener nofollow"` : ''
           // eslint-disable-next-line
           const wrapperClassList = [element.label || '', 'block-img']
           // eslint-disable-next-line
@@ -209,7 +209,7 @@ export default {
           `)
         case Elements.hyperlink:
           // eslint-disable-next-line
-          const target = element.data.target ? `target="${element.data.target}" rel="noopener"` : ''
+          const target = element.data.target ? `target="${element.data.target}" rel="noopener nofollow"` : ''
           // eslint-disable-next-line
           const url = Link.url(element.data, linkResolver)
           return `<a ${target} href="${url}">${text}</a>`
