@@ -35,13 +35,13 @@
             <img
               v-lazy-load
               :data-src="image.url"
-              :alt="image.alt"
+              :alt="image.alt || 'Image'"
               class="ps-main-card__image"
             >
             <img
               v-lazy-load
               :data-src="linkedCompanyLogo.url"
-              :alt="linkedCompanyLogo.alt"
+              :alt="linkedCompanyLogo.alt || 'Image'"
               class="ps-main-card__linked-logo"
             >
           </div>
@@ -63,13 +63,13 @@
                 <img
                   v-lazy-load
                   :data-src="item.image.url"
-                  :alt="item.image.alt"
+                  :alt="item.image.alt || 'Image'"
                   class="ps-sub-card__image"
                 >
                 <img
                   v-lazy-load
                   :data-src="item.linkedCompanyLogo.url"
-                  :alt="item.linkedCompanyLogo.alt"
+                  :alt="item.linkedCompanyLogo.alt || 'Image'"
                   class="ps-sub-card__linked-logo"
                 >
               </div>

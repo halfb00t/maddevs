@@ -160,6 +160,7 @@ export default {
       let text = children.join('')
 
       if (type === Elements.preformatted) {
+        text = element.text
         text = convertTagsToText(text, ['br'])
       } else {
         text = text.replace(/`(.*?)`/g, (_, inlineCode) => {
@@ -176,7 +177,7 @@ export default {
         case Elements.heading5: return this.createAnchorTag('h5', text)
         case Elements.heading6: return this.createAnchorTag('h6', text)
         case Elements.paragraph: return `<p>${text}</p>`
-        case Elements.preformatted: return `<pre>${element.text}</pre>`
+        case Elements.preformatted: return `<pre>${text}</pre>`
         case Elements.strong: return `<strong>${text}</strong>`
         case Elements.em: return `<em>${text}</em>`
         case Elements.listItem: return `<li>${text}</li>`
