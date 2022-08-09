@@ -31,7 +31,7 @@
     "test:update:snapshot": "npm run test:unit -- -u",
     "generate:coverage-badges": "node ./jest/utils/generateCoverageBadges.js -output './client/static'",
     "generate:eslint-report": "echo -n > client/static/eslint-report.json && eslint -o client/static/eslint-report.json -f compact -c .eslintrc --ext .js,.vue --ignore-path .gitignore .",
-    "seo-analyze": "npm run build && npm run generate && node ./SEOAnalyzer/index.js",
+    "seo-analyze": "npm run build && npm run generate && node --max_old_space_size=4096 ./SEOAnalyzer/index.js",
     "slicemachine": "start-slicemachine --port 9999",
     "storybook": "nuxt storybook",
     "build-storybook": "nuxt storybook build"
