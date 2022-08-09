@@ -84,18 +84,18 @@
 
       <!-- Suggest -->
       <div
-        v-if="tags && tags.length"
+        v-if="filteredTags && filteredTags.length"
         class="modal-search_suggest"
       >
         <h5>May we suggest</h5>
         <div class="modal-search_suggest-list">
           <NuxtLink
-            v-for="(tag, i) of tags"
+            v-for="(tag, i) of filteredTags"
             :key="`search-tag-${i}`"
-            :to="tagLink(tag)"
+            :to="tagLink(tag.tagName)"
             class="modal-search_suggest-list-item"
           >
-            {{ tag }}
+            {{ tag.tagName }}
           </NuxtLink>
         </div>
       </div>
@@ -131,7 +131,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['allAuthors', 'blogTags']),
+    ...mapGetters(['allAuthors', 'tags']),
 
     searchPosts() {
       if (!this.response || !this.response.results || !this.response.results.length) return []
@@ -139,10 +139,10 @@ export default {
       return list.sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
     },
 
-    tags() {
+    filteredTags() {
       const ignoreTags = ['iOS development', 'iOS', 'Featured post', 'Software features']
-      if (!this.blogTags || (this.blogTags && !this.blogTags.length)) return []
-      return this.blogTags.filter(tag => !ignoreTags.some(ignoreTag => ignoreTag === tag))
+      if (!this.tags || (this.tags && !this.tags.length)) return []
+      return this.tags.filter(tag => !ignoreTags.some(ignoreTag => ignoreTag === tag.tagName))
     },
   },
 
@@ -154,7 +154,7 @@ export default {
   },
 
   created() {
-    if (!this.blogTags.length) this.getBlogTags()
+    if (!this.filteredTags.length) this.getTagsFromPrismic()
   },
 
   mounted() {
@@ -167,7 +167,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['getBlogTags', 'setSearchQuery', 'setSearchResponse']),
+    ...mapActions(['getTagsFromPrismic', 'setSearchQuery', 'setSearchResponse']),
 
     focusOnInput() {
       if (!this.$refs.searchInput) return null

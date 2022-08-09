@@ -35,9 +35,9 @@ export const actions = {
   },
   async getBlogTag({ commit, state }, payload) {
     let blogTag = ''
-    if (state.tags.length) blogTag = state.tags.find(tag => convertStringToSlug(tag) === payload)
+    if (state.tags.length) blogTag = state.tags[0].data.tags.find(tag => convertStringToSlug(tag.tag_name) === payload)
     else blogTag = await getBlogTag(this.$prismic, payload)
-    commit('SET_TAG', blogTag)
+    commit('SET_TAG', blogTag?.tag_name || blogTag)
   },
   async getTagPosts({ commit }, payload) {
     commit('SET_TAG_POSTS_LOADED', false)
