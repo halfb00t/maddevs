@@ -69,14 +69,14 @@ function bootstrap() {
       // eslint-disable-next-line no-console
       console.log(error)
     }
+  }
 
-    // Run the mad radiator in the production mode
-    try {
-      runRadiator()
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.log(error)
-    }
+  // Run the mad radiator
+  try {
+    runRadiator()
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.log(error)
   }
 
   return app
