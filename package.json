@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "nuxt",
     "dev-radiator:instant-send": "node server/utils/devRadiator/instantRunRadiator.js",
+    "marketing-radiator:instant-send": "node server/radiator/radiator-debug.js",
     "build": "nuxt build --modern=server && npm run generate:eslint-report",
     "start": "nuxt start --modern=server",
     "generate": "nuxt generate",
