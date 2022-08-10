@@ -30,7 +30,7 @@ describe('redirectToCorrectUrl', () => {
     req.headers.host = 'maddevs.io'
     req.url = '/test-redirects'
     redirectToCorrectUrl(req, res, next)
-    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/test-redirects/success')
+    expect(res.redirect).toHaveBeenCalledWith(301, 'https://maddevs.io/test-redirects/success/')
   })
 
   it('if hostname blog.maddevs.io will be redirect to https://maddevs.io/blog/', () => {
