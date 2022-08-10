@@ -1,5 +1,7 @@
 import { getStructuredRoutes } from './getRoutes'
 
+const config = require('../server/config')
+
 const MAIN = '/main.xml'
 const CASES = '/cases.xml'
 const INSIGHTS = '/insights.xml'
@@ -81,12 +83,14 @@ const generateRoute = name => {
 }
 
 export const getSitemapRoutes = async () => {
+  const urls = config.mainRedirects.map(({ from }) => from.replace(/\/+$/g, ''))
   const structuredRoutes = await getStructuredRoutes()
 
   Object.keys(structuredRoutes).forEach(routeGroup => {
     if (Object.prototype.hasOwnProperty.call(structuredRoutes, routeGroup)) {
       structuredRoutes[routeGroup] = structuredRoutes[routeGroup].map(route => generateRoute(route.trim()))
         .filter(Boolean)
+        .filter(route => !urls.includes(route.url.replace(/\/+$/g, '')))
     }
   })
 

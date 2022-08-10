@@ -1,7 +1,7 @@
 [
   {
     "from": "/test-redirects",
-    "to": "https://maddevs.io/test-redirects/success"
+    "to": "https://maddevs.io/test-redirects/success/"
   },
   {
     "pageType": "Главная",
