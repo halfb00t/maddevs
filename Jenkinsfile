@@ -33,7 +33,7 @@ pipeline {
     }
 
     stages {
-      stage ('Run Tests with db schema from production (daily)') {
+      stage ('Run Tests and Linters') {
             when {
                 beforeAgent true
                 allOf {
