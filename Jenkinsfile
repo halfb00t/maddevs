@@ -143,8 +143,6 @@ pipeline {
             }
         }
 
-    }
-
     post {
         always {
             script {
