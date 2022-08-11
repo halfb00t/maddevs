@@ -108,8 +108,8 @@ pipeline {
                 retry (2) {
                     script {
                       docker.withRegistry(REGISTRY) {
-                          docker.image("${IMAGE}:latest").pull()
-                          myImage = docker.build("${IMAGE}", "--cache-from 730809894724.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE}:latest -f Dockerfile .")
+                          // docker.image("${IMAGE}:latest").pull()
+                          myImage = docker.build("${IMAGE}", "-f Dockerfile .")
                           myImage.push(SHORT_COMMIT)
                           myImage.push("latest")
 
@@ -204,7 +204,7 @@ def sendNotifications(String buildStatus = 'STARTED') {
     }
     slackSend (color: color, message: summary)
 
-    emailext body: '''${JELLY_SCRIPT,template="html-veeqo"}''',
+    emailext body: '''${JELLY_SCRIPT,template="html-"}''',
         attachLog: true,
         mimeType: 'text/html',
         subject: "[Jenkins] ${subject}",
