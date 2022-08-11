@@ -33,6 +33,14 @@ pipeline {
     }
 
     stages {
+      stage ('Run Tests with db schema from production (daily)') {
+            when {
+                beforeAgent true
+                allOf {
+                    environment name: 'SKIP_CI', value: '1'
+                    expression {return (params.RUN_TESTS)}
+                }
+            }
 
             parallel {
                 stage ('RUN TESTS') {
@@ -142,6 +150,7 @@ pipeline {
                 }
             }
         }
+    }
 
     post {
         always {
